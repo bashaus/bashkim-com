@@ -1,0 +1,29 @@
+{
+  "slug": "trop50-resolution-rescue",
+  "href": "/portfolio/trop50-resolution-rescue",
+  "images": {
+    "headerDesktop": "/static/images/caseStudies/trop50-resolution-rescue/header-desktop.jpg",
+    "headerMobile": "/static/images/caseStudies/trop50-resolution-rescue/header-mobile.jpg",
+    "icon": "/static/images/caseStudies/trop50-resolution-rescue/icon.jpg",
+    "poster": "/static/images/caseStudies/trop50-resolution-rescue/poster.jpg"
+  },
+  "meta": {
+    "title": "Trop50 Resolution Rescue",
+    "description": "Tweets to #ResolutionRescue are dynamically generated into personalised motivational videos",
+    "keywords": "tropicana, trop50, resolution rescue, new year's resolution"
+  },
+  "featured": {
+    "homepage": true
+  },
+  "categories": [
+    "web-development"
+  ],
+  "date": "2014-01-06",
+  "technologies": [
+    "php", "codeigniter", "adobe-after-effects", "sqs"
+  ],
+  "tags": [
+    "php", "codeigniter",
+    "back-end", "front-end", "web-development"
+  ]
+}

@@ -1,0 +1,8 @@
+@import "../../styleguide/utils/colours";
+@import "../../styleguide/utils/ratio";
+
+.PartialVideoPlayerYouTube {
+  @extend .ratio-widescreen;
+  background-color: $color-charcol;
+  color: $color-white;
+}

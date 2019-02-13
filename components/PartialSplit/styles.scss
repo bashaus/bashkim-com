@@ -1,0 +1,36 @@
+@import "~breakpoint-sass";
+@import "../../styleguide/vendors/grid/";
+@import "../../styleguide/utils/media";
+@import "../../styleguide/utils/grid";
+@import "../../styleguide/utils/wysiwyg";
+@import "../../styleguide/utils/chevron";
+
+.PartialSplit {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.odd {
+  flex-direction: row-reverse;
+}
+
+.PartialSplit :global(.PartialSplit_chevron) {
+  @extend .chevron-white;
+}
+
+@include breakpoint($media-mobile) {
+  .PartialSplit :global(.PartialSplit_chevron) {
+    @include chevron-down;
+  }
+}
+
+@include breakpoint($media-not-mobile) {
+  .PartialSplit.odd :global(.PartialSplit_chevron) {
+    @include chevron-left;
+  }
+
+  .PartialSplit.even :global(.PartialSplit_chevron) {
+    @include chevron-right;
+  }
+}

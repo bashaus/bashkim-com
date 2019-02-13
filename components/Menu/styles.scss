@@ -1,0 +1,55 @@
+@import "~breakpoint-sass";
+@import "../../styleguide/vendors/grid/";
+@import "../../styleguide/utils/media";
+@import "../../styleguide/utils/grid";
+@import "../../styleguide/utils/colours";
+
+.Menu {
+  display: flex;
+  position: sticky;
+  top: 0;
+  background: $color-white;
+  z-index: 9000;
+  box-shadow: 0px 10px 20px -13px rgba(30, 30, 30, 0.75);
+}
+
+.back {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 60px;
+  text-align: center;
+  width: 60px;
+  height: 60px;
+  display: block;
+
+  a {
+    display: inline-block;
+    color: $color-charcol;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+  }
+
+  svg {
+    display: inline-block;
+    fill: $color-charcol;
+    height: 60px;
+  }
+}
+
+.logo {
+  text-align: center;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: auto;
+}
+
+.signifier {
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}

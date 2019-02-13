@@ -1,0 +1,26 @@
+{
+  "slug": "meet-eater",
+  "href": "/portfolio/meet-eater",
+  "images": {
+    "headerDesktop": "/static/images/caseStudies/meet-eater/header-desktop.jpg",
+    "headerMobile": "/static/images/caseStudies/meet-eater/header-mobile.jpg",
+    "icon": "/static/images/caseStudies/meet-eater/icon.jpg",
+    "poster": "/static/images/caseStudies/meet-eater/poster.jpg"
+  },
+  "meta": {
+    "title": "Meet Eater",
+    "description": "A real-life plant is watered depending on the amount of social interaction it receives on its own Facebook page",
+    "keywords": "meet eater, the edge, physical computing, ozchi"
+  },
+  "categories": [
+    "physical-computing"
+  ],
+  "date": "2010-05-12",
+  "technologies": [
+    "arduino", "adobe-flash-builder", "facebook-open-graph", "html5"
+  ],
+  "tags": [
+    "arduino", "adobe-flash-builder", "facebook",
+    "physical-computing"
+  ]
+}

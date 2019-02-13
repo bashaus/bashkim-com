@@ -1,0 +1,65 @@
+@import "~breakpoint-sass";
+@import "../../styleguide/vendors/grid/";
+@import "../../styleguide/utils/media";
+@import "../../styleguide/utils/grid";
+@import "../../styleguide/utils/colours";
+
+.MenuSignifierButton {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.icon {
+  display: block;
+  width: 13px;
+  height: 12px;
+  position: absolute;
+  cursor: pointer;
+  top: 30px;
+  left: 30px;
+  transform: translate(-50%, -50%);
+
+  span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: $color-charcol;
+    border-radius: 2px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: 0.25s ease-in-out;
+
+    &:nth-child(1) {
+      top: 1px;
+    }
+
+    &:nth-child(2),
+    &:nth-child(3) {
+      top: 5px;
+    }
+
+    &:nth-child(4) {
+      top: 9px;
+    }
+  }
+
+  .MenuSignifierButton[aria-pressed="true"] & span {
+    &:nth-child(1),
+    &:nth-child(4) {
+      top: 4px;
+      opacity: 0;
+    }
+
+    &:nth-child(2) {
+      transform: rotate(45deg);
+    }
+
+    &:nth-child(3) {
+      transform: rotate(-45deg);
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@import "../../styleguide/utils/colours";
+@import "../../styleguide/utils/chevron";
+
+.background {
+  @extend .chevron-white;
+  @include chevron-down;
+
+  position: relative;
+  background-color: $color-charcol;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  min-height: 400px;
+}

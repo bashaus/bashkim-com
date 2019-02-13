@@ -1,0 +1,43 @@
+@import "~breakpoint-sass";
+@import "../../styleguide/vendors/grid/";
+@import "../../styleguide/utils/media";
+@import "../../styleguide/utils/grid";
+@import "../../styleguide/utils/wysiwyg";
+
+.DeviceSmartphone {
+  .wrapper {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 315px;
+    height: 641.2499999955px;
+    background-image: url('/static/vectors/devices/smartphone.svg');
+  }
+
+  .content {
+    display: block;
+    position: absolute;
+    overflow-y: scroll;
+
+    top: 15.9%;
+    left: 10.3%;
+    width: 79.8%;
+    height: 69.5%;
+  }
+
+  img {
+    display: block;
+  }
+
+  figcaption {
+    @extend %wysiwyg;
+    @include grid-cell-padding(
+      $sides: (top left right bottom)
+    );
+
+    text-align: center;
+  }
+}

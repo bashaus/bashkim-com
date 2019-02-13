@@ -1,0 +1,26 @@
+{
+  "slug": "chet-atkins-all-wah",
+  "href": "/portfolio/chet-atkins-all-wah",
+  "images": {
+    "headerDesktop": "/static/images/caseStudies/chet-atkins-all-wah/header-desktop.jpg",
+    "headerMobile": "/static/images/caseStudies/chet-atkins-all-wah/header-mobile.jpg",
+    "icon": "/static/images/caseStudies/chet-atkins-all-wah/icon.jpg",
+    "poster": "/static/images/caseStudies/chet-atkins-all-wah/poster.jpg"
+  },
+  "meta": {
+    "title": "Chet Atkins All Wah",
+    "description": "A Wah‑wah pedal built into a Chuck Taylor All Star to make it even more Rock 'n Roll",
+    "keywords": "converse, sneakers, chet atkins, wah-wah pedal, shoe"
+  },
+  "categories": [
+    "physical-computing"
+  ],
+  "date": "2013-06-14",
+  "technologies": [
+    "arduino", "electronics"
+  ],
+  "tags": [
+    "arduino", "electronics",
+    "physical-computing"
+  ]
+}

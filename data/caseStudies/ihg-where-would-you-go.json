@@ -1,0 +1,26 @@
+{
+  "slug": "ihg-where-would-you-go",
+  "href": "/portfolio/ihg-where-would-you-go",
+  "images": {
+    "headerDesktop": "/static/images/caseStudies/ihg-where-would-you-go/header-desktop.jpg",
+    "headerMobile": "/static/images/caseStudies/ihg-where-would-you-go/header-mobile.jpg",
+    "icon": "/static/images/caseStudies/ihg-where-would-you-go/icon.jpg",
+    "poster": "/static/images/caseStudies/ihg-where-would-you-go/poster.jpg"
+  },
+  "meta": {
+    "title": "IHG Where Would You Go?",
+    "description": "Making IHG famous by giving away free nights at any one of their 4,700 hotels across the world",
+    "keywords": "ihg, free nights"
+  },
+  "categories": [
+    "web-development"
+  ],
+  "date": "2014-10-01",
+  "technologies": [
+    "php", "laravel", "html5-local-storage", "css3"
+  ],
+  "tags": [
+    "php", "laravel", "javascript",
+    "back-end", "front-end", "web-development"
+  ]
+}

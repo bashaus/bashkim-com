@@ -1,0 +1,85 @@
+@import "~breakpoint-sass";
+@import "../../styleguide/base/headings/styles";
+@import "../../styleguide/utils/media";
+@import "../../styleguide/utils/colours";
+
+.PortfolioList {
+  display: block;
+  height: 100%;
+
+  a {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    color: $color-text-copy !important;
+    padding: 10px;
+    height: 100%;
+    transition: all 0.2s;
+    border-bottom: solid 1px $color-shade-border;
+  }
+
+  a:hover {
+    background-color: $color-shade-background;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .image {
+    order: 1;
+    flex-grow: 0;
+    flex-shrink: 0;
+    border-radius: 50%;
+    flex-basis: 50px;
+    margin-right: 20px;
+    border: solid 4px $color-white;
+    background-color: $color-white;
+    overflow: hidden;
+  }
+
+  .title {
+    @extend %h3;
+    order: 2;
+    flex-grow: 1;
+  }
+
+  .date {
+    @extend %h3;
+    order: 3;
+  }
+
+  .technologies {
+    order: 4;
+    margin-left: 20px;
+    display: flex;
+  }
+
+  .technologies img {
+    width: 50px;
+    height: 50px;
+  }
+
+  @include breakpoint($media-mobile) {
+    .date {
+      flex-basis: 100%;
+    }
+
+    .technologies {
+      flex-basis: 100%;
+    }
+  }
+
+  @include breakpoint($media-not-mobile) {
+    .date {
+      flex-basis: 200px;
+      text-align: center;
+    }
+
+    .technologies {
+      flex-basis: 100px;
+    }
+  }
+}

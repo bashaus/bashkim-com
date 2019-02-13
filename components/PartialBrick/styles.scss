@@ -1,0 +1,53 @@
+@import "~breakpoint-sass";
+// @import "../../styleguide/vendors/grid/";
+@import "../../styleguide/utils/media";
+// @import "../../styleguide/utils/grid";
+@import "../../styleguide/utils/colours";
+@import "../../styleguide/utils/wysiwyg";
+
+
+.CaseStudyBrick {
+  @extend %wysiwyg;
+
+  display: block;
+  height: 100%;
+
+  a {
+    position: relative;
+    display: block;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-left: 75px;
+    color: $color-text-copy !important;
+    padding: 10px;
+    height: 100%;
+    transition: all 0.2s;
+  }
+
+  .image {
+    position: absolute;
+    top: 0;
+    left: -75px;
+    width: 75px;
+    height: 75px;
+    order: 2;
+    border-radius: 50%;
+    border: solid 4px $color-white;
+    background-color: $color-white;
+    overflow: hidden;
+  }
+
+  .image img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  h3 {
+    order: 3;
+    transition: all 0.5s;
+  }
+
+  p {
+    order: 4;
+  }
+}

@@ -1,0 +1,144 @@
+@import "~breakpoint-sass";
+@import "../../styleguide/vendors/grid/";
+@import "../../styleguide/utils/media";
+@import "../../styleguide/utils/grid";
+@import "../../styleguide/utils/colours";
+@import "../../styleguide/utils/chevron";
+
+.PartialHeaderText {
+  position: relative;
+
+  @extend .chevron-down;
+  @extend .chevron-white;
+
+  .foreground {
+    @include grid-container($padding: (left right));
+    color: $color-white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .content {
+    @include grid-cell(
+      $columns: (
+        mobile-portrait: 12,
+        mobile-landscape: 12,
+        tablet-portrait: 10,
+        tablet-landscape: 7,
+        desktop-narrow: 8,
+        desktop-wide: 8,
+      ),
+      $padding: (left right)
+    );
+
+    position: relative;
+  }
+
+  .background {
+    background-color: $color-charcol;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-repeat: no-repeat;
+  }
+
+  h1 {
+    font-weight: bold;
+  }
+
+  small {
+    font-weight: bold;
+    color: $color-shade-background;
+    text-transform: uppercase;
+    opacity: .8;
+    letter-spacing: -1px;
+  }
+
+  a {
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    border: solid $color-white;
+    padding: 4px 12px;
+    color: $color-white;
+    transition: all 0.3s;
+  }
+
+  a:hover {
+    background-color: $color-white;
+    color: $color-charcol;
+  }
+
+  p {
+    margin-top: 20px;
+  }
+
+  @include breakpoint($media-mobile) {
+    .foreground {
+
+    }
+
+    h1 {
+      font-size: 12vw;
+      line-height: 12vw;
+    }
+
+    small {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    p {
+      font-size: 15px;
+      line-height: 32px;
+    }
+
+    a {
+      border-width: 1px;
+      line-height: 24px;
+    }
+
+    .background {
+      background-position-x: center;
+      background-position-y: bottom;
+    }
+  }
+
+  @include breakpoint($media-not-mobile) {
+    padding-top: 61px;
+
+    h1 {
+      font-size: 80px;
+      line-height: 100%;
+    }
+
+    small {
+      font-size: 16px;
+      line-height: 26px;
+    }
+
+    p {
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 24px;
+    }
+
+    a {
+      border-width: 3px;
+    }
+
+    .background {
+      background-position-x: center;
+      background-position-y: center;
+    }
+  }
+}

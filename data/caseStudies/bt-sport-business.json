@@ -1,0 +1,26 @@
+{
+  "slug": "bt-sport-business",
+  "href": "/portfolio/bt-sport-business",
+  "images": {
+    "headerDesktop": "/static/images/caseStudies/bt-sport-business/header-desktop.jpg",
+    "headerMobile": "/static/images/caseStudies/bt-sport-business/header-mobile.jpg",
+    "icon": "/static/images/caseStudies/bt-sport-business/icon.jpg",
+    "poster": "/static/images/caseStudies/bt-sport-business/poster.jpg"
+  },
+  "meta": {
+    "title": "BT Sport Business",
+    "description": "Restructure and redesign of the BT Sport for Business website",
+    "keywords": "bt sport business"
+  },
+  "categories": [
+    "web-development"
+  ],
+  "date": "2014-08-08",
+  "technologies": [
+    "php", "wordpress", "html5", "css3"
+  ],
+  "tags": [
+    "php", "wordpress", "cms", "javascript",
+    "back-end", "front-end", "web-development"
+  ]
+}

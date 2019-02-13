@@ -1,0 +1,18 @@
+build-node:
+  box: 'node:8.10'
+  steps:
+    - npm-install:
+        name: 'npm install'
+    - script:
+        name: 'npm build'
+        code: npm run build
+
+deploy:
+  box: 'node:8.10'
+  steps:
+    - script:
+        name: 'serverless install'
+        code: npm install -g serverless
+    - script:
+        name: 'serverless deploy'
+        code: serverless deploy

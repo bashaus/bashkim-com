@@ -1,0 +1,33 @@
+@import "~breakpoint-sass";
+@import "../../styleguide/vendors/grid/";
+@import "../../styleguide/utils/media";
+@import "../../styleguide/utils/grid";
+
+.CaseStudyTechnologies {
+  @include grid-container;
+
+  max-width: 1024px !important;
+
+  li {
+    @include grid-cell(
+      $columns: (
+        mobile-portrait: 6,
+        mobile-landscape: 6,
+        tablet-portrait: 3,
+        tablet-landscape: 3,
+        desktop-narrow: 3,
+        desktop-wide: 3
+      )
+    );
+
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  img {
+    margin: 4px auto;
+    width: 100%;
+    max-width: 100px;
+  }
+}

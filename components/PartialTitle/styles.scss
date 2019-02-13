@@ -1,0 +1,64 @@
+@import "~breakpoint-sass";
+@import "../../styleguide/vendors/grid/";
+@import "../../styleguide/utils/media";
+@import "../../styleguide/utils/grid";
+
+.PartialTitle {
+  @include grid-full;
+
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    font-weight: bold;
+    display: block;
+    order: 2;
+    text-align: center;
+  }
+
+  div {
+    display: block;
+    order: 3;
+    text-align: center;
+  }
+
+  img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin: 16px auto;
+    display: block;
+    order: 1;
+  }
+
+  /* mobile */
+
+  @include breakpoint($media-mobile) {
+    h1 {
+      font-size: 20px;
+      line-height: 32px;
+      text-align: center;
+    }
+
+    div {
+      text-align: center;
+    }
+
+    img {
+      display: block;
+    }
+  }
+
+  @include breakpoint($media-not-mobile) {
+    h1 {
+      font-size: 24px;
+      line-height: 36px;
+      margin-bottom: 5px;
+    }
+
+    div {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+}

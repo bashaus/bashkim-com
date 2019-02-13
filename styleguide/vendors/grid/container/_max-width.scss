@@ -1,0 +1,23 @@
+@mixin grid-container-max-width($breakpoints: null) {
+  @if (type-of($breakpoints) == "null") {
+    @include grid-container-max-width(map-keys($grid));
+  } @else if (type-of($breakpoints) == "map") {
+    @include grid-container-max-width(map-keys($breakpoints));
+  } @else if (type-of($breakpoints) == "list") {
+    @each $breakpoint in $breakpoints {
+      @include grid-container-max-width($breakpoint);
+    }
+  } @else if (type-of($breakpoints) == "string") {
+    $breakpoint: $breakpoints;
+
+    @include breakpoint(grid-query($breakpoint)) {
+      @if map-has-key(grid-breakpoint($breakpoint), max-width) {
+        max-width: grid-max-width($breakpoint);
+      }
+    }
+  } @else {
+    @error  "grid-container-max-width( #{type-of($breakpoints)} ): "
+            "$breakpoints received type #{type-of($breakpoints)}, "
+            "expected `null`, `map`, `list` or `string`";
+  }
+}

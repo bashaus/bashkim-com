@@ -1,0 +1,24 @@
+{
+  "slug": "agency-republic-2013",
+  "href": "/portfolio/agency-republic-2013",
+  "images": {
+    "headerDesktop": "/static/images/caseStudies/agency-republic-2013/header-desktop.jpg",
+    "headerMobile": "/static/images/caseStudies/agency-republic-2013/header-mobile.jpg",
+    "icon": "/static/images/caseStudies/agency-republic-2013/icon.jpg",
+    "poster": "/static/images/caseStudies/agency-republic-2013/poster.jpg"
+  },
+  "meta": {
+    "title": "Agency Republic",
+    "description": "Redeveloped the portfolio of works for Agency Republic based on the Concrete5 open source CMS",
+    "keywords": "agency republic"
+  },
+  "categories": ["web-development"],
+  "date": "2013-05-22",
+  "technologies": [
+    "php", "concrete5", "html5", "css3"
+  ],
+  "tags": [
+    "php", "concrete5", "cms", "javascript",
+    "back-end", "front-end", "web-development"
+  ]
+}

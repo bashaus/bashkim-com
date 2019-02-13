@@ -1,0 +1,27 @@
+@import "~breakpoint-sass";
+@import "../../styleguide/vendors/grid/";
+@import "../../styleguide/utils/media";
+@import "../../styleguide/utils/grid";
+@import "../../styleguide/utils/wysiwyg";
+
+.CaseStudyDetails {
+  @include grid-container;
+
+  > * {
+    @extend %wysiwyg;
+    @include grid-cell(
+      $columns: (
+        mobile-portrait: 12,
+        mobile-landscape: 6,
+        tablet-portrait: 4,
+        tablet-landscape: 3,
+        desktop-narrow: 3,
+        desktop-wide: 3
+      ),
+      $padding: (left right)
+    );
+
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}

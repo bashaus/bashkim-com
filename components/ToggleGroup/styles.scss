@@ -1,0 +1,22 @@
+@import "~breakpoint-sass";
+@import "../../styleguide/utils/media";
+@import "../../styleguide/utils/clearfix";
+@import "../../styleguide/utils/colours";
+
+.ToggleGroup {
+  @include clearfix;
+  display: inline-block;
+  border-radius: 6px;
+  border: solid 1px $color-shade-border;
+}
+
+.label {
+  @include breakpoint($media-mobile) {
+    display: inline-block;
+    font-size: 12px;
+  }
+
+  @include breakpoint($media-not-mobile) {
+    display: none;
+  }
+}

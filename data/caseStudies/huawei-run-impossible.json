@@ -1,0 +1,26 @@
+{
+  "slug": "huawei-run-impossible",
+  "href": "/portfolio/huawei-run-impossible",
+  "images": {
+    "headerDesktop": "/static/images/caseStudies/huawei-run-impossible/header-desktop.jpg",
+    "headerMobile": "/static/images/caseStudies/huawei-run-impossible/header-mobile.jpg",
+    "icon": "/static/images/caseStudies/huawei-run-impossible/icon.jpg",
+    "poster": "/static/images/caseStudies/huawei-run-impossible/poster.jpg"
+  },
+  "meta": {
+    "title": "Huawei #runimpossible",
+    "description": "Promote the launch of the Huawei Watch 2 with a fun run in two European cities",
+    "keywords": "huawei, watch 2, run impossible"
+  },
+  "categories": [
+    "web-development"
+  ],
+  "date": "2017-04-01",
+  "technologies": [
+    "node.js", "metalsmith", "html5", "css3"
+  ],
+  "tags": [
+    "node.js", "metalsmith", "static-site", "javascript",
+    "front-end", "web-development"
+  ]
+}

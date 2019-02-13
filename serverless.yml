@@ -1,0 +1,193 @@
+service: bashkim-com
+
+plugins:
+  - serverless-s3-sync
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: production
+  region: eu-west-1
+  memorySize: 512
+  timeout: 15
+  environment:
+    APP_ENV: production
+    LAMBDA: true
+    NODE_ENV: production
+
+package:
+  exclude:
+    - .storybook/**
+    - "**/stories.jsx"
+    - components/**
+    - data/**
+    - pages/**
+    - propTypes/**
+    - static/**
+    - store/**
+    - styleguide/**
+    - node_modules/.cache/**
+    - .babelrc
+    - .editorconfig
+    - .eslintrc.json
+    - .nvmrc
+    - package.json
+    - package-lock.json
+    - wercker.yml
+  include:
+    - .next/**
+
+functions:
+  app:
+    handler: lambda.handler
+    events:
+      - http:
+          method: ANY
+          path: /
+      - http:
+          method: ANY
+          path: /{any+}
+
+custom:
+  endpointType: REGIONAL
+  region: "${opt:region, self:provider.region}"
+  stage: "${opt:stage, env:SLS_STAGE, 'production'}"
+  assetsBucket: "${self:service}-${self:custom.stage}-assets"
+
+  domain:
+    certificateArn: "arn:aws:acm:us-east-1:409535992503:certificate/a232ee88-ad8e-44c1-a9c2-5a8cdb2e2577"
+    domainName: www.bashkim.com
+
+  s3Sync:
+    - bucketName: ${self:custom.assetsBucket}
+      bucketPrefix: static/
+      localDir: static
+      params:
+        - "**/*":
+            CacheControl: 'public, max-age=86400'
+
+    - bucketName: ${self:custom.assetsBucket}
+      localDir: .next
+      bucketPrefix: _next/
+      params:
+        - "**/*":
+            CacheControl: 'public, max-age=31536000, immutable'
+
+resources:
+  Description: bashkim-com
+  Resources:
+    AssetsBucket:
+      Type: AWS::S3::Bucket
+      DeletionPolicy: Delete
+      Properties:
+        BucketName: ${self:custom.assetsBucket}
+
+    AssetsBucketPolicy:
+      Type: "AWS::S3::BucketPolicy"
+      DependsOn:
+        - CDNOriginAccessIdentity
+        - AssetsBucket
+      Properties:
+        Bucket: ${self:custom.assetsBucket}
+        PolicyDocument:
+          Statement:
+            - Action:
+              - "s3:GetObject"
+              Effect: "Allow"
+              Resource:
+                Fn::Join:
+                  - ""
+                  - - Fn::GetAtt: [AssetsBucket, Arn]
+                    - "/*"
+              Principal:
+                CanonicalUser:
+                  Fn::GetAtt: [CDNOriginAccessIdentity, S3CanonicalUserId]
+
+    CDNOriginAccessIdentity:
+      Type: "AWS::CloudFront::CloudFrontOriginAccessIdentity"
+      Properties:
+        CloudFrontOriginAccessIdentityConfig:
+          Comment:
+            Fn::Join:
+              - ""
+              - - Ref: AWS::StackName
+                - "-origin-access-identity"
+
+    CloudFrontDistribution:
+      Type: AWS::CloudFront::Distribution
+      DependsOn:
+        - AssetsBucket
+      Properties:
+        DistributionConfig:
+          # Aliases:
+          #   - ${self:custom.domain.domainName}
+          PriceClass: PriceClass_100
+          ViewerCertificate:
+            AcmCertificateArn: ${self:custom.domain.certificateArn}
+            MinimumProtocolVersion: TLSv1.1_2016
+            SslSupportMethod: sni-only
+          Origins:
+            - DomainName:
+                Fn::GetAtt: [AssetsBucket, DomainName]
+              Id: AssetsBucket
+              S3OriginConfig:
+                OriginAccessIdentity:
+                  Fn::Join:
+                  - ""
+                  - - "origin-access-identity/cloudfront/"
+                    - Ref: CDNOriginAccessIdentity
+            - DomainName:
+                Fn::Join:
+                - ""
+                - - Ref: ApiGatewayRestApi
+                  - ".execute-api."
+                  - ${self:custom.region}
+                  - ".amazonaws.com"
+              Id: APIGWOrigin
+              OriginPath: "/${self:custom.stage}"
+              CustomOriginConfig:
+                OriginKeepaliveTimeout: 60
+                OriginReadTimeout: 15
+                HTTPPort: 80
+                HTTPSPort: 443
+                OriginProtocolPolicy: https-only
+                OriginSSLProtocols:
+                  - 'TLSv1'
+                  - 'TLSv1.1'
+                  - 'TLSv1.2'
+          Enabled: 'true'
+          HttpVersion: http2
+          CacheBehaviors:
+            - PathPattern: /_next/*
+              AllowedMethods:
+                - GET
+                - HEAD
+                - OPTIONS
+              TargetOriginId: AssetsBucket
+              Compress: true
+              ForwardedValues:
+                QueryString: false
+              ViewerProtocolPolicy: https-only
+            - PathPattern: /static/*
+              AllowedMethods:
+                - GET
+                - HEAD
+                - OPTIONS
+              TargetOriginId: AssetsBucket
+              Compress: true
+              ForwardedValues:
+                QueryString: false
+              ViewerProtocolPolicy: https-only
+          DefaultCacheBehavior:
+            AllowedMethods:
+              - GET
+              - HEAD
+            TargetOriginId: APIGWOrigin
+            Compress: true
+            MinTTL: 60
+            DefaultTTL: 60
+            ForwardedValues:
+              QueryString: true
+              Cookies:
+                Forward: none
+            ViewerProtocolPolicy: redirect-to-https

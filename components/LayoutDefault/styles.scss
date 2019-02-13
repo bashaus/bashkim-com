@@ -1,0 +1,31 @@
+@import "~breakpoint-sass";
+@import "../../styleguide/vendors/grid/";
+@import "../../styleguide/utils/media";
+@import "../../styleguide/utils/grid";
+@import "../../styleguide/utils/colours";
+
+.content {
+  position: relative;
+  outline: none;
+  overflow: hidden;
+
+  @include breakpoint($media-not-mobile) {
+    margin-top: -61px;
+  }
+}
+
+.menu {
+  @include breakpoint($media-not-mobile) {
+    display: none;
+  }
+}
+
+@include breakpoint($media-mobile) {
+  .menuSignified {
+    transition: all 0.3s ease-in;
+
+    &.menuIsVisible {
+      transform: translateX(-260px);
+    }
+  }
+}

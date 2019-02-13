@@ -1,0 +1,26 @@
+{
+  "slug": "british-gas-the-source",
+  "href": "/portfolio/british-gas-the-source",
+  "images": {
+    "headerDesktop": "/static/images/caseStudies/british-gas-the-source/header-desktop.jpg",
+    "headerMobile": "/static/images/caseStudies/british-gas-the-source/header-mobile.jpg",
+    "icon": "/static/images/caseStudies/british-gas-the-source/icon.jpg",
+    "poster": "/static/images/caseStudies/british-gas-the-source/poster.jpg"
+  },
+  "meta": {
+    "title": "British Gas: The Source",
+    "description": "Content Hub for British Gas to educate and communicate about energy",
+    "keywords": "british gas, content hub"
+  },
+  "categories": [
+    "web-development"
+  ],
+  "date": "2016-09-20",
+  "technologies": [
+    "java", "magnolia", "html5", "css3"
+  ],
+  "tags": [
+    "java", "magnolia", "cms", "javascript",
+    "back-end", "front-end", "web-development"
+  ]
+}

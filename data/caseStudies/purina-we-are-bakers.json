@@ -1,0 +1,26 @@
+{
+  "slug": "purina-we-are-bakers",
+  "href": "/portfolio/purina-we-are-bakers",
+  "images": {
+    "headerDesktop": "/static/images/caseStudies/purina-we-are-bakers/header-desktop.jpg",
+    "headerMobile": "/static/images/caseStudies/purina-we-are-bakers/header-mobile.jpg",
+    "icon": "/static/images/caseStudies/purina-we-are-bakers/icon.jpg",
+    "poster": "/static/images/caseStudies/purina-we-are-bakers/poster.jpg"
+  },
+  "meta": {
+    "title": "We are Bakers",
+    "description": "Dispelling myths around what goes into Bakers dog food",
+    "keywords": "purina, bakers, dog food"
+  },
+  "categories": [
+    "web-development"
+  ],
+  "date": "2015-05-14",
+  "technologies": [
+    "php", "wordpress", "html5", "css3"
+  ],
+  "tags": [
+    "php", "wordpress", "cms", "javascript",
+    "back-end", "front-end", "web-development"
+  ]
+}

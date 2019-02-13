@@ -1,0 +1,31 @@
+/* Screen */
+
+$media-screen-small: screen (max-width 1023px), print;
+$media-screen-large: screen (min-width 1024px);
+
+/* Mobile */
+
+$media-mobile: screen (max-width 767px);
+$media-not-mobile: screen (min-width 768px), print;
+
+$media-mobile-portrait: screen (max-width 479px);
+$media-not-mobile-portrait: screen (min-width 480px);
+
+$media-mobile-landscape: screen (min-width 480px) (max-width 767px);
+
+/* Tablet */
+
+$media-tablet: screen (min-width 768px) (max-width 1439px), print;
+
+$media-tablet-portrait: screen (min-width 768px) (max-width 1023px), print;
+$media-tablet-landscape: screen (min-width 1024px) (max-width 1439px);
+
+/* Desktop */
+
+$media-desktop: screen (min-width 1440px);
+$media-not-desktop: screen (max-width 1439px), print;
+
+$media-desktop-narrow: screen (min-width 1440px) (max-width 1599px);
+
+$media-desktop-wide: screen (min-width 1600px);
+$media-not-desktop-wide: screen (max-width 1599px);

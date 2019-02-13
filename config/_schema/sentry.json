@@ -1,0 +1,9 @@
+{
+  "sentry": {
+    "dsn": {
+      "doc": "The DSN provided by Sentry",
+      "format": "String",
+      "default": "https://bff95320ff2549e5b4dc6f74860b3859@sentry.io/1408337"
+    }
+  }
+}

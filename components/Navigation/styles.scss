@@ -1,0 +1,71 @@
+@import "~breakpoint-sass";
+@import "../../styleguide/vendors/grid/";
+@import "../../styleguide/utils/media";
+@import "../../styleguide/utils/grid";
+@import "../../styleguide/utils/colours";
+@import "../../styleguide/utils/clearfix";
+
+.navigation {
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: auto;
+
+  nav {
+    @include clearfix;
+  }
+
+  @include breakpoint($media-mobile) {
+    flex-direction: column;
+
+    nav {
+      margin-bottom: 10px;
+      flex-direction: column;
+    }
+
+    nav::before {
+      content: attr(data-heading);
+      display: block;
+      margin-top: 30px;
+      text-transform: uppercase;
+      color: $color-text-copy;
+      font-weight: bold;
+    }
+  }
+
+  :global(html.ready) .header & a {
+    transition: color 0.3s ease-in-out;
+  }
+
+  @include breakpoint($media-tablet) {
+    span {
+      border-bottom: solid 2px transparent;
+    }
+  }
+
+  @include breakpoint($media-not-mobile) {
+    color: #B6B6B6;
+
+    li {
+      line-height: 60px;
+      height: 60px;
+    }
+
+    a {
+      display: block;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: inherit;
+    }
+
+    span {
+      padding-bottom: 3px;
+      color: inherit;
+    }
+
+    &.intersecting {
+      color: $color-white;
+    }
+  }
+}

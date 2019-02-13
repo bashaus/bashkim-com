@@ -1,0 +1,4 @@
+/.next/
+/.storybook-static/
+/.serverless/
+/node_modules/

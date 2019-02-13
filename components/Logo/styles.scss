@@ -1,0 +1,43 @@
+@import "~breakpoint-sass";
+@import "../../styleguide/vendors/grid/";
+@import "../../styleguide/utils/media";
+@import "../../styleguide/utils/grid";
+@import "../../styleguide/utils/colours";
+
+.Logo {
+  @include grid-cell-padding((
+    tablet-portrait
+    tablet-landscape
+    desktop-narrow
+    desktop-wide
+  ));
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  text-decoration: none;
+  height: 60px;
+
+  strong {
+    display: block;
+    font-weight: bold;
+    line-height: 16px;
+    font-size: 14px;
+    padding: 0;
+    text-transform: uppercase;
+  }
+
+  span {
+    display: block;
+    padding: 0;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+  }
+
+  :global(html.ready) .header & strong,
+  :global(html.ready) .header & span {
+    transition: all 0.3s ease-in-out;
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "server": {
+    "env": {
+      "doc": "The current environment",
+      "format": "String",
+      "default": "prod",
+      "env": "APP_ENV"
+    },
+    "port": {
+      "doc": "The port to bind.",
+      "format": "port",
+      "default": 3000,
+      "env": "PORT",
+      "arg": "port"
+    },
+    "lambda": {
+      "doc": "Whether or not the server is running on AWS Lambda",
+      "format": "Boolean",
+      "default": false,
+      "env": "LAMBDA"
+    }
+  }
+}

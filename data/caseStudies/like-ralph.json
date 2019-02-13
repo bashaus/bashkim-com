@@ -1,0 +1,26 @@
+{
+  "slug": "like-ralph",
+  "href": "/portfolio/like-ralph",
+  "images": {
+    "headerDesktop": "/static/images/caseStudies/like-ralph/header-desktop.jpg",
+    "headerMobile": "/static/images/caseStudies/like-ralph/header-mobile.jpg",
+    "icon": "/static/images/caseStudies/like-ralph/icon.jpg",
+    "poster": "/static/images/caseStudies/like-ralph/poster.jpg"
+  },
+  "meta": {
+    "title": "Like Ralph",
+    "description": "Ralph doesn't want to be a video-game villain anymore, so how do you encourage people to 'Like Ralph'?",
+    "keywords": "wreck it ralph, like ralph, facebook app"
+  },
+  "categories": [
+    "web-development"
+  ],
+  "date": "2012-10-22",
+  "technologies": [
+    "node.js", "websockets", "html5-canvas", "javascript"
+  ],
+  "tags": [
+    "node.js", "websockets", "facebook", "javascript",
+    "back-end", "front-end", "web-development"
+  ]
+}

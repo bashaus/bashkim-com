@@ -1,0 +1,70 @@
+@import "~breakpoint-sass";
+@import "../../styleguide/vendors/grid/";
+@import "../../styleguide/utils/media";
+@import "../../styleguide/utils/grid";
+@import "../../styleguide/utils/colours";
+@import "../../styleguide/utils/wysiwyg";
+
+.PartialSplitItem {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  div {
+    @extend %wysiwyg;
+    @include grid-cell-padding($sides: (left right));
+    max-width: 320px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  &.withBackground {
+    background-color: #EFEFEF;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  &.withBackground::before,
+  &.withBackground::after {
+    border-color: $color-white;
+  }
+
+  @include breakpoint($media-mobile) {
+    width: 100%;
+    padding: 20px;
+
+    &.withBackground {
+      min-height: 60vw;
+      padding: 0;
+    }
+
+    div {
+      flex-basis: 100%;
+    }
+  }
+
+  @include breakpoint($media-not-mobile) {
+    width: calc(50% - 20px);
+    padding: 40px;
+    min-height: calc(9 / 16 * 50vw);
+
+    &.withBackground {
+      width: calc(50% + 20px);
+      padding-left: 20px;
+    }
+
+    div {
+      flex-basis: 40%;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+@import "~breakpoint-sass";
+@import "../../styleguide/utils/media";
+@import "../../styleguide/utils/colours";
+
+.ToggleButton {
+  display: block;
+  float: left;
+  overflow: hidden;
+  cursor: pointer;
+
+  &.selected {
+    background-color: $color-shade-border;
+  }
+
+  input[type="radio"] {
+    display: none;
+  }
+
+  @include breakpoint($media-mobile) {
+    width: 35px;
+    height: 30px;  
+  }
+
+  @include breakpoint($media-not-mobile) {
+    width: 60px;
+    height: 50px;  
+  }
+}

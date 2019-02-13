@@ -1,0 +1,26 @@
+@import "~breakpoint-sass";
+@import "../../styleguide/vendors/grid/";
+@import "../../styleguide/utils/media";
+@import "../../styleguide/utils/grid";
+
+.ViewPortfolio.icon {
+  @include grid-container;
+
+  > li {
+    @include grid-cell(
+      $columns: (
+        mobile-portrait: 12,
+        mobile-landscape: 6,
+        tablet-portrait: 6,
+        tablet-landscape: 4,
+        desktop-narrow: 3,
+        desktop-wide: 3
+      )
+    );
+  }
+}
+
+.ViewPortfolio.list {
+  @include grid-full;
+}
+

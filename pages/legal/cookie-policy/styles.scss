@@ -1,0 +1,77 @@
+@import "~breakpoint-sass";
+@import "../../../styleguide/vendors/grid/";
+@import "../../../styleguide/utils/media";
+@import "../../../styleguide/utils/grid";
+
+.cookieList {
+  width: 100%;
+
+  th {
+    font-weight: bold;
+    text-align: left;
+  }
+
+  @include breakpoint($media-mobile) {
+    thead {
+      display: none;
+    }
+
+    tr {
+      display: block;
+      @include grid-cell-padding($sides: (top bottom));
+    }
+
+    tbody th,
+    tbody td {
+      position: relative;
+      display: block;
+      text-align: left;
+      margin-left: 100px;
+    }
+
+    tbody th::before,
+    tbody td::before {
+      display: block;
+      font-weight: bold;
+      position: absolute;
+      left: -100px;
+    }
+
+    tbody th::before {
+      content: 'Name';
+    }
+
+    tbody td:nth-child(2)::before {
+      content: 'Description';
+    }
+
+    tbody td:nth-child(3)::before {
+      content: 'Expires';
+    }
+  }
+
+  @include breakpoint($media-not-mobile) {
+    thead th {
+      @include grid-cell-padding($sides: (left right));
+    }
+
+    tbody th,
+    tbody td {
+      @include grid-cell-padding($sides: (top left right));
+    }
+
+    th {
+      min-width: 75px;
+    }
+
+    thead th:first-child,
+    tbody th:first-child {
+      padding-left: 0 !important;
+    }
+
+    thead th:last-child,
+    tbody td:last-child {
+      padding-right: 0 !important;
+    }
+  }
+}

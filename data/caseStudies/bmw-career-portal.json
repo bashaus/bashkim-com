@@ -1,0 +1,26 @@
+{
+  "slug": "bmw-career-portal",
+  "href": "/portfolio/bmw-career-portal",
+  "images": {
+    "headerDesktop": "/static/images/caseStudies/bmw-career-portal/header-desktop.jpg",
+    "headerMobile": "/static/images/caseStudies/bmw-career-portal/header-mobile.jpg",
+    "icon": "/static/images/caseStudies/bmw-career-portal/icon.jpg",
+    "poster": "/static/images/caseStudies/bmw-career-portal/poster.jpg"
+  },
+  "meta": {
+    "title": "BMW Career Portal",
+    "description": "Website for displaying jobs available from BMW managed via Taleo",
+    "keywords": "bmw, taleo, careers portal"
+  },
+  "categories": [
+    "web-development"
+  ],
+  "date": "2015-10-27",
+  "technologies": [
+    "java", "magnolia", "html5", "css3"
+  ],
+  "tags": [
+    "java", "magnolia", "cms", "javascript",
+    "back-end", "front-end", "web-development"
+  ]
+}

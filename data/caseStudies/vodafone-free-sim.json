@@ -1,0 +1,26 @@
+{
+  "slug": "vodafone-free-sim",
+  "href": "/portfolio/vodafone-free-sim",
+  "images": {
+    "headerDesktop": "/static/images/caseStudies/vodafone-free-sim/header-desktop.jpg",
+    "headerMobile": "/static/images/caseStudies/vodafone-free-sim/header-mobile.jpg",
+    "icon": "/static/images/caseStudies/vodafone-free-sim/icon.jpg",
+    "poster": "/static/images/caseStudies/vodafone-free-sim/poster.jpg"
+  },
+  "meta": {
+    "title": "Vodafone Free SIM",
+    "description": "A management system used to track the effectiveness of Vodafone's Free SIM advertising campaigns",
+    "keywords": "vodafone, free sim, campaign management system"
+  },
+  "categories": [
+    "web-development"
+  ],
+  "date": "2011-05-15",
+  "technologies": [
+    "php", "codeigniter", "wurfl", "html5"
+  ],
+  "tags": [
+    "php", "codeigniter", "data-warehouse", "cms", "javascript",
+    "back-end", "front-end", "web-development"
+  ]
+}

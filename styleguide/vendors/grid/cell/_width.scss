@@ -1,0 +1,26 @@
+@mixin grid-cell-width($breakpoints: null, $span: null) {
+  @if (type-of($breakpoints) == "map") {
+    @each $breakpoint, $span in $breakpoints {
+      @include grid-cell-width($breakpoint, $span);
+    }
+  } @else if (type-of($breakpoints) == "string") {
+    $breakpoint: $breakpoints;
+
+    @if ($span == 0) {
+      @error  "grid-cell( #{$breakpoint}, #{$span} )"
+              "$span expects unitless number of columns";
+    } @else if (unitless($span) == false) {
+      @error  "grid-cell( #{$breakpoint}, #{$span} )"
+              "$span expects unitless number of columns";
+    }
+
+    @include breakpoint(grid-query($breakpoint)) {
+      flex: $span 0 (100% / 12 * $span);
+      max-width: (100% / 12 * $span);
+    }
+  } @else {
+    @error  "grid-cell-width( #{type-of($breakpoints)}, #{type-of($span)} ): "
+            "$breakpoints received type #{type-of($breakpoints)}, "
+            "expected `map` or `string`";
+  }
+}

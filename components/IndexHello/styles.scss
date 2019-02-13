@@ -1,0 +1,102 @@
+@import "~breakpoint-sass";
+@import "../../styleguide/vendors/grid/";
+@import "../../styleguide/utils/media";
+@import "../../styleguide/utils/grid";
+@import "../../styleguide/utils/colours";
+
+.wrapper {
+  position: relative;
+
+  :global(html.ready) &.animated .content {
+    animation-name: Hello--Show;
+    animation-duration: 0.3s;
+  }
+
+  .buttons {
+    @include breakpoint($media-mobile) {
+      position: absolute;
+      top: -20px;
+      right: 10px;
+    }
+
+    @include breakpoint($media-not-mobile) {
+      padding-top: 20px;
+    }
+  }
+
+  .next,
+  .previous {
+    padding: 0;
+    text-align: center;
+    line-height: 20px;
+    width: 20px;
+    height: 20px;
+    -webkit-appearance: none;
+    overflow: hidden;
+    border: solid 2px $color-white;
+    border-radius: 3px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    svg {
+      display: inline-block;
+      fill: $color-white;
+      transition: fill 0.3s;
+    }
+
+    &:hover {
+      background: $color-white;
+    }
+
+    &:hover svg {
+      fill: $color-charcol;
+    }
+  }
+}
+
+@keyframes Hello--Show {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+
+.IndexHello {
+  animation-duration: 60s;
+  animation-name: IndexHello--Background;
+  animation-iteration-count: infinite;
+  background: linear-gradient(230deg, #A24BCF, #4B79CF, #4BC5CF);
+  background-size: 300% 300%;
+  color: $color-white;
+
+  @include breakpoint($media-mobile) {
+    .name::after {
+      content: ".";
+      display: inline-block;
+    }
+
+    .spiel {
+      display: block;
+    }
+  }
+
+  @include breakpoint($media-not-mobile) {
+    .name::after {
+      content: ",";
+      display: inline-block;
+    }
+  }
+}
+
+@keyframes IndexHello--Background {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}

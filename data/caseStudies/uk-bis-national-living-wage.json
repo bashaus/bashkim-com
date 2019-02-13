@@ -1,0 +1,26 @@
+{
+  "slug": "uk-bis-national-living-wage",
+  "href": "/portfolio/uk-bis-national-living-wage",
+  "images": {
+    "headerDesktop": "/static/images/caseStudies/uk-bis-national-living-wage/header-desktop.jpg",
+    "headerMobile": "/static/images/caseStudies/uk-bis-national-living-wage/header-mobile.jpg",
+    "icon": "/static/images/caseStudies/uk-bis-national-living-wage/icon.jpg",
+    "poster": "/static/images/caseStudies/uk-bis-national-living-wage/poster.jpg"
+  },
+  "meta": {
+    "title": "National Living Wage",
+    "description": "Campaign page for the UK Government's new minimum wage",
+    "keywords": "UK, gov, bus, national living wage"
+  },
+  "categories": [
+    "web-development"
+  ],
+  "date": "2015-11-27",
+  "technologies": [
+    "php", "wordpress", "html5", "css3"
+  ],
+  "tags": [
+    "php", "wordpress", "cms", "javascript",
+    "back-end", "front-end", "web-development"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "slug": "ihg-business-advantage",
+  "href": "/portfolio/ihg-business-advantage",
+  "images": {
+    "headerDesktop": "/static/images/caseStudies/ihg-business-advantage/header-desktop.jpg",
+    "headerMobile": "/static/images/caseStudies/ihg-business-advantage/header-mobile.jpg",
+    "icon": "/static/images/caseStudies/ihg-business-advantage/icon.jpg",
+    "poster": "/static/images/caseStudies/ihg-business-advantage/poster.jpg"
+  },
+  "meta": {
+    "title": "IHG Business Advantage",
+    "description": "Content hub and sales portal for a UK-based hotel account system",
+    "keywords": "ihg, business advantage"
+  },
+  "categories": [
+    "web-development"
+  ],
+  "date": "2018-01-14",
+  "technologies": [
+    "php", "wordpress", "html5", "css3"
+  ],
+  "tags": [
+    "php", "wordpress", "cms", "javascript",
+    "back-end", "front-end", "web-development"
+  ]
+}
