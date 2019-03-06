@@ -49,8 +49,7 @@ custom:
   endpointType: REGIONAL
   region: "${opt:region, self:provider.region}"
   stage: "${opt:stage, env:SLS_STAGE, 'production'}"
-  assetsBucket: "${self:service}-${self:custom.stage}-assets"
-
+  assetsBucket: "${env:DEPLOY_S3_ASSET_BUCKET}"
   domain:
     certificateArn: "arn:aws:acm:us-east-1:409535992503:certificate/a232ee88-ad8e-44c1-a9c2-5a8cdb2e2577"
     domainName: www.bashkim.com
