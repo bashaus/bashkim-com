@@ -1,12 +1,22 @@
 service: bashkim-com
 
 custom:
-  stage: "${opt:stage, env:SLS_STAGE, 'production'}"
-  region: "${opt:region, env:AWS_DEFAULT_REGION, 'eu-west-1'}"
-  website:
-    assetBucket: "${env:DEPLOY_S3_ASSET_BUCKET}"
-    certificateArn: "arn:aws:acm:us-east-1:409535992503:certificate/a232ee88-ad8e-44c1-a9c2-5a8cdb2e2577"
-    domain: www.bashkim.com
+  stage: ${opt:stage, env:SLS_STAGE, 'production'}
+  region: ${opt:region, env:AWS_DEFAULT_REGION, 'eu-west-1'}
+  styleguide: ${self:custom.env.${self:custom.stage}.styleguide}
+  website: ${self:custom.env.${self:custom.stage}.website}
+
+  env:
+    production:
+      styleguide:
+        certificateArn: "arn:aws:acm:us-east-1:409535992503:certificate/a232ee88-ad8e-44c1-a9c2-5a8cdb2e2577"
+        domainName: styleguide.bashkim.com
+        bucketName: bashkim-com-${self:custom.stage}-styleguide
+      website:
+        certificateArn: "arn:aws:acm:us-east-1:409535992503:certificate/a232ee88-ad8e-44c1-a9c2-5a8cdb2e2577"
+        commitHash: ${env:WERCKER_GIT_COMMIT}
+        domainName: www.bashkim.com
+        bucketName: bashkim-com-${self:custom.stage}
 
 provider:
   name: aws
@@ -16,10 +26,10 @@ provider:
   memorySize: 512
   timeout: 15
   environment:
-    APP_ENV: production
-    GIT_COMMIT: ${env:WERCKER_GIT_COMMIT}
+    APP_ENV: ${self:custom.stage}
+    GIT_COMMIT: ${self:custom.website.commitHash}
     LAMBDA: true
-    NODE_ENV: production
+    NODE_ENV: ${self:custom.stage}
 
 package:
   exclude:
@@ -27,12 +37,12 @@ package:
     - "**/stories.jsx"
     - components/**
     - data/**
+    - node_modules/.cache/**
     - pages/**
     - propTypes/**
     - static/**
     - store/**
     - styleguide/**
-    - node_modules/.cache/**
     - .babelrc
     - .editorconfig
     - .eslintrc.json
@@ -40,8 +50,6 @@ package:
     - package.json
     - package-lock.json
     - wercker.yml
-  include:
-    - .next/**
 
 functions:
   app:
@@ -57,34 +65,8 @@ functions:
 resources:
   Description: bashkim-com
   Resources:
-    AssetBucket:
-      Type: AWS::S3::Bucket
-      DeletionPolicy: Delete
-      Properties:
-        BucketName: ${self:custom.website.assetBucket}
 
-    AssetBucketPolicy:
-      Type: "AWS::S3::BucketPolicy"
-      DependsOn:
-        - CloudFrontOriginAccessIdentity
-        - AssetBucket
-      Properties:
-        Bucket: ${self:custom.website.assetBucket}
-        PolicyDocument:
-          Statement:
-            - Action:
-              - "s3:GetObject"
-              Effect: "Allow"
-              Resource:
-                Fn::Join:
-                  - ""
-                  - - Fn::GetAtt: [AssetBucket, Arn]
-                    - "/*"
-              Principal:
-                CanonicalUser:
-                  Fn::GetAtt: [CloudFrontOriginAccessIdentity, S3CanonicalUserId]
-
-    CloudFrontOriginAccessIdentity:
+    Website_CloudFrontOriginAccessIdentity:
       Type: "AWS::CloudFront::CloudFrontOriginAccessIdentity"
       Properties:
         CloudFrontOriginAccessIdentityConfig:
@@ -94,14 +76,14 @@ resources:
               - - Ref: AWS::StackName
                 - "-origin-access-identity"
 
-    CloudFrontDistributionWebsite:
+    Website_CloudFrontDistribution:
       Type: AWS::CloudFront::Distribution
       DependsOn:
-        - AssetBucket
+        - Website_Bucket
       Properties:
         DistributionConfig:
           Aliases:
-            - ${self:custom.website.domain}
+            - ${self:custom.website.domainName}
           PriceClass: PriceClass_100
           ViewerCertificate:
             AcmCertificateArn: ${self:custom.website.certificateArn}
@@ -109,14 +91,14 @@ resources:
             SslSupportMethod: sni-only
           Origins:
             - DomainName:
-                Fn::GetAtt: [AssetBucket, DomainName]
-              Id: AssetBucket
+                Fn::GetAtt: [Website_Bucket, DomainName]
+              Id: Website_Bucket
               S3OriginConfig:
                 OriginAccessIdentity:
                   Fn::Join:
                   - ""
                   - - "origin-access-identity/cloudfront/"
-                    - Ref: CloudFrontOriginAccessIdentity
+                    - Ref: Website_CloudFrontOriginAccessIdentity
             - DomainName:
                 Fn::Join:
                 - ""
@@ -144,7 +126,7 @@ resources:
                 - GET
                 - HEAD
                 - OPTIONS
-              TargetOriginId: AssetBucket
+              TargetOriginId: Website_Bucket
               Compress: true
               ForwardedValues:
                 QueryString: false
@@ -154,7 +136,7 @@ resources:
                 - GET
                 - HEAD
                 - OPTIONS
-              TargetOriginId: AssetBucket
+              TargetOriginId: Website_Bucket
               Compress: true
               ForwardedValues:
                 QueryString: false
@@ -172,3 +154,105 @@ resources:
               Cookies:
                 Forward: none
             ViewerProtocolPolicy: redirect-to-https
+
+    Website_Bucket:
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: ${self:custom.website.bucketName}
+
+    Website_BucketPolicy:
+      Type: "AWS::S3::BucketPolicy"
+      DependsOn:
+        - Website_CloudFrontOriginAccessIdentity
+        - Website_Bucket
+      Properties:
+        Bucket: ${self:custom.website.bucketName}
+        PolicyDocument:
+          Statement:
+            - Action:
+              - "s3:GetObject"
+              Effect: "Allow"
+              Resource:
+                Fn::Join:
+                  - ""
+                  - - Fn::GetAtt: [Website_Bucket, Arn]
+                    - "/*"
+              Principal:
+                CanonicalUser:
+                  Fn::GetAtt: [Website_CloudFrontOriginAccessIdentity, S3CanonicalUserId]
+
+    ## Style Guide Configuration
+
+    Styleguide_CloudFrontOriginAccessIdentity:
+      Type: "AWS::CloudFront::CloudFrontOriginAccessIdentity"
+      Properties:
+        CloudFrontOriginAccessIdentityConfig:
+          Comment:
+            Fn::Join:
+              - ""
+              - - Ref: AWS::StackName
+                - "-origin-access-identity"
+
+    Styleguide_CloudFrontDistribution:
+      Type: AWS::CloudFront::Distribution
+      DependsOn:
+        - Styleguide_Bucket
+      Properties:
+        DistributionConfig:
+          Aliases:
+            - ${self:custom.styleguide.domainName}
+          PriceClass: PriceClass_100
+          ViewerCertificate:
+            AcmCertificateArn: ${self:custom.styleguide.certificateArn}
+            MinimumProtocolVersion: TLSv1.1_2016
+            SslSupportMethod: sni-only
+          Origins:
+            - DomainName:
+                Fn::GetAtt: [Styleguide_Bucket, DomainName]
+              Id: Styleguide_Bucket
+              S3OriginConfig:
+                OriginAccessIdentity:
+                  Fn::Join:
+                  - ""
+                  - - "origin-access-identity/cloudfront/"
+                    - Ref: Styleguide_CloudFrontOriginAccessIdentity
+          Enabled: 'true'
+          HttpVersion: http2
+          DefaultCacheBehavior:
+            AllowedMethods:
+              - GET
+              - HEAD
+              - OPTIONS
+              TargetOriginId: Styleguide_Bucket
+            Compress: true
+            ForwardedValues:
+              QueryString: false
+              Cookies:
+                Forward: none
+            ViewerProtocolPolicy: redirect-to-https
+
+    Styleguide_Bucket:
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: ${self:custom.styleguide.bucketName}
+
+    Styleguide_BucketPolicy:
+      Type: "AWS::S3::BucketPolicy"
+      DependsOn:
+        - Styleguide_CloudFrontOriginAccessIdentity
+        - Styleguide_Bucket
+      Properties:
+        Bucket: ${self:custom.styleguide.bucketName}
+        PolicyDocument:
+          Statement:
+            - Action:
+              - "s3:GetObject"
+              Effect: "Allow"
+              Resource:
+                Fn::Join:
+                  - ""
+                  - - Fn::GetAtt: [Styleguide_Bucket, Arn]
+                    - "/*"
+              Principal:
+                CanonicalUser:
+                  Fn::GetAtt: [Styleguide_CloudFrontOriginAccessIdentity, S3CanonicalUserId]

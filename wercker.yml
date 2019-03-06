@@ -24,5 +24,11 @@ synchronise:
   box: 'python:3.6'
   steps:
     - bashaus/aws-s3-deploy:
-        name: aws-s3-deploy
-        target-bucket: $DEPLOY_S3_ASSET_BUCKET
+        name: s3 website assets
+        configuration-file: s3.website.yml
+        target-bucket: $DEPLOY_S3_WEBSITE_BUCKET
+
+    - bashaus/aws-s3-deploy:
+        name: s3 styleguide
+        configuration-file: s3.styleguide.yml
+        target-bucket: $DEPLOY_S3_STYLEGUIDE_BUCKET

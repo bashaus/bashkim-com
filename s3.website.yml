@@ -8,7 +8,3 @@ jobs:
   - name: next
     src: .next/
     dest: _next/
-
-  - name: storybook
-    src: .storybook-static/
-    dest: .storybook-static/
