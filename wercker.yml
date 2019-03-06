@@ -1,23 +1,31 @@
 build-node:
   box: 'node:8.10'
   steps:
-    - npm-install:
-        name: 'npm install'
     - script:
-        name: 'npm build'
+        name: write commit hash
+        code: echo $WERCKER_GIT_COMMIT > COMMIT
+    - npm-install:
+        name: npm install
+    - script:
+        name: npm run build
         code: npm run build
+    - script:
+        name: npm run storybook-build
+        code: npm run storybook-build
 
 deploy:
   box: 'node:8.10'
   steps:
     - script:
-        name: 'serverless install'
+        name: serverless install
         code: npm install -g serverless
     - script:
-        name: 'serverless deploy'
+        name: serverless deploy
         code: serverless deploy
+
 sychronise:
   box: 'python:3.6'
+  steps:
     - bashaus/aws-s3-deploy:
-        name: 'aws-s3-deploy'
+        name: aws-s3-deploy
         target-bucket: $DEPLOY_S3_ASSET_BUCKET
