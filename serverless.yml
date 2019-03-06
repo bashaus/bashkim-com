@@ -234,6 +234,8 @@ resources:
       Type: AWS::S3::Bucket
       Properties:
         BucketName: ${self:custom.styleguide.bucketName}
+        WebsiteConfiguration:
+          IndexDocument: index.html
 
     StyleguideBucketPolicy:
       Type: "AWS::S3::BucketPolicy"
