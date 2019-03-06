@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import React from 'react';
 
+import AboutProfile from 'components/AboutProfile';
 import IndexBrands from 'components/IndexBrands';
 import IndexFeaturedCaseStudies from 'components/IndexFeaturedCaseStudies';
 import IndexHello from 'components/IndexHello';
@@ -38,6 +39,7 @@ export default function HomePage() {
       </Head>
 
       <IndexHello />
+      <AboutProfile />
       <IndexFeaturedCaseStudies caseStudies={featuredCaseStudies} />
 
       <PartialSubtitle>
