@@ -9,7 +9,7 @@ custom:
   env:
     production:
       styleguide:
-        certificateArn: "arn:aws:acm:us-east-1:409535992503:certificate/a232ee88-ad8e-44c1-a9c2-5a8cdb2e2577"
+        certificateArn: "arn:aws:acm:us-east-1:409535992503:certificate/61ad6c28-f599-4344-b0c3-87a161d788f8"
         domainName: styleguide.bashkim.com
         bucketName: bashkim-com-${self:custom.stage}-styleguide
       website:
@@ -65,8 +65,7 @@ functions:
 resources:
   Description: bashkim-com
   Resources:
-
-    Website_CloudFrontOriginAccessIdentity:
+    WebsiteCloudFrontOriginAccessIdentity:
       Type: "AWS::CloudFront::CloudFrontOriginAccessIdentity"
       Properties:
         CloudFrontOriginAccessIdentityConfig:
@@ -76,10 +75,10 @@ resources:
               - - Ref: AWS::StackName
                 - "-origin-access-identity"
 
-    Website_CloudFrontDistribution:
+    WebsiteCloudFrontDistribution:
       Type: AWS::CloudFront::Distribution
       DependsOn:
-        - Website_Bucket
+        - WebsiteBucket
       Properties:
         DistributionConfig:
           Aliases:
@@ -91,14 +90,14 @@ resources:
             SslSupportMethod: sni-only
           Origins:
             - DomainName:
-                Fn::GetAtt: [Website_Bucket, DomainName]
-              Id: Website_Bucket
+                Fn::GetAtt: [WebsiteBucket, DomainName]
+              Id: WebsiteBucket
               S3OriginConfig:
                 OriginAccessIdentity:
                   Fn::Join:
                   - ""
                   - - "origin-access-identity/cloudfront/"
-                    - Ref: Website_CloudFrontOriginAccessIdentity
+                    - Ref: WebsiteCloudFrontOriginAccessIdentity
             - DomainName:
                 Fn::Join:
                 - ""
@@ -126,7 +125,7 @@ resources:
                 - GET
                 - HEAD
                 - OPTIONS
-              TargetOriginId: Website_Bucket
+              TargetOriginId: WebsiteBucket
               Compress: true
               ForwardedValues:
                 QueryString: false
@@ -136,7 +135,7 @@ resources:
                 - GET
                 - HEAD
                 - OPTIONS
-              TargetOriginId: Website_Bucket
+              TargetOriginId: WebsiteBucket
               Compress: true
               ForwardedValues:
                 QueryString: false
@@ -155,16 +154,16 @@ resources:
                 Forward: none
             ViewerProtocolPolicy: redirect-to-https
 
-    Website_Bucket:
+    WebsiteBucket:
       Type: AWS::S3::Bucket
       Properties:
         BucketName: ${self:custom.website.bucketName}
 
-    Website_BucketPolicy:
+    WebsiteBucketPolicy:
       Type: "AWS::S3::BucketPolicy"
       DependsOn:
-        - Website_CloudFrontOriginAccessIdentity
-        - Website_Bucket
+        - WebsiteCloudFrontOriginAccessIdentity
+        - WebsiteBucket
       Properties:
         Bucket: ${self:custom.website.bucketName}
         PolicyDocument:
@@ -175,15 +174,15 @@ resources:
               Resource:
                 Fn::Join:
                   - ""
-                  - - Fn::GetAtt: [Website_Bucket, Arn]
+                  - - Fn::GetAtt: [WebsiteBucket, Arn]
                     - "/*"
               Principal:
                 CanonicalUser:
-                  Fn::GetAtt: [Website_CloudFrontOriginAccessIdentity, S3CanonicalUserId]
+                  Fn::GetAtt: [WebsiteCloudFrontOriginAccessIdentity, S3CanonicalUserId]
 
     ## Style Guide Configuration
 
-    Styleguide_CloudFrontOriginAccessIdentity:
+    StyleguideCloudFrontOriginAccessIdentity:
       Type: "AWS::CloudFront::CloudFrontOriginAccessIdentity"
       Properties:
         CloudFrontOriginAccessIdentityConfig:
@@ -193,10 +192,10 @@ resources:
               - - Ref: AWS::StackName
                 - "-origin-access-identity"
 
-    Styleguide_CloudFrontDistribution:
+    StyleguideCloudFrontDistribution:
       Type: AWS::CloudFront::Distribution
       DependsOn:
-        - Styleguide_Bucket
+        - StyleguideBucket
       Properties:
         DistributionConfig:
           Aliases:
@@ -208,14 +207,14 @@ resources:
             SslSupportMethod: sni-only
           Origins:
             - DomainName:
-                Fn::GetAtt: [Styleguide_Bucket, DomainName]
-              Id: Styleguide_Bucket
+                Fn::GetAtt: [StyleguideBucket, DomainName]
+              Id: StyleguideBucket
               S3OriginConfig:
                 OriginAccessIdentity:
                   Fn::Join:
                   - ""
                   - - "origin-access-identity/cloudfront/"
-                    - Ref: Styleguide_CloudFrontOriginAccessIdentity
+                    - Ref: StyleguideCloudFrontOriginAccessIdentity
           Enabled: 'true'
           HttpVersion: http2
           DefaultCacheBehavior:
@@ -223,7 +222,7 @@ resources:
               - GET
               - HEAD
               - OPTIONS
-              TargetOriginId: Styleguide_Bucket
+            TargetOriginId: StyleguideBucket
             Compress: true
             ForwardedValues:
               QueryString: false
@@ -231,16 +230,16 @@ resources:
                 Forward: none
             ViewerProtocolPolicy: redirect-to-https
 
-    Styleguide_Bucket:
+    StyleguideBucket:
       Type: AWS::S3::Bucket
       Properties:
         BucketName: ${self:custom.styleguide.bucketName}
 
-    Styleguide_BucketPolicy:
+    StyleguideBucketPolicy:
       Type: "AWS::S3::BucketPolicy"
       DependsOn:
-        - Styleguide_CloudFrontOriginAccessIdentity
-        - Styleguide_Bucket
+        - StyleguideCloudFrontOriginAccessIdentity
+        - StyleguideBucket
       Properties:
         Bucket: ${self:custom.styleguide.bucketName}
         PolicyDocument:
@@ -251,8 +250,9 @@ resources:
               Resource:
                 Fn::Join:
                   - ""
-                  - - Fn::GetAtt: [Styleguide_Bucket, Arn]
+                  - - Fn::GetAtt: [StyleguideBucket, Arn]
                     - "/*"
               Principal:
                 CanonicalUser:
-                  Fn::GetAtt: [Styleguide_CloudFrontOriginAccessIdentity, S3CanonicalUserId]
+                  Fn::GetAtt: [StyleguideCloudFrontOriginAccessIdentity, S3CanonicalUserId]
+
