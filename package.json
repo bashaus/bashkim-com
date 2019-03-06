@@ -1,7 +1,7 @@
 {
   "name": "@bashaus/bashkim-com",
   "version": "1.0.0",
-  "description": "Portfolio of works by Bashkim Isai",
+  "description": "Portfolio of case studies by Bashkim Isai",
   "main": "index.js",
   "scripts": {
     "build": "APP_ENV=production next build",
@@ -14,7 +14,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC",
+  "license": "SEE LICENSE IN LICENSE.md",
   "dependencies": {
     "@githubprimer/octicons-react": "^8.4.1",
     "@sentry/browser": "^4.6.4",
@@ -57,7 +57,6 @@
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.12.4",
-    "eslint-plugin-react-hooks": "^1.2.0",
-    "serverless-s3-sync": "^1.7.3"
+    "eslint-plugin-react-hooks": "^1.2.0"
   }
 }

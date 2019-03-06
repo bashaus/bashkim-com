@@ -16,3 +16,8 @@ deploy:
     - script:
         name: 'serverless deploy'
         code: serverless deploy
+sychronise:
+  box: 'python:3.6'
+    - bashaus/aws-s3-deploy:
+        name: 'aws-s3-deploy'
+        target-bucket: $DEPLOY_S3_ASSET_BUCKET

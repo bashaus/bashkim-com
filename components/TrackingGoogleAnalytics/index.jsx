@@ -19,7 +19,8 @@ export default function TrackingGoogleAnalytics() {
 
   return (
     <Head>
-      <script async src="https://www.googletagmanager.com/gtag/js?id={{ appConfig['google-analytics'].ua }}" />
+      <link rel="preconnect" href="https://www.google-analytics.com" />
+      <script async src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANYTICS_UA}`} />
       { /* eslint-disable-next-line react/no-danger */ }
       <script dangerouslySetInnerHTML={{ __html: SCRIPT_GOOGLE_ANALYTICS }} />
     </Head>

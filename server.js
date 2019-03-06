@@ -6,8 +6,8 @@ const config = require('./config');
 const sentryDsn = config.get('sentry.dsn');
 if (sentryDsn) {
   Sentry.init({
-    environment: config.get('server.env'),
     dsn: sentryDsn,
+    environment: config.get('server.env'),
   });
 }
 

@@ -1,0 +1,10 @@
+version: "1"
+
+jobs:
+  - name: static
+    src: ./static/
+    dest: ./static/
+
+  - name: next
+    src: ./.next/
+    dest: ./_next/
