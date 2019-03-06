@@ -101,8 +101,8 @@ resources:
         - AssetsBucket
       Properties:
         DistributionConfig:
-          # Aliases:
-          #   - ${self:custom.domain.domainName}
+          Aliases:
+            - ${self:custom.domain.domainName}
           PriceClass: PriceClass_100
           ViewerCertificate:
             AcmCertificateArn: ${self:custom.domain.certificateArn}
