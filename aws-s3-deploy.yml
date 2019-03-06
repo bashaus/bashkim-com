@@ -2,13 +2,13 @@ version: "1"
 
 jobs:
   - name: static
-    src: ./static/
-    dest: ./static/
+    src: static/
+    dest: static/
 
   - name: next
-    src: ./.next/
-    dest: ./_next/
+    src: .next/
+    dest: _next/
 
   - name: storybook
-    src: ./.storybook-static/
-    dest: ./.storybook-static/
+    src: .storybook-static/
+    dest: .storybook-static/
