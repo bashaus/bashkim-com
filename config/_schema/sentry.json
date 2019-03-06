@@ -1,9 +1,31 @@
 {
   "sentry": {
+    "enabled": {
+      "doc": "Whether or not sentry should be enabled",
+      "format": "Boolean",
+      "default": true
+    },
     "dsn": {
       "doc": "The DSN provided by Sentry",
       "format": "String",
       "default": "https://bff95320ff2549e5b4dc6f74860b3859@sentry.io/1408337"
+    },
+    "project": {
+      "doc": "The name of the project in Sentry (used for releases)",
+      "format": "String",
+      "default": "bashkim-com"
+    },
+    "commit": {
+      "doc": "Identifier for the current release",
+      "format": "String",
+      "default": "",
+      "env": "GIT_COMMIT"
+    },
+    "environment": {
+      "doc": "The name of the environment to report to Sentry",
+      "format": "String",
+      "default": "production",
+      "env": "APP_ENV"
     }
   }
 }

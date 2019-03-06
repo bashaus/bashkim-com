@@ -1,9 +1,6 @@
 build-node:
   box: 'node:8.10'
   steps:
-    - script:
-        name: write commit hash
-        code: echo $WERCKER_GIT_COMMIT > COMMIT
     - npm-install:
         name: npm install
     - script:
@@ -23,7 +20,7 @@ deploy:
         name: serverless deploy
         code: serverless deploy
 
-sychronise:
+synchronise:
   box: 'python:3.6'
   steps:
     - bashaus/aws-s3-deploy:

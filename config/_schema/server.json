@@ -3,7 +3,7 @@
     "env": {
       "doc": "The current environment",
       "format": "String",
-      "default": "prod",
+      "default": "production",
       "env": "APP_ENV"
     },
     "port": {

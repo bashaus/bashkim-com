@@ -3,11 +3,12 @@ const express = require('express');
 const next = require('next');
 const config = require('./config');
 
-const sentryDsn = config.get('sentry.dsn');
-if (sentryDsn) {
+const sentryIsEnabled = config.get('sentry.enabled');
+if (sentryIsEnabled) {
   Sentry.init({
-    dsn: sentryDsn,
-    environment: config.get('server.env'),
+    dsn: config.get('sentry.dsn'),
+    environment: config.get('sentry.environment'),
+    release: `${config.get('sentry.project')}@${config.get('sentry.commit')}`,
   });
 }
 

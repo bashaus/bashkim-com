@@ -9,6 +9,7 @@ provider:
   timeout: 15
   environment:
     APP_ENV: production
+    GIT_COMMIT: ${env:WERCKER_GIT_COMMIT}
     LAMBDA: true
     NODE_ENV: production
 

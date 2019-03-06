@@ -1,5 +1,14 @@
 {
   "googleAnalytics": {
-    "ua": "UA-22533062-1"
+    "enabled": {
+      "doc": "Should Google Analytics be enabled?",
+      "format": "Boolean",
+      "default": true
+    },
+    "ua": {
+      "doc": "The UA as provided by Google Analytics",
+      "format": "String",
+      "default": "UA-22533062-1"
+    }
   }
 }

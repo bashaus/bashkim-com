@@ -3,10 +3,8 @@ import Head from 'next/head';
 import React from 'react';
 
 const { publicRuntimeConfig } = getConfig();
-const GOOGLE_ANYTICS_UA = publicRuntimeConfig.googleAnalytics.ua;
-
 export default function TrackingGoogleAnalytics() {
-  if (!GOOGLE_ANYTICS_UA) {
+  if (!publicRuntimeConfig.googleAnalytics.enabled) {
     return null;
   }
 
@@ -14,13 +12,13 @@ export default function TrackingGoogleAnalytics() {
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', '${GOOGLE_ANYTICS_UA}', { 'anonymize_ip': true });
+    gtag('config', '${publicRuntimeConfig.googleAnalytics.ua}', { 'anonymize_ip': true });
   `;
 
   return (
     <Head>
       <link rel="preconnect" href="https://www.google-analytics.com" />
-      <script async src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANYTICS_UA}`} />
+      <script async src={`https://www.googletagmanager.com/gtag/js?id=${publicRuntimeConfig.googleAnalytics.ua}`} />
       { /* eslint-disable-next-line react/no-danger */ }
       <script dangerouslySetInnerHTML={{ __html: SCRIPT_GOOGLE_ANALYTICS }} />
     </Head>

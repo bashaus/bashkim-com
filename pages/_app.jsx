@@ -9,10 +9,12 @@ import TrackingSentryBoundary from 'components/TrackingSentryBoundary';
 
 const { publicRuntimeConfig } = getConfig();
 
-const sentryDsn = publicRuntimeConfig.sentry.dsn;
-if (sentryDsn) {
+const sentryIsEnabled = publicRuntimeConfig.sentry.enabled;
+if (sentryIsEnabled) {
   Sentry.init({
     dsn: publicRuntimeConfig.sentry.dsn,
+    environment: publicRuntimeConfig.sentry.environment,
+    release: `${publicRuntimeConfig.sentry.project}@${publicRuntimeConfig.sentry.commit}`,
   });
 }
 
