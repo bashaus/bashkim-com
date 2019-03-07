@@ -29,7 +29,8 @@ export default function NavigationPrimary(props) {
           </Link>
         </li>
         <li className={`${styles.navigation_blog} ${theme === 'blog' ? styles.selected : ''}`}>
-          <Link href="/blog">
+          {/* <Link href="/blog"> */}
+          <Link href="https://medium.com/@bashaus">
             <a>
               <span>Blog</span>
             </a>
