@@ -1,3 +1,5 @@
+command-timeout: 30
+
 build-node:
   box: 'node:8.10'
   steps:
