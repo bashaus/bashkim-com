@@ -26,16 +26,15 @@ export default function HomePage() {
     <LayoutDefault>
       <MetaTitle standalone content="Bashkim Isai - Creative Technologist" />
       <MetaDescription content="London-based Creative Technologist specialising in tangible media and web development." />
-      <MetaKeywords
-        content="creative technologist, london, bashkim isai, tangible media,
-          php developer, technical lead, technical consultant"
+      <MetaKeywords content="creative technologist, london, bashkim isai, tangible media,
+        php developer, technical lead, technical consultant"
       />
 
       <Head>
-        <meta property="fb:admins" content="616526947" />
-        <meta name="p:domain_verify" content="55b9bc4550de466a2f711ccbbbbb515d" />
-        <meta name="alexaVerifyID" content="P8-zPQkBVRuCWaLWzxhZFksyels" />
-        <meta name="msvalidate.01" content="BA82D2247A9878A3E512E11F6E9E16C9" />
+        <meta key="HomePage.facebook" property="fb:admins" content="616526947" />
+        <meta key="HomePage.pinterest" name="p:domain_verify" content="55b9bc4550de466a2f711ccbbbbb515d" />
+        <meta key="HomePage.alexa" name="alexaVerifyID" content="P8-zPQkBVRuCWaLWzxhZFksyels" />
+        <meta key="HomePage.bing" name="msvalidate.01" content="BA82D2247A9878A3E512E11F6E9E16C9" />
       </Head>
 
       <IndexHello />

@@ -16,31 +16,29 @@ export default class MyDocument extends Document {
         {/* set mime = require('mime') */}
         {/* set octicons = require('octicons') */}
         <Head>
-          <meta charSet="utf-8" />
-          <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-          <meta name="robots" content="INDEX,FOLLOW" />
-          <meta property="og:site_name" content="Bashkim Isai - Creative Technologist" />
+          <meta key="MyDocument.charSet" charSet="utf-8" />
+          <meta key="MyDocument.viewport" name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+          <meta key="MyDocument.robots" name="robots" content="INDEX,FOLLOW" />
+          <meta key="MyDocument.opengraph.site_name" property="og:site_name" content="Bashkim Isai - Creative Technologist" />
 
-          <meta name="twitter:card" content="summary" />
-          <meta name="twitter:site" content="@bashaus" />
-          <meta name="twitter:creator" content="@bashaus" />
-
-          <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-          <meta name="apple-mobile-web-app-capable" content="yes" />
-          <meta name="format-detection" content="telephone=no" />
+          <meta key="MyDocument.twitter.card" name="twitter:card" content="summary" />
+          <meta key="MyDocument.twitter.site" name="twitter:site" content="@bashaus" />
+          <meta key="MyDocument.twitter.creator" name="twitter:creator" content="@bashaus" />
 
           { /*
-          <link rel="apple-touch-icon" href="/static/images/favicons/touch-icon-iphone.png" />
-          <link rel="apple-touch-icon" sizes="76x76" href="/static/images/favicons/touch-icon-ipad.png" />
-          <link rel="apple-touch-icon" sizes="120x120" href="/static/images/favicons/touch-icon-iphone-retina.png" />
-          <link rel="apple-touch-icon" sizes="152x152" href="/static/images/favicons/touch-icon-ipad-retina.png" />
-          <link rel="apple-touch-startup-image" href="/static/images/favicons/startup.png" />
-          <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-          <meta name="msapplication-TileImage" content="/static/images/favicons/144.png" />
-          <link rel="icon" sizes="192x192" href="/static/images/favicons/192.png" />
+            <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+            <meta name="apple-mobile-web-app-capable" content="yes" />
+            <meta name="format-detection" content="telephone=no" />
+            <link rel="apple-touch-icon" href="/static/images/favicons/touch-icon-iphone.png" />
+            <link rel="apple-touch-icon" sizes="76x76" href="/static/images/favicons/touch-icon-ipad.png" />
+            <link rel="apple-touch-icon" sizes="120x120" href="/static/images/favicons/touch-icon-iphone-retina.png" />
+            <link rel="apple-touch-icon" sizes="152x152" href="/static/images/favicons/touch-icon-ipad-retina.png" />
+            <link rel="apple-touch-startup-image" href="/static/images/favicons/startup.png" />
+            <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+            <meta name="msapplication-TileImage" content="/static/images/favicons/144.png" />
+            <link rel="icon" sizes="192x192" href="/static/images/favicons/192.png" />
           */ }
 
-          <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta name="theme-color" content="#29E5D0" />
           <meta name="msapplication-TileColor" content="#29E5D0" />
 
