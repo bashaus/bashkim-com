@@ -27,6 +27,8 @@ export default class PortfolioFilter extends React.PureComponent {
     this.handleAddition = this.handleAddition.bind(this);
     this.handleDisplayChange = this.handleDisplayChange.bind(this);
     this.handleSortChange = this.handleSortChange.bind(this);
+    this.handlePhysicalComputingClick = this.handlePhysicalComputingClick.bind(this);
+    this.handleWebDevelopmentClick = this.handleWebDevelopmentClick.bind(this);
   }
 
   componentDidUpdate() {
@@ -42,6 +44,7 @@ export default class PortfolioFilter extends React.PureComponent {
   }
 
   handleAddition(tag) {
+    console.log(tag);
     const { tags } = this.state;
     this.setState({ tags: [].concat(tags, tag) });
   }
@@ -52,6 +55,22 @@ export default class PortfolioFilter extends React.PureComponent {
 
   handleSortChange(e) {
     this.setState({ sort: e.currentTarget.value });
+  }
+
+  handlePhysicalComputingClick(e) {
+    this.setState({
+      tags: [
+        { id: 'physical-computing', name: 'Physical computing' },
+      ],
+    });
+  }
+
+  handleWebDevelopmentClick(e) {
+    this.setState({
+      tags: [
+        { id: 'web-development', name: 'Web development' },
+      ],
+    });
   }
 
   render() {
@@ -75,6 +94,19 @@ export default class PortfolioFilter extends React.PureComponent {
             handleDelete={this.handleDelete}
             handleAddition={this.handleAddition}
           />
+          {tags.length === 0 && (
+            <p className={styles.inlineSuggestions}>
+              {'Stuck for ideas? Check out '}
+              <button type="button" onClick={this.handlePhysicalComputingClick}>
+                Physical computing
+              </button>
+              {' or '}
+              <button type="button" onClick={this.handleWebDevelopmentClick}>
+                Web development
+              </button>
+              .
+            </p>
+          )}
         </div>
 
         <div className={styles.display}>
