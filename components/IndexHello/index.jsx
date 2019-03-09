@@ -8,7 +8,7 @@ import styles from './styles.scss';
 export default function IndexHello() {
   return (
     <div className={`${styles.IndexHello}`}>
-      <PartialHeaderText>
+      <PartialHeaderText backgroundClassName={styles.background}>
         <div className={`${styles.wrapper}`}>
           <div className={styles.content}>
             <h1 className={styles.text}>G&rsquo;day!</h1>

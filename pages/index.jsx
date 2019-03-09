@@ -10,6 +10,7 @@ import LayoutDefault from 'components/LayoutDefault';
 import MetaDescription from 'components/MetaDescription';
 import MetaKeywords from 'components/MetaKeywords';
 import MetaTitle from 'components/MetaTitle';
+import PartialCallToAction from 'components/PartialCallToAction';
 import PartialSubtitle from 'components/PartialSubtitle';
 
 import * as caseStudies from 'data/caseStudies';
@@ -39,22 +40,31 @@ export default function HomePage() {
 
       <IndexHello />
       <AboutProfile />
-      <IndexFeaturedCaseStudies caseStudies={featuredCaseStudies} />
 
-      <PartialSubtitle>
-        <h2>And some great brands I&apos;ve worked with</h2>
-      </PartialSubtitle>
-      <IndexBrands />
+      <section className="group-alternate">
+        <PartialSubtitle>
+          <h2>Some of my favourite work</h2>
+        </PartialSubtitle>
+
+        <IndexFeaturedCaseStudies caseStudies={featuredCaseStudies} />
+      </section>
+
+      <section className="group-alternate">
+        <PartialSubtitle>
+          <h2>And some great brands I&apos;ve worked with</h2>
+        </PartialSubtitle>
+        <IndexBrands />
+      </section>
 
       <section className="group">
-        <div className="layout-cta">
+        <PartialCallToAction>
           <p>
             Interested in seeing more case studies of my previous work?
           </p>
           <Link href="/portfolio">
             <a>View portfolio</a>
           </Link>
-        </div>
+        </PartialCallToAction>
       </section>
     </LayoutDefault>
   );

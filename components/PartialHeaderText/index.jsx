@@ -4,7 +4,8 @@ import PropTypes from 'prop-types';
 import styles from './styles.scss';
 
 export default function PartialHeaderText(props) {
-  const { children } = props;
+  const { backgroundClassName, children } = props;
+
   return (
     <header className={styles.PartialHeaderText}>
       <div className={styles.foreground}>
@@ -12,15 +13,20 @@ export default function PartialHeaderText(props) {
           {children}
         </div>
       </div>
-      <div className={styles.background} aria-hidden="true" />
+      <div
+        className={`${styles.background} ${backgroundClassName || ''}`}
+        aria-hidden="true"
+      />
     </header>
   );
 }
 
 PartialHeaderText.propTypes = {
+  backgroundClassName: PropTypes.string,
   children: PropTypes.node,
 };
 
 PartialHeaderText.defaultProps = {
+  backgroundClassName: null,
   children: null,
 };
