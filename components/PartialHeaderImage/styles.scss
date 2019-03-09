@@ -2,7 +2,6 @@
 @import "../../styleguide/utils/chevron";
 
 .background {
-  @extend .chevron-white;
   @include chevron-down;
 
   position: relative;

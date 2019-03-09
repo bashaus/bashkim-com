@@ -6,10 +6,9 @@
 @import "../../styleguide/utils/chevron";
 
 .PartialHeaderText {
-  position: relative;
+  @include chevron-down;
 
-  @extend .chevron-down;
-  @extend .chevron-white;
+  position: relative;
 
   .foreground {
     @include grid-container($padding: (left right));
@@ -83,10 +82,6 @@
   }
 
   @include breakpoint($media-mobile) {
-    .foreground {
-
-    }
-
     h1 {
       font-size: 12vw;
       line-height: 12vw;

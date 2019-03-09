@@ -1,106 +1,38 @@
-@import "colours";
-
-@mixin chevron {
-  position: relative;
-
-  &::after,
-  &::before {
-    content: "";
-    display: block;
-    position: absolute;
-    z-index: 2;
-  }
+@mixin chevron-down($delta: 20px) {
+  margin-bottom: #{0 - $delta};
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% calc(100% - #{$delta}),
+    calc(50% + #{$delta}) calc(100% - #{$delta}),
+    50% 100%,
+    calc(50% - #{$delta}) calc(100% - #{$delta}),
+    0% calc(100% - #{$delta})
+  );
 }
 
-@mixin chevron-x {
-  @include chevron;
-
-  &::after,
-  &::before {
-    height: 50%;
-  }
-
-  &::before {
-    top: 0;
-    border-bottom-width: 20px;
-    border-bottom-style: solid;
-    border-bottom-color: transparent !important;
-  }
-
-  &::after {
-    bottom: 0;
-    border-top-width: 20px;
-    border-top-style: solid;
-    border-top-color: transparent !important;
-  }
+@mixin chevron-left($delta: 20px) {
+  margin-right: #{0 - $delta};
+  clip-path: polygon(
+    0% 0%,
+    calc(100% - #{$delta}) 0%,
+    calc(100% - #{$delta}) calc(50% - #{$delta}),
+    100% 50%,
+    calc(100% - #{$delta}) calc(50% + #{$delta}),
+    calc(100% - #{$delta}) 100%,
+    0% 100%
+  );
 }
 
-@mixin chevron-left {
-  @include chevron-x;
-
-  &::after,
-  &::before {
-    right: 0;
-    border-right-width: 20px;
-    border-right-style: solid;
-  }
-}
-
-@mixin chevron-right {
-  @include chevron-x;
-
-  &::after,
-  &::before {
-    left: 0;
-    border-left-width: 20px;
-    border-left-style: solid;
-  }
-}
-
-@mixin chevron-y {
-  @include chevron;
-
-  &::after,
-  &::before {
-    width: 50%;
-  }
-
-  &::before {
-    left: 0;
-    border-right-width: 20px;
-    border-right-style: solid;
-    border-right-color: transparent !important;
-  }
-
-  &::after {
-    right: 0;
-    border-left-width: 20px;
-    border-left-style: solid;
-    border-left-color: transparent !important;
-  }
-}
-
-@mixin chevron-down {
-  @include chevron-y;
-
-  &::after,
-  &::before {
-    bottom: 0;
-    border-bottom-width: 20px;
-    border-bottom-style: solid;
-  }
-}
-
-.chevron-down {
-  @include chevron-down;
-}
-
-.chevron-grey::before,
-.chevron-grey::after {
-  border-color: $color-shade-background;
-}
-
-.chevron-white::before,
-.chevron-white::after {
-  border-color: $color-white;
+@mixin chevron-right($delta: 20px) {
+  margin-left: #{0 - $delta};
+  clip-path: polygon(
+    calc(0% + #{$delta}) 0%,
+    100% 0%,
+    100% 100%,
+    calc(0% + #{$delta}) 100%,
+    calc(0% + #{$delta}) calc(50% + #{$delta}),
+    0% 50%,
+    calc(0% + #{$delta}) calc(50% - #{$delta}),
+  );
 }

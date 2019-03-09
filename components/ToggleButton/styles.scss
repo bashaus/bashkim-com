@@ -17,12 +17,12 @@
   }
 
   @include breakpoint($media-mobile) {
-    width: 35px;
-    height: 30px;  
+    width: 60px;
+    height: 50px;
   }
 
   @include breakpoint($media-not-mobile) {
     width: 60px;
-    height: 50px;  
+    height: 50px;
   }
 }

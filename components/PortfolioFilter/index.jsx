@@ -9,6 +9,9 @@ import allTags from 'data/portfolio/tags.json';
 
 import styles from './styles.scss';
 
+const TAG_PHYSICAL_COMPUTING = 'physical-computing';
+const TAG_WEB_DEVELOPMENT = 'web-development';
+
 export default class PortfolioFilter extends React.PureComponent {
   constructor(...args) {
     super(...args);
@@ -44,7 +47,6 @@ export default class PortfolioFilter extends React.PureComponent {
   }
 
   handleAddition(tag) {
-    console.log(tag);
     const { tags } = this.state;
     this.setState({ tags: [].concat(tags, tag) });
   }
@@ -57,20 +59,18 @@ export default class PortfolioFilter extends React.PureComponent {
     this.setState({ sort: e.currentTarget.value });
   }
 
-  handlePhysicalComputingClick(e) {
+  setTag(tag) {
     this.setState({
-      tags: [
-        { id: 'physical-computing', name: 'Physical computing' },
-      ],
+      tags: [{ id: tag, name: allTags[tag].name }],
     });
   }
 
-  handleWebDevelopmentClick(e) {
-    this.setState({
-      tags: [
-        { id: 'web-development', name: 'Web development' },
-      ],
-    });
+  handlePhysicalComputingClick() {
+    this.setTag(TAG_PHYSICAL_COMPUTING);
+  }
+
+  handleWebDevelopmentClick() {
+    this.setTag(TAG_WEB_DEVELOPMENT);
   }
 
   render() {
@@ -94,15 +94,16 @@ export default class PortfolioFilter extends React.PureComponent {
             handleDelete={this.handleDelete}
             handleAddition={this.handleAddition}
           />
+
           {tags.length === 0 && (
             <p className={styles.inlineSuggestions}>
               {'Stuck for ideas? Check out '}
               <button type="button" onClick={this.handlePhysicalComputingClick}>
-                Physical computing
+                {allTags[TAG_PHYSICAL_COMPUTING].name}
               </button>
               {' or '}
               <button type="button" onClick={this.handleWebDevelopmentClick}>
-                Web development
+                {allTags[TAG_WEB_DEVELOPMENT].name}
               </button>
               .
             </p>
@@ -166,6 +167,7 @@ export default class PortfolioFilter extends React.PureComponent {
 }
 
 PortfolioFilter.propTypes = {
+  query: PropTypes.object,
   onChange: PropTypes.func,
 };
 

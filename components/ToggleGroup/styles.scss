@@ -12,7 +12,7 @@
 
 .label {
   @include breakpoint($media-mobile) {
-    display: inline-block;
+    display: block;
     font-size: 12px;
   }
 
