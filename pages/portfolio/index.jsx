@@ -29,7 +29,10 @@ export default function PortfolioPage({ featured }) {
 
       <PartialHeaderText>
         <h1>Portfolio</h1>
-        <small>Case studies of great work</small>
+        <p>
+          I've had the privilege of working with some great clients,
+          here are some case studes.
+        </p>
       </PartialHeaderText>
 
       <section className="group-alternate">

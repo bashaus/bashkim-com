@@ -53,14 +53,6 @@
     font-weight: bold;
   }
 
-  small {
-    font-weight: bold;
-    color: $color-shade-background;
-    text-transform: uppercase;
-    opacity: .8;
-    letter-spacing: -1px;
-  }
-
   a {
     font-weight: bold;
     display: inline-block;
@@ -87,11 +79,6 @@
       line-height: 12vw;
     }
 
-    small {
-      font-size: 14px;
-      line-height: 20px;
-    }
-
     p {
       font-size: 15px;
       line-height: 32px;
@@ -116,19 +103,15 @@
       line-height: 100%;
     }
 
-    small {
-      font-size: 16px;
-      line-height: 26px;
-    }
-
     p {
       font-weight: bold;
       font-size: 24px;
-      line-height: 24px;
+      line-height: 32px;
     }
 
     a {
       border-width: 3px;
+      line-height: 24px;
     }
 
     .background {
