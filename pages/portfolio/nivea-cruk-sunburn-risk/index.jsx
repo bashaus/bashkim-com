@@ -93,24 +93,17 @@ export default function NiveaCrukSunburnRiskCaseStudy() {
           <h2>Artefacts</h2>
         </PartialSubtitle>
 
-        <div className="layout-captioned">
-          <div className="layout-captioned--summary">
-            <h3>Mobile web application</h3>
-            <p>
-              The application asks the user to identify the factors which can contribute to the risk of sun damage including:
-            </p>
-          </div>
-
-          <div className="layout-captioned--content">
+        <PartialCaptioned
+          figure={(
             <div className="carousel-init">
 
               <DeviceSmartphone image="/static/images/caseStudies/nivea-cruk-sunburn-risk/home/320.png">
-                Ask for the colour of the user's skin: pale skin is
+                Ask for the colour of the user&apos;s skin: pale skin is
                 more susceptible to sun damage.
               </DeviceSmartphone>
 
               <DeviceSmartphone image="/static/images/caseStudies/nivea-cruk-sunburn-risk/permission/320.png">
-                Ask for the user's geographic location to identify the UV levels
+                Ask for the user&apos;s geographic location to identify the UV levels
                 forecast for that day as published by the UK MET office.
               </DeviceSmartphone>
 
@@ -118,8 +111,14 @@ export default function NiveaCrukSunburnRiskCaseStudy() {
                 Provides skin protection advice relevant to the individual.
               </DeviceSmartphone>
             </div>
-          </div>
-        </div>
+          )}
+        >
+          <h3>Mobile web application</h3>
+          <p>
+            The application asks the user to identify the factors which can contribute to the risk
+            of sun damage including:
+          </p>
+        </PartialCaptioned>
       </section>
 
       <section className="group-alternate">

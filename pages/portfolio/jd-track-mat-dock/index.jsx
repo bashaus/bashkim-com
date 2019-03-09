@@ -94,22 +94,20 @@ export default function JdTrackMatDockCaseStudy() {
           <h2>Campaign</h2>
         </PartialSubtitle>
 
-        <figure className="layout-captioned">
-          <figcaption>
-            <h3>Concept</h3>
-
-            <p>
-              For an overview of this campaign.
-            </p>
-          </figcaption>
-
-          <div className="layout-captioned--content">
+        <PartialCaptioned
+          figure={(
             <PartialVideoPlayerYouTube
               v="2wW5ecsIg2Y"
               title="JD Track Mat Dock - Campaign video"
             />
-          </div>
-        </figure>
+          )}
+        >
+          <h3>Concept</h3>
+
+          <p>
+            For an overview of this campaign.
+          </p>
+          </PartialCaptioned>
       </section>
 
       <section className="group">
@@ -117,87 +115,93 @@ export default function JdTrackMatDockCaseStudy() {
           <h2>Artefacts</h2>
         </PartialSubtitle>
 
-        <figure className="layout-captioned">
-          <figcaption>
-            <h3>Tangible tunes</h3>
-            <p>
-              To help Jack Daniel's celebrate bands returning to their hometown for an unforgettable gig, Agency Republic designed and produced the JD Track Mat Dock.
-            </p>
-            <p>
-              Made from a mini Jack Daniel's barrel, the dock jams the band's tunes when you insert a track mat into the dock.
-            </p>
-          </figcaption>
-
-          <div className="layout-captioned--content">
-            <img src="/static/images/caseStudies/jd-track-mat-dock/photos/005.jpg" alt="The JD Track Mat Dock" />
-          </div>
-        </figure>
+        <PartialCaptioned
+          figure={(
+            <img
+              src="/static/images/caseStudies/jd-track-mat-dock/photos/005.jpg"
+              alt="The JD Track Mat Dock"
+            />
+          )}
+        >
+          <h3>Tangible tunes</h3>
+          <p>
+            To help Jack Daniel&apos;s celebrate bands returning to their hometown for an
+            unforgettable gig, Agency Republic designed and produced the JD Track Mat Dock.
+          </p>
+          <p>
+            Made from a mini Jack Daniel&apos;s barrel, the dock jams the band&apos;s tunes when
+            you insert a track mat into the dock.
+          </p>
+        </PartialCaptioned>
       </section>
 
       <section className="group-alternate">
-        <figure className="layout-captioned">
-          <figcaption>
-            <h3>Interaction</h3>
-            <p>
-              The track mats are inserted into the side of the JD track mat dock which then plays the band's song.
-            </p>
-          </figcaption>
-
-          <div className="layout-captioned--content">
-            <img src="/static/images/caseStudies/jd-track-mat-dock/photos/002.jpg" alt="Interacting with the dock" />
-          </div>
-        </figure>
+        <PartialCaptioned
+          figure={(
+            <img
+              src="/static/images/caseStudies/jd-track-mat-dock/photos/002.jpg"
+              alt="Interacting with the dock"
+            />
+          )}
+        >
+          <h3>Interaction</h3>
+          <p>
+            The track mats are inserted into the side of the JD track mat dock which then plays the band's song.
+          </p>
+        </PartialCaptioned>
       </section>
 
       <section className="group">
-        <figure className="layout-captioned">
-          <figcaption>
-            <h3>Great Bands</h3>
-            <p>
-              The JD track mat dock formed part of the JD track mat campaign where over 1000 drink mats were distributed around the UK. With these mats, you can download music from local bands to your phone.
-            </p>
+        <PartialCaptioned
+          figure={(
+            <img
+              src="/static/images/caseStudies/jd-track-mat-dock/photos/001.jpg"
+              alt="Face designs of the available Track Mats"
+            />
+          )}
+        >
+          <h3>Great Bands</h3>
+          <p>
+            The JD track mat dock formed part of the JD track mat campaign where over 1000 drink mats were distributed around the UK. With these mats, you can download music from local bands to your phone.
+          </p>
 
-            <p>
-              The first three featured bands:
-            </p>
+          <p>
+            The first three featured bands:
+          </p>
 
-            <ul>
-              <li>
-                <a href="https://www.facebook.com/Loomband">Loom</a>
-                - Acid King City
-              </li>
-              <li>
-                <a href="https://www.facebook.com/StoryBooksBand">Story books</a>
-                - Simple Kids
-              </li>
-              <li>
-                <a href="https://www.facebook.com/SWIMDEEPUK">Swim deep</a>
-                - Simmer
-              </li>
-            </ul>
-          </figcaption>
-
-          <div className="layout-captioned--content">
-            <img src="/static/images/caseStudies/jd-track-mat-dock/photos/001.jpg" alt="Face designs of the available Track Mats" />
-          </div>
-        </figure>
+          <ul>
+            <li>
+              <a href="https://www.facebook.com/Loomband">Loom</a>
+              - Acid King City
+            </li>
+            <li>
+              <a href="https://www.facebook.com/StoryBooksBand">Story books</a>
+              - Simple Kids
+            </li>
+            <li>
+              <a href="https://www.facebook.com/SWIMDEEPUK">Swim deep</a>
+              - Simmer
+            </li>
+          </ul>
+        </PartialCaptioned>
       </section>
 
       <section className="group">
-        <figure className="layout-captioned">
-          <figcaption>
-            <h3>Campaign</h3>
+        <PartialCaptioned
+          figure={(
+            <img
+              src="/static/images/caseStudies/jd-track-mat-dock/photos/004.jpg"
+              alt="Rear design of the available Track Mats"
+            />
+          )}
+        >
+          <h3>Campaign</h3>
 
-            <p>
-              The product supported the
-              <a href="/portfolio/jd-roots/">JD Roots campaign</a>.
-            </p>
-          </figcaption>
-
-          <div className="layout-captioned--content">
-            <img src="/static/images/caseStudies/jd-track-mat-dock/photos/004.jpg" alt="Rear design of the available Track Mats" />
-          </div>
-        </figure>
+          <p>
+            The product supported the
+            <a href="/portfolio/jd-roots/">JD Roots campaign</a>.
+          </p>
+        </PartialCaptioned>
       </section>
 
       <section className="group-alternate">

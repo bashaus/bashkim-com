@@ -112,170 +112,194 @@ export default function MeetEaterCaseStudy() {
           <h2>Artefacts</h2>
         </PartialSubtitle>
 
-        <figure className="layout-captioned">
-          <figcaption>
-            <h3>Installation</h3>
-            <p>
-              The Meet Eater is a design provocation that encourages people to interact and engage with a Facebook page to sustain the life of a real garden of plants.
-            </p>
+        <PartialCaptioned
+          figure={(
+            <img
+              src="/static/images/caseStudies/meet-eater/photos/001.jpg"
+              alt="The Meet Eater physical computing installation"
+            />
+          )}
+        >
+          <h3>Installation</h3>
+          <p>
+            The Meet Eater is a design provocation that encourages people to interact and engage
+            with a Facebook page to sustain the life of a real garden of plants.
+          </p>
 
-            <cite>
-              Photograph by
-              <a href="http://www.jacqueprior.com/">Jacque Prior</a>
-            </cite>
-          </figcaption>
-
-          <div className="layout-captioned--content">
-            <img src="/static/images/caseStudies/meet-eater/photos/001.jpg" alt="The Meet Eater physical computing installation" />
-          </div>
-        </figure>
+          <cite>
+            Photograph by
+            <a href="http://www.jacqueprior.com/">Jacque Prior</a>
+          </cite>
+        </PartialCaptioned>
       </section>
 
       <section className="group-alternate">
-        <figure className="layout-captioned">
-          <figcaption>
-            <h3>Installation</h3>
+        <PartialCaptioned
+          figure={(
+            <img
+              src="/static/images/caseStudies/meet-eater/photos/002.jpg"
+              alt="The Meet Eater physical computing installation"
+            />
+          )}
+        >
+          <h3>Installation</h3>
 
-            <p>
-              By situating the garden to be a social actor in our lives, the installation explores whether it is possible to form an emotional attachment with non-human entities, particularly through the utilisation of online social networking services.
-            </p>
+          <p>
+            By situating the garden to be a social actor in our lives, the installation explores
+            whether it is possible to form an emotional attachment with non-human entities,
+            particularly through the utilisation of online social networking services.
+          </p>
 
-            <cite>
-              Photograph by
-              <a href="http://www.jacqueprior.com/">Jacque Prior</a>
-            </cite>
-          </figcaption>
-
-          <div className="layout-captioned--content">
-            <img src="/static/images/caseStudies/meet-eater/photos/002.jpg" alt="The Meet Eater physical computing installation" />
-          </div>
-        </figure>
+          <cite>
+            Photograph by
+            <a href="http://www.jacqueprior.com/">Jacque Prior</a>
+          </cite>
+        </PartialCaptioned>
       </section>
 
       <section className="group">
-        <figure className="layout-captioned">
-          <figcaption>
-            <h3>Communication</h3>
+        <PartialCaptioned
+          figure={(
+            <img
+              src="/static/images/caseStudies/meet-eater/photos/003.jpg"
+              alt="Photograph of the Meet Eater's garden"
+            />
+          )}
+        >
+          <h3>Communication</h3>
 
-            <p>
-              The installation plays on the adage that plants respond to &quot;talk, attention, and affection&quot; which was popularised in recent times by one of the world's most prominent horticulturalists, Charles [Prince of Wales] who believes that talking to
-              his plants encourages growth.
-            </p>
+          <p>
+            The installation plays on the adage that plants respond to &quot;talk, attention, and affection&quot; which was popularised in recent times by one of the world's most prominent horticulturalists, Charles [Prince of Wales] who believes that talking to
+            his plants encourages growth.
+          </p>
 
-            <cite>
-              Photograph by
-              <a href="http://www.jacqueprior.com/">Jacque Prior</a>
-            </cite>
-          </figcaption>
-
-          <div className="layout-captioned--content">
-            <img src="/static/images/caseStudies/meet-eater/photos/003.jpg" alt="Photograph of the Meet Eater's garden" />
-          </div>
-        </figure>
+          <cite>
+            Photograph by
+            <a href="http://www.jacqueprior.com/">Jacque Prior</a>
+          </cite>
+        </PartialCaptioned>
       </section>
 
       <section className="group-alternate">
-        <figure className="layout-captioned">
-          <figcaption>
-            <h3>Presence</h3>
+        <PartialCaptioned
+          figure={(
+            <img
+              src="/static/images/caseStudies/meet-eater/photos/004.jpg"
+              alt="Photograph of the Meet Eater's garden"
+            />
+          )}
+        >
+          <h3>Presence</h3>
 
-            <p>
-              A (thriving) pot plant can be re-visualised as an ambient display of its owners' dedication to its development. A well-kept plant is more significant than a mere ornament for a household; it becomes mapped to its carer's sense of place and understood
-              reality.
-            </p>
+          <p>
+            A (thriving) pot plant can be re-visualised as an ambient display of its owners&apos;
+            dedication to its development. A well-kept plant is more significant than a mere
+            ornament for a household; it becomes mapped to its carer&apos;s sense of place
+            and understood reality.
+          </p>
 
-            <cite>
-              Photograph by
-              <a href="http://www.jacqueprior.com/">Jacque Prior</a>
-            </cite>
-          </figcaption>
-
-          <div className="layout-captioned--content">
-            <img src="/static/images/caseStudies/meet-eater/photos/004.jpg" alt="Photograph of the Meet Eater's garden" />
-          </div>
-        </figure>
+          <cite>
+            Photograph by
+            <a href="http://www.jacqueprior.com/">Jacque Prior</a>
+          </cite>
+        </PartialCaptioned>
       </section>
 
       <section className="group">
-        <figure className="layout-captioned">
-          <figcaption>
-            <h3>Exhibition</h3>
+        <PartialCaptioned
+          figure={(
+            <img
+              src="/static/images/caseStudies/meet-eater/photos/005.jpg"
+              alt="A curious onlooker observes the Meet Eater"
+            />
+          )}
+        >
+          <h3>Exhibition</h3>
 
-            <p>
-              The installation was situated at
-              <a href="http://edgeqld.org.au/diy-tech/meet-the-meet-eater-2">
-                The Edge, a digital culture situated at the State Library of Queensland
-              </a>
-              for the majority of 2010 and presented as an installation at
-              <a href="https://espace.library.uq.edu.au/view/UQ:235091">
-                the OzCHI 2010 interaction design conference
-              </a>
-              in Brisbane, Australia.
-            </p>
+          <p>
+            The installation was situated at
+            <a href="http://edgeqld.org.au/diy-tech/meet-the-meet-eater-2">
+              The Edge, a digital culture situated at the State Library of Queensland
+            </a>
+            for the majority of 2010 and presented as an installation at
+            <a href="https://espace.library.uq.edu.au/view/UQ:235091">
+              the OzCHI 2010 interaction design conference
+            </a>
+            in Brisbane, Australia.
+          </p>
 
-            <cite>
-              Photograph by
-              <a href="http://www.jacqueprior.com/">Jacque Prior</a>
-            </cite>
-          </figcaption>
-
-          <div className="layout-captioned--content">
-            <img src="/static/images/caseStudies/meet-eater/photos/005.jpg" alt="A curious onlooker observes the Meet Eater" />
-          </div>
-        </figure>
+          <cite>
+            Photograph by
+            <a href="http://www.jacqueprior.com/">Jacque Prior</a>
+          </cite>
+        </PartialCaptioned>
       </section>
 
       <section className="group-alternate">
-        <figure className="layout-captioned">
-          <figcaption>
-            <h3>Outcome</h3>
-
-            <p>
-              The installation was re-planted with three iterations after drowning in a sea of love and water from an overwhelming amount of social interaction received online. While the former of the two deaths can be credited to over-stimulation and low watering
-              thresholds, the latter death can be attributed to a substantial increase in the number of Facebook fans after the design intervention was published on
-              <a href="/blog/2010/11/meet-eater-articles/">
-                several social media news blogs and over 45 international news publications</a>.
-            </p>
-
-            <p>
-              This time-lapse video shows the first iteration of the garden.
-            </p>
-          </figcaption>
-
-          <div className="layout-captioned--content">
+        <PartialCaptioned
+          figure={(
             <PartialVideoPlayerYouTube
               v="-fc3h9_HdSg"
               title="Meet Eater - Time-lapse video"
             />
-          </div>
-        </figure>
+          )}
+        >
+          <h3>Outcome</h3>
+
+          <p>
+            The installation was re-planted with three iterations after drowning in a sea of love
+            and water from an overwhelming amount of social interaction received online. While the
+            former of the two deaths can be credited to over-stimulation and low watering
+            thresholds, the latter death can be attributed to a substantial increase in the number
+            of Facebook fans after the design intervention was published on
+            <a href="/blog/2010/11/meet-eater-articles/">
+              several social media news blogs and over 45 international news publications
+            </a>
+            .
+          </p>
+
+          <p>
+            This time-lapse video shows the first iteration of the garden.
+          </p>
+        </PartialCaptioned>
       </section>
 
       <section className="group">
-        <figure className="layout-captioned">
-          <figcaption>
-            <h3>Documentation</h3>
+        <PartialCaptioned
+          figure={(
+            <img
+              src="/static/images/caseStudies/meet-eater/photos/006.jpg"
+              alt="Close-up of the Meet Eater Stencil Art"
+            />
+          )}
+        >
+          <h3>Documentation</h3>
 
-            <p>
-              The installation was designed and developed by Bashkim Isai as a collaborative effort between the State Library of Queensland and The Edge at the State Library of Queensland.
-            </p>
+          <p>
+            The installation was designed and developed by Bashkim Isai as a collaborative effort
+            between the State Library of Queensland and The Edge at the State Library
+            of Queensland.
+          </p>
 
-            <p>
-              Results of the design intervention formed the basis for the master thesis
-              <em>Are we [here and] there yet? Exploring Online Profiles in Reality</em>,
-              <a href="https://espace.library.uq.edu.au/view/UQ:235091">available via the University of&nbsp;Queensland</a>.
-            </p>
+          <p>
+            Results of the design intervention formed the basis for the master thesis
+            <em>Are we [here and] there yet? Exploring Online Profiles in Reality</em>
+            ,
+            <a
+              href="https://espace.library.uq.edu.au/view/UQ:235091"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              available via the University of&nbsp;Queensland
+            </a>
+            .
+          </p>
 
-            <cite>
-              Photograph by
-              <a href="http://www.jacqueprior.com/">Jacque Prior</a>
-            </cite>
-          </figcaption>
-
-          <div className="layout-captioned--content">
-            <img src="/static/images/caseStudies/meet-eater/photos/006.jpg" alt="Close-up of the Meet Eater Stencil Art" />
-          </div>
-        </figure>
+          <cite>
+            Photograph by
+            <a href="http://www.jacqueprior.com/">Jacque Prior</a>
+          </cite>
+        </PartialCaptioned>
       </section>
 
       <section className="group">

@@ -104,52 +104,57 @@ export default function LikeRalphCaseStudy() {
           <h2>Artefacts</h2>
         </PartialSubtitle>
 
-        <figure className="layout-captioned">
-          <figcaption>
-            <h3>Facebook page</h3>
-            <p>
-              Ralph doesn't want to be a video-game villain anymore, he wants you to like him. So Agency Republic created ... Like Ralph: to get Ralph some new friends.
-            </p>
-          </figcaption>
-
-          <div className="layout-captioned--content">
-            <img src="/static/images/caseStudies/like-ralph/photos/001.jpg" alt="Like Ralph at the beginning of the campaign" />
-          </div>
-        </figure>
+        <PartialCaptioned
+          figure={(
+            <img
+              src="/static/images/caseStudies/like-ralph/photos/001.jpg"
+              alt="Like Ralph at the beginning of the campaign"
+            />
+          )}
+        >
+          <h3>Facebook page</h3>
+          <p>
+            Ralph doesn&apos;t want to be a video-game villain anymore, he wants you to like him.
+            So Agency Republic created ... Like Ralph: to get Ralph some new friends.
+          </p>
+        </PartialCaptioned>
       </section>
 
       <section className="group-alternate">
-        <figure className="layout-captioned">
-          <figcaption>
-            <h3>Game board</h3>
-            <p>
-              Select a brick to wreck - but you have to be quick, other people are wrecking bricks in real time right in front of you!
-            </p>
+        <PartialCaptioned
+          figure={(
+            <img
+              src="/static/images/caseStudies/like-ralph/photos/002.jpg"
+              alt="Like Ralph during the campaign"
+            />
+          )}
+        >
+          <h3>Game board</h3>
+          <p>
+            Select a brick to wreck - but you have to be quick, other people are wrecking bricks in
+            real time right in front of you!
+          </p>
 
-            <p>
-              Once many bricks have been broken, the wall reveals a giant picture of Ralph.
-            </p>
-          </figcaption>
-
-          <div className="layout-captioned--content">
-            <img src="/static/images/caseStudies/like-ralph/photos/002.jpg" alt="Like Ralph during the campaign" />
-          </div>
-        </figure>
+          <p>
+            Once many bricks have been broken, the wall reveals a giant picture of Ralph.
+          </p>
+        </PartialCaptioned>
       </section>
 
       <section className="group">
-        <figure className="layout-captioned">
-          <figcaption>
-            <h3>Prizes</h3>
-            <p>
-              Some lucky visitors found prizes hidden behind the brick they wrecked.
-            </p>
-          </figcaption>
-
-          <div className="layout-captioned--content">
-            <img src="/static/images/caseStudies/like-ralph/photos/003.jpg" alt="Popup designed when a prize is won" />
-          </div>
-        </figure>
+        <PartialCaptioned
+          figure={(
+            <img
+              src="/static/images/caseStudies/like-ralph/photos/003.jpg"
+              alt="Popup designed when a prize is won"
+            />
+          )}
+        >
+          <h3>Prizes</h3>
+          <p>
+            Some lucky visitors found prizes hidden behind the brick they wrecked.
+          </p>
+        </PartialCaptioned>
       </section>
 
       <section className="group-alternate">

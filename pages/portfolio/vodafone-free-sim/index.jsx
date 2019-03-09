@@ -127,105 +127,105 @@ export default function VodafoneFreeSimCaseStudy() {
           <h2>Artefacts</h2>
         </PartialSubtitle>
 
-        <figure className="layout-captioned">
-          <figcaption>
-            <h3>Campaign Management System</h3>
-            <p>
-              To support Vodafone's Free SIM operation, Agency Republic developed the Free SIM CMS, a system to manage the distribution of Vodafone Pay as you go SIM cards across the United Kingdom.
-            </p>
+        <PartialCaptioned
+          figure={(
+            <img
+              src="/static/images/caseStudies/vodafone-free-sim/choice/desktop.png"
+              alt="Launch webpage of the Vodafone Free SIM website"
+            />
+          )}
+        >
+          <h3>Campaign Management System</h3>
+          <p>
+            To support Vodafone&apos;s Free SIM operation, Agency Republic developed the Free SIM
+            CMS, a system to manage the distribution of Vodafone Pay as you go SIM cards across the
+            United Kingdom.
+          </p>
 
-            <p>
-              The system tracks the effectiveness of advertising campaigns across media placements including:
-            </p>
+          <p>
+            The system tracks the effectiveness of advertising campaigns across media placements
+            including:
+          </p>
 
-            <ul>
-              <li>Free SIM website</li>
-              <li>Display/banner ads</li>
-              <li>Facebook</li>
-              <li>Television</li>
-              <li>Outdoor posters</li>
-              <li>Affiliates</li>
-              <li>Distributors</li>
-            </ul>
+          <ul>
+            <li>Free SIM website</li>
+            <li>Display/banner ads</li>
+            <li>Facebook</li>
+            <li>Television</li>
+            <li>Outdoor posters</li>
+            <li>Affiliates</li>
+            <li>Distributors</li>
+          </ul>
 
-            <p>
-              Customers received their SIM card(s) within 72 hours (critical, as the quicker it arrives the more likely it is to be activated and topped up).
-            </p>
-          </figcaption>
-
-          <div className="layout-captioned--content">
-            <img src="/static/images/caseStudies/vodafone-free-sim/choice/desktop.png" alt="Launch webpage of the Vodafone Free SIM website" />
-          </div>
-        </figure>
+          <p>
+            Customers received their SIM card(s) within 72 hours (critical, as the quicker it
+            arrives the more likely it is to be activated and topped up).
+          </p>
+        </PartialCaptioned>
       </section>
 
       <section className="group-alternate">
-        <figure className="layout-captioned">
-          <figcaption>
-            <h3>Desktop interface</h3>
-            <p>
-              To highlight the different value propositions offered by Vodafone, users are presented with a choice page to help them select the most relevant product.
-            </p>
-            <p>
-              This page was run through multi-variant testing and A/B testing to understand how different content (images, text, etc.) encouraged users to become customers.
-            </p>
-          </figcaption>
-
-          <div className="layout-captioned--content">
-            <img src="/static/images/caseStudies/vodafone-free-sim/choice/multivariant.png" alt="An A/B test which was run on the Vodafone Free SIM website" />
-          </div>
-        </figure>
+        <PartialCaptioned
+          figure={(
+            <img
+              src="/static/images/caseStudies/vodafone-free-sim/choice/multivariant.png"
+              alt="An A/B test which was run on the Vodafone Free SIM website"
+            />
+          )}
+        >
+          <h3>Desktop interface</h3>
+          <p>
+            To highlight the different value propositions offered by Vodafone, users are
+            presented with a choice page to help them select the most relevant product.
+          </p>
+          <p>
+            This page was run through multi-variant testing and A/B testing to understand
+            how different content (images, text, etc.) encouraged users to become customers.
+          </p>
+        </PartialCaptioned>
       </section>
 
       <section className="group">
-        <figure className="layout-captioned">
-          <figcaption>
-            <h3>Placing an Order</h3>
-            <p>
-              Once a proposition has been selected, users can fill in their details to have a Vodafone Free SIM pre-provisioned with their proposition sent to them.
-            </p>
+        <PartialCaptioned
+          figure={(
+            <img
+              src="/static/images/caseStudies/vodafone-free-sim/form/multivariant.png"
+              alt="Vodafone Free SIM desktop form page"
+            />
+          )}
+        >
+          <h3>Placing an Order</h3>
+          <p>
+            Once a proposition has been selected, users can fill in their details to have a
+            Vodafone Free SIM pre-provisioned with their proposition sent to them.
+          </p>
 
-            <p>
-              The form page allows users to dynamically change the selected proposition and get more in-depth information about the offer.
-            </p>
+          <p>
+            The form page allows users to dynamically change the selected proposition and get more
+            in-depth information about the offer.
+          </p>
 
-            <p>
-              To increase order fidelity users can enter their postcode to search for their address rather than manually entering their address into the form. This significantly reduced the amount of SIM cards returned to Vodafone.
-            </p>
+          <p>
+            To increase order fidelity users can enter their postcode to search for their address
+            rather than manually entering their address into the form. This significantly reduced
+            the amount of SIM cards returned to Vodafone.
+          </p>
 
-            <p>
-              Once a user enters their information they receive a confirmation email and their data is sent for cleansing and fulfilment.
-            </p>
+          <p>
+            Once a user enters their information they receive a confirmation email and their data
+            is sent for cleansing and fulfilment.
+          </p>
 
-            <p>
-              Despatch, activation and top-up information is sent from Vodafone and matched against orders to identify the effectiveness of their originating campaign.
-            </p>
-          </figcaption>
-
-          <div className="layout-captioned--content">
-            <img src="/static/images/caseStudies/vodafone-free-sim/form/multivariant.png" alt="Vodafone Free SIM desktop form page" />
-          </div>
-        </figure>
+          <p>
+            Despatch, activation and top-up information is sent from Vodafone and matched against
+            orders to identify the effectiveness of their originating campaign.
+          </p>
+        </PartialCaptioned>
       </section>
 
       <section className="group">
-        <div className="layout-captioned">
-          <div className="layout-captioned--summary">
-            <h3>Adaptive Web Design</h3>
-            <p>
-              To deliver the best user experience, the Vodafone Free SIM website
-              delivers a front-end interface optimised for the user's device through
-              adaptive design&nbsp;techniques.
-            </p>
-
-            <p>
-              A database of device capabilities (identified by the User Agent) would
-              define whether a user experienced the smartphone or
-              feature&nbsp;phone interface.
-            </p>
-          </div>
-
-          <div className="layout-captioned--content">
+        <PartialCaptioned
+          figure={(
             <div className="carousel-init">
               <DeviceSmartphone image="/static/images/caseStudies/vodafone-free-sim/choice/smartphone.png">
                 Homepage for smartphones
@@ -240,8 +240,21 @@ export default function VodafoneFreeSimCaseStudy() {
                   (e.g.:&nbsp;Blackberry phones).
               </DeviceSmartphone>
             </div>
-          </div>
-        </div>
+          )}
+        >
+          <h3>Adaptive Web Design</h3>
+          <p>
+            To deliver the best user experience, the Vodafone Free SIM website
+            delivers a front-end interface optimised for the user&apos;s device through
+            adaptive design&nbsp;techniques.
+          </p>
+
+          <p>
+            A database of device capabilities (identified by the User Agent) would
+            define whether a user experienced the smartphone or
+            feature&nbsp;phone interface.
+          </p>
+        </PartialCaptioned>
       </section>
 
       <section className="group-alternate">

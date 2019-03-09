@@ -98,36 +98,35 @@ export default function RocheMsDiseaseActivityCaseStudy() {
           <h2>Artefacts</h2>
         </PartialSubtitle>
 
-        <figure className="layout-captioned">
-          <figcaption>
-            <h3>Landing page</h3>
-            <p>
-              After confirming that the visitor is a Health Care Practitioner, the web page gives an overview of #msdiseaseactivity.
-            </p>
-          </figcaption>
-
-          <div className="layout-captioned--content">
-            <img src="/static/images/caseStudies/roche-ms-disease-activity/home/1024.png" alt="MS Disease Activity" />
-          </div>
-        </figure>
+        <PartialCaptioned
+          figure={(
+            <img
+              src="/static/images/caseStudies/roche-ms-disease-activity/home/1024.png"
+              alt="MS Disease Activity"
+            />
+          )}
+        >
+          <h3>Landing page</h3>
+          <p>
+            After confirming that the visitor is a Health Care Practitioner, the web page gives an overview of #msdiseaseactivity.
+          </p>
+        </PartialCaptioned>
       </section>
 
       <section className="group">
-        <figure className="layout-captioned">
-          <figcaption>
-            <h3>Disease Activity</h3>
-            <p>
-              The infographics are animated as a user scrolls down the page.
-            </p>
-          </figcaption>
-
-          <div className="layout-captioned--content">
+        <PartialCaptioned
+          figure={(
             <PartialVideoPlayerYouTube
               v="s-Lm6N-DmMQ"
               title="MS Disease Activity - Animation demo"
             />
-          </div>
-        </figure>
+          )}
+        >
+          <h3>Disease Activity</h3>
+          <p>
+            The infographics are animated as a user scrolls down the page.
+          </p>
+        </PartialCaptioned>
       </section>
 
       <section className="group-alternate">

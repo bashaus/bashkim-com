@@ -105,87 +105,102 @@ export default function IhgWhereWouldYouGoCaseStudy() {
           <h2>Artefacts</h2>
         </PartialSubtitle>
 
-        <figure className="layout-captioned">
-          <figcaption>
-            <h3>Free nights campaign</h3>
-            <p>
-              To increase the number of memberships, InterContinental Hotels Group (IHG) gave away one of 1000 free nights at any one of their hotels worldwide.
-            </p>
+        <PartialCaptioned
+          figure={(
+            <img
+              src="/static/images/caseStudies/ihg-where-would-you-go/website/desktop-home.png"
+              alt="IHG Where would you go"
+            />
+          )}
+        >
+          <h3>Free nights campaign</h3>
+          <p>
+            To increase the number of memberships, InterContinental Hotels Group (IHG) gave away
+            one of 1000 free nights at any one of their hotels worldwide.
+          </p>
 
-            <p>
-              There are two ways to enter the competition - online and at special events around Europe.
-            </p>
+          <p>
+            There are two ways to enter the competition - online and at special events
+            around Europe.
+          </p>
 
-            <p>
-              Entrants could enter their details on the IHG microsite for their chance to enter the competition.
-            </p>
+          <p>
+            Entrants could enter their details on the IHG microsite for their chance to enter
+            the competition.
+          </p>
 
-            <p>
-              Once details were provided, 1000 random winners were chosen at the end of the campaign.
-            </p>
-          </figcaption>
-
-          <div className="layout-captioned--content">
-            <img src="/static/images/caseStudies/ihg-where-would-you-go/website/desktop-home.png" alt="IHG Where would you go" />
-          </div>
-        </figure>
+          <p>
+            Once details were provided, 1000 random winners were chosen at the end of the campaign.
+          </p>
+        </PartialCaptioned>
       </section>
 
       <section className="group-alternate">
-        <figure className="layout-captioned">
-          <figcaption>
-            <h3>Physical installation</h3>
-            <p>
-              Installations were set up at three major train stations in Europe:
-              <a href="https://www.google.co.uk/maps/place/St+Pancras+International/@51.531427,-0.126133,17z/data=!3m1!4b1!4m2!3m1!1s0x48761b3b8d98ed25:0xb92d6fcfa832dd12?hl=en">St.&nbsp;Pancras</a>
-              in London,
-              <a href="https://www.google.co.uk/maps/place/Gare+du+Nord/@48.8809481,2.3553137,17z/data=!3m1!4b1!4m2!3m1!1s0x47e66e6bfc58a37f:0x4fb63768d2dd790c?hl=en">Gare&nbsp;du&nbsp;Nord</a>
-              in Paris and
-              <a href="https://www.google.co.uk/maps/place/Berlin+Central+Station/@52.5250839,13.369402,17z/data=!3m1!4b1!4m2!3m1!1s0x47a851bdfbdfe77b:0x7a3c781495bcfcaa?hl=en">Hauptbahnhof</a>
-              in&nbsp;Berlin.
-            </p>
-
-            <p>
-              These installations were fitted with iPads, allowing members of the public to enter their details without the need for internet access.
-            </p>
-
-            <p>
-              At the end of the day, the details would be synchronised to the main server via a REST-ful interface.
-            </p>
-          </figcaption>
-
-          <div className="layout-captioned--content">
+        <PartialCaptioned
+          figure={(
             <div className="carousel-init">
               <div>
-                <img src="/static/images/caseStudies/ihg-where-would-you-go/installation/st-prancras-2.jpg" alt="IHG Where would you go" />
+                <img
+                  src="/static/images/caseStudies/ihg-where-would-you-go/installation/st-prancras-2.jpg"
+                  alt="IHG Where would you go"
+                />
               </div>
 
               <div>
-                <img src="/static/images/caseStudies/ihg-where-would-you-go/installation/gare-du-nord.jpg" alt="IHG Where would you go" />
+                <img
+                  src="/static/images/caseStudies/ihg-where-would-you-go/installation/gare-du-nord.jpg"
+                  alt="IHG Where would you go"
+                />
               </div>
 
               <div>
-                <img src="/static/images/caseStudies/ihg-where-would-you-go/installation/st-prancras-1.jpg" alt="IHG Where would you go" />
+                <img
+                  src="/static/images/caseStudies/ihg-where-would-you-go/installation/st-prancras-1.jpg"
+                  alt="IHG Where would you go"
+                />
               </div>
             </div>
-          </div>
-        </figure>
+          )}
+        >
+          <h3>Physical installation</h3>
+          <p>
+            Installations were set up at three major train stations in Europe:
+            <a href="https://www.google.co.uk/maps/place/St+Pancras+International/@51.531427,-0.126133,17z/data=!3m1!4b1!4m2!3m1!1s0x48761b3b8d98ed25:0xb92d6fcfa832dd12?hl=en">St.&nbsp;Pancras</a>
+            in London,
+            <a href="https://www.google.co.uk/maps/place/Gare+du+Nord/@48.8809481,2.3553137,17z/data=!3m1!4b1!4m2!3m1!1s0x47e66e6bfc58a37f:0x4fb63768d2dd790c?hl=en">Gare&nbsp;du&nbsp;Nord</a>
+            in Paris and
+            <a href="https://www.google.co.uk/maps/place/Berlin+Central+Station/@52.5250839,13.369402,17z/data=!3m1!4b1!4m2!3m1!1s0x47a851bdfbdfe77b:0x7a3c781495bcfcaa?hl=en">Hauptbahnhof</a>
+            in&nbsp;Berlin.
+          </p>
+
+          <p>
+            These installations were fitted with iPads, allowing members of the public to enter
+            their details without the need for internet access.
+          </p>
+
+          <p>
+            At the end of the day, the details would be synchronised to the main server via a
+            RESTful interface.
+          </p>
+        </PartialCaptioned>
       </section>
 
       <section className="group">
-        <figure className="layout-captioned">
-          <figcaption>
-            <h3>User Interaction</h3>
+        <PartialCaptioned
+         figure={(
+          <img
+            src="/static/images/caseStudies/ihg-where-would-you-go/website/desktop-hotels.png"
+            alt="IHG Where would you go"
+          />
+         )}
+        >
+          <h3>User Interaction</h3>
 
-            <p>
-              Whilst filling in the competition entry form, users could select their dream location which showed how many IHG hotels were located at that location.
-            </p>
-          </figcaption>
-
-          <div className="layout-captioned--content">
-            <img src="/static/images/caseStudies/ihg-where-would-you-go/website/desktop-hotels.png" alt="IHG Where would you go" />
-          </div>
-        </figure>
+          <p>
+            Whilst filling in the competition entry form, users could select their dream location
+            which showed how many IHG hotels were located at that location.
+          </p>
+        </PartialCaptioned>
       </section>
 
       <section className="group-alternate">

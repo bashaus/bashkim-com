@@ -209,13 +209,6 @@ export default function EarlyTimesFireEaterCaseStudy() {
         </CaseStudyCollaborators>
       </section>
 
-      <section className="group">
-        <div className="layout-cta">
-          <p>Want to see the website live?</p>
-          <a href="http://www.fireeater.com/">View the Fire Eater Website</a>
-        </div>
-      </section>
-
       { /*
       {{ carousel.javascripts() }}
       <script>

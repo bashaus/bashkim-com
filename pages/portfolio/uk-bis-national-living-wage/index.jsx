@@ -95,22 +95,21 @@ export default function UkBisNationalLivingWageCaseStudy() {
           <h2>Campaign</h2>
         </PartialSubtitle>
 
-        <figure className="layout-captioned">
-          <figcaption>
-            <h3>Communications</h3>
-            <p>
-              The National Living Wage campaign was formed to communicate the
-              government's increase in the minimum wage from £6.70/hour to £7.20/hour.
-            </p>
-          </figcaption>
-
-          <div className="layout-captioned--content">
+        <PartialCaptioned
+          figure={(
             <PartialVideoPlayerYouTube
               v="HmKh-mqLa3Q"
               title="National Living Wage - Campaign television ad"
             />
-          </div>
-        </figure>
+          )}
+        >
+          <h3>Communications</h3>
+          <p>
+            The National Living Wage campaign was formed to communicate the
+            government&apos;s increase in the minimum wage from &pound;6.70/hour to
+            &pound;7.20/hour.
+          </p>
+        </PartialCaptioned>
       </section>
 
       <section className="group">
@@ -118,36 +117,35 @@ export default function UkBisNationalLivingWageCaseStudy() {
           <h2>Artefacts</h2>
         </PartialSubtitle>
 
-        <figure className="layout-captioned">
-          <figcaption>
-            <h3>Desktop</h3>
-            <p>
-              The website as presented to the user when they first visit the website.
-            </p>
-          </figcaption>
-
-          <div className="layout-captioned--content">
-            <img src="/static/images/caseStudies/uk-bis-national-living-wage/home/1024.png" alt="National Living Wage Homepage" />
-          </div>
-        </figure>
+        <PartialCaptioned
+          figure={(
+            <img
+              src="/static/images/caseStudies/uk-bis-national-living-wage/home/1024.png"
+              alt="National Living Wage Homepage"
+            />
+          )}
+        >
+          <h3>Desktop</h3>
+          <p>
+            The website as presented to the user when they first visit the website.
+          </p>
+        </PartialCaptioned>
       </section>
 
       <section className="group-alternate">
-        <div className="layout-captioned">
-          <div className="layout-captioned--summary">
-            <h3>Mobile optimisation</h3>
-            <p>
-              The design of the site was kept minimalist to ensure it was compliant
-              with government regulations and worked on a variety of devices.
-            </p>
-          </div>
-
-          <div className="layout-captioned--content">
+        <PartialCaptioned
+          figure={(
             <DeviceSmartphone image="/static/images/caseStudies/uk-bis-national-living-wage/home/320.png">
               Homepage on Mobile
             </DeviceSmartphone>
-          </div>
-        </div>
+          )}
+        >
+          <h3>Mobile optimisation</h3>
+          <p>
+            The design of the site was kept minimalist to ensure it was compliant
+            with government regulations and worked on a variety of devices.
+          </p>
+        </PartialCaptioned>
       </section>
 
       <section className="group">

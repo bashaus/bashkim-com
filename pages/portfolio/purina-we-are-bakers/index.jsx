@@ -87,16 +87,16 @@ export default function PurinaWeAreBakersCaseStudy() {
           <h2>Artefacts</h2>
         </PartialSubtitle>
 
-        <figure className="layout-captioned">
-          <figcaption>
-            <h3></h3>
-            <p></p>
-          </figcaption>
-
-          <div className="layout-captioned--content">
-            <img src="/static/images/caseStudies/purina-we-are-bakers/home/1024.png" alt="We are Bakers" />
-          </div>
-        </figure>
+        <PartialCaptioned
+          figure={(
+            <img
+              src="/static/images/caseStudies/purina-we-are-bakers/home/1024.png"
+              alt="We are Bakers"
+            />
+          )}
+        >
+          <h3>Homepage</h3>
+        </PartialCaptioned>
       </section>
 
       <section className="group-alternate">

@@ -107,7 +107,7 @@ export default function AgencyRepublic2013CaseStudy() {
         <PartialCaptioned
           figure={(
             <img
-              src="/static/images/caseStudies/agency-republic-2013/caseStudies/agency-republic-2013/home/1024.png"
+              src="/static/images/caseStudies/agency-republic-2013/home/1024.png"
               alt="Agency Republic Homepage"
             />
           )}
