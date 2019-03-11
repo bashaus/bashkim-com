@@ -4,6 +4,7 @@
 @import "../../styleguide/utils/media";
 @import "../../styleguide/utils/grid";
 @import "../../styleguide/utils/colours";
+@import "../../styleguide/utils/z-index";
 
 .CookiesNotice {
   font-size: 16px;
@@ -56,21 +57,14 @@
     background-color: lighten($color-primary, 10%);
   }
 
-  :global(html.no-js) & .close {
-    display: none;
-  }
-
   @include breakpoint($media-mobile) {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: z-index('CookiesNotice');
     background-color: $color-white;
     box-shadow: 0px -10px 20px -13px rgba(30, 30, 30, 0.75);
-
-    :global(html.js) & {
-      position: fixed;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 1000;
-    }
 
     .content {
       flex-basis: 100%;

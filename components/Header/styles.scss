@@ -3,9 +3,10 @@
 @import "../../styleguide/utils/media";
 @import "../../styleguide/utils/grid";
 @import "../../styleguide/utils/colours";
+@import "../../styleguide/utils/z-index";
 
 .header {
-  z-index: 8000;
+  z-index: z-index('Header');
   border-bottom: solid 1px $color-shade-border;
   background-color: $color-white;
 

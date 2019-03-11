@@ -3,13 +3,14 @@
 @import "../../styleguide/utils/media";
 @import "../../styleguide/utils/grid";
 @import "../../styleguide/utils/colours";
+@import "../../styleguide/utils/z-index";
 
 .Menu {
   display: flex;
   position: sticky;
   top: 0;
   background: $color-white;
-  z-index: 9000;
+  z-index: z-index('Menu');
   box-shadow: 0px 10px 20px -13px rgba(30, 30, 30, 0.75);
 }
 
