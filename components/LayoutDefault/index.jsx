@@ -73,7 +73,7 @@ LayoutDefaultDisconnected.defaultProps = {
 
 function mapStateToProps(state) {
   return {
-    menuIsVisible: state.gui.menuIsVisible,
+    menuIsVisible: state.menu.isVisible,
   };
 }
 

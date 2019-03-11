@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import PropTypes from 'prop-types';
 
-import * as GuiActions from 'store/actions/gui';
+import * as HeaderActions from 'store/actions/header';
 
 import styles from './styles.scss';
 
@@ -33,8 +33,8 @@ export class HeaderIntersectionDisconnected extends React.PureComponent {
   }
 
   processIntersectionEntries(entries) {
-    const { doUpdate } = this.props;
-    entries.forEach(entry => doUpdate(entry.isIntersecting));
+    const { doHeaderSetIntersection } = this.props;
+    entries.forEach(entry => doHeaderSetIntersection(entry.isIntersecting));
   }
 
   render() {
@@ -46,12 +46,12 @@ export class HeaderIntersectionDisconnected extends React.PureComponent {
 
 HeaderIntersectionDisconnected.propTypes = {
   /* mapDispatchToProps */
-  doUpdate: PropTypes.func.isRequired,
+  doHeaderSetIntersection: PropTypes.func.isRequired,
 };
 
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({
-    doUpdate: GuiActions.doUpdateHeaderIntersection,
+    doHeaderSetIntersection: HeaderActions.setIntersection,
   }, dispatch);
 }
 

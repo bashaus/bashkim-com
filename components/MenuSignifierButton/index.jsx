@@ -3,7 +3,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import * as GuiActions from 'store/actions/gui';
+import * as MenuActions from 'store/actions/menu';
 
 import styles from './styles.scss';
 
@@ -51,13 +51,13 @@ MenuSignifierButtonDisconnected.propTypes = {
 
 function mapStateToProps(state) {
   return {
-    menuIsVisible: state.gui.menuIsVisible,
+    menuIsVisible: state.menu.isVisible,
   };
 }
 
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({
-    doMenuToggle: GuiActions.toggleMenu,
+    doMenuToggle: MenuActions.toggle,
   }, dispatch);
 }
 

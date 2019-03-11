@@ -42,8 +42,8 @@ HeaderDisconnected.propTypes = {
 
 function mapStateToProps(state) {
   return {
-    headerIsIntersecting: state.gui.headerIsIntersecting,
-    menuIsVisible: state.gui.menuIsVisible,
+    headerIsIntersecting: state.header.isIntersecting,
+    menuIsVisible: state.menu.isVisible,
   };
 }
 
