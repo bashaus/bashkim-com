@@ -1,5 +1,7 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
+
+import FeaturedCaseStudyPropType from 'propTypes/FeaturedCaseStudy';
 
 import LayoutDefault from 'components/LayoutDefault';
 import MetaDescription from 'components/MetaDescription';
@@ -8,18 +10,10 @@ import MetaTitle from 'components/MetaTitle';
 import MenuBackButtonHomeImpl from 'components/MenuBackButtonHomeImpl';
 import PartialHeaderText from 'components/PartialHeaderText';
 import PartialSubtitle from 'components/PartialSubtitle';
-import PartialTile from 'components/PartialTile';
+import PortfolioFeaturedCaseStudies from 'components/PortfolioFeaturedCaseStudies';
 import ViewPortfolio from 'components/ViewPortfolio';
 
-import * as caseStudies from 'data/caseStudies';
-
-import FeaturedCaseStudyPropType from 'propTypes/FeaturedCaseStudy';
-
-import styles from './styles.scss';
-
-const CASE_STUDIES = Object.values(caseStudies);
-
-export default function PortfolioPage({ featured }) {
+export default function PortfolioPage({ featuredCaseStudies }) {
   return (
     <LayoutDefault backButton={MenuBackButtonHomeImpl} theme="portfolio">
       <MetaTitle content="Portfolio" />
@@ -36,40 +30,7 @@ export default function PortfolioPage({ featured }) {
       </PartialHeaderText>
 
       <section className="group-alternate">
-        <PartialSubtitle>
-          <h2>These will knock your socks off</h2>
-          <p>
-            If you&apos;re looking for examples of a particular technology or skill,
-            check out these case studies
-          </p>
-        </PartialSubtitle>
-
-        <ul className={styles.featuredCaseStudies}>
-          { featured.map(feature => {
-            const caseStudy = CASE_STUDIES
-                .find(caseStudy => caseStudy.slug === feature.caseStudy);
-
-            return (
-              <li key={feature.title}>
-                <h3>{ feature.title }</h3>
-                <p>{ feature.description }</p>
-                <ul>
-                  { feature.kernels.map(kernel => (
-                    <li key={kernel}>{kernel}</li>
-                  )) }
-                </ul>
-
-                <PartialTile
-                  title={caseStudy.meta.title}
-                  description={caseStudy.meta.description}
-                  href={caseStudy.href}
-                  icon={caseStudy.images.icon}
-                  poster={caseStudy.images.poster}
-                />
-              </li>
-            );
-          }) }
-        </ul>
+        <PortfolioFeaturedCaseStudies featuredCaseStudies={featuredCaseStudies} />
       </section>
 
       <section className="group">
@@ -84,17 +45,13 @@ export default function PortfolioPage({ featured }) {
 }
 
 PortfolioPage.propTypes = {
-  featured: PropTypes.arrayOf(FeaturedCaseStudyPropType).isRequired,
-}
+  featuredCaseStudies: PropTypes.arrayOf(FeaturedCaseStudyPropType).isRequired,
+};
 
 PortfolioPage.getInitialProps = async ({ req, res }) => {
-  // const posts = await getPosts();
-  // const json = await posts.json();
-  // return { posts: json };
-
-  const featured = await import('data/portfolio/featured.json');
+  const featuredCaseStudies = await import('data/portfolio/featuredCaseStudies.json');
 
   return {
-    featured: featured.default
+    featuredCaseStudies: featuredCaseStudies.default
   };
 };

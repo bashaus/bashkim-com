@@ -13,7 +13,7 @@
     "title": "Creative technology",
     "description": "Working outside-the-box to deliver an innovative campaign",
     "kernels": [
-      "Serverless architecture",
+      "Microservice architecture",
       "Generate personalised video"
     ]
   },
@@ -32,7 +32,7 @@
     "description": "Handcrafted experiences to give physical form to digital information",
     "kernels": [
       "Custom designed electronics",
-      "Building bespoke artefacts"
+      "Bespoke crafted artefacts"
     ]
   }
 ]

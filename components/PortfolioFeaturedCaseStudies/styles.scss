@@ -2,11 +2,15 @@
 @import "../../styleguide/vendors/grid/";
 @import "../../styleguide/utils/media";
 @import "../../styleguide/utils/grid";
+@import "../../styleguide/utils/wysiwyg";
 
-.featuredCaseStudies {
+.PortfolioFeaturedCaseStudies {
   @include grid-container;
 
-  > li {
+  .item {
+    display: flex;
+    flex-direction: column;
+
     @include grid-cell(
       $columns: (
         mobile-portrait: 12,
@@ -19,7 +23,12 @@
     );
   }
 
-  article {
+  .details {
+    @extend %wysiwyg;
+    flex-grow: 0;
+  }
+
+  .tile {
     margin-top: 26px;
     flex-grow: 1;
   }
