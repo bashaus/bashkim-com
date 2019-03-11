@@ -1,5 +1,6 @@
 @mixin chevron-down($delta: 20px) {
   margin-bottom: #{0 - $delta};
+  padding-bottom: #{$delta};
   clip-path: polygon(
     0% 0%,
     100% 0%,
@@ -13,6 +14,7 @@
 
 @mixin chevron-left($delta: 20px) {
   margin-right: #{0 - $delta};
+  padding-right: #{$delta};
   clip-path: polygon(
     0% 0%,
     calc(100% - #{$delta}) 0%,
@@ -26,6 +28,7 @@
 
 @mixin chevron-right($delta: 20px) {
   margin-left: #{0 - $delta};
+  padding-left: #{$delta};
   clip-path: polygon(
     calc(0% + #{$delta}) 0%,
     100% 0%,

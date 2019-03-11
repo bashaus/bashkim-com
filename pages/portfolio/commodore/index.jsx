@@ -430,19 +430,6 @@ export default function CommodoreCaseStudy() {
           </li>
         </CaseStudyCollaborators>
       </section>
-
-      <section className="group">
-        <div className="layout-cta">
-          {/*
-            <p>
-              Technical information on the installation is available at the
-              <a href="http://www.commodore-game.com/">Commodore</a> project.
-            </p>
-          */}
-          <p>Want to see more information?</p>
-          <a href="http://www.commodore-game.com/">View the Commodore Website</a>
-        </div>
-      </section>
     </LayoutCaseStudy>
   );
 }

@@ -28,23 +28,26 @@
     margin: 0 auto;
   }
 
-  &.withBackground {
+  &.background {
     background-color: #EFEFEF;
     background-size: cover;
     background-position: center center;
   }
 
-  &.withBackground::before,
-  &.withBackground::after {
+  &.background::before,
+  &.background::after {
     border-color: $color-white;
   }
 
   @include breakpoint($media-mobile) {
     width: 100%;
-    padding: 20px;
     order: 2;
 
-    &.withBackground {
+    &.foreground {
+      padding: 20px;
+    }
+
+    &.background {
       min-height: 60vw;
       order: 1;
     }
@@ -56,10 +59,13 @@
 
   @include breakpoint($media-not-mobile) {
     width: 50%;
-    padding: 40px;
     min-height: calc(9 / 16 * 50vw);
 
-    &.withBackground {
+    &.foreground {
+      padding: 40px;
+    }
+
+    &.background {
       width: calc(50% + 20px);
     }
 

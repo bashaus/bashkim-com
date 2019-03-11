@@ -11,8 +11,10 @@ export default function PartialSplitItem(props) {
 
   if (backgroundImage) {
     style.backgroundImage = `url("${backgroundImage}")`;
-    className.push(styles.withBackground);
+    className.push(styles.background);
     className.push('PartialSplit_chevron');
+  } else {
+    className.push(styles.foreground);
   }
 
   return (

@@ -364,13 +364,6 @@ export default function MeetEaterCaseStudy() {
           </li>
         </CaseStudyCollaborators>
       </section>
-
-      <section className="group">
-        <div className="layout-cta">
-          <p>Want to see the Facebook page?</p>
-          <a href="https://www.facebook.com/meeteater">View the Meet Eater Facebook page</a>
-        </div>
-      </section>
     </LayoutCaseStudy>
   );
 }
