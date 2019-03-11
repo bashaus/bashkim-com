@@ -40,13 +40,13 @@ export class CookiesNoticeDisconnected extends React.Component {
     }
 
     return (
-      <AnimateHeight
-        duration={600}
-        height={cookiesDismissed ? 0 : 'auto'}
-        eassing="ease-out"
-        onAnimationEnd={this.handleAnimationEnd}
-      >
-        <div className={styles.CookiesNotice}>
+      <div className={styles.CookiesNotice}>
+        <AnimateHeight
+          duration={300}
+          height={cookiesDismissed ? 0 : 'auto'}
+          eassing="ease-out"
+          onAnimationEnd={this.handleAnimationEnd}
+        >
           <div className={styles.container}>
             <div className={styles.content}>
               Even a small website like this uses cookies to give you the best
@@ -61,8 +61,8 @@ export class CookiesNoticeDisconnected extends React.Component {
               <button type="button" onClick={this.handleDismissClick}>OK, Cool</button>
             </div>
           </div>
-        </div>
-      </AnimateHeight>
+        </AnimateHeight>
+      </div>
     );
   }
 }
