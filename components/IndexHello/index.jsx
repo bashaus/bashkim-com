@@ -24,7 +24,7 @@ export default function IndexHello() {
             </span>
             {' '}
             <span className={styles.spiel}>
-              I&apos;m a London&#8209;based Creative&nbsp;Technologist specialising in
+              I&apos;m a London&#8209;based Creative Technologist specialising in
               {' '}
               <Link href="/portfolio#physical-computing">
                 <a>tangible&nbsp;media</a>

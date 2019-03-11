@@ -15,9 +15,13 @@
   }
 
   @include breakpoint($media-mobile) {
+    .name {
+      display: block;
+      margin-bottom: 20px;
+    }
     .name::after {
       content: ".";
-      display: inline-block;
+      display: inline;
     }
 
     .spiel {
