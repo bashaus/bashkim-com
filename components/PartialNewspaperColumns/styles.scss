@@ -1,0 +1,31 @@
+@import "~breakpoint-sass";
+@import "../../styleguide/vendors/grid/";
+@import "../../styleguide/utils/media";
+@import "../../styleguide/utils/grid";
+@import "../../styleguide/utils/wysiwyg";
+
+.PartialNewspaperColumns {
+  @include grid-container-max-width;
+  @include grid-container-padding;
+  margin: 0 auto;
+
+  @include breakpoint($media-screen-large) {
+    column-count: 4;
+    column-gap: 0;
+    // column-rule-style: ;
+    // column-rule-width: ;
+    // column-rule-color: ;
+    // column-rule: ;
+    // column-span: ;
+    // column-width: ;
+  }
+
+  > li {
+    @extend %wysiwyg;
+    @include grid-cell-padding;
+
+    display: inline-block;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}

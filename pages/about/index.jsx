@@ -41,7 +41,11 @@ export default function AboutPage() {
           <PartialSplitItem>
             <PartialCallToAction>
               <p>Looking for recommendations from industry professionals?</p>
-              <a href="https://www.linkedin.com/in/bashaus/" target="_blank" rel="noreferrer noopener">
+              <a
+                href="https://www.linkedin.com/in/bashaus/"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
                 Visit my LinkedIn profile
               </a>
             </PartialCallToAction>
@@ -50,7 +54,11 @@ export default function AboutPage() {
           <PartialSplitItem>
             <PartialCallToAction>
               <p>Looking to see some examples of code?</p>
-              <a href="https://github.com/bashaus?tab=repositories" target="_blank" rel="noreferrer noopener">
+              <a
+                href="https://github.com/bashaus?tab=repositories"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
                 Visit my GitHub profile
               </a>
             </PartialCallToAction>

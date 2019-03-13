@@ -21,14 +21,6 @@ module.exports = async function PagesSitemap() {
     },
     {
       url: {
-        loc: `${config.get('sitemap.baseHref')}/blog`,
-        lastMod: dayjs().format(),
-        changefreq: 'monthly',
-        priority: '0.5',
-      },
-    },
-    {
-      url: {
         loc: `${config.get('sitemap.baseHref')}/legal/cookie-policy`,
         lastMod: dayjs().format(),
         changefreq: 'monthly',

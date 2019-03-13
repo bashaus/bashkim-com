@@ -88,7 +88,13 @@ export default function AgencyRepublic2013CaseStudy() {
             <h3>Outcomes</h3>
             <ul>
               <li>
-                <a href="https://econsultancy.com/blog/64236-10-responsive-digital-agency-websites">Featured on eConsultancy.com</a>
+                <a
+                  href="https://econsultancy.com/blog/64236-10-responsive-digital-agency-websites"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Featured on eConsultancy.com
+                </a>
               </li>
             </ul>
           </div>

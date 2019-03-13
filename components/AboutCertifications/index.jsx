@@ -49,7 +49,11 @@ export default function AboutProfile() {
               <time dateTime="2012-08-23">August 2012</time>
             </p>
             <p>
-              <a href="https://www.zend.com/en/yellow-pages/ZEND020625">
+              <a
+                href="https://www.zend.com/en/yellow-pages/ZEND020625"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <img
                   alt="Zend Certified Engineer"
                   src="/static/images/about/certifications/php/zce.jpg"

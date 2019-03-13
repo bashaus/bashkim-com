@@ -42,7 +42,11 @@ export default function CookiePolicyPage() {
 
           <p>
             More information about
-            <a href="https://ico.org.uk/for-the-public/online/cookies/">
+            <a
+              href="https://ico.org.uk/for-the-public/online/cookies/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               how to manage cookies
             </a>
             can be found on the Information&nbsp;Commissioner&apos;s&nbsp;Office website.
@@ -123,7 +127,11 @@ export default function CookiePolicyPage() {
           <p>
             If you prefer, you can
             {' '}
-            <a href="https://tools.google.com/dlpage/gaoptout">
+            <a
+              href="https://tools.google.com/dlpage/gaoptout"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               opt-out of Google Analytics
             </a>
             {' '}

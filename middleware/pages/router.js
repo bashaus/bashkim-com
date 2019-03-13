@@ -9,12 +9,6 @@ const routes = nextRoutes()
   })
 
   .add({
-    name: 'blog',
-    pattern: '/blog',
-    page: 'blog',
-  })
-
-  .add({
     name: 'CookiePolicy',
     pattern: '/legal/cookie-policy',
     page: 'legal/cookie-policy',

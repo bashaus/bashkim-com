@@ -49,14 +49,27 @@ export default function BatterseaLookingForYouCaseStudy() {
           <div>
             <h3>Client</h3>
             <p>
-              <a href="https://www.battersea.org.uk/">Battersea Dogs &amp; Cats Home</a>
+              <a
+                href="https://www.battersea.org.uk/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Battersea Dogs &amp; Cats Home
+              </a>
             </p>
           </div>
 
           <div>
             <h3>Agency</h3>
             <p>
-              <a href="http://ogilvyone.co.uk/">OgilvyOne WorldWide</a><br />
+              <a
+                href="http://ogilvyone.co.uk/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                OgilvyOne WorldWide
+              </a>
+              <br />
               Senior Developer
             </p>
           </div>
