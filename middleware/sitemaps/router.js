@@ -5,14 +5,9 @@ const SitemapIndex = require('./generators/sitemapindex');
 const Sitemap = require('./generators/sitemap');
 const config = require('../../config');
 
-function SitemapRouter() {
-  this.getRequestHandler = () => {
-    const sitemap = express();
-    sitemap.use(express.static(path.resolve(__dirname, 'public')));
-    sitemap.get(config.get('sitemap.routes.sitemapIndex.pattern'), SitemapIndex());
-    sitemap.get(config.get('sitemap.routes.sitemap.pattern'), Sitemap());
-    return sitemap;
-  };
-}
+const router = express();
+router.use(express.static(path.resolve(__dirname, 'public')));
+router.get(config.get('sitemap.routes.sitemapIndex.pattern'), SitemapIndex());
+router.get(config.get('sitemap.routes.sitemap.pattern'), Sitemap());
 
-module.exports = SitemapRouter;
+module.exports = router;

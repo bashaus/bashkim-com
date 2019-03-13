@@ -4,25 +4,25 @@ const routes = nextRoutes()
 
   .add({
     name: 'about',
-    pattern: '/about/?',
+    pattern: '/about',
     page: 'about',
   })
 
   .add({
     name: 'blog',
-    pattern: '/blog/?',
+    pattern: '/blog',
     page: 'blog',
   })
 
   .add({
     name: 'CookiePolicy',
-    pattern: '/legal/cookie-policy/?',
+    pattern: '/legal/cookie-policy',
     page: 'legal/cookie-policy',
   })
 
   .add({
     name: 'index',
-    pattern: '/?',
+    pattern: '/',
     page: 'index',
   });
 
