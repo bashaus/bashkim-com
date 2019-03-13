@@ -1,32 +1,34 @@
-export { default as agencyRepublic2013 } from './caseStudies/agency-republic-2013.json';
-export { default as batterseaLookingForYou } from './caseStudies/battersea-looking-for-you.json';
-export { default as bmwCareerPortal } from './caseStudies/bmw-career-portal.json';
-export { default as bookeryCook } from './caseStudies/bookery-cook.json';
-export { default as britishGasTheSource } from './caseStudies/british-gas-the-source.json';
-// export { default as btMobileFamilySIM } from './caseStudies/bt-mobile-family-sim.json';
-export { default as btSportBusiness } from './caseStudies/bt-sport-business.json';
-export { default as changeTheTune } from './caseStudies/change-the-tune.json';
-export { default as chetAtkinsAllWah } from './caseStudies/chet-atkins-all-wah.json';
-export { default as commodore } from './caseStudies/commodore.json';
-export { default as earlyTimesFireEater } from './caseStudies/early-times-fire-eater.json';
-// export { default as frockPaperScissors } from './caseStudies/frock-paper-scissors.json';
-export { default as huaweiRunImpossible } from './caseStudies/huawei-run-impossible.json';
-export { default as ihgBusinessAdvantage } from './caseStudies/ihg-business-advantage.json';
-export { default as ihgWhereWouldYouGo } from './caseStudies/ihg-where-would-you-go.json';
-export { default as jdRoots } from './caseStudies/jd-roots.json';
-export { default as jdTrackMatDock } from './caseStudies/jd-track-mat-dock.json';
-export { default as likeRalph } from './caseStudies/like-ralph.json';
-export { default as ludicLift } from './caseStudies/ludic-lift.json';
-export { default as meetEater } from './caseStudies/meet-eater.json';
-// export { default as myoeTravelScholarship } from './caseStudies/myoe-travel-scholarship.json';
-export { default as niveaCrukSunburnRisk } from './caseStudies/nivea-cruk-sunburn-risk.json';
-export { default as purinaWeAreBakers } from './caseStudies/purina-we-are-bakers.json';
-// export { default as rocheMsDiseaseActivity } from './caseStudies/roche-ms-disease-activity.json';
-export { default as saveHaggerstonPool } from './caseStudies/save-haggerston-pool.json';
-// export { default as spiroGraceArtRooms } from './caseStudies/spiro-grace-art-rooms.json';
-// export { default as thisWayUp } from './caseStudies/this-way-up.json';
-// export { default as travelitude } from './caseStudies/travelitude.json';
-export { default as trop50ResolutionRescue } from './caseStudies/trop50-resolution-rescue.json';
-export { default as ukBisNationalLivingWage } from './caseStudies/uk-bis-national-living-wage.json';
-export { default as vodafoneFreeSim } from './caseStudies/vodafone-free-sim.json';
-// export { default as wokMe } from './caseStudies/wok-me.json';
+module.exports = {
+  agencyRepublic2013: require('./caseStudies/agency-republic-2013.json'),
+  batterseaLookingForYou: require('./caseStudies/battersea-looking-for-you.json'),
+  bmwCareerPortal: require('./caseStudies/bmw-career-portal.json'),
+  bookeryCook: require('./caseStudies/bookery-cook.json'),
+  britishGasTheSource: require('./caseStudies/british-gas-the-source.json'),
+  // btMobileFamilySIM: require('./caseStudies/bt-mobile-family-sim.json'),
+  btSportBusiness: require('./caseStudies/bt-sport-business.json'),
+  changeTheTune: require('./caseStudies/change-the-tune.json'),
+  chetAtkinsAllWah: require('./caseStudies/chet-atkins-all-wah.json'),
+  commodore: require('./caseStudies/commodore.json'),
+  earlyTimesFireEater: require('./caseStudies/early-times-fire-eater.json'),
+  // frockPaperScissors: require('./caseStudies/frock-paper-scissors.json'),
+  huaweiRunImpossible: require('./caseStudies/huawei-run-impossible.json'),
+  ihgBusinessAdvantage: require('./caseStudies/ihg-business-advantage.json'),
+  ihgWhereWouldYouGo: require('./caseStudies/ihg-where-would-you-go.json'),
+  jdRoots: require('./caseStudies/jd-roots.json'),
+  jdTrackMatDock: require('./caseStudies/jd-track-mat-dock.json'),
+  likeRalph: require('./caseStudies/like-ralph.json'),
+  ludicLift: require('./caseStudies/ludic-lift.json'),
+  meetEater: require('./caseStudies/meet-eater.json'),
+  // myoeTravelScholarship: require('./caseStudies/myoe-travel-scholarship.json'),
+  niveaCrukSunburnRisk: require('./caseStudies/nivea-cruk-sunburn-risk.json'),
+  purinaWeAreBakers: require('./caseStudies/purina-we-are-bakers.json'),
+  // rocheMsDiseaseActivity: require('./caseStudies/roche-ms-disease-activity.json'),
+  saveHaggerstonPool: require('./caseStudies/save-haggerston-pool.json'),
+  // spiroGraceArtRooms: require('./caseStudies/spiro-grace-art-rooms.json'),
+  // thisWayUp: require('./caseStudies/this-way-up.json'),
+  // travelitude: require('./caseStudies/travelitude.json'),
+  trop50ResolutionRescue: require('./caseStudies/trop50-resolution-rescue.json'),
+  ukBisNationalLivingWage: require('./caseStudies/uk-bis-national-living-wage.json'),
+  vodafoneFreeSim: require('./caseStudies/vodafone-free-sim.json'),
+  // wokMe: require('./caseStudies/wok-me.json'),
+};

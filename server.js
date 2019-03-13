@@ -1,7 +1,13 @@
 const Sentry = require('@sentry/node');
 const express = require('express');
 const next = require('next');
+const nextRoutes = require('next-routes');
+
 const config = require('./config');
+const SitemapRouter = require('./middleware/sitemaps/router');
+
+require('./middleware/pages/router');
+require('./middleware/caseStudies/router');
 
 const sentryIsEnabled = config.get('sentry.enabled');
 if (sentryIsEnabled) {
@@ -15,12 +21,14 @@ if (sentryIsEnabled) {
 const port = config.get('server.port');
 const dev = config.get('next.dev');
 const app = next({ dev });
-const nextRequestHandler = app.getRequestHandler();
+
+const sitemapRouter = new SitemapRouter();
 
 const createServer = () => {
   const server = express();
   server.use(Sentry.Handlers.requestHandler());
-  server.get('*', (req, res) => nextRequestHandler(req, res));
+  server.use(sitemapRouter.getRequestHandler());
+  server.use(nextRoutes().getRequestHandler(app));
   server.use(Sentry.Handlers.errorHandler());
   return server;
 };

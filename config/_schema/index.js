@@ -3,4 +3,5 @@ module.exports = {
   ...require('./next.json'),
   ...require('./sentry.json'),
   ...require('./server.json'),
+  ...require('./sitemap.json'),
 };
