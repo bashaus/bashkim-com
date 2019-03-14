@@ -49,7 +49,6 @@ package:
     - .storybook/**
     - "**/stories.jsx"
     - components/**
-    - data/**
     - node_modules/.cache/**
     - pages/**
     - propTypes/**
