@@ -20,7 +20,7 @@ export default function CookiePolicyPage() {
 
       <PartialHeaderText>
         <h1>Cookie Policy</h1>
-        <small>How your information is used on this website</small>
+        <p>How your information is used on this website</p>
       </PartialHeaderText>
 
       <section className="group">
