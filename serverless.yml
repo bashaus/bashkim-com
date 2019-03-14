@@ -1,10 +1,17 @@
 service: bashkim-com
 
+plugins:
+  - serverless-sentry
+
 custom:
   stage: ${opt:stage, env:SLS_STAGE, 'production'}
   region: ${opt:region, env:AWS_DEFAULT_REGION, 'eu-west-1'}
   styleguide: ${self:custom.env.${self:custom.stage}.styleguide}
   website: ${self:custom.env.${self:custom.stage}.website}
+
+  sentry:
+    dsn: ${env:SENTRY_DSN}
+    environment: ${self:custom.stage}
 
   env:
     production:
@@ -30,6 +37,7 @@ provider:
     GIT_COMMIT: ${self:custom.website.commitHash}
     LAMBDA: true
     NODE_ENV: ${self:custom.stage}
+    SENTRY_DSN: ${self:custom.sentry.dsn}
 
 package:
   exclude:
