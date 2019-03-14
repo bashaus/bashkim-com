@@ -1,3 +1,4 @@
+/.env
 /.next/
 /.storybook-static/
 /.serverless/
