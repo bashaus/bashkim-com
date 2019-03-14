@@ -3,16 +3,16 @@ import React from 'react';
 
 import styles from './styles.scss';
 
-export default function PartialNewspaperColumns(props) {
+export default function PartialNewspaper(props) {
   const { children } = props;
 
   return (
-    <ol className={styles.PartialNewspaperColumns}>
+    <ol className={styles.PartialNewspaper}>
       { children }
     </ol>
   );
 }
 
-PartialNewspaperColumns.propTypes = {
+PartialNewspaper.propTypes = {
   children: PropTypes.node.isRequired,
 };

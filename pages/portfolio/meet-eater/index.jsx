@@ -5,7 +5,7 @@ import CaseStudyDetails from 'components/CaseStudyDetails';
 import CaseStudyTechnologies from 'components/CaseStudyTechnologies';
 import LayoutCaseStudy from 'components/LayoutCaseStudy';
 import PartialCaptioned from 'components/PartialCaptioned';
-import PartialNewspaperColumns from 'components/PartialNewspaperColumns';
+import PartialNewspaper from 'components/PartialNewspaper';
 import PartialSubtitle from 'components/PartialSubtitle';
 import PartialVideoPlayerYouTube from 'components/PartialVideoPlayerYouTube';
 
@@ -377,7 +377,7 @@ export default function MeetEaterCaseStudy() {
           </p>
         </PartialSubtitle>
 
-        <PartialNewspaperColumns>
+        <PartialNewspaper>
           <li>
             <h3>Australia</h3>
 
@@ -564,7 +564,7 @@ export default function MeetEaterCaseStudy() {
               Появился сад, питающийся активностью пользователей Facebook
             </p>
           </li>
-        </PartialNewspaperColumns>
+        </PartialNewspaper>
       </section>
 
       <section className="group">
