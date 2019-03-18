@@ -6,7 +6,7 @@ module.exports = async function PagesSitemap() {
     {
       url: {
         loc: `${config.get('sitemap.baseHref')}/`,
-        lastMod: dayjs().format(),
+        lastmod: dayjs().format(),
         changefreq: 'monthly',
         priority: '0.5',
       },
@@ -14,7 +14,7 @@ module.exports = async function PagesSitemap() {
     {
       url: {
         loc: `${config.get('sitemap.baseHref')}/about`,
-        lastMod: dayjs().format(),
+        lastmod: dayjs().format(),
         changefreq: 'monthly',
         priority: '0.5',
       },
@@ -22,7 +22,7 @@ module.exports = async function PagesSitemap() {
     {
       url: {
         loc: `${config.get('sitemap.baseHref')}/legal/cookie-policy`,
-        lastMod: dayjs().format(),
+        lastmod: dayjs().format(),
         changefreq: 'monthly',
         priority: '0.5',
       },

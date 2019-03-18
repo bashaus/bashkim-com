@@ -7,7 +7,7 @@ module.exports = async function CaseStudiesSitemap() {
     {
       url: {
         loc: `${config.get('sitemap.baseHref')}/portfolio`,
-        lastMod: dayjs().format(),
+        lastmod: dayjs().format(),
         changefreq: 'monthly',
         priority: '0.5',
       },
@@ -18,7 +18,7 @@ module.exports = async function CaseStudiesSitemap() {
     urlset.push({
       url: {
         loc: `${config.get('sitemap.baseHref')}/portfolio/${caseStudy.slug}`,
-        lastMod: dayjs().format(),
+        lastmod: dayjs().format(),
         changefreq: 'monthly',
         priority: '0.5',
       },
