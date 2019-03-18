@@ -39,6 +39,12 @@ export default class PortfolioFilter extends React.PureComponent {
     onChange(this.state);
   }
 
+  setTag(tag) {
+    this.setState({
+      tags: [{ id: tag, name: allTags[tag].name }],
+    });
+  }
+
   handleDelete(i) {
     const { tags } = this.state;
     const tagsCopy = tags.slice(0);
@@ -57,12 +63,6 @@ export default class PortfolioFilter extends React.PureComponent {
 
   handleSortChange(e) {
     this.setState({ sort: e.currentTarget.value });
-  }
-
-  setTag(tag) {
-    this.setState({
-      tags: [{ id: tag, name: allTags[tag].name }],
-    });
   }
 
   handlePhysicalComputingClick() {
@@ -167,7 +167,6 @@ export default class PortfolioFilter extends React.PureComponent {
 }
 
 PortfolioFilter.propTypes = {
-  query: PropTypes.object,
   onChange: PropTypes.func,
 };
 
