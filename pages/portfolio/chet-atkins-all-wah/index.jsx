@@ -6,7 +6,7 @@ import CaseStudyTechnologies from '%components/CaseStudyTechnologies';
 import LayoutCaseStudy from '%components/LayoutCaseStudy';
 import PartialCaptioned from '%components/PartialCaptioned';
 import PartialSubtitle from '%components/PartialSubtitle';
-import PartialVideoPlayerYouTube from '%components/PartialVideoPlayerYouTube';
+import VideoPlayerYouTube from '%components/VideoPlayerYouTube';
 
 import { chetAtkinsAllWah as caseStudy } from 'data/caseStudies';
 
@@ -108,7 +108,7 @@ export default function ChetAtkinsAllWahCaseStudy() {
 
         <PartialCaptioned
           figure={(
-            <PartialVideoPlayerYouTube
+            <VideoPlayerYouTube
               v="jR0GECjyKtk"
               title="Chet Atkins All Wah - Concept video"
             />

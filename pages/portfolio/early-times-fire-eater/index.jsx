@@ -7,7 +7,7 @@ import DeviceSmartphone from '%components/DeviceSmartphone';
 import LayoutCaseStudy from '%components/LayoutCaseStudy';
 import PartialCaptioned from '%components/PartialCaptioned';
 import PartialSubtitle from '%components/PartialSubtitle';
-import PartialVideoPlayerYouTube from '%components/PartialVideoPlayerYouTube';
+import VideoPlayerYouTube from '%components/VideoPlayerYouTube';
 
 import { earlyTimesFireEater as caseStudy } from 'data/caseStudies';
 
@@ -90,7 +90,7 @@ export default function EarlyTimesFireEaterCaseStudy() {
 
         <PartialCaptioned
           figure={(
-            <PartialVideoPlayerYouTube
+            <VideoPlayerYouTube
               v="C-78weWJYPg"
               title="Fire Eater - Campaign video"
             />

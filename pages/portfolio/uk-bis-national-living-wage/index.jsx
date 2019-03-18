@@ -7,7 +7,7 @@ import DeviceSmartphone from '%components/DeviceSmartphone';
 import LayoutCaseStudy from '%components/LayoutCaseStudy';
 import PartialCaptioned from '%components/PartialCaptioned';
 import PartialSubtitle from '%components/PartialSubtitle';
-import PartialVideoPlayerYouTube from '%components/PartialVideoPlayerYouTube';
+import VideoPlayerYouTube from '%components/VideoPlayerYouTube';
 
 import { ukBisNationalLivingWage as caseStudy } from 'data/caseStudies';
 
@@ -97,7 +97,7 @@ export default function UkBisNationalLivingWageCaseStudy() {
 
         <PartialCaptioned
           figure={(
-            <PartialVideoPlayerYouTube
+            <VideoPlayerYouTube
               v="HmKh-mqLa3Q"
               title="National Living Wage - Campaign television ad"
             />

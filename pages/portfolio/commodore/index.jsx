@@ -6,7 +6,7 @@ import CaseStudyTechnologies from '%components/CaseStudyTechnologies';
 import LayoutCaseStudy from '%components/LayoutCaseStudy';
 import PartialCaptioned from '%components/PartialCaptioned';
 import PartialSubtitle from '%components/PartialSubtitle';
-import PartialVideoPlayerYouTube from '%components/PartialVideoPlayerYouTube';
+import VideoPlayerYouTube from '%components/VideoPlayerYouTube';
 
 import { commodore as caseStudy } from 'data/caseStudies';
 
@@ -98,7 +98,7 @@ export default function CommodoreCaseStudy() {
 
         <PartialCaptioned
           figure={(
-            <PartialVideoPlayerYouTube
+            <VideoPlayerYouTube
               v="1YGxvuDHC4M"
               title="Commodore @ This Way Up 2009"
             />

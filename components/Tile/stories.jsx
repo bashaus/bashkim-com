@@ -2,12 +2,12 @@ import React from 'react';
 
 import { storiesOf } from '@storybook/react';
 
-import PartialTile from '.';
+import Tile from '.';
 
-storiesOf('Components: PartialTile', module)
+storiesOf('Components: Tile', module)
   .add('default', () => (
     <div style={{ maxWidth: '200px' }}>
-      <PartialTile
+      <Tile
         description="This is a description"
         href="#"
         icon={null}

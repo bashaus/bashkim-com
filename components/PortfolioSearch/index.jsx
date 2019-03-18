@@ -2,7 +2,7 @@ import React from 'react';
 
 import CaseStudyBrick from '%components/CaseStudyBrick';
 import PortfolioFilter from '%components/PortfolioFilter';
-import PortfolioList from '%components/PortfolioList';
+import CaseStudyRow from '%components/CaseStudyRow';
 
 import * as caseStudies from 'data/caseStudies';
 
@@ -35,10 +35,10 @@ const DISPLAY_LIST = 'list';
 
 const DISPLAY = {
   [DISPLAY_ICON]: CaseStudyBrick,
-  [DISPLAY_LIST]: PortfolioList,
+  [DISPLAY_LIST]: CaseStudyRow,
 };
 
-export default class ViewPortfolio extends React.PureComponent {
+export default class PortfolioSearch extends React.PureComponent {
   constructor(...args) {
     super(...args);
 
@@ -76,7 +76,7 @@ export default class ViewPortfolio extends React.PureComponent {
       <React.Fragment>
         <PortfolioFilter ref={this.filterRef} onChange={this.handleChange} />
 
-        <ul className={`${styles.ViewPortfolio} ${styles[display]}`}>
+        <ul className={`${styles.PortfolioSearch} ${styles[display]}`}>
           { filteredCaseStudies.map(caseStudy => (
             <li key={caseStudy.slug}>
               <RenderComponent caseStudy={caseStudy} />

@@ -4,14 +4,14 @@ import Link from 'next/link';
 
 import styles from './styles.scss';
 
-export default function PartialTile(props) {
+export default function Tile(props) {
   const {
     description, href, title, icon, poster,
   } = props;
 
   return (
     <article
-      className={styles.PartialTile}
+      className={styles.Tile}
       itemScope
       itemType="http://schema.org/CreativeWork"
     >
@@ -41,7 +41,7 @@ export default function PartialTile(props) {
   );
 }
 
-PartialTile.propTypes = {
+Tile.propTypes = {
   description: PropTypes.string.isRequired,
   href: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,

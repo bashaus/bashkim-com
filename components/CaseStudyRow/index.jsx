@@ -8,11 +8,11 @@ import technologies from 'data/portfolio/technologies.json';
 
 import styles from './styles.scss';
 
-export default function PortfolioList(props) {
+export default function CaseStudyRow(props) {
   const { caseStudy } = props;
 
   return (
-    <article itemScope itemType="http://schema.org/CreativeWork" className={styles.PortfolioList}>
+    <article itemScope itemType="http://schema.org/CreativeWork" className={styles.CaseStudyRow}>
       <Link href={`/portfolio/${caseStudy.slug}`}>
         <a itemProp="url">
           <h3 itemProp="headline" className={styles.title}>
@@ -52,6 +52,6 @@ export default function PortfolioList(props) {
   );
 }
 
-PortfolioList.propTypes = {
+CaseStudyRow.propTypes = {
   caseStudy: CaseStudyPropType.isRequired,
 };

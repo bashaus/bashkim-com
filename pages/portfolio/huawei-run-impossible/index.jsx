@@ -6,7 +6,7 @@ import CaseStudyTechnologies from '%components/CaseStudyTechnologies';
 import LayoutCaseStudy from '%components/LayoutCaseStudy';
 import PartialCaptioned from '%components/PartialCaptioned';
 import PartialSubtitle from '%components/PartialSubtitle';
-import PartialVideoPlayerYouTube from '%components/PartialVideoPlayerYouTube';
+import VideoPlayerYouTube from '%components/VideoPlayerYouTube';
 
 import { huaweiRunImpossible as caseStudy } from 'data/caseStudies';
 
@@ -98,7 +98,7 @@ export default function HuaweiRunImpossibleCaseStudy() {
 
         <PartialCaptioned
           figure={(
-            <PartialVideoPlayerYouTube
+            <VideoPlayerYouTube
               v="dMlHUpTxUc4"
               title="Huawei Run Impossible - Milan campaign video"
             />
@@ -113,7 +113,7 @@ export default function HuaweiRunImpossibleCaseStudy() {
 
         <PartialCaptioned
           figure={(
-            <PartialVideoPlayerYouTube
+            <VideoPlayerYouTube
               v="2GOVeiSs-qc"
               title="Huawei Run Impossible - Madrid campaign video"
             />

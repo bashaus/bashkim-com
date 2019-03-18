@@ -3,7 +3,7 @@ import React from 'react';
 
 import CaseStudyPropType from '%prop-types/CaseStudy';
 
-import PartialTile from '%components/PartialTile';
+import Tile from '%components/Tile';
 
 import styles from './styles.scss';
 
@@ -14,7 +14,7 @@ export default function IndexFeaturedCaseStudies(props) {
     <ul className={styles.caseStudies}>
       { caseStudies.map(caseStudy => (
         <li className="template-home--caseStudy" key={caseStudy.slug}>
-          <PartialTile
+          <Tile
             title={caseStudy.meta.title}
             description={caseStudy.meta.description}
             href={caseStudy.href}

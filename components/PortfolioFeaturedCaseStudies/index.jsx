@@ -3,7 +3,7 @@ import React from 'react';
 
 import FeaturedCaseStudyPropType from '%prop-types/FeaturedCaseStudy';
 
-import PartialTile from '%components/PartialTile';
+import Tile from '%components/Tile';
 
 import * as caseStudies from 'data/caseStudies';
 
@@ -33,7 +33,7 @@ export default function PortfolioFeaturedCaseStudies(props) {
             </div>
 
             <div className={styles.tile}>
-              <PartialTile
+              <Tile
                 title={caseStudy.meta.title}
                 description={caseStudy.meta.description}
                 href={caseStudy.href}

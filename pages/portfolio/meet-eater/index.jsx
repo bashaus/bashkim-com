@@ -7,7 +7,7 @@ import LayoutCaseStudy from '%components/LayoutCaseStudy';
 import PartialCaptioned from '%components/PartialCaptioned';
 import PartialNewspaper from '%components/PartialNewspaper';
 import PartialSubtitle from '%components/PartialSubtitle';
-import PartialVideoPlayerYouTube from '%components/PartialVideoPlayerYouTube';
+import VideoPlayerYouTube from '%components/VideoPlayerYouTube';
 
 import { meetEater as caseStudy } from 'data/caseStudies';
 
@@ -237,7 +237,7 @@ export default function MeetEaterCaseStudy() {
       <section className="group-alternate">
         <PartialCaptioned
           figure={(
-            <PartialVideoPlayerYouTube
+            <VideoPlayerYouTube
               v="-fc3h9_HdSg"
               title="Meet Eater - Time-lapse video"
             />

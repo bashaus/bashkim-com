@@ -2,11 +2,11 @@ import React from 'react';
 
 import { storiesOf } from '@storybook/react';
 
-import PartialVideoPlayerYouTube from '.';
+import VideoPlayerYouTube from '.';
 
-storiesOf('Components: PartialVideoPlayerYouTube', module)
+storiesOf('Components: VideoPlayerYouTube', module)
   .add('default', () => (
     <div style={{ maxWidth: '800px' }}>
-      <PartialVideoPlayerYouTube v="a-q_dnOErQY" />
+      <VideoPlayerYouTube v="a-q_dnOErQY" />
     </div>
   ));

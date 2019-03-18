@@ -7,7 +7,7 @@ import LayoutCaseStudy from '%components/LayoutCaseStudy';
 import PartialCaptioned from '%components/PartialCaptioned';
 import PartialFulltext from '%components/PartialFulltext';
 import PartialSubtitle from '%components/PartialSubtitle';
-import PartialVideoPlayerYouTube from '%components/PartialVideoPlayerYouTube';
+import VideoPlayerYouTube from '%components/VideoPlayerYouTube';
 
 import { ludicLift as caseStudy } from 'data/caseStudies';
 
@@ -131,7 +131,7 @@ export default function LudicLiftCaseStudy() {
       <section className="group-alternate">
         <PartialCaptioned
           figure={(
-            <PartialVideoPlayerYouTube
+            <VideoPlayerYouTube
               v="w2eUf_Jraxg"
               title="Ludic Lift - Lift usage research"
             />

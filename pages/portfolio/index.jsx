@@ -11,7 +11,7 @@ import MenuBackButtonHomeImpl from '%components/MenuBackButtonHomeImpl';
 import PartialHeaderText from '%components/PartialHeaderText';
 import PartialSubtitle from '%components/PartialSubtitle';
 import PortfolioFeaturedCaseStudies from '%components/PortfolioFeaturedCaseStudies';
-import ViewPortfolio from '%components/ViewPortfolio';
+import PortfolioSearch from '%components/PortfolioSearch';
 
 export default function PortfolioPage({ featuredCaseStudies }) {
   return (
@@ -38,7 +38,7 @@ export default function PortfolioPage({ featuredCaseStudies }) {
           <h2>All case studies</h2>
         </PartialSubtitle>
 
-        <ViewPortfolio />
+        <PortfolioSearch />
       </section>
     </LayoutDefault>
   );

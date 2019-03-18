@@ -6,7 +6,7 @@ import CaseStudyTechnologies from '%components/CaseStudyTechnologies';
 import LayoutCaseStudy from '%components/LayoutCaseStudy';
 import PartialCaptioned from '%components/PartialCaptioned';
 import PartialSubtitle from '%components/PartialSubtitle';
-import PartialVideoPlayerYouTube from '%components/PartialVideoPlayerYouTube';
+import VideoPlayerYouTube from '%components/VideoPlayerYouTube';
 
 import { changeTheTune as caseStudy } from 'data/caseStudies';
 
@@ -94,7 +94,7 @@ export default function ChangeTheTuneCaseStudy() {
 
         <PartialCaptioned
           figure={(
-            <PartialVideoPlayerYouTube
+            <VideoPlayerYouTube
               v="uMy7m_QSpio"
               title="Change the Tune - Concept video"
             />

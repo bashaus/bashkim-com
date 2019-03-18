@@ -3,7 +3,7 @@
 @import "../../styleguide/utils/media";
 @import "../../styleguide/utils/grid";
 
-.ViewPortfolio.icon {
+.PortfolioSearch.icon {
   @include grid-container;
 
   > li {
@@ -20,7 +20,7 @@
   }
 }
 
-.ViewPortfolio.list {
+.PortfolioSearch.list {
   @include grid-full;
 }
 

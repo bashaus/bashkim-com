@@ -7,7 +7,7 @@ import CaseStudyTechnologies from '%components/CaseStudyTechnologies';
 import LayoutCaseStudy from '%components/LayoutCaseStudy';
 import PartialCaptioned from '%components/PartialCaptioned';
 import PartialSubtitle from '%components/PartialSubtitle';
-import PartialVideoPlayerYouTube from '%components/PartialVideoPlayerYouTube';
+import VideoPlayerYouTube from '%components/VideoPlayerYouTube';
 
 import { batterseaLookingForYou as caseStudy } from 'data/caseStudies';
 
@@ -121,7 +121,7 @@ export default function BatterseaLookingForYouCaseStudy() {
 
         <PartialCaptioned
           figure={(
-            <PartialVideoPlayerYouTube
+            <VideoPlayerYouTube
               v="2CEo8If6rmQ"
               title="Battersea Dogs &amp; Cats Home - Campaign video"
             />
@@ -136,7 +136,7 @@ export default function BatterseaLookingForYouCaseStudy() {
 
         <PartialCaptioned
           figure={(
-            <PartialVideoPlayerYouTube
+            <VideoPlayerYouTube
               v="a-q_dnOErQY"
               title="Battersea Dogs &amp; Cats Home - Making-of video"
             />

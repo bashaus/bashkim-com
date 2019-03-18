@@ -4,7 +4,7 @@ import querystring from 'querystring';
 
 import styles from './styles.scss';
 
-export default function PartialVideoPlayerYouTube(props) {
+export default function VideoPlayerYouTube(props) {
   const { v, title } = props;
 
   const iframeSrc = `https://www.youtube-nocookie.com/embed/${v}?${
@@ -23,7 +23,7 @@ export default function PartialVideoPlayerYouTube(props) {
   const videoHref = `https://www.youtube.com/watch?${querystring.stringify({ v })}`;
 
   return (
-    <div className={styles.PartialVideoPlayerYouTube}>
+    <div className={styles.VideoPlayerYouTube}>
       <iframe allowFullScreen src={iframeSrc} title={title}>
         <div>
           <p>
@@ -44,7 +44,7 @@ export default function PartialVideoPlayerYouTube(props) {
   );
 }
 
-PartialVideoPlayerYouTube.propTypes = {
+VideoPlayerYouTube.propTypes = {
   v: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
 };
