@@ -1,7 +1,7 @@
 @import "~breakpoint-sass";
-@import "../../styleguide/base/headings/styles";
-@import "../../styleguide/utils/media";
-@import "../../styleguide/utils/colours";
+@import "~%styleguide/base/headings/styles";
+@import "~%styleguide/utils/media";
+@import "~%styleguide/utils/colours";
 
 .CaseStudyRow {
   display: block;

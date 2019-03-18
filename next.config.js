@@ -1,5 +1,5 @@
 const withSass = require('@zeit/next-sass');
-const config = require('./config');
+const Config = require('./config');
 
 const nextConfig = {
   cssModules: true,
@@ -8,8 +8,9 @@ const nextConfig = {
     localIdentName: '[local]___[hash:base64:5]',
   },
 
-  publicRuntimeConfig: config.get(),
+  publicRuntimeConfig: Config.get(),
 
+  /* eslint-disable no-param-reassign */
   webpack: (config, { buildId, dev, isServer, defaultLoaders }) => {
     // Perform customizations to webpack config
     // Important: return the modified config

@@ -1,6 +1,6 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import querystring from 'querystring';
+import QueryString from 'querystring';
+import React from 'react';
 
 import styles from './styles.scss';
 
@@ -8,7 +8,7 @@ export default function VideoPlayerYouTube(props) {
   const { v, title } = props;
 
   const iframeSrc = `https://www.youtube-nocookie.com/embed/${v}?${
-    querystring.stringify({
+    QueryString.stringify({
       rel: '0',
       hd: '1',
       showinfo: '0',
@@ -20,11 +20,11 @@ export default function VideoPlayerYouTube(props) {
     })
   }`;
 
-  const videoHref = `https://www.youtube.com/watch?${querystring.stringify({ v })}`;
+  const videoHref = `https://www.youtube.com/watch?${QueryString.stringify({ v })}`;
 
   return (
     <div className={styles.VideoPlayerYouTube}>
-      <iframe allowFullScreen src={iframeSrc} title={title}>
+      <iframe allowFullScreen src={iframeSrc} title={title} frameBorder={0}>
         <div>
           <p>
             Your browser may not be able to play this video.

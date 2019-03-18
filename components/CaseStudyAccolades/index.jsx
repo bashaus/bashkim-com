@@ -31,7 +31,7 @@ export default function CaseStudyAccolades(props) {
 
             <ol className={styles.awards}>
               { accolade.awards.map(award => (
-                <li className={styles.award}>
+                <li className={styles.award} key={award.category.join(' ')}>
                   <a href={award.href} target="_blank" rel="noopener noreferrer">
                     <h3>{award.place}</h3>
                     <TrophyImage className={`${styles.trophy} ${styles[award.place]}`} />

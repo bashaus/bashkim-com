@@ -1,10 +1,10 @@
 @import "~breakpoint-sass";
-@import "../../styleguide/vendors/grid/";
-@import "../../styleguide/utils/clearfix";
-@import "../../styleguide/utils/media";
-@import "../../styleguide/utils/grid";
-@import "../../styleguide/utils/colours";
-@import "../../styleguide/utils/z-index";
+@import "~%styleguide/vendors/grid/_";
+@import "~%styleguide/utils/clearfix";
+@import "~%styleguide/utils/media";
+@import "~%styleguide/utils/grid";
+@import "~%styleguide/utils/colours";
+@import "~%styleguide/utils/z-index";
 
 .CookiesNotice {
   font-size: 16px;

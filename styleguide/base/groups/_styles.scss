@@ -1,5 +1,5 @@
 @import "~breakpoint-sass";
-@import "../../../styleguide/utils/media";
+@import "~%styleguide/utils/media";
 
 %group {
   @include breakpoint($media-mobile) {
