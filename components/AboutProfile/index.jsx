@@ -1,6 +1,6 @@
 import React from 'react';
 
-import PartialTitle from 'components/PartialTitle';
+import PartialTitle from '%components/PartialTitle';
 
 import styles from './styles.scss';
 

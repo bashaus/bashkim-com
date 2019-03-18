@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Octicon, { ArrowLeft } from '@githubprimer/octicons-react';
 
-import MenuBackButton from 'components/MenuBackButton';
+import MenuBackButton from '%components/MenuBackButton';
 
 export default (
   <MenuBackButton>

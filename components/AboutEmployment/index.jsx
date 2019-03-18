@@ -1,8 +1,8 @@
 import React from 'react';
 
-import PartialSplit from 'components/PartialSplit';
-import PartialSplitItem from 'components/PartialSplitItem';
-import PartialSubtitle from 'components/PartialSubtitle';
+import PartialSplit from '%components/PartialSplit';
+import PartialSplitItem from '%components/PartialSplitItem';
+import PartialSubtitle from '%components/PartialSubtitle';
 
 import styles from './styles.scss';
 

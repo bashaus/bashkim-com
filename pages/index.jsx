@@ -2,16 +2,16 @@ import Head from 'next/head';
 import Link from 'next/link';
 import React from 'react';
 
-import AboutProfile from 'components/AboutProfile';
-import IndexBrands from 'components/IndexBrands';
-import IndexFeaturedCaseStudies from 'components/IndexFeaturedCaseStudies';
-import IndexHello from 'components/IndexHello';
-import LayoutDefault from 'components/LayoutDefault';
-import MetaDescription from 'components/MetaDescription';
-import MetaKeywords from 'components/MetaKeywords';
-import MetaTitle from 'components/MetaTitle';
-import PartialCallToAction from 'components/PartialCallToAction';
-import PartialSubtitle from 'components/PartialSubtitle';
+import AboutProfile from '%components/AboutProfile';
+import IndexBrands from '%components/IndexBrands';
+import IndexFeaturedCaseStudies from '%components/IndexFeaturedCaseStudies';
+import IndexHello from '%components/IndexHello';
+import LayoutDefault from '%components/LayoutDefault';
+import MetaDescription from '%components/MetaDescription';
+import MetaKeywords from '%components/MetaKeywords';
+import MetaTitle from '%components/MetaTitle';
+import PartialCallToAction from '%components/PartialCallToAction';
+import PartialSubtitle from '%components/PartialSubtitle';
 
 import * as caseStudies from 'data/caseStudies';
 

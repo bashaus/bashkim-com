@@ -1,4 +1,4 @@
-import * as HeaderActions from 'store/actions/header';
+import * as HeaderActions from '%actions/header';
 
 const INIT_STATE = {
   isIntersecting: true,

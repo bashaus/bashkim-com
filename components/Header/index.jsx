@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { connect } from 'react-redux';
 
-import Logo from 'components/Logo';
-import Navigation from 'components/Navigation';
+import Logo from '%components/Logo';
+import Navigation from '%components/Navigation';
 
 import styles from './styles.scss';
 

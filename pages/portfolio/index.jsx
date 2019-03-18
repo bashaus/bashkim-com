@@ -1,17 +1,17 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import FeaturedCaseStudyPropType from 'propTypes/FeaturedCaseStudy';
+import FeaturedCaseStudyPropType from '%prop-types/FeaturedCaseStudy';
 
-import LayoutDefault from 'components/LayoutDefault';
-import MetaDescription from 'components/MetaDescription';
-import MetaKeywords from 'components/MetaKeywords';
-import MetaTitle from 'components/MetaTitle';
-import MenuBackButtonHomeImpl from 'components/MenuBackButtonHomeImpl';
-import PartialHeaderText from 'components/PartialHeaderText';
-import PartialSubtitle from 'components/PartialSubtitle';
-import PortfolioFeaturedCaseStudies from 'components/PortfolioFeaturedCaseStudies';
-import ViewPortfolio from 'components/ViewPortfolio';
+import LayoutDefault from '%components/LayoutDefault';
+import MetaDescription from '%components/MetaDescription';
+import MetaKeywords from '%components/MetaKeywords';
+import MetaTitle from '%components/MetaTitle';
+import MenuBackButtonHomeImpl from '%components/MenuBackButtonHomeImpl';
+import PartialHeaderText from '%components/PartialHeaderText';
+import PartialSubtitle from '%components/PartialSubtitle';
+import PortfolioFeaturedCaseStudies from '%components/PortfolioFeaturedCaseStudies';
+import ViewPortfolio from '%components/ViewPortfolio';
 
 export default function PortfolioPage({ featuredCaseStudies }) {
   return (

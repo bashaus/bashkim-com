@@ -1,20 +1,20 @@
 import React from 'react';
 
-import AboutProfile from 'components/AboutProfile';
-import AboutEmployment from 'components/AboutEmployment';
-import AboutTutoring from 'components/AboutTutoring';
-import AboutEducation from 'components/AboutEducation';
-import AboutCertifications from 'components/AboutCertifications';
-import LayoutDefault from 'components/LayoutDefault';
-import MenuHomeBackButtonImpl from 'components/MenuBackButtonHomeImpl';
-import MetaDescription from 'components/MetaDescription';
-import MetaKeywords from 'components/MetaKeywords';
-import MetaTitle from 'components/MetaTitle';
-import PartialCallToAction from 'components/PartialCallToAction';
-import PartialHeaderImage from 'components/PartialHeaderImage';
-import PartialSplit from 'components/PartialSplit';
-import PartialSplitItem from 'components/PartialSplitItem';
-import PartialSubtitle from 'components/PartialSubtitle';
+import AboutProfile from '%components/AboutProfile';
+import AboutEmployment from '%components/AboutEmployment';
+import AboutTutoring from '%components/AboutTutoring';
+import AboutEducation from '%components/AboutEducation';
+import AboutCertifications from '%components/AboutCertifications';
+import LayoutDefault from '%components/LayoutDefault';
+import MenuHomeBackButtonImpl from '%components/MenuBackButtonHomeImpl';
+import MetaDescription from '%components/MetaDescription';
+import MetaKeywords from '%components/MetaKeywords';
+import MetaTitle from '%components/MetaTitle';
+import PartialCallToAction from '%components/PartialCallToAction';
+import PartialHeaderImage from '%components/PartialHeaderImage';
+import PartialSplit from '%components/PartialSplit';
+import PartialSplitItem from '%components/PartialSplitItem';
+import PartialSubtitle from '%components/PartialSubtitle';
 
 import styles from './styles.scss';
 

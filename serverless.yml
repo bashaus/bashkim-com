@@ -51,7 +51,7 @@ package:
     - components/**
     - node_modules/.cache/**
     - pages/**
-    - propTypes/**
+    - prop-types/**
     - static/**
     - store/**
     - styleguide/**

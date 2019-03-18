@@ -1,4 +1,4 @@
-import * as RouterActions from 'store/actions/router';
+import * as RouterActions from '%actions/router';
 
 const INIT_STATE = {
 };

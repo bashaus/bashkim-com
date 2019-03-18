@@ -1,6 +1,6 @@
 import { takeEvery } from 'redux-saga/effects';
 import getConfig from 'next/config';
-import * as RouterActions from 'store/actions/router';
+import * as RouterActions from '%actions/router';
 
 const { publicRuntimeConfig } = getConfig();
 

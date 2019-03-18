@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "allowSyntheticDefaultImports": false,
+    "baseUrl": "./",
+    "paths": {
+      "%root/*": ["./*"],
+      "%actions/*": ["./store/actions/*"],
+      "%components/*": ["./components/*"],
+      "%config/*": ["./config/*"],
+      "%prop-types/*": ["./prop-types/*"],
+      "%reducers/*": ["./store/reducers/*"],
+      "%sagas/*": ["./store/sagas/*"],
+      "%static/*": ["./static/*"],
+      "%styleguide/*": ["./styleguide/*"]
+    }
+  },
+  "exclude": ["node_modules", "dist"]
+}

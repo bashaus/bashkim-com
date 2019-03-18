@@ -1,4 +1,4 @@
-import * as MenuActions from 'store/actions/menu';
+import * as MenuActions from '%actions/menu';
 
 const INIT_STATE = {
   isVisible: false,

@@ -1,12 +1,12 @@
 import React from 'react';
 
-import LayoutDefault from 'components/LayoutDefault';
-import MenuBackButtonHomeImpl from 'components/MenuBackButtonHomeImpl';
-import MetaDescription from 'components/MetaDescription';
-import MetaTitle from 'components/MetaTitle';
-import PartialHeaderText from 'components/PartialHeaderText';
-import PartialFulltext from 'components/PartialFulltext';
-import PartialSubtitle from 'components/PartialSubtitle';
+import LayoutDefault from '%components/LayoutDefault';
+import MenuBackButtonHomeImpl from '%components/MenuBackButtonHomeImpl';
+import MetaDescription from '%components/MetaDescription';
+import MetaTitle from '%components/MetaTitle';
+import PartialHeaderText from '%components/PartialHeaderText';
+import PartialFulltext from '%components/PartialFulltext';
+import PartialSubtitle from '%components/PartialSubtitle';
 
 import styles from './styles.scss';
 

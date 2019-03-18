@@ -1,6 +1,6 @@
 import React from 'react';
 
-import FooterColumn from 'components/FooterColumn';
+import FooterColumn from '%components/FooterColumn';
 
 import styles from './styles.scss';
 

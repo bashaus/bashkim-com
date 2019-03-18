@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import dayjs from 'dayjs';
 
-import CaseStudyAccoladePropType from 'propTypes/CaseStudyAccolade';
-import PartialSubtitle from 'components/PartialSubtitle';
+import CaseStudyAccoladePropType from '%prop-types/CaseStudyAccolade';
+import PartialSubtitle from '%components/PartialSubtitle';
 
 import TrophyImage from 'static/vectors/icons/trophy.svg';
 

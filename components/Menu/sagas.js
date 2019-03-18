@@ -1,6 +1,6 @@
 import { takeEvery, put } from 'redux-saga/effects';
-import * as MenuActions from 'store/actions/menu';
-import * as RouterActions from 'store/actions/router';
+import * as MenuActions from '%actions/menu';
+import * as RouterActions from '%actions/router';
 
 function* changeComplete() {
   yield put(MenuActions.hide());

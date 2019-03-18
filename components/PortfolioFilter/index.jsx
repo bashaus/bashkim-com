@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import ReactTags from 'react-tag-autocomplete';
 
-import ToggleButton from 'components/ToggleButton';
-import ToggleGroup from 'components/ToggleGroup';
+import ToggleButton from '%components/ToggleButton';
+import ToggleGroup from '%components/ToggleGroup';
 
 import allTags from 'data/portfolio/tags.json';
 

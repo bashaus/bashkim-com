@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import CaseStudyPropType from 'propTypes/CaseStudy';
+import CaseStudyPropType from '%prop-types/CaseStudy';
 
-import PartialTile from 'components/PartialTile';
+import PartialTile from '%components/PartialTile';
 
 import styles from './styles.scss';
 

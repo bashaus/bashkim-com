@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import PropTypes from 'prop-types';
 
-import * as CookiesActions from 'store/actions/cookies';
+import * as CookiesActions from '%actions/cookies';
 
 import styles from './styles.scss';
 

@@ -1,13 +1,13 @@
 import React from 'react';
 
-import CaseStudyCollaborators from 'components/CaseStudyCollaborators';
-import CaseStudyDetails from 'components/CaseStudyDetails';
-import CaseStudyTechnologies from 'components/CaseStudyTechnologies';
-import LayoutCaseStudy from 'components/LayoutCaseStudy';
-import PartialCaptioned from 'components/PartialCaptioned';
-import PartialFulltext from 'components/PartialFulltext';
-import PartialSubtitle from 'components/PartialSubtitle';
-import PartialVideoPlayerYouTube from 'components/PartialVideoPlayerYouTube';
+import CaseStudyCollaborators from '%components/CaseStudyCollaborators';
+import CaseStudyDetails from '%components/CaseStudyDetails';
+import CaseStudyTechnologies from '%components/CaseStudyTechnologies';
+import LayoutCaseStudy from '%components/LayoutCaseStudy';
+import PartialCaptioned from '%components/PartialCaptioned';
+import PartialFulltext from '%components/PartialFulltext';
+import PartialSubtitle from '%components/PartialSubtitle';
+import PartialVideoPlayerYouTube from '%components/PartialVideoPlayerYouTube';
 
 import { ludicLift as caseStudy } from 'data/caseStudies';
 

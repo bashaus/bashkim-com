@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import NavigationPrimary from 'components/NavigationPrimary';
-import NavigationSocial from 'components/NavigationSocial';
+import NavigationPrimary from '%components/NavigationPrimary';
+import NavigationSocial from '%components/NavigationSocial';
 
 import styles from './styles.scss';
 

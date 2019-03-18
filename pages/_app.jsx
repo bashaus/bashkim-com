@@ -6,9 +6,9 @@ import React from 'react';
 import * as Sentry from '@sentry/browser';
 import withReduxStore from 'store/next';
 
-import * as RouterActions from 'store/actions/router';
+import * as RouterActions from '%actions/router';
 
-import TrackingSentryBoundary from 'components/TrackingSentryBoundary';
+import TrackingSentryBoundary from '%components/TrackingSentryBoundary';
 
 const { publicRuntimeConfig } = getConfig();
 

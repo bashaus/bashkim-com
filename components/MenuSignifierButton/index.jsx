@@ -3,7 +3,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import * as MenuActions from 'store/actions/menu';
+import * as MenuActions from '%actions/menu';
 
 import styles from './styles.scss';
 

@@ -1,16 +1,16 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import CaseStudyPropType from 'propTypes/CaseStudy';
+import CaseStudyPropType from '%prop-types/CaseStudy';
 
-import LayoutDefault from 'components/LayoutDefault';
-import MenuBackButtonPortfolioImpl from 'components/MenuBackButtonPortfolioImpl';
-import MetaDescription from 'components/MetaDescription';
-import MetaImage from 'components/MetaImage';
-import MetaKeywords from 'components/MetaKeywords';
-import MetaTitle from 'components/MetaTitle';
-import PartialHeaderImage from 'components/PartialHeaderImage';
-import PartialTitle from 'components/PartialTitle';
+import LayoutDefault from '%components/LayoutDefault';
+import MenuBackButtonPortfolioImpl from '%components/MenuBackButtonPortfolioImpl';
+import MetaDescription from '%components/MetaDescription';
+import MetaImage from '%components/MetaImage';
+import MetaKeywords from '%components/MetaKeywords';
+import MetaTitle from '%components/MetaTitle';
+import PartialHeaderImage from '%components/PartialHeaderImage';
+import PartialTitle from '%components/PartialTitle';
 
 export default function LayoutCaseStudy(props) {
   const { caseStudy, children } = props;

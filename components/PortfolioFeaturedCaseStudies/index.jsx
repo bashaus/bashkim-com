@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import FeaturedCaseStudyPropType from 'propTypes/FeaturedCaseStudy';
+import FeaturedCaseStudyPropType from '%prop-types/FeaturedCaseStudy';
 
-import PartialTile from 'components/PartialTile';
+import PartialTile from '%components/PartialTile';
 
 import * as caseStudies from 'data/caseStudies';
 

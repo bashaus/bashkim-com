@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-import PartialHeaderText from 'components/PartialHeaderText';
+import PartialHeaderText from '%components/PartialHeaderText';
 
 import styles from './styles.scss';
 

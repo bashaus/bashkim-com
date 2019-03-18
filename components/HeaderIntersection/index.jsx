@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import PropTypes from 'prop-types';
 
-import * as HeaderActions from 'store/actions/header';
+import * as HeaderActions from '%actions/header';
 
 import styles from './styles.scss';
 

@@ -1,7 +1,7 @@
 import Document, { Head, Main, NextScript } from 'next/document';
 import React from 'react';
 
-import TrackingGoogleAnalytics from 'components/TrackingGoogleAnalytics';
+import TrackingGoogleAnalytics from '%components/TrackingGoogleAnalytics';
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {

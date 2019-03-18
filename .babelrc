@@ -4,8 +4,21 @@
   ],
   "plugins": [
     "inline-react-svg",
-    ["module-resolver", {
-      "root": "."
-    }]
+    [
+      "module-resolver", {
+        "root": ["./"],
+        "alias": {
+          "%root": "./",
+          "%actions": "./store/actions",
+          "%components": "./components",
+          "%config": "./config",
+          "%prop-types": "./prop-types",
+          "%reducers": "./store/reducers",
+          "%sagas": "./store/sagas",
+          "%static": "./static",
+          "%styleguide": "./styleguide"
+        }
+      }
+    ]
   ]
 }

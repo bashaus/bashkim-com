@@ -3,8 +3,8 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import createSagaMiddleware from 'redux-saga';
 import thunkMiddleware from 'redux-thunk';
 
-import sagas from './sagas';
-import reducers from './reducers';
+import sagas from '%sagas';
+import reducers from '%reducers';
 
 const INIT_STATE = {};
 const sagaMiddleware = createSagaMiddleware();

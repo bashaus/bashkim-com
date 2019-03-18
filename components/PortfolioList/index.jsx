@@ -2,7 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 import dayjs from 'dayjs';
 
-import CaseStudyPropType from 'propTypes/CaseStudy';
+import CaseStudyPropType from '%prop-types/CaseStudy';
 
 import technologies from 'data/portfolio/technologies.json';
 

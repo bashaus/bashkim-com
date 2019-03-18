@@ -1,7 +1,7 @@
 import React from 'react';
-import CaseStudyPropType from 'propTypes/CaseStudy';
+import CaseStudyPropType from '%prop-types/CaseStudy';
 
-import PartialBrick from 'components/PartialBrick';
+import PartialBrick from '%components/PartialBrick';
 
 export default function PortfolioBrick(props) {
   const { caseStudy } = props;

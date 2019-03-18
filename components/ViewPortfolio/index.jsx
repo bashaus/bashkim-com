@@ -1,8 +1,8 @@
 import React from 'react';
 
-import CaseStudyBrick from 'components/CaseStudyBrick';
-import PortfolioFilter from 'components/PortfolioFilter';
-import PortfolioList from 'components/PortfolioList';
+import CaseStudyBrick from '%components/CaseStudyBrick';
+import PortfolioFilter from '%components/PortfolioFilter';
+import PortfolioList from '%components/PortfolioList';
 
 import * as caseStudies from 'data/caseStudies';
 

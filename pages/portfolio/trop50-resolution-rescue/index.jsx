@@ -1,10 +1,10 @@
 import React from 'react';
 
-import CaseStudyCollaborators from 'components/CaseStudyCollaborators';
-import CaseStudyDetails from 'components/CaseStudyDetails';
-import CaseStudyTechnologies from 'components/CaseStudyTechnologies';
-import LayoutCaseStudy from 'components/LayoutCaseStudy';
-import PartialSubtitle from 'components/PartialSubtitle';
+import CaseStudyCollaborators from '%components/CaseStudyCollaborators';
+import CaseStudyDetails from '%components/CaseStudyDetails';
+import CaseStudyTechnologies from '%components/CaseStudyTechnologies';
+import LayoutCaseStudy from '%components/LayoutCaseStudy';
+import PartialSubtitle from '%components/PartialSubtitle';
 
 import { trop50ResolutionRescue as caseStudy } from 'data/caseStudies';
 

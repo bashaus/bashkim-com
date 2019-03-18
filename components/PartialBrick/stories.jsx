@@ -3,7 +3,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 
 import caseStudy from 'data/caseStudies/commodore.json';
-import CaseStudyBrick from 'components/CaseStudyBrick';
+import CaseStudyBrick from '%components/CaseStudyBrick';
 import PartialBrick from '.';
 
 storiesOf('Components: PartialBrick', module)

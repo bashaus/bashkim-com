@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import Logo from 'components/Logo';
-import MenuSignifierButton from 'components/MenuSignifierButton';
+import Logo from '%components/Logo';
+import MenuSignifierButton from '%components/MenuSignifierButton';
 
 import styles from './styles.scss';
 

@@ -2,13 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import 'styleguide/main.scss';
+import '%styleguide/main.scss';
 
-import CookiesNotice from 'components/CookiesNotice';
-import Footer from 'components/Footer';
-import Header from 'components/Header';
-import HeaderIntersection from 'components/HeaderIntersection';
-import Menu from 'components/Menu';
+import CookiesNotice from '%components/CookiesNotice';
+import Footer from '%components/Footer';
+import Header from '%components/Header';
+import HeaderIntersection from '%components/HeaderIntersection';
+import Menu from '%components/Menu';
 
 import styles from './styles.scss';
 

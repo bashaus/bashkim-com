@@ -1,7 +1,7 @@
 import React from 'react';
 
-import LayoutDefault from 'components/LayoutDefault';
-import MenuBackButtonHomeImpl from 'components/MenuBackButtonHomeImpl';
+import LayoutDefault from '%components/LayoutDefault';
+import MenuBackButtonHomeImpl from '%components/MenuBackButtonHomeImpl';
 
 export default function BlogPage() {
   return (

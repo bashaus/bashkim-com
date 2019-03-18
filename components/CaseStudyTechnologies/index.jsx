@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import PartialSubtitle from 'components/PartialSubtitle';
+import PartialSubtitle from '%components/PartialSubtitle';
 
 import availableTechnologies from 'data/portfolio/technologies.json';
 

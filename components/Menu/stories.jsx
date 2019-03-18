@@ -3,7 +3,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 
 import Menu from '.';
-import MenuBackButtonHomeImpl from 'components/MenuBackButtonHomeImpl';
+import MenuBackButtonHomeImpl from '%components/MenuBackButtonHomeImpl';
 
 storiesOf('Components: Menu', module)
   .add('default', () => (

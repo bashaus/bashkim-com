@@ -1,4 +1,4 @@
-import * as CookiesActions from 'store/actions/cookies';
+import * as CookiesActions from '%actions/cookies';
 
 const INIT_STATE = {
   isDismissed: false,
