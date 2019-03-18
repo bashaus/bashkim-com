@@ -1,7 +1,7 @@
 const path = require('path');
 const xmlbuilder = require('xmlbuilder');
 
-const config = require('../../../config');
+const Config = require('../../../config');
 
 function Sitemap() {
   return async (req, res, next) => {
@@ -20,7 +20,7 @@ function Sitemap() {
     }, { encoding: 'UTF-8' });
 
     const { indexSlug } = req.params;
-    const indexes = config.get('sitemap.indexes');
+    const indexes = Config.get('sitemap.indexes');
 
     // If this page is not in the valid list of sitemaps
     if (!indexes[indexSlug]) {

@@ -1,5 +1,5 @@
 const xmlbuilder = require('xmlbuilder');
-const config = require('../../../config');
+const Config = require('../../../config');
 
 function SitemapIndex() {
   return (req, res, next) => {
@@ -14,11 +14,11 @@ function SitemapIndex() {
       },
     }, { encoding: 'UTF-8' });
 
-    Object.entries(config.get('sitemap.indexes')).forEach(
+    Object.entries(Config.get('sitemap.indexes')).forEach(
       ([key, value]) => {
         doc.ele({
           sitemap: {
-            loc: `${config.get('sitemap.baseHref')}/sitemap/${key}`,
+            loc: `${Config.get('sitemap.baseHref')}/sitemap/${key}`,
           },
         });
       },

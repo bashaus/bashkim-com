@@ -1,17 +1,17 @@
 const express = require('express');
-const config = require('../../config');
+const Config = require('../../config');
 
 const server = express();
 
 // 301 Moved Permanently
-config.get('seo.301').forEach((entry) => {
+Config.get('seo.301').forEach((entry) => {
   server.get(entry.src, (req, res, next) => {
     res.redirect(301, entry.dest);
   });
 });
 
 // 410 Gone
-config.get('seo.410').forEach((entry) => {
+Config.get('seo.410').forEach((entry) => {
   server.get(entry.src, (req, res, next) => {
     res.sendStatus(410);
   });

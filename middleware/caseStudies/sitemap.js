@@ -1,12 +1,12 @@
 const dayjs = require('dayjs');
 const caseStudies = require('../../data/caseStudies');
-const config = require('../../config');
+const Config = require('../../config');
 
 module.exports = async function CaseStudiesSitemap() {
   const urlset = [
     {
       url: {
-        loc: `${config.get('sitemap.baseHref')}/portfolio`,
+        loc: `${Config.get('sitemap.baseHref')}/portfolio`,
         lastmod: dayjs().format(),
         changefreq: 'monthly',
         priority: '0.5',
@@ -17,7 +17,7 @@ module.exports = async function CaseStudiesSitemap() {
   Object.entries(caseStudies).forEach(([caseStudySlug, caseStudy]) => {
     urlset.push({
       url: {
-        loc: `${config.get('sitemap.baseHref')}/portfolio/${caseStudy.slug}`,
+        loc: `${Config.get('sitemap.baseHref')}/portfolio/${caseStudy.slug}`,
         lastmod: dayjs().format(),
         changefreq: 'monthly',
         priority: '0.5',

@@ -3,24 +3,24 @@ const express = require('express');
 const next = require('next');
 const nextRoutes = require('next-routes');
 
-const config = require('./config');
+const Config = require('./config');
 const SeoRouter = require('./middleware/seo/router');
 const SitemapRouter = require('./middleware/sitemaps/router');
 
 require('./middleware/pages/router');
 require('./middleware/caseStudies/router');
 
-const sentryIsEnabled = config.get('sentry.enabled');
+const sentryIsEnabled = Config.get('sentry.enabled');
 if (sentryIsEnabled) {
   Sentry.init({
-    dsn: config.get('sentry.dsn'),
-    environment: config.get('sentry.environment'),
-    release: `${config.get('sentry.project')}@${config.get('sentry.commit')}`,
+    dsn: Config.get('sentry.dsn'),
+    environment: Config.get('sentry.environment'),
+    release: `${Config.get('sentry.project')}@${Config.get('sentry.commit')}`,
   });
 }
 
-const port = config.get('server.port');
-const dev = config.get('next.dev');
+const port = Config.get('server.port');
+const dev = Config.get('next.dev');
 const app = next({ dev });
 
 const createServer = () => {
@@ -35,7 +35,7 @@ const createServer = () => {
 
 const server = createServer();
 
-if (config.get('server.lambda')) {
+if (Config.get('server.lambda')) {
   console.log('Application started in lambda mode');
 } else {
   console.log('Application started in server mode');

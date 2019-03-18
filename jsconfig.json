@@ -7,7 +7,6 @@
       "%root/*": ["./*"],
       "%actions/*": ["./store/actions/*"],
       "%components/*": ["./components/*"],
-      "%config/*": ["./config/*"],
       "%prop-types/*": ["./prop-types/*"],
       "%reducers/*": ["./store/reducers/*"],
       "%sagas/*": ["./store/sagas/*"],

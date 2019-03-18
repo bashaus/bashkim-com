@@ -12,4 +12,4 @@ This is the codebase for the website available from [bashkim.com](https://wwww.b
 
 This website uses [storybook](https://storybook.js.org/) to manage a style guide and development the visual components of the application.
 
-* [View the style guide](http://styleguide.bashkim.com/)
+* [View the style guide](https://styleguide.bashkim.com/)
