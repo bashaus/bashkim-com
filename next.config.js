@@ -1,4 +1,5 @@
 const withSass = require('@zeit/next-sass');
+const path = require('path');
 const Config = require('./config');
 
 const nextConfig = {
@@ -13,10 +14,9 @@ const nextConfig = {
   /* eslint-disable no-param-reassign */
   webpack: (config, { buildId, dev, isServer, defaultLoaders }) => {
     // Perform customizations to webpack config
+    config.resolve.alias['%styleguide'] = path.resolve(__dirname, 'styleguide');
+    
     // Important: return the modified config
-
-    config.resolve.alias['%styleguide'] = `${__dirname}/styleguide`;
-
     return config;
   },
 

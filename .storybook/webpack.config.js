@@ -1,4 +1,11 @@
+const path = require('path');
+
 module.exports = {
+  resolve: {
+    alias: {
+      '%styleguide': path.resolve(__dirname, '..', 'styleguide')
+    }
+  },
   module: {
     rules: [
       {
