@@ -4,7 +4,7 @@ const next = require('next');
 const nextRoutes = require('next-routes');
 
 const config = require('./config');
-const RedirectsRouter = require('./middleware/redirects/router');
+const SeoRouter = require('./middleware/seo/router');
 const SitemapRouter = require('./middleware/sitemaps/router');
 
 require('./middleware/pages/router');
@@ -26,7 +26,7 @@ const app = next({ dev });
 const createServer = () => {
   const server = express();
   server.use(Sentry.Handlers.requestHandler());
-  server.use(RedirectsRouter);
+  server.use(SeoRouter);
   server.use(SitemapRouter);
   server.use(nextRoutes().getRequestHandler(app));
   server.use(Sentry.Handlers.errorHandler());

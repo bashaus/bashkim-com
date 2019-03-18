@@ -1,14 +1,19 @@
-const querystring = require('querystring');
 const express = require('express');
-
 const config = require('../../config');
 
 const server = express();
-const redirects = config.get('redirects.301');
 
-Object.entries(redirects).forEach(([src, dest]) => {
-  server.get(src, (req, res, next) => {
-    res.redirect(301, dest);
+// 301 Moved Permanently
+config.get('seo.301').forEach((entry) => {
+  server.get(entry.src, (req, res, next) => {
+    res.redirect(301, entry.dest);
+  });
+});
+
+// 410 Gone
+config.get('seo.410').forEach((entry) => {
+  server.get(entry.src, (req, res, next) => {
+    res.sendStatus(410);
   });
 });
 

@@ -10,13 +10,16 @@ const nextConfig = {
 
   publicRuntimeConfig: config.get(),
 
-  /*
   webpack: (config, { buildId, dev, isServer, defaultLoaders }) => {
     // Perform customizations to webpack config
     // Important: return the modified config
+
+    config.resolve.alias['%styleguide'] = `${__dirname}/styleguide`;
+
     return config;
   },
 
+  /*
   webpackDevMiddleware: (config) => {
     // Perform customizations to webpack dev middleware config
     // Important: return the modified config
