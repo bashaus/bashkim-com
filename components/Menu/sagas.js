@@ -6,7 +6,7 @@ function* changeComplete() {
   yield put(MenuActions.hide());
 }
 
-export default function* TrackingGoogleAnalyticsSagas() {
+export default function* MenuSagas() {
   if (process.browser) {
     yield takeEvery(
       RouterActions.CHANGE_COMPLETE,
