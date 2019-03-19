@@ -1,8 +1,6 @@
 @import "~breakpoint-sass";
-@import "~%styleguide/vendors/grid/_";
-@import "~%styleguide/utils/media";
 @import "~%styleguide/utils/grid";
-@import "~%styleguide/utils/colours";
+@import "~%styleguide/utils/media";
 @import "~%styleguide/utils/wysiwyg";
 
 .PartialCaptioned {
@@ -37,9 +35,8 @@
     );
   }
 
-  .figure > img,
-  .figure > %ratio {
-    box-shadow: 0 0 5px 0 rgba(200, 200, 200, 0.75);
+  .figure > * {
+    // box-shadow: 0 0 5px 0 rgba(200, 200, 200, 0.75);
     margin: 0 auto;
   }
 

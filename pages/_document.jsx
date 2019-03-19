@@ -12,9 +12,6 @@ export default class MyDocument extends Document {
   render() {
     return (
       <html lang="en" className="no-js" dir="ltr">
-        {/* import "assets/content/helpers/siteHelper.html.njk" as siteHelper */}
-        {/* set mime = require('mime') */}
-        {/* set octicons = require('octicons') */}
         <Head>
           <meta key="MyDocument.charSet" charSet="utf-8" />
           <meta key="MyDocument.viewport" name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
@@ -26,9 +23,6 @@ export default class MyDocument extends Document {
           <meta key="MyDocument.twitter.creator" name="twitter:creator" content="@bashaus" />
 
           { /*
-            <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-            <meta name="apple-mobile-web-app-capable" content="yes" />
-            <meta name="format-detection" content="telephone=no" />
             <link rel="apple-touch-icon" href="/static/images/favicons/touch-icon-iphone.png" />
             <link rel="apple-touch-icon" sizes="76x76" href="/static/images/favicons/touch-icon-ipad.png" />
             <link rel="apple-touch-icon" sizes="120x120" href="/static/images/favicons/touch-icon-iphone-retina.png" />
@@ -44,17 +38,11 @@ export default class MyDocument extends Document {
 
           { /* These are now on a per-page basis
 
-            <link rel="canonical" href={ siteHelper.href(canonical if canonical else destinationPath) } />
+            <link rel="canonical" href={ canonical if canonical else destinationPath } />
             <meta property="og:type" content={ appConfig.meta.type } />
-            <meta property="og:url" content={ siteHelper.href(destinationPath) } />
-            <meta name="twitter:url" content={ siteHelper.href(destinationPath) } />
-
-            if previous
-              <link rel="prev" href="{{ siteHelper.href(previous.destinationPath) }}">
-
-            if next
-              <link rel="next" href="{{ siteHelper.href(next.destinationPath) }}">
-          */}
+            <meta property="og:url" content={ destinationPath } />
+            <meta name="twitter:url" content={ destinationPath } />
+          */ }
         </Head>
         <body>
           <div className="peep--site">

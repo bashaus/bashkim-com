@@ -1,0 +1,32 @@
+@import "~breakpoint-sass";
+@import "~%styleguide/utils/colors";
+@import "~%styleguide/utils/media";
+
+.CallToAction {
+  a {
+    border: solid 2px;
+    transition: all 0.3s;
+    display: inline-block;
+    line-height: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: $color-charcol;
+    text-decoration: none;
+  }
+
+  a:hover {
+    border-color: $color-charcol;
+    background-color: $color-charcol;
+    color: $color-white;
+  }
+
+  @include breakpoint($media-mobile) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  @include breakpoint($media-not-mobile) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}

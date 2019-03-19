@@ -1,8 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import CaseStudyPropType from '%prop-types/CaseStudy';
-
 import LayoutDefault from '%components/LayoutDefault';
 import MenuBackButtonPortfolioImpl from '%components/MenuBackButtonPortfolioImpl';
 import MetaDescription from '%components/MetaDescription';
@@ -11,6 +9,8 @@ import MetaKeywords from '%components/MetaKeywords';
 import MetaTitle from '%components/MetaTitle';
 import PartialHeaderImage from '%components/PartialHeaderImage';
 import PartialTitle from '%components/PartialTitle';
+
+import CaseStudyContentPropType from '%prismic/content-types/case_study/prop-type';
 
 export default function LayoutCaseStudy(props) {
   const { caseStudy, children } = props;
@@ -42,6 +42,6 @@ export default function LayoutCaseStudy(props) {
 }
 
 LayoutCaseStudy.propTypes = {
-  caseStudy: CaseStudyPropType.isRequired,
+  caseStudy: CaseStudyContentPropType.isRequired,
   children: PropTypes.node.isRequired,
 };

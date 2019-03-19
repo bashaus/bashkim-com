@@ -1,0 +1,16 @@
+{
+  "type": "Slice",
+  "fieldset": "Grid of Embeds",
+  "description": "A grid of embedded items displayed inline",
+  "icon": "apps",
+  "display": "grid",
+  "non-repeat": {},
+  "repeat": {
+    "GridEmbedSliceType_Embed": {
+      "type": "Embed",
+      "config": {
+        "label": "Embedded item"
+      }
+    }
+  }
+}

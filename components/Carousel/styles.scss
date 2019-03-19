@@ -1,0 +1,13 @@
+@import "./styles.arrows";
+@import "./styles.dots";
+
+.Carousel {
+  width: 100%;
+  margin: 0 auto;
+
+  /* position relative and z-index fix webkit rendering fonts issue */
+  position: relative;
+  z-index: 1;
+
+  -webkit-tap-highlight-color: transparent;
+}

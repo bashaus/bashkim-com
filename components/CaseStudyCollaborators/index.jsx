@@ -3,10 +3,12 @@ import React from 'react';
 
 import PartialSubtitle from '%components/PartialSubtitle';
 
+import CollaboratorSliceType from '%prismic/slice-types/Collaborator/component';
+
 import styles from './styles.scss';
 
 export default function CaseStudyCollaborators(props) {
-  const { children } = props;
+  const { slices, peers, myRole } = props;
 
   return (
     <>
@@ -15,12 +17,35 @@ export default function CaseStudyCollaborators(props) {
       </PartialSubtitle>
 
       <ul className={styles.CaseStudyCollaborators}>
-        {children}
+        <li>
+          <strong>
+            <a href="https://www.bashkim.com" target="_blank" rel="noopener noreferrer">
+              Bashkim Isai
+            </a>
+          </strong>
+          <br />
+          { myRole }
+        </li>
+
+        { slices.map((slice, i) => {
+          const { id: peerId } = slice.primary.CollaboratorSliceType_Peer;
+          const peer = peers.find((p) => p.id === peerId);
+
+          return (
+            <CollaboratorSliceType
+              key={i}
+              peer={peer}
+              slice={slice}
+            />
+          );
+        }) }
       </ul>
     </>
   );
 }
 
 CaseStudyCollaborators.propTypes = {
-  children: PropTypes.node.isRequired,
+  myRole: PropTypes.string.isRequired,
+  peers: PropTypes.arrayOf(PropTypes.object).isRequired,
+  slices: PropTypes.arrayOf(PropTypes.object).isRequired,
 };

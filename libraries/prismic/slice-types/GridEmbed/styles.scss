@@ -1,0 +1,19 @@
+@import "~%styleguide/utils/grid";
+@import "~%styleguide/utils/wysiwyg";
+
+.GridEmbedSliceType {
+  @include grid-container;
+}
+
+.item {
+  @include grid-cell(
+    $columns: (
+      mobile-portrait: 12,
+      mobile-landscape: 6,
+      tablet-portrait: 6,
+      tablet-landscape: 4,
+      desktop-narrow: 4,
+      desktop-wide: 4,
+    )
+  );
+}

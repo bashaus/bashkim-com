@@ -1,30 +1,34 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 import ReactTags from 'react-tag-autocomplete';
 
-import allTags from 'data/portfolio/tags.json';
 import ToggleButton from '%components/ToggleButton';
 import ToggleGroup from '%components/ToggleGroup';
 
+import { PortfolioListContext } from '%contexts/PortfolioList';
+import * as PortfolioActions from '%contexts/PortfolioList/actions';
 
 import styles from './styles.scss';
 
-const TAG_PHYSICAL_COMPUTING = 'physical-computing';
-const TAG_WEB_DEVELOPMENT = 'web-development';
+const TAGS = {
+  PHYSICAL_COMPUTING: {
+    id: {
+      type: 'tag',
+      value: 'physical computing',
+    },
+    name: 'Physical computing',
+  },
+  WEB_DEVELOPMENT: {
+    id: {
+      type: 'tag',
+      value: 'web development',
+    },
+    name: 'Web development',
+  },
+};
 
-export default class PortfolioFilter extends React.PureComponent {
+class PortfolioFilter extends React.PureComponent {
   constructor(...args) {
     super(...args);
-
-    this.state = {
-      display: 'icon',
-      sort: 'launched',
-      tags: [],
-      suggestions: Object.entries(allTags).map(([id, tag]) => ({
-        id,
-        name: tag.name,
-      })),
-    };
 
     this.handleDelete = this.handleDelete.bind(this);
     this.handleAddition = this.handleAddition.bind(this);
@@ -34,53 +38,60 @@ export default class PortfolioFilter extends React.PureComponent {
     this.handleWebDevelopmentClick = this.handleWebDevelopmentClick.bind(this);
   }
 
-  componentDidUpdate() {
-    const { onChange } = this.props;
-    onChange(this.state);
-  }
-
-  setTag(tag) {
-    this.setState({
-      tags: [{ id: tag, name: allTags[tag].name }],
+  setTags(tags) {
+    const { dispatch } = this.context;
+    dispatch({
+      type: PortfolioActions.SET_FILTERS,
+      payload: { filters: tags },
     });
   }
 
   handleDelete(i) {
-    const { tags } = this.state;
-    const tagsCopy = tags.slice(0);
-    tagsCopy.splice(i, 1);
-    this.setState({ tags: tagsCopy });
+    const { state } = this.context;
+    const { filters } = state;
+    const filtersCopy = filters.slice(0);
+    filtersCopy.splice(i, 1);
+    this.setTags(filtersCopy);
   }
 
   handleAddition(tag) {
-    const { tags } = this.state;
-    this.setState({ tags: [].concat(tags, tag) });
+    const { state } = this.context;
+    const { filters } = state;
+    this.setTags([].concat(filters, tag));
   }
 
   handleDisplayChange(e) {
-    this.setState({ display: e.currentTarget.value });
+    const { dispatch } = this.context;
+    dispatch({
+      type: PortfolioActions.SET_DISPLAY,
+      payload: { display: e.currentTarget.value },
+    });
   }
 
   handleSortChange(e) {
-    this.setState({ sort: e.currentTarget.value });
+    const { dispatch } = this.context;
+    dispatch({
+      type: PortfolioActions.SET_SORT,
+      payload: { sort: e.currentTarget.value },
+    });
   }
 
   handlePhysicalComputingClick() {
-    this.setTag(TAG_PHYSICAL_COMPUTING);
+    this.setTags([TAGS.PHYSICAL_COMPUTING]);
   }
 
   handleWebDevelopmentClick() {
-    this.setTag(TAG_WEB_DEVELOPMENT);
+    this.setTags([TAGS.WEB_DEVELOPMENT]);
   }
 
   render() {
+    const { state } = this.context;
     const {
-      display, sort, suggestions, tags,
-    } = this.state;
+      display, sort, filters, technologies,
+    } = state;
 
     let placeholder = '';
-
-    if (tags.length === 0) {
+    if (filters.length === 0) {
       placeholder = 'Filter by keyword or technology (e.g.: PHP)';
     }
 
@@ -88,26 +99,26 @@ export default class PortfolioFilter extends React.PureComponent {
       <div className={styles.PortfolioFilter}>
         <div className={styles.tags}>
           <ReactTags
-            tags={tags}
-            suggestions={suggestions}
+            tags={filters}
+            suggestions={technologies}
             placeholder={placeholder}
             handleDelete={this.handleDelete}
             handleAddition={this.handleAddition}
           />
 
-          {tags.length === 0 && (
+          { filters.length === 0 && (
             <p className={styles.inlineSuggestions}>
               <span>Stuck for ideas? Check out </span>
               <button type="button" onClick={this.handlePhysicalComputingClick}>
-                {allTags[TAG_PHYSICAL_COMPUTING].name}
+                { TAGS.PHYSICAL_COMPUTING.name }
               </button>
               <span> or </span>
               <button type="button" onClick={this.handleWebDevelopmentClick}>
-                {allTags[TAG_WEB_DEVELOPMENT].name}
+                { TAGS.WEB_DEVELOPMENT.name }
               </button>
               .
             </p>
-          )}
+          ) }
         </div>
 
         <div className={styles.display}>
@@ -166,10 +177,6 @@ export default class PortfolioFilter extends React.PureComponent {
   }
 }
 
-PortfolioFilter.propTypes = {
-  onChange: PropTypes.func,
-};
+PortfolioFilter.contextType = PortfolioListContext;
 
-PortfolioFilter.defaultProps = {
-  onChange: () => {},
-};
+export default PortfolioFilter;

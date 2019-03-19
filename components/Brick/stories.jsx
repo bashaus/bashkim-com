@@ -1,12 +1,14 @@
 import React from 'react';
+import { withKnobs, files, text } from '@storybook/addon-knobs';
 
 import { storiesOf } from '@storybook/react';
 
-import caseStudy from 'data/caseStudies/commodore.json';
-import CaseStudyBrick from '%components/CaseStudyBrick';
 import Brick from '.';
 
-storiesOf('Components: Brick', module)
+const stories = storiesOf('Components: Brick', module)
+stories.addDecorator(withKnobs);
+
+stories
   .add('default', () => (
     <Brick
       title="Brick title"
@@ -16,6 +18,15 @@ storiesOf('Components: Brick', module)
     />
   ))
 
-  .add('case study', () => (
-    <CaseStudyBrick caseStudy={caseStudy} />
-  ));
+  .add('dynamic', () => {
+    const icon = files('Icon', '', []);
+
+    return (
+      <Brick
+        title={text('Title', 'Brick title')}
+        description={text('Description', 'Brick description')}
+        href="#"
+        icon={icon[0]}
+      />
+    );
+  });

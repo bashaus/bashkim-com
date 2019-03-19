@@ -1,0 +1,25 @@
+{
+  "slice_type": "CaptionedImageSliceType",
+  "slice_label": null,
+  "items": [{}],
+  "primary": {
+    "CaptionedImageSliceType_Caption": [{
+      "type": "heading3",
+      "text": "Campaign website",
+      "spans": []
+    }, {
+      "type": "paragraph",
+      "text": "Barley walks on screen and greets visitors by telling his story. The content encourages visitors to find out more information about the charity and provides a call to action to adopt or donate.",
+      "spans": []
+    }],
+    "CaptionedImageSliceType_Image": {
+      "dimensions": {
+        "width": 1024,
+        "height": 650
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://bashkim-com.cdn.prismic.io/bashkim-com/b480aa24ff19daebb2c4c574f06a0b063b14d19a_1024.png"
+    }
+  }
+}

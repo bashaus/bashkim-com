@@ -1,0 +1,25 @@
+{
+  "type": "Slice",
+  "fieldset": "Carousel of Images",
+  "description": "Display images in a carousel",
+  "icon": "view_carousel",
+  "display": "grid",
+  "non-repeat": {},
+  "repeat": {
+    "CarouselImagesSliceType_Image": {
+      "type": "Image",
+      "config": {
+        "constraint": {},
+        "thumbnails": [],
+        "label": "Image"
+      }
+    },
+    "CarouselImagesSliceType_Caption": {
+      "type": "StructuredText",
+      "config": {
+        "multi": "paragraph, preformatted, heading3, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+        "label": "Caption"
+      }
+    }
+  }
+}

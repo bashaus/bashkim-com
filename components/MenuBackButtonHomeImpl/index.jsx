@@ -4,7 +4,6 @@ import React from 'react';
 
 import MenuBackButton from '%components/MenuBackButton';
 
-
 export default (
   <MenuBackButton>
     <Link href="/">

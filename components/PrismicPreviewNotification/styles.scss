@@ -1,0 +1,68 @@
+@import "~%styleguide/utils/grid";
+@import "~%styleguide/utils/z-index";
+
+.PrismicPreviewNotification {
+  position: relative;
+  background-color: #1DE9B6;
+  background-image: linear-gradient(-180deg, #11ddaa 0%, #1DE9B6 24%, #1DE9B6 100%);
+  color: #FFFFFF;
+  font-weight: bold;
+
+  .wrapper {
+    @include grid-container;
+  }
+
+  .message {
+    @include grid-cell(
+      $columns: (
+        mobile-portrait: 12,
+        mobile-landscape: 12,
+        tablet-portrait: 9,
+        tablet-landscape: 9,
+        desktop-narrow: 9,
+        desktop-wide: 9,
+      ),
+      $padding: (left right)
+    );
+
+    z-index: z-index('PrismicPreviewNotification');
+  }
+
+  .leaveAction {
+    @include grid-cell(
+      $columns: (
+        mobile-portrait: 12,
+        mobile-landscape: 12,
+        tablet-portrait: 3,
+        tablet-landscape: 3,
+        desktop-narrow: 3,
+        desktop-wide: 3,
+      ),
+      $padding: (left right)
+    );
+
+    z-index: z-index('PrismicPreviewNotification');
+
+    @include breakpoint($media-not-mobile) {
+      text-align: right;
+    }
+  }
+
+  button {
+    text-decoration: underline;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    clip-path: polygon(100% 100%, 100% 0%, 0 100%);
+    z-index: z-index('PrismicPreviewNotificationShade');
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #1DE9B6;
+    background-image: linear-gradient(180deg, #18D7A7 0%, #1DE9B6 100%);
+  }
+}

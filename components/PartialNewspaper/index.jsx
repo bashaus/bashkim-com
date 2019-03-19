@@ -7,9 +7,9 @@ export default function PartialNewspaper(props) {
   const { children } = props;
 
   return (
-    <ol className={styles.PartialNewspaper}>
+    <div className={styles.PartialNewspaper}>
       { children }
-    </ol>
+    </div>
   );
 }
 

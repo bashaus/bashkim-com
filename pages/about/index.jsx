@@ -10,17 +10,16 @@ import MenuHomeBackButtonImpl from '%components/MenuBackButtonHomeImpl';
 import MetaDescription from '%components/MetaDescription';
 import MetaKeywords from '%components/MetaKeywords';
 import MetaTitle from '%components/MetaTitle';
-import PartialCallToAction from '%components/PartialCallToAction';
+import CallToAction from '%components/CallToAction';
 import PartialHeaderImage from '%components/PartialHeaderImage';
 import PartialSplit from '%components/PartialSplit';
-import PartialSplitItem from '%components/PartialSplitItem';
 import PartialSubtitle from '%components/PartialSubtitle';
 
 import styles from './styles.scss';
 
 export default function AboutPage() {
   return (
-    <LayoutDefault theme="about" backButton={MenuHomeBackButtonImpl}>
+    <LayoutDefault backButton={MenuHomeBackButtonImpl} theme="about">
       <MetaTitle content="About" />
       <MetaDescription content="Information on the work history of Bashkim Isai" />
       <MetaKeywords content="bashkim isai, creative technologist, london" />
@@ -38,31 +37,35 @@ export default function AboutPage() {
         </PartialSubtitle>
 
         <PartialSplit>
-          <PartialSplitItem>
-            <PartialCallToAction>
+          <PartialSplit.Item>
+            <div>
               <p>Looking for recommendations from industry professionals?</p>
-              <a
-                href="https://www.linkedin.com/in/bashaus/"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                Visit my LinkedIn profile
-              </a>
-            </PartialCallToAction>
-          </PartialSplitItem>
+              <CallToAction>
+                <a
+                  href="https://www.linkedin.com/in/bashaus/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  Visit my LinkedIn profile
+                </a>
+              </CallToAction>
+            </div>
+          </PartialSplit.Item>
 
-          <PartialSplitItem>
-            <PartialCallToAction>
+          <PartialSplit.Item>
+            <div>
               <p>Looking to see some examples of code?</p>
-              <a
-                href="https://github.com/bashaus?tab=repositories"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                Visit my GitHub profile
-              </a>
-            </PartialCallToAction>
-          </PartialSplitItem>
+              <CallToAction>
+                <a
+                  href="https://github.com/bashaus?tab=repositories"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  Visit my GitHub profile
+                </a>
+              </CallToAction>
+            </div>
+          </PartialSplit.Item>
         </PartialSplit>
       </section>
     </LayoutDefault>

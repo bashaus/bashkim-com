@@ -1,20 +1,23 @@
-@import "~breakpoint-sass";
-@import "~%styleguide/vendors/grid/_";
-@import "~%styleguide/utils/media";
 @import "~%styleguide/utils/grid";
 @import "~%styleguide/utils/wysiwyg";
 
 .DeviceSmartphone {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
   .wrapper {
     position: relative;
+    background-image: url('/static/vectors/devices/smartphone.svg');
     background-repeat: no-repeat;
     background-size: cover;
     margin-left: auto;
     margin-right: auto;
 
-    width: 315px;
-    height: 641.2499999955px;
-    background-image: url('/static/vectors/devices/smartphone.svg');
+    // 315 x 641.2499999955
+    width: 100%;
+    padding-bottom: 203.57142857%;
   }
 
   .content {

@@ -1,8 +1,8 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import AnimateHeight from 'react-animate-height';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import PropTypes from 'prop-types';
 
 import * as CookiesActions from '%actions/cookies';
 

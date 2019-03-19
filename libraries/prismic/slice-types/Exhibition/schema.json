@@ -1,0 +1,42 @@
+{
+  "type": "Slice",
+  "fieldset": "Exhibition",
+  "description": "A presentation or exhibition of work",
+  "icon": "photo",
+  "display": "list",
+  "non-repeat": {
+    "ExhibitionSliceType_Name": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading3",
+        "label": "Name"
+      }
+    },
+    "ExhibitionSliceType_Link": {
+      "type": "Link",
+      "config": {
+        "label": "Link"
+      }
+    },
+    "ExhibitionSliceType_OpeningDate": {
+      "type": "Date",
+      "config": {
+        "label": "Opening date"
+      }
+    },
+    "ExhibitionSliceType_ClosingDate": {
+      "type": "Date",
+      "config": {
+        "label": "Closing date"
+      }
+    },
+    "ExhibitionSliceType_Location": {
+      "type": "StructuredText",
+      "config": {
+        "multi": "paragraph",
+        "label": "Location"
+      }
+    }
+  },
+  "repeat": {}
+}

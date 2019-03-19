@@ -1,0 +1,26 @@
+{
+  "type": "Slice",
+  "fieldset": "Screenshots",
+  "description": "Display responsive web designs",
+  "icon": "phonelink",
+  "display": "grid",
+  "non-repeat": {
+    "CaptionedScreenshotsSliceType_Caption": {
+      "type": "StructuredText",
+      "config": {
+        "multi": "paragraph, preformatted, heading3, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+        "label": "Caption"
+      }
+    }
+  },
+  "repeat": {
+    "CaptionedScreenshotsSliceType_Images": {
+      "type": "Image",
+      "config": {
+        "constraint": {},
+        "thumbnails": [],
+        "label": "Image"
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "slice_type": "SubtitleSliceType",
+  "slice_label": null,
+  "items": [{}],
+  "primary": {
+    "SubtitleSliceType_Heading": [
+      {
+        "type": "heading2",
+        "text": "Lorem Ipsum",
+        "spans": []
+      }
+    ],
+    "SubtitleSliceType_Description": [
+      {
+        "type": "paragraph",
+        "text": "Dolor sit amet, consectetur adipiscing elit. Suspendisse.",
+        "spans": []
+      }
+    ]
+  }
+}

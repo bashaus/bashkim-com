@@ -5,7 +5,7 @@ import { action } from '@storybook/addon-actions';
 
 import PortfolioFilter from '.';
 
-storiesOf('Components: PortfolioFilter', module)
+storiesOf('Page, Portfolio: Filter', module)
   .add('default', () => (
     <PortfolioFilter onChange={action('onChange')} />
   ));

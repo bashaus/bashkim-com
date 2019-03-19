@@ -1,13 +1,31 @@
 @import "~%styleguide/base/headings/styles";
+@import "~%styleguide/utils/colors";
+@import "~%styleguide/utils/grid";
 
 %wysiwyg {
-  > * ~ * {
-    @include breakpoint($media-mobile) {
-      margin-top: 10px;
+  * ~ * {
+    @include breakpoint($media-mobile-portrait) {
+      margin-top: grid-gutter($breakpoint: mobile-portrait) / 2;
     }
 
-    @include breakpoint($media-not-mobile) {
-      margin-top: 12px;
+    @include breakpoint($media-mobile-landscape) {
+      margin-top: grid-gutter($breakpoint: mobile-landscape) / 2;
+    }
+
+    @include breakpoint($media-tablet-portrait) {
+      margin-top: grid-gutter($breakpoint: tablet-portrait) / 2;
+    }
+
+    @include breakpoint($media-tablet-landscape) {
+      margin-top: grid-gutter($breakpoint: tablet-landscape) / 2;
+    }
+
+    @include breakpoint($media-desktop-narrow) {
+      margin-top: grid-gutter($breakpoint: desktop-narrow) / 2;
+    }
+
+    @include breakpoint($media-desktop-wide) {
+      margin-top: grid-gutter($breakpoint: desktop-wide) / 2;
     }
   }
 
@@ -50,15 +68,8 @@
     font-weight: bold;
   }
 
-  @include breakpoint($media-mobile) {
-    h3 {
-      margin-bottom: 5px;
-    }
-  }
-
-  @include breakpoint($media-not-mobile) {
-    h3 {
-      margin-bottom: 10px;
-    }
+  a {
+    color: $color-charcol;
+    text-decoration: underline;
   }
 }

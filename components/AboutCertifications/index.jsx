@@ -1,7 +1,6 @@
 import React from 'react';
 
 import PartialSplit from '%components/PartialSplit';
-import PartialSplitItem from '%components/PartialSplitItem';
 import PartialSubtitle from '%components/PartialSubtitle';
 
 import styles from './styles.scss';
@@ -14,7 +13,7 @@ export default function AboutProfile() {
       </PartialSubtitle>
 
       <PartialSplit index={1}>
-        <PartialSplitItem>
+        <PartialSplit.Item>
           <div>
             <h3>Java 8</h3>
             <p>
@@ -29,18 +28,18 @@ export default function AboutProfile() {
               />
             </p>
           </div>
-        </PartialSplitItem>
-        <PartialSplitItem backgroundImage="/static/images/about/certifications/java/background.jpg">
+        </PartialSplit.Item>
+        <PartialSplit.Item backgroundImage="/static/images/about/certifications/java/background.jpg">
           <img
             alt="Duke - The Java Mascot"
             src="/static/images/about/certifications/java/logo.jpg"
             className={styles.logo}
           />
-        </PartialSplitItem>
+        </PartialSplit.Item>
       </PartialSplit>
 
       <PartialSplit index={2}>
-        <PartialSplitItem>
+        <PartialSplit.Item>
           <div>
             <h3>PHP 5.3</h3>
             <p>
@@ -61,15 +60,15 @@ export default function AboutProfile() {
               </a>
             </p>
           </div>
-        </PartialSplitItem>
+        </PartialSplit.Item>
 
-        <PartialSplitItem backgroundImage="/static/images/about/certifications/php/background.jpg">
+        <PartialSplit.Item backgroundImage="/static/images/about/certifications/php/background.jpg">
           <img
             alt="ElePHPant"
             className={styles.logo}
             src="/static/images/about/certifications/php/logo.png"
           />
-        </PartialSplitItem>
+        </PartialSplit.Item>
       </PartialSplit>
     </section>
   );

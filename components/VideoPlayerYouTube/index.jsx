@@ -20,26 +20,9 @@ export default function VideoPlayerYouTube(props) {
     })
   }`;
 
-  const videoHref = `https://www.youtube.com/watch?${QueryString.stringify({ v })}`;
-
   return (
     <div className={styles.VideoPlayerYouTube}>
-      <iframe allowFullScreen src={iframeSrc} title={title} frameBorder={0}>
-        <div>
-          <p>
-            Your browser may not be able to play this video.
-          </p>
-
-          <p>
-            <a href={videoHref} target="_blank" rel="noopener noreferrer">
-              Watch &quot;
-              {title}
-              &quot; on YouTube
-            </a>
-            .
-          </p>
-        </div>
-      </iframe>
+      <iframe allowFullScreen src={iframeSrc} title={title} frameBorder={0} />
     </div>
   );
 }

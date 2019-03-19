@@ -1,0 +1,21 @@
+{
+  "slice_type": "CollaboratorSliceType",
+  "slice_label": null,
+  "items": [{}],
+  "primary": {
+    "CollaboratorSliceType_Peer": {
+      "id": "XJz6nBMAAFBWC15B",
+      "type": "peer",
+      "tags": [],
+      "slug": "emma-de-la-fosse",
+      "lang": "en-gb",
+      "data": {
+        "peer_name": "Emma de la Fosse"
+      },
+      "link_type": "Document",
+      "isBroken": false
+    },
+    "CollaboratorSliceType_Company": null,
+    "CollaboratorSliceType_Role": "Executive Creative Director"
+  }
+}

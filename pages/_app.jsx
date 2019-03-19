@@ -1,4 +1,4 @@
-import App, { Container } from 'next/app';
+import App from 'next/app';
 import Router from 'next/router';
 import getConfig from 'next/config';
 import { Provider } from 'react-redux';
@@ -6,6 +6,7 @@ import React from 'react';
 import * as Sentry from '@sentry/browser';
 import withReduxStore from 'store/next';
 
+import * as PrismicActions from '%prismic/store/actions';
 import * as RouterActions from '%actions/router';
 
 import TrackingSentryBoundary from '%components/TrackingSentryBoundary';
@@ -24,6 +25,8 @@ if (sentryIsEnabled) {
 class MyApp extends App {
   componentDidMount() {
     const { reduxStore } = this.props;
+
+    // Router actions
     Router.events.on('routeChangeStart', (url) => {
       RouterActions.changeStart({ url })(reduxStore.dispatch);
     });
@@ -35,17 +38,18 @@ class MyApp extends App {
     Router.events.on('routeChangeError', (err, url) => {
       RouterActions.changeStart({ err, url })(reduxStore.dispatch);
     });
+
+    // Prismic actions
+    PrismicActions.previewDetect()(reduxStore.dispatch);
   }
 
   render() {
     const { Component, pageProps, reduxStore } = this.props;
     return (
       <TrackingSentryBoundary>
-        <Container>
-          <Provider store={reduxStore}>
-            <Component {...pageProps} />
-          </Provider>
-        </Container>
+        <Provider store={reduxStore}>
+          <Component {...pageProps} />
+        </Provider>
       </TrackingSentryBoundary>
     );
   }

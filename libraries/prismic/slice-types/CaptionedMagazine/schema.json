@@ -1,0 +1,26 @@
+{
+  "type": "Slice",
+  "fieldset": "Magazine",
+  "description": "Displays images in a magazine format",
+  "icon": "local_library",
+  "display": "grid",
+  "non-repeat": {
+    "CaptionedMagazineSliceType_Caption": {
+      "type": "StructuredText",
+      "config": {
+        "multi": "paragraph, heading3, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+        "label": "Caption"
+      }
+    }
+  },
+  "repeat": {
+    "CaptionedMagazineSliceType_Images": {
+      "type": "Image",
+      "config": {
+        "constraint": {},
+        "thumbnails": [],
+        "label": "Image"
+      }
+    }
+  }
+}

@@ -1,0 +1,103 @@
+$arrow-left: "←";
+$arrow-right: "→";
+
+.Carousel {
+  :global {
+    /* Arrow generic */
+    %arrow {
+      font-size: 0;
+      line-height: 0;
+
+      position: absolute;
+      top: 50%;
+
+      display: block;
+
+      width: 20px;
+      height: 20px;
+      padding: 0;
+      -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+      transform: translate(0, -50%);
+
+      cursor: pointer;
+
+      color: transparent;
+      border: none;
+      outline: none;
+      background: transparent;
+    }
+
+    %arrow:hover,
+    %arrow:focus {
+      color: transparent;
+      outline: none;
+      background: transparent;
+    }
+
+    %arrow:hover::before,
+    %arrow:focus::before {
+      opacity: 1;
+    }
+
+    %arrow.slick-disabled::before {
+      opacity: .25;
+    }
+
+    %arrow::before {
+      font-size: 20px;
+      line-height: 1;
+
+      opacity: .75;
+      color: black;
+
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Implementation */
+
+    .slick-prev,
+    .slick-next {
+      @extend %arrow;
+    }
+
+    /* Previous button */
+
+    .slick-prev {
+      left: -25px;
+    }
+
+    [dir="rtl"] & .slick-prev {
+      right: -25px;
+      left: auto;
+    }
+
+    .slick-prev::before {
+      content: $arrow-left;
+    }
+
+    [dir="rtl"] & .slick-prev::before {
+      content: $arrow-right;
+    }
+
+    /* Next button */
+
+    .slick-next {
+      right: -25px;
+    }
+
+    [dir="rtl"] .slick-next {
+      right: auto;
+      left: -25px;
+    }
+
+    .slick-next::before {
+      content: $arrow-right;
+    }
+
+    [dir="rtl"] .slick-next::before {
+      content: $arrow-left;
+    }
+  }
+}

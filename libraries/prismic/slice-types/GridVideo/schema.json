@@ -1,0 +1,31 @@
+{
+  "type": "Slice",
+  "fieldset": "Grid of Videos",
+  "description": "A grid of videos which can be viewed in a lightbox",
+  "icon": "apps",
+  "display": "grid",
+  "non-repeat": {},
+  "repeat": {
+    "GridVideoSliceType_Poster": {
+      "type": "Image",
+      "config": {
+        "constraint": {},
+        "thumbnails": [],
+        "label": "Poster"
+      }
+    },
+    "GridVideoSliceType_Description": {
+      "type": "StructuredText",
+      "config": {
+        "single": "paragraph",
+        "label": "Description"
+      }
+    },
+    "GridVideoSliceType_Video": {
+      "type": "Embed",
+      "config": {
+        "label": "Video"
+      }
+    }
+  }
+}

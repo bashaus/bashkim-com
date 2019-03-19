@@ -1,0 +1,37 @@
+@import "~breakpoint-sass";
+@import "~%styleguide/utils/colors";
+@import "~%styleguide/utils/grid";
+@import "~%styleguide/utils/media";
+
+.HomeHello_Links {
+  display: flex;
+  flex-direction: row;
+
+  li {
+    flex: 1 0 50%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  a .icon {
+    transition: transform 0.3s;
+  }
+
+  a:hover .icon {
+    transform: scale(1.1);
+  }
+
+  .icon {
+    display: block;
+    margin: 12px auto;
+    fill: #FFF;
+    width: 75px;
+    height: 75px;
+  }
+
+  @include breakpoint($media-screen-small) {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}

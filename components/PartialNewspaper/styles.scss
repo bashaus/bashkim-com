@@ -1,7 +1,6 @@
 @import "~breakpoint-sass";
-@import "~%styleguide/vendors/grid/_";
-@import "~%styleguide/utils/media";
 @import "~%styleguide/utils/grid";
+@import "~%styleguide/utils/media";
 @import "~%styleguide/utils/wysiwyg";
 
 .PartialNewspaper {
@@ -29,7 +28,7 @@
     column-count: 4;
   }
 
-  > li {
+  > div {
     @extend %wysiwyg;
     @include grid-cell-padding;
 

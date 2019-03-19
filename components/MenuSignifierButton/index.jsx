@@ -46,7 +46,11 @@ MenuSignifierButtonDisconnected.propTypes = {
   menuIsVisible: PropTypes.bool.isRequired,
 
   /* mapDispatchToProps */
-  doMenuToggle: PropTypes.func.isRequired,
+  doMenuToggle: PropTypes.func,
+};
+
+MenuSignifierButtonDisconnected.defaultProps = {
+  doMenuToggle: () => {},
 };
 
 function mapStateToProps(state) {

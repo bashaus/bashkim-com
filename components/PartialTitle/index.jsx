@@ -1,5 +1,5 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 
 import styles from './styles.scss';
 
@@ -10,9 +10,9 @@ export default function PartialTitle(props) {
     <header className={styles.PartialTitle}>
       <h1 itemProp="name headline">{title}</h1>
       <div itemProp="description">{children}</div>
-      {image && (
+      { image && (
         <img src={image} alt="" />
-      )}
+      ) }
     </header>
   );
 }

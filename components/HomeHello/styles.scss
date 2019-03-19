@@ -1,0 +1,23 @@
+@import "~%styleguide/utils/colors";
+@import "~%styleguide/utils/grid";
+@import "~%styleguide/utils/media";
+
+@import "./styles.introduction";
+@import "./styles.links";
+
+.HomeHello {
+  .background {
+    animation-duration: 20s;
+    animation-name: HomeHello--Background;
+    animation-iteration-count: infinite;
+    background: linear-gradient(230deg, #A24BCF, #4B79CF, #4BC5CF);
+    background-size: 300% 300%;
+    color: $color-white;
+  }
+}
+
+@keyframes HomeHello--Background {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}

@@ -1,5 +1,5 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import { connect } from 'react-redux';
 
 import '%styleguide/main.scss';
@@ -9,6 +9,7 @@ import Footer from '%components/Footer';
 import Header from '%components/Header';
 import HeaderIntersection from '%components/HeaderIntersection';
 import Menu from '%components/Menu';
+import PrismicPreviewNotification from '%components/PrismicPreviewNotification';
 
 import styles from './styles.scss';
 
@@ -30,6 +31,7 @@ export function LayoutDefaultDisconnected(props) {
 
   return (
     <>
+      <PrismicPreviewNotification />
       <HeaderIntersection />
       <CookiesNotice />
       <Header theme={theme} />

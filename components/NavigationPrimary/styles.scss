@@ -1,8 +1,6 @@
 @import "~breakpoint-sass";
-@import "~%styleguide/vendors/grid/_";
+@import "~%styleguide/utils/colors";
 @import "~%styleguide/utils/media";
-@import "~%styleguide/utils/grid";
-@import "~%styleguide/utils/colours";
 
 .NavigationPrimary {
   a {

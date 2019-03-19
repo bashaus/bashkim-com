@@ -1,23 +1,23 @@
 @import "~breakpoint-sass";
-@import "~%styleguide/vendors/grid/_";
-@import "~%styleguide/utils/media";
-@import "~%styleguide/utils/grid";
-@import "~%styleguide/utils/colours";
 @import "~%styleguide/utils/chevron";
+@import "~%styleguide/utils/colors";
+@import "~%styleguide/utils/grid";
+@import "~%styleguide/utils/media";
 
 .PartialHeaderText {
   @include chevron-down;
 
   position: relative;
 
+  h1 {
+    font-weight: bold;
+  }
+
   .foreground {
     @include grid-container($padding: (left right));
     color: $color-white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
     width: 100%;
+    align-items: center;
   }
 
   .content {
@@ -36,6 +36,20 @@
     position: relative;
   }
 
+  .aside {
+    @include grid-cell(
+      $columns: (
+        mobile-portrait: 12,
+        mobile-landscape: 12,
+        tablet-portrait: 12,
+        tablet-landscape: 5,
+        desktop-narrow: 4,
+        desktop-wide: 4,
+      ),
+      $padding: (left right)
+    );
+  }
+
   .background {
     background-color: $color-charcol;
     position: absolute;
@@ -47,32 +61,7 @@
     background-repeat: no-repeat;
   }
 
-  h1 {
-    font-weight: bold;
-  }
-
-  a {
-    font-weight: bold;
-    display: inline-block;
-    margin-top: 4px;
-    margin-bottom: 4px;
-    border: solid $color-white;
-    padding: 4px 12px;
-    color: $color-white;
-    transition: all 0.3s;
-  }
-
-  a:hover {
-    background-color: $color-white;
-    color: $color-charcol;
-  }
-
   @include breakpoint($media-mobile) {
-    .foreground {
-      padding-top: 180px;
-      padding-bottom: 35px;
-    }
-
     h1 {
       font-size: 12vw;
       line-height: 12vw;
@@ -84,9 +73,9 @@
       margin-top: 10px;
     }
 
-    a {
-      border-width: 1px;
-      line-height: 24px;
+    .foreground {
+      padding-top: 180px;
+      padding-bottom: 35px;
     }
 
     .background {
@@ -97,11 +86,6 @@
 
   @include breakpoint($media-not-mobile) {
     padding-top: 61px;
-
-    .foreground {
-      padding-top: 80px;
-      padding-bottom: 40px;
-    }
 
     h1 {
       font-size: 80px;
@@ -115,9 +99,9 @@
       margin-top: 20px;
     }
 
-    a {
-      border-width: 3px;
-      line-height: 24px;
+    .foreground {
+      padding-top: 80px;
+      padding-bottom: 40px;
     }
 
     .background {

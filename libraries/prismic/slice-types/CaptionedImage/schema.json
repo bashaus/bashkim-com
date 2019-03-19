@@ -1,0 +1,25 @@
+{
+  "type": "Slice",
+  "fieldset": "Captioned Image",
+  "description": "An image with a description or caption",
+  "icon": "image",
+  "display": "list",
+  "non-repeat": {
+    "CaptionedImageSliceType_Caption": {
+      "type": "StructuredText",
+      "config": {
+        "multi": "paragraph, preformatted, heading3, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+        "label": "Caption"
+      }
+    },
+    "CaptionedImageSliceType_Image": {
+      "type": "Image",
+      "config": {
+        "constraint": {},
+        "thumbnails": [],
+        "label": "Image"
+      }
+    }
+  },
+  "repeat": {}
+}

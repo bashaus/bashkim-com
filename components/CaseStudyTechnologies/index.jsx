@@ -1,37 +1,41 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 
-import availableTechnologies from 'data/portfolio/technologies.json';
-import PartialSubtitle from '%components/PartialSubtitle';
-
+import CaseStudyContentPropType from '%prismic/content-types/case_study/prop-type';
 
 import styles from './styles.scss';
 
 export default function CaseStudyTechnologies(props) {
-  const { technologies } = props;
+  const { caseStudy } = props;
 
   return (
-    <>
-      <PartialSubtitle>
-        <h2>Key Technologies</h2>
-      </PartialSubtitle>
+    <div className={styles.CaseStudyTechnologies}>
+      <div className={styles.header}>
+        <h3>Key technologies</h3>
+      </div>
 
-      <ul className={styles.CaseStudyTechnologies}>
-        {technologies.map((technology) => {
-          const currentTechnology = availableTechnologies[technology];
+      <ul>
+        {caseStudy.data.info_technologies.map((technology) => {
+          const {
+            info_technology: {
+              data: {
+                technology_name: name,
+                technology_icon: icon,
+              },
+            },
+          } = technology;
 
           return (
-            <li key={technology}>
-              <img src={currentTechnology.icon} alt="" />
-              {currentTechnology.name}
+            <li key={name}>
+              <img src={icon.url} alt="" className={styles.icon} />
+              <span className={styles.name}>{name}</span>
             </li>
           );
         }) }
       </ul>
-    </>
+    </div>
   );
 }
 
 CaseStudyTechnologies.propTypes = {
-  technologies: PropTypes.arrayOf(PropTypes.string).isRequired,
+  caseStudy: CaseStudyContentPropType.isRequired,
 };

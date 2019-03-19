@@ -1,0 +1,36 @@
+{
+  "type": "Slice",
+  "fieldset": "Carousel of Phones",
+  "description": "Display mobile screens in a carousel",
+  "icon": "phone_android",
+  "display": "grid",
+  "non-repeat": {},
+  "repeat": {
+    "CarouselPhonesSliceType_DeviceType": {
+      "type": "Select",
+      "config": {
+        "options": [
+          "FEATURE_PHONE",
+          "SMARTPHONE"
+        ],
+        "default_value": "SMARTPHONE",
+        "label": "Device Type"
+      }
+    },
+    "CarouselPhonesSliceType_Image": {
+      "type": "Image",
+      "config": {
+        "constraint": {},
+        "thumbnails": [],
+        "label": "Image"
+      }
+    },
+    "CarouselPhonesSliceType_Caption": {
+      "type": "StructuredText",
+      "config": {
+        "multi": "paragraph, preformatted, heading3, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+        "label": "Caption"
+      }
+    }
+  }
+}

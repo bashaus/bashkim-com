@@ -1,0 +1,25 @@
+{
+  "type": "Slice",
+  "fieldset": "Subtitle",
+  "description": "A subtitle to separate content across the site",
+  "icon": "title",
+  "display": "list",
+  "non-repeat": {
+    "SubtitleSliceType_Heading": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading2",
+        "label": "Heading",
+        "placeholder": "Heading text"
+      }
+    },
+    "SubtitleSliceType_Description": {
+      "type": "StructuredText",
+      "config": {
+        "single": "paragraph",
+        "label": "Description",
+        "placeholder": "A description or synopsis of the section"
+      }
+    }
+  }
+}

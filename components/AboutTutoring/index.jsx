@@ -1,7 +1,6 @@
 import React from 'react';
 
 import PartialSplit from '%components/PartialSplit';
-import PartialSplitItem from '%components/PartialSplitItem';
 import PartialSubtitle from '%components/PartialSubtitle';
 
 import styles from './styles.scss';
@@ -14,7 +13,7 @@ export default function AboutProfile() {
       </PartialSubtitle>
 
       <PartialSplit index={0}>
-        <PartialSplitItem>
+        <PartialSplit.Item>
           <div>
             <h3>Queensland&nbsp;University of Technology</h3>
             <p>Brisbane, Australia</p>
@@ -48,9 +47,9 @@ export default function AboutProfile() {
               Tertiary Preparation
             </p>
           </div>
-        </PartialSplitItem>
+        </PartialSplit.Item>
 
-        <PartialSplitItem backgroundImage="/static/images/about/education/qut/kelvin-grove.jpg">
+        <PartialSplit.Item backgroundImage="/static/images/about/education/qut/kelvin-grove.jpg">
           <div>
             <img
               alt=""
@@ -58,7 +57,7 @@ export default function AboutProfile() {
               className={styles.logo}
             />
           </div>
-        </PartialSplitItem>
+        </PartialSplit.Item>
       </PartialSplit>
     </section>
   );

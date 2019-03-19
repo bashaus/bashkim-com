@@ -3,6 +3,8 @@ const path = require('path');
 module.exports = {
   resolve: {
     alias: {
+      '%store': path.resolve(__dirname, '..', 'store'),
+      '%contexts': path.resolve(__dirname, '..', 'contexts'),
       '%styleguide': path.resolve(__dirname, '..', 'styleguide')
     }
   },
@@ -21,6 +23,13 @@ module.exports = {
             },
           },
           require.resolve('sass-loader')
+        ],
+      },
+      {
+        test: /\.css$/,
+        loaders: [
+          require.resolve('style-loader'),
+          require.resolve('css-loader'),
         ],
       },
     ],

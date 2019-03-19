@@ -1,0 +1,17 @@
+import React from 'react';
+
+import { storiesOf } from '@storybook/react';
+
+import Magazine from '.';
+
+storiesOf('Components: Magazine', module)
+  .add('default', () => (
+    <div style={{ width: 700 }}>
+      <Magazine pageWidth={300} pageHeight={450}>
+        <li><img src="https://placehold.it/300x450" /></li>
+        <li><img src="https://placehold.it/300x450" /></li>
+        <li><img src="https://placehold.it/300x450" /></li>
+        <li><img src="https://placehold.it/300x450" /></li>
+      </Magazine>
+    </div>
+  ));

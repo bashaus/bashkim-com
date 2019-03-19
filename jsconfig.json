@@ -4,13 +4,16 @@
     "allowSyntheticDefaultImports": false,
     "baseUrl": "./",
     "paths": {
-      "%root/*": ["./*"],
       "%actions/*": ["./store/actions/*"],
       "%components/*": ["./components/*"],
-      "%prop-types/*": ["./prop-types/*"],
+      "%contexts/*": ["./contexts/*"],
+      "%libraries/*": ["./libraries/*"],
+      "%prismic/*": ["./libraries/prismic/*"],
+      "%public/*": ["./public/*"],
       "%reducers/*": ["./store/reducers/*"],
       "%sagas/*": ["./store/sagas/*"],
-      "%static/*": ["./static/*"],
+      "%store/*": ["./store/*"],
+      "%storybook/*": ["./.storybook/*"],
       "%styleguide/*": ["./styleguide/*"]
     }
   },

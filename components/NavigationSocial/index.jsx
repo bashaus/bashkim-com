@@ -1,9 +1,9 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 
-import LogoGitHub from 'static/vectors/social/github.svg';
-import LogoLinkedIn from 'static/vectors/social/linkedin.svg';
-import LogoStackOverflow from 'static/vectors/social/stackoverflow.svg';
+import LogoGitHub from '%public/static/vectors/social/github.svg';
+import LogoLinkedIn from '%public/static/vectors/social/linkedin.svg';
+import LogoStackOverflow from '%public/static/vectors/social/stackoverflow.svg';
 
 import styles from './styles.scss';
 

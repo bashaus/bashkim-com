@@ -1,7 +1,6 @@
 import React from 'react';
 
 import PartialSplit from '%components/PartialSplit';
-import PartialSplitItem from '%components/PartialSplitItem';
 import PartialSubtitle from '%components/PartialSubtitle';
 
 import styles from './styles.scss';
@@ -14,7 +13,7 @@ export default function AboutProfile() {
       </PartialSubtitle>
 
       <PartialSplit index={1}>
-        <PartialSplitItem>
+        <PartialSplit.Item>
           <div>
             <h3>Postgraduate</h3>
             <p>University of Queensland</p>
@@ -27,9 +26,9 @@ export default function AboutProfile() {
               Interaction&nbsp;Design
             </p>
           </div>
-        </PartialSplitItem>
+        </PartialSplit.Item>
 
-        <PartialSplitItem backgroundImage="/static/images/about/education/uq/background.jpg">
+        <PartialSplit.Item backgroundImage="/static/images/about/education/uq/background.jpg">
           <div>
             <img
               alt=""
@@ -37,11 +36,11 @@ export default function AboutProfile() {
               className={styles.logo}
             />
           </div>
-        </PartialSplitItem>
+        </PartialSplit.Item>
       </PartialSplit>
 
       <PartialSplit index={2}>
-        <PartialSplitItem>
+        <PartialSplit.Item>
           <div>
             <h3>Undergraduate</h3>
             <p>Queensland University of Technology</p>
@@ -81,9 +80,9 @@ export default function AboutProfile() {
               Communication&nbsp;Design
             </p>
           </div>
-        </PartialSplitItem>
+        </PartialSplit.Item>
 
-        <PartialSplitItem backgroundImage="/static/images/about/education/qut/gardens-point.jpg">
+        <PartialSplit.Item backgroundImage="/static/images/about/education/qut/gardens-point.jpg">
           <div>
             <img
               alt=""
@@ -91,7 +90,7 @@ export default function AboutProfile() {
               className={styles.logo}
             />
           </div>
-        </PartialSplitItem>
+        </PartialSplit.Item>
       </PartialSplit>
     </section>
   );

@@ -1,7 +1,7 @@
 import Head from 'next/head';
+import mime from 'mime';
 import PropTypes from 'prop-types';
 import React from 'react';
-import mime from 'mime';
 
 export default function MetaImage(props) {
   const { image } = props;

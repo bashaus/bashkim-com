@@ -1,18 +1,14 @@
-const nextRoutes = require('next-routes');
-const caseStudies = require('../../data/caseStudies');
+const router = require('../router');
 
-const routes = nextRoutes()
+router
   .add({
     name: 'Portfolio',
     pattern: '/portfolio',
     page: 'portfolio',
-  });
+  })
 
-Object.entries(caseStudies).forEach(([caseStudyKey, caseStudy]) => {
-  routes.add({
-    pattern: `/portfolio/${caseStudy.slug}`,
-    page: `portfolio/${caseStudy.slug}`,
+  .add({
+    name: 'CaseStudy',
+    pattern: '/portfolio/:caseStudySlug',
+    page: 'caseStudy',
   });
-});
-
-module.exports = routes;

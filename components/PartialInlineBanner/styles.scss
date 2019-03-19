@@ -1,0 +1,54 @@
+@import "~breakpoint-sass";
+@import "~%styleguide/utils/media";
+@import "~%styleguide/utils/grid";
+@import "~%styleguide/utils/colors";
+@import "~%styleguide/utils/wysiwyg";
+
+.PartialInlineBanner {
+  width: 100%;
+  background-color: $color-charcol;
+  color: $color-white;
+
+  .container {
+    @include grid-container;
+  }
+
+  .content {
+    @include grid-cell(
+      $columns: (
+        mobile-portrait: 12,
+        mobile-landscape: 12,
+        tablet-portrait: 6,
+        tablet-landscape: 5,
+        desktop-narrow: 4,
+        desktop-wide: 4
+      )
+    );
+
+    h3 {
+      font-size: 32px;
+      line-height: 150%;
+      letter-spacing: -1px;
+      font-weight: bold;
+    }
+  }
+
+  @include breakpoint($media-mobile) {
+
+  }
+
+  @include breakpoint($media-not-mobile) {
+    background-size: auto 100%;
+    background-position: center center;
+
+    .container {
+      height: 30vw;
+      max-height: 450px;
+    }
+
+    .content {
+      align-self: center;
+      padding-bottom: 30px;
+    }
+  }
+}

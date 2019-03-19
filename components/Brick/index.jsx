@@ -10,7 +10,7 @@ export default function Brick(props) {
   } = props;
 
   return (
-    <article itemScope itemType="http://schema.org/CreativeWork" className={styles.CaseStudyBrick}>
+    <article itemScope itemType="http://schema.org/CreativeWork" className={styles.Brick}>
       <Link href={href}>
         <a itemProp="url">
           <h3 itemProp="headline">{title}</h3>

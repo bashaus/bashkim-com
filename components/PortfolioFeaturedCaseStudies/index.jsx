@@ -1,45 +1,45 @@
+import Link from 'next/link';
+import { RichText } from 'prismic-reactjs';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import * as caseStudies from 'data/caseStudies';
-import FeaturedCaseStudyPropType from '%prop-types/FeaturedCaseStudy';
-
 import Tile from '%components/Tile';
-
+import LinkResolver from '%prismic/helpers/LinkResolver';
 
 import styles from './styles.scss';
 
-const CASE_STUDIES = Object.values(caseStudies);
-
 export default function PortfolioFeaturedCaseStudies(props) {
-  const { featuredCaseStudies } = props;
+  const { featured } = props;
 
   return (
     <ul className={styles.PortfolioFeaturedCaseStudies}>
-      { featuredCaseStudies.map((featuredCaseStudy) => {
-        const caseStudy = CASE_STUDIES
-          .find((x) => x.slug === featuredCaseStudy.caseStudy);
+      { featured.map((feature) => {
+        const {
+          featured_title: title,
+          featured_description: description,
+          featured_case_study: featuredCaseStudy,
+        } = feature;
+        const caseStudy = featuredCaseStudy.data;
 
         return (
-          <li className={styles.item} key={featuredCaseStudy.title}>
+          <li className={styles.item} key={title}>
             <div className={styles.details}>
-              <h3>{ featuredCaseStudy.title }</h3>
-              <p>{ featuredCaseStudy.description }</p>
-              <ul>
-                { featuredCaseStudy.kernels.map((kernel) => (
-                  <li key={kernel}>{kernel}</li>
-                )) }
-              </ul>
+              { title && RichText.render(title, LinkResolver) }
+              { description && RichText.render(description, LinkResolver) }
             </div>
 
             <div className={styles.tile}>
-              <Tile
-                title={caseStudy.meta.title}
-                description={caseStudy.meta.description}
-                href={caseStudy.href}
-                icon={caseStudy.images.icon}
-                poster={caseStudy.images.poster}
-              />
+              <Link href={`/portfolio/${featuredCaseStudy.uid}`}>
+                <a>
+                  <Tile
+                    title={caseStudy.meta_title}
+                    description={caseStudy.meta_description}
+                    href={caseStudy.href}
+                    icon={caseStudy.image_icon.url}
+                    poster={caseStudy.image_poster.url}
+                  />
+                </a>
+              </Link>
             </div>
           </li>
         );
@@ -49,5 +49,5 @@ export default function PortfolioFeaturedCaseStudies(props) {
 }
 
 PortfolioFeaturedCaseStudies.propTypes = {
-  featuredCaseStudies: PropTypes.arrayOf(FeaturedCaseStudyPropType).isRequired,
+  featured: PropTypes.arrayOf(PropTypes.object).isRequired,
 };

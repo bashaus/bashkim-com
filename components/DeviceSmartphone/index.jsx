@@ -4,12 +4,12 @@ import React from 'react';
 import styles from './styles.scss';
 
 export default function DeviceSmartphone(props) {
-  const { children, image } = props;
+  const { children, figure } = props;
   return (
     <figure className={styles.DeviceSmartphone}>
       <div className={styles.wrapper}>
         <div className={`${styles.content} dragscroll`}>
-          <img src={image} alt="" />
+          <img src={figure} alt="" />
         </div>
       </div>
       <figcaption>
@@ -21,5 +21,5 @@ export default function DeviceSmartphone(props) {
 
 DeviceSmartphone.propTypes = {
   children: PropTypes.node.isRequired,
-  image: PropTypes.string.isRequired,
+  figure: PropTypes.string.isRequired,
 };

@@ -1,36 +1,48 @@
+import getCookies from 'next-cookies';
+import Prismic from 'prismic-javascript';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import FeaturedCaseStudyPropType from '%prop-types/FeaturedCaseStudy';
-
 import LayoutDefault from '%components/LayoutDefault';
+import MenuBackButtonHomeImpl from '%components/MenuBackButtonHomeImpl';
 import MetaDescription from '%components/MetaDescription';
 import MetaKeywords from '%components/MetaKeywords';
 import MetaTitle from '%components/MetaTitle';
-import MenuBackButtonHomeImpl from '%components/MenuBackButtonHomeImpl';
 import PartialHeaderText from '%components/PartialHeaderText';
 import PartialSubtitle from '%components/PartialSubtitle';
 import PortfolioFeaturedCaseStudies from '%components/PortfolioFeaturedCaseStudies';
 import PortfolioSearch from '%components/PortfolioSearch';
+import PortfolioListProvider from '%contexts/PortfolioList';
 
-export default function PortfolioPage({ featuredCaseStudies }) {
+import { getCaseStudies } from '%prismic/content-types/case_study/api';
+import { getTechnologies } from '%prismic/content-types/technology/api';
+import { getPortfolioPage } from '%prismic/content-types/portfolio_page/api';
+
+export default function PortfolioPage(props) {
+  const { caseStudies, page, technologies } = props;
+  const {
+    meta_title: metaTitle,
+    meta_description: metaDescription,
+    meta_keywords: metaKeywords,
+    featured,
+  } = page.data;
+
   return (
     <LayoutDefault backButton={MenuBackButtonHomeImpl} theme="portfolio">
-      <MetaTitle content="Portfolio" />
-      <MetaDescription content="I've been privileged to contribute to a variety of projects, here are some case studies" />
-      <MetaKeywords content="bashkim isai, portfolio, creative technologist, tangible media,
-        technical consultant, case studies" />
+      <MetaTitle content={metaTitle} />
+      <MetaDescription content={metaDescription} />
+      <MetaKeywords content={metaKeywords} />
 
       <PartialHeaderText>
-        <h1>Portfolio</h1>
-        <p>
-          I've had the privilege of working with some great clients,
-          here are some case studes.
-        </p>
+        <h1>{metaTitle}</h1>
+        <p>{metaDescription}</p>
       </PartialHeaderText>
 
       <section className="group-alternate">
-        <PortfolioFeaturedCaseStudies featuredCaseStudies={featuredCaseStudies} />
+        <PartialSubtitle>
+          <h2>Featured case studies</h2>
+        </PartialSubtitle>
+        <PortfolioFeaturedCaseStudies featured={featured} />
       </section>
 
       <section className="group">
@@ -38,20 +50,37 @@ export default function PortfolioPage({ featuredCaseStudies }) {
           <h2>All case studies</h2>
         </PartialSubtitle>
 
-        <PortfolioSearch />
+        <PortfolioListProvider
+          caseStudies={caseStudies}
+          technologies={technologies}
+        >
+          <PortfolioSearch />
+        </PortfolioListProvider>
       </section>
     </LayoutDefault>
   );
 }
 
 PortfolioPage.propTypes = {
-  featuredCaseStudies: PropTypes.arrayOf(FeaturedCaseStudyPropType).isRequired,
+  caseStudies: PropTypes.array.isRequired,
+  page: PropTypes.object.isRequired,
+  technologies: PropTypes.array.isRequired,
 };
 
-PortfolioPage.getInitialProps = async ({ req, res }) => {
-  const featuredCaseStudies = await import('data/portfolio/featuredCaseStudies.json');
+PortfolioPage.getInitialProps = async (context) => {
+  const cookies = getCookies(context);
+  const ref = cookies[Prismic.previewCookie];
+
+  const caseStudiesQuery = await getCaseStudies({ pageSize: 100 });
+  const technologiesQuery = await getTechnologies({ pageSize: 100 });
+  const page = await getPortfolioPage({ ref });
 
   return {
-    featuredCaseStudies: featuredCaseStudies.default
+    caseStudies: caseStudiesQuery.results,
+    page,
+    technologies: technologiesQuery.results.map(result => ({
+      id: { type: 'technology', value: result.id },
+      name: result.data.technology_name,
+    })),
   };
 };

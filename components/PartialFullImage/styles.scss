@@ -1,0 +1,5 @@
+@import "~%styleguide/utils/grid";
+
+.PartialFullImage {
+  @include grid-full;
+}

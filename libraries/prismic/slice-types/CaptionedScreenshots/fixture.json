@@ -1,0 +1,76 @@
+{
+  "slice_type": "CaptionedScreenshotsSliceType",
+  "slice_label": null,
+  "items": [{
+    "CaptionedScreenshotsSliceType_Images": {
+      "dimensions": {
+        "width": 320,
+        "height": 1362
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://bashkim-com.cdn.prismic.io/bashkim-com/2c6a65f506d704c9c7cee5c1aca60049695388a2_320.png"
+    }
+  }, {
+    "CaptionedScreenshotsSliceType_Images": {
+      "dimensions": {
+        "width": 480,
+        "height": 1160
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://bashkim-com.cdn.prismic.io/bashkim-com/59e34030e8c23a747182c38284d1dcca79b2efcb_480.png"
+    }
+  }, {
+    "CaptionedScreenshotsSliceType_Images": {
+      "dimensions": {
+        "width": 768,
+        "height": 1135
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://bashkim-com.cdn.prismic.io/bashkim-com/78f0744cd62090c08c036f5c8fb307f416f4dd71_768.png"
+    }
+  }, {
+    "CaptionedScreenshotsSliceType_Images": {
+      "dimensions": {
+        "width": 1024,
+        "height": 650
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://bashkim-com.cdn.prismic.io/bashkim-com/b480aa24ff19daebb2c4c574f06a0b063b14d19a_1024.png"
+    }
+  }, {
+    "CaptionedScreenshotsSliceType_Images": {
+      "dimensions": {
+        "width": 1280,
+        "height": 800
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://bashkim-com.cdn.prismic.io/bashkim-com/2d954761d7129510036c2a1a16476da8594ca847_1280.png"
+    }
+  }, {
+    "CaptionedScreenshotsSliceType_Images": {
+      "dimensions": {
+        "width": 1440,
+        "height": 800
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://bashkim-com.cdn.prismic.io/bashkim-com/6fbf73ec6f201c036484ec7e2d9410f1daf744ea_1440.png"
+    }
+  }],
+  "primary": {
+    "CaptionedScreenshotsSliceType_Caption": [{
+      "type": "heading3",
+      "text": "Campaign website",
+      "spans": []
+    }, {
+      "type": "paragraph",
+      "text": "Barley walks on screen and greets visitors by telling his story. The content encourages visitors to find out more information about the charity and provides a call to action to adopt or donate.",
+      "spans": []
+    }]
+  }
+}

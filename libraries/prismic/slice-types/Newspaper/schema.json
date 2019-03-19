@@ -1,0 +1,17 @@
+{
+  "type": "Slice",
+  "fieldset": "Newspaper",
+  "description": "A multi-column newspaper design",
+  "icon": "view_column",
+  "display": "list",
+  "non-repeat": {},
+  "repeat": {
+    "NewspaperSliceType_Group": {
+      "type": "StructuredText",
+      "config": {
+        "multi": "paragraph, heading3, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+        "label": "Group"
+      }
+    }
+  }
+}

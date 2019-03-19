@@ -1,26 +1,28 @@
-@import "~breakpoint-sass";
-@import "~%styleguide/vendors/grid/_";
-@import "~%styleguide/utils/media";
 @import "~%styleguide/utils/grid";
 
-.PortfolioSearch.icon {
-  @include grid-container;
+.PortfolioSearch {
+  &.icon {
+    @include grid-container;
 
-  > li {
-    @include grid-cell(
-      $columns: (
-        mobile-portrait: 12,
-        mobile-landscape: 6,
-        tablet-portrait: 6,
-        tablet-landscape: 4,
-        desktop-narrow: 3,
-        desktop-wide: 3
-      )
-    );
+    > li {
+      @include grid-cell(
+        $columns: (
+          mobile-portrait: 12,
+          mobile-landscape: 6,
+          tablet-portrait: 6,
+          tablet-landscape: 4,
+          desktop-narrow: 3,
+          desktop-wide: 3
+        )
+      );
+    }
+  }
+
+  &.list {
+    @include grid-full;
   }
 }
 
-.PortfolioSearch.list {
-  @include grid-full;
+.pagination {
+  @include grid-full($padding: (left right))
 }
-

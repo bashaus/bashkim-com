@@ -1,0 +1,69 @@
+@import "~%styleguide/utils/grid";
+
+%brand {
+  display: block;
+  width: 128px;
+  height: 128px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+
+.brands {
+  @include grid-container;
+
+  > li {
+    @include grid-cell(
+      $columns: (
+        mobile-portrait: 6,
+        mobile-landscape: 6,
+        tablet-portrait: 4,
+        tablet-landscape: 2,
+        desktop-narrow: 2,
+        desktop-wide: 2
+      )
+    );
+
+    %brand {
+      margin: 0 auto;
+    }
+  }
+}
+
+
+.brand_vodafone {
+  @extend %brand;
+
+  background-image: url('/static/vectors/brands/vodafone.svg');
+}
+
+.brand_ihg {
+  @extend %brand;
+
+  background-image: url('/static/vectors/brands/ihg.svg');
+}
+
+.brand_battersea {
+  @extend %brand;
+
+  background-image: url('/static/vectors/brands/battersea.svg');
+}
+
+.brand_converse {
+  @extend %brand;
+
+  background-image: url('/static/vectors/brands/converse.svg');
+}
+
+.brand_jack_daniels {
+  @extend %brand;
+
+  background-image: url('/static/vectors/brands/jack-daniels.svg');
+}
+
+.brand_huawei {
+  @extend %brand;
+
+  background-image: url('/static/vectors/brands/huawei.svg');
+}

@@ -1,7 +1,6 @@
 import React from 'react';
 
 import PartialSplit from '%components/PartialSplit';
-import PartialSplitItem from '%components/PartialSplitItem';
 import PartialSubtitle from '%components/PartialSubtitle';
 
 import styles from './styles.scss';
@@ -14,7 +13,7 @@ export default function AboutProfile() {
       </PartialSubtitle>
 
       <PartialSplit index={0}>
-        <PartialSplitItem>
+        <PartialSplit.Item>
           <div>
             <h3>Trouva</h3>
             <p>London, United Kingdom</p>
@@ -26,9 +25,9 @@ export default function AboutProfile() {
             </p>
             <p>Senior Product&nbsp;Engineer</p>
           </div>
-        </PartialSplitItem>
+        </PartialSplit.Item>
 
-        <PartialSplitItem backgroundImage="/static/images/about/employment/trouva/background.jpg">
+        <PartialSplit.Item backgroundImage="/static/images/about/employment/trouva/background.jpg">
           <div>
             <img
               alt=""
@@ -36,11 +35,11 @@ export default function AboutProfile() {
               src="/static/images/about/employment/trouva/logo.jpg"
             />
           </div>
-        </PartialSplitItem>
+        </PartialSplit.Item>
       </PartialSplit>
 
       <PartialSplit index={1}>
-        <PartialSplitItem>
+        <PartialSplit.Item>
           <div>
             <h3>Hogarth & Ogilvy</h3>
             <p>London, United Kingdom</p>
@@ -68,9 +67,9 @@ export default function AboutProfile() {
               Technical&nbsp;Consultant
             </p>
           </div>
-        </PartialSplitItem>
+        </PartialSplit.Item>
 
-        <PartialSplitItem backgroundImage="/static/images/about/employment/ogilvy/background.jpg">
+        <PartialSplit.Item backgroundImage="/static/images/about/employment/ogilvy/background.jpg">
           <div>
             <img
               alt=""
@@ -78,11 +77,11 @@ export default function AboutProfile() {
               src="/static/images/about/employment/ogilvy/logo.png"
             />
           </div>
-        </PartialSplitItem>
+        </PartialSplit.Item>
       </PartialSplit>
 
       <PartialSplit index={2}>
-        <PartialSplitItem>
+        <PartialSplit.Item>
           <div>
             <h3>Critical Mass</h3>
             <p>London, United Kingdom</p>
@@ -110,9 +109,9 @@ export default function AboutProfile() {
               Senior&nbsp;Creative&nbsp;Technologist
             </p>
           </div>
-        </PartialSplitItem>
+        </PartialSplit.Item>
 
-        <PartialSplitItem backgroundImage="/static/images/about/employment/agency-republic/background.jpg">
+        <PartialSplit.Item backgroundImage="/static/images/about/employment/agency-republic/background.jpg">
           <div>
             <img
               alt=""
@@ -120,11 +119,11 @@ export default function AboutProfile() {
               src="/static/images/about/employment/agency-republic/logo.jpg"
             />
           </div>
-        </PartialSplitItem>
+        </PartialSplit.Item>
       </PartialSplit>
 
       <PartialSplit index={3}>
-        <PartialSplitItem>
+        <PartialSplit.Item>
           <div>
             <h3>Studio Farrago</h3>
             <p>Brisbane, Australia</p>
@@ -142,9 +141,9 @@ export default function AboutProfile() {
               Tangible Media Artist
             </p>
           </div>
-        </PartialSplitItem>
+        </PartialSplit.Item>
 
-        <PartialSplitItem backgroundImage="/static/images/about/employment/studio-farrago/background2.jpg">
+        <PartialSplit.Item backgroundImage="/static/images/about/employment/studio-farrago/background2.jpg">
           <div>
             <img
               alt=""
@@ -152,7 +151,7 @@ export default function AboutProfile() {
               src="/static/images/about/employment/studio-farrago/logo.jpg"
             />
           </div>
-        </PartialSplitItem>
+        </PartialSplit.Item>
       </PartialSplit>
     </section>
   );

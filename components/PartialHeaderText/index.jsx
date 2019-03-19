@@ -1,10 +1,10 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 
 import styles from './styles.scss';
 
 export default function PartialHeaderText(props) {
-  const { backgroundClassName, children } = props;
+  const { aside, backgroundClassName, children } = props;
 
   return (
     <header className={styles.PartialHeaderText}>
@@ -12,7 +12,14 @@ export default function PartialHeaderText(props) {
         <div className={styles.content}>
           {children}
         </div>
+
+        {aside && (
+          <aside className={styles.aside}>
+            {aside}
+          </aside>
+        )}
       </div>
+
       <div
         className={`${styles.background} ${backgroundClassName || ''}`}
         aria-hidden="true"
@@ -22,11 +29,13 @@ export default function PartialHeaderText(props) {
 }
 
 PartialHeaderText.propTypes = {
+  aside: PropTypes.node,
   backgroundClassName: PropTypes.string,
   children: PropTypes.node,
 };
 
 PartialHeaderText.defaultProps = {
+  aside: null,
   backgroundClassName: null,
   children: null,
 };

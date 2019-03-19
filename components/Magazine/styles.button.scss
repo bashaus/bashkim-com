@@ -1,0 +1,65 @@
+@import "~breakpoint-sass";
+@import "~%styleguide/utils/media";
+
+%button {
+  position: absolute;
+  appearance: none;
+  display: block;
+  width: 30px;
+  height: 40px;
+  text-indent: -9999px;
+  overflow: hidden;
+  background-color: transparent;
+  border: none 0;
+  transition: opacity 0.3s;
+  background-size: auto 40px;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  &[disabled] {
+    opacity: 0.2;
+  }
+
+  &:not([disabled]) {
+    cursor: pointer;
+  }
+
+  @include breakpoint($media-screen-small) {
+    bottom: -60px;
+  }
+
+  @include breakpoint($media-screen-large) {
+    top: 50%;
+  }
+}
+
+.buttonPrev {
+  @extend %button;
+
+  background-image: url('/static/vectors/icons/arrow-previous.svg');
+
+  @include breakpoint($media-screen-small) {
+    left: calc(50% - 25px);
+    transform: translate(-100%, 0);
+  }
+
+  @include breakpoint($media-screen-large) {
+    left: 0;
+    transform: translate(0, -50%);
+  }
+}
+
+.buttonNext {
+  @extend %button;
+
+  background-image: url('/static/vectors/icons/arrow-next.svg');
+
+  @include breakpoint($media-screen-small) {
+    left: calc(50% + 25px);
+  }
+
+  @include breakpoint($media-screen-large) {
+    right: 0;
+    transform: translate(0, -50%);
+  }
+}

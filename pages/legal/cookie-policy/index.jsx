@@ -4,8 +4,8 @@ import LayoutDefault from '%components/LayoutDefault';
 import MenuBackButtonHomeImpl from '%components/MenuBackButtonHomeImpl';
 import MetaDescription from '%components/MetaDescription';
 import MetaTitle from '%components/MetaTitle';
+import PartialFullText from '%components/PartialFullText';
 import PartialHeaderText from '%components/PartialHeaderText';
-import PartialFulltext from '%components/PartialFulltext';
 import PartialSubtitle from '%components/PartialSubtitle';
 
 import styles from './styles.scss';
@@ -24,7 +24,7 @@ export default function CookiePolicyPage() {
       </PartialHeaderText>
 
       <section className="group">
-        <PartialFulltext>
+        <PartialFullText>
           <p>
             This website sends and receives data (known as
             {' '}
@@ -51,13 +51,13 @@ export default function CookiePolicyPage() {
             </a>
             can be found on the Information&nbsp;Commissioner&apos;s&nbsp;Office website.
           </p>
-        </PartialFulltext>
+        </PartialFullText>
 
         <PartialSubtitle>
           <h2>How cookies are used on this website</h2>
         </PartialSubtitle>
 
-        <PartialFulltext>
+        <PartialFullText>
           <h3>Google Analytics</h3>
           <p>
             This website implements Google Analytics to collect information about how
@@ -156,7 +156,7 @@ export default function CookiePolicyPage() {
           <p>&nbsp;</p>
 
           <p>Last updated 01 June 2018</p>
-        </PartialFulltext>
+        </PartialFullText>
       </section>
     </LayoutDefault>
   );

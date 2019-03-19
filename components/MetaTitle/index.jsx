@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import Head from 'next/head';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 export default function MetaTitle(props) {
   const { content, standalone } = props;
@@ -12,8 +12,10 @@ export default function MetaTitle(props) {
   return (
     <Head>
       <title key="MetaTitle">{titleText}</title>
-      <meta key="MetaTitle.opengraph" property="og:title" content="Bashkim Isai" />
       <meta key="MetaTitle.twitter" name="twitter:title" content={content} />
+      { !standalone && (
+        <meta key="MetaTitle.opengraph" property="og:title" content={content} />
+      ) }
     </Head>
   );
 }

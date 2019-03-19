@@ -3,23 +3,19 @@
     "browser": true,
     "es6": true
   },
-  "plugins": [
-    "react-hooks"
-  ],
   "extends": [
-    "eslint:recommended",
     "airbnb"
   ],
-  "parserOptions": {
-    "sourceType": "module"
-  },
+  "parser": "babel-eslint",
+  "plugins": [
+    "babel"
+  ],
   "settings": {
     "import/resolver": {
       "babel-module": {}
     }
   },
   "rules": {
-    "react-hooks/rules-of-hooks": "error",
     "jsx-a11y/anchor-is-valid": 0
   }
 }

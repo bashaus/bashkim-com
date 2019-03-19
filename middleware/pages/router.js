@@ -1,9 +1,8 @@
-const nextRoutes = require('next-routes');
+const router = require('../router');
 
-const routes = nextRoutes()
-
+router
   .add({
-    name: 'about',
+    name: 'About',
     pattern: '/about',
     page: 'about',
   })
@@ -15,9 +14,7 @@ const routes = nextRoutes()
   })
 
   .add({
-    name: 'index',
+    name: 'Index',
     pattern: '/',
     page: 'index',
   });
-
-module.exports = routes;

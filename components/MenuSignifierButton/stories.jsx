@@ -2,13 +2,13 @@ import React from 'react';
 
 import { storiesOf } from '@storybook/react';
 
-import MenuSignifierButton from '.';
+import { MenuSignifierButtonDisconnected } from '.';
 
 storiesOf('Components: MenuSignifierButton', module)
   .add('unpressed', () => (
-    <MenuSignifierButton pressed={false} />
+    <MenuSignifierButtonDisconnected menuIsVisible={false} />
   ))
 
   .add('pressed', () => (
-    <MenuSignifierButton pressed />
+    <MenuSignifierButtonDisconnected menuIsVisible />
   ));

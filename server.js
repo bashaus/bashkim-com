@@ -3,9 +3,9 @@ require('dotenv').config()
 const Sentry = require('@sentry/node');
 const express = require('express');
 const next = require('next');
-const nextRoutes = require('next-routes');
 
 const Config = require('./config');
+const Router = require('./middleware/router');
 const SeoRouter = require('./middleware/seo/router');
 const SitemapRouter = require('./middleware/sitemaps/router');
 
@@ -30,7 +30,7 @@ const createServer = () => {
   server.use(Sentry.Handlers.requestHandler());
   server.use(SeoRouter);
   server.use(SitemapRouter);
-  server.use(nextRoutes().getRequestHandler(app));
+  server.use(Router.getRequestHandler(app));
   server.use(Sentry.Handlers.errorHandler());
   return server;
 };

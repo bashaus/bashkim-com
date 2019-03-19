@@ -1,85 +1,95 @@
 import React from 'react';
 
-import * as caseStudies from 'data/caseStudies';
-import CaseStudyBrick from '%components/CaseStudyBrick';
+import PortfolioListBrick from '%components/PortfolioListBrick';
+import PortfolioListRow from '%components/PortfolioListRow';
 import PortfolioFilter from '%components/PortfolioFilter';
-import CaseStudyRow from '%components/CaseStudyRow';
 
+import { PortfolioListContext } from '%contexts/PortfolioList';
 
 import styles from './styles.scss';
 
-const SORT_ALPHABETICAL = 'alphabetical';
-const SORT_LAUNCHED = 'launched';
-
-const SORT = {
-  [SORT_ALPHABETICAL]: (a, b) => {
-    if (a.meta.title < b.meta.title) return -1;
-    if (a.meta.title > b.meta.title) return 1;
-    return 0;
-  },
-
-  [SORT_LAUNCHED]: (a, b) => {
-    if (a.date < b.date) return 1;
-    if (a.date > b.date) return -1;
-
-    /* For items with the same date */
-    if (a.meta.title < b.meta.title) return -1;
-    if (a.meta.title > b.meta.title) return 1;
-
-    return 0;
-  },
+const DISPLAY_MODE = {
+  ICON: 'icon',
+  LIST: 'list',
 };
 
-const DISPLAY_ICON = 'icon';
-const DISPLAY_LIST = 'list';
+const SORT_MODE = {
+  ALPHABETICAL: 'alphabetical',
+  LAUNCHED: 'launched',
+};
 
-const DISPLAY = {
-  [DISPLAY_ICON]: CaseStudyBrick,
-  [DISPLAY_LIST]: CaseStudyRow,
+const RenderComponents = {
+  [DISPLAY_MODE.ICON]: PortfolioListBrick,
+  [DISPLAY_MODE.LIST]: PortfolioListRow,
+};
+
+const SORT = {
+  [SORT_MODE.ALPHABETICAL]: (a, b) => {
+    if (a.data.meta_title < b.data.meta_title) return -1;
+    if (a.data.meta_title > b.data.meta_title) return 1;
+    return 0;
+  },
+
+  [SORT_MODE.LAUNCHED]: (a, b) => {
+    if (a.data.info_launch_date < b.data.info_launch_date) return 1;
+    if (a.data.info_launch_date > b.data.info_launch_date) return -1;
+
+    /* For items with the same date */
+    if (a.data.meta_title < b.data.meta_title) return -1;
+    if (a.data.meta_title > b.data.meta_title) return 1;
+
+    return 0;
+  },
 };
 
 export default class PortfolioSearch extends React.PureComponent {
-  constructor(...args) {
-    super(...args);
-
-    this.filterRef = React.createRef();
-
-    this.handleChange = this.handleChange.bind(this);
-
-    this.state = {
-      display: DISPLAY_ICON,
-      sort: SORT_LAUNCHED,
-      tags: [],
-    };
-  }
-
-  handleChange(state) {
-    this.setState(state);
-  }
-
   render() {
-    const { display, sort, tags } = this.state;
+    const { state } = this.context;
+    const {
+      display, sort, filters, caseStudies, technologies,
+    } = state;
 
-    const RenderComponent = DISPLAY[display];
-    let filteredCaseStudies = Object.values(caseStudies);
+    const RenderComponent = RenderComponents[display];
 
-    if (tags) {
-      filteredCaseStudies = filteredCaseStudies.filter((caseStudy) => tags.reduce(
-        (exists, current) => exists && caseStudy.tags.includes(current.id),
+    const filteredCaseStudies = caseStudies.filter(
+      (caseStudy) => filters.reduce(
+        (exists, filter) => {
+          if (!exists) {
+            return false;
+          }
+
+          const { type: filterType, value: filterValue } = filter.id;
+          switch (filterType) {
+            case 'technology':
+              return caseStudy.data.info_technologies.find(
+                (tech) => tech.info_technology.id === filterValue,
+              );
+
+            case 'tag':
+              return caseStudy.tags.includes(filterValue);
+
+            default:
+              return false;
+          }
+        },
         true,
-      ));
-    }
-
-    filteredCaseStudies.sort(SORT[sort]);
+      ),
+    ).sort(SORT[sort]);
 
     return (
       <>
-        <PortfolioFilter ref={this.filterRef} onChange={this.handleChange} />
+        <PortfolioFilter technologies={technologies} />
+
+        { filteredCaseStudies.length !== caseStudies.length && (
+          <div className={styles.pagination}>
+            {`Showing ${filteredCaseStudies.length} of ${caseStudies.length} case studies`}
+          </div>
+        ) }
 
         <ul className={`${styles.PortfolioSearch} ${styles[display]}`}>
           { filteredCaseStudies.map((caseStudy) => (
-            <li key={caseStudy.slug}>
-              <RenderComponent caseStudy={caseStudy} />
+            <li key={caseStudy.uid}>
+              <RenderComponent caseStudy={caseStudy} technologies={technologies} />
             </li>
           )) }
         </ul>
@@ -87,3 +97,5 @@ export default class PortfolioSearch extends React.PureComponent {
     );
   }
 }
+
+PortfolioSearch.contextType = PortfolioListContext;
