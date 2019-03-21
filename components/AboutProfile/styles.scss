@@ -12,7 +12,7 @@
     @extend %wysiwyg;
     @include grid-cell(
       $columns: (
-        mobile-portrait: 6,
+        mobile-portrait: 12,
         mobile-landscape: 6,
         tablet-portrait: 3,
         tablet-landscape: 3,
@@ -25,22 +25,50 @@
     flex-direction: column;
   }
 
-  img {
-    order: 1;
-    display: block;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20px;
+  @include breakpoint($media-mobile-portrait) {
+    li {
+      position: relative;
+      padding-top: 15px;
+      padding-left: 85px;
+      padding-bottom: 15px;
+    }
+
+    img {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      order: 1;
+      margin-top: 0;
+    }
+
+    li h3 {
+      order: 2;
+      margin-bottom: 0;
+    }
+
+    p {
+      order: 3;
+    }
   }
 
-  h3 {
-    order: 2;
-    margin-bottom: 0 !important;
-    text-align: center;
-  }
+  @include breakpoint($media-not-mobile-portrait) {
+    img {
+      order: 1;
+      display: block;
+      margin-top: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 20px;
+    }
 
-  p {
-    order: 3;
+    h3 {
+      order: 2;
+      margin-bottom: 0 !important;
+      text-align: center;
+    }
+
+    p {
+      order: 3;
+    }
   }
 }
