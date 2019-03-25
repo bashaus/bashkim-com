@@ -4,7 +4,7 @@ import React from 'react';
 
 import styles from './styles.scss';
 
-export default function CaseStudyBrick(props) {
+export default function Brick(props) {
   const {
     title, href, icon, description,
   } = props;
@@ -28,7 +28,7 @@ export default function CaseStudyBrick(props) {
   );
 }
 
-CaseStudyBrick.propTypes = {
+Brick.propTypes = {
   title: PropTypes.string.isRequired,
   href: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,

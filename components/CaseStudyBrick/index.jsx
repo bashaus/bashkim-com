@@ -1,13 +1,13 @@
 import React from 'react';
 import CaseStudyPropType from '%prop-types/CaseStudy';
 
-import PartialBrick from '%components/PartialBrick';
+import Brick from '%components/Brick';
 
-export default function PortfolioBrick(props) {
+export default function CaseStudyBrick(props) {
   const { caseStudy } = props;
 
   return (
-    <PartialBrick
+    <Brick
       title={caseStudy.meta.title}
       description={caseStudy.meta.description}
       icon={caseStudy.images.icon}
@@ -16,6 +16,6 @@ export default function PortfolioBrick(props) {
   );
 }
 
-PortfolioBrick.propTypes = {
+CaseStudyBrick.propTypes = {
   caseStudy: CaseStudyPropType.isRequired,
 };

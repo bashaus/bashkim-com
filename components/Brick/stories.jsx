@@ -4,11 +4,11 @@ import { storiesOf } from '@storybook/react';
 
 import caseStudy from 'data/caseStudies/commodore.json';
 import CaseStudyBrick from '%components/CaseStudyBrick';
-import PartialBrick from '.';
+import Brick from '.';
 
-storiesOf('Components: PartialBrick', module)
+storiesOf('Components: Brick', module)
   .add('default', () => (
-    <PartialBrick
+    <Brick
       title="Brick title"
       description="Brick description"
       icon={null}
