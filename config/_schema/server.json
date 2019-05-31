@@ -17,7 +17,7 @@
       "doc": "Whether or not the server is running on AWS Lambda",
       "format": "Boolean",
       "default": false,
-      "env": "LAMBDA"
+      "env": "LAMBDA_ENV"
     }
   }
 }

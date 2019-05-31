@@ -40,7 +40,6 @@ provider:
   environment:
     APP_ENV: ${self:custom.stage}
     GIT_COMMIT: ${self:custom.website.commitHash}
-    LAMBDA: true
     NODE_ENV: ${self:custom.stage}
     SENTRY_DSN: ${self:custom.sentry.dsn}
 
