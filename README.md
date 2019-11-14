@@ -1,7 +1,5 @@
 # bashkim-com
 
-[![wercker status](https://app.wercker.com/status/288da26b9349d5e4a1c8f4feb3180e0c/s/master "wercker status")](https://app.wercker.com/project/byKey/288da26b9349d5e4a1c8f4feb3180e0c) [![Storybook](https://cdn.jsdelivr.net/gh/storybooks/brand@master/badge/badge-storybook.svg)](http://styleguide.bashkim.com/)
-
 Portfolio of case studies by Bashkim Isai
 
 ## Introduction

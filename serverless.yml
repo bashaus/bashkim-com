@@ -26,13 +26,13 @@ custom:
         bucketName: bashkim-com-${self:custom.stage}-styleguide
       website:
         certificateArn: "arn:aws:acm:us-east-1:409535992503:certificate/a232ee88-ad8e-44c1-a9c2-5a8cdb2e2577"
-        commitHash: ${env:WERCKER_GIT_COMMIT}
+        commitHash: ${env:CIRCLE_SHA1}
         domainName: www.bashkim.com
-        bucketName: bashkim-com-${self:custom.stage}
+        bucketName: bashkim-com-${self:custom.stage}-website
 
 provider:
   name: aws
-  runtime: nodejs8.10
+  runtime: nodejs10.x
   stage: ${self:custom.stage}
   region: ${self:custom.region}
   memorySize: 512
@@ -45,6 +45,7 @@ provider:
 
 package:
   exclude:
+    - .circleci/**
     - .storybook/**
     - "**/stories.jsx"
     - components/**
@@ -60,7 +61,6 @@ package:
     - .nvmrc
     - package.json
     - package-lock.json
-    - wercker.yml
 
 functions:
   app:
@@ -84,7 +84,7 @@ resources:
             Fn::Join:
               - ""
               - - Ref: AWS::StackName
-                - "-origin-access-identity"
+                - "-website-origin-access-identity"
 
     WebsiteCloudFrontDistribution:
       Type: AWS::CloudFront::Distribution
@@ -201,7 +201,7 @@ resources:
             Fn::Join:
               - ""
               - - Ref: AWS::StackName
-                - "-origin-access-identity"
+                - "-styleguide-origin-access-identity"
 
     StyleguideCloudFrontDistribution:
       Type: AWS::CloudFront::Distribution

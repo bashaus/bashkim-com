@@ -1,0 +1,104 @@
+version: 2.1
+
+executors:
+  exec-node:
+    working_directory: ~/repo
+    docker:
+      - image: node:10.17
+
+  exec-python:
+    working_directory: ~/repo
+    docker:
+      - image: 'circleci/python:3.6'
+
+orbs:
+  aws-s3: circleci/aws-s3@1.0.11
+  # aws-serverless: circleci/aws-serverless@1.0.1
+
+jobs:
+  build:
+    executor: exec-node
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - node-dependencies-{{ checksum "package-lock.json" }}
+
+      - run: npm install
+      - run: npm run build
+      - run: npm run styleguide:build
+
+      - save_cache:
+          key: node-dependencies-{{ checksum "package-lock.json" }}
+          paths:
+            - ./node_modules
+
+      - persist_to_workspace:
+          root: ./
+          paths:
+            - ./.next
+            - ./.storybook-static
+
+  deploy:
+    executor: exec-node
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - node-dependencies-{{ checksum "package-lock.json" }}
+      - attach_workspace:
+          at: ./
+
+      - run: npm install -g serverless
+      - run: serverless deploy
+
+  synchronize:
+    executor: exec-python
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ./
+
+      - aws-s3/sync:
+          from: ./static
+          to: 's3://${DEPLOY_S3_WEBSITE_BUCKET}/static'
+          arguments: |
+            --cache-control "max-age=86400"
+          overwrite: true
+
+      - aws-s3/sync:
+          from: ./.next
+          to: 's3://${DEPLOY_S3_WEBSITE_BUCKET}/_next'
+          arguments: |
+            --cache-control "max-age=86400"
+          overwrite: true
+
+      - aws-s3/sync:
+          from: ./.storybook-static
+          to: 's3://${DEPLOY_S3_STYLEGUIDE_BUCKET}/'
+          arguments: |
+            --cache-control "max-age=86400"
+          overwrite: true
+
+workflows:
+  version: 2
+  build_and_deploy:
+    jobs:
+      - build
+
+      - approve:
+          type: approval
+          requires:
+            - build
+          filters:
+            branches:
+              only:
+                - master
+
+      - deploy:
+          requires:
+            - approve
+
+      - synchronize:
+          requires:
+            - deploy
