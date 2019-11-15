@@ -18,8 +18,8 @@
   "repository": "github:bashaus/bashkim-com",
   "dependencies": {
     "@githubprimer/octicons-react": "^8.4.1",
-    "@sentry/browser": "^4.6.4",
-    "@sentry/node": "^4.6.4",
+    "@sentry/browser": "^5.9.0",
+    "@sentry/node": "^5.9.0",
     "@zeit/next-sass": "^1.0.1",
     "aws-serverless-express": "^3.3.5",
     "breakpoint-sass": "^2.7.1",
