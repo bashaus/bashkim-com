@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import * as caseStudies from 'data/caseStudies';
 import FeaturedCaseStudyPropType from '%prop-types/FeaturedCaseStudy';
 
 import Tile from '%components/Tile';
 
-import * as caseStudies from 'data/caseStudies';
 
 import styles from './styles.scss';
 
@@ -18,7 +18,7 @@ export default function PortfolioFeaturedCaseStudies(props) {
     <ul className={styles.PortfolioFeaturedCaseStudies}>
       { featuredCaseStudies.map((featuredCaseStudy) => {
         const caseStudy = CASE_STUDIES
-          .find(x => x.slug === featuredCaseStudy.caseStudy);
+          .find((x) => x.slug === featuredCaseStudy.caseStudy);
 
         return (
           <li className={styles.item} key={featuredCaseStudy.title}>
@@ -26,7 +26,7 @@ export default function PortfolioFeaturedCaseStudies(props) {
               <h3>{ featuredCaseStudy.title }</h3>
               <p>{ featuredCaseStudy.description }</p>
               <ul>
-                { featuredCaseStudy.kernels.map(kernel => (
+                { featuredCaseStudy.kernels.map((kernel) => (
                   <li key={kernel}>{kernel}</li>
                 )) }
               </ul>

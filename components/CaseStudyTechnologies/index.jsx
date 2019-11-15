@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import availableTechnologies from 'data/portfolio/technologies.json';
 import PartialSubtitle from '%components/PartialSubtitle';
 
-import availableTechnologies from 'data/portfolio/technologies.json';
 
 import styles from './styles.scss';
 
@@ -11,7 +11,7 @@ export default function CaseStudyTechnologies(props) {
   const { technologies } = props;
 
   return (
-    <React.Fragment>
+    <>
       <PartialSubtitle>
         <h2>Key Technologies</h2>
       </PartialSubtitle>
@@ -28,7 +28,7 @@ export default function CaseStudyTechnologies(props) {
           );
         }) }
       </ul>
-    </React.Fragment>
+    </>
   );
 }
 

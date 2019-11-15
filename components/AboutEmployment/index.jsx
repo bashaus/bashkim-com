@@ -20,7 +20,7 @@ export default function AboutProfile() {
             <p>London, United Kingdom</p>
             <p>
               <time dateTime="2018-09">October 2018</time>
-              {' to '}
+              <span> to </span>
               <br />
               <time dateTime="2019-02">February 2019</time>
             </p>
@@ -46,7 +46,7 @@ export default function AboutProfile() {
             <p>London, United Kingdom</p>
             <p>
               <time dateTime="2016-09">September 2016</time>
-              {' to '}
+              <span> to </span>
               <br />
               <time dateTime="2018-08">August 2018</time>
             </p>
@@ -58,7 +58,7 @@ export default function AboutProfile() {
             <p>London, United Kingdom</p>
             <p>
               <time dateTime="2014-02">May 2014</time>
-              {' to '}
+              <span> to </span>
               <br />
               <time dateTime="2016-09">August 2016</time>
             </p>
@@ -88,7 +88,7 @@ export default function AboutProfile() {
             <p>London, United Kingdom</p>
             <p>
               <time dateTime="2014-02">February 2014</time>
-              {' to '}
+              <span> to </span>
               <br />
               <time dateTime="2014-05">May 2014</time>
             </p>
@@ -100,7 +100,7 @@ export default function AboutProfile() {
             <p>London, United Kingdom</p>
             <p>
               <time dateTime="2011-05">May 2011</time>
-              {' to '}
+              <span> to </span>
               <br />
               <time dateTime="2013-01">May 2014</time>
             </p>
@@ -130,7 +130,7 @@ export default function AboutProfile() {
             <p>Brisbane, Australia</p>
             <p>
               <time dateTime="2010-07">July 2010</time>
-              {' to '}
+              <span> to </span>
               <br />
               <time dateTime="2011-05">May 2011</time>
             </p>

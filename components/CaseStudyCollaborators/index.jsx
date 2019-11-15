@@ -9,7 +9,7 @@ export default function CaseStudyCollaborators(props) {
   const { children } = props;
 
   return (
-    <React.Fragment>
+    <>
       <PartialSubtitle>
         <h2>Collaborators</h2>
       </PartialSubtitle>
@@ -17,7 +17,7 @@ export default function CaseStudyCollaborators(props) {
       <ul className={styles.CaseStudyCollaborators}>
         {children}
       </ul>
-    </React.Fragment>
+    </>
   );
 }
 

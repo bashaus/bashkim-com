@@ -1,10 +1,10 @@
 import React from 'react';
 
+import * as caseStudies from 'data/caseStudies';
 import CaseStudyBrick from '%components/CaseStudyBrick';
 import PortfolioFilter from '%components/PortfolioFilter';
 import CaseStudyRow from '%components/CaseStudyRow';
 
-import * as caseStudies from 'data/caseStudies';
 
 import styles from './styles.scss';
 
@@ -64,7 +64,7 @@ export default class PortfolioSearch extends React.PureComponent {
     let filteredCaseStudies = Object.values(caseStudies);
 
     if (tags) {
-      filteredCaseStudies = filteredCaseStudies.filter(caseStudy => tags.reduce(
+      filteredCaseStudies = filteredCaseStudies.filter((caseStudy) => tags.reduce(
         (exists, current) => exists && caseStudy.tags.includes(current.id),
         true,
       ));
@@ -73,17 +73,17 @@ export default class PortfolioSearch extends React.PureComponent {
     filteredCaseStudies.sort(SORT[sort]);
 
     return (
-      <React.Fragment>
+      <>
         <PortfolioFilter ref={this.filterRef} onChange={this.handleChange} />
 
         <ul className={`${styles.PortfolioSearch} ${styles[display]}`}>
-          { filteredCaseStudies.map(caseStudy => (
+          { filteredCaseStudies.map((caseStudy) => (
             <li key={caseStudy.slug}>
               <RenderComponent caseStudy={caseStudy} />
             </li>
           )) }
         </ul>
-      </React.Fragment>
+      </>
     );
   }
 }

@@ -2,9 +2,9 @@ import Link from 'next/link';
 import React from 'react';
 import dayjs from 'dayjs';
 
+import technologies from 'data/portfolio/technologies.json';
 import CaseStudyPropType from '%prop-types/CaseStudy';
 
-import technologies from 'data/portfolio/technologies.json';
 
 import styles from './styles.scss';
 
@@ -34,16 +34,17 @@ export default function CaseStudyRow(props) {
           </div>
 
           <div className={styles.technologies}>
-            { caseStudy.technologies
-              .filter((x, i) => i < 2)
-              .map(technology => (
-                <img
-                  key={technologies[technology].id}
-                  src={technologies[technology].icon}
-                  alt={technologies[technology].name}
-                  title={technologies[technology].name}
-                />
-              ))
+            {
+              caseStudy.technologies
+                .filter((x, i) => i < 2)
+                .map((technology) => (
+                  <img
+                    key={technologies[technology].id}
+                    src={technologies[technology].icon}
+                    alt={technologies[technology].name}
+                    title={technologies[technology].name}
+                  />
+                ))
             }
           </div>
         </a>

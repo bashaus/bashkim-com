@@ -47,7 +47,7 @@ export default function AboutProfile() {
             <p>Queensland University of Technology</p>
             <p>
               <time dateTime="2005">2005</time>
-              {' to '}
+              <span> to </span>
               <time dateTime="2009">2009</time>
             </p>
             <p>
@@ -67,7 +67,7 @@ export default function AboutProfile() {
             <p>Queensland University of Technology</p>
             <p>
               <time dateTime="2005">2005</time>
-              {' to '}
+              <span> to </span>
               <time dateTime="2009">2009</time>
             </p>
             <p>

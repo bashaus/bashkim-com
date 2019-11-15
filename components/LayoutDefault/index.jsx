@@ -29,7 +29,7 @@ export function LayoutDefaultDisconnected(props) {
   }
 
   return (
-    <React.Fragment>
+    <>
       <HeaderIntersection />
       <CookiesNotice />
       <Header theme={theme} />
@@ -54,7 +54,7 @@ export function LayoutDefaultDisconnected(props) {
 
         <Footer />
       </div>
-    </React.Fragment>
+    </>
   );
 }
 

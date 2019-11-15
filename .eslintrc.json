@@ -17,5 +17,9 @@
     "import/resolver": {
       "babel-module": {}
     }
+  },
+  "rules": {
+    "react-hooks/rules-of-hooks": "error",
+    "jsx-a11y/anchor-is-valid": 0
   }
 }

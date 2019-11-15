@@ -20,7 +20,7 @@ export default function AboutProfile() {
             <p>Brisbane, Australia</p>
             <p>
               <time dateTime="2008-02">February 2008</time>
-              {' to '}
+              <span> to </span>
               <br />
               <time dateTime="2011-02">February 2011</time>
             </p>

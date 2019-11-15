@@ -2,10 +2,10 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import ReactTags from 'react-tag-autocomplete';
 
+import allTags from 'data/portfolio/tags.json';
 import ToggleButton from '%components/ToggleButton';
 import ToggleGroup from '%components/ToggleGroup';
 
-import allTags from 'data/portfolio/tags.json';
 
 import styles from './styles.scss';
 
@@ -97,11 +97,11 @@ export default class PortfolioFilter extends React.PureComponent {
 
           {tags.length === 0 && (
             <p className={styles.inlineSuggestions}>
-              {'Stuck for ideas? Check out '}
+              <span>Stuck for ideas? Check out </span>
               <button type="button" onClick={this.handlePhysicalComputingClick}>
                 {allTags[TAG_PHYSICAL_COMPUTING].name}
               </button>
-              {' or '}
+              <span> or </span>
               <button type="button" onClick={this.handleWebDevelopmentClick}>
                 {allTags[TAG_WEB_DEVELOPMENT].name}
               </button>

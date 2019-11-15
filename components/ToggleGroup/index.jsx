@@ -26,7 +26,7 @@ export default class ToggleGroup extends React.PureComponent {
     const { label, children } = this.props;
     const { selectedValue } = this.state;
 
-    const buttons = React.Children.map(children, child => (
+    const buttons = React.Children.map(children, (child) => (
       React.cloneElement(child, {
         selected: selectedValue === child.props.value,
         onChange: this.handleChange,
@@ -34,7 +34,7 @@ export default class ToggleGroup extends React.PureComponent {
     ));
 
     return (
-      <React.Fragment>
+      <>
         { label && (
           <p className={styles.label}>{label}</p>
         ) }
@@ -42,7 +42,7 @@ export default class ToggleGroup extends React.PureComponent {
         <div className={styles.ToggleGroup}>
           {buttons}
         </div>
-      </React.Fragment>
+      </>
     );
   }
 }

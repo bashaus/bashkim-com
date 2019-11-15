@@ -34,7 +34,7 @@ export class HeaderIntersectionDisconnected extends React.PureComponent {
 
   processIntersectionEntries(entries) {
     const { doHeaderSetIntersection } = this.props;
-    entries.forEach(entry => doHeaderSetIntersection(entry.isIntersecting));
+    entries.forEach((entry) => doHeaderSetIntersection(entry.isIntersecting));
   }
 
   render() {

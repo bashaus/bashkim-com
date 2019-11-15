@@ -12,7 +12,7 @@ export default function IndexFeaturedCaseStudies(props) {
 
   return (
     <ul className={styles.caseStudies}>
-      { caseStudies.map(caseStudy => (
+      { caseStudies.map((caseStudy) => (
         <li className="template-home--caseStudy" key={caseStudy.slug}>
           <Tile
             title={caseStudy.meta.title}
