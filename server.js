@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const Sentry = require('@sentry/node');
 const express = require('express');
 const next = require('next');
