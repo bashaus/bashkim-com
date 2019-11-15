@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import Octicon, { ArrowLeft } from '@githubprimer/octicons-react';
+import Octicon, { ArrowLeft } from '@primer/octicons-react';
 
 import MenuBackButton from '%components/MenuBackButton';
 
