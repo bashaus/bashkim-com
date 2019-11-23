@@ -32,6 +32,7 @@ export default function TrackingGoogleAnalytics() {
 
       <script
         key="TrackingGoogleAnalytics.script.inline"
+        // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: SCRIPT_GOOGLE_ANALYTICS }}
       />
     </Head>
