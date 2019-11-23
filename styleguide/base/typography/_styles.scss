@@ -4,6 +4,7 @@
     font-weight: $font-weight;
     font-style: $font-style;
     src: url("/static/fonts/#{$font-path}.woff") format("woff");
+    font-display: swap;
   }
 }
 
