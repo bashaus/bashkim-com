@@ -83,9 +83,11 @@ export default function HomePage(props) {
                 >
                   <h3>{caseStudy.data.meta_title}</h3>
                   <p>{caseStudy.data.meta_description}</p>
-                  <Link href={LinkResolver(caseStudy)}>
-                    <a>Read case study</a>
-                  </Link>
+                  <CallToAction>
+                    <Link href={LinkResolver(caseStudy)}>
+                      <a>Read case study</a>
+                    </Link>
+                  </CallToAction>
                 </PartialInlineBanner>
               </li>
             );
@@ -107,7 +109,7 @@ export default function HomePage(props) {
               <p>Interested in my portfolio of case studies?</p>
               <CallToAction>
                 <Link href="/portfolio">
-                  <a>View portfolio</a>
+                  <a>Browse portfolio</a>
                 </Link>
               </CallToAction>
             </div>
@@ -115,10 +117,10 @@ export default function HomePage(props) {
 
           <PartialSplit.Item>
             <div>
-              <p>Want to know more about me?</p>
+              <p>Want more details about my practice?</p>
               <CallToAction>
                 <Link href="/about">
-                  <a>View profile</a>
+                  <a>About me</a>
                 </Link>
               </CallToAction>
             </div>

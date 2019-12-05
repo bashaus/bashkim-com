@@ -10,23 +10,23 @@
     line-height: 30px;
     padding-left: 20px;
     padding-right: 20px;
-    color: $color-charcol;
-    text-decoration: none;
+    // color: $color-charcol;
+    text-decoration: none !important;
   }
 
   a:hover {
-    border-color: $color-charcol;
-    background-color: $color-charcol;
+    border-color: $color-text-copy;
+    background-color: $color-text-copy;
     color: $color-white;
   }
 
   @include breakpoint($media-mobile) {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 
   @include breakpoint($media-not-mobile) {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 }
