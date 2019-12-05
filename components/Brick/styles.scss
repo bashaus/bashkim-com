@@ -20,6 +20,10 @@
     text-decoration: none;
   }
 
+  a:hover {
+    color: $color-charcol !important;
+  }
+
   .image {
     position: absolute;
     top: 0;
