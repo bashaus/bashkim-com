@@ -17,17 +17,14 @@ export class CookiesNoticeDisconnected extends React.Component {
     this.state = {
       isVisible: !cookiesDismissed,
     };
-
-    this.handleDismissClick = this.handleDismissClick.bind(this);
-    this.handleAnimationEnd = this.handleAnimationEnd.bind(this);
   }
 
-  handleDismissClick() {
+  handleDismissClick = () => {
     const { doCookiesDismiss } = this.props;
     doCookiesDismiss();
   }
 
-  handleAnimationEnd() {
+  handleAnimationEnd = () => {
     this.setState({ isVisible: false });
   }
 

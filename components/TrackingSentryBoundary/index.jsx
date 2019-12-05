@@ -6,9 +6,9 @@ export default class TrackingSentryBoundary extends React.PureComponent {
   constructor(...args) {
     super(...args);
 
-    this.state = { error: null };
-
-    this.handleShowReportDialogClick = this.handleShowReportDialogClick.bind(this);
+    this.state = {
+      error: null,
+    };
   }
 
   componentDidCatch(error, errorInfo) {
@@ -22,8 +22,7 @@ export default class TrackingSentryBoundary extends React.PureComponent {
     });
   }
 
-  // eslint-disable-next-line class-methods-use-this
-  handleShowReportDialogClick() {
+  handleShowReportDialogClick = () => {
     Sentry.showReportDialog();
   }
 

@@ -20,11 +20,6 @@ export default class Magazine extends React.PureComponent {
   constructor(props) {
     super(props);
 
-    /* handlers */
-    this.handlePrevClick = this.handlePrevClick.bind(this);
-    this.handleNextClick = this.handleNextClick.bind(this);
-    this.handleWindowResize = this.handleWindowResize.bind(this);
-
     /* state */
     this.state = {
       isInitialized: false,
@@ -110,15 +105,15 @@ export default class Magazine extends React.PureComponent {
     return window.jQuery(this.pagesRef.current);
   }
 
-  handlePrevClick() {
+  handlePrevClick = () => {
     this.$pages.turn('previous');
   }
 
-  handleNextClick() {
+  handleNextClick = () => {
     this.$pages.turn('next');
   }
 
-  handleWindowResize() {
+  handleWindowResize = () => {
     window.requestAnimationFrame(() => this.resize());
   }
 

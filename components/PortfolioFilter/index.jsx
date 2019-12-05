@@ -27,17 +27,6 @@ const TAGS = {
 };
 
 class PortfolioFilter extends React.PureComponent {
-  constructor(...args) {
-    super(...args);
-
-    this.handleDelete = this.handleDelete.bind(this);
-    this.handleAddition = this.handleAddition.bind(this);
-    this.handleDisplayChange = this.handleDisplayChange.bind(this);
-    this.handleSortChange = this.handleSortChange.bind(this);
-    this.handlePhysicalComputingClick = this.handlePhysicalComputingClick.bind(this);
-    this.handleWebDevelopmentClick = this.handleWebDevelopmentClick.bind(this);
-  }
-
   setTags(tags) {
     const { dispatch } = this.context;
     dispatch({
@@ -46,7 +35,7 @@ class PortfolioFilter extends React.PureComponent {
     });
   }
 
-  handleDelete(i) {
+  handleReactTagsDelete = (i) => {
     const { state } = this.context;
     const { filters } = state;
     const filtersCopy = filters.slice(0);
@@ -54,13 +43,13 @@ class PortfolioFilter extends React.PureComponent {
     this.setTags(filtersCopy);
   }
 
-  handleAddition(tag) {
+  handleReactTagsAdd = (tag) => {
     const { state } = this.context;
     const { filters } = state;
     this.setTags([].concat(filters, tag));
   }
 
-  handleDisplayChange(e) {
+  handleDisplayChange = (e) => {
     const { dispatch } = this.context;
     dispatch({
       type: PortfolioActions.SET_DISPLAY,
@@ -68,7 +57,7 @@ class PortfolioFilter extends React.PureComponent {
     });
   }
 
-  handleSortChange(e) {
+  handleSortChange = (e) => {
     const { dispatch } = this.context;
     dispatch({
       type: PortfolioActions.SET_SORT,
@@ -76,11 +65,11 @@ class PortfolioFilter extends React.PureComponent {
     });
   }
 
-  handlePhysicalComputingClick() {
+  handlePhysicalComputingClick = () => {
     this.setTags([TAGS.PHYSICAL_COMPUTING]);
   }
 
-  handleWebDevelopmentClick() {
+  handleWebDevelopmentClick = () => {
     this.setTags([TAGS.WEB_DEVELOPMENT]);
   }
 
@@ -102,8 +91,8 @@ class PortfolioFilter extends React.PureComponent {
             tags={filters}
             suggestions={technologies}
             placeholder={placeholder}
-            handleDelete={this.handleDelete}
-            handleAddition={this.handleAddition}
+            handleDelete={this.handleReactTagsDelete}
+            handleAddition={this.handleReactTagsAdd}
           />
 
           { filters.length === 0 && (

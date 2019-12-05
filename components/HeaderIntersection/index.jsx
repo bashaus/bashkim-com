@@ -13,7 +13,7 @@ export class HeaderIntersectionDisconnected extends React.PureComponent {
 
     if (typeof IntersectionObserver !== 'undefined') {
       this.intersectionObserver = new IntersectionObserver(
-        this.processIntersectionEntries.bind(this),
+        this.processIntersectionEntries,
       );
     }
 
@@ -32,7 +32,7 @@ export class HeaderIntersectionDisconnected extends React.PureComponent {
     }
   }
 
-  processIntersectionEntries(entries) {
+  processIntersectionEntries = (entries) => {
     const { doHeaderSetIntersection } = this.props;
     entries.forEach((entry) => doHeaderSetIntersection(entry.isIntersecting));
   }

@@ -8,13 +8,7 @@ import * as MenuActions from '%actions/menu';
 import styles from './styles.scss';
 
 export class MenuSignifierButtonDisconnected extends React.PureComponent {
-  constructor(...args) {
-    super(...args);
-
-    this.handleSignifierClick = this.handleSignifierClick.bind(this);
-  }
-
-  handleSignifierClick(e) {
+  handleSignifierClick = (e) => {
     const { doMenuToggle } = this.props;
     doMenuToggle(e);
   }

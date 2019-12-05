@@ -32,7 +32,7 @@ export default function CarouselPhonesSliceType(props) {
 
   return (
     <PartialFullImage>
-      <Carousel slidesToShow={3} responsive={CAROUSEL_RESPONSIVE}>
+      <Carousel centerMode slidesToShow={3} responsive={CAROUSEL_RESPONSIVE}>
         { items.map((item, i) => {
           const {
             CarouselPhonesSliceType_Caption: caption,

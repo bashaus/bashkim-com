@@ -12,11 +12,9 @@ export default class ToggleGroup extends React.PureComponent {
     this.state = {
       selectedValue: initialValue,
     };
-
-    this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(e) {
+  handleChange = (e) => {
     const { onChange } = this.props;
     this.setState({ selectedValue: e.currentTarget.value });
     onChange(e);
