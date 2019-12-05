@@ -57,6 +57,10 @@ export default class Magazine extends React.PureComponent {
   }
 
   componentDidUpdate() {
+    if (!window.jQuery) {
+      return;
+    }
+
     const properties = RESPONSIVE.find((size) => size.media.matches);
     if (!properties) {
       return;
