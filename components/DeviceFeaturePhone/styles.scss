@@ -1,24 +1,24 @@
 @import "~%styleguide/utils/grid";
 @import "~%styleguide/utils/wysiwyg";
 
-.DeviceSmartphone {
+.DeviceFeaturePhone {
   display: block;
   width: 100%;
-  max-width: 400px;
+  max-width: 300px;
   margin: 0 auto;
   padding: 0;
 
   .wrapper {
     position: relative;
-    background-image: url('/static/vectors/devices/smartphone.svg');
+    background-image: url('/static/vectors/devices/feature-phone.svg');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     margin-left: auto;
     margin-right: auto;
 
-    // 315 x 641.2499999955
+    // 255 x 467.773
     width: 100%;
-    padding-bottom: 203.57142857%;
+    padding-bottom: 183.44039216%;
   }
 
   .content {
@@ -26,10 +26,10 @@
     position: absolute;
     overflow-y: scroll;
 
-    top: 15.9%;
-    left: 10.3%;
-    width: 79.8%;
-    height: 69.5%;
+    top: 18.6%;
+    left: 8.4%;
+    right: 9%;
+    height: 35.4%;
   }
 
   img {

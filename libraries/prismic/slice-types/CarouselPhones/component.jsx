@@ -4,10 +4,11 @@ import React from 'react';
 import Carousel from '%components/Carousel';
 import CarouselImage from '%components/CarouselImage';
 import DeviceSmartphone from '%components/DeviceSmartphone';
+import DeviceFeaturePhone from '%components/DeviceFeaturePhone';
 import PartialFullImage from '%components/PartialFullImage';
 import LinkResolver from '%prismic/helpers/LinkResolver';
 
-import SlicePropType from './prop-type';
+import SlicePropType, { DeviceTypes } from './prop-type';
 
 const CAROUSEL_RESPONSIVE = [
   {
@@ -24,6 +25,11 @@ const CAROUSEL_RESPONSIVE = [
   },
 ];
 
+const DeviceTypeComponents = {
+  [DeviceTypes.SMARTPHONE]: DeviceSmartphone,
+  [DeviceTypes.FEATURE_PHONE]: DeviceFeaturePhone,
+};
+
 export default function CarouselPhonesSliceType(props) {
   const { slice } = props;
 
@@ -32,20 +38,23 @@ export default function CarouselPhonesSliceType(props) {
 
   return (
     <PartialFullImage>
-      <Carousel centerMode slidesToShow={3} responsive={CAROUSEL_RESPONSIVE}>
+      <Carousel slidesToShow={3} responsive={CAROUSEL_RESPONSIVE}>
         { items.map((item, i) => {
           const {
+            CarouselPhonesSliceType_DeviceType: deviceType,
             CarouselPhonesSliceType_Caption: caption,
             CarouselPhonesSliceType_Image: image,
           } = item;
+
+          const DeviceComponent = DeviceTypeComponents[deviceType];
 
           return (
             <CarouselImage
               key={i}
               figure={(
-                <DeviceSmartphone figure={image.url}>
+                <DeviceComponent figure={image.url}>
                   { caption && RichText.render(caption, LinkResolver) }
-                </DeviceSmartphone>
+                </DeviceComponent>
               )}
             />
           );

@@ -8,7 +8,6 @@ import styles from './styles.scss';
 export default class Carousel extends React.PureComponent {
   render() {
     const {
-      centerMode,
       children,
       responsive,
       slidesToShow,
@@ -19,9 +18,9 @@ export default class Carousel extends React.PureComponent {
       <div className={styles.Carousel}>
         <SlickSlider
           adaptiveHeight
-          centerMode={centerMode}
           dots
           dotsClass={styles.CarouselDots}
+          infinite={false}
           draggable
           lazyLoad
           responsive={responsive}
@@ -36,7 +35,6 @@ export default class Carousel extends React.PureComponent {
 }
 
 Carousel.propTypes = {
-  centerMode: PropTypes.bool,
   children: PropTypes.node.isRequired,
   // eslint-disable-next-line react/forbid-prop-types
   responsive: PropTypes.object,
@@ -45,7 +43,6 @@ Carousel.propTypes = {
 };
 
 Carousel.defaultProps = {
-  centerMode: false,
   responsive: undefined,
   slidesToShow: 1,
   slidestoScroll: 1,
