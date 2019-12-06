@@ -15,6 +15,32 @@ export default function AboutProfile() {
       <PartialSplit index={0}>
         <PartialSplit.Item>
           <div>
+            <h3>MMT Digital</h3>
+            <p>London, United Kingdom</p>
+            <p>
+              <time dateTime="2019-04">April 2019</time>
+              <span> to </span>
+              <br />
+              Current
+            </p>
+            <p>Senior Developer</p>
+          </div>
+        </PartialSplit.Item>
+
+        <PartialSplit.Item backgroundImage="/static/images/about/employment/mmt/background.jpg">
+          <div>
+            <img
+              alt=""
+              className={styles.logo}
+              src="/static/images/about/employment/mmt/logo.svg"
+            />
+          </div>
+        </PartialSplit.Item>
+      </PartialSplit>
+
+      <PartialSplit index={1}>
+        <PartialSplit.Item>
+          <div>
             <h3>Trouva</h3>
             <p>London, United Kingdom</p>
             <p>
@@ -38,7 +64,7 @@ export default function AboutProfile() {
         </PartialSplit.Item>
       </PartialSplit>
 
-      <PartialSplit index={1}>
+      <PartialSplit index={2}>
         <PartialSplit.Item>
           <div>
             <h3>Hogarth & Ogilvy</h3>
@@ -80,7 +106,7 @@ export default function AboutProfile() {
         </PartialSplit.Item>
       </PartialSplit>
 
-      <PartialSplit index={2}>
+      <PartialSplit index={3}>
         <PartialSplit.Item>
           <div>
             <h3>Critical Mass</h3>
@@ -122,7 +148,7 @@ export default function AboutProfile() {
         </PartialSplit.Item>
       </PartialSplit>
 
-      <PartialSplit index={3}>
+      <PartialSplit index={4}>
         <PartialSplit.Item>
           <div>
             <h3>Studio Farrago</h3>

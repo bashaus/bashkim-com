@@ -12,7 +12,7 @@ export default function AboutProfile() {
         <h2>Tutoring</h2>
       </PartialSubtitle>
 
-      <PartialSplit index={0}>
+      <PartialSplit index={1}>
         <PartialSplit.Item>
           <div>
             <h3>Queensland&nbsp;University of Technology</h3>

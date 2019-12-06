@@ -12,7 +12,7 @@ export default function AboutProfile() {
         <h2>Education</h2>
       </PartialSubtitle>
 
-      <PartialSplit index={1}>
+      <PartialSplit index={0}>
         <PartialSplit.Item>
           <div>
             <h3>Postgraduate</h3>
@@ -39,7 +39,7 @@ export default function AboutProfile() {
         </PartialSplit.Item>
       </PartialSplit>
 
-      <PartialSplit index={2}>
+      <PartialSplit index={1}>
         <PartialSplit.Item>
           <div>
             <h3>Undergraduate</h3>
