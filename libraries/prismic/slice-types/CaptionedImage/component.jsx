@@ -2,6 +2,7 @@ import { RichText } from 'prismic-reactjs';
 import React from 'react';
 
 import PartialCaptioned from '%components/PartialCaptioned';
+import DeferredAsset from '%components/DeferredAsset';
 import LinkResolver from '%prismic/helpers/LinkResolver';
 
 import SlicePropType from './prop-type';
@@ -14,21 +15,19 @@ export default function CaptionedImageSliceType(props) {
     CaptionedImageSliceType_Image: image,
   } = slice.primary;
 
-  let imageComponent = null;
-
-  if (image && image.url) {
-    imageComponent = (
-      <img
-        src={image.url}
-        alt={image.alt || ''}
-        width={image.dimensions.width}
-        height={image.dimensions.height}
-      />
-    );
-  }
-
   return (
-    <PartialCaptioned figure={imageComponent}>
+    <PartialCaptioned figure={(
+      image && image.url && (
+        <DeferredAsset width={image.dimensions.width} height={image.dimensions.height}>
+          <img
+            src={image.url}
+            alt={image.alt || ''}
+            width={image.dimensions.width}
+            height={image.dimensions.height}
+          />
+        </DeferredAsset>
+      )
+    )}>
       { caption && RichText.render(caption, LinkResolver) }
     </PartialCaptioned>
   );

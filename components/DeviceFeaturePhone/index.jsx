@@ -9,7 +9,7 @@ export default function DeviceFeaturePhone(props) {
     <figure className={styles.DeviceFeaturePhone}>
       <div className={styles.wrapper}>
         <div className={styles.content}>
-          <img src={figure} alt="" />
+          {figure}
         </div>
       </div>
       <figcaption>
@@ -21,5 +21,5 @@ export default function DeviceFeaturePhone(props) {
 
 DeviceFeaturePhone.propTypes = {
   children: PropTypes.node.isRequired,
-  figure: PropTypes.string.isRequired,
+  figure: PropTypes.node.isRequired,
 };

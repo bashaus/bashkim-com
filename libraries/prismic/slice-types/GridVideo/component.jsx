@@ -1,7 +1,8 @@
+import Link from 'next/link';
 import { RichText } from 'prismic-reactjs';
 import React from 'react';
 
-import Link from 'next/link';
+import DeferredAsset from '%components/DeferredAsset';
 import LinkResolver from '%prismic/helpers/LinkResolver';
 
 import SlicePropType from './prop-type';
@@ -28,7 +29,9 @@ export default function GridVideoSliceType(props) {
           <li key={i}>
             <Link href={video.embed_url}>
               <a>
-                <img src={poster.url} alt={video.title} />
+                <DeferredAsset width={poster.dimensions.width} height={poster.dimensions.height}>
+                  <img src={poster.url} alt={video.title} />
+                </DeferredAsset>
                 <div className={styles.description}>
                   { description && RichText.render(description, LinkResolver) }
                 </div>

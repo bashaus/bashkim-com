@@ -15,14 +15,14 @@ export default function CaseStudyTechnologies(props) {
 
       <ul>
         {caseStudy.data.info_technologies.map((technology) => {
+          if (!technology.info_technology.data) {
+            return null;
+          }
+
           const {
-            info_technology: {
-              data: {
-                technology_name: name,
-                technology_icon: icon,
-              },
-            },
-          } = technology;
+            technology_name: name,
+            technology_icon: icon,
+          } = technology.info_technology.data;
 
           return (
             <li key={name}>

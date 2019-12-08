@@ -3,6 +3,7 @@ import React from 'react';
 
 import Carousel from '%components/Carousel';
 import CarouselImage from '%components/CarouselImage';
+import DeferredAsset from '%components/DeferredAsset';
 import DeviceSmartphone from '%components/DeviceSmartphone';
 import DeviceFeaturePhone from '%components/DeviceFeaturePhone';
 import PartialFullImage from '%components/PartialFullImage';
@@ -52,7 +53,18 @@ export default function CarouselPhonesSliceType(props) {
             <CarouselImage
               key={i}
               figure={(
-                <DeviceComponent figure={image.url}>
+                <DeviceComponent
+                  figure={(
+                    <DeferredAsset width={image.dimensions.width} height={image.dimensions.height}>
+                      <img
+                        src={image.url}
+                        alt={image.alt}
+                        width={image.dimensions.width}
+                        height={image.dimensions.height}
+                      />
+                    </DeferredAsset>
+                  )}
+                >
                   { caption && RichText.render(caption, LinkResolver) }
                 </DeviceComponent>
               )}

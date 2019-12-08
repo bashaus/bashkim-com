@@ -2,6 +2,7 @@ import { RichText } from 'prismic-reactjs';
 import React from 'react';
 
 import Octicon, { DeviceMobile, DeviceDesktop } from '@primer/octicons-react';
+import DeferredAsset from '%components/DeferredAsset';
 import PartialCaptioned from '%components/PartialCaptioned';
 import LinkResolver from '%prismic/helpers/LinkResolver';
 
@@ -42,12 +43,14 @@ export default function CaptionedScreenshotsSliceType(props) {
   return (
     <PartialCaptioned
       figure={(
-        <img
-          src={selectedImage.url}
-          alt={selectedImage.alt}
-          width={selectedImage.dimensions.width}
-          height={selectedImage.dimensions.height}
-        />
+        <DeferredAsset width={selectedImage.dimensions.width} height={selectedImage.dimensions.height}>
+          <img
+            src={selectedImage.url}
+            alt={selectedImage.alt}
+            width={selectedImage.dimensions.width}
+            height={selectedImage.dimensions.height}
+          />
+        </DeferredAsset>
       )}
     >
       { caption && RichText.render(caption, LinkResolver) }

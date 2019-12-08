@@ -2,6 +2,7 @@ import { RichText } from 'prismic-reactjs';
 import React from 'react';
 import { parse as parseUrl } from 'url';
 
+import DeferredAsset from '%components/DeferredAsset';
 import PartialCaptioned from '%components/PartialCaptioned';
 import VideoPlayerYouTube from '%components/VideoPlayerYouTube';
 import LinkResolver from '%prismic/helpers/LinkResolver';
@@ -25,9 +26,11 @@ export default function CaptionedVideoSliceType(props) {
 
   return (
     <PartialCaptioned
-      figure={
-        v ? <VideoPlayerYouTube v={v} title={video.title} /> : null
-      }
+      figure={(
+        <DeferredAsset ratio={9 / 16}>
+          <VideoPlayerYouTube v={v} title={video.title} />
+        </DeferredAsset>
+      )}
     >
       { caption && RichText.render(caption, LinkResolver) }
     </PartialCaptioned>

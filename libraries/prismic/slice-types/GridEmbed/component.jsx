@@ -14,11 +14,10 @@ export default function GridEmbedSliceType(props) {
         } = item;
 
         return (
-          <div
-            key={i}
-            className={styles.item}
-            dangerouslySetInnerHTML={{ __html: embed.html }}
-          />
+          <div className={styles.item} key={i}>
+            {/* eslint-disable-next-line react/no-danger */}
+            <span dangerouslySetInnerHTML={{ __html: embed.html }} />
+          </div>
         );
       })}
     </div>
