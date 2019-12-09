@@ -18,6 +18,7 @@ import PartialSubtitle from '%components/PartialSubtitle';
 
 import { getHomePage } from '%prismic/content-types/home_page/api';
 import LinkResolver from '%prismic/helpers/LinkResolver';
+import HomePagePropType from '%prismic/content-types/home_page/prop-type';
 
 export default function HomePage(props) {
   const { page } = props;
@@ -68,7 +69,7 @@ export default function HomePage(props) {
         </PartialSubtitle>
 
         <ul>
-          { featuredCaseStudies.map((featuredCaseStudy, i) => {
+          { featuredCaseStudies.map((featuredCaseStudy) => {
             const caseStudy = featuredCaseStudy.featured_case_study;
 
             const backgroundDesktop = caseStudy.data.image_header_desktop;
@@ -132,7 +133,7 @@ export default function HomePage(props) {
 }
 
 HomePage.propTypes = {
-  page: PropTypes.object.isRequired,
+  page: HomePagePropType.isRequired,
 };
 
 HomePage.getInitialProps = async (context) => {
