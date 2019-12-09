@@ -3,29 +3,26 @@ import React from 'react';
 
 import SlicePropType from '%prismic/prop-types/slice';
 
-const SliceBundle = dynamic({
-  modules: () => ({
-    CaptionedImageSliceType: import('%prismic/slice-types/CaptionedImage/component'),
-    CaptionedMagazineSliceType: import('%prismic/slice-types/CaptionedMagazine/component'),
-    CaptionedScreenshotsSliceType: import('%prismic/slice-types/CaptionedScreenshots/component'),
-    CaptionedVideoSliceType: import('%prismic/slice-types/CaptionedVideo/component'),
-    CarouselImagesSliceType: import('%prismic/slice-types/CarouselImages/component'),
-    CarouselPhonesSliceType: import('%prismic/slice-types/CarouselPhones/component'),
-    FullTextSliceType: import('%prismic/slice-types/FullText/component'),
-    NewspaperSliceType: import('%prismic/slice-types/Newspaper/component'),
-    SubtitleSliceType: import('%prismic/slice-types/Subtitle/component'),
-    GridEmbedSliceType: import('%prismic/slice-types/GridEmbed/component'),
-    GridVideoSliceType: import('%prismic/slice-types/GridVideo/component'),
-  }),
-  render: (props, ComponentList) => {
-    const { slice } = props;
-    const SliceComponent = ComponentList[slice.slice_type];
-    return <SliceComponent {...props} />;
-  },
-});
+const SliceBundle = {
+  CaptionedImageSliceType: dynamic(() => import('%prismic/slice-types/CaptionedImage/component')),
+  CaptionedMagazineSliceType: dynamic(() => import('%prismic/slice-types/CaptionedMagazine/component')),
+  CaptionedScreenshotsSliceType: dynamic(() => import('%prismic/slice-types/CaptionedScreenshots/component')),
+  CaptionedVideoSliceType: dynamic(() => import('%prismic/slice-types/CaptionedVideo/component')),
+  CarouselImagesSliceType: dynamic(() => import('%prismic/slice-types/CarouselImages/component')),
+  CarouselPhonesSliceType: dynamic(() => import('%prismic/slice-types/CarouselPhones/component')),
+  FullTextSliceType: dynamic(() => import('%prismic/slice-types/FullText/component')),
+  NewspaperSliceType: dynamic(() => import('%prismic/slice-types/Newspaper/component')),
+  SubtitleSliceType: dynamic(() => import('%prismic/slice-types/Subtitle/component')),
+  GridEmbedSliceType: dynamic(() => import('%prismic/slice-types/GridEmbed/component')),
+  GridVideoSliceType: dynamic(() => import('%prismic/slice-types/GridVideo/component')),
+};
 
 export default function Slice(props) {
-  return <SliceBundle {...props} />;
+  const { slice } = props;
+  const SliceComponent = SliceBundle[slice.slice_type];
+
+  // eslint-disable-next-line react/jsx-props-no-spreading
+  return <SliceComponent {...props} />;
 }
 
 Slice.propTypes = {

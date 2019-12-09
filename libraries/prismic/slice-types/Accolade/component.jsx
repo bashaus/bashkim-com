@@ -1,5 +1,4 @@
 import { RichText, Link } from 'prismic-reactjs';
-import PropTypes from 'prop-types';
 import React from 'react';
 import dayjs from 'dayjs';
 
@@ -7,7 +6,7 @@ import LinkResolver from '%prismic/helpers/LinkResolver';
 
 import TrophyImage from '%public/static/vectors/icons/trophy.svg';
 
-import PropType from './prop-type';
+import SlicePropType from './prop-type';
 import styles from './styles.scss';
 
 export default function AccoladeSliceType(props) {
@@ -55,5 +54,5 @@ export default function AccoladeSliceType(props) {
 }
 
 AccoladeSliceType.propTypes = {
-  slice: PropTypes.object.isRequired,
+  slice: SlicePropType.isRequired,
 };
