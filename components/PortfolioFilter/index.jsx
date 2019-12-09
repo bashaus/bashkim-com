@@ -88,6 +88,7 @@ class PortfolioFilter extends React.PureComponent {
       <div className={styles.PortfolioFilter}>
         <div className={styles.tags}>
           <ReactTags
+            autofocus={false}
             tags={filters}
             suggestions={technologies}
             placeholder={placeholder}
