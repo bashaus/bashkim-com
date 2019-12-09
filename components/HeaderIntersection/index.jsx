@@ -1,13 +1,11 @@
-import PropTypes from 'prop-types';
 import React from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 
-import * as HeaderActions from '%actions/header';
+import { NavigationContext } from '%contexts/Navigation';
+import * as NavigationActions from '%contexts/Navigation/actions';
 
 import styles from './styles.scss';
 
-export class HeaderIntersectionDisconnected extends React.PureComponent {
+export default class HeaderIntersection extends React.PureComponent {
   constructor(...args) {
     super(...args);
 
@@ -33,26 +31,20 @@ export class HeaderIntersectionDisconnected extends React.PureComponent {
   }
 
   processIntersectionEntries = (entries) => {
-    const { doHeaderSetIntersection } = this.props;
-    entries.forEach((entry) => doHeaderSetIntersection(entry.isIntersecting));
+    const { dispatch } = this.context;
+    entries.forEach(
+      (entry) => dispatch({
+        type: NavigationActions.SET_AT_TOP,
+        payload: entry.isIntersecting,
+      }),
+    );
   }
 
   render() {
     return (
-      <div ref={this.ref} className={styles.Intersection} />
+      <div ref={this.ref} className={styles.HeaderIntersection} />
     );
   }
 }
 
-HeaderIntersectionDisconnected.propTypes = {
-  /* mapDispatchToProps */
-  doHeaderSetIntersection: PropTypes.func.isRequired,
-};
-
-function mapDispatchToProps(dispatch) {
-  return bindActionCreators({
-    doHeaderSetIntersection: HeaderActions.setIntersection,
-  }, dispatch);
-}
-
-export default connect(null, mapDispatchToProps)(HeaderIntersectionDisconnected);
+HeaderIntersection.contextType = NavigationContext;

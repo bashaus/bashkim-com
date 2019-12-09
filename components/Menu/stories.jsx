@@ -1,31 +1,27 @@
 import React from 'react';
-import { Provider } from 'react-redux';
-
 import { storiesOf } from '@storybook/react';
 
 import Menu from '.';
 import MenuBackButtonHomeImpl from '%components/MenuBackButtonHomeImpl';
 import MenuBackButtonPortfolioImpl from '%components/MenuBackButtonPortfolioImpl';
-import Store from '%store';
-
-const store = Store();
+import NavigationProvider from '%contexts/Navigation';
 
 storiesOf('Components: Menu', module)
   .add('default', () => (
-    <Provider store={store}>
+    <NavigationProvider>
       <Menu />
-    </Provider>
+    </NavigationProvider>
   ))
 
   .add('back to home', () => (
-    <Provider store={store}>
+    <NavigationProvider>
       <Menu backButton={MenuBackButtonHomeImpl} />
-    </Provider>
+    </NavigationProvider>
   ))
 
   .add('back to portfolio', () => (
-    <Provider store={store}>
+    <NavigationProvider>
       <Menu backButton={MenuBackButtonPortfolioImpl} />
-    </Provider>
+    </NavigationProvider>
   ));
 

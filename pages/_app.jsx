@@ -1,13 +1,7 @@
 import App from 'next/app';
-import Router from 'next/router';
 import getConfig from 'next/config';
-import { Provider } from 'react-redux';
 import React from 'react';
 import * as Sentry from '@sentry/browser';
-import withReduxStore from 'store/next';
-
-import * as PrismicActions from '%prismic/store/actions';
-import * as RouterActions from '%actions/router';
 
 import TrackingSentryBoundary from '%components/TrackingSentryBoundary';
 
@@ -22,37 +16,14 @@ if (sentryIsEnabled) {
   });
 }
 
-class MyApp extends App {
-  componentDidMount() {
-    const { reduxStore } = this.props;
-
-    // Router actions
-    Router.events.on('routeChangeStart', (url) => {
-      RouterActions.changeStart({ url })(reduxStore.dispatch);
-    });
-
-    Router.events.on('routeChangeComplete', (url) => {
-      RouterActions.changeComplete({ url })(reduxStore.dispatch);
-    });
-
-    Router.events.on('routeChangeError', (err, url) => {
-      RouterActions.changeStart({ err, url })(reduxStore.dispatch);
-    });
-
-    // Prismic actions
-    PrismicActions.previewDetect()(reduxStore.dispatch);
-  }
-
+export default class MyApp extends App {
   render() {
-    const { Component, pageProps, reduxStore } = this.props;
+    const { Component, pageProps } = this.props;
     return (
       <TrackingSentryBoundary>
-        <Provider store={reduxStore}>
-          <Component {...pageProps} />
-        </Provider>
+        {/* eslint-disable-next-line react/jsx-props-no-spreading */}
+        <Component {...pageProps} />
       </TrackingSentryBoundary>
     );
   }
 }
-
-export default withReduxStore(MyApp);

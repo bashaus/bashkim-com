@@ -1,27 +1,25 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 import AnimateHeight from 'react-animate-height';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 
-import * as CookiesActions from '%actions/cookies';
+import * as CookiesActions from '%contexts/Cookies/actions';
+import { CookiesContext } from '%contexts/Cookies';
 
 import styles from './styles.scss';
 
-export class CookiesNoticeDisconnected extends React.Component {
+export default class CookiesNotice extends React.Component {
   constructor(...args) {
     super(...args);
 
-    const { cookiesDismissed } = this.props;
+    const { state: cookiesState } = this.context;
 
     this.state = {
-      isVisible: !cookiesDismissed,
+      isVisible: !cookiesState.isDismissed,
     };
   }
 
   handleDismissClick = () => {
-    const { doCookiesDismiss } = this.props;
-    doCookiesDismiss();
+    const { dispatch } = this.context;
+    dispatch({ type: CookiesActions.DISMISS });
   }
 
   handleAnimationEnd = () => {
@@ -29,7 +27,7 @@ export class CookiesNoticeDisconnected extends React.Component {
   }
 
   render() {
-    const { cookiesDismissed } = this.props;
+    const { state: cookiesState } = this.context;
     const { isVisible } = this.state;
 
     if (!isVisible) {
@@ -40,7 +38,7 @@ export class CookiesNoticeDisconnected extends React.Component {
       <div className={styles.CookiesNotice}>
         <AnimateHeight
           duration={300}
-          height={cookiesDismissed ? 0 : 'auto'}
+          height={cookiesState.isDismissed ? 0 : 'auto'}
           eassing="ease-out"
           onAnimationEnd={this.handleAnimationEnd}
         >
@@ -55,7 +53,9 @@ export class CookiesNoticeDisconnected extends React.Component {
               .
             </div>
             <div className={styles.close}>
-              <button type="button" onClick={this.handleDismissClick}>OK, Cool</button>
+              <button type="button" onClick={this.handleDismissClick}>
+                OK, Cool
+              </button>
             </div>
           </div>
         </AnimateHeight>
@@ -64,24 +64,4 @@ export class CookiesNoticeDisconnected extends React.Component {
   }
 }
 
-CookiesNoticeDisconnected.propTypes = {
-  /* mapStateToProps */
-  cookiesDismissed: PropTypes.bool.isRequired,
-
-  /* mapDispatchToProps */
-  doCookiesDismiss: PropTypes.func.isRequired,
-};
-
-function mapStateToProps(state) {
-  return {
-    cookiesDismissed: state.cookies.isDismissed,
-  };
-}
-
-function mapDispatchToProps(dispatch) {
-  return bindActionCreators({
-    doCookiesDismiss: CookiesActions.dismiss,
-  }, dispatch);
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(CookiesNoticeDisconnected);
+CookiesNotice.contextType = CookiesContext;

@@ -3,9 +3,12 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 
-import { CookiesNoticeDisconnected as CookiesNotice } from '.';
+import CookiesProvider from '%contexts/Cookies'
+import CookiesNotice from '.';
 
 storiesOf('Components: CookiesNotice', module)
   .add('default', () => (
-    <CookiesNotice doCookiesDismiss={action('doCookiesDismiss')} />
+    <CookiesProvider>
+      <CookiesNotice doCookiesDismiss={action('doCookiesDismiss')} />
+    </CookiesProvider>
   ));

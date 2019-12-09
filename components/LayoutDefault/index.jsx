@@ -1,21 +1,16 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { connect } from 'react-redux';
 
 import '%styleguide/main.scss';
 
 import CookiesNotice from '%components/CookiesNotice';
-import Footer from '%components/Footer';
-import Header from '%components/Header';
-import HeaderIntersection from '%components/HeaderIntersection';
-import Menu from '%components/Menu';
-import PrismicPreviewNotification from '%components/PrismicPreviewNotification';
+import Page from '%components/Page';
+import CookiesProvider from '%contexts/Cookies';
+import NavigationProvider from '%contexts/Navigation';
 
-import styles from './styles.scss';
-
-export function LayoutDefaultDisconnected(props) {
+export default function LayoutDefault(props) {
   const {
-    backButton, children, menuIsVisible, theme,
+    backButton, children, theme,
   } = props;
 
   if (typeof document !== 'undefined') {
@@ -31,52 +26,27 @@ export function LayoutDefaultDisconnected(props) {
 
   return (
     <>
-      <PrismicPreviewNotification />
-      <HeaderIntersection />
-      <CookiesNotice />
-      <Header theme={theme} />
+      <CookiesProvider>
+        <CookiesNotice />
+      </CookiesProvider>
 
-      <div
-        className={`
-          ${styles.menuSignified}
-          ${menuIsVisible ? styles.menuIsVisible : ''}
-        `}
-      >
-        <div className={styles.menu}>
-          <Menu backButton={backButton} />
-        </div>
-
-        <main
-          id="content"
-          className={`${styles.content} ${styles[`theme-${theme}`]}`}
-          tabIndex="-1"
-        >
+      <NavigationProvider>
+        <Page backButton={backButton} theme={theme}>
           { children }
-        </main>
-
-        <Footer />
-      </div>
+        </Page>
+      </NavigationProvider>
     </>
   );
 }
 
-LayoutDefaultDisconnected.propTypes = {
+LayoutDefault.propTypes = {
   backButton: PropTypes.node,
   children: PropTypes.node,
-  menuIsVisible: PropTypes.bool.isRequired,
   theme: PropTypes.string,
 };
 
-LayoutDefaultDisconnected.defaultProps = {
+LayoutDefault.defaultProps = {
   backButton: null,
   children: null,
   theme: 'default',
 };
-
-function mapStateToProps(state) {
-  return {
-    menuIsVisible: state.menu.isVisible,
-  };
-}
-
-export default connect(mapStateToProps)(LayoutDefaultDisconnected);

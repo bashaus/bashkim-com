@@ -3,7 +3,7 @@
 @import "~%styleguide/utils/colors";
 @import "~%styleguide/utils/media";
 
-.navigation {
+.Navigation {
   display: flex;
   justify-content: flex-end;
   flex-grow: 1;
@@ -62,7 +62,7 @@
       color: inherit;
     }
 
-    &.intersecting {
+    &.atTop {
       color: $color-white;
     }
   }

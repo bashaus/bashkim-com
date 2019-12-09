@@ -1,50 +1,34 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { connect } from 'react-redux';
 
 import Logo from '%components/Logo';
 import Navigation from '%components/Navigation';
+import { NavigationContext } from '%contexts/Navigation';
 
 import styles from './styles.scss';
 
-export function HeaderDisconnected(props) {
-  const {
-    headerIsIntersecting,
-    menuIsVisible,
-    theme,
-  } = props;
+export default function Header(props) {
+  const { theme } = props;
+  const { state: navigationState } = React.useContext(NavigationContext);
 
   return (
     <header
       className={`
         ${styles.header}
-        ${headerIsIntersecting ? styles.headerIsIntersecting : ''}
-        ${menuIsVisible ? styles.menuIsVisible : ''}
+        ${navigationState.atTop ? styles.atTop : ''}
+        ${navigationState.isVisible ? styles.isVisible : ''}
       `}
     >
       <div className={styles.headerContainer}>
         <div className={styles.headerLogo}>
           <Logo />
         </div>
-        <Navigation headerIsIntersecting={headerIsIntersecting} theme={theme} />
+        <Navigation theme={theme} />
       </div>
     </header>
   );
 }
 
-HeaderDisconnected.propTypes = {
+Header.propTypes = {
   theme: PropTypes.string.isRequired,
-
-  /* mapStateToProps */
-  headerIsIntersecting: PropTypes.bool.isRequired,
-  menuIsVisible: PropTypes.bool.isRequired,
 };
-
-function mapStateToProps(state) {
-  return {
-    headerIsIntersecting: state.header.isIntersecting,
-    menuIsVisible: state.menu.isVisible,
-  };
-}
-
-export default connect(mapStateToProps)(HeaderDisconnected);

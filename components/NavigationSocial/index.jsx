@@ -1,20 +1,24 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 
 import LogoGitHub from '%public/static/vectors/social/github.svg';
 import LogoLinkedIn from '%public/static/vectors/social/linkedin.svg';
 import LogoStackOverflow from '%public/static/vectors/social/stackoverflow.svg';
 
+import { NavigationContext } from '%contexts/Navigation';
+
 import styles from './styles.scss';
 
-export default function NavigationSocial(props) {
-  const { headerIsIntersecting } = props;
+export default function NavigationSocial() {
+  const { state: navigationState } = React.useContext(NavigationContext);
 
   return (
     <nav
       data-heading="Social media"
       aria-label="Social media"
-      className={`${styles.NavigationSocial} ${headerIsIntersecting ? styles.intersecting : ''}`}
+      className={`
+        ${styles.NavigationSocial}
+        ${navigationState.atTop ? styles.atTop : ''}
+      `}
     >
       <ul>
         <li className={styles.icon_GitHub}>
@@ -84,7 +88,3 @@ export default function NavigationSocial(props) {
     </nav>
   );
 }
-
-NavigationSocial.propTypes = {
-  headerIsIntersecting: PropTypes.bool.isRequired,
-};

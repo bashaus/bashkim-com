@@ -1,26 +1,24 @@
-import PropTypes from 'prop-types';
 import React from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 
-import * as MenuActions from '%actions/menu';
+import { NavigationContext } from '%contexts/Navigation';
+import * as NavigationActions from '%contexts/Navigation/actions';
 
 import styles from './styles.scss';
 
-export class MenuSignifierButtonDisconnected extends React.PureComponent {
-  handleSignifierClick = (e) => {
-    const { doMenuToggle } = this.props;
-    doMenuToggle(e);
+export default class MenuSignifierButton extends React.PureComponent {
+  handleSignifierClick = () => {
+    const { dispatch } = this.context;
+    dispatch({ type: NavigationActions.TOGGLE });
   }
 
   render() {
-    const { menuIsVisible } = this.props;
+    const { state: menuState } = this.context;
 
     return (
       <button
         type="button"
         aria-hidden="true"
-        aria-pressed={menuIsVisible}
+        aria-pressed={menuState.isVisible}
         onClick={this.handleSignifierClick}
         className={styles.MenuSignifierButton}
       >
@@ -35,28 +33,4 @@ export class MenuSignifierButtonDisconnected extends React.PureComponent {
   }
 }
 
-MenuSignifierButtonDisconnected.propTypes = {
-  /* mapStateToProps */
-  menuIsVisible: PropTypes.bool.isRequired,
-
-  /* mapDispatchToProps */
-  doMenuToggle: PropTypes.func,
-};
-
-MenuSignifierButtonDisconnected.defaultProps = {
-  doMenuToggle: () => {},
-};
-
-function mapStateToProps(state) {
-  return {
-    menuIsVisible: state.menu.isVisible,
-  };
-}
-
-function mapDispatchToProps(dispatch) {
-  return bindActionCreators({
-    doMenuToggle: MenuActions.toggle,
-  }, dispatch);
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(MenuSignifierButtonDisconnected);
+MenuSignifierButton.contextType = NavigationContext;

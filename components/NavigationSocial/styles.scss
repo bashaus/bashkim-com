@@ -75,7 +75,7 @@
     transition: fill 0.3s;
   }
 
-  .NavigationSocial.intersecting & svg {
+  .NavigationSocial.atTop & svg {
     fill: $color-white;
   }
 }

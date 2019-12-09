@@ -45,11 +45,11 @@ package:
     - .storybook/**
     - "**/stories.jsx"
     - components/**
+    - contexts/**
     - node_modules/.cache/**
     - pages/**
     - prop-types/**
     - public/**
-    - store/**
     - styleguide/**
     - .babelrc
     - .editorconfig
