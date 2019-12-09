@@ -19,10 +19,16 @@ if (sentryIsEnabled) {
 export default class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props;
+
+    const getLayout = Component.getLayout || ((page) => page);
+    const Layout = getLayout(
+      /* eslint-disable-next-line react/jsx-props-no-spreading */
+      <Component {...pageProps} />,
+    );
+
     return (
       <TrackingSentryBoundary>
-        {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-        <Component {...pageProps} />
+        { Layout }
       </TrackingSentryBoundary>
     );
   }

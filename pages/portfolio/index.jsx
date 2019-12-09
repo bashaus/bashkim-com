@@ -28,7 +28,7 @@ export default function PortfolioPage(props) {
   } = page.data;
 
   return (
-    <LayoutDefault backButton={MenuBackButtonHomeImpl} theme="portfolio">
+    <>
       <MetaTitle content={metaTitle} />
       <MetaDescription content={metaDescription} />
       <MetaKeywords content={metaKeywords} />
@@ -57,7 +57,7 @@ export default function PortfolioPage(props) {
           <PortfolioSearch />
         </PortfolioListProvider>
       </section>
-    </LayoutDefault>
+    </>
   );
 }
 
@@ -83,4 +83,12 @@ PortfolioPage.getInitialProps = async (context) => {
       name: result.data.technology_name,
     })),
   };
+};
+
+PortfolioPage.getLayout = function PortfolioLayout(page) {
+  return (
+    <LayoutDefault backButton={MenuBackButtonHomeImpl} theme="portfolio">
+      { page }
+    </LayoutDefault>
+  );
 };

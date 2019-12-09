@@ -29,7 +29,7 @@ export default function HomePage(props) {
   } = page.data;
 
   return (
-    <LayoutDefault>
+    <>
       <MetaTitle standalone content={metaTitle} />
       <MetaDescription content={metaDescription} />
       <MetaKeywords content={metaKeywords} />
@@ -127,7 +127,7 @@ export default function HomePage(props) {
           </PartialSplit.Item>
         </PartialSplit>
       </section>
-    </LayoutDefault>
+    </>
   );
 }
 
@@ -141,4 +141,12 @@ HomePage.getInitialProps = async (context) => {
   const page = await getHomePage({ ref });
 
   return { page };
+};
+
+HomePage.getLayout = function HomeLayout(page) {
+  return (
+    <LayoutDefault>
+      { page }
+    </LayoutDefault>
+  );
 };

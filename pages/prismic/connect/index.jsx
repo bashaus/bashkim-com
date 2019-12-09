@@ -1,3 +1,4 @@
+import Prismic from 'prismic-javascript';
 import getConfig from 'next/config';
 import React from 'react';
 
@@ -9,7 +10,6 @@ export default class PrismicConnectPage extends React.PureComponent {
   static async getInitialProps({ req, res, query }) {
     const { token } = query;
 
-    const Prismic = await import('prismic-javascript');
     const api = await Prismic.getApi(publicRuntimeConfig.prismic.apiEndpoint, { req });
     const url = await api.previewSession(token, LinkResolver, '/');
 
@@ -25,6 +25,10 @@ export default class PrismicConnectPage extends React.PureComponent {
   }
 
   render() {
-    return <p>Connecting to Prismic</p>;
+    return (
+      <div>
+        Connecting to Prismic
+      </div>
+    );
   }
 }

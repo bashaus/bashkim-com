@@ -1,4 +1,5 @@
 import { RichText, Link } from 'prismic-reactjs';
+import PropTypes from 'prop-types';
 import React from 'react';
 import dayjs from 'dayjs';
 
@@ -54,5 +55,5 @@ export default function AccoladeSliceType(props) {
 }
 
 AccoladeSliceType.propTypes = {
-  slice: PropType.isRequired,
+  slice: PropTypes.object.isRequired,
 };

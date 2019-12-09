@@ -8,6 +8,10 @@ const { publicRuntimeConfig } = getConfig();
 export default function MetaCanonical(props) {
   const { href } = props;
 
+  if (!href) {
+    return null;
+  }
+
   const absoluteHref = `${publicRuntimeConfig.sitemap.baseHref}${href}`;
 
   return (
@@ -18,5 +22,9 @@ export default function MetaCanonical(props) {
 }
 
 MetaCanonical.propTypes = {
-  href: PropTypes.string.isRequired,
+  href: PropTypes.string,
+};
+
+MetaCanonical.defaultProps = {
+  href: null,
 };

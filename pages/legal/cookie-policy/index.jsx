@@ -12,7 +12,7 @@ import styles from './styles.scss';
 
 export default function CookiePolicyPage() {
   return (
-    <LayoutDefault backButton={MenuBackButtonHomeImpl}>
+    <>
       <MetaTitle content="Cookie Policy" />
       <MetaDescription
         content="How your personal information is collected and used on this website"
@@ -158,6 +158,14 @@ export default function CookiePolicyPage() {
           <p>Last updated 01 June 2018</p>
         </PartialFullText>
       </section>
-    </LayoutDefault>
+    </>
   );
 }
+
+CookiePolicyPage.getLayout = function CookiePolicyLayout(page) {
+  return (
+    <LayoutDefault backButton={MenuBackButtonHomeImpl}>
+      { page }
+    </LayoutDefault>
+  );
+};

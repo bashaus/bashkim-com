@@ -35,45 +35,51 @@ export default function CaseStudyPage(props) {
   } = caseStudy.data;
 
   return (
-    <LayoutDefault backButton={MenuBackButtonPortfolioImpl} theme="portfolio">
+    <article itemScope itemType="http://schema.org/CreativeWork">
       <MetaTitle content={caseStudy.data.meta_title} />
       <MetaDescription content={caseStudy.data.meta_description} />
       <MetaKeywords content={caseStudy.data.meta_keywords} />
-      <MetaImage image={caseStudy.data.image_poster.url} />
+
+      { caseStudy.data.image_poster && caseStudy.data.image_poster.url && (
+        <MetaImage
+          url={caseStudy.data.image_poster.url}
+          width={caseStudy.data.image_poster.dimensions.width}
+          height={caseStudy.data.image_poster.dimensions.height}
+        />
+      ) }
+
       <MetaCanonical href={`/portfolio/${caseStudy.uid}`} />
 
-      <article itemScope itemType="http://schema.org/CreativeWork">
-        <CaseStudyHeader caseStudy={caseStudy} />
+      <CaseStudyHeader caseStudy={caseStudy} />
 
-        <section className="group">
-          { bodySlices.map((slice, i) => (
-            <Slice slice={slice} key={i} />
-          )) }
+      <section className="group">
+        { bodySlices.map((slice, i) => (
+          <Slice slice={slice} key={i} />
+        )) }
+      </section>
+
+      { exhibitionSlices && (exhibitionSlices.length > 0) && (
+        <section className="group-alternate">
+          <CaseStudyExhibitions slices={exhibitionSlices} />
         </section>
+      ) }
 
-        { exhibitionSlices && (exhibitionSlices.length > 0) && (
-          <section className="group-alternate">
-            <CaseStudyExhibitions slices={exhibitionSlices} />
-          </section>
-        ) }
+      { accoladeSlices && (accoladeSlices.length > 0) && (
+        <section className="group-alternate">
+          <CaseStudyAccolades slices={accoladeSlices} />
+        </section>
+      ) }
 
-        { accoladeSlices && (accoladeSlices.length > 0) && (
-          <section className="group-alternate">
-            <CaseStudyAccolades slices={accoladeSlices} />
-          </section>
-        ) }
-
-        { collaboratorSlices && (collaboratorSlices.length > 0) && (
-          <section className="group-alternate">
-            <CaseStudyCollaborators
-              myRole={caseStudy.data.info_role}
-              peers={peers}
-              slices={collaboratorSlices}
-            />
-          </section>
-        ) }
-      </article>
-    </LayoutDefault>
+      { collaboratorSlices && (collaboratorSlices.length > 0) && (
+        <section className="group-alternate">
+          <CaseStudyCollaborators
+            myRole={caseStudy.data.info_role}
+            peers={peers}
+            slices={collaboratorSlices}
+          />
+        </section>
+      ) }
+    </article>
   );
 }
 
@@ -103,4 +109,12 @@ CaseStudyPage.getInitialProps = async (context) => {
 CaseStudyPage.propTypes = {
   caseStudy: CaseStudyContentPropType.isRequired,
   peers: PropTypes.arrayOf(PeerContentPropType).isRequired,
+};
+
+CaseStudyPage.getLayout = function CaseStudyLayout(page) {
+  return (
+    <LayoutDefault backButton={MenuBackButtonPortfolioImpl} theme="portfolio">
+      { page }
+    </LayoutDefault>
+  );
 };

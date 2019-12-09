@@ -5,6 +5,10 @@ import React from 'react';
 export default function MetaKeywords(props) {
   const { content } = props;
 
+  if (!content) {
+    return null;
+  }
+
   return (
     <Head>
       <meta key="MetaKeywords" name="keywords" content={content} />
@@ -13,5 +17,9 @@ export default function MetaKeywords(props) {
 }
 
 MetaKeywords.propTypes = {
-  content: PropTypes.string.isRequired,
+  content: PropTypes.string,
+};
+
+MetaKeywords.defaultProps = {
+  content: null,
 };

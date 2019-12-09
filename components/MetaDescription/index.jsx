@@ -5,6 +5,10 @@ import React from 'react';
 export default function MetaDescription(props) {
   const { content } = props;
 
+  if (!content) {
+    return null;
+  }
+
   return (
     <Head>
       <meta key="MetaDescription" name="description" content={content} />
@@ -15,5 +19,9 @@ export default function MetaDescription(props) {
 }
 
 MetaDescription.propTypes = {
-  content: PropTypes.string.isRequired,
+  content: PropTypes.string,
+};
+
+MetaDescription.defaultProps = {
+  content: null,
 };

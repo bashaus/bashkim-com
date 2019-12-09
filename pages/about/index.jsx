@@ -6,7 +6,7 @@ import AboutTutoring from '%components/AboutTutoring';
 import AboutEducation from '%components/AboutEducation';
 import AboutCertifications from '%components/AboutCertifications';
 import LayoutDefault from '%components/LayoutDefault';
-import MenuHomeBackButtonImpl from '%components/MenuBackButtonHomeImpl';
+import MenuBackButtonHomeImpl from '%components/MenuBackButtonHomeImpl';
 import MetaDescription from '%components/MetaDescription';
 import MetaKeywords from '%components/MetaKeywords';
 import MetaTitle from '%components/MetaTitle';
@@ -19,7 +19,7 @@ import styles from './styles.scss';
 
 export default function AboutPage() {
   return (
-    <LayoutDefault backButton={MenuHomeBackButtonImpl} theme="about">
+    <>
       <MetaTitle content="About" />
       <MetaDescription content="Information on the work history of Bashkim Isai" />
       <MetaKeywords content="bashkim isai, creative technologist, london" />
@@ -68,6 +68,14 @@ export default function AboutPage() {
           </PartialSplit.Item>
         </PartialSplit>
       </section>
-    </LayoutDefault>
+    </>
   );
 }
+
+AboutPage.getLayout = function AboutLayout(page) {
+  return (
+    <LayoutDefault backButton={MenuBackButtonHomeImpl} theme="about">
+      { page }
+    </LayoutDefault>
+  );
+};
