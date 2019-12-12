@@ -6,21 +6,18 @@
   ],
 
   "plugins": [
-    "inline-react-svg",
-    [
-      "module-resolver", {
-        "root": ["./"],
-        "alias": {
-          "%components": "./components",
-          "%contexts": "./contexts",
-          "%libraries": "./libraries",
-          "%prismic": "./libraries/prismic",
-          "%public": "./public",
-          "%storybook": "./.storybook",
-          "%styleguide": "./styleguide"
-        }
+    ["module-resolver", {
+      "root": ["./"],
+      "alias": {
+        "%components": "./components",
+        "%contexts": "./contexts",
+        "%libraries": "./libraries",
+        "%prismic": "./libraries/prismic",
+        "%public": "./public",
+        "%storybook": "./.storybook",
+        "%styleguide": "./styleguide"
       }
-    ]
+    }]
   ],
 
   "env": {

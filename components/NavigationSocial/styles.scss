@@ -117,18 +117,18 @@
   @extend %socialIcon;
 
   @include breakpoint($media-mobile) {
-    svg :global(.stackoverflow-container),
-    svg :global(.stackoverflow-stack)  {
+    svg :global(.stackoverflow_svg__stackoverflow-container),
+    svg :global(.stackoverflow_svg__stackoverflow-stack)  {
       fill: $color-shade-border;
     }
   }
 
   @include breakpoint($media-not-mobile) {
-    a:hover svg :global(.stackoverflow-container) {
+    a:hover svg :global(.stackoverflow_svg__stackoverflow-container) {
       fill: #BCBBBB;
     }
 
-    a:hover svg :global(.stackoverflow-stack) {
+    a:hover svg :global(.stackoverflow_svg__stackoverflow-stack) {
       fill: #F48024;
     }
   }

@@ -28,6 +28,12 @@ const nextConfig = {
       }
     });
 
+    // Inline SVG support
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ['@svgr/webpack'],
+    });
+
     // Important: return the modified config
     return config;
   },

@@ -31,6 +31,10 @@ module.exports = {
           require.resolve('css-loader'),
         ],
       },
+      {
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
+      },
     ],
   },
 };
