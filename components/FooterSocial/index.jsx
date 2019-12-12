@@ -7,7 +7,7 @@ import styles from './styles.scss';
 export default function FooterSocial() {
   return (
     <div className={styles.FooterSocial}>
-      <FooterColumn label="Connect" id="footer--social">
+      <FooterColumn label="Connect">
         <ul>
           <li>
             <a

@@ -8,7 +8,7 @@ import styles from './styles.scss';
 export default function FooterLinks() {
   return (
     <div className={styles.FooterLinks}>
-      <FooterColumn label="Articles" id="footer--articles">
+      <FooterColumn label="Articles">
         <ul>
           <li>
             <a
@@ -31,7 +31,7 @@ export default function FooterLinks() {
         </ul>
       </FooterColumn>
 
-      <FooterColumn label="Portfolio" id="footer--portfolio">
+      <FooterColumn label="Portfolio">
         <ul>
           <li>
             <Link href="/portfolio">
@@ -50,7 +50,7 @@ export default function FooterLinks() {
         </ul>
       </FooterColumn>
 
-      <FooterColumn label="Legal" id="footer--legal">
+      <FooterColumn label="Legal">
         <ul>
           <li>
             <Link href="/legal/cookie-policy">
