@@ -19,7 +19,7 @@ export default function Navigation(props) {
       `}
     >
       <NavigationPrimary theme={theme} />
-      <NavigationSocial theme={theme} />
+      <NavigationSocial />
     </div>
   );
 }
