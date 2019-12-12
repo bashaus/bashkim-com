@@ -39,7 +39,7 @@ export default class CookiesNotice extends React.Component {
         <AnimateHeight
           duration={300}
           height={cookiesState.isDismissed ? 0 : 'auto'}
-          eassing="ease-out"
+          easing="ease-out"
           onAnimationEnd={this.handleAnimationEnd}
         >
           <div className={styles.container}>
