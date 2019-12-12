@@ -4,24 +4,24 @@ import { storiesOf } from '@storybook/react';
 import Menu from '.';
 import MenuBackButtonHomeImpl from '%components/MenuBackButtonHomeImpl';
 import MenuBackButtonPortfolioImpl from '%components/MenuBackButtonPortfolioImpl';
-import NavigationProvider from '%contexts/Navigation';
+import NavigationStore from '%contexts/Navigation';
 
 storiesOf('Components: Menu', module)
   .add('default', () => (
-    <NavigationProvider>
+    <NavigationStore>
       <Menu />
-    </NavigationProvider>
+    </NavigationStore>
   ))
 
   .add('back to home', () => (
-    <NavigationProvider>
+    <NavigationStore>
       <Menu backButton={MenuBackButtonHomeImpl} />
-    </NavigationProvider>
+    </NavigationStore>
   ))
 
   .add('back to portfolio', () => (
-    <NavigationProvider>
+    <NavigationStore>
       <Menu backButton={MenuBackButtonPortfolioImpl} />
-    </NavigationProvider>
+    </NavigationStore>
   ));
 

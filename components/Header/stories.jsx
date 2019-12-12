@@ -3,11 +3,11 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 
 import Header from '.';
-import NavigationProvider from '%contexts/Navigation';
+import NavigationStore from '%contexts/Navigation';
 
 storiesOf('Components: Header', module)
   .add('default', () => (
-    <NavigationProvider>
+    <NavigationStore>
       <Header />
-    </NavigationProvider>
+    </NavigationStore>
   ));

@@ -6,7 +6,7 @@ import '%styleguide/main.scss';
 import CookiesNotice from '%components/CookiesNotice';
 import Page from '%components/Page';
 import CookiesProvider from '%contexts/Cookies';
-import NavigationProvider from '%contexts/Navigation';
+import NavigationStore from '%contexts/Navigation';
 
 export default function LayoutDefault(props) {
   const {
@@ -30,11 +30,11 @@ export default function LayoutDefault(props) {
         <CookiesNotice />
       </CookiesProvider>
 
-      <NavigationProvider>
+      <NavigationStore>
         <Page backButton={backButton} theme={theme}>
           { children }
         </Page>
-      </NavigationProvider>
+      </NavigationStore>
     </>
   );
 }

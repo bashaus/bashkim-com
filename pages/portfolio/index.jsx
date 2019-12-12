@@ -12,7 +12,7 @@ import PartialHeaderText from '%components/PartialHeaderText';
 import PartialSubtitle from '%components/PartialSubtitle';
 import PortfolioFeaturedCaseStudies from '%components/PortfolioFeaturedCaseStudies';
 import PortfolioSearch from '%components/PortfolioSearch';
-import PortfolioListProvider from '%contexts/PortfolioList';
+import PortfolioListStore from '%contexts/PortfolioList';
 
 import { getCaseStudies } from '%prismic/content-types/case_study/api';
 import { getTechnologies } from '%prismic/content-types/technology/api';
@@ -50,12 +50,12 @@ export default function PortfolioPage(props) {
           <h2>All case studies</h2>
         </PartialSubtitle>
 
-        <PortfolioListProvider
+        <PortfolioListStore
           caseStudies={caseStudies}
           technologies={technologies}
         >
           <PortfolioSearch />
-        </PortfolioListProvider>
+        </PortfolioListStore>
       </section>
     </>
   );

@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { CookiesReducer } from './reducer';
+import CookiesReducer from './reducer';
 
 export const CookiesContext = React.createContext();
 
-export default function CookiesProvider(props) {
+export default function CookiesStore(props) {
   const { children } = props;
 
   const [state, dispatch] = React.useReducer(
@@ -15,12 +15,6 @@ export default function CookiesProvider(props) {
     }),
   );
 
-  /*
-  React.useEffect(() => {
-    localStorage.setItem('books', JSON.stringify(state));
-  }, [state]);
-  */
-
   return (
     <CookiesContext.Provider value={{ state, dispatch }}>
       {children}
@@ -28,6 +22,6 @@ export default function CookiesProvider(props) {
   );
 }
 
-CookiesProvider.propTypes = {
+CookiesStore.propTypes = {
   children: PropTypes.node.isRequired,
 };

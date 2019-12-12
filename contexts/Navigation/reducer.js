@@ -1,6 +1,6 @@
 import * as actions from './actions';
 
-export const MenuReducer = (state, action) => {
+export default function NavigationReducer(state, action) {
   switch (action.type) {
     case actions.HIDE:
       return { ...state, isVisible: false };
@@ -14,8 +14,4 @@ export const MenuReducer = (state, action) => {
     default:
       return state;
   }
-};
-
-export default {
-  MenuReducer,
 };
