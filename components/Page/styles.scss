@@ -19,7 +19,7 @@
 
 @include breakpoint($media-mobile) {
   .menuSignified {
-    transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in-out;
 
     &.menuIsVisible {
       transform: translateX(-260px);

@@ -72,7 +72,7 @@
   }
 
   path {
-    transition: fill 0.3s;
+    transition: fill 0.3s ease-in-out;
   }
 
   .NavigationSocial.atTop & svg {

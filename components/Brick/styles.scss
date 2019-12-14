@@ -16,7 +16,7 @@
     color: $color-text-copy !important;
     padding: 10px;
     height: 100%;
-    transition: all 0.2s;
+    transition: all 0.3s ease-in-out;
     text-decoration: none;
   }
 
@@ -42,7 +42,7 @@
 
   h3 {
     order: 3;
-    transition: all 0.5s;
+    transition: all 0.3s ease-in-out;
   }
 
   p {

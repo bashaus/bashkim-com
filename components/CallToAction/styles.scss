@@ -5,12 +5,11 @@
 .CallToAction {
   a {
     border: solid 2px;
-    transition: all 0.3s;
+    transition: all 0.3s ease-in-out;
     display: inline-block;
     line-height: 30px;
     padding-left: 20px;
     padding-right: 20px;
-    // color: $color-charcol;
     text-decoration: none !important;
   }
 

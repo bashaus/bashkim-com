@@ -15,7 +15,7 @@
   }
 
   a .icon {
-    transition: transform 0.3s;
+    transition: transform 0.3s ease-in-out;
   }
 
   a:hover .icon {
