@@ -7,7 +7,7 @@
   display: block;
   height: 100%;
 
-  a {
+  .inner {
     position: relative;
     display: block;
     flex-wrap: wrap;
@@ -20,7 +20,7 @@
     text-decoration: none;
   }
 
-  a:hover {
+  .inner:hover {
     color: $color-charcol !important;
   }
 

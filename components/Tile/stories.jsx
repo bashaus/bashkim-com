@@ -9,7 +9,6 @@ storiesOf('Components: Tile', module)
     <div style={{ maxWidth: '200px' }}>
       <Tile
         description="This is a description"
-        href="#"
         icon={null}
         poster={null}
         title="This is a title"

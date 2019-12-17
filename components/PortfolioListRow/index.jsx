@@ -12,7 +12,7 @@ export default function PortfolioListRow(props) {
 
   return (
     <article itemScope itemType="http://schema.org/CreativeWork" className={styles.PortfolioListRow}>
-      <Link href={`/portfolio/${caseStudy.uid}`}>
+      <Link href="/portfolio/[caseStudySlug]" as={`/portfolio/${caseStudy.uid}`}>
         <a itemProp="url">
           <div className={styles.name}>
             <h3 itemProp="headline" className={styles.title}>

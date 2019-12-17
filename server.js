@@ -9,9 +9,6 @@ const Router = require('./middleware/router');
 const SeoRouter = require('./middleware/seo/router');
 const SitemapRouter = require('./middleware/sitemaps/router');
 
-require('./middleware/pages/router');
-require('./middleware/caseStudies/router');
-
 const sentryIsEnabled = Config.get('sentry.enabled');
 if (sentryIsEnabled) {
   Sentry.init({

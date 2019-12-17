@@ -28,15 +28,16 @@ export default function PortfolioFeaturedCaseStudies(props) {
               { description && RichText.render(description, LinkResolver) }
             </div>
 
-            <div className={styles.tile}>
-              <Tile
-                title={caseStudy.meta_title}
-                description={caseStudy.meta_description}
-                href={`/portfolio/${featuredCaseStudy.uid}`}
-                icon={caseStudy.image_icon.url}
-                poster={caseStudy.image_poster.url}
-              />
-            </div>
+            <Link href="/portfolio/[caseStudySlug]" as={`/portfolio/${featuredCaseStudy.uid}`}>
+              <a className={styles.tile}>
+                <Tile
+                  title={caseStudy.meta_title}
+                  description={caseStudy.meta_description}
+                  icon={caseStudy.image_icon.url}
+                  poster={caseStudy.image_poster.url}
+                />
+              </a>
+            </Link>
           </li>
         );
       }) }

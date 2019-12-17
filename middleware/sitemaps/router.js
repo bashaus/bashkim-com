@@ -1,5 +1,4 @@
 const express = require('express');
-const path = require('path');
 
 const SitemapIndex = require('./generators/sitemapindex');
 const Sitemap = require('./generators/sitemap');

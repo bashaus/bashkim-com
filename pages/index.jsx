@@ -85,7 +85,7 @@ export default function HomePage(props) {
                   <h3>{caseStudy.data.meta_title}</h3>
                   <p>{caseStudy.data.meta_description}</p>
                   <CallToAction>
-                    <Link href={LinkResolver(caseStudy)}>
+                    <Link href="/portfolio/[caseStudySlug]" as={LinkResolver(caseStudy)}>
                       <a>Read case study</a>
                     </Link>
                   </CallToAction>
