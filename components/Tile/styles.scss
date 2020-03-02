@@ -4,27 +4,22 @@
 @import "~%styleguide/utils/wysiwyg";
 
 .Tile {
+  @extend %wysiwyg;
+
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
+  color: $color-text-copy !important;
+  background-color: $color-white;
+  box-shadow: 0 0 14px 1px rgba(204, 204, 204, 0.5);
+  padding: 10px;
+  transition: all 0.3s ease-in-out;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: auto;
   height: 100%;
 
-  a {
-    @extend %wysiwyg;
-
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    color: $color-text-copy !important;
-    background-color: $color-white;
-    box-shadow: 0 0 14px 1px rgba(204, 204, 204, 0.5);
-    padding: 10px;
-    transition: all 0.3s ease-in-out;
-    flex-grow: 1;
-    flex-shrink: 0;
-    flex-basis: auto;
-  }
-
-  a:hover {
+  &:hover {
     box-shadow: 0 0 20px 3px rgba(204, 204, 204, 0.7);
   }
 
