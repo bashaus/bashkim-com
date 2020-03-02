@@ -40,7 +40,7 @@ jobs:
             - ./.next
             - ./.storybook-static
 
-  deploy: &deploy
+  deploy:
     executor: exec-node
     steps:
       - checkout
