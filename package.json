@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "next build",
+    "ci:validate": "circleci config validate",
     "dev": "node server.js",
     "lint": "eslint **/*.jsx",
     "start": "node server.js",

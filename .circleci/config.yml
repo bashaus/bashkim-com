@@ -39,7 +39,7 @@ jobs:
             - ./.next
             - ./.storybook-static
 
-  deploy:
+  deploy: &deploy
     executor: exec-node
     steps:
       - checkout
@@ -82,23 +82,49 @@ jobs:
 
 workflows:
   version: 2
-  build_and_deploy:
-    jobs:
-      - build
 
-      - approve:
-          type: approval
-          requires:
-            - build
+  # development:
+  #   jobs:
+  #     - build:
+  #         filters:
+  #           branches:
+  #             only:
+  #               - develop
+
+  #     - approve:
+  #         type: approval
+  #         requires:
+  #           - build
+
+  #     - deploy:
+  #         context: bashkim-com-dev
+  #         requires:
+  #           - approve
+
+  #     - synchronize:
+  #         context: bashkim-com-dev
+  #         requires:
+  #           - deploy
+
+  production:
+    jobs:
+      - build:
           filters:
             branches:
               only:
                 - master
 
+      - approve:
+          type: approval
+          requires:
+            - build
+
       - deploy:
+          context: bashkim-com-prod
           requires:
             - approve
 
       - synchronize:
+          context: bashkim-com-prod
           requires:
             - deploy
