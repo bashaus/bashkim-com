@@ -28,6 +28,7 @@ jobs:
           paths:
             - ./.next
             - ./.storybook-static
+            - ./node_modules
 
   deploy:
     executor: exec-node
