@@ -5,7 +5,7 @@ import Logo from '%components/Logo';
 import Navigation from '%components/Navigation';
 import { NavigationContext } from '%contexts/Navigation';
 
-import styles from './styles.scss';
+import styles from './styles.module.scss';
 
 export default function Header(props) {
   const { theme } = props;

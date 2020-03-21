@@ -14,13 +14,12 @@ if (sentryIsEnabled) {
   Sentry.init({
     dsn: Config.get('sentry.dsn'),
     environment: Config.get('sentry.environment'),
-    release: `${Config.get('sentry.project')}@${Config.get('sentry.commit')}`,
+    release: `${Config.get('sentry.project')}#${Config.get('sentry.commit')}`,
   });
 }
 
 const port = Config.get('server.port');
-const dev = Config.get('next.dev');
-const app = next({ dev });
+const app = next(Config.get('next'));
 
 const createServer = () => {
   const server = express();

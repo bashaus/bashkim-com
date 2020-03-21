@@ -6,7 +6,7 @@ import React from 'react';
 import Tile from '%components/Tile';
 import LinkResolver from '%prismic/helpers/LinkResolver';
 
-import styles from './styles.scss';
+import styles from './styles.module.scss';
 
 export default function PortfolioFeaturedCaseStudies(props) {
   const { featured } = props;

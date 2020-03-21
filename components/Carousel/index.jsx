@@ -2,8 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import SlickSlider from 'react-slick';
 
-import 'slick-carousel/slick/slick.css';
-import styles from './styles.scss';
+import styles from './styles.module.scss';
 
 export default class Carousel extends React.PureComponent {
   render() {

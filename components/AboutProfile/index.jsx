@@ -2,7 +2,7 @@ import React from 'react';
 
 import PartialTitle from '%components/PartialTitle';
 
-import styles from './styles.scss';
+import styles from './styles.module.scss';
 
 export default function AboutProfile() {
   return (

@@ -4,7 +4,7 @@ import React from 'react';
 import Logo from '%components/Logo';
 import MenuSignifierButton from '%components/MenuSignifierButton';
 
-import styles from './styles.scss';
+import styles from './styles.module.scss';
 
 export default function Menu(props) {
   const { backButton } = props;

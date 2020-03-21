@@ -1,7 +1,7 @@
 import React from 'react';
 
 import SlicePropType from './prop-type';
-import styles from './styles.scss';
+import styles from './styles.module.scss';
 
 export default function GridEmbedSliceType(props) {
   const { slice } = props;

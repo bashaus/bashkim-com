@@ -5,7 +5,7 @@ import NavigationPrimary from '%components/NavigationPrimary';
 import NavigationSocial from '%components/NavigationSocial';
 import { NavigationContext } from '%contexts/Navigation';
 
-import styles from './styles.scss';
+import styles from './styles.module.scss';
 
 export default function Navigation(props) {
   const { theme } = props;

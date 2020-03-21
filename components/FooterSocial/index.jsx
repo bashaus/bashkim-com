@@ -2,7 +2,7 @@ import React from 'react';
 
 import FooterColumn from '%components/FooterColumn';
 
-import styles from './styles.scss';
+import styles from './styles.module.scss';
 
 export default function FooterSocial() {
   return (

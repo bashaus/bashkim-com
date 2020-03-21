@@ -5,7 +5,7 @@ import React from 'react';
 import CaseStudyContentPropType from '%prismic/content-types/case_study/prop-type';
 import TechnologyContentPropType from '%prismic/content-types/technology/prop-type';
 
-import styles from './styles.scss';
+import styles from './styles.module.scss';
 
 export default function PortfolioListRow(props) {
   const { caseStudy } = props;

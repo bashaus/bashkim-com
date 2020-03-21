@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import QueryString from 'querystring';
 import React from 'react';
 
-import styles from './styles.scss';
+import styles from './styles.module.scss';
 
 export default function VideoPlayerYouTube(props) {
   const { v, title } = props;

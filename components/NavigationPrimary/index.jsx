@@ -2,7 +2,7 @@ import Link from 'next/link';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import styles from './styles.scss';
+import styles from './styles.module.scss';
 
 export default function NavigationPrimary(props) {
   const { theme } = props;

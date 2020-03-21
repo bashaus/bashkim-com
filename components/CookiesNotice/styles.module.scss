@@ -36,7 +36,7 @@
     text-decoration: underline;
   }
 
-  button {
+  button[type="button"] {
     background-color: $color-primary;
     background-image: url('/static/vectors/icons/cookies.svg');
     background-size: 30px auto;
@@ -51,7 +51,7 @@
     transition: background-color 0.3s ease-in-out;
   }
 
-  button:hover {
+  button[type="button"]:hover {
     background-color: lighten($color-primary, 10%);
   }
 
@@ -72,7 +72,7 @@
       flex-basis: 100%;
     }
 
-    button {
+    button[type="button"] {
       padding-right: 44px;
     }
   }

@@ -3,7 +3,7 @@ import React from 'react';
 
 import TurnImport from '%libraries/turn/import';
 
-import styles from './styles.scss';
+import styles from './styles.module.scss';
 
 const RESPONSIVE = !process.browser ? null : [
   {

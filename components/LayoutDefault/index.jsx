@@ -1,8 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import '%styleguide/main.scss';
-
 import CookiesNotice from '%components/CookiesNotice';
 import Page from '%components/Page';
 import CookiesProvider from '%contexts/Cookies';

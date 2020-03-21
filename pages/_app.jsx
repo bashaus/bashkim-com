@@ -5,6 +5,8 @@ import * as Sentry from '@sentry/browser';
 
 import TrackingSentryBoundary from '%components/TrackingSentryBoundary';
 
+import '%styleguide/main.scss';
+
 const { publicRuntimeConfig } = getConfig();
 
 const sentryIsEnabled = publicRuntimeConfig.sentry.enabled;

@@ -3,7 +3,7 @@ import React from 'react';
 import PartialSplit from '%components/PartialSplit';
 import PartialSubtitle from '%components/PartialSubtitle';
 
-import styles from './styles.scss';
+import styles from './styles.module.scss';
 
 export default function AboutProfile() {
   return (

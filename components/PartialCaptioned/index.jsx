@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import styles from './styles.scss';
+import styles from './styles.module.scss';
 
 export default function PartialCaptioned(props) {
   const { children, figure } = props;

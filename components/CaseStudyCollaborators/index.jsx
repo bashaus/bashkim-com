@@ -5,7 +5,7 @@ import PartialSubtitle from '%components/PartialSubtitle';
 
 import CollaboratorSliceType from '%prismic/slice-types/Collaborator/component';
 
-import styles from './styles.scss';
+import styles from './styles.module.scss';
 
 export default function CaseStudyCollaborators(props) {
   const { slices, peers, myRole } = props;

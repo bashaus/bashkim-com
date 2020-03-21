@@ -2,7 +2,7 @@ import VisibilitySensor from 'react-visibility-sensor';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import styles from './styles.scss';
+import styles from './styles.module.scss';
 
 export default class DeferredAsset extends React.PureComponent {
   constructor(...args) {

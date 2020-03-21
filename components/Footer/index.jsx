@@ -4,7 +4,7 @@ import FooterCopyright from '%components/FooterCopyright';
 import FooterLinks from '%components/FooterLinks';
 import FooterSocial from '%components/FooterSocial';
 
-import styles from './styles.scss';
+import styles from './styles.module.scss';
 
 export default function Footer() {
   return (

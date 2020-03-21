@@ -7,7 +7,7 @@ import ToggleGroup from '%components/ToggleGroup';
 import { PortfolioListContext } from '%contexts/PortfolioList';
 import * as PortfolioActions from '%contexts/PortfolioList/actions';
 
-import styles from './styles.scss';
+import styles from './styles.module.scss';
 
 const TAGS = {
   PHYSICAL_COMPUTING: {

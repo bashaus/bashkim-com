@@ -6,7 +6,7 @@ import DeferredAsset from '%components/DeferredAsset';
 import LinkResolver from '%prismic/helpers/LinkResolver';
 
 import SlicePropType from './prop-type';
-import styles from './styles.scss';
+import styles from './styles.module.scss';
 
 export default function GridVideoSliceType(props) {
   const { slice } = props;

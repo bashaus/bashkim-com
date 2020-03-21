@@ -5,7 +5,7 @@ import PartialSubtitle from '%components/PartialSubtitle/index';
 
 import ExhibitionSliceType from '%prismic/slice-types/Exhibition/component';
 
-import styles from './styles.scss';
+import styles from './styles.module.scss';
 
 export default function CaseStudyExhibitions(props) {
   const { slices } = props;

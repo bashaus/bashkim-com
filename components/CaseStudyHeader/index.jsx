@@ -7,7 +7,7 @@ import PartialTitle from '%components/PartialTitle';
 
 import CaseStudyContentPropType from '%prismic/content-types/case_study/prop-type';
 
-import styles from './styles.scss';
+import styles from './styles.module.scss';
 
 export default function CaseStudyHeader(props) {
   const { caseStudy } = props;

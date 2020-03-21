@@ -8,7 +8,7 @@ import PartialFullText from '%components/PartialFullText';
 import PartialHeaderText from '%components/PartialHeaderText';
 import PartialSubtitle from '%components/PartialSubtitle';
 
-import styles from './styles.scss';
+import styles from './styles.module.scss';
 
 export default function CookiePolicyPage() {
   return (

@@ -4,7 +4,7 @@ import CaseStudyLifespan from '%components/CaseStudyLifespan';
 
 import CaseStudyContentPropType from '%prismic/content-types/case_study/prop-type';
 
-import styles from './styles.scss';
+import styles from './styles.module.scss';
 
 export default function CaseStudyDetails(props) {
   const { caseStudy } = props;

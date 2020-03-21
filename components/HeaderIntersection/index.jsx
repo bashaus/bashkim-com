@@ -3,7 +3,7 @@ import React from 'react';
 import { NavigationContext } from '%contexts/Navigation';
 import * as NavigationActions from '%contexts/Navigation/actions';
 
-import styles from './styles.scss';
+import styles from './styles.module.scss';
 
 export default class HeaderIntersection extends React.PureComponent {
   constructor(...args) {

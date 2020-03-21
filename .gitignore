@@ -1,5 +1,5 @@
-/.env
-/.next/
-/.storybook-static/
-/.serverless/
-/node_modules/
+.env
+.next/
+.storybook-static/
+.serverless/
+node_modules/

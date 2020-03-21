@@ -4,7 +4,7 @@ import AnimateHeight from 'react-animate-height';
 import * as CookiesActions from '%contexts/Cookies/actions';
 import { CookiesContext } from '%contexts/Cookies';
 
-import styles from './styles.scss';
+import styles from './styles.module.scss';
 
 export default class CookiesNotice extends React.Component {
   constructor(...args) {

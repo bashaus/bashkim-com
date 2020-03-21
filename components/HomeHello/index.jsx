@@ -6,7 +6,7 @@ import PartialHeaderText from '%components/PartialHeaderText';
 import IconGitHub from '%public/static/vectors/social/github.svg';
 import IconPortfolio from '%public/static/vectors/icons/portfolio.svg';
 
-import styles from './styles.scss';
+import styles from './styles.module.scss';
 
 export default function HomeHello() {
   return (

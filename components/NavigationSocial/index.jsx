@@ -6,7 +6,7 @@ import LogoStackOverflow from '%public/static/vectors/social/stackoverflow.svg';
 
 import { NavigationContext } from '%contexts/Navigation';
 
-import styles from './styles.scss';
+import styles from './styles.module.scss';
 
 export default function NavigationSocial() {
   const { state: navigationState } = React.useContext(NavigationContext);

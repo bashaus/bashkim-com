@@ -10,7 +10,7 @@ import Menu from '%components/Menu';
 import { NavigationContext } from '%contexts/Navigation';
 import * as NavigationActions from '%contexts/Navigation/actions';
 
-import styles from './styles.scss';
+import styles from './styles.module.scss';
 
 export default class Page extends React.PureComponent {
   componentDidMount() {

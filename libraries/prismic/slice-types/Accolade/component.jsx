@@ -7,7 +7,7 @@ import LinkResolver from '%prismic/helpers/LinkResolver';
 import TrophyImage from '%public/static/vectors/icons/trophy.svg';
 
 import SlicePropType from './prop-type';
-import styles from './styles.scss';
+import styles from './styles.module.scss';
 
 export default function AccoladeSliceType(props) {
   const { slice } = props;

@@ -7,7 +7,7 @@ import PartialCaptioned from '%components/PartialCaptioned';
 import LinkResolver from '%prismic/helpers/LinkResolver';
 
 import SlicePropType from './prop-type';
-import styles from './styles.scss';
+import styles from './styles.module.scss';
 
 const INIT_WIDTH = 1024;
 

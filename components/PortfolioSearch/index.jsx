@@ -6,7 +6,7 @@ import PortfolioFilter from '%components/PortfolioFilter';
 
 import { PortfolioListContext } from '%contexts/PortfolioList';
 
-import styles from './styles.scss';
+import styles from './styles.module.scss';
 
 const DISPLAY_MODE = {
   ICON: 'icon',
