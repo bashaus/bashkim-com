@@ -182,7 +182,7 @@ resources:
                 Fn::Join:
                   - ""
                   - - Fn::GetAtt: [WebsiteBucket, Arn]
-                    - "/*"
+                    - "/**"
               Principal:
                 CanonicalUser:
                   Fn::GetAtt: [WebsiteCloudFrontOriginAccessIdentity, S3CanonicalUserId]
@@ -260,7 +260,7 @@ resources:
                 Fn::Join:
                   - ""
                   - - Fn::GetAtt: [StyleguideBucket, Arn]
-                    - "/*"
+                    - "/**"
               Principal:
                 CanonicalUser:
                   Fn::GetAtt: [StyleguideCloudFrontOriginAccessIdentity, S3CanonicalUserId]

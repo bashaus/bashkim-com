@@ -48,7 +48,7 @@ jobs:
 
       - aws-s3/sync:
           from: ./public/static
-          to: 's3://${DEPLOY_S3_WEBSITE_BUCKET}/public/static'
+          to: 's3://${DEPLOY_S3_WEBSITE_BUCKET}/static'
           arguments: |
             --cache-control "max-age=86400"
           overwrite: true
