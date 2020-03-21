@@ -5,7 +5,9 @@ import { storiesOf } from '@storybook/react';
 import Header from '.';
 import NavigationStore from '%contexts/Navigation';
 
-storiesOf('Components: Header', module)
+const stories = storiesOf('Components: Header', module);
+
+stories
   .add('default', () => (
     <NavigationStore>
       <Header />

@@ -1,12 +1,10 @@
 import React from 'react';
-import { withKnobs } from '@storybook/addon-knobs';
 
 import { storiesOf } from '@storybook/react';
 
 import Carousel from '.';
 
-const stories = storiesOf('Components: Carousel', module)
-stories.addDecorator(withKnobs);
+const stories = storiesOf('Components: Carousel', module);
 
 stories
   .add('default', () => (

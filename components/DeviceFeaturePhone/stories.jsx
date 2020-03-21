@@ -4,7 +4,9 @@ import { storiesOf } from '@storybook/react';
 
 import DeviceFeaturePhone from '.';
 
-storiesOf('Components: DeviceFeaturePhone', module)
+const stories = storiesOf('Components: DeviceFeaturePhone', module);
+
+stories
   .add('default', () => (
     <DeviceFeaturePhone>
       This is a description of the content.

@@ -8,7 +8,9 @@ const FONT_SIZES = [32, 28, 24, 18, 16, 14, 12, 10];
 
 FONT_FAMILIES.map((fontFamily) => {
   FONT_WEIGHTS.map((fontWeight) => {
-    storiesOf('Style Guide: Base/Typography', module)
+    const stories = storiesOf('Style Guide: Base/Typography', module)
+
+    stories
       .add(`${fontFamily} (${fontWeight})`, () => (
         FONT_SIZES.map(size => (
           <div
@@ -24,6 +26,5 @@ FONT_FAMILIES.map((fontFamily) => {
           </div>
         ))
       ));
-  
   })
 });

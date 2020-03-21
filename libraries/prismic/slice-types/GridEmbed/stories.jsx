@@ -7,7 +7,9 @@ import GridEmbedSliceType from './component.jsx';
 import fixture from './fixture.json';
 import schema from './schema.json';
 
-storiesOf('Prismic Slice Types: GridEmbed', module)
+const stories = storiesOf('Prismic Slice Types: GridEmbed', module);
+
+stories
   .add('example', () => (
     <GridEmbedSliceType slice={fixture} />
   ))

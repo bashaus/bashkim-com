@@ -4,9 +4,11 @@ import { storiesOf } from '@storybook/react';
 
 import styles from './_stories.scss'
 
-storiesOf('Style Guide: Utils/Fonts', module)
+const stories = storiesOf('Style Guide: Utils/Fonts', module);
+
+stories
   .add('default', () => (
-    <React.Fragment>
+    <>
       <div className={styles.copy}>
         $font-family-copy
       </div>
@@ -14,5 +16,5 @@ storiesOf('Style Guide: Utils/Fonts', module)
       <div className={styles.monospace}>
         $font-family-monospace
       </div>
-    </React.Fragment>
+    </>
   ));

@@ -7,7 +7,9 @@ import FullTextSliceType from './component.jsx';
 import fixture from './fixture.json';
 import schema from './schema.json';
 
-storiesOf('Prismic Slice Types: FullText', module)
+const stories = storiesOf('Prismic Slice Types: FullText', module);
+
+stories
   .add('example', () => (
     <FullTextSliceType slice={fixture} />
   ))

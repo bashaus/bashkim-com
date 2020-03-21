@@ -6,7 +6,9 @@ import MenuBackButtonHomeImpl from '%components/MenuBackButtonHomeImpl';
 import MenuBackButtonPortfolioImpl from '%components/MenuBackButtonPortfolioImpl';
 import NavigationStore from '%contexts/Navigation';
 
-storiesOf('Components: Menu', module)
+const stories = storiesOf('Components: Menu', module);
+
+stories
   .add('default', () => (
     <NavigationStore>
       <Menu />

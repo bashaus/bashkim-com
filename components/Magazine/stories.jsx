@@ -4,7 +4,9 @@ import { storiesOf } from '@storybook/react';
 
 import Magazine from '.';
 
-storiesOf('Components: Magazine', module)
+const stories = storiesOf('Components: Magazine', module);
+
+stories
   .add('default', () => (
     <div style={{ width: 700 }}>
       <Magazine pageWidth={300} pageHeight={450}>

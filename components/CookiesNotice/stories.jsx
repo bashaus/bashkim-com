@@ -6,7 +6,9 @@ import { action } from '@storybook/addon-actions';
 import CookiesProvider from '%contexts/Cookies'
 import CookiesNotice from '.';
 
-storiesOf('Components: CookiesNotice', module)
+const stories = storiesOf('Components: CookiesNotice', module);
+
+stories
   .add('default', () => (
     <CookiesProvider>
       <CookiesNotice doCookiesDismiss={action('doCookiesDismiss')} />

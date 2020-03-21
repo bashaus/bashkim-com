@@ -5,17 +5,11 @@ import { storiesOf } from '@storybook/react';
 
 import PartialHeaderImage from '.';
 
-const stories = storiesOf('Partials: HeaderImage', module)
+const stories = storiesOf('Partials: HeaderImage', module);
 stories.addDecorator(withKnobs);
 
 stories
-  .add('default', () => (
-    <PartialHeaderImage
-      id="PartialHeaderImage"
-    />
-  ))
-
-  .add('dynamic', () => {
+  .add('default', () => {
     const imageDesktop = files('Background (Desktop)', '', []);
     const imageMobile = files('Background (Mobile)', '', []);
 
@@ -27,4 +21,3 @@ stories
       />
     );
   });
-

@@ -4,7 +4,9 @@ import { storiesOf } from '@storybook/react';
 
 import Footer from '.';
 
-storiesOf('Components: Footer', module)
+const stories = storiesOf('Components: Footer', module);
+
+stories
   .add('default', () => (
     <Footer />
   ));

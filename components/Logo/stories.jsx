@@ -4,7 +4,9 @@ import { storiesOf } from '@storybook/react';
 
 import Logo from '.';
 
-storiesOf('Components: Logo', module)
+const stories = storiesOf('Components: Logo', module);
+
+stories
   .add('default', () => (
     <Logo />
   ));

@@ -7,7 +7,9 @@ import CaptionedScreenshotsSliceType from './component.jsx';
 import fixture from './fixture.json';
 import schema from './schema.json';
 
-storiesOf('Prismic Slice Types: CaptionedScreenshots', module)
+const stories = storiesOf('Prismic Slice Types: CaptionedScreenshots', module);
+
+stories
   .add('example', () => (
     <CaptionedScreenshotsSliceType slice={fixture} />
   ))

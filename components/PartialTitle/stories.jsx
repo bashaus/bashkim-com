@@ -9,28 +9,18 @@ const stories = storiesOf('Partials: Title', module);
 stories.addDecorator(withKnobs);
 
 stories
-  .add('dynamic', () => (
+  .add('default', () => (
     <PartialTitle title={text('Title', 'Hello World')}>
-      { text('Description', 'Lorem ipsum dolar sit a met.')}
+      <p>{ text('Description', 'Lorem ipsum dolar sit a met.')}</p>
     </PartialTitle>
   ))
 
   .add('title only', () => (
-    <PartialTitle title="This is a title" />
+    <PartialTitle title={text('Title', 'Hello World')} />
   ))
 
   .add('description only', () => (
     <PartialTitle>
-      <p>
-        This is a description
-      </p>
-    </PartialTitle>
-  ))
-
-  .add('title and description', () => (
-    <PartialTitle title="This is a title">
-      <p>
-        This is a description
-      </p>
+      <p>{ text('Description', 'Lorem ipsum dolar sit a met.')}</p>
     </PartialTitle>
   ));

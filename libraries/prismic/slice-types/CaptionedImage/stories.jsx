@@ -7,7 +7,9 @@ import CaptionedImageSliceType from './component.jsx';
 import fixture from './fixture.json';
 import schema from './schema.json';
 
-storiesOf('Prismic Slice Types: CaptionedImage', module)
+const stories = storiesOf('Prismic Slice Types: CaptionedImage', module);
+
+stories
   .add('example', () => (
     <CaptionedImageSliceType slice={fixture} />
   ))

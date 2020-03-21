@@ -4,7 +4,9 @@ import { storiesOf } from '@storybook/react';
 
 import VideoPlayerYouTube from '.';
 
-storiesOf('Components: VideoPlayerYouTube', module)
+const stories = storiesOf('Components: VideoPlayerYouTube', module);
+
+stories
   .add('default', () => (
     <div style={{ maxWidth: '800px' }}>
       <VideoPlayerYouTube

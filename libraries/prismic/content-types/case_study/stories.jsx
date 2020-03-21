@@ -4,5 +4,7 @@ import JSONDecorator from '%storybook/decorators/json';
 
 import schema from './schema';
 
-storiesOf('Prismic Content Types: Case Study', module)
+const stories = storiesOf('Prismic Content Types: Case Study', module);
+
+stories
   .add('schema', () => <JSONDecorator schema={schema} />);

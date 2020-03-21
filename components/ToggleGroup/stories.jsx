@@ -6,7 +6,9 @@ import { action } from '@storybook/addon-actions';
 import ToggleButton from '%components/ToggleButton';
 import ToggleGroup from '.';
 
-storiesOf('Components: ToggleGroup', module)
+const stories = storiesOf('Components: ToggleGroup', module);
+
+stories
   .add('default', () => (
     <ToggleGroup initialValue="one" onChange={action('onChange')}>
       <ToggleButton value="one">

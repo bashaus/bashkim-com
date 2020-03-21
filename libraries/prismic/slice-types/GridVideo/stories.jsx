@@ -7,7 +7,9 @@ import GridVideoSliceType from './component.jsx';
 import fixture from './fixture.json';
 import schema from './schema.json';
 
-storiesOf('Prismic Slice Types: GridVideo', module)
+const stories = storiesOf('Prismic Slice Types: GridVideo', module);
+
+stories
   .add('example', () => (
     <GridVideoSliceType slice={fixture} />
   ))

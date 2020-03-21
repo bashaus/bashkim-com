@@ -5,9 +5,11 @@ import { storiesOf } from '@storybook/react';
 import NavigationStore from '%contexts/Navigation';
 import MenuSignifierButton from '.';
 
-storiesOf('Components: MenuSignifierButton', module)
+const stories = storiesOf('Components: MenuSignifierButton', module);
+
+stories
   .add('default', () => (
     <NavigationStore>
       <MenuSignifierButton />
     </NavigationStore>
-  ))
+  ));

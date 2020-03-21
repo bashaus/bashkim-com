@@ -7,7 +7,9 @@ import AccoladeSliceType from './component.jsx';
 import fixture from './fixture.json';
 import schema from './schema.json';
 
-storiesOf('Prismic Slice Types: Accolade', module)
+const stories = storiesOf('Prismic Slice Types: Accolade', module);
+
+stories
   .add('example', () => (
     <AccoladeSliceType slice={fixture} />
   ))

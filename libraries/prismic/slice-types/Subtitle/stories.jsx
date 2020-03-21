@@ -7,7 +7,9 @@ import SubtitleSliceType from './component.jsx';
 import fixture from './fixture.json';
 import schema from './schema.json';
 
-storiesOf('Prismic Slice Types: Subtitle', module)
+const stories = storiesOf('Prismic Slice Types: Subtitle', module);
+
+stories
   .add('example', () => (
     <SubtitleSliceType slice={fixture} />
   ))

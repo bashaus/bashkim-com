@@ -4,7 +4,9 @@ import { storiesOf } from '@storybook/react';
 
 import Tile from '.';
 
-storiesOf('Components: Tile', module)
+const stories = storiesOf('Components: Tile', module);
+
+stories
   .add('default', () => (
     <div style={{ maxWidth: '200px' }}>
       <Tile

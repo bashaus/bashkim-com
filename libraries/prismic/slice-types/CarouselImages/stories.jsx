@@ -7,7 +7,9 @@ import CarouselImagesSliceType from './component.jsx';
 import fixture from './fixture.json';
 import schema from './schema.json';
 
-storiesOf('Prismic Slice Types: CarouselImages', module)
+const stories = storiesOf('Prismic Slice Types: CarouselImages', module);
+
+stories
   .add('example', () => (
     <CarouselImagesSliceType slice={fixture} />
   ))
