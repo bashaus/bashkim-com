@@ -17,11 +17,11 @@ custom:
   env:
     production:
       styleguide:
-        certificateArn: "arn:aws:acm:us-east-1:409535992503:certificate/61ad6c28-f599-4344-b0c3-87a161d788f8"
+        certificateArn: "arn:aws:acm:us-east-1:409535992503:certificate/931d3c5c-33c6-410e-a01f-f45176fb0b99"
         domainName: styleguide.bashkim.com
         bucketName: bashkim-com-${self:custom.stage}-styleguide
       website:
-        certificateArn: "arn:aws:acm:us-east-1:409535992503:certificate/a232ee88-ad8e-44c1-a9c2-5a8cdb2e2577"
+        certificateArn: "arn:aws:acm:us-east-1:409535992503:certificate/931d3c5c-33c6-410e-a01f-f45176fb0b99"
         commitHash: ${env:CIRCLE_SHA1}
         domainName: www.bashkim.com
         bucketName: bashkim-com-${self:custom.stage}-website
