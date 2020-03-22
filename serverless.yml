@@ -88,9 +88,11 @@ resources:
         - WebsiteBucket
       Properties:
         DistributionConfig:
+          Enabled: true
+          HttpVersion: http2
+          PriceClass: PriceClass_100
           Aliases:
             - ${self:custom.website.domainName}
-          PriceClass: PriceClass_100
           ViewerCertificate:
             AcmCertificateArn: ${self:custom.website.certificateArn}
             MinimumProtocolVersion: TLSv1.1_2016
@@ -124,8 +126,6 @@ resources:
                   - 'TLSv1'
                   - 'TLSv1.1'
                   - 'TLSv1.2'
-          Enabled: 'true'
-          HttpVersion: http2
           CacheBehaviors:
             - PathPattern: /_next/*
               AllowedMethods:
@@ -205,9 +205,12 @@ resources:
         - StyleguideBucket
       Properties:
         DistributionConfig:
+          Enabled: true
+          HttpVersion: http2
+          PriceClass: PriceClass_100
+          DefaultRootObject: index.html
           Aliases:
             - ${self:custom.styleguide.domainName}
-          PriceClass: PriceClass_100
           ViewerCertificate:
             AcmCertificateArn: ${self:custom.styleguide.certificateArn}
             MinimumProtocolVersion: TLSv1.1_2016
@@ -222,8 +225,6 @@ resources:
                   - ""
                   - - "origin-access-identity/cloudfront/"
                     - Ref: StyleguideCloudFrontOriginAccessIdentity
-          Enabled: 'true'
-          HttpVersion: http2
           DefaultCacheBehavior:
             AllowedMethods:
               - GET
