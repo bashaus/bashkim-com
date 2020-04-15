@@ -16,7 +16,7 @@ export default function AboutProfile() {
 
       <ul className={styles.principles}>
         <li>
-          <h3>On time</h3>
+          <h3>On-time</h3>
           <img src="/static/vectors/principles/on-time.svg" alt="" width="50" height="50" />
           <p>
             Committed to delivering a resolved product
@@ -60,7 +60,7 @@ export default function AboutProfile() {
           <img src="/static/vectors/principles/securely.svg" alt="" width="50" height="50" />
           <p>
             No client wants media attention for the wrong
-            reasons, especially because of your own&nbsp;work
+            reasons, especially because of your&nbsp;work
           </p>
         </li>
         <li>
@@ -75,8 +75,8 @@ export default function AboutProfile() {
           <h3>Robust</h3>
           <img src="/static/vectors/principles/robust.svg" alt="" width="50" height="50" />
           <p>
-            Responsible testing methologies accompanied
-            with continous integration and automated deployment
+            Responsible testing methodologies accompanied with continuous
+            integration and automated&nbsp;deployment
           </p>
         </li>
       </ul>
