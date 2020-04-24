@@ -1,0 +1,64 @@
+{
+  "slice_type": "CaptionedMagazineSliceType",
+  "slice_label": null,
+  "items": [
+    {
+      "CaptionedMagazineSliceType_Images": {
+        "dimensions": {
+          "width": 720,
+          "height": 1016
+        },
+        "alt": null,
+        "copyright": null,
+        "url": "https://bashkim-com.cdn.prismic.io/bashkim-com/5a06d03707008d703527c353ad96f328768bfa73_001.jpg"
+      }
+    },
+    {
+      "CaptionedMagazineSliceType_Images": {
+        "dimensions": {
+          "width": 720,
+          "height": 1016
+        },
+        "alt": null,
+        "copyright": null,
+        "url": "https://bashkim-com.cdn.prismic.io/bashkim-com/faad0f64e21c7b2010310c99fffdf637df258f74_002.jpg"
+      }
+    },
+    {
+      "CaptionedMagazineSliceType_Images": {
+        "dimensions": {
+          "width": 720,
+          "height": 1016
+        },
+        "alt": null,
+        "copyright": null,
+        "url": "https://bashkim-com.cdn.prismic.io/bashkim-com/3895b6c19c66745af8f5ea767383fae8aacef070_003.jpg"
+      }
+    },
+    {
+      "CaptionedMagazineSliceType_Images": {
+        "dimensions": {
+          "width": 720,
+          "height": 1016
+        },
+        "alt": null,
+        "copyright": null,
+        "url": "https://bashkim-com.cdn.prismic.io/bashkim-com/feba8718eb07437dcdc1ac9ac2e9e8c364ef028b_004.jpg"
+      }
+    }
+  ],
+  "primary": {
+    "CaptionedMagazineSliceType_Caption": [
+      {
+        "type": "heading3",
+        "text": "Pamphlet Handouts",
+        "spans": []
+      },
+      {
+        "type": "paragraph",
+        "text": "We targeted the potential audience directly by distributing these RFID‑enabled pamphlets. Visitors to the shopping centre would opt-in to the experience by accepting the collateral.",
+        "spans": []
+      }
+    ]
+  }
+}

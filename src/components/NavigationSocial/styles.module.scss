@@ -1,0 +1,129 @@
+@import "~breakpoint-sass";
+@import "~%styleguide/utils/colors";
+@import "~%styleguide/utils/grid";
+@import "~%styleguide/utils/media";
+
+.NavigationSocial {
+  a {
+    display: block;
+  }
+
+  @include breakpoint($media-mobile) {
+    a {
+      display: flex;
+      border-bottom: solid 1px $color-shade-border;
+    }
+
+    svg {
+      flex-grow: 0;
+      flex-shrink: 0;
+      flex-basis: 30px;
+      margin-top: 7px;
+      margin-right: 10px;
+      margin-bottom: 13px;
+    }
+
+    span {
+      font-weight: bold;
+      line-height: 48px;
+      text-transform: uppercase;
+      color: #b6b6b6;
+    }
+  }
+
+  @include breakpoint($media-not-mobile) {
+    padding-left: 12px;
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    span {
+      display: none;
+    }
+  }
+}
+
+%socialIcon {
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  a {
+    @include grid-cell-padding(
+      $breakpoints: (tablet-portrait, tablet-landscape, desktop-narrow, desktop-wide),
+      $sides: (left, right)
+    );
+
+    @include breakpoint($media-not-mobile) {
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+  }
+
+  svg {
+    display: block;
+    fill: $color-shade-border;
+  }
+
+  path {
+    transition: fill 0.3s ease-in-out;
+  }
+
+  .NavigationSocial.atTop & svg {
+    fill: $color-white;
+  }
+}
+
+.icon_GitHub {
+  @extend %socialIcon;
+
+  @include breakpoint($media-mobile) {
+    svg path {
+      fill: $color-shade-border;
+    }
+  }
+
+  @include breakpoint($media-not-mobile) {
+    a:hover svg path {
+      fill: #0366d6;
+    }
+  }
+}
+
+.icon_LinkedIn {
+  @extend %socialIcon;
+
+  @include breakpoint($media-mobile) {
+    svg path {
+      fill: $color-shade-border;
+    }
+  }
+
+  @include breakpoint($media-not-mobile) {
+    a:hover svg path {
+      fill: #0077b5;
+    }
+  }
+}
+
+.icon_StackOverflow {
+  @extend %socialIcon;
+
+  @include breakpoint($media-mobile) {
+    svg :global(.stackoverflow_svg__stackoverflow-container),
+    svg :global(.stackoverflow_svg__stackoverflow-stack) {
+      fill: $color-shade-border;
+    }
+  }
+
+  @include breakpoint($media-not-mobile) {
+    a:hover svg :global(.stackoverflow_svg__stackoverflow-container) {
+      fill: #bcbbbb;
+    }
+
+    a:hover svg :global(.stackoverflow_svg__stackoverflow-stack) {
+      fill: #f48024;
+    }
+  }
+}

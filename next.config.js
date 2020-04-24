@@ -1,22 +1,29 @@
-/* eslint-disable no-param-reassign */
+const webpack = require('webpack');
+require("dotenv").config();
 
-require('dotenv').config();
-
-const path = require('path');
-const Config = require('./config');
+const path = require("path");
+const Config = require("./src/config");
 
 const nextConfig = {
-  target: 'serverless',
+  target: "serverless",
   publicRuntimeConfig: Config.get(),
   webpack: (config) => {
     // Perform customizations to webpack config
-    config.resolve.alias['%styleguide'] = path.resolve(__dirname, 'styleguide');
+    config.resolve.alias["%styleguide"] = path.resolve(__dirname, "styleguide");
 
     // Inline SVG support
     config.module.rules.push({
       test: /\.svg$/,
-      use: ['@svgr/webpack'],
+      use: ["@svgr/webpack"],
     });
+
+    // Global for jQuery
+    config.plugins.push(
+      new webpack.ProvidePlugin({
+        $: 'jquery',
+        jQuery: 'jquery',
+      }),
+    );
 
     return config;
   },

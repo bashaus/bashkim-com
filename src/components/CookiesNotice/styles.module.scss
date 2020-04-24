@@ -1,0 +1,91 @@
+@import "~breakpoint-sass";
+@import "~%styleguide/utils/colors";
+@import "~%styleguide/utils/grid";
+@import "~%styleguide/utils/media";
+@import "~%styleguide/utils/z-index";
+
+.CookiesNotice {
+  font-size: 16px;
+  line-height: 140%;
+
+  .container {
+    @include grid-container(
+      $breakpoints: (mobile-portrait, mobile-landscape),
+      $padding: (top, left, right, bottom)
+    );
+
+    @include grid-container(
+      $breakpoints: (tablet-portrait, tablet-landscape, desktop-narrow, desktop-wide),
+      $padding: (left, right)
+    );
+  }
+
+  .content {
+    @include grid-cell-padding;
+    align-self: center;
+    flex-grow: 1;
+    flex-shrink: 1;
+    color: $color-charcol;
+  }
+
+  .close {
+    @include grid-cell-padding;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  button[type="button"] {
+    background-color: $color-primary;
+    background-image: url("/static/vectors/icons/cookies.svg");
+    background-size: 30px auto;
+    background-position: left 10px center;
+    color: $color-charcol;
+    line-height: 48px;
+    padding-left: 44px;
+    padding-right: 24px;
+    border-radius: 8px;
+    width: 100%;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  button[type="button"]:hover {
+    background-color: lighten($color-primary, 10%);
+  }
+
+  @include breakpoint($media-mobile) {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: z-index("CookiesNotice");
+    background-color: $color-white;
+    box-shadow: 0px -10px 20px -13px rgba(30, 30, 30, 0.75);
+
+    .content {
+      flex-basis: 100%;
+    }
+
+    .close {
+      flex-basis: 100%;
+    }
+
+    button[type="button"] {
+      padding-right: 44px;
+    }
+  }
+
+  @include breakpoint($media-not-mobile) {
+    .content {
+      flex-basis: calc(100% - 200px);
+    }
+
+    .close {
+      flex-grow: 0;
+      flex-shrink: 0;
+      flex-basis: auto;
+    }
+  }
+}

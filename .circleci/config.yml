@@ -9,7 +9,7 @@ executors:
   exec-python:
     working_directory: ~/repo
     docker:
-      - image: 'circleci/python:3.6'
+      - image: "circleci/python:3.6"
 
 orbs:
   aws-s3: circleci/aws-s3@1.0.11
@@ -47,22 +47,22 @@ jobs:
           at: ./
 
       - aws-s3/sync:
-          from: ./public/static
-          to: 's3://${DEPLOY_S3_WEBSITE_BUCKET}/static'
+          from: ./static
+          to: "s3://${DEPLOY_S3_WEBSITE_BUCKET}/static"
           arguments: |
             --cache-control "max-age=86400"
           overwrite: true
 
       - aws-s3/sync:
           from: ./.next
-          to: 's3://${DEPLOY_S3_WEBSITE_BUCKET}/_next'
+          to: "s3://${DEPLOY_S3_WEBSITE_BUCKET}/_next"
           arguments: |
             --cache-control "max-age=86400"
           overwrite: true
 
       - aws-s3/sync:
           from: ./.storybook-static
-          to: 's3://${DEPLOY_S3_STYLEGUIDE_BUCKET}/'
+          to: "s3://${DEPLOY_S3_STYLEGUIDE_BUCKET}/"
           arguments: |
             --cache-control "max-age=86400"
           overwrite: true

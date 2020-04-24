@@ -1,0 +1,110 @@
+@import "~breakpoint-sass";
+@import "~%styleguide/utils/colors";
+@import "~%styleguide/utils/grid";
+@import "~%styleguide/utils/media";
+
+.HomeHello {
+  .background {
+    animation-duration: 20s;
+    animation-name: HomeHello--Background;
+    animation-iteration-count: infinite;
+    background: linear-gradient(230deg, #a24bcf, #4b79cf, #4bc5cf);
+    background-size: 300% 300%;
+    color: $color-white;
+  }
+}
+
+@keyframes HomeHello--Background {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.HomeHello_Introduction {
+  a {
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    border: solid $color-white;
+    padding: 4px 12px;
+    color: $color-white;
+    transition: all 0.3s ease-in-out;
+  }
+
+  a:hover {
+    background-color: $color-white;
+    color: $color-charcol;
+  }
+
+  @include breakpoint($media-mobile) {
+    a {
+      border-width: 1px;
+      line-height: 24px;
+    }
+
+    .name {
+      display: block;
+      margin-bottom: 20px;
+    }
+    .name::after {
+      content: ".";
+      display: inline;
+    }
+
+    .spiel {
+      display: block;
+    }
+  }
+
+  @include breakpoint($media-not-mobile) {
+    a {
+      border-width: 3px;
+      line-height: 24px;
+    }
+
+    .name::after {
+      content: ",";
+      display: inline-block;
+    }
+  }
+}
+
+.HomeHello_Links {
+  display: flex;
+  flex-direction: row;
+
+  li {
+    flex: 1 0 50%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  a .icon {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  a:hover .icon {
+    transform: scale(1.1);
+  }
+
+  .icon {
+    display: block;
+    margin: 12px auto;
+    fill: #fff;
+    width: 75px;
+    height: 75px;
+  }
+
+  @include breakpoint($media-screen-small) {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}

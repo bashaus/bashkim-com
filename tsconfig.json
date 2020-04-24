@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "esnext",
+    "jsx": "preserve",
+    "sourceMap": true,
+    "noEmit": true,
+    "strict": true,
+    "noUnusedLocals": true,
+    "moduleResolution": "node",
+    "baseUrl": "./",
+    "paths": {
+      "%components/*": ["./src/components/*"],
+      "%contexts/*": ["./src/contexts/*"],
+      "%libraries/*": ["./src/libraries/*"],
+      "%prismic/*": ["./src/libraries/prismic/*"],
+      "%public/*": ["./public/*"],
+      "%storybook/*": ["./.storybook/*"],
+      "%styleguide/*": ["./src/styleguide/*"]
+    },
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true
+  },
+  "exclude": ["node_modules", ".next", ".storybook-static"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
+}

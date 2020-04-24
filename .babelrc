@@ -1,31 +1,29 @@
 {
   "sourceMaps": true,
 
-  "presets": [
-    "next/babel"
-  ],
+  "presets": ["next/babel"],
 
   "plugins": [
-    ["module-resolver", {
-      "root": ["./"],
-      "alias": {
-        "%components": "./components",
-        "%contexts": "./contexts",
-        "%libraries": "./libraries",
-        "%prismic": "./libraries/prismic",
-        "%public": "./public",
-        "%storybook": "./.storybook",
-        "%styleguide": "./styleguide"
+    [
+      "module-resolver",
+      {
+        "root": ["./"],
+        "alias": {
+          "%components": "./src/components",
+          "%contexts": "./src/contexts",
+          "%libraries": "./src/libraries",
+          "%prismic": "./src/libraries/prismic",
+          "%public": "./public",
+          "%storybook": "./.storybook",
+          "%styleguide": "./src/styleguide"
+        }
       }
-    }]
+    ]
   ],
 
   "env": {
     "production": {
-      "sourceMaps": false,
-      "plugins": [
-        "transform-react-remove-prop-types"
-      ]
+      "sourceMaps": false
     }
   }
 }

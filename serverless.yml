@@ -41,16 +41,17 @@ provider:
 
 package:
   exclude:
+    # Folders
     - .circleci/**
     - .storybook/**
-    - "**/stories.jsx"
-    - components/**
-    - contexts/**
     - node_modules/.cache/**
-    - pages/**
-    - prop-types/**
+    - src/components/**
+    - src/contexts/**
+    - src/pages/**
+    - src/styleguide/**
     - public/**
-    - styleguide/**
+    # Files
+    - "**/stories.jsx"
     - .babelrc
     - .editorconfig
     - .eslintrc.json
@@ -104,16 +105,16 @@ resources:
               S3OriginConfig:
                 OriginAccessIdentity:
                   Fn::Join:
-                  - ""
-                  - - "origin-access-identity/cloudfront/"
-                    - Ref: WebsiteCloudFrontOriginAccessIdentity
+                    - ""
+                    - - "origin-access-identity/cloudfront/"
+                      - Ref: WebsiteCloudFrontOriginAccessIdentity
             - DomainName:
                 Fn::Join:
-                - ""
-                - - Ref: ApiGatewayRestApi
-                  - ".execute-api."
-                  - ${self:custom.region}
-                  - ".amazonaws.com"
+                  - ""
+                  - - Ref: ApiGatewayRestApi
+                    - ".execute-api."
+                    - ${self:custom.region}
+                    - ".amazonaws.com"
               Id: APIGWOrigin
               OriginPath: "/${self:custom.stage}"
               CustomOriginConfig:
@@ -123,9 +124,9 @@ resources:
                 HTTPSPort: 443
                 OriginProtocolPolicy: https-only
                 OriginSSLProtocols:
-                  - 'TLSv1'
-                  - 'TLSv1.1'
-                  - 'TLSv1.2'
+                  - "TLSv1"
+                  - "TLSv1.1"
+                  - "TLSv1.2"
           CacheBehaviors:
             - PathPattern: /_next/*
               AllowedMethods:
@@ -176,7 +177,7 @@ resources:
         PolicyDocument:
           Statement:
             - Action:
-              - "s3:GetObject"
+                - "s3:GetObject"
               Effect: "Allow"
               Resource:
                 Fn::Join:
@@ -185,7 +186,8 @@ resources:
                     - "/**"
               Principal:
                 CanonicalUser:
-                  Fn::GetAtt: [WebsiteCloudFrontOriginAccessIdentity, S3CanonicalUserId]
+                  Fn::GetAtt:
+                    [WebsiteCloudFrontOriginAccessIdentity, S3CanonicalUserId]
 
     ## Style Guide Configuration
 
@@ -222,9 +224,9 @@ resources:
               S3OriginConfig:
                 OriginAccessIdentity:
                   Fn::Join:
-                  - ""
-                  - - "origin-access-identity/cloudfront/"
-                    - Ref: StyleguideCloudFrontOriginAccessIdentity
+                    - ""
+                    - - "origin-access-identity/cloudfront/"
+                      - Ref: StyleguideCloudFrontOriginAccessIdentity
           DefaultCacheBehavior:
             AllowedMethods:
               - GET
@@ -255,7 +257,7 @@ resources:
         PolicyDocument:
           Statement:
             - Action:
-              - "s3:GetObject"
+                - "s3:GetObject"
               Effect: "Allow"
               Resource:
                 Fn::Join:
@@ -264,5 +266,8 @@ resources:
                     - "/**"
               Principal:
                 CanonicalUser:
-                  Fn::GetAtt: [StyleguideCloudFrontOriginAccessIdentity, S3CanonicalUserId]
-
+                  Fn::GetAtt:
+                    [
+                      StyleguideCloudFrontOriginAccessIdentity,
+                      S3CanonicalUserId,
+                    ]

@@ -1,25 +1,25 @@
-require('dotenv').config()
+require("dotenv").config();
 
-const Sentry = require('@sentry/node');
-const express = require('express');
-const next = require('next');
+const Sentry = require("@sentry/node");
+const express = require("express");
+const next = require("next");
 
-const Config = require('./config');
-const Router = require('./middleware/router');
-const SeoRouter = require('./middleware/seo/router');
-const SitemapRouter = require('./middleware/sitemaps/router');
+const Config = require("./src/config");
+const Router = require("./src/middleware/router");
+const SeoRouter = require("./src/middleware/seo/router");
+const SitemapRouter = require("./src/middleware/sitemaps/router");
 
-const sentryIsEnabled = Config.get('sentry.enabled');
+const sentryIsEnabled = Config.get("sentry.enabled");
 if (sentryIsEnabled) {
   Sentry.init({
-    dsn: Config.get('sentry.dsn'),
-    environment: Config.get('sentry.environment'),
-    release: `${Config.get('sentry.project')}#${Config.get('sentry.commit')}`,
+    dsn: Config.get("sentry.dsn"),
+    environment: Config.get("sentry.environment"),
+    release: `${Config.get("sentry.project")}#${Config.get("sentry.commit")}`,
   });
 }
 
-const port = Config.get('server.port');
-const app = next(Config.get('next'));
+const port = Config.get("server.port");
+const app = next(Config.get("next"));
 
 const createServer = () => {
   const server = express();
@@ -33,10 +33,10 @@ const createServer = () => {
 
 const server = createServer();
 
-if (Config.get('server.lambda')) {
-  console.log('Application started in lambda mode');
+if (Config.get("server.lambda")) {
+  console.log("Application started in lambda mode");
 } else {
-  console.log('Application started in server mode');
+  console.log("Application started in server mode");
 
   app.prepare().then(() => {
     server.listen(port, (err) => {

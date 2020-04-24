@@ -1,0 +1,97 @@
+@import "~breakpoint-sass";
+@import "~%styleguide/utils/colors";
+@import "~%styleguide/utils/grid";
+@import "~%styleguide/utils/media";
+@import "~%styleguide/utils/z-index";
+
+.header {
+  z-index: z-index("Header");
+  border-bottom: solid 1px $color-shade-border;
+  background-color: $color-white;
+
+  @include breakpoint($media-mobile) {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 260px;
+    max-width: 400px;
+    background-color: $color-shade-background;
+    box-shadow: inset 20px 0 50px -20px #d7d2cb;
+    transition: all 0.3s ease-in-out;
+    right: -260px;
+
+    &.isVisible {
+      right: 0;
+    }
+  }
+
+  @include breakpoint($media-not-mobile) {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 61px;
+    text-shadow: 0 0 0 rgba(48, 48, 48, 0);
+
+    :global(html.ready) & {
+      transition-property: background-color, box-shadow, color;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-in-out;
+    }
+
+    &.atTop {
+      border-bottom: transparent;
+      background-color: rgba(255, 255, 255, 0);
+      box-shadow: inset 0 40px 40px -20px rgba(50, 50, 50, 0.6);
+      text-shadow: 0 0 2px transparentize($color-charcol, 0.2);
+    }
+
+    &.atTop .headerLogo {
+      color: $color-white;
+    }
+  }
+
+  .headerContainer {
+    display: flex;
+
+    @include grid-container-max-width(
+      $breakpoints: (tablet-portrait, tablet-landscape, desktop-narrow, desktop-wide)
+    );
+
+    @include grid-container-padding(
+      $breakpoints: (tablet-portrait, tablet-landscape, desktop-narrow, desktop-wide),
+      $sides: (left, right)
+    );
+
+    @include breakpoint($media-mobile) {
+      display: flex;
+    }
+
+    @include breakpoint($media-not-mobile) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+.headerLogo {
+  @include breakpoint($media-mobile) {
+    display: none;
+  }
+
+  @include breakpoint($media-not-mobile) {
+    float: left;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+
+    &.atTop strong,
+    &.atTop span {
+      color: $color-white;
+    }
+  }
+}

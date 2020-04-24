@@ -1,0 +1,88 @@
+@import "~%styleguide/utils/colors";
+@import "~%styleguide/utils/fonts/styles";
+
+/* Document */
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  font-smooth: always;
+}
+
+body {
+  font-size: 100%;
+  line-height: 150%;
+  font-family: $font-family-copy;
+  color: $color-text-copy;
+}
+
+/* Headings */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+}
+
+/* Forms */
+
+input,
+select,
+button,
+textarea {
+  font-family: $font-family-copy;
+  font-size: 100%;
+}
+
+label {
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* Objects */
+
+iframe,
+object {
+  display: block;
+}
+
+/* Text (inline) */
+
+code.inline,
+samp {
+  display: inline-block;
+  border: solid 1px $color-shade-border;
+  background-color: $color-shade-background;
+  padding: 0 5px;
+  margin: 0 2px;
+  border-radius: 3px;
+  font-family: $font-family-monospace;
+}
+
+em {
+  font-style: italic;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Images */
+
+figure {
+  display: block;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

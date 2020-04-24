@@ -1,0 +1,17 @@
+@import "~breakpoint-sass";
+@import "~%styleguide/utils/media";
+
+%group {
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+
+.group {
+  @extend %group;
+}
+
+.group-alternate {
+  @extend %group;
+
+  background-color: $color-shade-background;
+}

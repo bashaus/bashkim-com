@@ -1,0 +1,53 @@
+{
+  "slice_type": "CarouselPhonesSliceType",
+  "slice_label": null,
+  "items": [
+    {
+      "CarouselPhonesSliceType_Caption": [
+        {
+          "type": "heading3",
+          "text": "First phone",
+          "spans": []
+        },
+        {
+          "type": "paragraph",
+          "text": "This is the first phone",
+          "spans": []
+        }
+      ],
+      "CarouselPhonesSliceType_Image": {
+        "dimensions": {
+          "width": 600,
+          "height": 1200
+        },
+        "alt": null,
+        "copyright": null,
+        "url": "https://placehold.it/600x1200"
+      }
+    },
+    {
+      "CarouselPhonesSliceType_Caption": [
+        {
+          "type": "heading3",
+          "text": "Second phone",
+          "spans": []
+        },
+        {
+          "type": "paragraph",
+          "text": "This is the second phone",
+          "spans": []
+        }
+      ],
+      "CarouselPhonesSliceType_Image": {
+        "dimensions": {
+          "width": 600,
+          "height": 1200
+        },
+        "alt": null,
+        "copyright": null,
+        "url": "https://placehold.it/600x1200"
+      }
+    }
+  ],
+  "primary": {}
+}

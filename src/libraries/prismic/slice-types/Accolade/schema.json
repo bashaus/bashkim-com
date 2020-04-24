@@ -1,0 +1,51 @@
+{
+  "type": "Slice",
+  "fieldset": "Accolade",
+  "description": "Awards and accolades won by a case study",
+  "icon": "whatshot",
+  "display": "list",
+  "non-repeat": {
+    "AccoladeSliceType_Issuer": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading3",
+        "label": "Issuer"
+      }
+    },
+    "AccoladeSliceType_Description": {
+      "type": "StructuredText",
+      "config": {
+        "single": "paragraph",
+        "label": "Description"
+      }
+    },
+    "AccoladeSliceType_Date": {
+      "type": "Date",
+      "config": {
+        "label": "Date"
+      }
+    }
+  },
+  "repeat": {
+    "AccoladeSliceType_AwardPlace": {
+      "type": "Select",
+      "config": {
+        "options": ["gold", "silver", "bronze", "honour", "shortlist"],
+        "label": "Place"
+      }
+    },
+    "AccoladeSliceType_AwardLink": {
+      "type": "Link",
+      "config": {
+        "label": "Link"
+      }
+    },
+    "AccoladeSliceType_AwardCategory": {
+      "type": "StructuredText",
+      "config": {
+        "multi": "paragraph",
+        "label": "Category"
+      }
+    }
+  }
+}

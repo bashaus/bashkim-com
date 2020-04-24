@@ -1,0 +1,33 @@
+@import "~%styleguide/utils/grid";
+@import "~%styleguide/utils/wysiwyg";
+
+.PortfolioFeaturedCaseStudies {
+  @include grid-container;
+
+  .item {
+    display: flex;
+    flex-direction: column;
+
+    @include grid-cell(
+      $columns: (
+        mobile-portrait: 12,
+        mobile-landscape: 6,
+        tablet-portrait: 6,
+        tablet-landscape: 3,
+        desktop-narrow: 3,
+        desktop-wide: 3,
+      )
+    );
+  }
+
+  .details {
+    @extend %wysiwyg;
+    flex-grow: 0;
+  }
+
+  .tile {
+    display: block;
+    margin-top: 26px;
+    flex-grow: 1;
+  }
+}

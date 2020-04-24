@@ -1,0 +1,53 @@
+{
+  "slice_type": "CarouselImagesSliceType",
+  "slice_label": null,
+  "items": [
+    {
+      "CarouselImagesSliceType_Caption": [
+        {
+          "type": "heading3",
+          "text": "First slide",
+          "spans": []
+        },
+        {
+          "type": "paragraph",
+          "text": "This is the first slide",
+          "spans": []
+        }
+      ],
+      "CarouselImagesSliceType_Image": {
+        "dimensions": {
+          "width": 600,
+          "height": 400
+        },
+        "alt": null,
+        "copyright": null,
+        "url": "https://placehold.it/600x400"
+      }
+    },
+    {
+      "CarouselImagesSliceType_Caption": [
+        {
+          "type": "heading3",
+          "text": "Second slide",
+          "spans": []
+        },
+        {
+          "type": "paragraph",
+          "text": "This is the second slide",
+          "spans": []
+        }
+      ],
+      "CarouselImagesSliceType_Image": {
+        "dimensions": {
+          "width": 600,
+          "height": 400
+        },
+        "alt": null,
+        "copyright": null,
+        "url": "https://placehold.it/600x400"
+      }
+    }
+  ],
+  "primary": {}
+}

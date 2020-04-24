@@ -1,0 +1,47 @@
+@import "~%styleguide/utils/grid";
+@import "~%styleguide/utils/wysiwyg";
+
+.DeviceFeaturePhone {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 0;
+
+  .wrapper {
+    position: relative;
+    background-image: url("/static/vectors/devices/feature-phone.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: auto;
+    margin-right: auto;
+
+    // 255 x 467.773
+    width: 100%;
+    padding-bottom: 183.44039216%;
+  }
+
+  .content {
+    display: block;
+    position: absolute;
+    overflow-y: scroll;
+
+    top: 18.6%;
+    left: 8.4%;
+    right: 9%;
+    height: 35.4%;
+  }
+
+  img {
+    display: block;
+  }
+
+  figcaption {
+    @extend %wysiwyg;
+    @include grid-cell-padding(
+      $sides: (top, left, right, bottom)
+    );
+
+    text-align: center;
+  }
+}

@@ -1,0 +1,4 @@
+.next
+.storybook-static
+libraries/turn
+node_modules

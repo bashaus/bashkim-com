@@ -1,0 +1,58 @@
+@import "~breakpoint-sass";
+@import "~%styleguide/base/headings/styles";
+@import "~%styleguide/utils/grid";
+@import "~%styleguide/utils/media";
+
+.CaseStudyTechnologies {
+  h3 {
+    @extend %h3;
+    text-align: center;
+  }
+
+  ul {
+    @include grid-container($padding: ());
+  }
+
+  li {
+    @include grid-cell(
+      $columns: (
+        mobile-portrait: 6,
+        mobile-landscape: 3,
+        tablet-portrait: 12,
+        tablet-landscape: 6,
+        desktop-narrow: 6,
+        desktop-wide: 6,
+      ),
+      $padding: (top, bottom)
+    );
+  }
+
+  .icon {
+    vertical-align: middle;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 60px;
+    height: auto;
+  }
+
+  .name {
+    display: block;
+    text-align: center;
+    font-size: small;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  @include breakpoint($media-mobile) {
+    h3 {
+      margin-top: 24px;
+      margin-bottom: 12px;
+    }
+  }
+
+  @include breakpoint($media-screen-large) {
+    h3 {
+      margin-bottom: 24px;
+    }
+  }
+}

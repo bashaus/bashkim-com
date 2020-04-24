@@ -1,0 +1,18 @@
+@import "~%styleguide/utils/grid";
+
+.FooterCopyright {
+  @include grid-full-padding(
+    $breakpoints: (mobile-portrait, mobile-landscape, tablet-portrait)
+  );
+
+  @include grid-cell(
+    (
+      tablet-landscape: 12,
+      desktop-narrow: 12,
+      desktop-wide: 12,
+    )
+  );
+
+  padding-top: 10px;
+  padding-bottom: 30px;
+}

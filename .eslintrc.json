@@ -1,21 +1,35 @@
 {
-  "env": {
-    "browser": true,
-    "es6": true
-  },
   "extends": [
-    "airbnb"
+    "airbnb-typescript",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking"
   ],
-  "parser": "babel-eslint",
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
   "plugins": [
-    "babel"
+    "@typescript-eslint",
+    "prettier"
   ],
   "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
     "import/resolver": {
-      "babel-module": {}
+      "typescript": {}
     }
   },
   "rules": {
-    "jsx-a11y/anchor-is-valid": 0
+    "@typescript-eslint/indent": [2, 2],
+    "import/no-extraneous-dependencies": [2, {
+      "devDependencies": ["**/test.tsx", "**/test.ts", "**/stories.tsx"]
+    }],
+    "jsx-a11y/anchor-is-valid": 0,
+    "react/jsx-filename-extension": [2, {
+      "extensions": [".js", ".jsx", ".ts", ".tsx"]
+    }],
+    "spaced-comment": ["error", "always", { "markers": ["/"] }]
   }
 }
