@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import ReactTags from 'react-tag-autocomplete';
 
 import ToggleButton from '%components/ToggleButton';
@@ -26,147 +26,139 @@ const TAGS = {
   },
 };
 
-class PortfolioFilter extends React.PureComponent {
-  setTags(tags) {
-    const { dispatch } = this.context;
+const PortfolioFilter = () => {
+  const { state, dispatch } = useContext(PortfolioListContext);
+
+  const setTags = (tags) => {
     dispatch({
       type: PortfolioActions.SET_FILTERS,
       payload: { filters: tags },
     });
-  }
+  };
 
-  handleReactTagsDelete = (i) => {
-    const { state } = this.context;
+  const handleReactTagsDelete = (i) => {
     const { filters } = state;
     const filtersCopy = filters.slice(0);
     filtersCopy.splice(i, 1);
-    this.setTags(filtersCopy);
-  }
+    setTags(filtersCopy);
+  };
 
-  handleReactTagsAdd = (tag) => {
-    const { state } = this.context;
+  const handleReactTagsAdd = (tag) => {
     const { filters } = state;
-    this.setTags([].concat(filters, tag));
-  }
+    setTags([].concat(filters, tag));
+  };
 
-  handleDisplayChange = (e) => {
-    const { dispatch } = this.context;
+  const handleDisplayChange = (e) => {
     dispatch({
       type: PortfolioActions.SET_DISPLAY,
       payload: { display: e.currentTarget.value },
     });
-  }
+  };
 
-  handleSortChange = (e) => {
-    const { dispatch } = this.context;
+  const handleSortChange = (e) => {
     dispatch({
       type: PortfolioActions.SET_SORT,
       payload: { sort: e.currentTarget.value },
     });
+  };
+
+  const handlePhysicalComputingClick = () => {
+    setTags([TAGS.PHYSICAL_COMPUTING]);
+  };
+
+  const handleWebDevelopmentClick = () => {
+    setTags([TAGS.WEB_DEVELOPMENT]);
+  };
+
+  const {
+    display, sort, filters, technologies,
+  } = state;
+
+  let placeholder = '';
+  if (filters.length === 0) {
+    placeholder = 'Filter by keyword or technology (e.g.: PHP)';
   }
 
-  handlePhysicalComputingClick = () => {
-    this.setTags([TAGS.PHYSICAL_COMPUTING]);
-  }
+  return (
+    <div className={styles.PortfolioFilter}>
+      <div className={styles.tags}>
+        <ReactTags
+          autofocus={false}
+          tags={filters}
+          suggestions={technologies}
+          placeholder={placeholder}
+          handleDelete={handleReactTagsDelete}
+          handleAddition={handleReactTagsAdd}
+        />
 
-  handleWebDevelopmentClick = () => {
-    this.setTags([TAGS.WEB_DEVELOPMENT]);
-  }
-
-  render() {
-    const { state } = this.context;
-    const {
-      display, sort, filters, technologies,
-    } = state;
-
-    let placeholder = '';
-    if (filters.length === 0) {
-      placeholder = 'Filter by keyword or technology (e.g.: PHP)';
-    }
-
-    return (
-      <div className={styles.PortfolioFilter}>
-        <div className={styles.tags}>
-          <ReactTags
-            autofocus={false}
-            tags={filters}
-            suggestions={technologies}
-            placeholder={placeholder}
-            handleDelete={this.handleReactTagsDelete}
-            handleAddition={this.handleReactTagsAdd}
-          />
-
-          { filters.length === 0 && (
-            <p className={styles.inlineSuggestions}>
-              <span>Stuck for ideas? Check out </span>
-              <button type="button" onClick={this.handlePhysicalComputingClick}>
-                { TAGS.PHYSICAL_COMPUTING.name }
-              </button>
-              <span> or </span>
-              <button type="button" onClick={this.handleWebDevelopmentClick}>
-                { TAGS.WEB_DEVELOPMENT.name }
-              </button>
-              .
-            </p>
-          ) }
-        </div>
-
-        <div className={styles.display}>
-          <ToggleGroup
-            initialValue={display}
-            label="Display"
-            onChange={this.handleDisplayChange}
-          >
-            <ToggleButton value="icon">
-              <img
-                src="/static/vectors/display/icon.svg"
-                alt="Display as Icons"
-                title="Display as Icons"
-                className={styles.icon}
-              />
-            </ToggleButton>
-
-            <ToggleButton value="list">
-              <img
-                src="/static/vectors/display/list.svg"
-                alt="Display as List"
-                title="Display as List"
-                className={styles.icon}
-              />
-            </ToggleButton>
-          </ToggleGroup>
-        </div>
-
-        <div className={styles.sort}>
-          <ToggleGroup
-            initialValue={sort}
-            label="Sort by"
-            onChange={this.handleSortChange}
-          >
-            <ToggleButton value="alphabetical">
-              <img
-                src="/static/vectors/sort/alphabetical.svg"
-                alt="Sort alphabetically"
-                title="Sort alphabetically"
-                className={styles.icon}
-              />
-            </ToggleButton>
-
-            <ToggleButton value="launched">
-              <img
-                src="/static/vectors/sort/launched.svg"
-                alt="Sort by Launch Date"
-                title="Sort by Launch Date"
-                className={styles.icon}
-              />
-            </ToggleButton>
-          </ToggleGroup>
-        </div>
+        { filters.length === 0 && (
+          <p className={styles.inlineSuggestions}>
+            <span>Stuck for ideas? Check out </span>
+            <button type="button" onClick={handlePhysicalComputingClick}>
+              { TAGS.PHYSICAL_COMPUTING.name }
+            </button>
+            <span> or </span>
+            <button type="button" onClick={handleWebDevelopmentClick}>
+              { TAGS.WEB_DEVELOPMENT.name }
+            </button>
+            .
+          </p>
+        ) }
       </div>
-    );
-  }
-}
 
-PortfolioFilter.contextType = PortfolioListContext;
+      <div className={styles.display}>
+        <ToggleGroup
+          initialValue={display}
+          label="Display"
+          onChange={handleDisplayChange}
+        >
+          <ToggleButton value="icon">
+            <img
+              src="/static/vectors/display/icon.svg"
+              alt="Display as Icons"
+              title="Display as Icons"
+              className={styles.icon}
+            />
+          </ToggleButton>
+
+          <ToggleButton value="list">
+            <img
+              src="/static/vectors/display/list.svg"
+              alt="Display as List"
+              title="Display as List"
+              className={styles.icon}
+            />
+          </ToggleButton>
+        </ToggleGroup>
+      </div>
+
+      <div className={styles.sort}>
+        <ToggleGroup
+          initialValue={sort}
+          label="Sort by"
+          onChange={handleSortChange}
+        >
+          <ToggleButton value="alphabetical">
+            <img
+              src="/static/vectors/sort/alphabetical.svg"
+              alt="Sort alphabetically"
+              title="Sort alphabetically"
+              className={styles.icon}
+            />
+          </ToggleButton>
+
+          <ToggleButton value="launched">
+            <img
+              src="/static/vectors/sort/launched.svg"
+              alt="Sort by Launch Date"
+              title="Sort by Launch Date"
+              className={styles.icon}
+            />
+          </ToggleButton>
+        </ToggleGroup>
+      </div>
+    </div>
+  );
+};
 
 export default PortfolioFilter;

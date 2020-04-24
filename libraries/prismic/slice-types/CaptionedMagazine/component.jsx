@@ -8,9 +8,7 @@ import LinkResolver from '%prismic/helpers/LinkResolver';
 
 import SlicePropType from './prop-type';
 
-export default function CaptionedMagazineSliceType(props) {
-  const { slice } = props;
-
+const CaptionedMagazineSliceType = ({ slice }) => {
   /* non-repeat */
   const {
     CaptionedMagazineSliceType_Caption: caption,
@@ -45,8 +43,10 @@ export default function CaptionedMagazineSliceType(props) {
       { caption && RichText.render(caption, LinkResolver) }
     </PartialCaptioned>
   );
-}
+};
 
 CaptionedMagazineSliceType.propTypes = {
   slice: SlicePropType.isRequired,
 };
+
+export default CaptionedMagazineSliceType;

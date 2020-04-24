@@ -6,9 +6,7 @@ import LinkResolver from '%prismic/helpers/LinkResolver';
 
 import SlicePropType from './prop-type';
 
-export default function CollaboratorSliceType(props) {
-  const { slice, peer } = props;
-
+const CollaboratorSliceType = ({ slice, peer }) => {
   const {
     CollaboratorSliceType_Company: company,
     CollaboratorSliceType_Role: role,
@@ -48,9 +46,11 @@ export default function CollaboratorSliceType(props) {
       { role }
     </li>
   );
-}
+};
 
 CollaboratorSliceType.propTypes = {
   slice: SlicePropType.isRequired,
   peer: PropTypes.object.isRequired,
 };
+
+export default CollaboratorSliceType;

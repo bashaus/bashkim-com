@@ -5,9 +5,7 @@ import React from 'react';
 
 const { publicRuntimeConfig } = getConfig();
 
-export default function MetaCanonical(props) {
-  const { href } = props;
-
+const MetaCanonical = ({ href }) => {
   if (!href) {
     return null;
   }
@@ -19,7 +17,7 @@ export default function MetaCanonical(props) {
       <link key="MetaCanonical" rel="canonical" href={absoluteHref} />
     </Head>
   );
-}
+};
 
 MetaCanonical.propTypes = {
   href: PropTypes.string,
@@ -28,3 +26,5 @@ MetaCanonical.propTypes = {
 MetaCanonical.defaultProps = {
   href: null,
 };
+
+export default MetaCanonical;

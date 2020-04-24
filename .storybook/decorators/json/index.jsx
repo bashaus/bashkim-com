@@ -26,27 +26,25 @@ const THEME = {
   base0F: '#cc6633'
 };
 
-export default function JSONDecorator(props) {
-  const { schema } = props;
+const JSONDecorator = ({ schema }) => (
+  <section className={styles.JSONDecorator}>
+    <CopyToClipboard
+      text={JSON.stringify(schema, null, 2)}
+      onCopy={() => alert('copied')}
+    >
+      <button className={styles.copyButton}>
+        Copy JSON to Clipboard
+      </button>
+    </CopyToClipboard>
 
-  return (
-    <section className={styles.JSONDecorator}>
-      <CopyToClipboard
-        text={JSON.stringify(schema, null, 2)}
-        onCopy={() => alert('copied')}
-      >
-        <button className={styles.copyButton}>
-          Copy JSON to Clipboard
-        </button>
-      </CopyToClipboard>
-
-      <div className={styles.jsonTree}>
-        <ReactJsonTree data={schema} theme={THEME} invertTheme={false} />
-      </div>
-    </section>
-  );
-}
+    <div className={styles.jsonTree}>
+      <ReactJsonTree data={schema} theme={THEME} invertTheme={false} />
+    </div>
+  </section>
+);
 
 JSONDecorator.propTypes = {
   schema: PropTypes.object.isRequired,
 }
+
+export default JSONDecorator;

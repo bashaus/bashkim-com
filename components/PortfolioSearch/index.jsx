@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import PortfolioListBrick from '%components/PortfolioListBrick';
 import PortfolioListRow from '%components/PortfolioListRow';
@@ -42,60 +42,58 @@ const SORT = {
   },
 };
 
-export default class PortfolioSearch extends React.PureComponent {
-  render() {
-    const { state } = this.context;
-    const {
-      display, sort, filters, caseStudies, technologies,
-    } = state;
+const PortfolioSearch = () => {
+  const { state } = useContext(PortfolioListContext);
+  const {
+    display, sort, filters, caseStudies, technologies,
+  } = state;
 
-    const RenderComponent = RenderComponents[display];
+  const RenderComponent = RenderComponents[display];
 
-    const filteredCaseStudies = caseStudies.filter(
-      (caseStudy) => filters.reduce(
-        (exists, filter) => {
-          if (!exists) {
+  const filteredCaseStudies = caseStudies.filter(
+    (caseStudy) => filters.reduce(
+      (exists, filter) => {
+        if (!exists) {
+          return false;
+        }
+
+        const { type: filterType, value: filterValue } = filter.id;
+        switch (filterType) {
+          case 'technology':
+            return caseStudy.data.info_technologies.find(
+              (tech) => tech.info_technology.id === filterValue,
+            );
+
+          case 'tag':
+            return caseStudy.tags.includes(filterValue);
+
+          default:
             return false;
-          }
+        }
+      },
+      true,
+    ),
+  ).sort(SORT[sort]);
 
-          const { type: filterType, value: filterValue } = filter.id;
-          switch (filterType) {
-            case 'technology':
-              return caseStudy.data.info_technologies.find(
-                (tech) => tech.info_technology.id === filterValue,
-              );
+  return (
+    <>
+      <PortfolioFilter technologies={technologies} />
 
-            case 'tag':
-              return caseStudy.tags.includes(filterValue);
+      { filteredCaseStudies.length !== caseStudies.length && (
+        <div className={styles.pagination}>
+          {`Showing ${filteredCaseStudies.length} of ${caseStudies.length} case studies`}
+        </div>
+      ) }
 
-            default:
-              return false;
-          }
-        },
-        true,
-      ),
-    ).sort(SORT[sort]);
+      <ul className={`${styles.PortfolioSearch} ${styles[display]}`}>
+        { filteredCaseStudies.map((caseStudy) => (
+          <li key={caseStudy.uid}>
+            <RenderComponent caseStudy={caseStudy} technologies={technologies} />
+          </li>
+        )) }
+      </ul>
+    </>
+  );
+};
 
-    return (
-      <>
-        <PortfolioFilter technologies={technologies} />
-
-        { filteredCaseStudies.length !== caseStudies.length && (
-          <div className={styles.pagination}>
-            {`Showing ${filteredCaseStudies.length} of ${caseStudies.length} case studies`}
-          </div>
-        ) }
-
-        <ul className={`${styles.PortfolioSearch} ${styles[display]}`}>
-          { filteredCaseStudies.map((caseStudy) => (
-            <li key={caseStudy.uid}>
-              <RenderComponent caseStudy={caseStudy} technologies={technologies} />
-            </li>
-          )) }
-        </ul>
-      </>
-    );
-  }
-}
-
-PortfolioSearch.contextType = PortfolioListContext;
+export default PortfolioSearch;

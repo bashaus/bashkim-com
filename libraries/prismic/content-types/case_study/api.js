@@ -1,7 +1,7 @@
 const Prismic = require('prismic-javascript');
 const api = require('../../api');
 
-async function getCaseStudies(params) {
+const getCaseStudies = async (params) => {
   // We initialise the API with Prismic's kit
   const API = await api;
 
@@ -23,9 +23,9 @@ async function getCaseStudies(params) {
   );
 
   return response;
-}
+};
 
-async function getCaseStudy(uid, params) {
+const getCaseStudy = async (uid, params) => {
   const API = await api;
 
   // we pass up the slug to request the correct post
@@ -42,6 +42,6 @@ async function getCaseStudy(uid, params) {
   );
 
   return response.results[0];
-}
+};
 
 module.exports = { getCaseStudies, getCaseStudy };

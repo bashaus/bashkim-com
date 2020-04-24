@@ -8,7 +8,7 @@ import { NavigationContext } from '%contexts/Navigation';
 
 import styles from './styles.module.scss';
 
-export default function NavigationSocial() {
+const NavigationSocial = () => {
   const { state: navigationState } = React.useContext(NavigationContext);
 
   return (
@@ -87,4 +87,6 @@ export default function NavigationSocial() {
       </ul>
     </nav>
   );
-}
+};
+
+export default NavigationSocial;

@@ -3,23 +3,19 @@ import React from 'react';
 
 import styles from './styles.module.scss';
 
-export default function CarouselImage(props) {
-  const { figure, children } = props;
+const CarouselImage = ({ children = null, figure = null }) => (
+  <figure className={styles.CarouselImage}>
+    <div className={styles.figure}>
+      {figure}
+    </div>
 
-  return (
-    <figure className={styles.CarouselImage}>
-      <div className={styles.figure}>
-        {figure}
-      </div>
-
-      { children && (
-        <figcaption>
-          {children}
-        </figcaption>
-      ) }
-    </figure>
-  );
-}
+    { children && (
+      <figcaption>
+        {children}
+      </figcaption>
+    ) }
+  </figure>
+);
 
 CarouselImage.propTypes = {
   figure: PropTypes.node.isRequired,
@@ -29,3 +25,5 @@ CarouselImage.propTypes = {
 CarouselImage.defaultProps = {
   children: null,
 };
+
+export default CarouselImage;

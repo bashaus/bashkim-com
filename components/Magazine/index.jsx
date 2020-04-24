@@ -82,11 +82,11 @@ export default class Magazine extends React.PureComponent {
   }
 
   get $container() {
-    if (typeof window === 'undefined') {
+    if (typeof window === typeof undefined) {
       return null;
     }
 
-    if (typeof window.jQuery === 'undefined') {
+    if (typeof window.jQuery === typeof undefined) {
       return null;
     }
 
@@ -94,11 +94,11 @@ export default class Magazine extends React.PureComponent {
   }
 
   get $pages() {
-    if (typeof window === 'undefined') {
+    if (typeof window === typeof undefined) {
       return null;
     }
 
-    if (typeof window.jQuery === 'undefined') {
+    if (typeof window.jQuery === typeof undefined) {
       return null;
     }
 

@@ -1,6 +1,6 @@
 import * as actions from './actions';
 
-export default function CookiesReducer(state, action) {
+const CookiesReducer = (state, action) => {
   switch (action.type) {
     case actions.DISMISS:
       return { ...state, isDismissed: true };
@@ -8,4 +8,6 @@ export default function CookiesReducer(state, action) {
     default:
       return state;
   }
-}
+};
+
+export default CookiesReducer;

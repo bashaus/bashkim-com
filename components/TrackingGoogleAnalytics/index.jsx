@@ -4,7 +4,7 @@ import React from 'react';
 
 const { publicRuntimeConfig } = getConfig();
 
-export default function TrackingGoogleAnalytics() {
+const TrackingGoogleAnalytics = () => {
   if (!publicRuntimeConfig.googleAnalytics.enabled) {
     return null;
   }
@@ -37,4 +37,6 @@ export default function TrackingGoogleAnalytics() {
       />
     </Head>
   );
-}
+};
+
+export default TrackingGoogleAnalytics;

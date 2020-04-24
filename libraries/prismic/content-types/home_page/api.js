@@ -1,7 +1,7 @@
 const Prismic = require('prismic-javascript');
 const api = require('../../api');
 
-async function getHomePage(params) {
+const getHomePage = async (params) => {
   const API = await api;
 
   // we pass up the slug to request the correct post
@@ -20,6 +20,6 @@ async function getHomePage(params) {
   );
 
   return response.results[0];
-}
+};
 
 module.exports = { getHomePage };

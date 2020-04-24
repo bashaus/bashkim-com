@@ -3,9 +3,7 @@ import mime from 'mime';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-export default function MetaImage(props) {
-  const { height, url, width } = props;
-
+const MetaImage = ({ url, width, height }) => {
   if (!url) {
     return null;
   }
@@ -23,7 +21,7 @@ export default function MetaImage(props) {
       ) }
     </Head>
   );
-}
+};
 
 MetaImage.propTypes = {
   height: PropTypes.number,
@@ -36,3 +34,5 @@ MetaImage.defaultProps = {
   url: null,
   width: null,
 };
+
+export default MetaImage;

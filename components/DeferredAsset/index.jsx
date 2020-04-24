@@ -1,53 +1,36 @@
-import VisibilitySensor from 'react-visibility-sensor';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import React from 'react';
+import VisibilitySensor from 'react-visibility-sensor';
 
 import styles from './styles.module.scss';
 
-export default class DeferredAsset extends React.PureComponent {
-  constructor(...args) {
-    super(...args);
+const DeferredAsset = ({ children, width, height, ratio }) => {
+  const [isVisible, setIsVisible] = useState(false);
 
-    this.state = {
-      visible: false,
-    };
+  const handleVisibilityChange = _isVisible => {
+    if (!isVisible && _isVisible) {
+      setIsVisible(true);
+    }
+  };
+
+  if (isVisible) {
+    return children;
   }
 
-  handleVisibilityChange = (isVisible) => {
-    if (isVisible) {
-      this.setState({ visible: true });
-    }
+  const ratioValue = ratio || (height / width);
+  const style = {
+    paddingBottom: `${ratioValue * 100}%`
+  };
+
+  if (width) {
+    style.maxWidth = width;
   }
 
-  render() {
-    const {
-      children,
-      width,
-      height,
-      ratio,
-    } = this.props;
-    const { visible } = this.state;
-
-    if (visible) {
-      return children;
-    }
-
-    const ratioValue = ratio || (height / width);
-    const style = { paddingBottom: `${ratioValue * 100}%` };
-
-    if (width) {
-      style.maxWidth = width;
-    }
-
-    return (
-      <VisibilitySensor
-        partialVisibility
-        onChange={this.handleVisibilityChange}
-      >
-        <div className={styles.DeferredAsset} style={style} />
-      </VisibilitySensor>
-    );
-  }
+  return (
+    <VisibilitySensor partialVisibility onChange={handleVisibilityChange}>
+      <div className={styles.DeferredAsset} style={style} />
+    </VisibilitySensor>
+  );
 }
 
 DeferredAsset.propTypes = {
@@ -62,3 +45,5 @@ DeferredAsset.defaultProps = {
   height: null,
   ratio: null,
 };
+
+export default DeferredAsset;

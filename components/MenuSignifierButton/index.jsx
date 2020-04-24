@@ -1,36 +1,33 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import { NavigationContext } from '%contexts/Navigation';
 import * as NavigationActions from '%contexts/Navigation/actions';
 
 import styles from './styles.module.scss';
 
-export default class MenuSignifierButton extends React.PureComponent {
-  handleSignifierClick = () => {
-    const { dispatch } = this.context;
-    dispatch({ type: NavigationActions.TOGGLE });
-  }
+const MenuSignifierButton = () => {
+  const { state: navigationState, dispatch: navigationDispatch } = useContext(NavigationContext);
 
-  render() {
-    const { state: menuState } = this.context;
+  const handleSignifierClick = () => {
+    navigationDispatch({ type: NavigationActions.TOGGLE });
+  };
 
-    return (
-      <button
-        type="button"
-        aria-hidden="true"
-        aria-pressed={menuState.isVisible}
-        onClick={this.handleSignifierClick}
-        className={styles.MenuSignifierButton}
-      >
-        <span className={styles.icon}>
-          <span />
-          <span />
-          <span />
-          <span />
-        </span>
-      </button>
-    );
-  }
-}
+  return (
+    <button
+      type="button"
+      aria-hidden="true"
+      aria-pressed={navigationState.isVisible}
+      onClick={handleSignifierClick}
+      className={styles.MenuSignifierButton}
+    >
+      <span className={styles.icon}>
+        <span />
+        <span />
+        <span />
+        <span />
+      </span>
+    </button>
+  );
+};
 
-MenuSignifierButton.contextType = NavigationContext;
+export default MenuSignifierButton;

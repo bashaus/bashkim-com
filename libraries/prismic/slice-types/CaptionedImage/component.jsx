@@ -7,9 +7,7 @@ import LinkResolver from '%prismic/helpers/LinkResolver';
 
 import SlicePropType from './prop-type';
 
-export default function CaptionedImageSliceType(props) {
-  const { slice } = props;
-
+const CaptionedImageSliceType = ({ slice }) => {
   const {
     CaptionedImageSliceType_Caption: caption,
     CaptionedImageSliceType_Image: image,
@@ -31,8 +29,10 @@ export default function CaptionedImageSliceType(props) {
       { caption && RichText.render(caption, LinkResolver) }
     </PartialCaptioned>
   );
-}
+};
 
 CaptionedImageSliceType.propTypes = {
   slice: SlicePropType.isRequired,
 };
+
+export default CaptionedImageSliceType;

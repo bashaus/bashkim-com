@@ -4,9 +4,7 @@ import React from 'react';
 
 import styles from './styles.module.scss';
 
-export default function VideoPlayerYouTube(props) {
-  const { v, title } = props;
-
+const VideoPlayerYouTube = ({ v, title }) => {
   const iframeSrc = `https://www.youtube-nocookie.com/embed/${v}?${
     QueryString.stringify({
       rel: '0',
@@ -25,9 +23,11 @@ export default function VideoPlayerYouTube(props) {
       <iframe allowFullScreen src={iframeSrc} title={title} frameBorder={0} />
     </div>
   );
-}
+};
 
 VideoPlayerYouTube.propTypes = {
   v: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
 };
+
+export default VideoPlayerYouTube;

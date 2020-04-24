@@ -1,6 +1,6 @@
 import * as actions from './actions';
 
-export default function NavigationReducer(state, action) {
+const NavigationReducer = (state, action) => {
   switch (action.type) {
     case actions.HIDE:
       return { ...state, isVisible: false };
@@ -15,3 +15,5 @@ export default function NavigationReducer(state, action) {
       return state;
   }
 };
+
+export default NavigationReducer;

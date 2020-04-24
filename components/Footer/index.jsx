@@ -6,14 +6,14 @@ import FooterSocial from '%components/FooterSocial';
 
 import styles from './styles.module.scss';
 
-export default function Footer() {
-  return (
-    <footer className={styles.Footer}>
-      <div className={styles.wrapper}>
-        <FooterLinks />
-        <FooterSocial />
-        <FooterCopyright />
-      </div>
-    </footer>
-  );
-}
+const Footer = () => (
+  <footer className={styles.Footer}>
+    <div className={styles.wrapper}>
+      <FooterLinks />
+      <FooterSocial />
+      <FooterCopyright />
+    </div>
+  </footer>
+);
+
+export default Footer;

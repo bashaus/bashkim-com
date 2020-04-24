@@ -1,6 +1,8 @@
 import JQueryImport from '%libraries/jquery/import';
 
-export default async function TurnImport() {
+const TurnImport = async () => {
   await JQueryImport();
   return import('%libraries/turn/turn.min.js');
-}
+};
+
+export default TurnImport;

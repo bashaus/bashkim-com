@@ -17,14 +17,16 @@ const SliceBundle = {
   GridVideoSliceType: dynamic(() => import('%prismic/slice-types/GridVideo/component')),
 };
 
-export default function Slice(props) {
+const Slice = (props) => {
   const { slice } = props;
   const SliceComponent = SliceBundle[slice.slice_type];
 
   // eslint-disable-next-line react/jsx-props-no-spreading
   return <SliceComponent {...props} />;
-}
+};
 
 Slice.propTypes = {
   slice: SlicePropType.isRequired,
 };
+
+export default Slice;

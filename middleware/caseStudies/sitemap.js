@@ -2,7 +2,7 @@ const dayjs = require('dayjs');
 const Config = require('../../config');
 const { getCaseStudies } = require('../../libraries/prismic/content-types/case_study/api');
 
-module.exports = async function CaseStudiesSitemap() {
+const CaseStudiesSitemap = async () => {
   const urlset = [
     {
       url: {
@@ -29,3 +29,5 @@ module.exports = async function CaseStudiesSitemap() {
 
   return urlset;
 };
+
+module.exports = CaseStudiesSitemap

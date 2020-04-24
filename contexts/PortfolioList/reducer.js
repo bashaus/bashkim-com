@@ -1,6 +1,6 @@
 import * as actions from './actions';
 
-export default function PortfolioListReducer(state, action) {
+const PortfolioListReducer = (state, action) => {
   switch (action.type) {
     case actions.SET_FILTERS:
       return { ...state, filters: action.payload.filters };
@@ -14,4 +14,6 @@ export default function PortfolioListReducer(state, action) {
     default:
       return state;
   }
-}
+};
+
+export default PortfolioListReducer;

@@ -4,9 +4,7 @@ import CookiesReducer from './reducer';
 
 export const CookiesContext = React.createContext();
 
-export default function CookiesStore(props) {
-  const { children } = props;
-
+const CookiesStore = ({ children }) => {
   const [state, dispatch] = React.useReducer(
     CookiesReducer,
     [],
@@ -20,8 +18,10 @@ export default function CookiesStore(props) {
       {children}
     </CookiesContext.Provider>
   );
-}
+};
 
 CookiesStore.propTypes = {
   children: PropTypes.node.isRequired,
 };
+
+export default CookiesStore;

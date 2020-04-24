@@ -3,19 +3,15 @@ import React from 'react';
 
 import styles from './styles.module.scss';
 
-export default function PartialTitle(props) {
-  const { title, children, image } = props;
-
-  return (
-    <header className={styles.PartialTitle}>
-      <h1 itemProp="name headline">{title}</h1>
-      <div itemProp="description">{children}</div>
-      { image && (
-        <img src={image} alt="" />
-      ) }
-    </header>
-  );
-}
+const PartialTitle = ({ title, children, image }) => (
+  <header className={styles.PartialTitle}>
+    <h1 itemProp="name headline">{title}</h1>
+    <div itemProp="description">{children}</div>
+    { image && (
+      <img src={image} alt="" />
+    ) }
+  </header>
+);
 
 PartialTitle.propTypes = {
   title: PropTypes.string.isRequired,
@@ -27,3 +23,5 @@ PartialTitle.defaultProps = {
   children: null,
   image: null,
 };
+
+export default PartialTitle;

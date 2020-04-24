@@ -24,9 +24,7 @@ import { getPeers } from '%prismic/content-types/peer/api';
 import CaseStudyContentPropType from '%prismic/content-types/case_study/prop-type';
 import PeerContentPropType from '%prismic/content-types/peer/prop-type';
 
-export default function CaseStudyPage(props) {
-  const { caseStudy, peers } = props;
-
+const CaseStudyPage = ({ caseStudy, peers }) => {
   const {
     body: bodySlices,
     accolades: accoladeSlices,
@@ -81,7 +79,7 @@ export default function CaseStudyPage(props) {
       ) }
     </article>
   );
-}
+};
 
 CaseStudyPage.getInitialProps = async (context) => {
   const { caseStudySlug } = context.query;
@@ -111,10 +109,12 @@ CaseStudyPage.propTypes = {
   peers: PropTypes.arrayOf(PeerContentPropType).isRequired,
 };
 
-CaseStudyPage.getLayout = function CaseStudyLayout(page) {
-  return (
-    <LayoutDefault backButton={MenuBackButtonPortfolioImpl} theme="portfolio">
-      { page }
-    </LayoutDefault>
-  );
-};
+const CaseStudyLayout = (page) => (
+  <LayoutDefault backButton={MenuBackButtonPortfolioImpl} theme="portfolio">
+    { page }
+  </LayoutDefault>
+);
+
+CaseStudyPage.getLayout = CaseStudyLayout;
+
+export default CaseStudyPage;

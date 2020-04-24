@@ -1,49 +1,37 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { useState } from 'react';
 
 import styles from './styles.module.scss';
 
-export default class ToggleGroup extends React.PureComponent {
-  constructor(...args) {
-    super(...args);
+const ToggleGroup = ({
+  children, initialValue, label, onChange,
+}) => {
+  const [selectedValue, setSelectedValue] = useState(initialValue);
 
-    const { initialValue } = this.props;
-
-    this.state = {
-      selectedValue: initialValue,
-    };
-  }
-
-  handleChange = (e) => {
-    const { onChange } = this.props;
-    this.setState({ selectedValue: e.currentTarget.value });
+  const handleChange = (e) => {
+    setSelectedValue(e.currentTarget.value);
     onChange(e);
-  }
+  };
 
-  render() {
-    const { label, children } = this.props;
-    const { selectedValue } = this.state;
+  const buttons = React.Children.map(children, (child) => (
+    React.cloneElement(child, {
+      selected: selectedValue === child.props.value,
+      onChange: handleChange,
+    })
+  ));
 
-    const buttons = React.Children.map(children, (child) => (
-      React.cloneElement(child, {
-        selected: selectedValue === child.props.value,
-        onChange: this.handleChange,
-      })
-    ));
+  return (
+    <>
+      { label && (
+        <p className={styles.label}>{label}</p>
+      ) }
 
-    return (
-      <>
-        { label && (
-          <p className={styles.label}>{label}</p>
-        ) }
-
-        <div className={styles.ToggleGroup}>
-          {buttons}
-        </div>
-      </>
-    );
-  }
-}
+      <div className={styles.ToggleGroup}>
+        {buttons}
+      </div>
+    </>
+  );
+};
 
 ToggleGroup.propTypes = {
   label: PropTypes.node,
@@ -56,3 +44,5 @@ ToggleGroup.defaultProps = {
   label: null,
   onChange: () => {},
 };
+
+export default ToggleGroup;

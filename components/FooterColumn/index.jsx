@@ -3,18 +3,21 @@ import React from 'react';
 
 import styles from './styles.module.scss';
 
-export default function FooterColumn(props) {
-  const { className, label, children } = props;
-  const [visible, setVisible] = React.useState(false);
+const FooterColumn = ({ className, label, children }) => {
+  const [isVisible, setIsVisible] = React.useState(false);
+
+  const handleHeaderClick = () => {
+    setIsVisible(!isVisible);
+  };
 
   return (
-    <div className={`${styles.FooterColumn} ${className} ${visible ? styles.visible : ''}`}>
+    <div className={`${styles.FooterColumn} ${className} ${isVisible ? styles.visible : ''}`}>
       <div
         role="menuitem"
         tabIndex={0}
         className={styles.label}
-        onClick={() => setVisible(!visible)}
-        onKeyPress={() => setVisible(!visible)}
+        onClick={handleHeaderClick}
+        onKeyPress={handleHeaderClick}
       >
         {label}
       </div>
@@ -22,7 +25,7 @@ export default function FooterColumn(props) {
       {children}
     </div>
   );
-}
+};
 
 FooterColumn.propTypes = {
   className: PropTypes.string,
@@ -33,3 +36,5 @@ FooterColumn.propTypes = {
 FooterColumn.defaultProps = {
   className: '',
 };
+
+export default FooterColumn;

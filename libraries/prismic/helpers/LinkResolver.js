@@ -1,4 +1,4 @@
-export default function PrismicLinkResolver(doc) {
+const PrismicLinkResolver = (doc) => {
   switch (doc.type) {
     case 'case_study':
       return `/portfolio/${doc.uid}`;
@@ -6,4 +6,6 @@ export default function PrismicLinkResolver(doc) {
     default:
       return '/';
   }
-}
+};
+
+export default PrismicLinkResolver;

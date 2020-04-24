@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -7,8 +8,10 @@ import CollaboratorSliceType from '%prismic/slice-types/Collaborator/component';
 
 import styles from './styles.module.scss';
 
-export default function CaseStudyCollaborators(props) {
-  const { slices, peers, myRole } = props;
+const CaseStudyCollaborators = ({ slices = [], peers = [], myRole = null }) => {
+  if (!slices.length) {
+    return null;
+  }
 
   return (
     <>
@@ -19,9 +22,9 @@ export default function CaseStudyCollaborators(props) {
       <ul className={styles.CaseStudyCollaborators}>
         <li>
           <strong>
-            <a href="https://www.bashkim.com" target="_blank" rel="noopener noreferrer">
-              Bashkim Isai
-            </a>
+            <Link href="/">
+              <a>Bashkim Isai</a>
+            </Link>
           </strong>
           <br />
           { myRole }
@@ -42,10 +45,12 @@ export default function CaseStudyCollaborators(props) {
       </ul>
     </>
   );
-}
+};
 
 CaseStudyCollaborators.propTypes = {
   myRole: PropTypes.string.isRequired,
   peers: PropTypes.arrayOf(PropTypes.object).isRequired,
   slices: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
+
+export default CaseStudyCollaborators;

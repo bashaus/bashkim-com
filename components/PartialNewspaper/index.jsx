@@ -3,16 +3,14 @@ import React from 'react';
 
 import styles from './styles.module.scss';
 
-export default function PartialNewspaper(props) {
-  const { children } = props;
-
-  return (
-    <div className={styles.PartialNewspaper}>
-      { children }
-    </div>
-  );
-}
+const PartialNewspaper = ({ children }) => (
+  <div className={styles.PartialNewspaper}>
+    { children }
+  </div>
+);
 
 PartialNewspaper.propTypes = {
   children: PropTypes.node.isRequired,
 };
+
+export default PartialNewspaper;

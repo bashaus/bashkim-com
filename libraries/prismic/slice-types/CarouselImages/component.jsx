@@ -8,9 +8,7 @@ import LinkResolver from '%prismic/helpers/LinkResolver';
 
 import SlicePropType from './prop-type';
 
-export default function CarouselImagesSliceType(props) {
-  const { slice } = props;
-
+const CarouselImagesSliceType = ({ slice }) => {
   /* repeat */
   const { items } = slice;
 
@@ -39,8 +37,10 @@ export default function CarouselImagesSliceType(props) {
       </Carousel>
     </PartialFullImage>
   );
-}
+};
 
 CarouselImagesSliceType.propTypes = {
   slice: SlicePropType.isRequired,
 };
+
+export default CarouselImagesSliceType;

@@ -3,15 +3,11 @@ import React from 'react';
 
 import styles from './styles.module.scss';
 
-export default function MenuBackButton(props) {
-  const { children } = props;
-
-  return (
-    <span className={`${styles.MenuBackButton}`}>
-      { children }
-    </span>
-  );
-}
+const MenuBackButton = ({ children }) => (
+  <span className={`${styles.MenuBackButton}`}>
+    { children }
+  </span>
+);
 
 MenuBackButton.propTypes = {
   children: PropTypes.node,
@@ -20,3 +16,5 @@ MenuBackButton.propTypes = {
 MenuBackButton.defaultProps = {
   children: null,
 };
+
+export default MenuBackButton;

@@ -4,6 +4,7 @@
 
 .CallToAction {
   a {
+    color: inherit;
     border: solid 2px;
     transition: all 0.3s ease-in-out;
     display: inline-block;
@@ -14,18 +15,11 @@
   }
 
   a:hover {
-    border-color: $color-text-copy;
-    background-color: $color-text-copy;
-    color: $color-white;
+    border-color: currentColor;
+    background-color: currentColor;
   }
 
-  @include breakpoint($media-mobile) {
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-
-  @include breakpoint($media-not-mobile) {
-    padding-top: 40px;
-    padding-bottom: 40px;
+  a:hover span {
+    color: $color-charcol;
   }
 }

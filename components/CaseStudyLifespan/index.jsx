@@ -2,9 +2,7 @@ import dayjs from 'dayjs';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-export default function CaseStudyLifespan(props) {
-  const { launched, decommissioned } = props;
-
+const CaseStudyLifespan = ({ launched, decommissioned }) => {
   const formattedLaunched = dayjs(launched).format('DD MMMM YYYY');
 
   // If there is no decommissioned date, this is an on-going project
@@ -27,7 +25,7 @@ export default function CaseStudyLifespan(props) {
       { `Retired: ${formattedDecommissioned}` }
     </>
   );
-}
+};
 
 CaseStudyLifespan.propTypes = {
   launched: PropTypes.string.isRequired,
@@ -37,3 +35,5 @@ CaseStudyLifespan.propTypes = {
 CaseStudyLifespan.defaultProps = {
   decommissioned: null,
 };
+
+export default CaseStudyLifespan;

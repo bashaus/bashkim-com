@@ -7,60 +7,58 @@ import TechnologyContentPropType from '%prismic/content-types/technology/prop-ty
 
 import styles from './styles.module.scss';
 
-export default function PortfolioListRow(props) {
-  const { caseStudy } = props;
+const PortfolioListRow = ({ caseStudy }) => (
+  <article itemScope itemType="http://schema.org/CreativeWork" className={styles.PortfolioListRow}>
+    <Link href="/portfolio/[caseStudySlug]" as={`/portfolio/${caseStudy.uid}`}>
+      <a itemProp="url">
+        <div className={styles.name}>
+          <h3 itemProp="headline" className={styles.title}>
+            {caseStudy.data.meta_title}
+          </h3>
+          {caseStudy.data.meta_description}
+        </div>
 
-  return (
-    <article itemScope itemType="http://schema.org/CreativeWork" className={styles.PortfolioListRow}>
-      <Link href="/portfolio/[caseStudySlug]" as={`/portfolio/${caseStudy.uid}`}>
-        <a itemProp="url">
-          <div className={styles.name}>
-            <h3 itemProp="headline" className={styles.title}>
-              {caseStudy.data.meta_title}
-            </h3>
-            {caseStudy.data.meta_description}
-          </div>
+        <div className={styles.image}>
+          <img
+            alt=""
+            itemProp="image"
+            src={caseStudy.data.image_icon.url}
+          />
+        </div>
 
-          <div className={styles.image}>
-            <img
-              alt=""
-              itemProp="image"
-              src={caseStudy.data.image_icon.url}
-            />
-          </div>
+        <ul className={styles.technologies}>
+          { caseStudy.data.info_technologies.slice(0, 2).map(
+            (technology) => {
+              const {
+                technology_name: technologyName,
+                technology_icon: technologyIcon,
+              } = technology.info_technology.data;
 
-          <ul className={styles.technologies}>
-            { caseStudy.data.info_technologies.slice(0, 2).map(
-              (technology) => {
-                const {
-                  technology_name: technologyName,
-                  technology_icon: technologyIcon,
-                } = technology.info_technology.data;
+              return (
+                <li key={technology.info_technology.slug}>
+                  <img
+                    key={technologyName}
+                    src={technologyIcon.url}
+                    alt={technologyName}
+                    width={technologyIcon.width}
+                    height={technologyIcon.height}
+                    title={technologyName}
+                  />
 
-                return (
-                  <li key={technology.info_technology.slug}>
-                    <img
-                      key={technologyName}
-                      src={technologyIcon.url}
-                      alt={technologyName}
-                      width={technologyIcon.width}
-                      height={technologyIcon.height}
-                      title={technologyName}
-                    />
-
-                    {technologyName}
-                  </li>
-                );
-              }
-            ) }
-          </ul>
-        </a>
-      </Link>
-    </article>
-  );
-}
+                  {technologyName}
+                </li>
+              );
+            }
+          ) }
+        </ul>
+      </a>
+    </Link>
+  </article>
+);
 
 PortfolioListRow.propTypes = {
   caseStudy: CaseStudyContentPropType.isRequired,
   technologies: PropTypes.arrayOf(TechnologyContentPropType).isRequired,
 };
+
+export default PortfolioListRow;

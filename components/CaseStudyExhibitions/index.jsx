@@ -7,8 +7,10 @@ import ExhibitionSliceType from '%prismic/slice-types/Exhibition/component';
 
 import styles from './styles.module.scss';
 
-export default function CaseStudyExhibitions(props) {
-  const { slices } = props;
+const CaseStudyExhibitions = ({ slices = [] }) => {
+  if (!slices.length) {
+    return null;
+  }
 
   return (
     <>
@@ -23,8 +25,10 @@ export default function CaseStudyExhibitions(props) {
       </ol>
     </>
   );
-}
+};
 
 CaseStudyExhibitions.propTypes = {
   slices: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
+
+export default CaseStudyExhibitions;

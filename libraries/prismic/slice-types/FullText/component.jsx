@@ -7,9 +7,7 @@ import PartialFullText from '%components/PartialFullText';
 
 import SlicePropType from './prop-type';
 
-export default function FullTextSliceType(props) {
-  const { slice } = props;
-
+const FullTextSliceType = ({ slice }) => {
   const {
     FullTextSliceType_Body: body,
   } = slice.primary;
@@ -19,8 +17,10 @@ export default function FullTextSliceType(props) {
       { body && RichText.render(body, LinkResolver) }
     </PartialFullText>
   );
-}
+};
 
 FullTextSliceType.propTypes = {
   slice: SlicePropType.isRequired,
 };
+
+export default FullTextSliceType;

@@ -11,9 +11,7 @@ import styles from './styles.module.scss';
 
 const INIT_WIDTH = 1024;
 
-export default function CaptionedScreenshotsSliceType(props) {
-  const { slice } = props;
-
+const CaptionedScreenshotsSliceType = ({ slice }) => {
   /* non-repeat */
   const {
     CaptionedScreenshotsSliceType_Caption: caption,
@@ -75,8 +73,10 @@ export default function CaptionedScreenshotsSliceType(props) {
       </div>
     </PartialCaptioned>
   );
-}
+};
 
 CaptionedScreenshotsSliceType.propTypes = {
   slice: SlicePropType.isRequired,
 };
+
+export default CaptionedScreenshotsSliceType;

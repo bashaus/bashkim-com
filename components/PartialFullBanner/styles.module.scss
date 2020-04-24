@@ -4,7 +4,7 @@
 @import "~%styleguide/utils/colors";
 @import "~%styleguide/utils/wysiwyg";
 
-.PartialInlineBanner {
+.PartialFullBanner {
   width: 100%;
   background-color: $color-charcol;
   color: $color-white;
@@ -14,6 +14,7 @@
   }
 
   .content {
+    @extend %wysiwyg;
     @include grid-cell(
       $columns: (
         mobile-portrait: 12,
@@ -28,7 +29,6 @@
     h3 {
       font-size: 32px;
       line-height: 150%;
-      letter-spacing: -1px;
       font-weight: bold;
     }
   }
@@ -42,7 +42,7 @@
     background-position: center center;
 
     .container {
-      height: 30vw;
+      height: 400px;
       max-height: 450px;
     }
 

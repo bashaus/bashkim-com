@@ -4,9 +4,7 @@ import NavigationReducer from './reducer';
 
 export const NavigationContext = React.createContext();
 
-export default function NavigationStore(props) {
-  const { children } = props;
-
+const NavigationStore = ({ children }) => {
   const [state, dispatch] = React.useReducer(
     NavigationReducer,
     [],
@@ -20,8 +18,10 @@ export default function NavigationStore(props) {
       {children}
     </NavigationContext.Provider>
   );
-}
+};
 
 NavigationStore.propTypes = {
   children: PropTypes.node.isRequired,
 };
+
+export default NavigationStore;

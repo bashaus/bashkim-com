@@ -3,16 +3,14 @@ import React from 'react';
 
 import styles from './styles.module.scss';
 
-export default function CallToAction(props) {
-  const { children } = props;
-
-  return (
-    <div className={styles.CallToAction}>
-      {children}
-    </div>
-  );
-}
+const CallToAction = ({ children = null }) => (
+  <div className={styles.CallToAction}>
+    {children}
+  </div>
+);
 
 CallToAction.propTypes = {
   children: PropTypes.node.isRequired,
 };
+
+export default CallToAction;

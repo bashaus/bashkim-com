@@ -9,9 +9,7 @@ import LinkResolver from '%prismic/helpers/LinkResolver';
 
 import SlicePropType from './prop-type';
 
-export default function CaptionedVideoSliceType(props) {
-  const { slice } = props;
-
+const CaptionedVideoSliceType = ({ slice }) => {
   const {
     CaptionedVideoSliceType_Caption: caption,
     CaptionedVideoSliceType_Video: video,
@@ -35,8 +33,10 @@ export default function CaptionedVideoSliceType(props) {
       { caption && RichText.render(caption, LinkResolver) }
     </PartialCaptioned>
   );
-}
+};
 
 CaptionedVideoSliceType.propTypes = {
   slice: SlicePropType.isRequired,
 };
+
+export default CaptionedVideoSliceType;

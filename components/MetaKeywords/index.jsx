@@ -2,9 +2,7 @@ import Head from 'next/head';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-export default function MetaKeywords(props) {
-  const { content } = props;
-
+const MetaKeywords = ({ content }) => {
   if (!content) {
     return null;
   }
@@ -14,7 +12,7 @@ export default function MetaKeywords(props) {
       <meta key="MetaKeywords" name="keywords" content={content} />
     </Head>
   );
-}
+};
 
 MetaKeywords.propTypes = {
   content: PropTypes.string,
@@ -23,3 +21,5 @@ MetaKeywords.propTypes = {
 MetaKeywords.defaultProps = {
   content: null,
 };
+
+export default MetaKeywords;

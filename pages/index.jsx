@@ -12,7 +12,7 @@ import MetaDescription from '%components/MetaDescription';
 import MetaKeywords from '%components/MetaKeywords';
 import MetaTitle from '%components/MetaTitle';
 import CallToAction from '%components/CallToAction';
-import PartialInlineBanner from '%components/PartialInlineBanner';
+import PartialFullBanner from '%components/PartialFullBanner';
 import PartialSplit from '%components/PartialSplit';
 import PartialSubtitle from '%components/PartialSubtitle';
 
@@ -20,8 +20,7 @@ import { getHomePage } from '%prismic/content-types/home_page/api';
 import LinkResolver from '%prismic/helpers/LinkResolver';
 import HomePagePropType from '%prismic/content-types/home_page/prop-type';
 
-export default function HomePage(props) {
-  const { page } = props;
+const HomePage = ({ page }) => {
   const {
     featured_case_studies: featuredCaseStudies,
     meta_title: metaTitle,
@@ -77,10 +76,10 @@ export default function HomePage(props) {
 
             return (
               <li key={caseStudy.id}>
-                <PartialInlineBanner
+                <PartialFullBanner
                   backgroundDesktop={backgroundDesktop && backgroundDesktop.url}
                   backgroundMobile={backgroundMobile && backgroundMobile.url}
-                  id={`HomePage-PartialInlineBanner-${caseStudy.id}`}
+                  id={`HomePage-PartialFullBanner-${caseStudy.id}`}
                 >
                   <h3>{caseStudy.data.meta_title}</h3>
                   <p>{caseStudy.data.meta_description}</p>
@@ -89,7 +88,7 @@ export default function HomePage(props) {
                       <a>Read case study</a>
                     </Link>
                   </CallToAction>
-                </PartialInlineBanner>
+                </PartialFullBanner>
               </li>
             );
           })}
@@ -107,7 +106,7 @@ export default function HomePage(props) {
         <PartialSplit>
           <PartialSplit.Item>
             <div>
-              <p>Interested in my portfolio of case studies?</p>
+              <p>Interested in seeing case&nbsp;studies?</p>
               <CallToAction>
                 <Link href="/portfolio">
                   <a>Browse portfolio</a>
@@ -130,7 +129,7 @@ export default function HomePage(props) {
       </section>
     </>
   );
-}
+};
 
 HomePage.propTypes = {
   page: HomePagePropType.isRequired,
@@ -144,10 +143,12 @@ HomePage.getInitialProps = async (context) => {
   return { page };
 };
 
-HomePage.getLayout = function HomeLayout(page) {
-  return (
-    <LayoutDefault>
-      { page }
-    </LayoutDefault>
-  );
-};
+const HomeLayout = (page) => (
+  <LayoutDefault>
+    { page }
+  </LayoutDefault>
+);
+
+HomePage.getLayout = HomeLayout;
+
+export default HomePage;

@@ -3,15 +3,11 @@ import React from 'react';
 
 import styles from './styles.module.scss';
 
-export default function PartialFullText(props) {
-  const { children } = props;
-
-  return (
-    <div className={styles.PartialFullText}>
-      {children}
-    </div>
-  );
-}
+const PartialFullText = ({ children }) => (
+  <div className={styles.PartialFullText}>
+    {children}
+  </div>
+);
 
 PartialFullText.propTypes = {
   children: PropTypes.node,
@@ -20,3 +16,5 @@ PartialFullText.propTypes = {
 PartialFullText.defaultProps = {
   children: null,
 };
+
+export default PartialFullText;

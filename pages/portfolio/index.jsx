@@ -18,8 +18,7 @@ import { getCaseStudies } from '%prismic/content-types/case_study/api';
 import { getTechnologies } from '%prismic/content-types/technology/api';
 import { getPortfolioPage } from '%prismic/content-types/portfolio_page/api';
 
-export default function PortfolioPage(props) {
-  const { caseStudies, page, technologies } = props;
+const PortfolioPage = ({ caseStudies, page, technologies }) => {
   const {
     meta_title: metaTitle,
     meta_description: metaDescription,
@@ -85,10 +84,12 @@ PortfolioPage.getInitialProps = async (context) => {
   };
 };
 
-PortfolioPage.getLayout = function PortfolioLayout(page) {
-  return (
-    <LayoutDefault backButton={MenuBackButtonHomeImpl} theme="portfolio">
-      { page }
-    </LayoutDefault>
-  );
-};
+const PortfolioLayout = (page) => (
+  <LayoutDefault backButton={MenuBackButtonHomeImpl} theme="portfolio">
+    { page }
+  </LayoutDefault>
+);
+
+PortfolioPage.getLayout = PortfolioLayout;
+
+export default PortfolioPage;

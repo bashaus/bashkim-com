@@ -7,8 +7,7 @@ import { NavigationContext } from '%contexts/Navigation';
 
 import styles from './styles.module.scss';
 
-export default function Navigation(props) {
-  const { theme } = props;
+const Navigation = ({ theme }) => {
   const { state: navigationState } = React.useContext(NavigationContext);
 
   return (
@@ -22,8 +21,10 @@ export default function Navigation(props) {
       <NavigationSocial />
     </div>
   );
-}
+};
 
 Navigation.propTypes = {
   theme: PropTypes.string.isRequired,
 };
+
+export default Navigation;

@@ -3,15 +3,11 @@ import React from 'react';
 
 import styles from './styles.module.scss';
 
-export default function PartialSubtitle(props) {
-  const { children } = props;
-
-  return (
-    <div className={styles.PartialSubtitle}>
-      {children}
-    </div>
-  );
-}
+const PartialSubtitle = ({ children }) => (
+  <div className={styles.PartialSubtitle}>
+    {children}
+  </div>
+);
 
 PartialSubtitle.propTypes = {
   children: PropTypes.node,
@@ -20,3 +16,5 @@ PartialSubtitle.propTypes = {
 PartialSubtitle.defaultProps = {
   children: null,
 };
+
+export default PartialSubtitle;

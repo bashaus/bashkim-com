@@ -9,9 +9,7 @@ import TrophyImage from '%public/static/vectors/icons/trophy.svg';
 import SlicePropType from './prop-type';
 import styles from './styles.module.scss';
 
-export default function AccoladeSliceType(props) {
-  const { slice } = props;
-
+const AccoladeSliceType = ({ slice }) => {
   const {
     AccoladeSliceType_Issuer: issuer,
     AccoladeSliceType_Description: description,
@@ -51,8 +49,10 @@ export default function AccoladeSliceType(props) {
       </ol>
     </div>
   );
-}
+};
 
 AccoladeSliceType.propTypes = {
   slice: SlicePropType.isRequired,
 };
+
+export default AccoladeSliceType;

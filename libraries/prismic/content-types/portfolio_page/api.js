@@ -1,7 +1,7 @@
 const Prismic = require('prismic-javascript');
 const api = require('../../api');
 
-async function getPortfolioPage(params) {
+const getPortfolioPage = async (params) => {
   const API = await api;
 
   // we pass up the slug to request the correct post
@@ -20,6 +20,6 @@ async function getPortfolioPage(params) {
   );
 
   return response.results[0];
-}
+};
 
 module.exports = { getPortfolioPage };

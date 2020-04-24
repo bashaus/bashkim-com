@@ -3,15 +3,11 @@ import React from 'react';
 
 import styles from './styles.module.scss';
 
-export default function PartialFullImage(props) {
-  const { children } = props;
-
-  return (
-    <div className={styles.PartialFullImage}>
-      {children}
-    </div>
-  );
-}
+const PartialFullImage = ({ children }) => (
+  <div className={styles.PartialFullImage}>
+    {children}
+  </div>
+);
 
 PartialFullImage.propTypes = {
   children: PropTypes.node,
@@ -20,3 +16,5 @@ PartialFullImage.propTypes = {
 PartialFullImage.defaultProps = {
   children: null,
 };
+
+export default PartialFullImage;

@@ -31,9 +31,7 @@ const DeviceTypeComponents = {
   [DeviceTypes.FEATURE_PHONE]: DeviceFeaturePhone,
 };
 
-export default function CarouselPhonesSliceType(props) {
-  const { slice } = props;
-
+const CarouselPhonesSliceType = ({ slice }) => {
   /* repeat */
   const { items } = slice;
 
@@ -74,8 +72,10 @@ export default function CarouselPhonesSliceType(props) {
       </Carousel>
     </PartialFullImage>
   );
-}
+};
 
 CarouselPhonesSliceType.propTypes = {
   slice: SlicePropType.isRequired,
 };
+
+export default CarouselPhonesSliceType;

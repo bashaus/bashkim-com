@@ -2,9 +2,7 @@ import Head from 'next/head';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-export default function MetaDescription(props) {
-  const { content } = props;
-
+const MetaDescription = ({ content }) => {
   if (!content) {
     return null;
   }
@@ -16,7 +14,7 @@ export default function MetaDescription(props) {
       <meta key="MetaDescription.twitter" name="twitter:description" content={content} />
     </Head>
   );
-}
+};
 
 MetaDescription.propTypes = {
   content: PropTypes.string,
@@ -25,3 +23,5 @@ MetaDescription.propTypes = {
 MetaDescription.defaultProps = {
   content: null,
 };
+
+export default MetaDescription;

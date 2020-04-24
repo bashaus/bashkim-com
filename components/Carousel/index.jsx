@@ -4,34 +4,28 @@ import SlickSlider from 'react-slick';
 
 import styles from './styles.module.scss';
 
-export default class Carousel extends React.PureComponent {
-  render() {
-    const {
-      children,
-      responsive,
-      slidesToShow,
-      slidestoScroll,
-    } = this.props;
-
-    return (
-      <div className={styles.Carousel}>
-        <SlickSlider
-          adaptiveHeight
-          dots
-          dotsClass={styles.CarouselDots}
-          infinite={false}
-          draggable
-          lazyLoad
-          responsive={responsive}
-          slidesToShow={slidesToShow}
-          slidesToScroll={slidestoScroll}
-        >
-          { children }
-        </SlickSlider>
-      </div>
-    );
-  }
-}
+const Carousel = ({
+  children,
+  responsive,
+  slidesToShow,
+  slidestoScroll,
+}) => (
+  <div className={styles.Carousel}>
+    <SlickSlider
+      adaptiveHeight
+      dots
+      dotsClass={styles.CarouselDots}
+      infinite={false}
+      draggable
+      lazyLoad
+      responsive={responsive}
+      slidesToShow={slidesToShow}
+      slidesToScroll={slidestoScroll}
+    >
+      {children}
+    </SlickSlider>
+  </div>
+);
 
 Carousel.propTypes = {
   children: PropTypes.node.isRequired,
@@ -46,3 +40,5 @@ Carousel.defaultProps = {
   slidesToShow: 1,
   slidestoScroll: 1,
 };
+
+export default Carousel;

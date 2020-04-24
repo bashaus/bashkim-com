@@ -3,7 +3,7 @@
 @import "~%styleguide/utils/grid";
 
 %wysiwyg {
-  * ~ * {
+  * + * {
     @include breakpoint($media-mobile-portrait) {
       margin-top: grid-gutter($breakpoint: mobile-portrait) / 2;
     }
@@ -27,10 +27,6 @@
     @include breakpoint($media-desktop-wide) {
       margin-top: grid-gutter($breakpoint: desktop-wide) / 2;
     }
-  }
-
-  h3 {
-    @extend %h3;
   }
 
   ul li::before {
@@ -66,10 +62,5 @@
 
   strong {
     font-weight: bold;
-  }
-
-  a {
-    color: $color-charcol;
-    text-decoration: underline;
   }
 }

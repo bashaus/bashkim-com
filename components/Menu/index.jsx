@@ -6,25 +6,21 @@ import MenuSignifierButton from '%components/MenuSignifierButton';
 
 import styles from './styles.module.scss';
 
-export default function Menu(props) {
-  const { backButton } = props;
-
-  return (
-    <div className={styles.Menu}>
-      <div className={styles.back}>
-        { backButton }
-      </div>
-
-      <div className={styles.logo}>
-        <Logo />
-      </div>
-
-      <div className={styles.signifier} aria-label="Menu">
-        <MenuSignifierButton />
-      </div>
+const Menu = ({ backButton }) => (
+  <div className={styles.Menu}>
+    <div className={styles.back}>
+      { backButton }
     </div>
-  );
-}
+
+    <div className={styles.logo}>
+      <Logo />
+    </div>
+
+    <div className={styles.signifier} aria-label="Menu">
+      <MenuSignifierButton />
+    </div>
+  </div>
+);
 
 Menu.propTypes = {
   backButton: PropTypes.node,
@@ -33,3 +29,5 @@ Menu.propTypes = {
 Menu.defaultProps = {
   backButton: null,
 };
+
+export default Menu;

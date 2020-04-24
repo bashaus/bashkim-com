@@ -7,9 +7,7 @@ import LinkResolver from '%prismic/helpers/LinkResolver';
 
 import SlicePropType from './prop-type';
 
-export default function SubtitleSliceType(props) {
-  const { slice } = props;
-
+const SubtitleSliceType = ({ slice }) => {
   const {
     SubtitleSliceType_Heading: heading,
     SubtitleSliceType_Description: description,
@@ -26,3 +24,5 @@ export default function SubtitleSliceType(props) {
 SubtitleSliceType.propTypes = {
   slice: SlicePropType.isRequired,
 };
+
+export default SubtitleSliceType;

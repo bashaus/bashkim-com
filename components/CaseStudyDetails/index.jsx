@@ -6,9 +6,7 @@ import CaseStudyContentPropType from '%prismic/content-types/case_study/prop-typ
 
 import styles from './styles.module.scss';
 
-export default function CaseStudyDetails(props) {
-  const { caseStudy } = props;
-
+const CaseStudyDetails = ({ caseStudy = {} }) => {
   const {
     info_brief: brief,
     info_strategy: strategy,
@@ -150,8 +148,10 @@ export default function CaseStudyDetails(props) {
       ) }
     </div>
   );
-}
+};
 
 CaseStudyDetails.propTypes = {
   caseStudy: CaseStudyContentPropType.isRequired,
 };
+
+export default CaseStudyDetails;

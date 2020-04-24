@@ -1,7 +1,7 @@
 const Prismic = require('prismic-javascript');
 const api = require('../../api');
 
-async function getPeers(ids, params) {
+const getPeers = async (ids, params) => {
   if (ids.length === 0) {
     return [];
   }
@@ -21,9 +21,9 @@ async function getPeers(ids, params) {
   );
 
   return response;
-}
+};
 
-async function getPeer(uid, params) {
+const getPeer = async (uid, params) => {
   const API = await api;
 
   // we pass up the slug to request the correct post
@@ -33,6 +33,6 @@ async function getPeer(uid, params) {
   );
 
   return response.results[0];
-}
+};
 
 module.exports = { getPeers, getPeer };

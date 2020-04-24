@@ -6,9 +6,7 @@ import PortfolioListReducer from './reducer';
 
 export const PortfolioListContext = React.createContext();
 
-export default function PortfolioListStore(props) {
-  const { children, technologies, caseStudies } = props;
-
+const PortfolioListStore = ({ children, technologies, caseStudies }) => {
   const [state, dispatch] = React.useReducer(
     PortfolioListReducer,
     [],
@@ -33,3 +31,5 @@ PortfolioListStore.propTypes = {
   caseStudies: PropTypes.arrayOf(CaseStudyPropType).isRequired,
   technologies: PropTypes.arrayOf(TechnologyPropType).isRequired,
 };
+
+export default PortfolioListStore;

@@ -2,9 +2,7 @@ import Head from 'next/head';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-export default function MetaTitle(props) {
-  const { content, standalone } = props;
-
+const MetaTitle = ({ content, standalone }) => {
   const titleText = standalone
     ? content
     : `${content} | Bashkim Isai - Creative Technologist`;
@@ -18,7 +16,7 @@ export default function MetaTitle(props) {
       ) }
     </Head>
   );
-}
+};
 
 MetaTitle.propTypes = {
   content: PropTypes.string.isRequired,
@@ -28,3 +26,5 @@ MetaTitle.propTypes = {
 MetaTitle.defaultProps = {
   standalone: false,
 };
+
+export default MetaTitle;

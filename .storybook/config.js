@@ -33,13 +33,13 @@ const styleguide = require.context('../styleguide/', true, /\/(\w+\.)?stories.js
 const components = require.context('../components/', true, /\/(\w+\.)?stories.jsx$/);
 const prismic = require.context('../libraries/prismic/', true, /\/(\w+\.)?stories.jsx$/);
 
-function loadStories() {
+const loadStories = () => {
   styleguide.keys().forEach(filename => styleguide(filename));
   components.keys().forEach(filename => components(filename));
   prismic.keys().forEach(filename => prismic(filename));
 
   require('../styleguide/main.scss');
   require('./storybook.scss');
-}
+};
 
 configure(loadStories, module);

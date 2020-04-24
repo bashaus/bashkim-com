@@ -6,9 +6,7 @@ import PartialSubtitle from '%components/PartialSubtitle';
 import AccoladeSliceType from '%prismic/slice-types/Accolade/component';
 import AccoladeSlicePropType from '%prismic/slice-types/Accolade/prop-type';
 
-export default function CaseStudyAccolades(props) {
-  const { slices } = props;
-
+const CaseStudyAccolades = ({ slices = [] }) => {
   if (!slices.length) {
     return null;
   }
@@ -26,8 +24,10 @@ export default function CaseStudyAccolades(props) {
       </div>
     </>
   );
-}
+};
 
 CaseStudyAccolades.propTypes = {
   slices: PropTypes.arrayOf(AccoladeSlicePropType).isRequired,
 };
+
+export default CaseStudyAccolades;

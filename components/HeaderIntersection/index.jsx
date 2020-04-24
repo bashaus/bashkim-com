@@ -1,50 +1,46 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 
 import { NavigationContext } from '%contexts/Navigation';
 import * as NavigationActions from '%contexts/Navigation/actions';
 
 import styles from './styles.module.scss';
 
-export default class HeaderIntersection extends React.PureComponent {
-  constructor(...args) {
-    super(...args);
+const HeaderIntersection = () => {
+  const { dispatch: navigationDispatch } = useContext(NavigationContext);
+  const ref = React.useRef();
 
-    if (typeof IntersectionObserver !== 'undefined') {
-      this.intersectionObserver = new IntersectionObserver(
-        this.processIntersectionEntries,
-      );
-    }
-
-    this.ref = React.createRef();
-  }
-
-  componentDidMount() {
-    if (this.intersectionObserver && this.ref.current) {
-      this.intersectionObserver.observe(this.ref.current);
-    }
-  }
-
-  componentWillUnmount() {
-    if (this.intersectionObserver && this.ref.current) {
-      this.intersectionObserver.unobserve(this.ref.current);
-    }
-  }
-
-  processIntersectionEntries = (entries) => {
-    const { dispatch } = this.context;
+  const processIntersectionEntries = (entries) => {
     entries.forEach(
-      (entry) => dispatch({
+      (entry) => navigationDispatch({
         type: NavigationActions.SET_AT_TOP,
         payload: entry.isIntersecting,
       }),
     );
-  }
+  };
 
-  render() {
-    return (
-      <div ref={this.ref} className={styles.HeaderIntersection} />
-    );
-  }
-}
+  useEffect(() => {
+    let interactionObserver;
 
-HeaderIntersection.contextType = NavigationContext;
+    if (typeof IntersectionObserver !== typeof undefined) {
+      interactionObserver = new IntersectionObserver(
+        processIntersectionEntries,
+      );
+    }
+
+    if (interactionObserver && ref.current) {
+      interactionObserver.observe(ref.current);
+    }
+
+    return () => {
+      if (interactionObserver && ref.current) {
+        interactionObserver.unobserve(ref.current);
+      }
+    };
+  }, []);
+
+  return (
+    <div ref={ref} className={styles.HeaderIntersection} />
+  );
+};
+
+export default HeaderIntersection;

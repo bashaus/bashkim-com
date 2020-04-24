@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
-export default function DocumentLinkPrismicPropType(data) {
-  return PropTypes.shape({
+const DocumentLinkPrismicPropType = (data) => (
+  PropTypes.shape({
     id: PropTypes.string.isRequired,
     type: PropTypes.string.isRequired,
     tags: PropTypes.array.isRequired,
@@ -10,5 +10,7 @@ export default function DocumentLinkPrismicPropType(data) {
     data,
     link_type: PropTypes.oneOf(['Document']).isRequired,
     isBroken: PropTypes.bool.isRequired,
-  });
-}
+  })
+);
+
+export default DocumentLinkPrismicPropType;

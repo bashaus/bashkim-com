@@ -7,8 +7,7 @@ import { NavigationContext } from '%contexts/Navigation';
 
 import styles from './styles.module.scss';
 
-export default function Header(props) {
-  const { theme } = props;
+const Header = ({ theme }) => {
   const { state: navigationState } = React.useContext(NavigationContext);
 
   return (
@@ -27,8 +26,10 @@ export default function Header(props) {
       </div>
     </header>
   );
-}
+};
 
 Header.propTypes = {
   theme: PropTypes.string.isRequired,
 };
+
+export default Header;

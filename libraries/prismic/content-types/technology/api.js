@@ -1,7 +1,7 @@
 const Prismic = require('prismic-javascript');
 const api = require('../../api');
 
-async function getTechnologies(params) {
+const getTechnologies = async (params) => {
   // We initialise the API with Prismic's kit
   const API = await api;
 
@@ -14,9 +14,9 @@ async function getTechnologies(params) {
   );
 
   return response;
-}
+};
 
-async function getTechnology(uid, params) {
+const getTechnology = async (uid, params) => {
   const API = await api;
 
   // we pass up the slug to request the correct post
@@ -26,6 +26,6 @@ async function getTechnology(uid, params) {
   );
 
   return response.results[0];
-}
+};
 
 module.exports = { getTechnologies, getTechnology };
