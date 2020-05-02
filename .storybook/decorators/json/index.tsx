@@ -1,9 +1,8 @@
-import PropTypes from "prop-types";
 import React from "react";
-import { CopyToClipboard } from "react-copy-to-clipboard";
+import CopyToClipboard from "react-copy-to-clipboard";
 import ReactJsonTree from "react-json-tree";
 
-import styles from "./styles.scss";
+import styles from "./styles.module.scss";
 
 const THEME = {
   scheme: "monokai",
@@ -26,7 +25,11 @@ const THEME = {
   base0F: "#cc6633",
 };
 
-const JSONDecorator = ({ schema }) => (
+interface JSONDecoratorProps {
+  schema: object;
+};
+
+const JSONDecorator = ({ schema }:JSONDecoratorProps) => (
   <section className={styles.JSONDecorator}>
     <CopyToClipboard
       text={JSON.stringify(schema, null, 2)}
@@ -40,9 +43,5 @@ const JSONDecorator = ({ schema }) => (
     </div>
   </section>
 );
-
-JSONDecorator.propTypes = {
-  schema: PropTypes.object.isRequired,
-};
 
 export default JSONDecorator;

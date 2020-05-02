@@ -1,17 +1,14 @@
 import React from 'react';
 
-import { storiesOf } from '@storybook/react';
-
 import NavigationStore from '%contexts/Navigation';
 import MenuSignifierButton from '.';
 
-const stories = storiesOf('Components: MenuSignifierButton', module);
+export default {
+  title: 'Components/MenuSignifierButton',
+};
 
-stories.add(
-  'default',
-  (): JSX.Element => (
-    <NavigationStore>
-      <MenuSignifierButton />
-    </NavigationStore>
-  ),
+export const Render = (): JSX.Element => (
+  <NavigationStore>
+    <MenuSignifierButton />
+  </NavigationStore>
 );

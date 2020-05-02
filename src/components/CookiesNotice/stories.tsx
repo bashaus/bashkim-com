@@ -1,17 +1,14 @@
 import React from 'react';
 
-import { storiesOf } from '@storybook/react';
-
 import CookiesProvider from '%contexts/Cookies';
 import CookiesNotice from '.';
 
-const stories = storiesOf('Components: CookiesNotice', module);
+export default {
+  title: 'Components/CookiesNotice',
+};
 
-stories.add(
-  'default',
-  (): JSX.Element => (
-    <CookiesProvider>
-      <CookiesNotice />
-    </CookiesProvider>
-  ),
+export const Render = (): JSX.Element => (
+  <CookiesProvider>
+    <CookiesNotice />
+  </CookiesProvider>
 );

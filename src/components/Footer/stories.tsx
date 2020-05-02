@@ -1,9 +1,11 @@
 import React from 'react';
 
-import { storiesOf } from '@storybook/react';
-
 import Footer from '.';
 
-const stories = storiesOf('Components: Footer', module);
+export default {
+  title: 'Components/Footer',
+};
 
-stories.add('default', (): JSX.Element => <Footer />);
+export const Render = (): JSX.Element => (
+  <Footer />
+);

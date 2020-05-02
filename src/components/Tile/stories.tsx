@@ -1,27 +1,20 @@
 import React from 'react';
 import { withKnobs, files, text } from '@storybook/addon-knobs';
 
-import { storiesOf } from '@storybook/react';
-
 import Tile from '.';
 
-const stories = storiesOf('Components: Tile', module);
-stories.addDecorator(withKnobs);
+export default {
+  title: 'Components/Tile',
+  decorators: [withKnobs],
+};
 
-stories.add(
-  'default',
-  (): JSX.Element => {
-    const icon = files('icon', '', []);
-    const poster = files('poster', '', []);
-    return (
-      <div style={{ maxWidth: '200px' }}>
-        <Tile
-          description={text('description', 'description')}
-          icon={icon[0]}
-          poster={poster[0]}
-          title={text('title', 'title')}
-        />
-      </div>
-    );
-  },
+export const Render = (): JSX.Element => (
+  <div style={{ maxWidth: '200px' }}>
+    <Tile
+      description={text('description', 'description')}
+      icon={files('icon', '', [])[0]}
+      poster={files('poster', '', [])[0]}
+      title={text('title', 'title')}
+    />
+  </div>
 );

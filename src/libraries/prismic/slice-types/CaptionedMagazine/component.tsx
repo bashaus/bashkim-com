@@ -37,7 +37,7 @@ const CaptionedMagazineSliceType = ({
               <li key={item.CaptionedMagazineSliceType_Images.url}>
                 <img
                   src={item.CaptionedMagazineSliceType_Images.url}
-                  alt={item.CaptionedMagazineSliceType_Images.alt}
+                  alt={item.CaptionedMagazineSliceType_Images.alt || ''}
                   width={
                     item.CaptionedMagazineSliceType_Images.dimensions.width
                   }

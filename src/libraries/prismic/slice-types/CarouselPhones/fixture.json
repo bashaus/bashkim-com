@@ -3,6 +3,7 @@
   "slice_label": null,
   "items": [
     {
+      "CarouselPhonesSliceType_DeviceType": "SMARTPHONE",
       "CarouselPhonesSliceType_Caption": [
         {
           "type": "heading3",
@@ -26,6 +27,7 @@
       }
     },
     {
+      "CarouselPhonesSliceType_DeviceType": "SMARTPHONE",
       "CarouselPhonesSliceType_Caption": [
         {
           "type": "heading3",

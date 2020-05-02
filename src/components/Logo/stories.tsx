@@ -1,9 +1,11 @@
 import React from 'react';
 
-import { storiesOf } from '@storybook/react';
-
 import Logo from '.';
 
-const stories = storiesOf('Components: Logo', module);
+export default {
+  title: 'Components/Logo',
+};
 
-stories.add('default', (): JSX.Element => <Logo />);
+export const Render = (): JSX.Element => (
+  <Logo />
+);

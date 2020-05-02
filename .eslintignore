@@ -2,5 +2,3 @@
 .storybook-static
 libraries/turn
 node_modules
-
-**/stories.jsx

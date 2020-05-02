@@ -1,37 +1,28 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 
 import Menu from '.';
 import MenuBackButtonHomeImpl from '%components/MenuBackButtonHomeImpl';
 import MenuBackButtonPortfolioImpl from '%components/MenuBackButtonPortfolioImpl';
 import NavigationStore from '%contexts/Navigation';
 
-const stories = storiesOf('Components: Menu', module);
+export default {
+  title: 'Components/Menu',
+};
 
-stories
-  .add(
-    'default',
-    (): JSX.Element => (
-      <NavigationStore>
-        <Menu />
-      </NavigationStore>
-    ),
-  )
+export const Render = (): JSX.Element => (
+  <NavigationStore>
+    <Menu />
+  </NavigationStore>
+);
 
-  .add(
-    'back to home',
-    (): JSX.Element => (
-      <NavigationStore>
-        <Menu backButton={MenuBackButtonHomeImpl} />
-      </NavigationStore>
-    ),
-  )
+export const Home = (): JSX.Element => (
+  <NavigationStore>
+    <Menu backButton={MenuBackButtonHomeImpl} />
+  </NavigationStore>
+);
 
-  .add(
-    'back to portfolio',
-    (): JSX.Element => (
-      <NavigationStore>
-        <Menu backButton={MenuBackButtonPortfolioImpl} />
-      </NavigationStore>
-    ),
-  );
+export const Portfolio = (): JSX.Element => (
+  <NavigationStore>
+    <Menu backButton={MenuBackButtonPortfolioImpl} />
+  </NavigationStore>
+);

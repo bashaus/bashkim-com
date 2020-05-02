@@ -1,16 +1,19 @@
 import React from 'react';
-
-import { storiesOf } from '@storybook/react';
+import { withKnobs, files, text } from '@storybook/addon-knobs';
 
 import DeviceSmartphone from '.';
 
-const stories = storiesOf('Components: DeviceSmartphone', module);
+export default {
+  title: 'Components/DeviceSmartphone',
+  decorators: [withKnobs],
+};
 
-stories.add(
-  'default',
-  (): JSX.Element => (
-    <DeviceSmartphone figure={null}>
-      <p>This is a description of the content.</p>
-    </DeviceSmartphone>
-  ),
+export const Render = (): JSX.Element => (
+  <DeviceSmartphone
+    figure={
+      <img src={files('figure', '', ['https://placehold.it/320x565'])[0]} alt="" />
+    }
+  >
+    <p>{text('caption', 'caption')}</p>
+  </DeviceSmartphone>
 );

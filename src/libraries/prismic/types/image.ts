@@ -3,8 +3,8 @@ interface ImagePrismicType {
     width: number;
     height: number;
   };
-  alt: string;
-  copyright: string;
+  alt: string | null;
+  copyright: string | null;
   url: string;
 }
 

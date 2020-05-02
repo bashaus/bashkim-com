@@ -1,17 +1,14 @@
 import React from 'react';
 
-import { storiesOf } from '@storybook/react';
-
 import Header from '.';
 import NavigationStore from '%contexts/Navigation';
 
-const stories = storiesOf('Components: Header', module);
+export default {
+  title: 'Components/Header',
+};
 
-stories.add(
-  'default',
-  (): JSX.Element => (
-    <NavigationStore>
-      <Header theme="default" />
-    </NavigationStore>
-  ),
+export const Render = (): JSX.Element => (
+  <NavigationStore>
+    <Header theme="default" />
+  </NavigationStore>
 );

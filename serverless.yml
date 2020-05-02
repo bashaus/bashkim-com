@@ -51,7 +51,7 @@ package:
     - src/styleguide/**
     - public/**
     # Files
-    - "**/stories.jsx"
+    - "**/stories.tsx"
     - .babelrc
     - .editorconfig
     - .eslintrc.json

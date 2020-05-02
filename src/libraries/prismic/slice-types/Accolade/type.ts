@@ -1,6 +1,6 @@
 import LinkPrismicType from '%prismic/types/link';
-import RichTextPrismicType from '%prismic/types/rich-text';
 import SlicePrismicType from '%prismic/types/slice';
+import RichTextPrismicType, { RichTextTypePrismicItemType } from '%prismic/types/rich-text';
 
 interface AccoladeSliceType extends SlicePrismicType {
   items: Array<{
@@ -11,11 +11,11 @@ interface AccoladeSliceType extends SlicePrismicType {
     | 'honour'
     | 'shortlist';
     AccoladeSliceType_AwardLink: LinkPrismicType;
-    AccoladeSliceType_AwardCategory: RichTextPrismicType<'paragraph'>;
+    AccoladeSliceType_AwardCategory: RichTextPrismicType<RichTextTypePrismicItemType.PARAGRAPH>;
   }>;
   primary: {
-    AccoladeSliceType_Issuer?: RichTextPrismicType<'heading3'>;
-    AccoladeSliceType_Description?: RichTextPrismicType<'paragraph'>;
+    AccoladeSliceType_Issuer?: RichTextPrismicType<RichTextTypePrismicItemType.HEADING3>;
+    AccoladeSliceType_Description?: RichTextPrismicType<RichTextTypePrismicItemType.PARAGRAPH>;
     AccoladeSliceType_Date?: string;
   };
 }
