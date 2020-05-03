@@ -68,18 +68,18 @@ jobs:
           overwrite: true
 
       - run:
-        name: invalidate website cloudfront
-        command: |
-          aws cloudfront create-invalidation \
-            --distribution-id "${DEPLOY_CLOUDFRONT_WEBSITE_DISTRIBUTION}" \
-            --paths "/*"
+          name: invalidate website cloudfront
+          command: |
+            aws cloudfront create-invalidation \
+              --distribution-id "${DEPLOY_CLOUDFRONT_WEBSITE_DISTRIBUTION}" \
+              --paths "/*"
 
       - run:
-        name: invalidate styleguide cloudfront
-        command: |
-          aws cloudfront create-invalidation \
-            --distribution-id "${DEPLOY_CLOUDFRONT_STYLEGUIDE_DISTRIBUTION}" \
-            --paths "/*"
+          name: invalidate styleguide cloudfront
+          command: |
+            aws cloudfront create-invalidation \
+              --distribution-id "${DEPLOY_CLOUDFRONT_STYLEGUIDE_DISTRIBUTION}" \
+              --paths "/*"
 
 workflows:
   version: 2

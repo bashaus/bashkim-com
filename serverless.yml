@@ -189,7 +189,7 @@ resources:
                   Fn::GetAtt:
                     [WebsiteCloudFrontOriginAccessIdentity, S3CanonicalUserId]
 
-    ## Style Guide Configuration
+    ## Styleguide Configuration
 
     StyleguideCloudFrontOriginAccessIdentity:
       Type: "AWS::CloudFront::CloudFrontOriginAccessIdentity"
