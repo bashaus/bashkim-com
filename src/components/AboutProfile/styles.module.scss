@@ -41,6 +41,8 @@
     }
 
     li h3 {
+      @extend %heading3;
+
       order: 2;
       margin-bottom: 0;
     }
@@ -61,6 +63,8 @@
     }
 
     h3 {
+      @extend %heading3;
+
       order: 2;
       margin-bottom: 0 !important;
       text-align: center;

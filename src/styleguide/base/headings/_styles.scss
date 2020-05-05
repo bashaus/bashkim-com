@@ -1,4 +1,21 @@
-%h3 {
+@import "~breakpoint-sass";
+@import "~%styleguide/utils/media";
+
+%heading2 {
+  letter-spacing: 3em;
+
+  @include breakpoint($media-mobile) {
+    line-height: 28px;
+    font-size: 24px;
+  }
+
+  @include breakpoint($media-not-mobile) {
+    line-height: 48px;
+    font-size: 40px;
+  }
+}
+
+%heading3 {
   font-weight: bold;
   text-transform: uppercase;
   font-size: 12px;

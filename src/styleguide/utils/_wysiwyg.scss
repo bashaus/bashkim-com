@@ -29,6 +29,10 @@
     }
   }
 
+  h3 {
+    @extend %heading3;
+  }
+
   ul li::before {
     content: "\2022";
     font-weight: bold;

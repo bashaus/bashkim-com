@@ -41,6 +41,8 @@
   }
 
   h3 {
+    @extend %heading3;
+
     order: 3;
     transition: all 0.3s ease-in-out;
   }
