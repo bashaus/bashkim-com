@@ -52,6 +52,10 @@
   }
 
   @include breakpoint($media-not-mobile) {
+    th {
+      min-width: 75px;
+    }
+
     thead th {
       @include grid-cell-padding(
         $sides: (left, right)
@@ -63,10 +67,6 @@
       @include grid-cell-padding(
         $sides: (top, left, right)
       );
-    }
-
-    th {
-      min-width: 75px;
     }
 
     thead th:first-child,

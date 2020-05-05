@@ -6,6 +6,7 @@
 .PartialNewspaper {
   @include grid-container-max-width;
   @include grid-container-padding;
+
   margin: 0 auto;
   column-gap: 0;
   column-rule-style: none;

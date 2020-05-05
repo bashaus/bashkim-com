@@ -30,11 +30,9 @@
     padding-top: 0;
     padding-bottom: 0;
   }
-}
 
-/* Heading */
+  /* Heading */
 
-.FooterColumn {
   .label {
     @include grid-full-padding(
       $breakpoints: (mobile-portrait, mobile-landscape, tablet-portrait)
@@ -103,11 +101,9 @@
       z-index: 1;
     }
   }
-}
 
-/* Content */
+  /* Content */
 
-.FooterColumn {
   ul {
     @include grid-full-padding(
       $breakpoints: (mobile-portrait, mobile-landscape, tablet-portrait)

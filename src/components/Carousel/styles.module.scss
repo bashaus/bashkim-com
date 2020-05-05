@@ -9,119 +9,24 @@ $arrow-right: "→";
   position: relative;
   z-index: 1;
 
+  /* -webkit */
   -webkit-tap-highlight-color: transparent;
-}
 
-.CarouselDots {
-  :global {
-    position: absolute;
-    bottom: -25px;
-
-    display: block;
-
-    width: 100%;
-    padding: 0;
-    margin: 0;
-
-    list-style: none;
-
-    text-align: center;
-
-    .slick-dotted.slick-slider {
-      margin-bottom: 30px;
-    }
-
-    li {
-      position: relative;
-
-      display: inline-block;
-
-      width: 20px;
-      height: 20px;
-      margin: 0 5px;
-      padding: 0;
-
-      cursor: pointer;
-    }
-
-    li button {
-      font-size: 0;
-      line-height: 0;
-
-      display: block;
-
-      width: 20px;
-      height: 20px;
-      padding: 5px;
-
-      cursor: pointer;
-
-      color: transparent;
-      border: 0;
-      outline: none;
-      background: transparent;
-    }
-
-    li button:hover,
-    li button:focus {
-      outline: none;
-    }
-
-    li button:hover:before,
-    li button:focus:before {
-      opacity: 1;
-    }
-
-    li button:before {
-      font-family: "slick";
-      font-size: 6px;
-      line-height: 20px;
-
-      position: absolute;
-      top: 0;
-      left: 0;
-
-      width: 20px;
-      height: 20px;
-
-      content: "•";
-      text-align: center;
-
-      opacity: 0.25;
-      color: black;
-
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    li.slick-active button:before {
-      opacity: 0.75;
-      color: black;
-    }
-  }
-}
-
-.Carousel {
   :global {
     /* Arrow generic */
     %arrow {
       font-size: 0;
       line-height: 0;
-
       position: absolute;
-      top: 50%;
-
       display: block;
-
+      top: 50%;
       width: 20px;
       height: 20px;
       padding: 0;
       -webkit-transform: translate(0, -50%);
       -ms-transform: translate(0, -50%);
       transform: translate(0, -50%);
-
       cursor: pointer;
-
       color: transparent;
       border: none;
       outline: none;
@@ -135,6 +40,15 @@ $arrow-right: "→";
       background: transparent;
     }
 
+    %arrow::before {
+      font-size: 20px;
+      line-height: 1;
+      opacity: 0.75;
+      color: black;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
     %arrow:hover::before,
     %arrow:focus::before {
       opacity: 1;
@@ -142,17 +56,6 @@ $arrow-right: "→";
 
     %arrow.slick-disabled::before {
       opacity: 0.25;
-    }
-
-    %arrow::before {
-      font-size: 20px;
-      line-height: 1;
-
-      opacity: 0.75;
-      color: black;
-
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
     }
 
     /* Implementation */

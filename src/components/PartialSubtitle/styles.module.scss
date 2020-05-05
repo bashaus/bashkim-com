@@ -12,16 +12,17 @@
   h2 {
     display: inline-block;
     position: relative;
-    letter-spacing: -.03em;
 
     @include breakpoint($media-mobile) {
       line-height: 28px;
       font-size: 24px;
+      letter-spacing: -0.72px;
     }
 
     @include breakpoint($media-not-mobile) {
       line-height: 48px;
       font-size: 40px;
+      letter-spacing: -1.2px;
     }
   }
 

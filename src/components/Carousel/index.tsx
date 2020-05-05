@@ -1,7 +1,8 @@
-import React from 'react';
-import SlickSlider from 'react-slick';
+import React from "react";
+import SlickSlider from "react-slick";
 
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
+import dotsStyles from "./styles.dots.module.scss";
 
 interface CarouselProps {
   children: React.ReactNode;
@@ -20,7 +21,7 @@ const Carousel = ({
     <SlickSlider
       adaptiveHeight
       dots
-      dotsClass={styles.CarouselDots}
+      dotsClass={dotsStyles.CarouselDots}
       infinite={false}
       draggable
       lazyLoad="ondemand"

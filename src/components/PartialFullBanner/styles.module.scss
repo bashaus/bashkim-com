@@ -33,9 +33,6 @@
     }
   }
 
-  @include breakpoint($media-mobile) {
-  }
-
   @include breakpoint($media-not-mobile) {
     background-size: auto 100%;
     background-position: center center;

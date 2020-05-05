@@ -6,13 +6,16 @@
 ) {
   @if (type-of($breakpoints) == "null") {
     @include grid-cell-margin(map-keys($grid), $sides);
-  } @else if (type-of($breakpoints) == "map") {
+  }
+  @else if (type-of($breakpoints) == "map") {
     @include grid-cell-margin(map-keys($breakpoints), $sides);
-  } @else if (type-of($breakpoints) == "list") {
+  }
+  @else if (type-of($breakpoints) == "list") {
     @each $breakpoint in $breakpoints {
       @include grid-cell-margin($breakpoint, $sides);
     }
-  } @else if (type-of($breakpoints) == "string") {
+  }
+  @else if (type-of($breakpoints) == "string") {
     $breakpoint: $breakpoints;
 
     @include breakpoint(grid-query($breakpoint)) {
@@ -32,9 +35,10 @@
         margin-bottom: grid-gutter($breakpoint) / 2;
       }
     }
-  } @else {
+  }
+  @else {
     @error "grid-cell-margin( #{type-of($breakpoints)} ): "
-            "$breakpoints received type #{type-of($breakpoints)}, "
-            "expected `null`, `list`, `map` or `string`";
+      "$breakpoints received type #{type-of($breakpoints)}, "
+      "expected `null`, `list`, `map` or `string`";
   }
 }

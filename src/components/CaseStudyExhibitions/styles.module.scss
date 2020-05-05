@@ -3,6 +3,7 @@
 
 .CaseStudyExhibitions {
   @include grid-container;
+
   justify-content: center;
 
   > li {
