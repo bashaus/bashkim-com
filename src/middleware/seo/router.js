@@ -1,17 +1,19 @@
-const express = require("express");
-const Config = require("../../config");
+const express = require('express');
+
+const movedPermanentlySchema = require('./schema/301-moved-permanently.json');
+const goneSchema = require('./schema/410-gone.json');
 
 const server = express();
 
 // 301 Moved Permanently
-Config.get("seo.301").forEach((entry) => {
+movedPermanentlySchema.forEach((entry) => {
   server.get(entry.src, (req, res, next) => {
     res.redirect(301, entry.dest);
   });
 });
 
 // 410 Gone
-Config.get("seo.410").forEach((entry) => {
+goneSchema.forEach((entry) => {
   server.get(entry.src, (req, res, next) => {
     res.sendStatus(410);
   });
