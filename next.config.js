@@ -1,8 +1,6 @@
 const webpack = require('webpack');
-require("dotenv").config();
-
 const path = require("path");
-const Config = require("./src/config");
+const { default: Config } = require("./src/config");
 
 const nextConfig = {
   target: "serverless",

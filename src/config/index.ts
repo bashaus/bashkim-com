@@ -1,17 +1,20 @@
-const convict = require("convict");
-const schema = require("./_schema");
+import convict from 'convict';
+import dotenv from 'dotenv';
+import schema from './schema';
+
+dotenv.config();
 
 // Define a schema
 const config = convict(schema);
 
 // Load environment dependent configuration
-const env = config.get("server.env");
+const env = config.get('server.env');
 Object.keys(schema).forEach((key) => {
   try {
     config.loadFile(`src/config/${env}/${key}.json`);
   } catch (err) {
     // Ignore file does not exist errors
-    if (err.code !== "ENOENT") {
+    if (err.code !== 'ENOENT') {
       throw err;
     }
   }
@@ -19,7 +22,7 @@ Object.keys(schema).forEach((key) => {
 
 // Perform validation
 config.validate({
-  allowed: "strict",
+  allowed: 'strict',
 });
 
-module.exports = config;
+export default config;

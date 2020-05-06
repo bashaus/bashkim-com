@@ -1,9 +1,11 @@
-const Prismic = require('prismic-javascript');
-const getConfig = require('next/config').default;
+import Prismic from 'prismic-javascript';
+import getConfig from 'next/config';
+import { IncomingMessage } from 'http';
 
-const { publicRuntimeConfig } = getConfig();
-
-const createClientOptions = (req = null, prismicAccessToken = null) => {
+const createClientOptions = (
+  req?: IncomingMessage,
+  prismicAccessToken?: string,
+): any => {
   const reqOption = req ? { req } : {};
   const accessTokenOption = prismicAccessToken ? { accessToken: prismicAccessToken } : {};
 
@@ -14,9 +16,10 @@ const createClientOptions = (req = null, prismicAccessToken = null) => {
 };
 
 // Client method to query documents from the Prismic repo
-const Client = (req = null) => {
+const Client = (req?: IncomingMessage): any => {
+  const { publicRuntimeConfig } = getConfig();
   const { apiEndpoint, accessToken } = publicRuntimeConfig.prismic;
   return Prismic.client(apiEndpoint, createClientOptions(req, accessToken));
 };
 
-module.exports = Client;
+export default Client;

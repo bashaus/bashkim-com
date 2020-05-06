@@ -10,6 +10,8 @@
  * }
  */
 
-export default class NotFoundError extends Error {
+class NotFoundError extends Error {
   code = 'ENOENT';
 }
+
+export default NotFoundError;
