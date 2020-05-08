@@ -2,4 +2,5 @@
 .next/
 .storybook-static/
 .serverless/
+build/
 node_modules/

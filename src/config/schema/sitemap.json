@@ -1,9 +1,0 @@
-{
-  "sitemap": {
-    "baseHref": {
-      "doc": "The root URL of the site (no trailing slash)",
-      "format": "String",
-      "default": "https://www.bashkim.com"
-    }
-  }
-}

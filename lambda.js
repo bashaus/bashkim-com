@@ -1,10 +1,18 @@
-import Raven from 'raven';
-import RavenLambdaWrapper from 'serverless-sentry-lib';
-import awsServerlessExpress from 'aws-serverless-express';
+const tsConfig = require("./tsconfig.json");
+const tsConfigRun = require("./tsconfig.run.json");
+const tsConfigPaths = require("tsconfig-paths");
+tsConfigPaths.register({
+  baseUrl: tsConfigRun.compilerOptions.baseUrl,
+  paths: tsConfig.compilerOptions.paths
+});
 
-import { app, server } from './build/server/init';
+const Raven = require('raven');
+const RavenLambdaWrapper = require('serverless-sentry-lib');
+const awsServerlessExpress = require('aws-serverless-express');
 
-export default RavenLambdaWrapper.handler(
+const { app, server } = require('./build/server/init');
+
+module.exports.handler = RavenLambdaWrapper.handler(
   Raven,
   async (event, context) => {
     await app.prepare();

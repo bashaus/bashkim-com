@@ -1,20 +1,18 @@
 import App from 'next/app';
-import getConfig from 'next/config';
 import React from 'react';
 import * as Sentry from '@sentry/browser';
 
+import config from '%config/index';
 import TrackingSentryBoundary from '%components/TrackingSentryBoundary';
 
 import '%styleguide/main.scss';
 
-const { publicRuntimeConfig } = getConfig();
-
-const sentryIsEnabled = publicRuntimeConfig.sentry.enabled;
+const sentryIsEnabled = config.sentry.enabled;
 if (sentryIsEnabled) {
   Sentry.init({
-    dsn: publicRuntimeConfig.sentry.dsn,
-    environment: publicRuntimeConfig.sentry.environment,
-    release: `${publicRuntimeConfig.sentry.project}@${publicRuntimeConfig.sentry.commit}`,
+    dsn: config.sentry.dsn,
+    environment: config.sentry.environment,
+    release: `${config.sentry.project}@${config.sentry.commit}`,
   });
 }
 

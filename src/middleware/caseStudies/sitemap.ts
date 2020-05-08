@@ -1,10 +1,10 @@
 import dayjs from 'dayjs';
 import Prismic from 'prismic-javascript';
 
-import Config from '../../config';
-import PrismicClient from '../../libraries/prismic/client';
-import SitemapUrl from '../sitemaps/url';
-import CaseStudyContentType from '%libraries/prismic/content-types/case_study/type';
+import config from '%config/index';
+import SitemapUrl from '%middleware/sitemaps/url';
+import PrismicClient from '%prismic/client';
+import CaseStudyContentType from '%prismic/content-types/case_study/type';
 
 const sitemap = async (): Promise<Array<SitemapUrl>> => {
   const urlset: Array<SitemapUrl> = [];
@@ -12,7 +12,7 @@ const sitemap = async (): Promise<Array<SitemapUrl>> => {
   /* Portfolio index */
   urlset.push({
     url: {
-      loc: `${Config.get('sitemap.baseHref')}/portfolio`,
+      loc: `${config.sitemap.baseHref}/portfolio`,
       lastmod: dayjs().format(),
       changefreq: 'monthly',
       priority: '0.5',
@@ -28,7 +28,7 @@ const sitemap = async (): Promise<Array<SitemapUrl>> => {
   caseStudies.results.forEach((caseStudy: CaseStudyContentType) => {
     urlset.push({
       url: {
-        loc: `${Config.get('sitemap.baseHref')}/portfolio/${caseStudy.uid}`,
+        loc: `${config.sitemap.baseHref}/portfolio/${caseStudy.uid}`,
         lastmod: dayjs(caseStudy.last_publication_date || undefined).format(),
         changefreq: caseStudy.data.sitemap_changefreq || 'monthly',
         priority: caseStudy.data.sitemap_priority || '0.5',

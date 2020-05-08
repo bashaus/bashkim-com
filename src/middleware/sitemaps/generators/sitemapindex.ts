@@ -1,8 +1,8 @@
 import express from 'express';
 import xmlbuilder from 'xmlbuilder';
 
-import Config from '../../../config';
-import sitemaps from '../sitemaps';
+import config from '%config/index';
+import sitemaps from '%middleware/sitemaps/sitemaps';
 
 const schema = () => (
   req: express.Request,
@@ -26,7 +26,7 @@ const schema = () => (
   Object.entries(sitemaps).forEach(([key]) => {
     doc.ele({
       sitemap: {
-        loc: `${Config.get('sitemap.baseHref')}/sitemap/${key}.xml`,
+        loc: `${config.sitemap.baseHref}/sitemap/${key}.xml`,
       },
     });
   });

@@ -7,29 +7,17 @@
     "strict": true,
     "noUnusedLocals": true,
     "moduleResolution": "node",
-    "baseUrl": "./",
+    "baseUrl": "./src",
     "paths": {
-      "%components/*": [
-        "./src/components/*"
-      ],
-      "%contexts/*": [
-        "./src/contexts/*"
-      ],
-      "%libraries/*": [
-        "./src/libraries/*"
-      ],
-      "%prismic/*": [
-        "./src/libraries/prismic/*"
-      ],
-      "%public/*": [
-        "./public/*"
-      ],
-      "%storybook/*": [
-        "./.storybook/*"
-      ],
-      "%styleguide/*": [
-        "./src/styleguide/*"
-      ]
+      "%components/*": ["./components/*"],
+      "%config/*": ["./config/*"],
+      "%contexts/*": ["./contexts/*"],
+      "%libraries/*": ["./libraries/*"],
+      "%middleware/*": ["./middleware/*"],
+      "%prismic/*": ["./libraries/prismic/*"],
+      "%public/*": ["../public/*"],
+      "%storybook/*": ["../.storybook/*"],
+      "%styleguide/*": ["./styleguide/*"]
     },
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,

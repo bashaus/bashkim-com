@@ -1,28 +1,15 @@
-import convict from 'convict';
-import dotenv from 'dotenv';
-import schema from './schema';
+import defaultsDeep from 'lodash.defaultsdeep';
 
-dotenv.config();
+import Schema from './schema';
+import localSchema from './environment/local';
 
 // Define a schema
-const config = convict(schema);
+let environment = {};
 
-// Load environment dependent configuration
-const env = config.get('server.env');
-Object.keys(schema).forEach((key) => {
-  try {
-    config.loadFile(`src/config/${env}/${key}.json`);
-  } catch (err) {
-    // Ignore file does not exist errors
-    if (err.code !== 'ENOENT') {
-      throw err;
-    }
-  }
-});
+if (process.env.APP_ENV === 'local') {
+  environment = localSchema;
+}
 
-// Perform validation
-config.validate({
-  allowed: 'strict',
-});
+const config = defaultsDeep({}, environment, Schema());
 
 export default config;

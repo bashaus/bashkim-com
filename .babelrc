@@ -10,8 +10,10 @@
         "root": ["./"],
         "alias": {
           "%components": "./src/components",
+          "%config": "./src/config",
           "%contexts": "./src/contexts",
           "%libraries": "./src/libraries",
+          "%middleware": "./src/middleware",
           "%prismic": "./src/libraries/prismic",
           "%public": "./public",
           "%storybook": "./.storybook",

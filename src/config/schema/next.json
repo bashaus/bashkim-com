@@ -1,9 +1,0 @@
-{
-  "next": {
-    "dev": {
-      "doc": "Whether or not to use development mode",
-      "format": "Boolean",
-      "default": false
-    }
-  }
-}

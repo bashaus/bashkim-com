@@ -1,8 +1,8 @@
 import express from 'express';
 import xmlbuilder from 'xmlbuilder';
 
-import SitemapUrl from '../url';
-import sitemaps from '../sitemaps';
+import SitemapUrl from '%middleware/sitemaps/url';
+import sitemaps from '%middleware/sitemaps/sitemaps';
 
 const schema = () => async (
   req: express.Request,

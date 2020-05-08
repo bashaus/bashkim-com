@@ -8,7 +8,7 @@ import PartialTitle from '%components/PartialTitle';
 import CaseStudyContentPropType from '%prismic/content-types/case_study/type';
 
 import styles from './styles.module.scss';
-import PartialSubtitle from '../PartialSubtitle';
+import PartialSubtitle from '%components/PartialSubtitle';
 
 interface CaseStudyHeaderProps {
   caseStudy: CaseStudyContentPropType;

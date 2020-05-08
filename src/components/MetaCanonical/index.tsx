@@ -1,8 +1,7 @@
-import getConfig from 'next/config';
 import Head from 'next/head';
 import React from 'react';
 
-const { publicRuntimeConfig } = getConfig();
+import config from '%config/index';
 
 interface MetaCanonicalProps {
   href?: string;
@@ -13,7 +12,7 @@ const MetaCanonical = ({ href }: MetaCanonicalProps): JSX.Element | null => {
     return null;
   }
 
-  const absoluteHref = `${publicRuntimeConfig.sitemap.baseHref}${href}`;
+  const absoluteHref = `${config.sitemap.baseHref}${href}`;
 
   return (
     <Head>

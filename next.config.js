@@ -1,10 +1,8 @@
 const webpack = require('webpack');
 const path = require("path");
-const { default: Config } = require("./src/config");
 
 const nextConfig = {
   target: "serverless",
-  publicRuntimeConfig: Config.get(),
   webpack: (config) => {
     // Perform customizations to webpack config
     config.resolve.alias["%styleguide"] = path.resolve(__dirname, "styleguide");
