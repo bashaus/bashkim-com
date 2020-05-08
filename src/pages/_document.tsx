@@ -5,14 +5,14 @@ import Document, {
   NextScript,
   DocumentContext,
   DocumentInitialProps,
-} from 'next/document';
+} from "next/document";
 
-import React from 'react';
-
-import TrackingGoogleAnalytics from '%components/TrackingGoogleAnalytics';
+import React from "react";
 
 export default class MyDocument extends Document {
-  static async getInitialProps(context: DocumentContext): Promise<DocumentInitialProps> {
+  static async getInitialProps(
+    context: DocumentContext
+  ): Promise<DocumentInitialProps> {
     return Document.getInitialProps(context);
   }
 
@@ -79,7 +79,6 @@ export default class MyDocument extends Document {
             <Main />
           </div>
           <NextScript />
-          <TrackingGoogleAnalytics />
         </body>
       </Html>
     );
