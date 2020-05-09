@@ -28,6 +28,7 @@ jobs:
           paths:
             - ./.next
             - ./.storybook-static
+            - ./build
             - ./node_modules
 
   deploy:

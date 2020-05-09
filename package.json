@@ -50,6 +50,7 @@
     "reset-scss": "^1.0.0",
     "serverless-sentry-lib": "^1.1.2",
     "slick-carousel": "^1.8.1",
+    "tsconfig-paths": "^3.9.0",
     "webpack": "^4.43.0",
     "xmlbuilder": "^15.1.1"
   },
@@ -106,7 +107,6 @@
     "stylelint-scss": "^3.1.0",
     "ts-loader": "^7.0.2",
     "ts-node": "^8.10.1",
-    "tsconfig-paths": "^3.9.0",
     "typescript": "^3.8.3"
   }
 }
