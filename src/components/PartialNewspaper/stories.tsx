@@ -1,26 +1,27 @@
-import React from 'react';
-import { withKnobs } from '@storybook/addon-knobs';
+import faker from "faker";
+import React from "react";
+import { withKnobs } from "@storybook/addon-knobs";
 
-import PartialNewspaper from '.';
+import PartialNewspaper from ".";
 
 export default {
-  title: 'Partials/Newspaper',
+  title: "Partials/Newspaper",
   decorators: [withKnobs],
 };
 
 export const Render = (): JSX.Element => (
   <PartialNewspaper>
-    <p>Lorem ipsum</p>
-    <p>Lorem ipsum</p>
-    <p>Lorem ipsum</p>
-    <p>Lorem ipsum</p>
-    <p>Lorem ipsum</p>
-    <p>Lorem ipsum</p>
-    <p>Lorem ipsum</p>
-    <p>Lorem ipsum</p>
-    <p>Lorem ipsum</p>
-    <p>Lorem ipsum</p>
-    <p>Lorem ipsum</p>
-    <p>Lorem ipsum</p>
+    <div>{faker.lorem.paragraph()}</div>
+    <div>{faker.lorem.paragraph()}</div>
+    <div>{faker.lorem.paragraph()}</div>
+    <div>{faker.lorem.paragraph()}</div>
+    <div>{faker.lorem.paragraph()}</div>
+    <div>{faker.lorem.paragraph()}</div>
+    <div>{faker.lorem.paragraph()}</div>
+    <div>{faker.lorem.paragraph()}</div>
+    <div>{faker.lorem.paragraph()}</div>
+    <div>{faker.lorem.paragraph()}</div>
+    <div>{faker.lorem.paragraph()}</div>
+    <div>{faker.lorem.paragraph()}</div>
   </PartialNewspaper>
 );

@@ -1,4 +1,5 @@
 const path = require("path");
+const webpack = require("webpack");
 
 module.exports = ({ config }) => {
   config.resolve.alias = {
@@ -26,10 +27,7 @@ module.exports = ({ config }) => {
 
   config.module.rules.push({
     test: /\.css$/,
-    loaders: [
-      require.resolve("style-loader"),
-      require.resolve("css-loader")
-    ],
+    loaders: [require.resolve("style-loader"), require.resolve("css-loader")],
   });
 
   config.module.rules.push({
@@ -39,10 +37,18 @@ module.exports = ({ config }) => {
 
   config.module.rules.push({
     test: /\.tsx?$/,
-    loader: require.resolve('babel-loader'),
+    loader: require.resolve("babel-loader"),
   });
 
-  config.resolve.extensions.push('.ts', '.tsx');
+  // Global for jQuery
+  config.plugins.push(
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery",
+    })
+  );
+
+  config.resolve.extensions.push(".ts", ".tsx");
 
   return config;
 };
