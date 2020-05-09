@@ -5,13 +5,18 @@
 .CallToAction {
   a {
     color: inherit;
+    cursor: pointer;
     border: solid 2px;
-    transition: all 0.3s ease-in-out;
     display: inline-block;
     line-height: 30px;
     padding-left: 20px;
     padding-right: 20px;
     text-decoration: none !important;
+  }
+
+  a,
+  a span {
+    transition: all 0.3s ease-in-out;
   }
 
   a:hover {
@@ -20,6 +25,6 @@
   }
 
   a:hover span {
-    color: $color-charcol;
+    color: $color-white;
   }
 }

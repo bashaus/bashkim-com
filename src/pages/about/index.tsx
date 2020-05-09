@@ -1,21 +1,21 @@
-import React from 'react';
+import React from "react";
 
-import AboutProfile from '%components/AboutProfile';
-import AboutEmployment from '%components/AboutEmployment';
-import AboutTutoring from '%components/AboutTutoring';
-import AboutEducation from '%components/AboutEducation';
-import AboutCertifications from '%components/AboutCertifications';
-import LayoutDefault from '%components/LayoutDefault';
-import MenuBackButtonHomeImpl from '%components/MenuBackButtonHomeImpl';
-import MetaDescription from '%components/MetaDescription';
-import MetaKeywords from '%components/MetaKeywords';
-import MetaTitle from '%components/MetaTitle';
-import CallToAction from '%components/CallToAction';
-import PartialHeaderImage from '%components/PartialHeaderImage';
-import PartialSplit from '%components/PartialSplit';
-import PartialSubtitle from '%components/PartialSubtitle';
+import AboutProfile from "%components/AboutProfile";
+import AboutEmployment from "%components/AboutEmployment";
+import AboutTutoring from "%components/AboutTutoring";
+import AboutEducation from "%components/AboutEducation";
+import AboutCertifications from "%components/AboutCertifications";
+import LayoutDefault from "%components/LayoutDefault";
+import MenuBackButtonHomeImpl from "%components/MenuBackButtonHomeImpl";
+import MetaDescription from "%components/MetaDescription";
+import MetaKeywords from "%components/MetaKeywords";
+import MetaTitle from "%components/MetaTitle";
+import CallToAction from "%components/CallToAction";
+import PartialHeaderImage from "%components/PartialHeaderImage";
+import PartialSplit from "%components/PartialSplit";
+import PartialSubtitle from "%components/PartialSubtitle";
 
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
 
 const AboutPage = (): JSX.Element => (
   <LayoutDefault backButton={MenuBackButtonHomeImpl} theme="about">
@@ -45,7 +45,7 @@ const AboutPage = (): JSX.Element => (
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                Visit my LinkedIn profile
+                <span>Visit my LinkedIn profile</span>
               </a>
             </CallToAction>
           </div>
@@ -60,7 +60,7 @@ const AboutPage = (): JSX.Element => (
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                Visit my GitHub profile
+                <span>Visit my GitHub profile</span>
               </a>
             </CallToAction>
           </div>

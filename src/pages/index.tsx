@@ -1,22 +1,22 @@
-import { NextPageContext } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
-import React from 'react';
+import { NextPageContext } from "next";
+import Head from "next/head";
+import Link from "next/link";
+import React from "react";
 
-import HomeBrands from '%components/HomeBrands';
-import HomeHello from '%components/HomeHello';
-import LayoutDefault from '%components/LayoutDefault';
-import MetaDescription from '%components/MetaDescription';
-import MetaKeywords from '%components/MetaKeywords';
-import MetaTitle from '%components/MetaTitle';
-import CallToAction from '%components/CallToAction';
-import PartialFullBanner from '%components/PartialFullBanner';
-import PartialSplit from '%components/PartialSplit';
-import PartialSubtitle from '%components/PartialSubtitle';
+import HomeBrands from "%components/HomeBrands";
+import HomeHello from "%components/HomeHello";
+import LayoutDefault from "%components/LayoutDefault";
+import MetaDescription from "%components/MetaDescription";
+import MetaKeywords from "%components/MetaKeywords";
+import MetaTitle from "%components/MetaTitle";
+import CallToAction from "%components/CallToAction";
+import PartialFullBanner from "%components/PartialFullBanner";
+import PartialSplit from "%components/PartialSplit";
+import PartialSubtitle from "%components/PartialSubtitle";
 
-import PrismicClient from '%prismic/client';
-import LinkResolver from '%prismic/helpers/LinkResolver';
-import HomePageContentType from '%prismic/content-types/home_page/type';
+import PrismicClient from "%prismic/client";
+import LinkResolver from "%prismic/helpers/LinkResolver";
+import HomePageContentType from "%prismic/content-types/home_page/type";
 
 interface HomePageProps {
   page: HomePageContentType;
@@ -90,7 +90,9 @@ const HomePage = ({ page }: HomePageProps): JSX.Element => {
                       href="/portfolio/[caseStudySlug]"
                       as={LinkResolver(caseStudy)}
                     >
-                      <a>Read case study</a>
+                      <a>
+                        <span>Read case study</span>
+                      </a>
                     </Link>
                   </CallToAction>
                 </PartialFullBanner>
@@ -114,7 +116,9 @@ const HomePage = ({ page }: HomePageProps): JSX.Element => {
               <p>Interested in seeing case&nbsp;studies?</p>
               <CallToAction>
                 <Link href="/portfolio">
-                  <a>Browse portfolio</a>
+                  <a>
+                    <span>Browse portfolio</span>
+                  </a>
                 </Link>
               </CallToAction>
             </div>
@@ -125,7 +129,9 @@ const HomePage = ({ page }: HomePageProps): JSX.Element => {
               <p>Want more details about my practice?</p>
               <CallToAction>
                 <Link href="/about">
-                  <a>About me</a>
+                  <a>
+                    <span>About me</span>
+                  </a>
                 </Link>
               </CallToAction>
             </div>
@@ -136,16 +142,21 @@ const HomePage = ({ page }: HomePageProps): JSX.Element => {
   );
 };
 
-HomePage.getInitialProps = async (context: NextPageContext): Promise<HomePageProps> => {
+HomePage.getInitialProps = async (
+  context: NextPageContext
+): Promise<HomePageProps> => {
   const { req } = context;
-  const page: HomePageContentType = await PrismicClient(req).getSingle('home_page', {
-    fetchLinks: [
-      'case_study.meta_title',
-      'case_study.meta_description',
-      'case_study.image_header_desktop',
-      'case_study.image_header_mobile',
-    ],
-  });
+  const page: HomePageContentType = await PrismicClient(req).getSingle(
+    "home_page",
+    {
+      fetchLinks: [
+        "case_study.meta_title",
+        "case_study.meta_description",
+        "case_study.image_header_desktop",
+        "case_study.image_header_mobile",
+      ],
+    }
+  );
 
   return { page };
 };
