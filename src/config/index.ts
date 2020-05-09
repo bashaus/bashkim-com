@@ -1,15 +1,15 @@
-import defaultsDeep from "lodash.defaultsdeep";
-import dotenv from "dotenv";
+import defaultsDeep from 'lodash.defaultsdeep';
+import dotenv from 'dotenv';
 
-import Schema from "./schema";
-import localSchema from "./environment/local";
+import Schema from './schema';
+import localSchema from './environment/local';
 
 dotenv.config();
 
 // Define a schema
 let environment = {};
 
-if (process.env.APP_ENV === "local") {
+if (process.env.APP_ENV === 'local') {
   environment = localSchema;
 }
 

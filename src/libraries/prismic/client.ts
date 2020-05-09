@@ -1,7 +1,6 @@
+import getConfig from 'next/config';
 import Prismic from 'prismic-javascript';
 import { IncomingMessage } from 'http';
-
-import config from '%config/index';
 
 const createClientOptions = (
   req?: IncomingMessage,
@@ -18,6 +17,7 @@ const createClientOptions = (
 
 // Client method to query documents from the Prismic repo
 const Client = (req?: IncomingMessage): any => {
+  const { publicRuntimeConfig: config } = getConfig();
   const { apiEndpoint, accessToken } = config.prismic;
   return Prismic.client(apiEndpoint, createClientOptions(req, accessToken));
 };

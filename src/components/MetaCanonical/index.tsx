@@ -1,13 +1,14 @@
+import getConfig from 'next/config';
 import Head from 'next/head';
 import React from 'react';
-
-import config from '%config/index';
 
 interface MetaCanonicalProps {
   href?: string;
 }
 
 const MetaCanonical = ({ href }: MetaCanonicalProps): JSX.Element | null => {
+  const { publicRuntimeConfig: config } = getConfig();
+
   if (!href) {
     return null;
   }
