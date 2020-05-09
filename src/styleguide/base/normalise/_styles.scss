@@ -34,17 +34,41 @@ h6 {
 
 /* Forms */
 
+label {
+  cursor: pointer;
+  display: inline-block;
+}
+
 input,
 select,
 button,
 textarea {
   font-family: $font-family-copy;
   font-size: 100%;
+  color: currentColor;
 }
 
-label {
+input,
+textarea {
+  cursor: text;
+}
+
+select,
+button,
+input[type="checkbox"],
+input[type="radio"] {
   cursor: pointer;
-  display: inline-block;
+}
+
+input[type="range"] {
+  cursor: ew-resize;
+}
+
+input:disabled,
+select:disabled,
+button:disabled,
+textarea:disabled {
+  cursor: not-allowed;
 }
 
 /* Objects */

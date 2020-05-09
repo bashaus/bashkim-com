@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
-import CookiesNotice from '%components/CookiesNotice';
-import Page from '%components/Page';
-import CookiesProvider from '%contexts/Cookies';
-import NavigationStore from '%contexts/Navigation';
+import CookiesNotice from "%components/CookiesNotice";
+import Page from "%components/Page";
+import CookiesProvider from "%contexts/Cookies";
+import NavigationStore from "%contexts/Navigation";
 
 interface LayoutDefaultProps {
   backButton?: React.ReactNode;
@@ -14,12 +14,18 @@ interface LayoutDefaultProps {
 const LayoutDefault = ({
   backButton,
   children,
-  theme = 'default',
+  theme = "default",
 }: LayoutDefaultProps): JSX.Element => {
+  const handleDocumentReady = (): void => {
+    document.documentElement.classList.add("ready");
+  };
+
   if (typeof window !== typeof undefined) {
-    window.requestAnimationFrame((): void => {
-      document.documentElement.classList.add('ready');
-    });
+    if (window.requestAnimationFrame) {
+      window.requestAnimationFrame(handleDocumentReady);
+    } else {
+      setTimeout(handleDocumentReady, 1);
+    }
   }
 
   return (
