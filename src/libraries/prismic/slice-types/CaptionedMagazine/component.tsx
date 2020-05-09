@@ -1,12 +1,12 @@
-import { RichText } from 'prismic-reactjs';
-import React from 'react';
+import { RichText } from "prismic-reactjs";
+import React from "react";
 
-import DeferredAsset from '%components/DeferredAsset';
-import Magazine from '%components/Magazine';
-import PartialCaptioned from '%components/PartialCaptioned';
-import LinkResolver from '%prismic/helpers/LinkResolver';
+import DeferredAsset from "%components/DeferredAsset";
+import Magazine from "%components/Magazine";
+import PartialCaptioned from "%components/PartialCaptioned";
+import LinkResolver from "%prismic/helpers/LinkResolver";
 
-import SlicePropType from './type';
+import SlicePropType from "./type";
 
 interface CaptionedMagazineSliceTypeProps {
   slice: SlicePropType;
@@ -22,9 +22,14 @@ const CaptionedMagazineSliceType = ({
   const { items } = slice;
   const firstImage = items[0].CaptionedMagazineSliceType_Images;
 
+  /* handlers */
+  const handleImageDrag = (e: React.DragEvent<HTMLImageElement>): void => {
+    e.preventDefault();
+  };
+
   return (
     <PartialCaptioned
-      figure={(
+      figure={
         <DeferredAsset
           width={firstImage.dimensions.width * 2}
           height={firstImage.dimensions.height}
@@ -36,8 +41,9 @@ const CaptionedMagazineSliceType = ({
             {items.map((item) => (
               <li key={item.CaptionedMagazineSliceType_Images.url}>
                 <img
+                  onDragStart={handleImageDrag}
                   src={item.CaptionedMagazineSliceType_Images.url}
-                  alt={item.CaptionedMagazineSliceType_Images.alt || ''}
+                  alt={item.CaptionedMagazineSliceType_Images.alt || ""}
                   width={
                     item.CaptionedMagazineSliceType_Images.dimensions.width
                   }
@@ -49,7 +55,7 @@ const CaptionedMagazineSliceType = ({
             ))}
           </Magazine>
         </DeferredAsset>
-      )}
+      }
     >
       {caption && RichText.render(caption, LinkResolver)}
     </PartialCaptioned>
