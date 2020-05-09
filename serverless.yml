@@ -44,6 +44,8 @@ package:
     # Folders
     - .circleci/**
     - .storybook/**
+    - .storybook-static/**
+    - .vscode/**
     - node_modules/.cache/**
     - src/components/**
     - src/contexts/**
@@ -54,8 +56,14 @@ package:
     - "**/stories.tsx"
     - .babelrc
     - .editorconfig
+    - .env.example
+    - .eslintignore
     - .eslintrc.json
+    - .huskyrc.json
+    - .lintstagedrc.json
+    - .prettierignore
     - .nvmrc
+    - .stylelintrc.json
     - package.json
     - package-lock.json
 

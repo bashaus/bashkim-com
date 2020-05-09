@@ -8,7 +8,7 @@ const defaultServerConfig: ServerConfig = {
   /**
    * The current environment
    */
-  env: process.env.APP_ENV || 'production',
+  env: process.env.APP_ENV || "production",
 
   /**
    * The port to bind
@@ -18,8 +18,7 @@ const defaultServerConfig: ServerConfig = {
   /**
    * Whether or not the server is running on AWS Lambda
    */
-  lambda: typeof process.env.LAMBDA_ENV !== typeof undefined,
+  lambda: !!process.env.LAMBDA_TASK_ROOT,
 };
-
 
 export default defaultServerConfig;
