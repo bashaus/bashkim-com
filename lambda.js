@@ -1,6 +1,6 @@
-const tsConfig = require("./tsconfig.json");
-const tsConfigRun = require("./tsconfig.run.json");
-const tsConfigPaths = require("tsconfig-paths");
+const tsConfig = require('./tsconfig.json');
+const tsConfigRun = require('./tsconfig.run.json');
+const tsConfigPaths = require('tsconfig-paths');
 tsConfigPaths.register({
   baseUrl: tsConfigRun.compilerOptions.baseUrl,
   paths: tsConfig.compilerOptions.paths
@@ -14,12 +14,13 @@ const { app, server } = require('./build/server/init');
 
 module.exports.handler = RavenLambdaWrapper.handler(
   Raven,
-  async (event, context) => {
-    await app.prepare();
-    awsServerlessExpress.proxy(
-      awsServerlessExpress.createServer(server),
-      event,
-      context,
+  (event, context) => {
+    app.prepare().then(
+      () => awsServerlessExpress.proxy(
+        awsServerlessExpress.createServer(server),
+        event,
+        context,
+      )
     );
   },
 );
