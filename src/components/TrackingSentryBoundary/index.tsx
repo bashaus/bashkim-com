@@ -1,5 +1,5 @@
-import * as Sentry from '@sentry/browser';
-import React from 'react';
+import * as Sentry from "@sentry/browser";
+import React from "react";
 
 interface TrackingSentryBoundaryProps {
   children: React.ReactNode;
@@ -9,8 +9,10 @@ interface TrackingSentryBoundaryState {
   error?: Error;
 }
 
-export default class TrackingSentryBoundary
-  extends React.PureComponent<TrackingSentryBoundaryProps, TrackingSentryBoundaryState> {
+export default class TrackingSentryBoundary extends React.PureComponent<
+  TrackingSentryBoundaryProps,
+  TrackingSentryBoundaryState
+> {
   constructor(props: TrackingSentryBoundaryProps) {
     super(props);
 

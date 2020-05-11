@@ -1,6 +1,6 @@
-import PrismicContentType from '%prismic/traits/content-type';
+import PrismicContentType from "%prismic/traits/content-type";
 
-import PeerContentTypeMainTab from './tabs/main/type';
+import PeerContentTypeMainTab from "./tabs/main/type";
 
 type PeerContentTypeData = PeerContentTypeMainTab;
 

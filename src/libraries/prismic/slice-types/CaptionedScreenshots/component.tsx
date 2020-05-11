@@ -1,13 +1,13 @@
-import { RichText } from 'prismic-reactjs';
-import React, { ChangeEvent } from 'react';
+import { RichText } from "prismic-reactjs";
+import React, { ChangeEvent } from "react";
 
-import Octicon, { DeviceMobile, DeviceDesktop } from '@primer/octicons-react';
-import DeferredAsset from '%components/DeferredAsset';
-import PartialCaptioned from '%components/PartialCaptioned';
-import LinkResolver from '%prismic/helpers/LinkResolver';
+import Octicon, { DeviceMobile, DeviceDesktop } from "@primer/octicons-react";
+import DeferredAsset from "%components/DeferredAsset";
+import PartialCaptioned from "%components/PartialCaptioned";
+import LinkResolver from "%prismic/helpers/LinkResolver";
 
-import SlicePropType from './type';
-import styles from './styles.module.scss';
+import SlicePropType from "./type";
+import styles from "./styles.module.scss";
 
 interface CaptionedScreenshotsSliceTypeProps {
   initialWidth?: number;
@@ -36,11 +36,15 @@ const CaptionedScreenshotsSliceType = ({
 
   // Find the first screenshot larger or equal to initial width
   const defaultSelectedIndex = items.findIndex(
-    (item) => item.CaptionedScreenshotsSliceType_Images.dimensions.width >= initialWidth,
+    (item) =>
+      item.CaptionedScreenshotsSliceType_Images.dimensions.width >= initialWidth
   );
 
-  const [selectedIndex, setSelectedIndex] = React.useState(defaultSelectedIndex);
-  const selectedImage = items[selectedIndex].CaptionedScreenshotsSliceType_Images;
+  const [selectedIndex, setSelectedIndex] = React.useState(
+    defaultSelectedIndex
+  );
+  const selectedImage =
+    items[selectedIndex].CaptionedScreenshotsSliceType_Images;
 
   const handleSizeChange = (e: ChangeEvent<HTMLInputElement>): void => {
     setSelectedIndex(parseInt(e.currentTarget.value, 10));
@@ -48,19 +52,19 @@ const CaptionedScreenshotsSliceType = ({
 
   return (
     <PartialCaptioned
-      figure={(
+      figure={
         <DeferredAsset
           width={selectedImage.dimensions.width}
           height={selectedImage.dimensions.height}
         >
           <img
             src={selectedImage.url}
-            alt={selectedImage.alt || ''}
+            alt={selectedImage.alt || ""}
             width={selectedImage.dimensions.width}
             height={selectedImage.dimensions.height}
           />
         </DeferredAsset>
-      )}
+      }
     >
       {caption && RichText.render(caption, LinkResolver)}
 

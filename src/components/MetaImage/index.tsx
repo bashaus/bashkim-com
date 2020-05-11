@@ -1,6 +1,6 @@
-import Head from 'next/head';
-import mime from 'mime';
-import React from 'react';
+import Head from "next/head";
+import mime from "mime";
+import React from "react";
 
 interface MetaImageProps {
   width?: number;

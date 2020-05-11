@@ -1,4 +1,4 @@
-import CollaboratorSliceType from '%prismic/slice-types/Collaborator/type';
+import CollaboratorSliceType from "%prismic/slice-types/Collaborator/type";
 
 interface CaseStudyContentTypeCollaboratorsTab {
   collaborators: Array<CollaboratorSliceType>;

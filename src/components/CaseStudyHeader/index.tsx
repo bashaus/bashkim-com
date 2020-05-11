@@ -1,14 +1,14 @@
-import React from 'react';
+import React from "react";
 
-import CaseStudyDetails from '%components/CaseStudyDetails';
-import CaseStudyTechnologies from '%components/CaseStudyTechnologies';
-import PartialHeaderImage from '%components/PartialHeaderImage';
-import PartialTitle from '%components/PartialTitle';
+import CaseStudyDetails from "%components/CaseStudyDetails";
+import CaseStudyTechnologies from "%components/CaseStudyTechnologies";
+import PartialHeaderImage from "%components/PartialHeaderImage";
+import PartialTitle from "%components/PartialTitle";
 
-import CaseStudyContentPropType from '%prismic/content-types/case_study/type';
+import CaseStudyContentPropType from "%prismic/content-types/case_study/type";
 
-import styles from './styles.module.scss';
-import PartialSubtitle from '%components/PartialSubtitle';
+import styles from "./styles.module.scss";
+import PartialSubtitle from "%components/PartialSubtitle";
 
 interface CaseStudyHeaderProps {
   caseStudy: CaseStudyContentPropType;

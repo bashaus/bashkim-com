@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
-import CaseStudyContentPropType from '%prismic/content-types/case_study/type';
+import CaseStudyContentPropType from "%prismic/content-types/case_study/type";
 
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
 
 interface CaseStudyTechnologiesProps {
   caseStudy: CaseStudyContentPropType;

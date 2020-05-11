@@ -1,6 +1,6 @@
-import getConfig from 'next/config';
-import Head from 'next/head';
-import React from 'react';
+import getConfig from "next/config";
+import Head from "next/head";
+import React from "react";
 
 interface MetaCanonicalProps {
   href?: string;

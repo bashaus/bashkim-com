@@ -1,9 +1,9 @@
-import Link from 'next/link';
-import React from 'react';
+import Link from "next/link";
+import React from "react";
 
-import Brick from '%components/Brick';
+import Brick from "%components/Brick";
 
-import CaseStudyContentType from '%prismic/content-types/case_study/type';
+import CaseStudyContentType from "%prismic/content-types/case_study/type";
 
 interface PortfolioListBrickProps {
   caseStudy: CaseStudyContentType;

@@ -1,15 +1,15 @@
-import Link from 'next/link';
-import React, { useContext, useState } from 'react';
-import AnimateHeight from 'react-animate-height';
+import Link from "next/link";
+import React, { useContext, useState } from "react";
+import AnimateHeight from "react-animate-height";
 
-import * as CookiesActions from '%contexts/Cookies/actions';
-import { CookiesContext } from '%contexts/Cookies';
+import * as CookiesActions from "%contexts/Cookies/actions";
+import { CookiesContext } from "%contexts/Cookies";
 
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
 
 const CookiesNotice = (): JSX.Element | null => {
   const { state: cookiesState, dispatch: cookiesDispatch } = useContext(
-    CookiesContext,
+    CookiesContext
   );
   const [isVisible, setIsVisible] = useState(!cookiesState.isDismissed);
 
@@ -29,15 +29,14 @@ const CookiesNotice = (): JSX.Element | null => {
     <div className={styles.CookiesNotice}>
       <AnimateHeight
         duration={300}
-        height={cookiesState.isDismissed ? 0 : 'auto'}
+        height={cookiesState.isDismissed ? 0 : "auto"}
         easing="ease-out"
         onAnimationEnd={handleAnimationEnd}
       >
         <div className={styles.container}>
           <div className={styles.content}>
             Even a small website like this uses cookies to give you the best
-            possible browsing experience. By&nbsp;continuing, you agree to the
-            {' '}
+            possible browsing experience. By&nbsp;continuing, you agree to the{" "}
             <Link href="/legal/cookie-policy/">
               <a>Cookie&nbsp;Policy</a>
             </Link>

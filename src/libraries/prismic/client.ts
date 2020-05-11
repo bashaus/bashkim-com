@@ -1,13 +1,15 @@
-import getConfig from 'next/config';
-import Prismic from 'prismic-javascript';
-import { IncomingMessage } from 'http';
+import getConfig from "next/config";
+import Prismic from "prismic-javascript";
+import { IncomingMessage } from "http";
 
 const createClientOptions = (
   req?: IncomingMessage,
-  prismicAccessToken?: string,
+  prismicAccessToken?: string
 ): any => {
   const reqOption = req ? { req } : {};
-  const accessTokenOption = prismicAccessToken ? { accessToken: prismicAccessToken } : {};
+  const accessTokenOption = prismicAccessToken
+    ? { accessToken: prismicAccessToken }
+    : {};
 
   return {
     ...reqOption,

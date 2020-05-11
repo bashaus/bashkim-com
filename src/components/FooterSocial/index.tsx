@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
-import FooterColumn from '%components/FooterColumn';
+import FooterColumn from "%components/FooterColumn";
 
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
 
 const FooterSocial = (): JSX.Element => (
   <div className={styles.FooterSocial}>

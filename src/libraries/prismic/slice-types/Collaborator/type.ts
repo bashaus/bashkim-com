@@ -1,5 +1,5 @@
-import DocumentLinkPrismicType from '%prismic/types/document-link';
-import SliceType from '%prismic/types/slice';
+import DocumentLinkPrismicType from "%prismic/types/document-link";
+import SliceType from "%prismic/types/slice";
 
 interface CollaboratorSliceType extends SliceType {
   items: Array<any>;

@@ -1,16 +1,16 @@
-import classNames from 'classnames';
-import Router from 'next/router';
-import React, { useCallback, useContext, useEffect } from 'react';
+import classNames from "classnames";
+import Router from "next/router";
+import React, { useCallback, useContext, useEffect } from "react";
 
-import Footer from '%components/Footer';
-import Header from '%components/Header';
-import HeaderIntersection from '%components/HeaderIntersection';
-import Menu from '%components/Menu';
+import Footer from "%components/Footer";
+import Header from "%components/Header";
+import HeaderIntersection from "%components/HeaderIntersection";
+import Menu from "%components/Menu";
 
-import { NavigationContext } from '%contexts/Navigation';
-import * as NavigationActions from '%contexts/Navigation/actions';
+import { NavigationContext } from "%contexts/Navigation";
+import * as NavigationActions from "%contexts/Navigation/actions";
 
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
 
 interface PageProps {
   backButton?: React.ReactNode;
@@ -21,24 +21,24 @@ interface PageProps {
 const Page = ({
   backButton,
   children,
-  theme = 'default',
+  theme = "default",
 }: PageProps): JSX.Element => {
   const { state: navigationState, dispatch: navigationDispatch } = useContext(
-    NavigationContext,
+    NavigationContext
   );
 
   const handleRouteChange = useCallback(
     (/* url */) => {
       navigationDispatch({ type: NavigationActions.HIDE });
     },
-    [navigationDispatch],
+    [navigationDispatch]
   );
 
   useEffect(() => {
-    Router.events.on('routeChangeComplete', handleRouteChange);
+    Router.events.on("routeChangeComplete", handleRouteChange);
 
     return (): void => {
-      Router.events.off('routeChangeComplete', handleRouteChange);
+      Router.events.off("routeChangeComplete", handleRouteChange);
     };
   }, [handleRouteChange]);
 

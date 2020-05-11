@@ -1,8 +1,8 @@
 export default {
   uid: {
-    type: 'UID',
+    type: "UID",
     config: {
-      label: 'Slug',
+      label: "Slug",
     },
   },
 };

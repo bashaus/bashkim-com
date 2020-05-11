@@ -1,9 +1,9 @@
-import React, { useContext, useEffect, useCallback } from 'react';
+import React, { useContext, useEffect, useCallback } from "react";
 
-import { NavigationContext } from '%contexts/Navigation';
-import * as NavigationActions from '%contexts/Navigation/actions';
+import { NavigationContext } from "%contexts/Navigation";
+import * as NavigationActions from "%contexts/Navigation/actions";
 
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
 
 const HeaderIntersection = (): JSX.Element => {
   const { dispatch: navigationDispatch } = useContext(NavigationContext);
@@ -11,12 +11,14 @@ const HeaderIntersection = (): JSX.Element => {
 
   const processIntersectionEntries = useCallback(
     (entries: Array<IntersectionObserverEntry>): void => {
-      entries.forEach((entry) => navigationDispatch({
-        type: NavigationActions.SET_AT_TOP,
-        payload: entry.isIntersecting,
-      }));
+      entries.forEach((entry) =>
+        navigationDispatch({
+          type: NavigationActions.SET_AT_TOP,
+          payload: entry.isIntersecting,
+        })
+      );
     },
-    [navigationDispatch],
+    [navigationDispatch]
   );
 
   useEffect(() => {
@@ -25,7 +27,7 @@ const HeaderIntersection = (): JSX.Element => {
     }
 
     const interactionObserver = new IntersectionObserver(
-      processIntersectionEntries,
+      processIntersectionEntries
     );
 
     const { current } = ref;

@@ -5,7 +5,7 @@ interface DocumentLinkPrismicType<T> {
   slug: string;
   lang: string;
   data: T;
-  link_type: 'Document';
+  link_type: "Document";
   isBroken: boolean;
 }
 

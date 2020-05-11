@@ -1,4 +1,4 @@
-import TraitSeoPropType from '%libraries/prismic/traits/seo/type';
+import TraitSeoPropType from "%libraries/prismic/traits/seo/type";
 
 type HomePageContentTypeSeoTab = TraitSeoPropType;
 

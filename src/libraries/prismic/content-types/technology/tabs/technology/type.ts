@@ -1,4 +1,4 @@
-import ImagePrismicType from '%prismic/types/image';
+import ImagePrismicType from "%prismic/types/image";
 
 interface TechnologyContentTypeTechnologyTab {
   technology_name: string;

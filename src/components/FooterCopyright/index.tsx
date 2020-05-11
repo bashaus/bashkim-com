@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
 
 const FooterCopyright = (): JSX.Element => (
   <p
@@ -9,8 +9,7 @@ const FooterCopyright = (): JSX.Element => (
     aria-label="Copyright, Two-Thousand-and-Eight to Two-Thousand-and-Twenty, Bashkim Isai. All rights reserved."
   >
     <span aria-hidden="true">
-      Copyright &copy;
-      {' '}
+      Copyright &copy;{" "}
       <time dateTime="2008" title="2008">
         MMVIII
       </time>

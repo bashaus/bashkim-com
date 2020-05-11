@@ -1,11 +1,11 @@
-import { RichText } from 'prismic-reactjs';
-import React from 'react';
+import { RichText } from "prismic-reactjs";
+import React from "react";
 
-import PartialNewspaper from '%components/PartialNewspaper';
+import PartialNewspaper from "%components/PartialNewspaper";
 
-import LinkResolver from '%prismic/helpers/LinkResolver';
+import LinkResolver from "%prismic/helpers/LinkResolver";
 
-import SlicePropType from './type';
+import SlicePropType from "./type";
 
 interface NewspaperSliceTypeProps {
   slice: SlicePropType;

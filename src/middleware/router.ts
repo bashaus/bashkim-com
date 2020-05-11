@@ -1,4 +1,4 @@
-import NextRoutes from 'next-routes';
+import NextRoutes from "next-routes";
 
 const routes = new NextRoutes();
 

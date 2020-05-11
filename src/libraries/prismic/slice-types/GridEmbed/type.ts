@@ -1,5 +1,5 @@
-import EmbedPrismicType from '%prismic/types/embed';
-import SliceType from '%prismic/types/slice';
+import EmbedPrismicType from "%prismic/types/embed";
+import SliceType from "%prismic/types/slice";
 
 interface GridEmbedSliceType extends SliceType {
   items: Array<{

@@ -1,8 +1,8 @@
-import classNames from 'classnames';
-import Link from 'next/link';
-import React from 'react';
+import classNames from "classnames";
+import Link from "next/link";
+import React from "react";
 
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
 
 interface NavigationPrimaryProps {
   theme: string;
@@ -18,7 +18,7 @@ const NavigationPrimary = ({ theme }: NavigationPrimaryProps): JSX.Element => (
       <li
         className={classNames({
           [styles.navigation_portfolio]: true,
-          [styles.selected]: theme === 'portfolio',
+          [styles.selected]: theme === "portfolio",
         })}
       >
         <Link href="/portfolio">
@@ -30,7 +30,7 @@ const NavigationPrimary = ({ theme }: NavigationPrimaryProps): JSX.Element => (
       <li
         className={classNames({
           [styles.navigation_about]: true,
-          [styles.selected]: theme === 'about',
+          [styles.selected]: theme === "about",
         })}
       >
         <Link href="/about">
@@ -42,7 +42,7 @@ const NavigationPrimary = ({ theme }: NavigationPrimaryProps): JSX.Element => (
       <li
         className={classNames({
           [styles.navigation_blog]: true,
-          [styles.selected]: theme === 'blog',
+          [styles.selected]: theme === "blog",
         })}
       >
         <a

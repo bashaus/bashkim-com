@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
-import Logo from '%components/Logo';
-import MenuSignifierButton from '%components/MenuSignifierButton';
+import Logo from "%components/Logo";
+import MenuSignifierButton from "%components/MenuSignifierButton";
 
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
 
 interface MenuProps {
   backButton?: React.ReactNode;

@@ -1,11 +1,11 @@
-import { RichText } from 'prismic-reactjs';
-import React from 'react';
+import { RichText } from "prismic-reactjs";
+import React from "react";
 
-import PartialSubtitle from '%components/PartialSubtitle';
+import PartialSubtitle from "%components/PartialSubtitle";
 
-import LinkResolver from '%prismic/helpers/LinkResolver';
+import LinkResolver from "%prismic/helpers/LinkResolver";
 
-import SlicePropType from './type';
+import SlicePropType from "./type";
 
 interface SubtitleSliceTypeProps {
   slice: SlicePropType;

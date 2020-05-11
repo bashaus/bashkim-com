@@ -1,6 +1,6 @@
-import React from 'react';
-import CookiesReducer from './reducer';
-import { CookiesContextType, INITIAL_STATE } from './state';
+import React from "react";
+import CookiesReducer from "./reducer";
+import { CookiesContextType, INITIAL_STATE } from "./state";
 
 export const CookiesContext = React.createContext<CookiesContextType>({
   state: INITIAL_STATE,

@@ -11,7 +11,7 @@
  */
 
 class NotFoundError extends Error {
-  code = 'ENOENT';
+  code = "ENOENT";
 }
 
 export default NotFoundError;

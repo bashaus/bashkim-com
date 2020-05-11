@@ -1,13 +1,13 @@
-import classNames from 'classnames';
-import React from 'react';
+import classNames from "classnames";
+import React from "react";
 
-import LogoGitHub from '%public/static/vectors/social/github.svg';
-import LogoLinkedIn from '%public/static/vectors/social/linkedin.svg';
-import LogoStackOverflow from '%public/static/vectors/social/stackoverflow.svg';
+import LogoGitHub from "%public/static/vectors/social/github.svg";
+import LogoLinkedIn from "%public/static/vectors/social/linkedin.svg";
+import LogoStackOverflow from "%public/static/vectors/social/stackoverflow.svg";
 
-import { NavigationContext } from '%contexts/Navigation';
+import { NavigationContext } from "%contexts/Navigation";
 
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
 
 const NavigationSocial = (): JSX.Element => {
   const { state: navigationState } = React.useContext(NavigationContext);

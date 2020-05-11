@@ -1,11 +1,11 @@
-import classNames from 'classnames';
-import React from 'react';
+import classNames from "classnames";
+import React from "react";
 
-import Logo from '%components/Logo';
-import Navigation from '%components/Navigation';
-import { NavigationContext } from '%contexts/Navigation';
+import Logo from "%components/Logo";
+import Navigation from "%components/Navigation";
+import { NavigationContext } from "%contexts/Navigation";
 
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
 
 interface HeaderProps {
   theme: string;

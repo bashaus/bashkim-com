@@ -1,11 +1,11 @@
-import { RichText } from 'prismic-reactjs';
-import React from 'react';
+import { RichText } from "prismic-reactjs";
+import React from "react";
 
-import LinkResolver from '%prismic/helpers/LinkResolver';
+import LinkResolver from "%prismic/helpers/LinkResolver";
 
-import PartialFullText from '%components/PartialFullText';
+import PartialFullText from "%components/PartialFullText";
 
-import SlicePropType from './type';
+import SlicePropType from "./type";
 
 interface FullTextSliceTypeProps {
   slice: SlicePropType;

@@ -1,4 +1,4 @@
-declare module 'prismic-richtext' {
+declare module "prismic-richtext" {
   const Elements: {
     heading1: string;
     heading2: string;
@@ -10,10 +10,10 @@ declare module 'prismic-richtext' {
     preformatted: string;
     strong: string;
     em: string;
-    'list-item': string;
-    'o-list-item': string;
-    'group-list-item': string;
-    'group-o-list-item': string;
+    "list-item": string;
+    "o-list-item": string;
+    "group-list-item": string;
+    "group-o-list-item": string;
     image: string;
     embed: string;
     hyperlink: string;
@@ -22,7 +22,7 @@ declare module 'prismic-richtext' {
   };
 }
 
-declare module 'prismic-reactjs' {
+declare module "prismic-reactjs" {
   type RichText = {
     html?: string | null;
     text?: string | null;
@@ -43,7 +43,7 @@ declare module 'prismic-reactjs' {
   };
 
   type LinkType = {
-    link_type: 'Any' | 'Web';
+    link_type: "Any" | "Web";
     url?: string;
   };
 

@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
 
 interface TileProps {
   description: string;
@@ -9,9 +9,7 @@ interface TileProps {
   title: string;
 }
 
-const Tile = ({
-  description, title, icon, poster,
-}: TileProps): JSX.Element => (
+const Tile = ({ description, title, icon, poster }: TileProps): JSX.Element => (
   <article
     className={styles.Tile}
     itemScope

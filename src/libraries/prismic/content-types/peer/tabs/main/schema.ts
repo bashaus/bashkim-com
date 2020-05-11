@@ -1,14 +1,14 @@
 export default {
   peer_name: {
-    type: 'Text',
+    type: "Text",
     config: {
-      label: 'Name',
+      label: "Name",
     },
   },
   peer_website: {
-    type: 'Link',
+    type: "Link",
     config: {
-      label: 'Website',
+      label: "Website",
     },
   },
 };

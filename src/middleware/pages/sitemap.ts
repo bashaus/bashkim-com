@@ -1,7 +1,7 @@
-import dayjs from 'dayjs';
+import dayjs from "dayjs";
 
-import config from '%config/index';
-import SitemapUrl from '%middleware/sitemaps/url';
+import config from "%config/index";
+import SitemapUrl from "%middleware/sitemaps/url";
 
 const sitemap = (): Promise<Array<SitemapUrl>> => {
   const urlset: Array<SitemapUrl> = [];
@@ -10,8 +10,8 @@ const sitemap = (): Promise<Array<SitemapUrl>> => {
     url: {
       loc: `${config.sitemap.baseHref}/`,
       lastmod: dayjs().format(),
-      changefreq: 'monthly',
-      priority: '0.5',
+      changefreq: "monthly",
+      priority: "0.5",
     },
   } as SitemapUrl);
 
@@ -19,8 +19,8 @@ const sitemap = (): Promise<Array<SitemapUrl>> => {
     url: {
       loc: `${config.sitemap.baseHref}/about`,
       lastmod: dayjs().format(),
-      changefreq: 'monthly',
-      priority: '0.5',
+      changefreq: "monthly",
+      priority: "0.5",
     },
   } as SitemapUrl);
 
@@ -28,8 +28,8 @@ const sitemap = (): Promise<Array<SitemapUrl>> => {
     url: {
       loc: `${config.sitemap.baseHref}/legal/cookie-policy`,
       lastmod: dayjs().format(),
-      changefreq: 'monthly',
-      priority: '0.5',
+      changefreq: "monthly",
+      priority: "0.5",
     },
   } as SitemapUrl);
 

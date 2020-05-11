@@ -1,8 +1,8 @@
-import CSS from 'csstype';
-import React, { useState } from 'react';
-import VisibilitySensor from 'react-visibility-sensor';
+import CSS from "csstype";
+import React, { useState } from "react";
+import VisibilitySensor from "react-visibility-sensor";
 
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
 
 interface DeferredAssetProps {
   children: JSX.Element;

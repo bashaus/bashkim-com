@@ -1,11 +1,11 @@
-import { RichText } from 'prismic-reactjs';
-import React from 'react';
+import { RichText } from "prismic-reactjs";
+import React from "react";
 
-import PartialCaptioned from '%components/PartialCaptioned';
-import DeferredAsset from '%components/DeferredAsset';
-import LinkResolver from '%prismic/helpers/LinkResolver';
+import PartialCaptioned from "%components/PartialCaptioned";
+import DeferredAsset from "%components/DeferredAsset";
+import LinkResolver from "%prismic/helpers/LinkResolver";
 
-import SlicePropType from './type';
+import SlicePropType from "./type";
 
 interface CaptionedImageSliceTypeProps {
   slice: SlicePropType;
@@ -22,15 +22,15 @@ const CaptionedImageSliceType = ({
   return (
     <PartialCaptioned
       figure={
-        image
-        && image.url && (
+        image &&
+        image.url && (
           <DeferredAsset
             width={image.dimensions.width}
             height={image.dimensions.height}
           >
             <img
               src={image.url}
-              alt={image.alt || ''}
+              alt={image.alt || ""}
               width={image.dimensions.width}
               height={image.dimensions.height}
             />

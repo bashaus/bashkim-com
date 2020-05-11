@@ -7,7 +7,7 @@ const defaultPrismicConfig: PrismicConfig = {
   /**
    * The URL endpoint as provided by Prismic
    */
-  apiEndpoint: 'https://bashkim-com.cdn.prismic.io/api/v2',
+  apiEndpoint: "https://bashkim-com.cdn.prismic.io/api/v2",
 
   /**
    * The access token for accessing Prismic

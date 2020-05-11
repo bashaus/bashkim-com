@@ -6,6 +6,6 @@ export default {
     enabled: false,
   },
   sitemap: {
-    baseHref: 'http://localhost:3000',
+    baseHref: "http://localhost:3000",
   },
 };

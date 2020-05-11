@@ -1,9 +1,9 @@
-import Link from 'next/link';
-import React from 'react';
+import Link from "next/link";
+import React from "react";
 
-import FooterColumn from '%components/FooterColumn';
+import FooterColumn from "%components/FooterColumn";
 
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
 
 const FooterLinks = (): JSX.Element => (
   <div className={styles.FooterLinks}>

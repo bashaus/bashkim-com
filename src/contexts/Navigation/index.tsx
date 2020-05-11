@@ -1,6 +1,6 @@
-import React from 'react';
-import NavigationReducer from './reducer';
-import { NavigationContextType, INITIAL_STATE } from './state';
+import React from "react";
+import NavigationReducer from "./reducer";
+import { NavigationContextType, INITIAL_STATE } from "./state";
 
 export const NavigationContext = React.createContext<NavigationContextType>({
   state: INITIAL_STATE,

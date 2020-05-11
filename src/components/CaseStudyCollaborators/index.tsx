@@ -1,11 +1,11 @@
-import Link from 'next/link';
-import React from 'react';
+import Link from "next/link";
+import React from "react";
 
-import PartialSubtitle from '%components/PartialSubtitle';
+import PartialSubtitle from "%components/PartialSubtitle";
 
-import CollaboratorSliceType from '%prismic/slice-types/Collaborator/component';
+import CollaboratorSliceType from "%prismic/slice-types/Collaborator/component";
 
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
 
 interface CaseStudyCollaboratorsProps {
   myRole?: string;

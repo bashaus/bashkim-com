@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
-import CaseStudyLifespan from '%components/CaseStudyLifespan';
+import CaseStudyLifespan from "%components/CaseStudyLifespan";
 
-import CaseStudyContentPropType from '%prismic/content-types/case_study/type';
+import CaseStudyContentPropType from "%prismic/content-types/case_study/type";
 
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
 
 interface CaseStudyDetailsProps {
   caseStudy: CaseStudyContentPropType;

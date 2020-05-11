@@ -14,8 +14,10 @@ export const Render = (): JSX.Element => (
     <h3>{text("heading", "heading")}</h3>
     {Array(6)
       .fill("")
-      .map(() => (
-        <p>{faker.lorem.paragraph()}</p>
-      ))}
+      .map(() => {
+        const paragraph = faker.lorem.paragraph();
+
+        return <p key={paragraph}>{paragraph}</p>;
+      })}
   </PartialFullText>
 );

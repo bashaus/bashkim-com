@@ -1,11 +1,11 @@
-import classNames from 'classnames';
-import React from 'react';
+import classNames from "classnames";
+import React from "react";
 
-import NavigationPrimary from '%components/NavigationPrimary';
-import NavigationSocial from '%components/NavigationSocial';
-import { NavigationContext } from '%contexts/Navigation';
+import NavigationPrimary from "%components/NavigationPrimary";
+import NavigationSocial from "%components/NavigationSocial";
+import { NavigationContext } from "%contexts/Navigation";
 
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
 
 interface NavigationProps {
   theme: string;

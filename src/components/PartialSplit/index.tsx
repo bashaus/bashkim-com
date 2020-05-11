@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
-import PartialSplitItem from '%components/PartialSplit.Item';
+import PartialSplitItem from "%components/PartialSplit.Item";
 
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
 
 interface PartialSplitProps {
   index?: number;
@@ -16,7 +16,7 @@ const PartialSplit = ({
   const className = [
     styles.PartialSplit,
     index % 2 === 1 ? styles.odd : styles.even,
-  ].join(' ');
+  ].join(" ");
 
   return <div className={className}>{children}</div>;
 };

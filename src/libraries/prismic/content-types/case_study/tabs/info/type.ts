@@ -1,6 +1,6 @@
-import DocumentLinkPrismicType from '%prismic/types/document-link';
-import ImagePrismicType from '%prismic/types/image';
-import LinkPrismicType from '%prismic/types/link';
+import DocumentLinkPrismicType from "%prismic/types/document-link";
+import ImagePrismicType from "%prismic/types/image";
+import LinkPrismicType from "%prismic/types/link";
 
 interface CaseStudyContentTypeInfoTab {
   info_brief: string;

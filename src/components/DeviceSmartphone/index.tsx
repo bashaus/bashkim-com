@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
 
 interface DeviceSmartphoneProps {
   children: React.ReactNode;
@@ -16,9 +16,7 @@ const DeviceSmartphone = ({
       <div className={styles.content}>{figure}</div>
     </div>
 
-    <figcaption>
-      {children}
-    </figcaption>
+    <figcaption>{children}</figcaption>
   </figure>
 );
 

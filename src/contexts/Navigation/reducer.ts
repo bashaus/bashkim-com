@@ -1,9 +1,9 @@
-import * as actions from './actions';
-import { NavigationContextState } from './state';
+import * as actions from "./actions";
+import { NavigationContextState } from "./state";
 
 const NavigationReducer = (
   state: NavigationContextState,
-  action: any,
+  action: any
 ): NavigationContextState => {
   switch (action.type) {
     case actions.HIDE:

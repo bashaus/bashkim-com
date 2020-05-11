@@ -1,9 +1,9 @@
-import { Link } from 'prismic-reactjs';
-import React from 'react';
+import { Link } from "prismic-reactjs";
+import React from "react";
 
-import LinkResolver from '%prismic/helpers/LinkResolver';
+import LinkResolver from "%prismic/helpers/LinkResolver";
 
-import SlicePropType from './type';
+import SlicePropType from "./type";
 
 interface CollaboratorSliceTypeProps {
   slice: SlicePropType;

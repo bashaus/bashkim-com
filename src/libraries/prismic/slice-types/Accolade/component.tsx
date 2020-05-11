@@ -1,14 +1,14 @@
-import classNames from 'classnames';
-import { RichText, Link } from 'prismic-reactjs';
-import React from 'react';
-import dayjs from 'dayjs';
+import classNames from "classnames";
+import { RichText, Link } from "prismic-reactjs";
+import React from "react";
+import dayjs from "dayjs";
 
-import LinkResolver from '%prismic/helpers/LinkResolver';
+import LinkResolver from "%prismic/helpers/LinkResolver";
 
-import TrophyImage from '%public/static/vectors/icons/trophy.svg';
+import TrophyImage from "%public/static/vectors/icons/trophy.svg";
 
-import SlicePropType from './type';
-import styles from './styles.module.scss';
+import SlicePropType from "./type";
+import styles from "./styles.module.scss";
 
 interface AccoladeSliceTypeProps {
   slice: SlicePropType;
@@ -27,7 +27,7 @@ const AccoladeSliceType = ({ slice }: AccoladeSliceTypeProps): JSX.Element => {
         {issuer && RichText.render(issuer, LinkResolver)}
         {description && RichText.render(description, LinkResolver)}
         <p>
-          <small>{dayjs(date).format('MMMM YYYY')}</small>
+          <small>{dayjs(date).format("MMMM YYYY")}</small>
         </p>
       </div>
 

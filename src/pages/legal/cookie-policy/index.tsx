@@ -1,14 +1,14 @@
-import React from 'react';
+import React from "react";
 
-import LayoutDefault from '%components/LayoutDefault';
-import MenuBackButtonHomeImpl from '%components/MenuBackButtonHomeImpl';
-import MetaDescription from '%components/MetaDescription';
-import MetaTitle from '%components/MetaTitle';
-import PartialFullText from '%components/PartialFullText';
-import PartialHeaderText from '%components/PartialHeaderText';
-import PartialSubtitle from '%components/PartialSubtitle';
+import LayoutDefault from "%components/LayoutDefault";
+import MenuBackButtonHomeImpl from "%components/MenuBackButtonHomeImpl";
+import MetaDescription from "%components/MetaDescription";
+import MetaTitle from "%components/MetaTitle";
+import PartialFullText from "%components/PartialFullText";
+import PartialHeaderText from "%components/PartialHeaderText";
+import PartialSubtitle from "%components/PartialSubtitle";
 
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
 
 const CookiePolicyPage = (): JSX.Element => (
   <LayoutDefault backButton={MenuBackButtonHomeImpl}>
@@ -23,10 +23,7 @@ const CookiePolicyPage = (): JSX.Element => (
     <section className="group">
       <PartialFullText>
         <p>
-          This website sends and receives data (known as
-          {' '}
-          <em>cookies</em>
-          ) to
+          This website sends and receives data (known as <em>cookies</em>) to
           help understand how you browse the site and deliver you the best
           possible experience. Cookies on this website are used to measure how
           you use the website so it can be improved with informed insights.
@@ -121,16 +118,14 @@ const CookiePolicyPage = (): JSX.Element => (
         </p>
 
         <p>
-          If you prefer, you can
-          {' '}
+          If you prefer, you can{" "}
           <a
             href="https://tools.google.com/dlpage/gaoptout"
             target="_blank"
             rel="noopener noreferrer"
           >
             opt-out of Google Analytics
-          </a>
-          {' '}
+          </a>{" "}
           by following the instructions provided by Google.
         </p>
 

@@ -1,19 +1,19 @@
-import CaseStudyContentTypeAccoladesTab from './tabs/accolades/type';
-import CaseStudyContentTypeCollaboratorsTab from './tabs/collaborators/type';
-import CaseStudyContentTypeExhibitionsTab from './tabs/exhibitions/type';
-import CaseStudyContentTypeImagesTab from './tabs/images/type';
-import CaseStudyContentTypeInfoTab from './tabs/info/type';
-import CaseStudyContentTypePageTab from './tabs/page/type';
-import CaseStudyContentTypeSeoTab from './tabs/seo/type';
+import CaseStudyContentTypeAccoladesTab from "./tabs/accolades/type";
+import CaseStudyContentTypeCollaboratorsTab from "./tabs/collaborators/type";
+import CaseStudyContentTypeExhibitionsTab from "./tabs/exhibitions/type";
+import CaseStudyContentTypeImagesTab from "./tabs/images/type";
+import CaseStudyContentTypeInfoTab from "./tabs/info/type";
+import CaseStudyContentTypePageTab from "./tabs/page/type";
+import CaseStudyContentTypeSeoTab from "./tabs/seo/type";
 
 export interface CaseStudyContentTypeData
   extends CaseStudyContentTypeAccoladesTab,
-  CaseStudyContentTypeCollaboratorsTab,
-  CaseStudyContentTypeExhibitionsTab,
-  CaseStudyContentTypeImagesTab,
-  CaseStudyContentTypeInfoTab,
-  CaseStudyContentTypePageTab,
-  CaseStudyContentTypeSeoTab {}
+    CaseStudyContentTypeCollaboratorsTab,
+    CaseStudyContentTypeExhibitionsTab,
+    CaseStudyContentTypeImagesTab,
+    CaseStudyContentTypeInfoTab,
+    CaseStudyContentTypePageTab,
+    CaseStudyContentTypeSeoTab {}
 
 interface CaseStudyContentType {
   id: string;

@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
-import PartialSubtitle from '%components/PartialSubtitle/index';
+import PartialSubtitle from "%components/PartialSubtitle/index";
 
-import ExhibitionSliceType from '%prismic/slice-types/Exhibition/component';
+import ExhibitionSliceType from "%prismic/slice-types/Exhibition/component";
 
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
 
 interface CaseStudyExhibitionsProps {
   slices: Array<any>;

@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
-import PartialSubtitle from '%components/PartialSubtitle';
+import PartialSubtitle from "%components/PartialSubtitle";
 
-import AccoladeSliceType from '%prismic/slice-types/Accolade/component';
-import AccoladeSlicePropType from '%prismic/slice-types/Accolade/type';
+import AccoladeSliceType from "%prismic/slice-types/Accolade/component";
+import AccoladeSlicePropType from "%prismic/slice-types/Accolade/type";
 
 interface CaseStudyAccoladesProps {
   slices: Array<AccoladeSlicePropType>;

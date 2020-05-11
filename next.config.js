@@ -21,7 +21,7 @@ const nextConfig = {
       new webpack.ProvidePlugin({
         $: "jquery",
         jQuery: "jquery",
-      }),
+      })
     );
 
     return config;

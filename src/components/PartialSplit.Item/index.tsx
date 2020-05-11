@@ -1,7 +1,7 @@
-import CSS from 'csstype';
-import React from 'react';
+import CSS from "csstype";
+import React from "react";
 
-import styles from './style.module.scss';
+import styles from "./style.module.scss";
 
 interface PartialSplitItemProps {
   backgroundImage?: string;
@@ -18,13 +18,13 @@ const PartialSplitItem = ({
   if (backgroundImage) {
     style.backgroundImage = `url("${backgroundImage}")`;
     className.push(styles.background);
-    className.push('PartialSplit_chevron');
+    className.push("PartialSplit_chevron");
   } else {
     className.push(styles.foreground);
   }
 
   return (
-    <div className={className.join(' ')} style={style}>
+    <div className={className.join(" ")} style={style}>
       {children}
     </div>
   );

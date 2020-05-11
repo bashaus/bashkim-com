@@ -1,26 +1,26 @@
-import { NextPageContext } from 'next';
-import React from 'react';
+import { NextPageContext } from "next";
+import React from "react";
 
-import ApiSearchResponse from 'prismic-javascript/d.ts/ApiSearchResponse';
-import CaseStudyAccolades from '%components/CaseStudyAccolades';
-import CaseStudyCollaborators from '%components/CaseStudyCollaborators';
-import CaseStudyExhibitions from '%components/CaseStudyExhibitions';
-import CaseStudyHeader from '%components/CaseStudyHeader';
-import LayoutDefault from '%components/LayoutDefault';
-import MenuBackButtonPortfolioImpl from '%components/MenuBackButtonPortfolioImpl';
-import MetaCanonical from '%components/MetaCanonical';
-import MetaDescription from '%components/MetaDescription';
-import MetaImage from '%components/MetaImage';
-import MetaKeywords from '%components/MetaKeywords';
-import MetaTitle from '%components/MetaTitle';
-import Slice from '%components/Slice';
+import ApiSearchResponse from "prismic-javascript/d.ts/ApiSearchResponse";
+import CaseStudyAccolades from "%components/CaseStudyAccolades";
+import CaseStudyCollaborators from "%components/CaseStudyCollaborators";
+import CaseStudyExhibitions from "%components/CaseStudyExhibitions";
+import CaseStudyHeader from "%components/CaseStudyHeader";
+import LayoutDefault from "%components/LayoutDefault";
+import MenuBackButtonPortfolioImpl from "%components/MenuBackButtonPortfolioImpl";
+import MetaCanonical from "%components/MetaCanonical";
+import MetaDescription from "%components/MetaDescription";
+import MetaImage from "%components/MetaImage";
+import MetaKeywords from "%components/MetaKeywords";
+import MetaTitle from "%components/MetaTitle";
+import Slice from "%components/Slice";
 
-import NotFoundError from '%libraries/next/errors/NotFoundError';
+import NotFoundError from "%libraries/next/errors/NotFoundError";
 
-import PrismicClient from '%prismic/client';
+import PrismicClient from "%prismic/client";
 
-import PeerContentType from '%prismic/content-types/peer/type';
-import CaseStudyContentType from '%prismic/content-types/case_study/type';
+import PeerContentType from "%prismic/content-types/peer/type";
+import CaseStudyContentType from "%prismic/content-types/case_study/type";
 
 interface CaseStudyPageProps {
   caseStudy: CaseStudyContentType;
@@ -89,32 +89,36 @@ const CaseStudyPage = ({
   );
 };
 
-CaseStudyPage.getInitialProps = async (context: NextPageContext): Promise<CaseStudyPageProps> => {
+CaseStudyPage.getInitialProps = async (
+  context: NextPageContext
+): Promise<CaseStudyPageProps> => {
   const { req, query } = context;
   const { caseStudySlug } = query;
   const prismicClient = PrismicClient(req);
 
-  const caseStudy: CaseStudyContentType = await prismicClient.getByUID(
-    'case_study',
+  const caseStudy: CaseStudyContentType = (await prismicClient.getByUID(
+    "case_study",
     `${caseStudySlug}`,
     {
       fetchLinks: [
-        'peer.peer_name',
-        'technology.technology_name',
-        'technology.technology_icon',
+        "peer.peer_name",
+        "technology.technology_name",
+        "technology.technology_icon",
       ],
-    },
-  ) as CaseStudyContentType;
+    }
+  )) as CaseStudyContentType;
 
   if (!caseStudy) {
     throw new NotFoundError();
   }
 
   const peerIDs: Array<string> = caseStudy.data.collaborators.map(
-    (collaborator) => collaborator.primary.CollaboratorSliceType_Peer.id,
+    (collaborator) => collaborator.primary.CollaboratorSliceType_Peer.id
   );
 
-  const peersQuery: ApiSearchResponse = await prismicClient.getByIDs(peerIDs, { pageSize: 100 });
+  const peersQuery: ApiSearchResponse = await prismicClient.getByIDs(peerIDs, {
+    pageSize: 100,
+  });
 
   return {
     caseStudy,

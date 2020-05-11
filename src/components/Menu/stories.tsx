@@ -1,12 +1,12 @@
-import React from 'react';
+import React from "react";
 
-import Menu from '.';
-import MenuBackButtonHomeImpl from '%components/MenuBackButtonHomeImpl';
-import MenuBackButtonPortfolioImpl from '%components/MenuBackButtonPortfolioImpl';
-import NavigationStore from '%contexts/Navigation';
+import Menu from ".";
+import MenuBackButtonHomeImpl from "%components/MenuBackButtonHomeImpl";
+import MenuBackButtonPortfolioImpl from "%components/MenuBackButtonPortfolioImpl";
+import NavigationStore from "%contexts/Navigation";
 
 export default {
-  title: 'Components/Menu',
+  title: "Components/Menu",
 };
 
 export const Render = (): JSX.Element => (

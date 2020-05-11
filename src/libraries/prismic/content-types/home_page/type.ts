@@ -1,7 +1,7 @@
-import PrismicContentType from '%prismic/traits/content-type';
+import PrismicContentType from "%prismic/traits/content-type";
 
-import PageTabPropType from './tabs/page/type';
-import SeoTabPropType from './tabs/seo/type';
+import PageTabPropType from "./tabs/page/type";
+import SeoTabPropType from "./tabs/seo/type";
 
 interface HomePageContentTypeData extends PageTabPropType, SeoTabPropType {}
 

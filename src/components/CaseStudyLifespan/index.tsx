@@ -1,5 +1,5 @@
-import dayjs from 'dayjs';
-import React from 'react';
+import dayjs from "dayjs";
+import React from "react";
 
 interface CaseStudyLifespanProps {
   launched?: string;
@@ -10,7 +10,7 @@ const CaseStudyLifespan = ({
   launched,
   decommissioned,
 }: CaseStudyLifespanProps): JSX.Element => {
-  const formattedLaunched = dayjs(launched).format('DD MMMM YYYY');
+  const formattedLaunched = dayjs(launched).format("DD MMMM YYYY");
 
   // If there is no decommissioned date, this is an on-going project
   if (decommissioned === null) {
@@ -23,7 +23,7 @@ const CaseStudyLifespan = ({
   }
 
   // There is a launch and decommission date
-  const formattedDecommissioned = dayjs(decommissioned).format('DD MMMM YYYY');
+  const formattedDecommissioned = dayjs(decommissioned).format("DD MMMM YYYY");
 
   return (
     <>

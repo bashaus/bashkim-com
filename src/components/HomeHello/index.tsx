@@ -1,18 +1,18 @@
-import React from 'react';
-import Link from 'next/link';
+import React from "react";
+import Link from "next/link";
 
-import PartialHeaderText from '%components/PartialHeaderText';
+import PartialHeaderText from "%components/PartialHeaderText";
 
-import IconGitHub from '%public/static/vectors/social/github.svg';
-import IconPortfolio from '%public/static/vectors/icons/portfolio.svg';
+import IconGitHub from "%public/static/vectors/social/github.svg";
+import IconPortfolio from "%public/static/vectors/icons/portfolio.svg";
 
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
 
 const HomeHello = (): JSX.Element => (
   <div className={styles.HomeHello}>
     <PartialHeaderText
       backgroundClassName={styles.background}
-      aside={(
+      aside={
         <ul className={styles.HomeHello_Links}>
           <li>
             <a
@@ -37,7 +37,7 @@ const HomeHello = (): JSX.Element => (
             </Link>
           </li>
         </ul>
-      )}
+      }
     >
       <div className={styles.HomeHello_Introduction}>
         <div className={styles.content}>

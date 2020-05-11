@@ -1,32 +1,32 @@
 export default {
   featured: {
-    type: 'Group',
+    type: "Group",
     config: {
       fields: {
         featured_title: {
-          type: 'StructuredText',
+          type: "StructuredText",
           config: {
-            single: 'heading3',
-            label: 'Title',
+            single: "heading3",
+            label: "Title",
           },
         },
         featured_description: {
-          type: 'StructuredText',
+          type: "StructuredText",
           config: {
-            multi: 'paragraph, list-item',
-            label: 'Description',
+            multi: "paragraph, list-item",
+            label: "Description",
           },
         },
         featured_case_study: {
-          type: 'Link',
+          type: "Link",
           config: {
-            select: 'document',
-            customtypes: ['case_study'],
-            label: 'Case study',
+            select: "document",
+            customtypes: ["case_study"],
+            label: "Case study",
           },
         },
       },
-      label: 'Featured Case Studies',
+      label: "Featured Case Studies",
     },
   },
 };

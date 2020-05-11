@@ -1,5 +1,5 @@
-import ImagePropType from '%prismic/types/image';
-import DocumentLinkPropType from '%prismic/types/document-link';
+import ImagePropType from "%prismic/types/image";
+import DocumentLinkPropType from "%prismic/types/document-link";
 
 interface PortfolioPageContentTypePageTab {
   featured: Array<{

@@ -1,13 +1,13 @@
-import React, { useContext } from 'react';
+import React, { useContext } from "react";
 
-import { NavigationContext } from '%contexts/Navigation';
-import * as NavigationActions from '%contexts/Navigation/actions';
+import { NavigationContext } from "%contexts/Navigation";
+import * as NavigationActions from "%contexts/Navigation/actions";
 
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
 
 const MenuSignifierButton = (): JSX.Element => {
   const { state: navigationState, dispatch: navigationDispatch } = useContext(
-    NavigationContext,
+    NavigationContext
   );
 
   const handleSignifierClick = (): void => {

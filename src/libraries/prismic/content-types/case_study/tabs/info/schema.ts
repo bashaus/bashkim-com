@@ -1,140 +1,140 @@
 export default {
   info_brief: {
-    type: 'Text',
+    type: "Text",
     config: {
-      label: 'Brief',
+      label: "Brief",
     },
   },
   info_strategy: {
-    type: 'Text',
+    type: "Text",
     config: {
-      label: 'Strategy',
+      label: "Strategy",
     },
   },
   info_implementation: {
-    type: 'Text',
+    type: "Text",
     config: {
-      label: 'Implementation',
+      label: "Implementation",
     },
   },
   info_deliverables: {
-    type: 'Group',
+    type: "Group",
     config: {
       fields: {
         info_deliverable_name: {
-          type: 'Text',
+          type: "Text",
           config: {
-            label: 'Deliverable name',
+            label: "Deliverable name",
           },
         },
         info_deliverable_link: {
-          type: 'Link',
+          type: "Link",
           config: {
-            label: 'Deliverable link',
+            label: "Deliverable link",
           },
         },
       },
-      label: 'Deliverables',
+      label: "Deliverables",
     },
   },
   info_client: {
-    type: 'Text',
+    type: "Text",
     config: {
-      label: 'Client',
+      label: "Client",
     },
   },
   info_agency: {
-    type: 'Text',
+    type: "Text",
     config: {
-      label: 'Agency',
+      label: "Agency",
     },
   },
   info_role: {
-    type: 'Text',
+    type: "Text",
     config: {
-      label: 'Role',
+      label: "Role",
     },
   },
   info_institution: {
-    type: 'Text',
+    type: "Text",
     config: {
-      label: 'Institution',
+      label: "Institution",
     },
   },
   info_degree: {
-    type: 'Text',
+    type: "Text",
     config: {
-      label: 'Degree',
+      label: "Degree",
     },
   },
   info_launch_date: {
-    type: 'Date',
+    type: "Date",
     config: {
-      label: 'Launch date',
+      label: "Launch date",
     },
   },
   info_decommission_date: {
-    type: 'Date',
+    type: "Date",
     config: {
-      label: 'Decommission date',
+      label: "Decommission date",
     },
   },
   info_target_audiences: {
-    type: 'Group',
+    type: "Group",
     config: {
       fields: {
         info_target_audience_name: {
-          type: 'Text',
+          type: "Text",
           config: {
-            label: 'Audience name',
+            label: "Audience name",
           },
         },
       },
-      label: 'Target audience',
+      label: "Target audience",
     },
   },
   info_markets: {
-    type: 'Group',
+    type: "Group",
     config: {
       fields: {
         info_market: {
-          type: 'Text',
+          type: "Text",
           config: {
-            label: 'Market',
+            label: "Market",
           },
         },
       },
-      label: 'Markets',
+      label: "Markets",
     },
   },
   info_outcomes: {
-    type: 'Group',
+    type: "Group",
     config: {
       fields: {
         info_outcome: {
-          type: 'Text',
+          type: "Text",
           config: {
-            label: 'Outcome',
+            label: "Outcome",
           },
         },
       },
-      label: 'Outcomes',
+      label: "Outcomes",
     },
   },
   info_technologies: {
-    type: 'Group',
+    type: "Group",
     config: {
       fields: {
         info_technology: {
-          type: 'Link',
+          type: "Link",
           config: {
-            select: 'document',
-            customtypes: ['technology'],
-            label: 'Technology',
+            select: "document",
+            customtypes: ["technology"],
+            label: "Technology",
           },
         },
       },
-      label: 'Technologies',
+      label: "Technologies",
     },
   },
 };

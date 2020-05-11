@@ -1,7 +1,7 @@
-import QueryString from 'querystring';
-import React from 'react';
+import QueryString from "querystring";
+import React from "react";
 
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
 
 interface VideoPlayerYouTubeProps {
   title?: string;
@@ -14,15 +14,15 @@ const VideoPlayerYouTube = ({
 }: VideoPlayerYouTubeProps): JSX.Element => {
   const iframeSrc = `https://www.youtube-nocookie.com/embed/${v}?${QueryString.stringify(
     {
-      rel: '0',
-      hd: '1',
-      showinfo: '0',
-      showsearch: '0',
-      iv_load_policy: '3',
-      modestbranding: '1',
-      enablejsapi: '1',
-      playsinline: '0',
-    },
+      rel: "0",
+      hd: "1",
+      showinfo: "0",
+      showsearch: "0",
+      iv_load_policy: "3",
+      modestbranding: "1",
+      enablejsapi: "1",
+      playsinline: "0",
+    }
   )}`;
 
   return (

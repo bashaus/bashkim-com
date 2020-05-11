@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
-import SlicePropType from './type';
-import styles from './styles.module.scss';
+import SlicePropType from "./type";
+import styles from "./styles.module.scss";
 
 interface GridEmbedSliceTypeProps {
   slice: SlicePropType;

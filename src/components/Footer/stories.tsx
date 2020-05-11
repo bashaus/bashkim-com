@@ -1,11 +1,9 @@
-import React from 'react';
+import React from "react";
 
-import Footer from '.';
+import Footer from ".";
 
 export default {
-  title: 'Components/Footer',
+  title: "Components/Footer",
 };
 
-export const Render = (): JSX.Element => (
-  <Footer />
-);
+export const Render = (): JSX.Element => <Footer />;

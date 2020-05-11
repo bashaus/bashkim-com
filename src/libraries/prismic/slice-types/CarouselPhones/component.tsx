@@ -1,15 +1,15 @@
-import { RichText } from 'prismic-reactjs';
-import React from 'react';
+import { RichText } from "prismic-reactjs";
+import React from "react";
 
-import Carousel from '%components/Carousel';
-import CarouselImage from '%components/CarouselImage';
-import DeferredAsset from '%components/DeferredAsset';
-import DeviceSmartphone from '%components/DeviceSmartphone';
-import DeviceFeaturePhone from '%components/DeviceFeaturePhone';
-import PartialFullImage from '%components/PartialFullImage';
-import LinkResolver from '%prismic/helpers/LinkResolver';
+import Carousel from "%components/Carousel";
+import CarouselImage from "%components/CarouselImage";
+import DeferredAsset from "%components/DeferredAsset";
+import DeviceSmartphone from "%components/DeviceSmartphone";
+import DeviceFeaturePhone from "%components/DeviceFeaturePhone";
+import PartialFullImage from "%components/PartialFullImage";
+import LinkResolver from "%prismic/helpers/LinkResolver";
 
-import SlicePropType, { DeviceTypes } from './type';
+import SlicePropType, { DeviceTypes } from "./type";
 
 const CAROUSEL_RESPONSIVE = [
   {
@@ -56,25 +56,25 @@ const CarouselPhonesSliceType = ({
           return (
             <CarouselImage
               key={i}
-              figure={(
+              figure={
                 <DeviceComponent
-                  figure={(
+                  figure={
                     <DeferredAsset
                       width={image.dimensions.width}
                       height={image.dimensions.height}
                     >
                       <img
                         src={image.url}
-                        alt={image.alt || ''}
+                        alt={image.alt || ""}
                         width={image.dimensions.width}
                         height={image.dimensions.height}
                       />
                     </DeferredAsset>
-                  )}
+                  }
                 >
                   {caption && RichText.render(caption, LinkResolver)}
                 </DeviceComponent>
-              )}
+              }
             />
           );
         })}

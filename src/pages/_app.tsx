@@ -1,11 +1,11 @@
-import getConfig from 'next/config';
-import App from 'next/app';
-import React from 'react';
-import * as Sentry from '@sentry/browser';
+import getConfig from "next/config";
+import App from "next/app";
+import React from "react";
+import * as Sentry from "@sentry/browser";
 
-import TrackingSentryBoundary from '%components/TrackingSentryBoundary';
+import TrackingSentryBoundary from "%components/TrackingSentryBoundary";
 
-import '%styleguide/main.scss';
+import "%styleguide/main.scss";
 
 const { publicRuntimeConfig: config } = getConfig();
 

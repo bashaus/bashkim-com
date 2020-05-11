@@ -1,5 +1,5 @@
 interface LinkPrismicType {
-  link_type: 'Any' | 'Web';
+  link_type: "Any" | "Web";
   url?: string;
 }
 

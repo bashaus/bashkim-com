@@ -1,7 +1,7 @@
-import express from 'express';
+import express from "express";
 
-import movedPermanentlySchema from './schema/301-moved-permanently.json';
-import goneSchema from './schema/410-gone.json';
+import movedPermanentlySchema from "./schema/301-moved-permanently.json";
+import goneSchema from "./schema/410-gone.json";
 
 const server = express();
 

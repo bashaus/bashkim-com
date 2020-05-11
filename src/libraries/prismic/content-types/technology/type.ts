@@ -1,6 +1,6 @@
-import PrismicContentType from '%prismic/traits/content-type';
+import PrismicContentType from "%prismic/traits/content-type";
 
-import TechnologyContentTypeTechnologyTab from './tabs/technology/type';
+import TechnologyContentTypeTechnologyTab from "./tabs/technology/type";
 
 type TechnologyContentTypeData = TechnologyContentTypeTechnologyTab;
 

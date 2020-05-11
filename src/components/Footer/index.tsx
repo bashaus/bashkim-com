@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
-import FooterCopyright from '%components/FooterCopyright';
-import FooterLinks from '%components/FooterLinks';
-import FooterSocial from '%components/FooterSocial';
+import FooterCopyright from "%components/FooterCopyright";
+import FooterLinks from "%components/FooterLinks";
+import FooterSocial from "%components/FooterSocial";
 
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
 
 const Footer = (): JSX.Element => (
   <footer className={styles.Footer}>

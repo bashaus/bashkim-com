@@ -8,7 +8,7 @@ const defaultServerConfig: ServerConfig = {
   /**
    * The current environment
    */
-  env: process.env.APP_ENV || 'production',
+  env: process.env.APP_ENV || "production",
 
   /**
    * The port to bind

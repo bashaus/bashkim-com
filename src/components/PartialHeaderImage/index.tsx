@@ -1,7 +1,7 @@
-import classNames from 'classnames';
-import React from 'react';
+import classNames from "classnames";
+import React from "react";
 
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
 
 interface PartialHeaderImageProps {
   className?: string;
@@ -41,7 +41,7 @@ const PartialHeaderImage = ({
 
     <div
       aria-hidden="true"
-      className={classNames(styles.background, 'background')}
+      className={classNames(styles.background, "background")}
     />
   </header>
 );

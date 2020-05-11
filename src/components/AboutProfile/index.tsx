@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
-import PartialTitle from '%components/PartialTitle';
+import PartialTitle from "%components/PartialTitle";
 
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
 
 const AboutProfile = (): JSX.Element => (
   <section className="group">

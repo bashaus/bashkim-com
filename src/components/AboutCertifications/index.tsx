@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
-import PartialSplit from '%components/PartialSplit';
-import PartialSubtitle from '%components/PartialSubtitle';
+import PartialSplit from "%components/PartialSplit";
+import PartialSubtitle from "%components/PartialSubtitle";
 
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
 
 const AboutProfile = (): JSX.Element => (
   <section className="group">

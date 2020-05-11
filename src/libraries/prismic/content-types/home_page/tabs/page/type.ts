@@ -1,4 +1,4 @@
-import ImagePropType from '%prismic/types/image';
+import ImagePropType from "%prismic/types/image";
 
 interface HomePageContentTypePageTab {
   featured_case_studies: Array<{

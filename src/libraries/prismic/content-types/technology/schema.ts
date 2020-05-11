@@ -1,4 +1,4 @@
-import TechnologySchema from './tabs/technology/schema';
+import TechnologySchema from "./tabs/technology/schema";
 
 export default {
   Technology: TechnologySchema,

@@ -1,4 +1,4 @@
-import LinkPrismicType from '%prismic/types/link';
+import LinkPrismicType from "%prismic/types/link";
 
 interface PeerContentTypeMainTab {
   peer_name: string;
