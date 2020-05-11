@@ -1,12 +1,13 @@
 import React from "react";
-
-import { withKnobs, boolean, number, select } from "@storybook/addon-knobs";
 import { action } from "@storybook/addon-actions";
+import { withKnobs, boolean, number, select } from "@storybook/addon-knobs";
+
+import ComponentDecorator from "%storybook/decorators/component";
 import Turn, { Display } from ".";
 
 export default {
   title: "Components/Turn",
-  decorators: [withKnobs],
+  decorators: [withKnobs, ComponentDecorator],
 };
 
 export const Render = (): JSX.Element => {

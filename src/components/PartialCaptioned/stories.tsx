@@ -12,7 +12,9 @@ export const Render = (): JSX.Element => (
   <PartialCaptioned
     figure={
       <img
-        src={files("figure", "", ["https://placehold.it/1200x630"])[0]}
+        src={
+          files("figure", "", ["https://placehold.it/1200x630?text=figure"])[0]
+        }
         alt=""
       />
     }

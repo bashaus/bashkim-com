@@ -2,9 +2,7 @@ import { RichText } from "prismic-reactjs";
 import React, { useState } from "react";
 
 import DeferredAsset from "%components/DeferredAsset";
-import PartialMagazine, {
-  PartialMagazineSpreadChangeEvent,
-} from "%components/PartialMagazine";
+import Magazine, { MagazineSpreadChangeEvent } from "%components/Magazine";
 import PartialCaptioned from "%components/PartialCaptioned";
 import LinkResolver from "%prismic/helpers/LinkResolver";
 
@@ -46,7 +44,7 @@ const CaptionedMagazineSliceType = ({
   };
 
   const handleMagazineSpreadChange = (
-    event: PartialMagazineSpreadChangeEvent
+    event: MagazineSpreadChangeEvent
   ): void => {
     setSpread(event.spread);
     setSpreads(event.spreads);
@@ -75,7 +73,7 @@ const CaptionedMagazineSliceType = ({
           width={firstImage.dimensions.width * 2}
           height={firstImage.dimensions.height}
         >
-          <PartialMagazine
+          <Magazine
             spread={spread}
             pages={pages}
             onInitialize={handleMagazineInitialize}
@@ -98,7 +96,7 @@ const CaptionedMagazineSliceType = ({
                 />
               </li>
             ))}
-          </PartialMagazine>
+          </Magazine>
         </DeferredAsset>
       }
     >

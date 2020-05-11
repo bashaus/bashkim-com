@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
+import ComponentDecorator from "%storybook/decorators/component";
 
-import Logo from '.';
+import Logo from ".";
 
 export default {
-  title: 'Components/Logo',
+  title: "Components/Logo",
+  decorators: [ComponentDecorator],
 };
 
-export const Render = (): JSX.Element => (
-  <Logo />
-);
+export const Render = (): JSX.Element => <Logo />;

@@ -7,7 +7,7 @@ import {
   normalizePage,
 } from "./helpers";
 
-describe("PartialMagazine/Helpers", () => {
+describe("Magazine/Helpers", () => {
   describe("#convertSpreadToPage", () => {
     describe("@display:single", () => {
       it("converts extreme values", () => {

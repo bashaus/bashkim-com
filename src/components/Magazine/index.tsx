@@ -23,14 +23,14 @@ const RESPONSIVE = !process.browser
 interface MagazineProps {
   children: React.ReactNode;
   onInitialize?(): void;
-  onSpreadChange?(event: PartialMagazineSpreadChangeEvent): void;
+  onSpreadChange?(event: MagazineSpreadChangeEvent): void;
   spread: number;
   pages: number;
   pageWidth: number;
   pageHeight: number;
 }
 
-export interface PartialMagazineSpreadChangeEvent {
+export interface MagazineSpreadChangeEvent {
   spread: number;
   spreads: number;
   pageNumbers: Array<number>;
@@ -75,7 +75,7 @@ const Magazine = ({
         spread: newSpread,
         spreads: newSpreads,
         pageNumbers,
-      } as PartialMagazineSpreadChangeEvent);
+      } as MagazineSpreadChangeEvent);
     },
     [display]
   );

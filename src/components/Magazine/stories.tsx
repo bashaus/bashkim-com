@@ -1,12 +1,13 @@
 import React from "react";
-
 import { withKnobs, number } from "@storybook/addon-knobs";
 import { action } from "@storybook/addon-actions";
-import PartialMagazine from ".";
+import ComponentDecorator from "%storybook/decorators/component";
+
+import Magazine from ".";
 
 export default {
   title: "Components/Magazine",
-  decorators: [withKnobs],
+  decorators: [withKnobs, ComponentDecorator],
 };
 
 export const Render = (): JSX.Element => {
@@ -17,9 +18,10 @@ export const Render = (): JSX.Element => {
     <div
       style={{
         maxWidth: 600,
+        width: "100%",
       }}
     >
-      <PartialMagazine
+      <Magazine
         spread={spread}
         pages={pages}
         pageWidth={300}
@@ -37,7 +39,7 @@ export const Render = (): JSX.Element => {
             />
           </li>
         ))}
-      </PartialMagazine>
+      </Magazine>
     </div>
   );
 };

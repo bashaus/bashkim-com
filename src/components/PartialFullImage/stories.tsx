@@ -1,15 +1,20 @@
-import React from 'react';
-import { withKnobs, files } from '@storybook/addon-knobs';
+import React from "react";
+import { withKnobs, files } from "@storybook/addon-knobs";
 
-import PartialFullImage from '.';
+import PartialFullImage from ".";
 
 export default {
-  title: 'Partials/Full Image',
+  title: "Partials/Full Image",
   decorators: [withKnobs],
 };
 
 export const Render = (): JSX.Element => (
   <PartialFullImage>
-    <img src={files('figure', '', [])[0]} alt="" />
+    <img
+      alt=""
+      src={
+        files("figure", "", ["https://placehold.it/1200x630?text=figure"])[0]
+      }
+    />
   </PartialFullImage>
 );
