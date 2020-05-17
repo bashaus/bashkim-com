@@ -1,5 +1,2 @@
-.next
-.storybook-static
-build
-libraries/turn
 node_modules
+build

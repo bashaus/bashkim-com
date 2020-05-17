@@ -1,0 +1,26 @@
+{
+  "name": "@bashkim-com/config",
+  "private": true,
+  "version": "1.0.0",
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "scripts": {
+    "build": "babel src --out-dir build --extensions \".ts,.tsx\" --copy-files",
+    "clean": "rm -rf build/",
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "lodash.defaultsdeep": "^4.6.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/preset-typescript": "^7.9.0",
+    "@types/dotenv": "^8.2.0",
+    "@types/lodash.defaultsdeep": "^4.6.6",
+    "typescript": "^3.9.2"
+  }
+}

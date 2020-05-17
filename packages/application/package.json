@@ -1,0 +1,82 @@
+{
+  "name": "@bashkim-com/application",
+  "version": "1.0.0",
+  "private": true,
+  "license": "SEE LICENSE IN LICENSE.md",
+  "author": {
+    "name": "Bashkim Isai",
+    "url": "https://www.bashkim.com/"
+  },
+  "scripts": {
+    "build": "next build",
+    "clean": "rm -rf .next/",
+    "dev": "node --inspect ./node_modules/.bin/next dev",
+    "start": "next start",
+    "styleguide:build": "build-storybook -o .storybook-static",
+    "styleguide:start": "start-storybook -p 3010 -s ./public",
+    "test": "jest ."
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "<rootDir>/jest.setup.js"
+    ]
+  },
+  "dependencies": {
+    "@bashkim-com/config": "1.0.0",
+    "@bashkim-com/prismic": "1.0.0",
+    "@primer/octicons-react": "^9.3.1",
+    "@sentry/browser": "^5.15.5",
+    "@sentry/node": "^5.15.5",
+    "aws-serverless-express": "^3.3.8",
+    "breakpoint-sass": "^2.7.1",
+    "classnames": "^2.2.6",
+    "dayjs": "^1.8.26",
+    "jquery": "^3.5.1",
+    "mime": "^2.4.5",
+    "next": "^9.3.6",
+    "node-sass": "^4.14.1",
+    "prismic-javascript": "^2.7.1",
+    "prismic-reactjs": "^1.3.1",
+    "raven": "^2.6.4",
+    "react": "^16.12.0",
+    "react-animate-height": "^2.0.21",
+    "react-dom": "^16.10.2",
+    "react-slick": "^0.25.2",
+    "react-visibility-sensor": "^5.1.1",
+    "reset-scss": "^1.0.0",
+    "slick-carousel": "^1.8.1",
+    "webpack": "^4.43.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@storybook/addon-a11y": "^5.3.18",
+    "@storybook/addon-actions": "^5.3.18",
+    "@storybook/addon-backgrounds": "^5.3.18",
+    "@storybook/addon-knobs": "^5.3.18",
+    "@storybook/addon-links": "^5.3.18",
+    "@storybook/addon-options": "^5.3.18",
+    "@storybook/addon-viewport": "^5.3.18",
+    "@storybook/addons": "^5.3.18",
+    "@storybook/preset-typescript": "^3.0.0",
+    "@storybook/react": "^5.3.18",
+    "@svgr/webpack": "^5.4.0",
+    "@types/classnames": "^2.2.10",
+    "@types/faker": "^4.1.11",
+    "@types/jest": "^25.2.1",
+    "@types/jquery": "^3.3.38",
+    "@types/mime": "^2.0.1",
+    "@types/node": "^13.13.5",
+    "@types/react": "^16.9.34",
+    "@types/react-slick": "^0.23.4",
+    "aws-lambda": "^1.0.6",
+    "babel-jest": "^26.0.1",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "csstype": "^2.6.10",
+    "faker": "^4.1.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^26.0.1",
+    "serverless-sentry-lib": "^1.1.2",
+    "typescript": "^3.9.2"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "slice_type": "GridVideoSliceType",
+  "slice_label": null,
+  "items": [
+    {
+      "NewspaperSliceType_Group": [
+        {
+          "type": "paragraph",
+          "text": "Dolor sit amet, consectetur adipiscing elit. Suspendisse.",
+          "spans": []
+        }
+      ]
+    },
+    {
+      "NewspaperSliceType_Group": [
+        {
+          "type": "paragraph",
+          "text": "Dolor sit amet, consectetur adipiscing elit. Suspendisse.",
+          "spans": []
+        }
+      ]
+    },
+    {
+      "NewspaperSliceType_Group": [
+        {
+          "type": "paragraph",
+          "text": "Dolor sit amet, consectetur adipiscing elit. Suspendisse.",
+          "spans": []
+        }
+      ]
+    },
+    {
+      "NewspaperSliceType_Group": [
+        {
+          "type": "paragraph",
+          "text": "Dolor sit amet, consectetur adipiscing elit. Suspendisse.",
+          "spans": []
+        }
+      ]
+    }
+  ],
+  "primary": {}
+}

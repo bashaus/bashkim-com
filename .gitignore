@@ -1,6 +1,7 @@
 .env
-.next/
-.storybook-static/
 .serverless/
-build/
 node_modules/
+packages/*/build/
+packages/*/node_modules/
+packages/application/.next
+packages/application/.storybook-static

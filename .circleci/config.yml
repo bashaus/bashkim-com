@@ -20,16 +20,24 @@ jobs:
     executor: exec-node
     steps:
       - checkout
-      - run: npm ci
-      - run: npm run build
-      - run: npm run styleguide:build
+      - run: yarn install
+      - run: yarn workspaces run test
+      - run: yarn workspaces run build
+      - run:
+          name: "styleguide build"
+          command: yarn styleguide:build
+          working_directory: packages/application
+
       - persist_to_workspace:
           root: ./
           paths:
-            - ./.next
-            - ./.storybook-static
-            - ./build
-            - ./node_modules
+            - packages/application/.next/
+            - packages/application/.storybook-static/
+            - packages/config/build/
+            - packages/prismic/build/
+            - packages/seo/build/
+            - packages/sitemap/build/
+            - node_modules/
 
   deploy:
     executor: exec-node
@@ -48,25 +56,25 @@ jobs:
           at: ./
 
       - aws-s3/sync:
-          from: ./public/static
+          from: ./packages/application/public/static
           to: "s3://${DEPLOY_S3_WEBSITE_BUCKET}/static"
+          overwrite: true
           arguments: |
             --cache-control "max-age=86400"
-          overwrite: true
 
       - aws-s3/sync:
-          from: ./.next
+          from: ./packages/application/.next
           to: "s3://${DEPLOY_S3_WEBSITE_BUCKET}/_next"
+          overwrite: true
           arguments: |
             --cache-control "max-age=86400"
-          overwrite: true
 
       - aws-s3/sync:
-          from: ./.storybook-static
+          from: ./packages/application/.storybook-static
           to: "s3://${DEPLOY_S3_STYLEGUIDE_BUCKET}/"
+          overwrite: true
           arguments: |
             --cache-control "max-age=86400"
-          overwrite: true
 
       - run:
           name: invalidate website cloudfront

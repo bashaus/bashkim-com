@@ -1,8 +1,9 @@
 service: bashkim-com
 
 plugins:
-  - serverless-sentry
+  - serverless-offline
   - serverless-dotenv-plugin
+  - serverless-sentry
 
 custom:
   stage: ${opt:stage, env:SLS_STAGE, 'production'}
@@ -22,7 +23,7 @@ custom:
         bucketName: bashkim-com-${self:custom.stage}-styleguide
       website:
         certificateArn: "arn:aws:acm:us-east-1:409535992503:certificate/931d3c5c-33c6-410e-a01f-f45176fb0b99"
-        commitHash: ${env:CIRCLE_SHA1}
+        commitHash: ${env:CIRCLE_SHA1, ''}
         domainName: www.bashkim.com
         bucketName: bashkim-com-${self:custom.stage}-website
 
@@ -48,11 +49,11 @@ package:
     - .storybook-static/**
     - .vscode/**
     - node_modules/.cache/**
-    - src/components/**
-    - src/contexts/**
-    - src/pages/**
-    - src/styleguide/**
-    - public/**
+    - packages/application/src/components/**
+    - packages/application/src/contexts/**
+    - packages/application/src/pages/**
+    - packages/application/src/styleguide/**
+    - packages/application/public/**
     # Files
     - "**/stories.tsx"
     - .babelrc
@@ -69,12 +70,36 @@ package:
     - package-lock.json
 
 functions:
-  app:
-    handler: lambda.handler
+  application:
+    handler: packages/application/lambda.handler
     events:
       - http:
           method: ANY
           path: /
+      - http:
+          method: ANY
+          path: /portfolio
+      - http:
+          method: ANY
+          path: /portfolio/{any+}
+      - http:
+          method: ANY
+          path: /legal/cookie-policy
+  sitemap:
+    handler: packages/sitemap/build/lambda.handler
+    events:
+      - http:
+          method: GET
+          path: /robots.txt
+      - http:
+          method: GET
+          path: /sitemap.xml
+      - http:
+          method: GET
+          path: /sitemap/{any+}
+  seo:
+    handler: packages/seo/build/lambda.handler
+    events:
       - http:
           method: ANY
           path: /{any+}

@@ -1,3 +1,4 @@
-Copyright (c) 2008-2020, Bashkim Isai. All rights reserved.
+Copyright © 2008-2020
+Bashkim Isai. All rights reserved.
 
 https://www.bashkim.com/

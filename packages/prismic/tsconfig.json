@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ES2015",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "outDir": "./build",
+    "resolveJsonModule": true,
+    "baseUrl": "./src",
+    "paths": {
+      "%content-types/*": ["./content-types/*"],
+      "%slice-types/*": ["./slice-types/*"],
+      "%traits/*": ["./traits/*"],
+      "%types/*": ["./types/*"]
+    }
+  }
+}
