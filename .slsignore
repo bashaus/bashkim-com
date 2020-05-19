@@ -1,30 +1,26 @@
 # Packages
-packages/*/src/**
+packages/*/src/*
 packages/*/package.json
 packages/*/tsconfig.json
 
 # Package: application
-package/application/.storybook/**
-package/application/.storybook-static/**
-package/application/public/**
+package/application/.storybook/*
+package/application/.storybook-static/*
+package/application/public/*
 
 # Folders
-.git/**
-.circleci/**
-.vscode/**
-node_modules/.cache/**
-
-# Filenames
-**/stories.tsx
-**/*.spec.ts
-**/.babelrc
-**/.gitignore
+.git/*
+.circleci/*
+.vscode/*
+node_modules/.cache/*
 
 # Files
+.babelrc
 .editorconfig
 .env.example
 .eslintignore
 .eslintrc.json
+.gitignore
 .huskyrc.json
 .lintstagedrc.json
 .nvmrc
@@ -34,5 +30,7 @@ node_modules/.cache/**
 .stylelintrc.json
 package.json
 README.md
+*.spec.ts
+stories.tsx
 tsconfig.json
 yarn.lock
