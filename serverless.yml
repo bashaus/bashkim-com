@@ -4,16 +4,20 @@ plugins:
   - serverless-offline
   - serverless-dotenv-plugin
   - serverless-sentry
+  - serverless-ignore
+  - serverless-jetpack
 
 package:
-  # handle manually due to workspaces
-  excludeDevDependencies: false
+  individually: true
 
 custom:
   stage: ${opt:stage, env:SLS_STAGE, 'production'}
   region: ${opt:region, env:AWS_DEFAULT_REGION, 'eu-west-1'}
   styleguide: ${self:custom.env.${self:custom.stage}.styleguide}
   website: ${self:custom.env.${self:custom.stage}.website}
+
+  ignore:
+    file: .slsignore
 
   sentry:
     dsn: ${env:SENTRY_DSN}
@@ -48,6 +52,11 @@ provider:
 functions:
   application:
     handler: packages/application/lambda.handler
+    jetpack:
+      roots:
+        - "packages/application"
+        - "packages/config"
+        - "packages/prismic"
     events:
       - http:
           method: ANY
@@ -63,6 +72,11 @@ functions:
           path: /legal/cookie-policy
   sitemap:
     handler: packages/sitemap/build/lambda.handler
+    jetpack:
+      roots:
+        - "packages/config"
+        - "packages/prismic"
+        - "packages/sitemap"
     events:
       - http:
           method: GET

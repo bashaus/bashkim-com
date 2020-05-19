@@ -8,6 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 0"
   },
   "dependencies": {
+    "@bashkim-com/config": "1.0.0",
+    "@bashkim-com/prismic": "1.0.0",
     "aws-serverless-express": "^3.3.8",
     "dayjs": "^1.8.27",
     "express": "^4.17.1",
