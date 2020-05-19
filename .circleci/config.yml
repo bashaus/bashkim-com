@@ -93,29 +93,6 @@ jobs:
 workflows:
   version: 2
 
-  # development:
-  #   jobs:
-  #     - build:
-  #         filters:
-  #           branches:
-  #             only:
-  #               - develop
-
-  #     - approve:
-  #         type: approval
-  #         requires:
-  #           - build
-
-  #     - deploy:
-  #         context: bashkim-com-dev
-  #         requires:
-  #           - approve
-
-  #     - synchronize:
-  #         context: bashkim-com-dev
-  #         requires:
-  #           - deploy
-
   production:
     jobs:
       - build:
@@ -123,11 +100,16 @@ workflows:
             branches:
               only:
                 - master
+                - develop
 
       - approve:
           type: approval
           requires:
             - build
+          filters:
+            branches:
+              only:
+                - master
 
       - deploy:
           context: bashkim-com-prod
