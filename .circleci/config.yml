@@ -45,7 +45,8 @@ jobs:
       - checkout
       - attach_workspace:
           at: ./
-      - run: npm install -g serverless
+      - run: yarn global add serverless
+      - run: yarn install --production --frozen-lockfile
       - run: serverless deploy
 
   synchronize:

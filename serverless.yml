@@ -5,6 +5,10 @@ plugins:
   - serverless-dotenv-plugin
   - serverless-sentry
 
+package:
+  # handle manually due to workspaces
+  excludeDevDependencies: false
+
 custom:
   stage: ${opt:stage, env:SLS_STAGE, 'production'}
   region: ${opt:region, env:AWS_DEFAULT_REGION, 'eu-west-1'}
