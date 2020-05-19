@@ -9,12 +9,14 @@ package/application/.storybook-static/**
 package/application/public/**
 
 # Folders
+.git/**
 .circleci/**
 .vscode/**
 node_modules/.cache/**
 
 # Filenames
 **/stories.tsx
+**/*.spec.ts
 **/.babelrc
 **/.gitignore
 
