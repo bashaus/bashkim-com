@@ -1,0 +1,36 @@
+# Packages
+packages/*/src/**
+packages/*/package.json
+packages/*/tsconfig.json
+
+# Package: application
+package/application/.storybook/**
+package/application/.storybook-static/**
+package/application/public/**
+
+# Folders
+.circleci/**
+.vscode/**
+node_modules/.cache/**
+
+# Filenames
+**/stories.tsx
+**/.babelrc
+**/.gitignore
+
+# Files
+.editorconfig
+.env.example
+.eslintignore
+.eslintrc.json
+.huskyrc.json
+.lintstagedrc.json
+.nvmrc
+.prettierignore
+.prettierrc.json
+.slsignore
+.stylelintrc.json
+package.json
+README.md
+tsconfig.json
+yarn.lock

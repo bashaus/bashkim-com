@@ -41,34 +41,6 @@ provider:
     LAMBDA_ENV: true
     SENTRY_DSN: ${self:custom.sentry.dsn}
 
-package:
-  exclude:
-    # Folders
-    - .circleci/**
-    - .storybook/**
-    - .storybook-static/**
-    - .vscode/**
-    - node_modules/.cache/**
-    - packages/application/src/components/**
-    - packages/application/src/contexts/**
-    - packages/application/src/pages/**
-    - packages/application/src/styleguide/**
-    - packages/application/public/**
-    # Files
-    - "**/stories.tsx"
-    - .babelrc
-    - .editorconfig
-    - .env.example
-    - .eslintignore
-    - .eslintrc.json
-    - .huskyrc.json
-    - .lintstagedrc.json
-    - .prettierignore
-    - .nvmrc
-    - .stylelintrc.json
-    - package.json
-    - package-lock.json
-
 functions:
   application:
     handler: packages/application/lambda.handler
@@ -106,6 +78,17 @@ functions:
 
 resources:
   Description: bashkim-com
+  extensions:
+    ApplicationLogGroup:
+      Properties:
+        RetentionInDays: '3'
+    SeoLogGroup:
+      Properties:
+        RetentionInDays: '3'
+    SitemapLogGroup:
+      Properties:
+        RetentionInDays: '3'
+
   Resources:
     WebsiteCloudFrontOriginAccessIdentity:
       Type: "AWS::CloudFront::CloudFrontOriginAccessIdentity"

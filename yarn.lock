@@ -8844,7 +8844,7 @@ iferr@^0.1.5:
   resolved "https://registry.yarnpkg.com/iferr/-/iferr-0.1.5.tgz#c60eed69e6d8fdb6b3104a1fcbca1c192dc5b501"
   integrity sha1-xg7taebY/bazEEofy8ocGS3FtQE=
 
-ignore@^3.3.5:
+ignore@^3.3.5, ignore@^3.3.8:
   version "3.3.10"
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-3.3.10.tgz#0a97fb876986e8081c631160f8f9f389157f0043"
   integrity sha512-Pgs951kaMm5GXP7MOvxERINe3gsaVjUWFm+UZPSq9xYriQAksyhg0csnS0KXSNRD5NmNdapXEpjxG49+AKh/ug==
@@ -14546,6 +14546,13 @@ serverless-dotenv-plugin@^2.4.2:
     chalk "^3.0.0"
     dotenv "^8.2.0"
     dotenv-expand "^5.1.0"
+
+serverless-ignore@^0.1.5:
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/serverless-ignore/-/serverless-ignore-0.1.5.tgz#e4e0d1c8ddf50b9f8e0205133968bf9bf3c069ec"
+  integrity sha512-/e62rTw2PxwZaO87rY1kIwCufE0Tm4ojk3qOP42vg82Qma194Djm6KiQoe/nOhtuyv3J/SeAwna5WuXbLKPY7w==
+  dependencies:
+    ignore "^3.3.8"
 
 serverless-offline@^6.1.5:
   version "6.1.5"

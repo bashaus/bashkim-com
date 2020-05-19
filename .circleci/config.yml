@@ -20,7 +20,7 @@ jobs:
     executor: exec-node
     steps:
       - checkout
-      - run: yarn install
+      - run: yarn install --frozen-lockfile
       - run: yarn workspaces run test
       - run: yarn workspaces run build
       - run:
@@ -93,7 +93,7 @@ jobs:
 workflows:
   version: 2
 
-  production:
+  publish:
     jobs:
       - build:
           filters:
