@@ -18,6 +18,7 @@
   "scripts": {
     "build": "yarn workspaces run build",
     "clean": "yarn workspaces run clean",
+    "dev": "sls offline --noPrependStageInUrl=true",
     "javascripts:lint": "eslint --ext .js,.jsx,.ts,.tsx .",
     "lint": "yarn javascripts:lint && yarn stylesheets:lint",
     "stylesheets:lint": "stylelint '**/*.scss' '**/*.css'",
