@@ -44,6 +44,7 @@
     "react-slick": "^0.25.2",
     "react-visibility-sensor": "^5.1.1",
     "reset-scss": "^1.0.0",
+    "serverless-sentry-lib": "^1.1.2",
     "slick-carousel": "^1.8.1",
     "webpack": "^4.43.0"
   },
@@ -76,7 +77,6 @@
     "faker": "^4.1.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.0.1",
-    "serverless-sentry-lib": "^1.1.2",
     "typescript": "^3.9.2"
   }
 }
