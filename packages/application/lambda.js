@@ -1,22 +1,11 @@
-/* cwd for serverless */
-process.chdir(__dirname);
+process.chdir(__dirname); // set working directory for serverless
 
-const { default: config } = require("@bashkim-com/config");
 const awsServerlessExpress = require("aws-serverless-express");
+const { default: config } = require("@bashkim-com/config");
 const next = require("next");
 const app = next(config.next);
 
-exports.handler = function (event, context) {
-  app
-    .prepare()
-    .then(() =>
-      awsServerlessExpress.proxy(
-        awsServerlessExpress.createServer(app),
-        event,
-        context
-      )
-    )
-    .catch((err) => {
-      throw err;
-    });
+const server = awsServerlessExpress.createServer(app.getRequestHandler());
+exports.handler = (event, context) => {
+  return awsServerlessExpress.proxy(server, event, context);
 };
