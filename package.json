@@ -48,8 +48,6 @@
     "serverless-ignore": "^0.1.5",
     "serverless-jetpack": "^0.10.6",
     "serverless-offline": "^6.1.5",
-    "serverless-sentry": "^2.0.0",
-    "serverless-sentry-lib": "^2.0.1",
     "stylelint": "^13.3.3",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-scss": "^3.1.0",

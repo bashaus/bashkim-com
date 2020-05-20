@@ -3,7 +3,6 @@ service: bashkim-com
 plugins:
   - serverless-offline
   - serverless-dotenv-plugin
-  - serverless-sentry
   - serverless-ignore
   - serverless-jetpack
 
@@ -18,10 +17,6 @@ custom:
 
   ignore:
     file: .slsignore
-
-  sentry:
-    dsn: ${env:SENTRY_DSN}
-    environment: ${self:custom.stage}
 
   env:
     production:
@@ -47,7 +42,6 @@ provider:
     GIT_COMMIT: ${self:custom.website.commitHash}
     NODE_ENV: ${self:custom.stage}
     LAMBDA_ENV: true
-    SENTRY_DSN: ${self:custom.sentry.dsn}
 
 functions:
   application:
