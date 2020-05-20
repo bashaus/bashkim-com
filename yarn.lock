@@ -14708,11 +14708,6 @@ serverless-offline@^6.1.5:
     velocityjs "^2.0.0"
     ws "^7.2.1"
 
-serverless-sentry-lib@^1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/serverless-sentry-lib/-/serverless-sentry-lib-1.1.2.tgz#89a9d9da02f240ac93333f106e44e4d09376c0e7"
-  integrity sha512-uhNQsatGfdZrfFB1LxH3SaBVfgwqgRM2cdAcazpvgk4r40LOksZd2GeZSd0WqeHFQDe4yVrrRtKfeGjyFCZyZw==
-
 serverless-sentry-lib@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/serverless-sentry-lib/-/serverless-sentry-lib-2.0.1.tgz#722e1cf547696b0cb95139b0b35a760f369a9c57"

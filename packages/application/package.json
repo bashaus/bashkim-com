@@ -44,7 +44,7 @@
     "react-slick": "^0.25.2",
     "react-visibility-sensor": "^5.1.1",
     "reset-scss": "^1.0.0",
-    "serverless-sentry-lib": "^1.1.2",
+    "serverless-sentry-lib": "^2.0.1",
     "slick-carousel": "^1.8.1",
     "webpack": "^4.43.0"
   },
