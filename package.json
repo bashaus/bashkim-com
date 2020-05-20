@@ -16,9 +16,12 @@
     "url": "https://www.bashkim.com/"
   },
   "scripts": {
-    "lint": "yarn javascripts:lint && yarn stylesheets:lint",
+    "build": "yarn workspaces run build",
+    "clean": "yarn workspaces run clean",
     "javascripts:lint": "eslint --ext .js,.jsx,.ts,.tsx .",
-    "stylesheets:lint": "stylelint '**/*.scss' '**/*.css'"
+    "lint": "yarn javascripts:lint && yarn stylesheets:lint",
+    "stylesheets:lint": "stylelint '**/*.scss' '**/*.css'",
+    "test": "yarn workspaces run test"
   },
   "dependencies": {
     "mime-types": "^2.1.27"

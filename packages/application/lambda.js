@@ -1,11 +1,14 @@
+/* cwd for serverless */
+process.chdir(__dirname);
+
 const { default: config } = require("@bashkim-com/config");
 const Raven = require("raven");
-const RavenLambdaWrapper = require("serverless-sentry-lib");
+const withSentry = require("serverless-sentry-lib");
 const awsServerlessExpress = require("aws-serverless-express");
 const next = require("next");
 const app = next(config.next);
 
-module.exports.handler = RavenLambdaWrapper.handler(Raven, (event, context) => {
+exports.handler = withSentry(async function (event, context) {
   app
     .prepare()
     .then(() =>
