@@ -1,5 +1,6 @@
 import React from "react";
 
+import GoogleAnalytics from "%components/GoogleAnalytics";
 import CookiesNotice from "%components/CookiesNotice";
 import Page from "%components/Page";
 import CookiesProvider from "%contexts/Cookies";
@@ -39,6 +40,8 @@ const LayoutDefault = ({
           {children}
         </Page>
       </NavigationStore>
+
+      <GoogleAnalytics />
     </>
   );
 };

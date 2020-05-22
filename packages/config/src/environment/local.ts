@@ -1,4 +1,7 @@
 export default {
+  googleAnalytics: {
+    enabled: false,
+  },
   next: {
     dev: true,
   },
