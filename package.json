@@ -25,7 +25,9 @@
     "test": "yarn workspaces run test"
   },
   "dependencies": {
-    "mime-types": "^2.1.27"
+    "@sentry/node": "^5.15.5",
+    "mime-types": "^2.1.27",
+    "serverless-sentry-lib": "^2.0.1"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^2.31.0",
@@ -49,6 +51,7 @@
     "serverless-ignore": "^0.1.5",
     "serverless-jetpack": "^0.10.6",
     "serverless-offline": "^6.1.5",
+    "serverless-sentry": "^2.0.0",
     "stylelint": "^13.3.3",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-scss": "^3.1.0",

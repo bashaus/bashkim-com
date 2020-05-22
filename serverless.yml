@@ -3,6 +3,7 @@ service: bashkim-com
 plugins:
   - serverless-offline
   - serverless-dotenv-plugin
+  - serverless-sentry
   - serverless-ignore
   - serverless-jetpack
 
@@ -14,6 +15,10 @@ custom:
   region: ${opt:region, env:AWS_DEFAULT_REGION, 'eu-west-1'}
   styleguide: ${self:custom.env.${self:custom.stage}.styleguide}
   website: ${self:custom.env.${self:custom.stage}.website}
+
+  sentry:
+    dsn: ${env:SENTRY_DSN, ''}
+    environment: ${self:custom.stage}
 
   ignore:
     file: .slsignore
@@ -42,6 +47,7 @@ provider:
     GIT_COMMIT: ${self:custom.website.commitHash}
     NODE_ENV: ${self:custom.stage}
     LAMBDA_ENV: true
+    SENTRY_DSN: ${self:custom.sentry.dsn}
 
 functions:
   application:
