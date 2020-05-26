@@ -46,6 +46,7 @@
     "reset-scss": "^1.0.0",
     "serverless-sentry-lib": "^2.0.1",
     "slick-carousel": "^1.8.1",
+    "use-persisted-state": "^0.3.0",
     "webpack": "^4.43.0"
   },
   "devDependencies": {
