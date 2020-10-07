@@ -1,6 +1,8 @@
 import * as Sentry from "@sentry/browser";
 import React from "react";
 
+import styles from "./styles.module.scss";
+
 interface SentryBoundaryProps {
   children: React.ReactNode;
 }
@@ -8,8 +10,6 @@ interface SentryBoundaryProps {
 interface SentryBoundaryState {
   error?: Error;
 }
-
-import styles from "./styles.module.scss";
 
 export default class SentryBoundary extends React.Component<
   SentryBoundaryProps,
