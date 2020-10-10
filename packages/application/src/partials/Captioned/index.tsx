@@ -2,10 +2,10 @@ import React from "react";
 
 import styles from "./styles.module.scss";
 
-interface PartialCaptionedProps {
+type PartialCaptionedProps = {
   children: React.ReactNode;
   figure: React.ReactNode;
-}
+};
 
 const PartialCaptioned = ({
   children,

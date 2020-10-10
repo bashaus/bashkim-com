@@ -10,9 +10,9 @@ import TrophyImage from "%public/static/vectors/icons/trophy.svg";
 
 import styles from "./styles.module.scss";
 
-interface AccoladeSliceProps {
+type AccoladeSliceProps = {
   slice: AccoladeSliceType;
-}
+};
 
 const AccoladeSlice = ({ slice }: AccoladeSliceProps): JSX.Element => {
   const {

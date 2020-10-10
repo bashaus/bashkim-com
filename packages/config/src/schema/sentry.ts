@@ -1,10 +1,10 @@
-export interface SentryConfig {
+export type SentryConfig = {
   enabled: boolean;
   dsn: string;
   project: string;
   commit?: string;
   environment: string;
-}
+};
 
 const defaultSentryConfig: SentryConfig = {
   /**

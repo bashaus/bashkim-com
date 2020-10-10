@@ -1,7 +1,7 @@
-export interface GoogleAnalyticsConfig {
+export type GoogleAnalyticsConfig = {
   enabled: boolean;
   ua: string;
-}
+};
 
 const defaultGoogleAnalyticsConfig: GoogleAnalyticsConfig = {
   /**

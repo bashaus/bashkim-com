@@ -4,12 +4,12 @@ import SlickSlider from "react-slick";
 import styles from "./styles.module.scss";
 import dotsStyles from "./styles.dots.module.scss";
 
-interface CarouselProps {
+type CarouselProps = {
   children: React.ReactNode;
   responsive?: any;
   slidesToShow?: number;
   slidestoScroll?: number;
-}
+};
 
 const Carousel = ({
   children,

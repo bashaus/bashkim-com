@@ -4,10 +4,10 @@ import { CollaboratorSliceType } from "@bashkim-com/prismic";
 
 import LinkResolver from "%prismic/LinkResolver";
 
-interface CollaboratorSliceProps {
+type CollaboratorSliceProps = {
   slice: CollaboratorSliceType;
   peer: any;
-}
+};
 
 const CollaboratorSlice = ({
   slice,

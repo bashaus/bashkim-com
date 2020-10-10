@@ -2,12 +2,12 @@ import React from "react";
 
 import styles from "./styles.module.scss";
 
-interface TileProps {
+type TileProps = {
   description: string;
   icon: string;
   poster: string;
   title: string;
-}
+};
 
 const Tile = ({ description, title, icon, poster }: TileProps): JSX.Element => (
   <article

@@ -3,9 +3,9 @@ import { GridEmbedSliceType } from "@bashkim-com/prismic";
 
 import styles from "./styles.module.scss";
 
-interface GridEmbedSliceProps {
+type GridEmbedSliceProps = {
   slice: GridEmbedSliceType;
-}
+};
 
 const GridEmbedSlice = ({ slice }: GridEmbedSliceProps): JSX.Element => (
   <div className={styles.GridEmbedSlice}>

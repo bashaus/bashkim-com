@@ -3,9 +3,9 @@ import { CaseStudyContentType } from "@bashkim-com/prismic";
 
 import styles from "./styles.module.scss";
 
-interface CaseStudyTechnologiesProps {
+type CaseStudyTechnologiesProps = {
   caseStudy: CaseStudyContentType;
-}
+};
 
 const CaseStudyTechnologies = ({
   caseStudy,

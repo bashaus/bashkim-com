@@ -10,7 +10,7 @@ import SubtitleSliceType from "%slice-types/Subtitle/type";
 import GridEmbedSliceType from "%slice-types/GridEmbed/type";
 import GridVideoSliceType from "%slice-types/GridVideo/type";
 
-interface CaseStudyContentTypePageTab {
+type CaseStudyContentTypePageTab = {
   body: Array<
     | CaptionedImageSliceType
     | CaptionedMagazineSliceType
@@ -24,6 +24,6 @@ interface CaseStudyContentTypePageTab {
     | GridEmbedSliceType
     | GridVideoSliceType
   >;
-}
+};
 
 export default CaseStudyContentTypePageTab;

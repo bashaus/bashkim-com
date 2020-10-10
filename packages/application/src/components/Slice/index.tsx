@@ -3,9 +3,9 @@ import React from "react";
 
 import { SlicePrismicType } from "@bashkim-com/prismic";
 
-interface SliceProps {
+type SliceProps = {
   slice: SlicePrismicType;
-}
+};
 
 const SliceBundle: { [key: string]: any } = {
   CaptionedImageSliceType: dynamic(() => import("%slices/CaptionedImage")),

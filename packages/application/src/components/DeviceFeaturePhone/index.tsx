@@ -2,10 +2,10 @@ import React from "react";
 
 import styles from "./styles.module.scss";
 
-interface DeviceFeaturePhoneProps {
+type DeviceFeaturePhoneProps = {
   children: React.ReactNode;
   figure: React.ReactNode;
-}
+};
 
 const DeviceFeaturePhone = ({
   children,

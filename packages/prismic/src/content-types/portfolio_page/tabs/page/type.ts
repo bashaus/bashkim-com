@@ -1,7 +1,7 @@
 import ImagePropType from "%types/image";
 import DocumentLinkPropType from "%types/document-link";
 
-interface PortfolioPageContentTypePageTab {
+type PortfolioPageContentTypePageTab = {
   featured: Array<{
     featured_title: string;
     featured_description: string;
@@ -12,6 +12,6 @@ interface PortfolioPageContentTypePageTab {
       image_header_mobile: ImagePropType;
     }>;
   }>;
-}
+};
 
 export default PortfolioPageContentTypePageTab;

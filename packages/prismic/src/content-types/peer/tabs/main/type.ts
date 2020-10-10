@@ -1,8 +1,8 @@
 import LinkPrismicType from "%types/link";
 
-interface PeerContentTypeMainTab {
+type PeerContentTypeMainTab = {
   peer_name: string;
   peer_website: LinkPrismicType;
-}
+};
 
 export default PeerContentTypeMainTab;

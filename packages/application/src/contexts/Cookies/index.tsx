@@ -15,9 +15,9 @@ export const CookiesContext = React.createContext<CookiesContextType>({
   dispatch: () => {},
 });
 
-interface CookiesStoreProps {
+type CookiesStoreProps = {
   children: React.ReactNode;
-}
+};
 
 const CookiesStore = ({ children }: CookiesStoreProps): JSX.Element => {
   const [isDismissed, setIsDismissed] = useCounterState(false);

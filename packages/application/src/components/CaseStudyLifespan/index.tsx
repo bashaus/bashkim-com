@@ -1,10 +1,10 @@
 import dayjs from "dayjs";
 import React from "react";
 
-interface CaseStudyLifespanProps {
+type CaseStudyLifespanProps = {
   launched?: string;
   decommissioned?: string;
-}
+};
 
 const CaseStudyLifespan = ({
   launched,

@@ -1,8 +1,8 @@
-export interface ServerConfig {
+export type ServerConfig = {
   env: string;
   port: number;
   lambda: boolean;
-}
+};
 
 const defaultServerConfig: ServerConfig = {
   /**

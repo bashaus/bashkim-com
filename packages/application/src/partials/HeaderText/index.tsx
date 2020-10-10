@@ -3,11 +3,11 @@ import React from "react";
 
 import styles from "./styles.module.scss";
 
-interface PartialHeaderTextProps {
+type PartialHeaderTextProps = {
   aside?: React.ReactNode;
   backgroundClassName?: string;
   children?: React.ReactNode;
-}
+};
 
 const PartialHeaderText = ({
   aside,

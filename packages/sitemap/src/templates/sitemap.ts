@@ -1,14 +1,14 @@
 import express from "express";
 import xmlbuilder from "xmlbuilder";
 
-export interface UrlType {
+export type UrlType = {
   url: {
     loc: string;
     lastmod: string;
     changefreq: string;
     priority: string;
   };
-}
+};
 
 const SitemapTemplate = (sitemap: () => Promise<Array<UrlType>>) => {
   return async (

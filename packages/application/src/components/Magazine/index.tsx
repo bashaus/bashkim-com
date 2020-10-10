@@ -20,7 +20,7 @@ const RESPONSIVE = !process.browser
       },
     ];
 
-interface MagazineProps {
+type MagazineProps = {
   children: React.ReactNode;
   onInitialize?(): void;
   onSpreadChange?(event: MagazineSpreadChangeEvent): void;
@@ -28,13 +28,13 @@ interface MagazineProps {
   pages: number;
   pageWidth: number;
   pageHeight: number;
-}
+};
 
-export interface MagazineSpreadChangeEvent {
+export type MagazineSpreadChangeEvent = {
   spread: number;
   spreads: number;
   pageNumbers: Array<number>;
-}
+};
 
 const Magazine = ({
   children,

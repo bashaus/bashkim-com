@@ -1,9 +1,9 @@
 import Head from "next/head";
 import React from "react";
 
-interface MetaDescriptionProps {
+type MetaDescriptionProps = {
   content?: string;
-}
+};
 
 const MetaDescription = ({
   content,

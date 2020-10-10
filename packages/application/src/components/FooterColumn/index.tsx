@@ -3,11 +3,11 @@ import React from "react";
 
 import styles from "./styles.module.scss";
 
-interface FooterColumnProps {
+type FooterColumnProps = {
   children: React.ReactNode;
   className?: string;
   label: string;
-}
+};
 
 const FooterColumn = ({
   className,

@@ -1,6 +1,6 @@
-export interface SitemapConfig {
+export type SitemapConfig = {
   baseHref: string;
-}
+};
 
 const defaultSitemapConfig: SitemapConfig = {
   /**

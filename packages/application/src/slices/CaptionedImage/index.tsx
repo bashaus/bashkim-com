@@ -6,9 +6,9 @@ import PartialCaptioned from "%partials/Captioned";
 import DeferredAsset from "%components/DeferredAsset";
 import LinkResolver from "%prismic/LinkResolver";
 
-interface CaptionedImageSliceProps {
+type CaptionedImageSliceProps = {
   slice: CaptionedImageSliceType;
-}
+};
 
 const CaptionedImageSlice = ({
   slice,

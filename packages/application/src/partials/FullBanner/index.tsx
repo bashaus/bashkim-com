@@ -2,12 +2,12 @@ import React from "react";
 
 import styles from "./styles.module.scss";
 
-interface PartialFullBannerProps {
+type PartialFullBannerProps = {
   backgroundDesktop?: string;
   backgroundMobile?: string;
   children: React.ReactNode;
   id: string;
-}
+};
 
 const PartialFullBanner = ({
   backgroundDesktop,

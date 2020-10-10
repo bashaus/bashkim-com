@@ -5,9 +5,9 @@ import CaseStudyLifespan from "%components/CaseStudyLifespan";
 
 import styles from "./styles.module.scss";
 
-interface CaseStudyDetailsProps {
+type CaseStudyDetailsProps = {
   caseStudy: CaseStudyContentType;
-}
+};
 
 const CaseStudyDetails = ({
   caseStudy,

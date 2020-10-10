@@ -5,9 +5,9 @@ import PortfolioListBrick from "%components/PortfolioListBrick";
 
 import styles from "./styles.module.scss";
 
-interface PortfolioListProps {
+type PortfolioListProps = {
   caseStudies: Array<CaseStudyContentType>;
-}
+};
 
 const PortfolioList = ({ caseStudies }: PortfolioListProps): JSX.Element => (
   <ul className={styles.PortfolioList}>

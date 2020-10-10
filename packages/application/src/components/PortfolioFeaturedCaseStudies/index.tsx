@@ -7,9 +7,9 @@ import LinkResolver from "%prismic/LinkResolver";
 
 import styles from "./styles.module.scss";
 
-interface PortfolioFeaturedCaseStudiesProps {
+type PortfolioFeaturedCaseStudiesProps = {
   featured: Array<any>;
-}
+};
 
 const PortfolioFeaturedCaseStudies = ({
   featured,

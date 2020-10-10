@@ -5,9 +5,9 @@ import MenuSignifierButton from "%components/MenuSignifierButton";
 
 import styles from "./styles.module.scss";
 
-interface MenuProps {
+type MenuProps = {
   backButton?: React.ReactNode;
-}
+};
 
 const Menu = ({ backButton }: MenuProps): JSX.Element => (
   <div className={styles.Menu}>

@@ -1,6 +1,6 @@
-export interface NextConfig {
+export type NextConfig = {
   dev: boolean;
-}
+};
 
 const defaultNextConfig: NextConfig = {
   /**

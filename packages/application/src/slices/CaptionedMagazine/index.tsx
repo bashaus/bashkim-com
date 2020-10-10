@@ -9,9 +9,9 @@ import LinkResolver from "%prismic/LinkResolver";
 
 import styles from "./styles.module.scss";
 
-interface CaptionedMagazineSliceProps {
+type CaptionedMagazineSliceProps = {
   slice: CaptionedMagazineSliceType;
-}
+};
 
 const CaptionedMagazineSlice = ({
   slice,

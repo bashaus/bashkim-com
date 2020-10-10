@@ -17,10 +17,10 @@ import PartialSubtitle from "%partials/Subtitle";
 import PortfolioFeaturedCaseStudies from "%components/PortfolioFeaturedCaseStudies";
 import PortfolioList from "%components/PortfolioList";
 
-interface PortfolioPageProps {
+type PortfolioPageProps = {
   caseStudies: Array<CaseStudyContentType>;
   page: PortfolioPageContentType;
-}
+};
 
 const PortfolioPage = ({
   caseStudies,

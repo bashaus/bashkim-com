@@ -1,7 +1,7 @@
 import ExhibitionSlicePropType from "%slice-types/Exhibition/type";
 
-interface CaseStudyContentTypeExhibitionsTab {
+type CaseStudyContentTypeExhibitionsTab = {
   exhibitions: Array<ExhibitionSlicePropType>;
-}
+};
 
 export default CaseStudyContentTypeExhibitionsTab;

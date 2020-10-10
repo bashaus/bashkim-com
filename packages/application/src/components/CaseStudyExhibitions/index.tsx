@@ -6,9 +6,9 @@ import ExhibitionSlice from "%slices/Exhibition";
 
 import styles from "./styles.module.scss";
 
-interface CaseStudyExhibitionsProps {
+type CaseStudyExhibitionsProps = {
   slices: Array<any>;
-}
+};
 
 const CaseStudyExhibitions = ({
   slices = [],

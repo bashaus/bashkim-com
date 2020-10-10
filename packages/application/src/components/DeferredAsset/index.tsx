@@ -4,12 +4,12 @@ import VisibilitySensor from "react-visibility-sensor";
 
 import styles from "./styles.module.scss";
 
-interface DeferredAssetProps {
+type DeferredAssetProps = {
   children: JSX.Element;
   width?: number;
   height?: number;
   ratio?: number;
-}
+};
 
 const DeferredAsset = ({
   children,

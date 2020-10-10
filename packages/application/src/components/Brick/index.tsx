@@ -2,11 +2,11 @@ import React from "react";
 
 import styles from "./styles.module.scss";
 
-interface BrickProps {
+type BrickProps = {
   title: string;
   icon: string;
   description: string;
-}
+};
 
 const Brick = ({ title, icon, description }: BrickProps): JSX.Element => (
   <article className={styles.Brick}>

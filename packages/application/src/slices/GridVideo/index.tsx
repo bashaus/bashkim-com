@@ -8,9 +8,9 @@ import LinkResolver from "%prismic/LinkResolver";
 
 import styles from "./styles.module.scss";
 
-interface GridVideoSliceProps {
+type GridVideoSliceProps = {
   slice: GridVideoSliceType;
-}
+};
 
 const GridVideoSlice = ({ slice }: GridVideoSliceProps): JSX.Element => (
   <ol

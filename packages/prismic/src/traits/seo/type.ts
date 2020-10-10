@@ -1,4 +1,4 @@
-interface SeoPrismicTrait {
+type SeoPrismicTrait = {
   meta_title: string;
   meta_description: string;
   meta_keywords: string;
@@ -21,6 +21,6 @@ interface SeoPrismicTrait {
     | "0.8"
     | "0.9"
     | "1.0";
-}
+};
 
 export default SeoPrismicTrait;

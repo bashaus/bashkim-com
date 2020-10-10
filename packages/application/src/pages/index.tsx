@@ -18,9 +18,9 @@ import PartialSubtitle from "%partials/Subtitle";
 
 import LinkResolver from "%prismic/LinkResolver";
 
-interface HomePageProps {
+type HomePageProps = {
   page: HomePageContentType;
-}
+};
 
 const HomePage = ({ page }: HomePageProps): JSX.Element => {
   const {

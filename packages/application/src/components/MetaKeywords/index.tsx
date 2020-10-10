@@ -1,9 +1,9 @@
 import Head from "next/head";
 import React from "react";
 
-interface MetaKeywordsProps {
+type MetaKeywordsProps = {
   content?: string;
-}
+};
 
 const MetaKeywords = ({ content }: MetaKeywordsProps): JSX.Element | null => {
   if (!content) {

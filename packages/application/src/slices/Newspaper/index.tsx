@@ -6,9 +6,9 @@ import PartialNewspaper from "%partials/Newspaper";
 
 import LinkResolver from "%prismic/LinkResolver";
 
-interface NewspaperSliceProps {
+type NewspaperSliceProps = {
   slice: NewspaperSliceType;
-}
+};
 
 const NewspaperSlice = ({ slice }: NewspaperSliceProps): JSX.Element => (
   <PartialNewspaper>

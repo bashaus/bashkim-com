@@ -10,7 +10,7 @@ export enum Display {
   DOUBLE = "double",
 }
 
-interface TurnProps {
+type TurnProps = {
   center?: boolean;
   children: React.ReactNode;
   display: Display;
@@ -20,11 +20,11 @@ interface TurnProps {
   pageHeight: number;
   onInitialize?(): void;
   onPageChange?(pageNumber: number): void;
-}
+};
 
-interface TurnState {
+type TurnState = {
   isInitialized: boolean;
-}
+};
 
 class Turn extends React.PureComponent<TurnProps, TurnState> {
   public containerRef = React.createRef<HTMLDivElement>();

@@ -7,9 +7,9 @@ export const NavigationContext = React.createContext<NavigationContextType>({
   dispatch: () => {},
 });
 
-interface NavigationStoreProps {
+type NavigationStoreProps = {
   children: React.ReactNode;
-}
+};
 
 const NavigationStore = ({ children }: NavigationStoreProps): JSX.Element => {
   const [state, dispatch] = React.useReducer(NavigationReducer, INITIAL_STATE);

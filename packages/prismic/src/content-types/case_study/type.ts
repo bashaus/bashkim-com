@@ -15,7 +15,7 @@ export interface CaseStudyContentTypeData
     CaseStudyContentTypePageTab,
     CaseStudyContentTypeSeoTab {}
 
-interface CaseStudyContentType {
+type CaseStudyContentType = {
   id: string;
   uid: string;
   type: string;
@@ -28,6 +28,6 @@ interface CaseStudyContentType {
   lang: string;
   alternate_languages: Array<any>;
   data: CaseStudyContentTypeData;
-}
+};
 
 export default CaseStudyContentType;

@@ -7,11 +7,11 @@ import CollaboratorSlice from "%slices/Collaborator";
 
 import styles from "./styles.module.scss";
 
-interface CaseStudyCollaboratorsProps {
+type CaseStudyCollaboratorsProps = {
   myRole?: string;
   peers: Array<any>;
   slices: Array<any>;
-}
+};
 
 const CaseStudyCollaborators = ({
   slices = [],

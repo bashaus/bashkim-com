@@ -4,10 +4,10 @@ import PartialSplitItem from "%partials/Split.Item";
 
 import styles from "./styles.module.scss";
 
-interface PartialSplitProps {
+type PartialSplitProps = {
   index?: number;
   children?: React.ReactNode;
-}
+};
 
 const PartialSplit = ({
   children,

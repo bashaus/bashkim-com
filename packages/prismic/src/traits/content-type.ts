@@ -1,4 +1,4 @@
-interface PrismicContentType {
+type PrismicContentType = {
   id: string;
   uid?: string;
   type: string;
@@ -10,6 +10,6 @@ interface PrismicContentType {
   linked_documents?: Array<any>;
   lang?: string;
   alternate_languages: Array<any>;
-}
+};
 
 export default PrismicContentType;

@@ -1,7 +1,7 @@
-export interface PrismicConfig {
+export type PrismicConfig = {
   apiEndpoint: string;
   accessToken?: string;
-}
+};
 
 const defaultPrismicConfig: PrismicConfig = {
   /**

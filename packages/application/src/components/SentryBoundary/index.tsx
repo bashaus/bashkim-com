@@ -3,13 +3,13 @@ import React from "react";
 
 import styles from "./styles.module.scss";
 
-interface SentryBoundaryProps {
+type SentryBoundaryProps = {
   children: React.ReactNode;
-}
+};
 
-interface SentryBoundaryState {
+type SentryBoundaryState = {
   error?: Error;
-}
+};
 
 export default class SentryBoundary extends React.Component<
   SentryBoundaryProps,

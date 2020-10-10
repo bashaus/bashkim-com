@@ -6,9 +6,9 @@ import PartialSubtitle from "%partials/Subtitle";
 
 import LinkResolver from "%prismic/LinkResolver";
 
-interface SubtitleSliceProps {
+type SubtitleSliceProps = {
   slice: SubtitleSliceType;
-}
+};
 
 const SubtitleSlice = ({ slice }: SubtitleSliceProps): JSX.Element => {
   const {

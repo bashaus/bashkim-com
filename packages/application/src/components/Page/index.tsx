@@ -12,11 +12,11 @@ import * as NavigationActions from "%contexts/Navigation/actions";
 
 import styles from "./styles.module.scss";
 
-interface PageProps {
+type PageProps = {
   backButton?: React.ReactNode;
   children?: React.ReactNode;
   theme?: string;
-}
+};
 
 const Page = ({
   backButton,

@@ -6,9 +6,9 @@ import LinkResolver from "%prismic/LinkResolver";
 
 import PartialFullText from "%partials/FullText";
 
-interface FullTextSliceProps {
+type FullTextSliceProps = {
   slice: FullTextSliceType;
-}
+};
 
 const FullTextSlice = ({ slice }: FullTextSliceProps): JSX.Element => {
   const { FullTextSliceType_Body: body } = slice.primary;

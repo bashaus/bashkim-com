@@ -1,7 +1,7 @@
 import AccoladeSliceType from "%slice-types/Accolade/type";
 
-interface CaseStudyContentTypeAccoladesTab {
+type CaseStudyContentTypeAccoladesTab = {
   accolades: Array<AccoladeSliceType>;
-}
+};
 
 export default CaseStudyContentTypeAccoladesTab;

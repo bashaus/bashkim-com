@@ -30,9 +30,9 @@ const DeviceTypeComponents = {
   FEATURE_PHONE: DeviceFeaturePhone,
 };
 
-interface CarouselPhonesSliceProps {
+type CarouselPhonesSliceProps = {
   slice: CarouselPhonesSliceType;
-}
+};
 
 const CarouselPhonesSlice = ({
   slice,

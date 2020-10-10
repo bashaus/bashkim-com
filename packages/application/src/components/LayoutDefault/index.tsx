@@ -6,11 +6,11 @@ import Page from "%components/Page";
 import CookiesProvider from "%contexts/Cookies";
 import NavigationStore from "%contexts/Navigation";
 
-interface LayoutDefaultProps {
+type LayoutDefaultProps = {
   backButton?: React.ReactNode;
   children?: React.ReactNode;
   theme?: string;
-}
+};
 
 const LayoutDefault = ({
   backButton,

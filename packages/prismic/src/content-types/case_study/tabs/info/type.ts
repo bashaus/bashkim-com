@@ -2,7 +2,7 @@ import DocumentLinkPrismicType from "%types/document-link";
 import ImagePrismicType from "%types/image";
 import LinkPrismicType from "%types/link";
 
-interface CaseStudyContentTypeInfoTab {
+type CaseStudyContentTypeInfoTab = {
   info_brief: string;
   info_strategy: string;
   info_implementation: string;
@@ -32,6 +32,6 @@ interface CaseStudyContentTypeInfoTab {
       technology_icon: ImagePrismicType;
     }>;
   }>;
-}
+};
 
 export default CaseStudyContentTypeInfoTab;

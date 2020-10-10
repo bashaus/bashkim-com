@@ -1,11 +1,11 @@
 import express from "express";
 import xmlbuilder from "xmlbuilder";
 
-export interface SitemapType {
+export type SitemapType = {
   sitemap: {
     loc: string;
   };
-}
+};
 
 const SitemapIndexTemplate = (sitemaps: () => Promise<Array<SitemapType>>) => {
   return async (req: express.Request, res: express.Response) => {

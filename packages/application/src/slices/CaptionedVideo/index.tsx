@@ -7,9 +7,9 @@ import PartialCaptioned from "%partials/Captioned";
 import VideoPlayerYouTube from "%components/VideoPlayerYouTube";
 import LinkResolver from "%prismic/LinkResolver";
 
-interface CaptionedVideoSliceProps {
+type CaptionedVideoSliceProps = {
   slice: CaptionedVideoSliceType;
-}
+};
 
 const CaptionedVideoSlice = ({
   slice,

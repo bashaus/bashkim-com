@@ -2,11 +2,11 @@ import Head from "next/head";
 import mime from "mime";
 import React from "react";
 
-interface MetaImageProps {
+type MetaImageProps = {
   width?: number;
   height?: number;
   url?: string;
-}
+};
 
 const MetaImage = ({
   url,

@@ -7,14 +7,14 @@ import sentry, { SentryConfig } from "./schema/sentry";
 import server, { ServerConfig } from "./schema/server";
 import sitemap, { SitemapConfig } from "./schema/sitemap";
 
-export interface Config {
+export type Config = {
   googleAnalytics: GoogleAnalyticsConfig;
   next: NextConfig;
   prismic: PrismicConfig;
   sentry: SentryConfig;
   server: ServerConfig;
   sitemap: SitemapConfig;
-}
+};
 
 const Schema = (): Config => {
   return {

@@ -3,12 +3,12 @@ import React from "react";
 
 import styles from "./styles.module.scss";
 
-interface PartialHeaderImageProps {
+type PartialHeaderImageProps = {
   className?: string;
   id: string;
   imageDesktop?: string;
   imageMobile?: string;
-}
+};
 
 const PartialHeaderImage = ({
   className,

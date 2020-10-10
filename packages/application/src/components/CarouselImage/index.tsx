@@ -2,7 +2,7 @@ import React from "react";
 
 import styles from "./styles.module.scss";
 
-interface CarouselImageProps {
+type CarouselImageProps = {
   figure?: React.ReactNode;
   children?: React.ReactNode;
 }

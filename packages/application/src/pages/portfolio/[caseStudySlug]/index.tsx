@@ -19,10 +19,10 @@ import Slice from "%components/Slice";
 
 import NotFoundError from "%libraries/next/errors/NotFoundError";
 
-interface CaseStudyPageProps {
+type CaseStudyPageProps = {
   caseStudy: CaseStudyContentType;
   peers: Array<PeerContentType>;
-}
+};
 
 const CaseStudyPage = ({
   caseStudy,

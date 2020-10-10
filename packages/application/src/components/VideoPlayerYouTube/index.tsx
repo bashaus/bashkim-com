@@ -3,10 +3,10 @@ import React from "react";
 
 import styles from "./styles.module.scss";
 
-interface VideoPlayerYouTubeProps {
+type VideoPlayerYouTubeProps = {
   title?: string;
   v: string;
-}
+};
 
 const VideoPlayerYouTube = ({
   title,

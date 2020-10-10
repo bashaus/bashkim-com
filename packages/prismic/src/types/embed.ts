@@ -1,4 +1,4 @@
-interface EmbedPrismicType {
+type EmbedPrismicType = {
   author_name?: string;
   author_url?: string;
   embed_url?: string;
@@ -13,6 +13,6 @@ interface EmbedPrismicType {
   type?: string;
   version?: string;
   width?: number | null;
-}
+};
 
 export default EmbedPrismicType;

@@ -1,6 +1,6 @@
 import ImagePropType from "%types/image";
 
-interface HomePageContentTypePageTab {
+type HomePageContentTypePageTab = {
   featured_case_studies: Array<{
     featured_case_study: {
       id: string;
@@ -19,6 +19,6 @@ interface HomePageContentTypePageTab {
       isBroken: boolean;
     };
   }>;
-}
+};
 
 export default HomePageContentTypePageTab;

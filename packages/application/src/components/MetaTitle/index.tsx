@@ -1,10 +1,10 @@
 import Head from "next/head";
 import React from "react";
 
-interface MetaTitleProps {
+type MetaTitleProps = {
   content?: string;
   standalone?: boolean;
-}
+};
 
 const MetaTitle = ({
   content,

@@ -4,9 +4,9 @@ import { CaseStudyContentType } from "@bashkim-com/prismic";
 
 import Brick from "%components/Brick";
 
-interface PortfolioListBrickProps {
+type PortfolioListBrickProps = {
   caseStudy: CaseStudyContentType;
-}
+};
 
 const PortfolioListBrick = ({
   caseStudy,

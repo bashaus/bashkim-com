@@ -5,9 +5,9 @@ import { AccoladeSliceType } from "@bashkim-com/prismic";
 import PartialSubtitle from "%partials/Subtitle";
 import AccoladeSlice from "%slices/Accolade";
 
-interface CaseStudyAccoladesProps {
+type CaseStudyAccoladesProps = {
   slices: Array<AccoladeSliceType>;
-}
+};
 
 const CaseStudyAccolades = ({
   slices = [],

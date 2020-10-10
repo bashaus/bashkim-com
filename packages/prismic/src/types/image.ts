@@ -1,4 +1,4 @@
-interface ImagePrismicType {
+type ImagePrismicType = {
   dimensions: {
     width: number;
     height: number;
@@ -6,6 +6,6 @@ interface ImagePrismicType {
   alt: string | null;
   copyright: string | null;
   url: string;
-}
+};
 
 export default ImagePrismicType;

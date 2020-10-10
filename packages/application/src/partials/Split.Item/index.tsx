@@ -3,10 +3,10 @@ import React from "react";
 
 import styles from "./style.module.scss";
 
-interface PartialSplitItemProps {
+type PartialSplitItemProps = {
   backgroundImage?: string;
   children?: React.ReactNode;
-}
+};
 
 const PartialSplitItem = ({
   backgroundImage,

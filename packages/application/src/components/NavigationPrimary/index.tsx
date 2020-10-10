@@ -4,9 +4,9 @@ import React from "react";
 
 import styles from "./styles.module.scss";
 
-interface NavigationPrimaryProps {
+type NavigationPrimaryProps = {
   theme: string;
-}
+};
 
 const NavigationPrimary = ({ theme }: NavigationPrimaryProps): JSX.Element => (
   <nav

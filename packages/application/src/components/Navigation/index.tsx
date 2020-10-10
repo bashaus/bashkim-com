@@ -7,9 +7,9 @@ import { NavigationContext } from "%contexts/Navigation";
 
 import styles from "./styles.module.scss";
 
-interface NavigationProps {
+type NavigationProps = {
   theme: string;
-}
+};
 
 const Navigation = ({ theme }: NavigationProps): JSX.Element => {
   const { state: navigationState } = React.useContext(NavigationContext);

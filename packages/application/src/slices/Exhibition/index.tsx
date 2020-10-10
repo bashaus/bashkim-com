@@ -5,9 +5,9 @@ import { ExhibitionSliceType } from "@bashkim-com/prismic";
 import CaseStudyLifespan from "%components/CaseStudyLifespan/index";
 import LinkResolver from "%prismic/LinkResolver";
 
-interface ExhibitionSliceProps {
+type ExhibitionSliceProps = {
   slice: ExhibitionSliceType;
-}
+};
 
 const ExhibitionSlice = ({ slice }: ExhibitionSliceProps): JSX.Element => {
   const {

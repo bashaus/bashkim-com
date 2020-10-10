@@ -9,9 +9,9 @@ import PartialTitle from "%partials/Title";
 import styles from "./styles.module.scss";
 import PartialSubtitle from "%partials/Subtitle";
 
-interface CaseStudyHeaderProps {
+type CaseStudyHeaderProps = {
   caseStudy: CaseStudyContentType;
-}
+};
 
 const CaseStudyHeader = ({ caseStudy }: CaseStudyHeaderProps): JSX.Element => (
   <>
