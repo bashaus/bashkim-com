@@ -63,6 +63,9 @@ functions:
           path: /
       - http:
           method: ANY
+          path: /about
+      - http:
+          method: ANY
           path: /portfolio
       - http:
           method: ANY
@@ -99,13 +102,13 @@ resources:
   extensions:
     ApplicationLogGroup:
       Properties:
-        RetentionInDays: '3'
+        RetentionInDays: "3"
     SeoLogGroup:
       Properties:
-        RetentionInDays: '3'
+        RetentionInDays: "3"
     SitemapLogGroup:
       Properties:
-        RetentionInDays: '3'
+        RetentionInDays: "3"
 
   Resources:
     WebsiteCloudFrontOriginAccessIdentity:
