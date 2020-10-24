@@ -5,6 +5,7 @@
   "scripts": {
     "build": "tsc",
     "clean": "rm -rf build/",
+    "prebuild": "yarn clean",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
   "dependencies": {
