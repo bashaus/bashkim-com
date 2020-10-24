@@ -15,7 +15,7 @@ export const Render = (): JSX.Element => {
   const display = select("display", ["single", "double"], "double");
   const pages = number("pages", 6, { min: 1, max: 100 });
   const page = number("page", 1, { min: 1, max: 4 });
-  const pagesArray = new Array(pages).fill("").map((value, index) => index);
+  const pagesArray = new Array(pages).fill("").map((_value, index) => index);
 
   return (
     <div

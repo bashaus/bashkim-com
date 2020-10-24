@@ -6,7 +6,7 @@ const server = awsServerlessExpress.createServer(app);
 
 export const handler = (
   event: Lambda.APIGatewayEvent,
-  context: Lambda.APIGatewayEventRequestContext
+  context: Lambda.Context
 ): void => {
   awsServerlessExpress.proxy(server, event, context);
 };

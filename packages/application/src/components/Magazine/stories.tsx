@@ -13,7 +13,7 @@ export default {
 export const Render = (): JSX.Element => {
   const spread = number("spread", 1, { min: 1, max: 3 });
   const pages = 4;
-  const pagesArrray = new Array(pages).fill("").map((value, index) => index);
+  const pagesArrray = new Array(pages).fill("").map((_value, index) => index);
 
   return (
     <div

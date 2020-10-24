@@ -12,9 +12,9 @@ export type UrlType = {
 
 const SitemapTemplate = (sitemap: () => Promise<Array<UrlType>>) => {
   return async (
-    req: express.Request,
+    _req: express.Request,
     res: express.Response,
-    next: express.NextFunction
+    _next: express.NextFunction
   ): Promise<void> => {
     const doc = xmlbuilder.create(
       {

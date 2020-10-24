@@ -7,14 +7,14 @@ const app = express();
 
 // 301 Moved Permanently
 movedPermanentlySchema.forEach((entry) => {
-  app.get(entry.src, (req: express.Request, res: express.Response) => {
+  app.get(entry.src, (_req: express.Request, res: express.Response) => {
     res.redirect(301, entry.dest);
   });
 });
 
 // 410 Gone
 goneSchema.forEach((entry) => {
-  app.get(entry.src, (req: express.Request, res: express.Response) => {
+  app.get(entry.src, (_req: express.Request, res: express.Response) => {
     res.sendStatus(410);
   });
 });

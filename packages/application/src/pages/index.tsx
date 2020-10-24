@@ -1,4 +1,4 @@
-import { GetServerSideProps, NextPageContext } from "next";
+import { GetServerSideProps } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import React from "react";
