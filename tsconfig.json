@@ -1,1 +1,9 @@
-{}
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "target": "es5",
+  }
+}
