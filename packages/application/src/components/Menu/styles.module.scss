@@ -3,11 +3,19 @@
 
 .Menu {
   display: flex;
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   background: $color-white;
   z-index: z-index("Menu");
+  transform: translateY(-100%);
+  transition: all 0.3s;
+}
+
+.isVisible {
   box-shadow: 0 10px 20px -13px rgba(30, 30, 30, 0.75);
+  transform: translateY(0);
 }
 
 .back {

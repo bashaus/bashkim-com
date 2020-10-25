@@ -10,7 +10,7 @@ type NavigationPrimaryProps = {
 
 const NavigationPrimary = ({ theme }: NavigationPrimaryProps): JSX.Element => (
   <nav
-    data-heading="Bashkim.com"
+    data-heading="Main menu"
     aria-label="Main menu"
     className={styles.NavigationPrimary}
   >

@@ -11,8 +11,9 @@
 
   @include breakpoint($media-mobile) {
     position: fixed;
-    top: 0;
-    height: 100%;
+    top: 60px;
+    right: -260px;
+    bottom: 0;
     padding: 10px 20px;
     display: flex;
     flex-direction: column;
@@ -22,7 +23,7 @@
     background-color: $color-shade-background;
     box-shadow: inset 20px 0 50px -20px #D7D2CB;
     transition: all 0.3s ease-in-out;
-    right: -260px;
+    overflow-y: scroll;
 
     &.menuIsVisible {
       right: 0;
@@ -69,6 +70,7 @@
 
     @include breakpoint($media-mobile) {
       display: flex;
+      padding-bottom: 20px;
     }
 
     @include breakpoint($media-not-mobile) {

@@ -1,6 +1,9 @@
+import { ScrollDirection } from "./types";
+
 export type NavigationContextState = {
-  scrollAtTop: boolean;
   menuIsVisible: boolean;
+  scrollAtTop: boolean;
+  scrollDirection: ScrollDirection;
 };
 
 export type NavigationContextType = {
@@ -9,6 +12,7 @@ export type NavigationContextType = {
 };
 
 export const INITIAL_STATE: NavigationContextState = {
-  scrollAtTop: false,
   menuIsVisible: false,
+  scrollAtTop: true,
+  scrollDirection: ScrollDirection.UP,
 };

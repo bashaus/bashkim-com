@@ -6,6 +6,10 @@
   outline: none;
   overflow: hidden;
 
+  @include breakpoint($media-mobile) {
+    margin-top: 60px;
+  }
+
   @include breakpoint($media-not-mobile) {
     margin-top: -61px;
   }

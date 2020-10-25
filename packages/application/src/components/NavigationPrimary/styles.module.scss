@@ -14,7 +14,6 @@
   @include breakpoint($media-mobile) {
     a {
       display: block;
-      border-bottom: solid 1px $color-shade-border;
       line-height: 48px;
       text-transform: uppercase;
       color: #B6B6B6;

@@ -49,7 +49,7 @@ const Page = ({
 
       <div
         className={classNames({
-          [styles.menuIsVisible]: navigationState.isVisible,
+          [styles.menuIsVisible]: navigationState.menuIsVisible,
         })}
       >
         <div className={styles.menu}>

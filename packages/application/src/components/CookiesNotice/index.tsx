@@ -11,6 +11,7 @@ const CookiesNotice = (): JSX.Element | null => {
   const { state: cookiesState, dispatch: cookiesDispatch } = useContext(
     CookiesContext
   );
+
   const [isVisible, setIsVisible] = useState(!cookiesState.isDismissed);
 
   const handleDismissClick = (): void => {
@@ -22,7 +23,7 @@ const CookiesNotice = (): JSX.Element | null => {
   };
 
   if (!isVisible) {
-    return null;
+    return <div />;
   }
 
   return (
