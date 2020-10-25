@@ -3,8 +3,8 @@ import Link from "next/link";
 
 import PartialHeaderText from "%partials/HeaderText";
 
-import IconGitHub from "%public/static/vectors/social/github.svg";
-import IconPortfolio from "%public/static/vectors/icons/portfolio.svg";
+import { ReactComponent as IconGitHub } from "%public/static/vectors/social/github.svg";
+import { ReactComponent as IconPortfolio } from "%public/static/vectors/icons/portfolio.svg";
 
 import styles from "./styles.module.scss";
 

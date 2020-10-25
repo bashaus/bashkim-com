@@ -6,7 +6,7 @@ import { AccoladeSliceType } from "@bashkim-com/prismic";
 
 import LinkResolver from "%prismic/LinkResolver";
 
-import TrophyImage from "%public/static/vectors/icons/trophy.svg";
+import { ReactComponent as TrophyImage } from "%public/static/vectors/icons/trophy.svg";
 
 import styles from "./styles.module.scss";
 
