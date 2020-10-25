@@ -70,7 +70,7 @@
     transition: fill 0.3s ease-in-out;
   }
 
-  .NavigationSocial.atTop & svg {
+  .NavigationSocial.scrollAtTop & svg {
     fill: $color-white;
   }
 }

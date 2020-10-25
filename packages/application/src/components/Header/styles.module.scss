@@ -24,7 +24,7 @@
     transition: all 0.3s ease-in-out;
     right: -260px;
 
-    &.isVisible {
+    &.menuIsVisible {
       right: 0;
     }
   }
@@ -43,14 +43,14 @@
       transition-timing-function: ease-in-out;
     }
 
-    &.atTop {
+    &.scrollAtTop {
       border-bottom: transparent;
       background-color: rgba(255, 255, 255, 0);
       box-shadow: inset 0 40px 40px -20px rgba(50, 50, 50, 0.6);
       text-shadow: 0 0 2px transparentize($color-charcol, 0.2);
     }
 
-    &.atTop .headerLogo {
+    &.scrollAtTop .headerLogo {
       color: $color-white;
     }
   }
@@ -89,8 +89,8 @@
     flex-shrink: 0;
     flex-basis: auto;
 
-    &.atTop strong,
-    &.atTop span {
+    &.scrollAtTop strong,
+    &.scrollAtTop span {
       color: $color-white;
     }
   }

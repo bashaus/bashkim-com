@@ -6,11 +6,13 @@ const CookiesReducer = (
   action: any
 ): CookiesContextState => {
   switch (action.type) {
-    case actions.DISMISS:
+    case actions.DISMISS: {
       return { ...state, isDismissed: true };
+    }
 
-    default:
+    default: {
       return state;
+    }
   }
 };
 

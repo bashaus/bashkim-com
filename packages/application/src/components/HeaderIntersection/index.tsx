@@ -13,7 +13,7 @@ const HeaderIntersection = (): JSX.Element => {
     (entries: Array<IntersectionObserverEntry>): void => {
       entries.forEach((entry) =>
         navigationDispatch({
-          type: NavigationActions.SET_AT_TOP,
+          type: NavigationActions.SET_SCROLL_AT_TOP,
           payload: entry.isIntersecting,
         })
       );
@@ -23,7 +23,9 @@ const HeaderIntersection = (): JSX.Element => {
 
   useEffect(() => {
     if (typeof IntersectionObserver === typeof undefined) {
-      return (): void => {}; // IntersectionObserver not supported
+      return (): void => {
+        /* IntersectionObserver not supported */
+      };
     }
 
     const interactionObserver = new IntersectionObserver(

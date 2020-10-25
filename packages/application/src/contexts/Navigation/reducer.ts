@@ -6,17 +6,21 @@ const NavigationReducer = (
   action: any
 ): NavigationContextState => {
   switch (action.type) {
-    case actions.HIDE:
-      return { ...state, isVisible: false };
+    case actions.MENU_HIDE: {
+      return { ...state, menuIsVisible: false };
+    }
 
-    case actions.SET_AT_TOP:
-      return { ...state, atTop: action.payload };
+    case actions.MENU_TOGGLE: {
+      return { ...state, menuIsVisible: !state.menuIsVisible };
+    }
 
-    case actions.TOGGLE:
-      return { ...state, isVisible: !state.isVisible };
+    case actions.SET_SCROLL_AT_TOP: {
+      return { ...state, scrollAtTop: action.payload };
+    }
 
-    default:
+    default: {
       return state;
+    }
   }
 };
 

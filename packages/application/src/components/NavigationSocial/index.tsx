@@ -18,7 +18,7 @@ const NavigationSocial = (): JSX.Element => {
       aria-label="Social media"
       className={classNames({
         [styles.NavigationSocial]: true,
-        [styles.atTop]: navigationState.atTop,
+        [styles.scrollAtTop]: navigationState.scrollAtTop,
       })}
     >
       <ul>

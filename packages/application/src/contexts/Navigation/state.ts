@@ -1,6 +1,6 @@
 export type NavigationContextState = {
-  atTop: boolean;
-  isVisible: boolean;
+  scrollAtTop: boolean;
+  menuIsVisible: boolean;
 };
 
 export type NavigationContextType = {
@@ -9,6 +9,6 @@ export type NavigationContextType = {
 };
 
 export const INITIAL_STATE: NavigationContextState = {
-  atTop: false,
-  isVisible: false,
+  scrollAtTop: false,
+  menuIsVisible: false,
 };

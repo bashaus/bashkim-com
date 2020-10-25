@@ -11,14 +11,14 @@ const MenuSignifierButton = (): JSX.Element => {
   );
 
   const handleSignifierClick = (): void => {
-    navigationDispatch({ type: NavigationActions.TOGGLE });
+    navigationDispatch({ type: NavigationActions.MENU_TOGGLE });
   };
 
   return (
     <button
       type="button"
       aria-hidden="true"
-      aria-pressed={navigationState.isVisible}
+      aria-pressed={navigationState.menuIsVisible}
       onClick={handleSignifierClick}
       className={styles.MenuSignifierButton}
     >

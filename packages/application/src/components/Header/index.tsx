@@ -18,8 +18,8 @@ const Header = ({ theme }: HeaderProps): JSX.Element => {
     <header
       className={classNames({
         [styles.header]: true,
-        [styles.atTop]: navigationState.atTop,
-        [styles.isVisible]: navigationState.isVisible,
+        [styles.scrollAtTop]: navigationState.scrollAtTop,
+        [styles.menuIsVisible]: navigationState.menuIsVisible,
       })}
     >
       <div className={styles.headerContainer}>

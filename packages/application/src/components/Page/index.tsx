@@ -29,7 +29,7 @@ const Page = ({
 
   const handleRouteChange = useCallback(
     (/* url */) => {
-      navigationDispatch({ type: NavigationActions.HIDE });
+      navigationDispatch({ type: NavigationActions.MENU_HIDE });
     },
     [navigationDispatch]
   );
