@@ -11,7 +11,7 @@ type FullTextSliceProps = {
 };
 
 const FullTextSlice = ({ slice }: FullTextSliceProps): JSX.Element => {
-  const { FullTextSliceType_Body: body } = slice.primary;
+  const { full_text_slice_type_body: body } = slice.primary;
 
   return (
     <PartialFullText>

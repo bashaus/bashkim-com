@@ -4,10 +4,10 @@ import SliceType from "%types/slice";
 
 interface CaptionedScreenshotsSliceType extends SliceType {
   items: Array<{
-    CaptionedScreenshotsSliceType_Images: ImagePrismicType;
+    captioned_screenshots_slice_type_images: ImagePrismicType;
   }>;
   primary: {
-    CaptionedScreenshotsSliceType_Caption: RichTextPrismicType<
+    captioned_screenshots_slice_type_caption: RichTextPrismicType<
       | "paragraph"
       | "heading3"
       | "strong"

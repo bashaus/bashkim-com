@@ -6,7 +6,7 @@ import SliceType from "%types/slice";
 interface FullTextSliceType extends SliceType {
   items?: Array<{}>;
   primary: {
-    FullTextSliceType_Body: RichTextPrismicType<RichTextTypePrismicItemType>;
+    full_text_slice_type_body: RichTextPrismicType<RichTextTypePrismicItemType>;
   };
 }
 

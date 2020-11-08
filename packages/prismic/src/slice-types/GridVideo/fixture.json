@@ -3,7 +3,7 @@
   "slice_label": null,
   "items": [
     {
-      "GridVideoSliceType_Poster": {
+      "grid_video_slice_type_poster": {
         "dimensions": {
           "width": 400,
           "height": 300
@@ -12,7 +12,7 @@
         "copyright": null,
         "url": "http://placehold.it/400x300"
       },
-      "GridVideoSliceType_Video": {
+      "grid_video_slice_type_video": {
         "thumbnail_url": "https://i.ytimg.com/vi/2CEo8If6rmQ/hqdefault.jpg",
         "thumbnail_height": 360,
         "provider_url": "https://www.youtube.com/",
@@ -30,7 +30,7 @@
       }
     },
     {
-      "GridVideoSliceType_Poster": {
+      "grid_video_slice_type_poster": {
         "dimensions": {
           "width": 400,
           "height": 300
@@ -39,7 +39,7 @@
         "copyright": null,
         "url": "http://placehold.it/400x300"
       },
-      "GridVideoSliceType_Video": {
+      "grid_video_slice_type_video": {
         "thumbnail_url": "https://i.ytimg.com/vi/2CEo8If6rmQ/hqdefault.jpg",
         "thumbnail_height": 360,
         "provider_url": "https://www.youtube.com/",
@@ -57,7 +57,7 @@
       }
     },
     {
-      "GridVideoSliceType_Poster": {
+      "grid_video_slice_type_poster": {
         "dimensions": {
           "width": 400,
           "height": 300
@@ -66,7 +66,7 @@
         "copyright": null,
         "url": "http://placehold.it/400x300"
       },
-      "GridVideoSliceType_Video": {
+      "grid_video_slice_type_video": {
         "thumbnail_url": "https://i.ytimg.com/vi/2CEo8If6rmQ/hqdefault.jpg",
         "thumbnail_height": 360,
         "provider_url": "https://www.youtube.com/",
@@ -84,7 +84,7 @@
       }
     },
     {
-      "GridVideoSliceType_Poster": {
+      "grid_video_slice_type_poster": {
         "dimensions": {
           "width": 400,
           "height": 300
@@ -93,7 +93,7 @@
         "copyright": null,
         "url": "http://placehold.it/400x300"
       },
-      "GridVideoSliceType_Video": {
+      "grid_video_slice_type_video": {
         "thumbnail_url": "https://i.ytimg.com/vi/2CEo8If6rmQ/hqdefault.jpg",
         "thumbnail_height": 360,
         "provider_url": "https://www.youtube.com/",

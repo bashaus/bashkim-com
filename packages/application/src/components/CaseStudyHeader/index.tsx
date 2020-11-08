@@ -17,14 +17,14 @@ const CaseStudyHeader = ({ caseStudy }: CaseStudyHeaderProps): JSX.Element => (
   <>
     <PartialHeaderImage
       id="CaseStudyPage-Header"
-      imageDesktop={caseStudy.data.image_header_desktop.url}
-      imageMobile={caseStudy.data.image_header_mobile.url}
+      imageDesktop={caseStudy.image_header_desktop?.url}
+      imageMobile={caseStudy.image_header_mobile?.url}
     />
 
     <section className="group">
-      <PartialTitle image={caseStudy.data.image_icon.url}>
-        <h1>{caseStudy.data.meta_title}</h1>
-        <p>{caseStudy.data.meta_description}</p>
+      <PartialTitle image={caseStudy.image_icon.url}>
+        <h1>{caseStudy.meta_title}</h1>
+        <p>{caseStudy.meta_description}</p>
       </PartialTitle>
     </section>
 

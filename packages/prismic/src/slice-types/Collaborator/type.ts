@@ -4,11 +4,11 @@ import SliceType from "%types/slice";
 interface CollaboratorSliceType extends SliceType {
   items: Array<any>;
   primary: {
-    CollaboratorSliceType_Peer: DocumentLinkPrismicType<{
+    collaborator_slice_type_peer: DocumentLinkPrismicType<{
       peer_name?: string;
     }>;
-    CollaboratorSliceType_Company?: string;
-    CollaboratorSliceType_Role?: string;
+    collaborator_slice_type_company?: string;
+    collaborator_slice_type_role?: string;
   };
 }
 

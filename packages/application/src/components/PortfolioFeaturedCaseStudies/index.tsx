@@ -19,13 +19,11 @@ const PortfolioFeaturedCaseStudies = ({
       const {
         featured_title: title,
         featured_description: description,
-        featured_case_study: featuredCaseStudy,
+        featured_case_study: caseStudy,
       } = feature;
 
-      const caseStudy = featuredCaseStudy.data;
-
       return (
-        <li className={styles.item} key={feature.featured_case_study.id}>
+        <li className={styles.item} key={caseStudy._meta.id}>
           <div className={styles.details}>
             {title && RichText.render(title, LinkResolver)}
             {description && RichText.render(description, LinkResolver)}
@@ -33,7 +31,7 @@ const PortfolioFeaturedCaseStudies = ({
 
           <Link
             href="/portfolio/[caseStudySlug]"
-            as={`/portfolio/${featuredCaseStudy.uid}`}
+            as={`/portfolio/${caseStudy._meta.uid}`}
           >
             <a className={styles.tile}>
               <Tile

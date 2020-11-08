@@ -13,38 +13,33 @@ type CarouselImagesSliceProps = {
 
 const CarouselImagesSlice = ({
   slice,
-}: CarouselImagesSliceProps): JSX.Element => {
-  /* repeat */
-  const { items } = slice;
+}: CarouselImagesSliceProps): JSX.Element => (
+  <PartialFullImage>
+    <Carousel>
+      {slice.fields.map((field) => {
+        const {
+          carousel_images_slice_type_caption: caption,
+          carousel_images_slice_type_image: image,
+        } = field;
 
-  return (
-    <PartialFullImage>
-      <Carousel>
-        {items.map((item) => {
-          const {
-            CarouselImagesSliceType_Caption: caption,
-            CarouselImagesSliceType_Image: image,
-          } = item;
-
-          return (
-            <CarouselImage
-              key={image.url}
-              figure={
-                <img
-                  src={image.url}
-                  alt={image.alt || ""}
-                  width={image.dimensions.width}
-                  height={image.dimensions.height}
-                />
-              }
-            >
-              {caption && RichText.render(caption, LinkResolver)}
-            </CarouselImage>
-          );
-        })}
-      </Carousel>
-    </PartialFullImage>
-  );
-};
+        return (
+          <CarouselImage
+            key={image.url}
+            figure={
+              <img
+                src={image.url}
+                alt={image.alt || ""}
+                width={image.dimensions.width}
+                height={image.dimensions.height}
+              />
+            }
+          >
+            {caption && RichText.render(caption, LinkResolver)}
+          </CarouselImage>
+        );
+      })}
+    </Carousel>
+  </PartialFullImage>
+);
 
 export default CarouselImagesSlice;

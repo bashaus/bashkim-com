@@ -6,7 +6,7 @@
   "display": "list",
   "non-repeat": {},
   "repeat": {
-    "NewspaperSliceType_Group": {
+    "newspaper_slice_type_group": {
       "type": "StructuredText",
       "config": {
         "multi": "paragraph, heading3, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",

@@ -5,32 +5,32 @@
   "icon": "photo",
   "display": "list",
   "non-repeat": {
-    "ExhibitionSliceType_Name": {
+    "exhibition_slice_type_name": {
       "type": "StructuredText",
       "config": {
         "single": "heading3",
         "label": "Name"
       }
     },
-    "ExhibitionSliceType_Link": {
+    "exhibition_slice_type_link": {
       "type": "Link",
       "config": {
         "label": "Link"
       }
     },
-    "ExhibitionSliceType_OpeningDate": {
+    "exhibition_slice_type_opening_date": {
       "type": "Date",
       "config": {
         "label": "Opening date"
       }
     },
-    "ExhibitionSliceType_ClosingDate": {
+    "exhibition_slice_type_closing_date": {
       "type": "Date",
       "config": {
         "label": "Closing date"
       }
     },
-    "ExhibitionSliceType_Location": {
+    "exhibition_slice_type_location": {
       "type": "StructuredText",
       "config": {
         "multi": "paragraph",

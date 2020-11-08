@@ -14,8 +14,8 @@ const CaptionedImageSlice = ({
   slice,
 }: CaptionedImageSliceProps): JSX.Element => {
   const {
-    CaptionedImageSliceType_Caption: caption,
-    CaptionedImageSliceType_Image: image,
+    captioned_image_slice_type_caption: caption,
+    captioned_image_slice_type_image: image,
   } = slice.primary;
 
   return (

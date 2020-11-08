@@ -1,5 +1,4 @@
 import { GetServerSideProps } from "next";
-import Prismic from "prismic-javascript";
 import React from "react";
 import PrismicClient from "@bashkim-com/prismic";
 import {
@@ -17,21 +16,23 @@ import PartialSubtitle from "%partials/Subtitle";
 import PortfolioFeaturedCaseStudies from "%components/PortfolioFeaturedCaseStudies";
 import PortfolioList from "%components/PortfolioList";
 
+import { PortfolioPageQuery } from "%prismic/queries/PortfolioPageQuery";
+
 type PortfolioPageProps = {
   caseStudies: Array<CaseStudyContentType>;
-  page: PortfolioPageContentType;
+  portfolioPage: PortfolioPageContentType;
 };
 
 const PortfolioPage = ({
   caseStudies,
-  page,
+  portfolioPage,
 }: PortfolioPageProps): JSX.Element => {
   const {
     meta_title: metaTitle,
     meta_description: metaDescription,
     meta_keywords: metaKeywords,
     featured,
-  } = page.data;
+  } = portfolioPage;
 
   return (
     <LayoutDefault backButton={MenuBackButtonHomeImpl} theme="portfolio">
@@ -62,32 +63,15 @@ const PortfolioPage = ({
   );
 };
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
-  const { req } = context;
-  const prismicClient = PrismicClient(req);
-
-  const caseStudies = await prismicClient.query(
-    Prismic.Predicates.at("document.type", "case_study"),
-    {
-      fetchLinks: ["technology.technology_name", "technology.technology_icon"],
-      orderings: "[my.case_study.info_launch_date desc]",
-      pageSize: 100,
-    }
-  );
-
-  const page = await prismicClient.getSingle("portfolio_page", {
-    fetchLinks: [
-      "case_study.meta_title",
-      "case_study.meta_description",
-      "case_study.image_icon",
-      "case_study.image_poster",
-    ],
+export const getServerSideProps: GetServerSideProps = async () => {
+  const result = await PrismicClient.query({
+    query: PortfolioPageQuery,
   });
 
   return {
     props: {
-      caseStudies: caseStudies.results,
-      page,
+      portfolioPage: result.data.portfolioPage.edges[0].node,
+      caseStudies: result.data.caseStudies.edges.map((x: any) => x.node),
     } as PortfolioPageProps,
   };
 };

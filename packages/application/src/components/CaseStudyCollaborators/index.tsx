@@ -9,13 +9,11 @@ import styles from "./styles.module.scss";
 
 type CaseStudyCollaboratorsProps = {
   myRole?: string;
-  peers: Array<any>;
   slices: Array<any>;
 };
 
 const CaseStudyCollaborators = ({
   slices = [],
-  peers = [],
   myRole,
 }: CaseStudyCollaboratorsProps): JSX.Element | null => {
   if (!slices.length) {
@@ -39,12 +37,9 @@ const CaseStudyCollaborators = ({
           {myRole}
         </li>
 
-        {slices.map((slice, i) => {
-          const { id: peerId } = slice.primary.CollaboratorSliceType_Peer;
-          const peer = peers.find((p) => p.id === peerId);
-
-          return <CollaboratorSlice key={i} peer={peer} slice={slice} />;
-        })}
+        {slices.map((slice, i) => (
+          <CollaboratorSlice key={i} slice={slice} />
+        ))}
       </ul>
     </>
   );

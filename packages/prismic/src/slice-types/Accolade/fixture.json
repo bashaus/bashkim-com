@@ -2,30 +2,30 @@
   "slice_type": "AccoladeSliceType",
   "slice_label": null,
   "primary": {
-    "AccoladeSliceType_Issuer": [
+    "accolade_slice_type_issuer": [
       {
         "type": "heading3",
         "text": "Award Issuer",
         "spans": []
       }
     ],
-    "AccoladeSliceType_Description": [
+    "accolade_slice_type_description": [
       {
         "type": "paragraph",
         "text": "A description of the award",
         "spans": []
       }
     ],
-    "AccoladeSliceType_Date": "2015-12-01"
+    "accolade_slice_type_date": "2015-12-01"
   },
   "items": [
     {
-      "AccoladeSliceType_AwardPlace": "gold",
-      "AccoladeSliceType_AwardLink": {
+      "accolade_slice_type_award_place": "gold",
+      "accolade_slice_type_award_link": {
         "link_type": "Web",
         "url": "https://www.example.com"
       },
-      "AccoladeSliceType_AwardCategory": [
+      "accolade_slice_type_award_category": [
         {
           "type": "paragraph",
           "text": "Gold Award",
@@ -34,12 +34,12 @@
       ]
     },
     {
-      "AccoladeSliceType_AwardPlace": "silver",
-      "AccoladeSliceType_AwardLink": {
+      "accolade_slice_type_award_place": "silver",
+      "accolade_slice_type_award_link": {
         "link_type": "Web",
         "url": "https://www.example.com"
       },
-      "AccoladeSliceType_AwardCategory": [
+      "accolade_slice_type_award_category": [
         {
           "type": "paragraph",
           "text": "Silver Award",
@@ -48,12 +48,12 @@
       ]
     },
     {
-      "AccoladeSliceType_AwardPlace": "bronze",
-      "AccoladeSliceType_AwardLink": {
+      "accolade_slice_type_award_place": "bronze",
+      "accolade_slice_type_award_link": {
         "link_type": "Web",
         "url": "https://www.example.com"
       },
-      "AccoladeSliceType_AwardCategory": [
+      "accolade_slice_type_award_category": [
         {
           "type": "paragraph",
           "text": "Bronze Award",
@@ -62,12 +62,12 @@
       ]
     },
     {
-      "AccoladeSliceType_AwardPlace": "honour",
-      "AccoladeSliceType_AwardLink": {
+      "accolade_slice_type_award_place": "honour",
+      "accolade_slice_type_award_link": {
         "link_type": "Web",
         "url": "https://www.example.com"
       },
-      "AccoladeSliceType_AwardCategory": [
+      "accolade_slice_type_award_category": [
         {
           "type": "paragraph",
           "text": "Honour",
@@ -76,12 +76,12 @@
       ]
     },
     {
-      "AccoladeSliceType_AwardPlace": "shortlist",
-      "AccoladeSliceType_AwardLink": {
+      "accolade_slice_type_award_place": "shortlist",
+      "accolade_slice_type_award_link": {
         "link_type": "Web",
         "url": "https://www.example.com"
       },
-      "AccoladeSliceType_AwardCategory": [
+      "accolade_slice_type_award_category": [
         {
           "type": "paragraph",
           "text": "Shortlist",

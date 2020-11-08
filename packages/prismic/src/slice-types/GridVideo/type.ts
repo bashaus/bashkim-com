@@ -5,9 +5,9 @@ import SliceType from "%types/slice";
 
 interface GridVideoSliceType extends SliceType {
   items: Array<{
-    GridVideoSliceType_Video: EmbedPrismicType;
-    GridVideoSliceType_Poster: ImagePrismicType;
-    GridVideoSliceType_Description: RichTextPrismicType<"paragraph">;
+    grid_video_slice_type_video: EmbedPrismicType;
+    grid_video_slice_type_poster: ImagePrismicType;
+    grid_video_slice_type_description: RichTextPrismicType<"paragraph">;
   }>;
   primary: {};
 }

@@ -15,8 +15,8 @@ const CaptionedVideoSlice = ({
   slice,
 }: CaptionedVideoSliceProps): JSX.Element | null => {
   const {
-    CaptionedVideoSliceType_Caption: caption,
-    CaptionedVideoSliceType_Video: video,
+    captioned_video_slice_type_caption: caption,
+    captioned_video_slice_type_video: video,
   } = slice.primary;
 
   if (!video.embed_url) {

@@ -3,7 +3,7 @@
   "slice_label": null,
   "items": [
     {
-      "CarouselImagesSliceType_Caption": [
+      "carousel_images_slice_type_caption": [
         {
           "type": "heading3",
           "text": "First slide",
@@ -15,7 +15,7 @@
           "spans": []
         }
       ],
-      "CarouselImagesSliceType_Image": {
+      "carousel_images_slice_type_image": {
         "dimensions": {
           "width": 600,
           "height": 400
@@ -26,7 +26,7 @@
       }
     },
     {
-      "CarouselImagesSliceType_Caption": [
+      "carousel_images_slice_type_caption": [
         {
           "type": "heading3",
           "text": "Second slide",
@@ -38,7 +38,7 @@
           "spans": []
         }
       ],
-      "CarouselImagesSliceType_Image": {
+      "carousel_images_slice_type_image": {
         "dimensions": {
           "width": 600,
           "height": 400

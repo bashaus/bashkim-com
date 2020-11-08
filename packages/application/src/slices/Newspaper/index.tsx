@@ -12,9 +12,8 @@ type NewspaperSliceProps = {
 
 const NewspaperSlice = ({ slice }: NewspaperSliceProps): JSX.Element => (
   <PartialNewspaper>
-    {slice.items.map((item, i) => {
-      const { NewspaperSliceType_Group: group } = item;
-
+    {slice.fields.map((field, i) => {
+      const { newspaper_slice_type_group: group } = field;
       return <div key={i}>{group && RichText.render(group, LinkResolver)}</div>;
     })}
   </PartialNewspaper>

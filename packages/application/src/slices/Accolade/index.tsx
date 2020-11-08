@@ -16,9 +16,9 @@ type AccoladeSliceProps = {
 
 const AccoladeSlice = ({ slice }: AccoladeSliceProps): JSX.Element => {
   const {
-    AccoladeSliceType_Issuer: issuer,
-    AccoladeSliceType_Description: description,
-    AccoladeSliceType_Date: date,
+    accolade_slice_type_issuer: issuer,
+    accolade_slice_type_description: description,
+    accolade_slice_type_date: date,
   } = slice.primary;
 
   return (
@@ -32,12 +32,12 @@ const AccoladeSlice = ({ slice }: AccoladeSliceProps): JSX.Element => {
       </div>
 
       <ol className={styles.awards}>
-        {slice.items.map((award, i) => {
+        {slice.fields.map((field, i) => {
           const {
-            AccoladeSliceType_AwardPlace: awardPlace,
-            AccoladeSliceType_AwardLink: awardLink,
-            AccoladeSliceType_AwardCategory: awardCategory,
-          } = award;
+            accolade_slice_type_award_place: awardPlace,
+            accolade_slice_type_award_link: awardLink,
+            accolade_slice_type_award_category: awardCategory,
+          } = field;
 
           const awardHref = Link.url(awardLink, LinkResolver);
 

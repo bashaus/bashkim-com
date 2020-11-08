@@ -3,7 +3,7 @@
   "slice_label": null,
   "items": [
     {
-      "NewspaperSliceType_Group": [
+      "newspaper_slice_type_group": [
         {
           "type": "paragraph",
           "text": "Dolor sit amet, consectetur adipiscing elit. Suspendisse.",
@@ -12,7 +12,7 @@
       ]
     },
     {
-      "NewspaperSliceType_Group": [
+      "newspaper_slice_type_group": [
         {
           "type": "paragraph",
           "text": "Dolor sit amet, consectetur adipiscing elit. Suspendisse.",
@@ -21,7 +21,7 @@
       ]
     },
     {
-      "NewspaperSliceType_Group": [
+      "newspaper_slice_type_group": [
         {
           "type": "paragraph",
           "text": "Dolor sit amet, consectetur adipiscing elit. Suspendisse.",
@@ -30,7 +30,7 @@
       ]
     },
     {
-      "NewspaperSliceType_Group": [
+      "newspaper_slice_type_group": [
         {
           "type": "paragraph",
           "text": "Dolor sit amet, consectetur adipiscing elit. Suspendisse.",

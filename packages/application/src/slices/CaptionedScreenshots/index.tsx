@@ -19,32 +19,29 @@ const CaptionedScreenshotsSlice = ({
   initialWidth = 1024,
 }: CaptionedScreenshotsSliceProps): JSX.Element => {
   /* non-repeat */
-  const { CaptionedScreenshotsSliceType_Caption: caption } = slice.primary;
+  const { captioned_screenshots_slice_type_caption: caption } = slice.primary;
 
   /* repeat */
-  const { items } = slice;
+  const fields = [...slice.fields];
 
   // Sort the elements by the width of the image
-  items.sort((a, b) => {
-    const aWidth = a.CaptionedScreenshotsSliceType_Images.dimensions.width;
-    const bWidth = b.CaptionedScreenshotsSliceType_Images.dimensions.width;
-
-    if (aWidth < bWidth) return -1;
-    if (aWidth > bWidth) return 1;
-    return 0;
+  fields.sort((a, b) => {
+    const aWidth = a.captioned_screenshots_slice_type_images.dimensions.width;
+    const bWidth = b.captioned_screenshots_slice_type_images.dimensions.width;
+    return aWidth - bWidth;
   });
 
   // Find the first screenshot larger or equal to initial width
-  const defaultSelectedIndex = items.findIndex(
-    (item) =>
-      item.CaptionedScreenshotsSliceType_Images.dimensions.width >= initialWidth
+  const defaultSelectedIndex = fields.findIndex(
+    (field) =>
+      field.captioned_screenshots_slice_type_images.dimensions.width >= initialWidth
   );
 
   const [selectedIndex, setSelectedIndex] = React.useState(
     defaultSelectedIndex
   );
   const selectedImage =
-    items[selectedIndex].CaptionedScreenshotsSliceType_Images;
+    fields[selectedIndex].captioned_screenshots_slice_type_images;
 
   const handleSizeChange = (e: ChangeEvent<HTMLInputElement>): void => {
     setSelectedIndex(parseInt(e.currentTarget.value, 10));
@@ -80,7 +77,7 @@ const CaptionedScreenshotsSlice = ({
         <input
           type="range"
           min={0}
-          max={items.length - 1}
+          max={fields.length - 1}
           step={1}
           value={selectedIndex}
           onChange={handleSizeChange}

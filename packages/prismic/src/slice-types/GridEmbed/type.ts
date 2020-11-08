@@ -3,7 +3,7 @@ import SliceType from "%types/slice";
 
 interface GridEmbedSliceType extends SliceType {
   items: Array<{
-    GridEmbedSliceType_Embed: EmbedPrismicType;
+    grid_embed_slice_type_embed: EmbedPrismicType;
   }>;
   primary: {};
 }

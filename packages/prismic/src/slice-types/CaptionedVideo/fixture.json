@@ -3,7 +3,7 @@
   "slice_label": null,
   "items": [{}],
   "primary": {
-    "CaptionedVideoSliceType_Caption": [
+    "captioned_video_slice_type_caption": [
       {
         "type": "heading3",
         "text": "Concept",
@@ -15,7 +15,7 @@
         "spans": []
       }
     ],
-    "CaptionedVideoSliceType_Video": {
+    "captioned_video_slice_type_video": {
       "thumbnail_url": "https://i.ytimg.com/vi/2CEo8If6rmQ/hqdefault.jpg",
       "thumbnail_height": 360,
       "provider_url": "https://www.youtube.com/",

@@ -1,8 +1,8 @@
 import dayjs from "dayjs";
-import Prismic from "prismic-javascript";
 import config from "@bashkim-com/config";
 import PrismicClient, { CaseStudyContentType } from "@bashkim-com/prismic";
 
+import { CaseStudiesQuery } from "../prismic/queries/caseStudies";
 import { UrlType } from "../templates/sitemap";
 
 export const CaseStudiesSitemap = async (): Promise<Array<UrlType>> => {
@@ -19,18 +19,19 @@ export const CaseStudiesSitemap = async (): Promise<Array<UrlType>> => {
   } as UrlType);
 
   /* Portfolio case studies */
-  const caseStudies = await PrismicClient().query(
-    Prismic.Predicates.at("document.type", "case_study"),
-    { pageSize: 100 }
-  );
+  const result = await PrismicClient.query({
+    query: CaseStudiesQuery,
+  });
 
-  caseStudies.results.forEach((caseStudy: CaseStudyContentType) => {
+  result.data.caseStudies.edges.forEach((edge: CaseStudyContentType) => {
+    const caseStudy = edge.node;
+
     urlset.push({
       url: {
-        loc: `${config.sitemap.baseHref}/portfolio/${caseStudy.uid}`,
-        lastmod: dayjs(caseStudy.last_publication_date || undefined).format(),
-        changefreq: caseStudy.data.sitemap_changefreq || "monthly",
-        priority: caseStudy.data.sitemap_priority || "0.5",
+        loc: `${config.sitemap.baseHref}/portfolio/${caseStudy._meta.uid}`,
+        lastmod: dayjs(caseStudy._meta.lastPublicationDate).format(),
+        changefreq: caseStudy.sitemap_changefreq || "monthly",
+        priority: caseStudy.sitemap_priority || "0.5",
       },
     } as UrlType);
   });

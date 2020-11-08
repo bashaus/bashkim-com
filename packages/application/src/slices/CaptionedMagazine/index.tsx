@@ -25,14 +25,14 @@ const CaptionedMagazineSlice = ({
   const [pageNumbers, setPageNumbers] = useState<Array<number>>([1]);
 
   /* non-repeat */
-  const { CaptionedMagazineSliceType_Caption: caption } = slice.primary;
+  const { captioned_magazine_slice_type_caption: caption } = slice.primary;
 
   /* repeat */
-  const { items } = slice;
+  const { fields } = slice;
 
   /* helpers */
-  const firstImage = items[0].CaptionedMagazineSliceType_Images;
-  const pages = items.length;
+  const firstImage = fields[0].captioned_magazine_slice_type_images;
+  const pages = fields.length;
 
   /* handlers */
   const handleImageDrag = (e: React.DragEvent<HTMLImageElement>): void => {
@@ -81,17 +81,17 @@ const CaptionedMagazineSlice = ({
             pageWidth={firstImage.dimensions.width}
             pageHeight={firstImage.dimensions.height}
           >
-            {items.map((item) => (
-              <li key={item.CaptionedMagazineSliceType_Images.url}>
+            {fields.map((field) => (
+              <li key={field.captioned_magazine_slice_type_images.url}>
                 <img
                   onDragStart={handleImageDrag}
-                  src={item.CaptionedMagazineSliceType_Images.url}
-                  alt={item.CaptionedMagazineSliceType_Images.alt || ""}
+                  src={field.captioned_magazine_slice_type_images.url}
+                  alt={field.captioned_magazine_slice_type_images.alt || ""}
                   width={
-                    item.CaptionedMagazineSliceType_Images.dimensions.width
+                    field.captioned_magazine_slice_type_images.dimensions.width
                   }
                   height={
-                    item.CaptionedMagazineSliceType_Images.dimensions.height
+                    field.captioned_magazine_slice_type_images.dimensions.height
                   }
                 />
               </li>

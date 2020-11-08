@@ -11,12 +11,15 @@ type PortfolioListBrickProps = {
 const PortfolioListBrick = ({
   caseStudy,
 }: PortfolioListBrickProps): JSX.Element => (
-  <Link href="/portfolio/[caseStudySlug]" as={`/portfolio/${caseStudy.uid}`}>
+  <Link
+    href="/portfolio/[caseStudySlug]"
+    as={`/portfolio/${caseStudy._meta.uid}`}
+  >
     <a>
       <Brick
-        title={caseStudy.data.meta_title}
-        description={caseStudy.data.meta_description}
-        icon={caseStudy.data.image_icon.url}
+        title={caseStudy.meta_title}
+        description={caseStudy.meta_description}
+        icon={caseStudy.image_icon.url}
       />
     </a>
   </Link>

@@ -5,11 +5,11 @@ import SliceType from "%types/slice";
 interface ExhibitionSliceType extends SliceType {
   items: Array<any>;
   primary: {
-    ExhibitionSliceType_Name: RichTextPrismicType<"heading3">;
-    ExhibitionSliceType_Link: LinkPrismicType;
-    ExhibitionSliceType_OpeningDate?: string;
-    ExhibitionSliceType_ClosingDate?: string;
-    ExhibitionSliceType_Location: RichTextPrismicType<"paragraph">;
+    exhibition_slice_type_name: RichTextPrismicType<"heading3">;
+    exhibition_slice_type_link: LinkPrismicType;
+    exhibition_slice_type_opening_date?: string;
+    exhibition_slice_type_closing_date?: string;
+    exhibition_slice_type_location: RichTextPrismicType<"paragraph">;
   };
 }
 

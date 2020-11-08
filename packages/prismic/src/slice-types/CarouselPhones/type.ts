@@ -4,7 +4,7 @@ import SliceType from "%types/slice";
 
 interface CaptionedPhonesSliceType extends SliceType {
   items: Array<{
-    CarouselPhonesSliceType_Caption: RichTextPrismicType<
+    carousel_phones_slice_type_caption: RichTextPrismicType<
       | "paragraph"
       | "heading3"
       | "strong"
@@ -14,8 +14,8 @@ interface CaptionedPhonesSliceType extends SliceType {
       | "o-list-item"
       | "o-list-item"
     >;
-    CarouselPhonesSliceType_DeviceType: "SMARTPHONE" | "FEATURE_PHONE";
-    CarouselPhonesSliceType_Image: ImagePrismicType;
+    carousel_phones_slice_type_device_type: "SMARTPHONE" | "FEATURE_PHONE";
+    carousel_phones_slice_type_image: ImagePrismicType;
   }>;
 }
 

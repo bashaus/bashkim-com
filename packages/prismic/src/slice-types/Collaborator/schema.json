@@ -5,7 +5,7 @@
   "icon": "person",
   "display": "list",
   "non-repeat": {
-    "CollaboratorSliceType_Peer": {
+    "collaborator_slice_type_peer": {
       "type": "Link",
       "config": {
         "select": "document",
@@ -13,13 +13,13 @@
         "customtypes": ["peer"]
       }
     },
-    "CollaboratorSliceType_Role": {
+    "collaborator_slice_type_role": {
       "type": "Text",
       "config": {
         "label": "Role"
       }
     },
-    "CollaboratorSliceType_Company": {
+    "collaborator_slice_type_company": {
       "type": "Text",
       "config": {
         "label": "Company"

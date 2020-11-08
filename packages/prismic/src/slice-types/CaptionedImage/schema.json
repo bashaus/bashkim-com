@@ -5,14 +5,14 @@
   "icon": "image",
   "display": "list",
   "non-repeat": {
-    "CaptionedImageSliceType_Caption": {
+    "captioned_image_slice_type_caption": {
       "type": "StructuredText",
       "config": {
         "multi": "paragraph, preformatted, heading3, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
         "label": "Caption"
       }
     },
-    "CaptionedImageSliceType_Image": {
+    "captioned_image_slice_type_image": {
       "type": "Image",
       "config": {
         "constraint": {},

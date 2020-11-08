@@ -3,19 +3,19 @@
   "slice_label": null,
   "items": [{}],
   "primary": {
-    "ExhibitionSliceType_Name": [
+    "exhibition_slice_type_name": [
       {
         "type": "heading3",
         "text": "Westfield Stratford",
         "spans": []
       }
     ],
-    "ExhibitionSliceType_Link": {
+    "exhibition_slice_type_link": {
       "link_type": "Any"
     },
-    "ExhibitionSliceType_OpeningDate": "2015-04-27",
-    "ExhibitionSliceType_ClosingDate": "2015-05-06",
-    "ExhibitionSliceType_Location": [
+    "exhibition_slice_type_opening_date": "2015-04-27",
+    "exhibition_slice_type_closing_date": "2015-05-06",
+    "exhibition_slice_type_location": [
       {
         "type": "paragraph",
         "text": "London, United Kingdom",

@@ -3,7 +3,7 @@
   "slice_label": null,
   "items": [{}],
   "primary": {
-    "CaptionedImageSliceType_Caption": [
+    "captioned_image_slice_type_caption": [
       {
         "type": "heading3",
         "text": "Campaign website",
@@ -15,7 +15,7 @@
         "spans": []
       }
     ],
-    "CaptionedImageSliceType_Image": {
+    "captioned_image_slice_type_image": {
       "dimensions": {
         "width": 1024,
         "height": 650

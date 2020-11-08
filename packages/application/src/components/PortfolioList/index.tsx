@@ -12,7 +12,7 @@ type PortfolioListProps = {
 const PortfolioList = ({ caseStudies }: PortfolioListProps): JSX.Element => (
   <ul className={styles.PortfolioList}>
     {caseStudies.map((caseStudy: CaseStudyContentType) => (
-      <li key={caseStudy.uid}>
+      <li key={caseStudy._meta.uid}>
         <PortfolioListBrick caseStudy={caseStudy} />
       </li>
     ))}

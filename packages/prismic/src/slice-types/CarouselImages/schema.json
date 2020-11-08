@@ -6,7 +6,7 @@
   "display": "grid",
   "non-repeat": {},
   "repeat": {
-    "CarouselImagesSliceType_Image": {
+    "carousel_images_slice_type_image": {
       "type": "Image",
       "config": {
         "constraint": {},
@@ -14,7 +14,7 @@
         "label": "Image"
       }
     },
-    "CarouselImagesSliceType_Caption": {
+    "carousel_images_slice_type_caption": {
       "type": "StructuredText",
       "config": {
         "multi": "paragraph, preformatted, heading3, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",

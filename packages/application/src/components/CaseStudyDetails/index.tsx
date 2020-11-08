@@ -27,7 +27,7 @@ const CaseStudyDetails = ({
     info_launch_date: launchDate,
     info_decommission_date: decommissionDate,
     info_outcomes: outcomes,
-  } = caseStudy.data;
+  } = caseStudy;
 
   return (
     <div className={styles.CaseStudyDetails}>

@@ -6,7 +6,7 @@
   "display": "grid",
   "non-repeat": {},
   "repeat": {
-    "CarouselPhonesSliceType_DeviceType": {
+    "carousel_phones_slice_type_device_type": {
       "type": "Select",
       "config": {
         "options": ["FEATURE_PHONE", "SMARTPHONE"],
@@ -14,7 +14,7 @@
         "label": "Device Type"
       }
     },
-    "CarouselPhonesSliceType_Image": {
+    "carousel_phones_slice_type_image": {
       "type": "Image",
       "config": {
         "constraint": {},
@@ -22,7 +22,7 @@
         "label": "Image"
       }
     },
-    "CarouselPhonesSliceType_Caption": {
+    "carousel_phones_slice_type_caption": {
       "type": "StructuredText",
       "config": {
         "multi": "paragraph, preformatted, heading3, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",

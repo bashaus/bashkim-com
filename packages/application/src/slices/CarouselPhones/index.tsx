@@ -36,50 +36,45 @@ type CarouselPhonesSliceProps = {
 
 const CarouselPhonesSlice = ({
   slice,
-}: CarouselPhonesSliceProps): JSX.Element => {
-  /* repeat */
-  const { items } = slice;
+}: CarouselPhonesSliceProps): JSX.Element => (
+  <PartialFullImage>
+    <Carousel slidesToShow={3} responsive={CAROUSEL_RESPONSIVE}>
+      {slice.fields.map((field, i) => {
+        const {
+          carousel_phones_slice_type_device_type: deviceType,
+          carousel_phones_slice_type_caption: caption,
+          carousel_phones_slice_type_image: image,
+        } = field;
 
-  return (
-    <PartialFullImage>
-      <Carousel slidesToShow={3} responsive={CAROUSEL_RESPONSIVE}>
-        {items.map((item, i) => {
-          const {
-            CarouselPhonesSliceType_DeviceType: deviceType,
-            CarouselPhonesSliceType_Caption: caption,
-            CarouselPhonesSliceType_Image: image,
-          } = item;
+        const DeviceComponent = DeviceTypeComponents[deviceType];
 
-          const DeviceComponent = DeviceTypeComponents[deviceType];
-
-          return (
-            <CarouselImage
-              key={i}
-              figure={
-                <DeviceComponent
-                  figure={
-                    <DeferredAsset
+        return (
+          <CarouselImage
+            key={i}
+            figure={
+              <DeviceComponent
+                figure={
+                  <DeferredAsset
+                    width={image.dimensions.width}
+                    height={image.dimensions.height}
+                  >
+                    <img
+                      src={image.url}
+                      alt={image.alt || ""}
                       width={image.dimensions.width}
                       height={image.dimensions.height}
-                    >
-                      <img
-                        src={image.url}
-                        alt={image.alt || ""}
-                        width={image.dimensions.width}
-                        height={image.dimensions.height}
-                      />
-                    </DeferredAsset>
-                  }
-                >
-                  {caption && RichText.render(caption, LinkResolver)}
-                </DeviceComponent>
-              }
-            />
-          );
-        })}
-      </Carousel>
-    </PartialFullImage>
-  );
-};
+                    />
+                  </DeferredAsset>
+                }
+              >
+                {caption && RichText.render(caption, LinkResolver)}
+              </DeviceComponent>
+            }
+          />
+        );
+      })}
+    </Carousel>
+  </PartialFullImage>
+);
 
 export default CarouselPhonesSlice;

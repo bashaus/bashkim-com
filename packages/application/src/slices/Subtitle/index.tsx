@@ -12,8 +12,8 @@ type SubtitleSliceProps = {
 
 const SubtitleSlice = ({ slice }: SubtitleSliceProps): JSX.Element => {
   const {
-    SubtitleSliceType_Heading: heading,
-    SubtitleSliceType_Description: description,
+    subtitle_slice_type_heading: heading,
+    subtitle_slice_type_description: description,
   } = slice.primary;
 
   return (

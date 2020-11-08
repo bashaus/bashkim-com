@@ -11,11 +11,11 @@ type ExhibitionSliceProps = {
 
 const ExhibitionSlice = ({ slice }: ExhibitionSliceProps): JSX.Element => {
   const {
-    ExhibitionSliceType_Name: name,
-    // ExhibitionSliceType_Link: link,
-    ExhibitionSliceType_OpeningDate: openingDate,
-    ExhibitionSliceType_ClosingDate: closingDate,
-    ExhibitionSliceType_Location: location,
+    exhibition_slice_type_name: name,
+    // exhibition_slice_type_link: link,
+    exhibition_slice_type_opening_date: openingDate,
+    exhibition_slice_type_closing_date: closingDate,
+    exhibition_slice_type_location: location,
   } = slice.primary;
 
   return (

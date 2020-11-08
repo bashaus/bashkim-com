@@ -5,7 +5,7 @@
   "icon": "local_library",
   "display": "grid",
   "non-repeat": {
-    "CaptionedMagazineSliceType_Caption": {
+    "captioned_magazine_slice_type_caption": {
       "type": "StructuredText",
       "config": {
         "multi": "paragraph, heading3, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
@@ -14,7 +14,7 @@
     }
   },
   "repeat": {
-    "CaptionedMagazineSliceType_Images": {
+    "captioned_magazine_slice_type_images": {
       "type": "Image",
       "config": {
         "constraint": {},

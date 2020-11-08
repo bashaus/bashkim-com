@@ -5,7 +5,7 @@
   "icon": "phonelink",
   "display": "grid",
   "non-repeat": {
-    "CaptionedScreenshotsSliceType_Caption": {
+    "captioned_screenshots_slice_type_caption": {
       "type": "StructuredText",
       "config": {
         "multi": "paragraph, preformatted, heading3, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
@@ -14,7 +14,7 @@
     }
   },
   "repeat": {
-    "CaptionedScreenshotsSliceType_Images": {
+    "captioned_screenshots_slice_type_images": {
       "type": "Image",
       "config": {
         "constraint": {},

@@ -6,7 +6,7 @@
   "display": "grid",
   "non-repeat": {},
   "repeat": {
-    "GridEmbedSliceType_Embed": {
+    "grid_embed_slice_type_embed": {
       "type": "Embed",
       "config": {
         "label": "Embedded item"

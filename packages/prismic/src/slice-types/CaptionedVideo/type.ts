@@ -5,7 +5,7 @@ import SliceType from "%types/slice";
 interface CaptionedVideoSliceType extends SliceType {
   items: Array<any>;
   primary: {
-    CaptionedVideoSliceType_Caption: RichTextPrismicType<
+    captioned_video_slice_type_caption: RichTextPrismicType<
       | "paragraph"
       | "heading3"
       | "strong"
@@ -15,7 +15,7 @@ interface CaptionedVideoSliceType extends SliceType {
       | "o-list-item"
       | "o-list-item"
     >;
-    CaptionedVideoSliceType_Video: EmbedPrismicType;
+    captioned_video_slice_type_video: EmbedPrismicType;
   };
 }
 

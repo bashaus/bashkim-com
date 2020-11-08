@@ -5,21 +5,21 @@
   "icon": "whatshot",
   "display": "list",
   "non-repeat": {
-    "AccoladeSliceType_Issuer": {
+    "accolade_slice_type_issuer": {
       "type": "StructuredText",
       "config": {
         "single": "heading3",
         "label": "Issuer"
       }
     },
-    "AccoladeSliceType_Description": {
+    "accolade_slice_type_description": {
       "type": "StructuredText",
       "config": {
         "single": "paragraph",
         "label": "Description"
       }
     },
-    "AccoladeSliceType_Date": {
+    "accolade_slice_type_date": {
       "type": "Date",
       "config": {
         "label": "Date"
@@ -27,20 +27,20 @@
     }
   },
   "repeat": {
-    "AccoladeSliceType_AwardPlace": {
+    "accolade_slice_type_award_place": {
       "type": "Select",
       "config": {
         "options": ["gold", "silver", "bronze", "honour", "shortlist"],
         "label": "Place"
       }
     },
-    "AccoladeSliceType_AwardLink": {
+    "accolade_slice_type_award_link": {
       "type": "Link",
       "config": {
         "label": "Link"
       }
     },
-    "AccoladeSliceType_AwardCategory": {
+    "accolade_slice_type_award_category": {
       "type": "StructuredText",
       "config": {
         "multi": "paragraph",

@@ -3,7 +3,7 @@ import SliceType from "%types/slice";
 
 interface NewspaperSliceType extends SliceType {
   items: Array<{
-    NewspaperSliceType_Group: RichTextPrismicType<
+    newspaper_slice_type_group: RichTextPrismicType<
       | "paragraph"
       | "heading3"
       | "strong"

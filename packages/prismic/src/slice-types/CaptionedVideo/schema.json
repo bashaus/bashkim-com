@@ -4,14 +4,14 @@
   "description": "A video with a description or caption",
   "icon": "videocam",
   "non-repeat": {
-    "CaptionedVideoSliceType_Caption": {
+    "captioned_video_slice_type_caption": {
       "type": "StructuredText",
       "config": {
         "multi": "paragraph, heading3, strong, em, hyperlink, list-item, o-list-item, o-list-item",
         "label": "Caption"
       }
     },
-    "CaptionedVideoSliceType_Video": {
+    "captioned_video_slice_type_video": {
       "type": "Embed",
       "config": {
         "label": "Video"

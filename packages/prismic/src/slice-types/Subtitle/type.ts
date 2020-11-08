@@ -6,10 +6,10 @@ import SliceType from "%types/slice";
 interface SubtitleSliceType extends SliceType {
   items?: Array<{}>;
   primary: {
-    SubtitleSliceType_Heading: RichTextPrismicType<
+    subtitle_slice_type_heading: RichTextPrismicType<
       RichTextTypePrismicItemType.HEADING2
     >;
-    SubtitleSliceType_Description: RichTextPrismicType<"paragraph">;
+    subtitle_slice_type_description: RichTextPrismicType<"paragraph">;
   };
 }
 

@@ -2,8 +2,8 @@ import { GetServerSideProps } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import React from "react";
-import PrismicClient from "@bashkim-com/prismic";
-import { HomePageContentType } from "@bashkim-com/prismic";
+
+import PrismicClient, { HomePageContentType } from "@bashkim-com/prismic";
 
 import HomeBrands from "%components/HomeBrands";
 import HomeHello from "%components/HomeHello";
@@ -17,18 +17,19 @@ import PartialSplit from "%partials/Split";
 import PartialSubtitle from "%partials/Subtitle";
 
 import LinkResolver from "%prismic/LinkResolver";
+import { HomePageQuery } from "%prismic/queries/HomePageQuery";
 
 type HomePageProps = {
-  page: HomePageContentType;
+  homePage: HomePageContentType;
 };
 
-const HomePage = ({ page }: HomePageProps): JSX.Element => {
+const HomePage = ({ homePage }: HomePageProps): JSX.Element => {
   const {
     featured_case_studies: featuredCaseStudies,
     meta_title: metaTitle,
     meta_description: metaDescription,
     meta_keywords: metaKeywords,
-  } = page.data;
+  } = homePage;
 
   return (
     <LayoutDefault>
@@ -73,18 +74,20 @@ const HomePage = ({ page }: HomePageProps): JSX.Element => {
           {featuredCaseStudies.map((featuredCaseStudy) => {
             const caseStudy = featuredCaseStudy.featured_case_study;
 
-            const backgroundDesktop = caseStudy.data.image_header_desktop;
-            const backgroundMobile = caseStudy.data.image_header_mobile;
+            const {
+              image_header_desktop: backgroundDesktop,
+              image_header_mobile: backgroundMobile,
+            } = caseStudy;
 
             return (
-              <li key={caseStudy.id}>
+              <li key={caseStudy._meta.id}>
                 <PartialFullBanner
                   backgroundDesktop={backgroundDesktop && backgroundDesktop.url}
                   backgroundMobile={backgroundMobile && backgroundMobile.url}
-                  id={`HomePage-PartialFullBanner-${caseStudy.id}`}
+                  id={`HomePage-PartialFullBanner-${caseStudy._meta.id}`}
                 >
-                  <h3>{caseStudy.data.meta_title}</h3>
-                  <p>{caseStudy.data.meta_description}</p>
+                  <h3>{caseStudy.meta_title}</h3>
+                  <p>{caseStudy.meta_description}</p>
                   <CallToAction>
                     <Link
                       href="/portfolio/[caseStudySlug]"
@@ -142,24 +145,14 @@ const HomePage = ({ page }: HomePageProps): JSX.Element => {
   );
 };
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
-  const { req } = context;
-
-  const page: HomePageContentType = await PrismicClient(req).getSingle(
-    "home_page",
-    {
-      fetchLinks: [
-        "case_study.meta_title",
-        "case_study.meta_description",
-        "case_study.image_header_desktop",
-        "case_study.image_header_mobile",
-      ],
-    }
-  );
+export const getServerSideProps: GetServerSideProps = async () => {
+  const result = await PrismicClient.query({
+    query: HomePageQuery,
+  });
 
   return {
     props: {
-      page,
+      homePage: result.data.homePage.edges[0].node,
     } as HomePageProps,
   };
 };

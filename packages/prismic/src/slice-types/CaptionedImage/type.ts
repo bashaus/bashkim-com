@@ -5,8 +5,8 @@ import SlicePrismicType from "%types/slice";
 interface CaptionedImageSliceType extends SlicePrismicType {
   items?: Array<{}>;
   primary: {
-    CaptionedImageSliceType_Image: ImagePrismic;
-    CaptionedImageSliceType_Caption: RichTextPrismic<
+    captioned_image_slice_type_image: ImagePrismic;
+    captioned_image_slice_type_caption: RichTextPrismic<
       | "paragraph"
       | "heading3"
       | "strong"

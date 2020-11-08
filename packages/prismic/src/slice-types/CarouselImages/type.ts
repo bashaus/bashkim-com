@@ -4,7 +4,7 @@ import SliceType from "%types/slice";
 
 interface CaptionedImagesSliceType extends SliceType {
   items: Array<{
-    CarouselImagesSliceType_Caption: RichTextPrismicType<
+    carousel_images_slice_type_caption: RichTextPrismicType<
       | "paragraph"
       | "heading3"
       | "strong"
@@ -14,7 +14,7 @@ interface CaptionedImagesSliceType extends SliceType {
       | "o-list-item"
       | "o-list-item"
     >;
-    CarouselImagesSliceType_Image: ImagePrismicType;
+    carousel_images_slice_type_image: ImagePrismicType;
   }>;
 }
 

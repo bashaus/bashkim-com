@@ -6,19 +6,14 @@ import LinkResolver from "%prismic/LinkResolver";
 
 type CollaboratorSliceProps = {
   slice: CollaboratorSliceType;
-  peer: any;
 };
 
-const CollaboratorSlice = ({
-  slice,
-  peer,
-}: CollaboratorSliceProps): JSX.Element => {
+const CollaboratorSlice = ({ slice }: CollaboratorSliceProps): JSX.Element => {
   const {
-    CollaboratorSliceType_Company: company,
-    CollaboratorSliceType_Role: role,
+    collaborator_slice_type_company: company,
+    collaborator_slice_type_role: role,
+    collaborator_slice_type_peer: { peer_name: name, peer_website: website },
   } = slice.primary;
-
-  const { peer_name: name, peer_website: website } = peer.data;
 
   const url = Link.url(website, LinkResolver);
 

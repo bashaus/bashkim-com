@@ -9,8 +9,8 @@ type GridEmbedSliceProps = {
 
 const GridEmbedSlice = ({ slice }: GridEmbedSliceProps): JSX.Element => (
   <div className={styles.GridEmbedSlice}>
-    {slice.items.map((item, i) => {
-      const { GridEmbedSliceType_Embed: embed } = item;
+    {slice.fields.map((field, i) => {
+      const { grid_embed_slice_type_embed: embed } = field;
 
       return (
         <div className={styles.item} key={i}>

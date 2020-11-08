@@ -16,15 +16,15 @@ const GridVideoSlice = ({ slice }: GridVideoSliceProps): JSX.Element => (
   <ol
     className={classNames(
       styles.GridVideoSlice,
-      styles[`columns-${slice.items.length}`]
+      styles[`columns-${slice.fields.length}`]
     )}
   >
-    {slice.items.map((item, i) => {
+    {slice.fields.map((field, i) => {
       const {
-        GridVideoSliceType_Video: video,
-        GridVideoSliceType_Poster: poster,
-        GridVideoSliceType_Description: description,
-      } = item;
+        grid_video_slice_type_description: description,
+        grid_video_slice_type_poster: poster,
+        grid_video_slice_type_video: video,
+      } = field;
 
       return (
         <li key={i}>

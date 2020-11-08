@@ -16,15 +16,15 @@ const CaseStudyTechnologies = ({
     </div>
 
     <ul>
-      {caseStudy.data.info_technologies.map((technology) => {
-        if (!technology.info_technology.data) {
+      {caseStudy.info_technologies.map((technology) => {
+        if (!technology.info_technology) {
           return null;
         }
 
         const {
           technology_name: name,
           technology_icon: icon,
-        } = technology.info_technology.data;
+        } = technology.info_technology;
 
         return (
           <li key={name}>

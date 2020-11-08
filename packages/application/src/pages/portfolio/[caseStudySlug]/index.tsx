@@ -1,9 +1,7 @@
 import { GetServerSideProps } from "next";
 import React from "react";
-import PrismicClient from "@bashkim-com/prismic";
-import { PeerContentType, CaseStudyContentType } from "@bashkim-com/prismic";
+import PrismicClient, { CaseStudyContentType } from "@bashkim-com/prismic";
 
-import ApiSearchResponse from "prismic-javascript/d.ts/ApiSearchResponse";
 import CaseStudyAccolades from "%components/CaseStudyAccolades";
 import CaseStudyCollaborators from "%components/CaseStudyCollaborators";
 import CaseStudyExhibitions from "%components/CaseStudyExhibitions";
@@ -19,43 +17,45 @@ import Slice from "%components/Slice";
 
 import NotFoundError from "%libraries/next/errors/NotFoundError";
 
+import { CaseStudyPageQuery } from "%prismic/queries/CaseStudyPageQuery";
+import { CaseStudyBodyQuery } from "%prismic/queries/CaseStudyBodyQuery";
+
 type CaseStudyPageProps = {
-  caseStudy: CaseStudyContentType;
-  peers: Array<PeerContentType>;
+  caseStudyPage: CaseStudyContentType;
+  caseStudyBody: any;
 };
 
 const CaseStudyPage = ({
-  caseStudy,
-  peers,
+  caseStudyPage,
+  caseStudyBody,
 }: CaseStudyPageProps): JSX.Element => {
   const {
-    body: bodySlices,
     accolades: accoladeSlices,
     collaborators: collaboratorSlices,
     exhibitions: exhibitionSlices,
-  } = caseStudy.data;
+  } = caseStudyPage;
 
   return (
     <LayoutDefault backButton={MenuBackButtonPortfolioImpl} theme="portfolio">
       <article itemScope itemType="http://schema.org/CreativeWork">
-        <MetaTitle content={caseStudy.data.meta_title} />
-        <MetaDescription content={caseStudy.data.meta_description} />
-        <MetaKeywords content={caseStudy.data.meta_keywords} />
+        <MetaTitle content={caseStudyPage.meta_title} />
+        <MetaDescription content={caseStudyPage.meta_description} />
+        <MetaKeywords content={caseStudyPage.meta_keywords} />
 
-        {caseStudy.data.image_poster && caseStudy.data.image_poster.url && (
+        {caseStudyPage.image_poster && caseStudyPage.image_poster.url && (
           <MetaImage
-            url={caseStudy.data.image_poster.url}
-            width={caseStudy.data.image_poster.dimensions.width}
-            height={caseStudy.data.image_poster.dimensions.height}
+            url={caseStudyPage.image_poster.url}
+            width={caseStudyPage.image_poster.dimensions.width}
+            height={caseStudyPage.image_poster.dimensions.height}
           />
         )}
 
-        <MetaCanonical href={`/portfolio/${caseStudy.uid}`} />
+        <MetaCanonical href={`/portfolio/${caseStudyPage.uid}`} />
 
-        <CaseStudyHeader caseStudy={caseStudy} />
+        <CaseStudyHeader caseStudy={caseStudyPage} />
 
         <section className="group">
-          {bodySlices.map((slice, i) => (
+          {caseStudyBody.body.map((slice, i) => (
             <Slice slice={slice} key={i} />
           ))}
         </section>
@@ -75,8 +75,7 @@ const CaseStudyPage = ({
         {collaboratorSlices && collaboratorSlices.length > 0 && (
           <section className="group-alternate">
             <CaseStudyCollaborators
-              myRole={caseStudy.data.info_role}
-              peers={peers}
+              myRole={caseStudyPage.info_role}
               slices={collaboratorSlices}
             />
           </section>
@@ -87,38 +86,36 @@ const CaseStudyPage = ({
 };
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-  const { req, query } = context;
+  const { query } = context;
   const { caseStudySlug } = query;
-  const prismicClient = PrismicClient(req);
 
-  const caseStudy: CaseStudyContentType = (await prismicClient.getByUID(
-    "case_study",
-    `${caseStudySlug}`,
-    {
-      fetchLinks: [
-        "peer.peer_name",
-        "technology.technology_name",
-        "technology.technology_icon",
-      ],
-    }
-  )) as CaseStudyContentType;
+  const caseStudyPagePromise = PrismicClient.query({
+    query: CaseStudyPageQuery,
+    variables: {
+      caseStudySlug,
+    },
+  });
 
-  if (!caseStudy) {
+  const caseStudyBodyPromise = PrismicClient.query({
+    query: CaseStudyBodyQuery,
+    variables: {
+      caseStudySlug,
+    },
+  });
+
+  const [caseStudyPageResult, caseStudyBodyResult] = await Promise.all([
+    caseStudyPagePromise,
+    caseStudyBodyPromise,
+  ]);
+
+  if (!caseStudyPageResult.data.caseStudyPage) {
     throw new NotFoundError();
   }
 
-  const peerIDs: Array<string> = caseStudy.data.collaborators.map(
-    (collaborator) => collaborator.primary.CollaboratorSliceType_Peer.id
-  );
-
-  const peersQuery: ApiSearchResponse = await prismicClient.getByIDs(peerIDs, {
-    pageSize: 100,
-  });
-
   return {
     props: {
-      caseStudy,
-      peers: peersQuery.results as Array<PeerContentType>,
+      caseStudyPage: caseStudyPageResult.data.caseStudyPage.edges[0].node,
+      caseStudyBody: caseStudyBodyResult.data.caseStudyBody.edges[0].node,
     } as CaseStudyPageProps,
   };
 };

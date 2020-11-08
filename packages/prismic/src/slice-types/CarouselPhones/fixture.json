@@ -3,8 +3,8 @@
   "slice_label": null,
   "items": [
     {
-      "CarouselPhonesSliceType_DeviceType": "SMARTPHONE",
-      "CarouselPhonesSliceType_Caption": [
+      "carousel_phones_slice_type_device_type": "SMARTPHONE",
+      "carousel_phones_slice_type_caption": [
         {
           "type": "heading3",
           "text": "First phone",
@@ -16,7 +16,7 @@
           "spans": []
         }
       ],
-      "CarouselPhonesSliceType_Image": {
+      "carousel_phones_slice_type_image": {
         "dimensions": {
           "width": 600,
           "height": 1200
@@ -27,8 +27,8 @@
       }
     },
     {
-      "CarouselPhonesSliceType_DeviceType": "SMARTPHONE",
-      "CarouselPhonesSliceType_Caption": [
+      "carousel_phones_slice_type_device_type": "SMARTPHONE",
+      "carousel_phones_slice_type_caption": [
         {
           "type": "heading3",
           "text": "Second phone",
@@ -40,7 +40,7 @@
           "spans": []
         }
       ],
-      "CarouselPhonesSliceType_Image": {
+      "carousel_phones_slice_type_image": {
         "dimensions": {
           "width": 600,
           "height": 1200

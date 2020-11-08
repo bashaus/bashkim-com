@@ -3,7 +3,7 @@
   "slice_label": null,
   "items": [{}],
   "primary": {
-    "FullTextSliceType_Body": [
+    "full_text_slice_type_body": [
       {
         "type": "heading3",
         "text": "Heading Three",

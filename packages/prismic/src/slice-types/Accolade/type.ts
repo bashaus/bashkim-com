@@ -6,25 +6,25 @@ import RichTextPrismicType, {
 
 interface AccoladeSliceType extends SlicePrismicType {
   items: Array<{
-    AccoladeSliceType_AwardPlace:
+    accolade_slice_type_award_place:
       | "gold"
       | "silver"
       | "bronze"
       | "honour"
       | "shortlist";
-    AccoladeSliceType_AwardLink: LinkPrismicType;
-    AccoladeSliceType_AwardCategory: RichTextPrismicType<
+    accolade_slice_type_award_link: LinkPrismicType;
+    accolade_slice_type_award_category: RichTextPrismicType<
       RichTextTypePrismicItemType.PARAGRAPH
     >;
   }>;
   primary: {
-    AccoladeSliceType_Issuer?: RichTextPrismicType<
+    accolade_slice_type_issuer?: RichTextPrismicType<
       RichTextTypePrismicItemType.HEADING3
     >;
-    AccoladeSliceType_Description?: RichTextPrismicType<
+    accolade_slice_type_description?: RichTextPrismicType<
       RichTextTypePrismicItemType.PARAGRAPH
     >;
-    AccoladeSliceType_Date?: string;
+    accolade_slice_type_date?: string;
   };
 }
 

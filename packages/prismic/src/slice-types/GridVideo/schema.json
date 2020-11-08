@@ -6,7 +6,7 @@
   "display": "grid",
   "non-repeat": {},
   "repeat": {
-    "GridVideoSliceType_Poster": {
+    "grid_video_slice_type_poster": {
       "type": "Image",
       "config": {
         "constraint": {},
@@ -14,14 +14,14 @@
         "label": "Poster"
       }
     },
-    "GridVideoSliceType_Description": {
+    "grid_video_slice_type_description": {
       "type": "StructuredText",
       "config": {
         "single": "paragraph",
         "label": "Description"
       }
     },
-    "GridVideoSliceType_Video": {
+    "grid_video_slice_type_video": {
       "type": "Embed",
       "config": {
         "label": "Video"
