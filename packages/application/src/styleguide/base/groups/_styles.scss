@@ -2,8 +2,15 @@
 @import "~%styleguide/utils/media";
 
 %group {
-  padding-top: 10vh;
-  padding-bottom: 10vh;
+  @include breakpoint($media-mobile) {
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+  }
+
+  @include breakpoint($media-not-mobile) {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+  }
 }
 
 .group {

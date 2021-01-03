@@ -24,6 +24,10 @@
     @extend %wysiwyg;
 
     flex-grow: 0;
+
+    h3 {
+      text-transform: uppercase;
+    }
   }
 
   .tile {
