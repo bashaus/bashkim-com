@@ -14,8 +14,8 @@ const FooterCopyright = (): JSX.Element => (
         MMVIII
       </time>
       &#x2011;
-      <time dateTime="2020" title="2020">
-        MMXX
+      <time dateTime="2021" title="2021">
+        MMXXI
       </time>
       , Bashkim&nbsp;Isai. All&nbsp;rights&nbsp;reserved.
     </span>
