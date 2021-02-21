@@ -1,11 +1,6 @@
-export type SitemapConfig = {
-  baseHref: string;
-};
+import type { SitemapConfig } from "%types/sitemap";
 
 const defaultSitemapConfig: SitemapConfig = {
-  /**
-   * The root URL of the site (no trailing slash)
-   */
   baseHref: "https://www.bashkim.com",
 };
 

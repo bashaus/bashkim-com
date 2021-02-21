@@ -1,4 +1,6 @@
-export default {
+import { ConfigPartialType } from "../types";
+
+export const localConfig: ConfigPartialType = {
   googleAnalytics: {
     enabled: false,
   },

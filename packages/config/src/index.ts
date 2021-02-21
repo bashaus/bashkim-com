@@ -1,18 +1,14 @@
-import dotenv from "dotenv";
 import defaultsDeep from "lodash.defaultsdeep";
 
-import Schema from "./schema";
-import localSchema from "./environment/local";
+import "./init";
+import type { ConfigType } from "./types";
+import { defaultsConfig } from "./defaults";
+import { localConfig } from "./environment/local";
 
-dotenv.config();
-
-// Define a schema
-let environment = {};
-
-if (process.env.APP_ENV === "local") {
-  environment = localSchema;
-}
-
-const config = defaultsDeep({}, environment, Schema());
+const config: ConfigType = defaultsDeep(
+  {},
+  process.env.APP_ENV === "local" ? localConfig : {},
+  defaultsConfig
+);
 
 export default config;

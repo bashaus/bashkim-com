@@ -1,11 +1,6 @@
-export type PrismicConfig = {
-  uri: string;
-};
+import type { PrismicConfig } from "%types/prismic";
 
 const defaultPrismicConfig: PrismicConfig = {
-  /**
-   * The URL endpoint as provided by Prismic
-   */
   uri: "https://bashkim-com.prismic.io/graphql",
 };
 
