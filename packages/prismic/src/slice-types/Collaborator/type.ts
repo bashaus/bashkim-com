@@ -5,10 +5,10 @@ type CollaboratorSliceType = SliceType & {
   items: Array<any>;
   primary: {
     collaborator_slice_type_peer: DocumentLinkPrismicType<{
-      peer_name?: string;
+      peer_name: string | null;
     }>;
-    collaborator_slice_type_company?: string;
-    collaborator_slice_type_role?: string;
+    collaborator_slice_type_company: string | null;
+    collaborator_slice_type_role: string | null;
   };
 };
 

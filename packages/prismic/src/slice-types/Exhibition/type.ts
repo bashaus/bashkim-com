@@ -7,8 +7,8 @@ type ExhibitionSliceType = SliceType & {
   primary: {
     exhibition_slice_type_name: RichTextPrismicType<"heading3">;
     exhibition_slice_type_link: LinkPrismicType;
-    exhibition_slice_type_opening_date?: string;
-    exhibition_slice_type_closing_date?: string;
+    exhibition_slice_type_opening_date: null | string;
+    exhibition_slice_type_closing_date: null | string;
     exhibition_slice_type_location: RichTextPrismicType<"paragraph">;
   };
 };

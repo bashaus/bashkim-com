@@ -18,13 +18,13 @@ type AccoladeSliceType = SlicePrismicType & {
     >;
   }>;
   primary: {
-    accolade_slice_type_issuer?: RichTextPrismicType<
+    accolade_slice_type_issuer: null | RichTextPrismicType<
       RichTextTypePrismicItemType.HEADING3
     >;
-    accolade_slice_type_description?: RichTextPrismicType<
+    accolade_slice_type_description: null | RichTextPrismicType<
       RichTextTypePrismicItemType.PARAGRAPH
     >;
-    accolade_slice_type_date?: string;
+    accolade_slice_type_date: null | string;
   };
 };
 

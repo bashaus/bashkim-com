@@ -4,6 +4,7 @@
     "declaration": true,
     "outDir": "./build",
     "baseUrl": "../",
+    "typeRoots": ["./types"],
     "paths": {
       "@bashkim-com/config/*": ["config/src/*"],
       "@bashkim-com/prismic/*": ["prismic/src/*"]
