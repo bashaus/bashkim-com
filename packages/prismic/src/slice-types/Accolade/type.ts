@@ -1,10 +1,10 @@
-import LinkPrismicType from "%types/link";
-import SlicePrismicType from "%types/slice";
+import LinkPrismicType from "@bashkim-com/prismic/types/link";
+import SlicePrismicType from "@bashkim-com/prismic/types/slice";
 import RichTextPrismicType, {
   RichTextTypePrismicItemType,
-} from "%types/rich-text";
+} from "@bashkim-com/prismic/types/rich-text";
 
-interface AccoladeSliceType extends SlicePrismicType {
+type AccoladeSliceType = SlicePrismicType & {
   items: Array<{
     accolade_slice_type_award_place:
       | "gold"
@@ -26,6 +26,6 @@ interface AccoladeSliceType extends SlicePrismicType {
     >;
     accolade_slice_type_date?: string;
   };
-}
+};
 
 export default AccoladeSliceType;

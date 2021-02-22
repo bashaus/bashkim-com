@@ -34,7 +34,8 @@ const CaptionedScreenshotsSlice = ({
   // Find the first screenshot larger or equal to initial width
   const defaultSelectedIndex = fields.findIndex(
     (field) =>
-      field.captioned_screenshots_slice_type_images.dimensions.width >= initialWidth
+      field.captioned_screenshots_slice_type_images.dimensions.width >=
+      initialWidth
   );
 
   const [selectedIndex, setSelectedIndex] = React.useState(

@@ -1,8 +1,8 @@
-import RichTextPrismicType from "%types/rich-text";
-import ImagePrismicType from "%types/image";
-import SliceType from "%types/slice";
+import RichTextPrismicType from "@bashkim-com/prismic/types/rich-text";
+import ImagePrismicType from "@bashkim-com/prismic/types/image";
+import SliceType from "@bashkim-com/prismic/types/slice";
 
-interface CaptionedImagesSliceType extends SliceType {
+type CaptionedImagesSliceType = SliceType & {
   items: Array<{
     carousel_images_slice_type_caption: RichTextPrismicType<
       | "paragraph"
@@ -16,6 +16,6 @@ interface CaptionedImagesSliceType extends SliceType {
     >;
     carousel_images_slice_type_image: ImagePrismicType;
   }>;
-}
+};
 
 export default CaptionedImagesSliceType;

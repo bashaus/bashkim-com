@@ -6,7 +6,9 @@
 .Footer {
   .wrapper {
     @include grid-container(
-      $breakpoints: (tablet-landscape desktop-narrow desktop-wide)
+      $breakpoints: (
+        tablet-landscape desktop-narrow desktop-wide,
+      )
     );
   }
 

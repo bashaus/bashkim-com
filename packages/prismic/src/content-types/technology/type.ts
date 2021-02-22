@@ -1,11 +1,11 @@
-import PrismicContentType from "%traits/content-type";
+import PrismicContentType from "@bashkim-com/prismic/traits/content-type";
 
 import TechnologyContentTypeTechnologyTab from "./tabs/technology/type";
 
 type TechnologyContentTypeData = TechnologyContentTypeTechnologyTab;
 
-interface TechnologyContentType extends PrismicContentType {
+type TechnologyContentType = PrismicContentType & {
   data: TechnologyContentTypeData;
-}
+};
 
 export default TechnologyContentType;

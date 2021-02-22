@@ -1,8 +1,8 @@
-import EmbedPrismicType from "%types/embed";
-import RichTextPrismicType from "%types/rich-text";
-import SliceType from "%types/slice";
+import EmbedPrismicType from "@bashkim-com/prismic/types/embed";
+import RichTextPrismicType from "@bashkim-com/prismic/types/rich-text";
+import SliceType from "@bashkim-com/prismic/types/slice";
 
-interface CaptionedVideoSliceType extends SliceType {
+type CaptionedVideoSliceType = SliceType & {
   items: Array<any>;
   primary: {
     captioned_video_slice_type_caption: RichTextPrismicType<
@@ -17,6 +17,6 @@ interface CaptionedVideoSliceType extends SliceType {
     >;
     captioned_video_slice_type_video: EmbedPrismicType;
   };
-}
+};
 
 export default CaptionedVideoSliceType;

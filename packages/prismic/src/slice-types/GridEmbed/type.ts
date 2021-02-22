@@ -1,11 +1,11 @@
-import EmbedPrismicType from "%types/embed";
-import SliceType from "%types/slice";
+import EmbedPrismicType from "@bashkim-com/prismic/types/embed";
+import SliceType from "@bashkim-com/prismic/types/slice";
 
-interface GridEmbedSliceType extends SliceType {
+type GridEmbedSliceType = SliceType & {
   items: Array<{
     grid_embed_slice_type_embed: EmbedPrismicType;
   }>;
   primary: {};
-}
+};
 
 export default GridEmbedSliceType;

@@ -17,7 +17,12 @@
         desktop-narrow: 3,
         desktop-wide: 3,
       ),
-      $padding: (top, left, right, bottom)
+      $padding: (
+        top,
+        left,
+        right,
+        bottom,
+      )
     );
   }
 
@@ -31,7 +36,12 @@
         desktop-narrow: 9,
         desktop-wide: 9,
       ),
-      $padding: (top, left, right, bottom)
+      $padding: (
+        top,
+        left,
+        right,
+        bottom,
+      )
     );
   }
 

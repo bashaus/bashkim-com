@@ -1,8 +1,8 @@
-import LinkPrismicType from "%types/link";
-import RichTextPrismicType from "%types/rich-text";
-import SliceType from "%types/slice";
+import LinkPrismicType from "@bashkim-com/prismic/types/link";
+import RichTextPrismicType from "@bashkim-com/prismic/types/rich-text";
+import SliceType from "@bashkim-com/prismic/types/slice";
 
-interface ExhibitionSliceType extends SliceType {
+type ExhibitionSliceType = SliceType & {
   items: Array<any>;
   primary: {
     exhibition_slice_type_name: RichTextPrismicType<"heading3">;
@@ -11,6 +11,6 @@ interface ExhibitionSliceType extends SliceType {
     exhibition_slice_type_closing_date?: string;
     exhibition_slice_type_location: RichTextPrismicType<"paragraph">;
   };
-}
+};
 
 export default ExhibitionSliceType;

@@ -1,8 +1,11 @@
 import dayjs from "dayjs";
 import config from "@bashkim-com/config";
-import PrismicClient, { CaseStudyContentType } from "@bashkim-com/prismic";
+import PrismicClient from "@bashkim-com/prismic";
 
-import { CaseStudiesQuery } from "../prismic/queries/caseStudies";
+import {
+  CaseStudiesQuery,
+  CaseuStudiesResult,
+} from "../prismic/queries/caseStudies";
 import { UrlType } from "../templates/sitemap";
 
 export const CaseStudiesSitemap = async (): Promise<Array<UrlType>> => {
@@ -19,11 +22,11 @@ export const CaseStudiesSitemap = async (): Promise<Array<UrlType>> => {
   } as UrlType);
 
   /* Portfolio case studies */
-  const result = await PrismicClient.query({
+  const result = await PrismicClient.query<CaseuStudiesResult>({
     query: CaseStudiesQuery,
   });
 
-  result.data.caseStudies.edges.forEach((edge: CaseStudyContentType) => {
+  result.data.caseStudies.edges.forEach((edge) => {
     const caseStudy = edge.node;
 
     urlset.push({

@@ -1,6 +1,11 @@
 @mixin grid-full(
   $breakpoints: null,
-  $padding: (top, left, right, bottom)
+  $padding: (
+    top,
+    left,
+    right,
+    bottom,
+  )
 ) {
   @if (type-of($breakpoints) == "null") {
     @include grid-full(map-keys($grid), $padding);

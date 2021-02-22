@@ -1,14 +1,12 @@
-import PrismicContentType from "%traits/content-type";
+import PrismicContentType from "@bashkim-com/prismic/traits/content-type";
 
 import PageTabPropType from "./tabs/page/type";
 import SeoTabPropType from "./tabs/seo/type";
 
-interface PortfolioPageContentTypeData
-  extends PageTabPropType,
-    SeoTabPropType {}
+type PortfolioPageContentTypeData = PageTabPropType & SeoTabPropType;
 
-interface PortfolioPageContentType extends PrismicContentType {
+type PortfolioPageContentType = PrismicContentType & {
   data: PortfolioPageContentTypeData;
-}
+};
 
 export default PortfolioPageContentType;

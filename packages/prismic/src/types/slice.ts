@@ -1,6 +1,6 @@
 type SlicePrismicType = {
-  slice_type: string;
-  slice_label: string | null;
+  type: string;
+  label: string | null;
 };
 
 export default SlicePrismicType;

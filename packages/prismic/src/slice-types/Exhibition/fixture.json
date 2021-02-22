@@ -1,6 +1,6 @@
 {
-  "slice_type": "ExhibitionSliceType",
-  "slice_label": null,
+  "type": "ExhibitionSliceType",
+  "label": null,
   "items": [{}],
   "primary": {
     "exhibition_slice_type_name": [

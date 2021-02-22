@@ -3,9 +3,9 @@
   "private": true,
   "version": "1.0.0",
   "main": "./build/index.js",
-  "types": "./build/index.d.ts",
+  "typings": "./build/index.d.ts",
   "scripts": {
-    "build": "babel src --out-dir build --extensions \".ts,.tsx\" --copy-files",
+    "build": "tsc",
     "clean": "rm -rf build/",
     "prebuild": "yarn clean",
     "test": "echo \"Error: no test specified\" && exit 0"
@@ -15,10 +15,6 @@
     "lodash.defaultsdeep": "^4.6.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.8.4",
-    "@babel/core": "^7.9.6",
-    "@babel/preset-env": "^7.8.3",
-    "@babel/preset-typescript": "^7.9.0",
     "@types/lodash.defaultsdeep": "^4.6.6",
     "typescript": "^4.0.3",
     "utility-types": "^3.10.0"

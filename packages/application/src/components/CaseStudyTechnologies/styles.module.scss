@@ -24,7 +24,10 @@
         desktop-narrow: 6,
         desktop-wide: 6,
       ),
-      $padding: (top, bottom)
+      $padding: (
+        top,
+        bottom,
+      )
     );
   }
 

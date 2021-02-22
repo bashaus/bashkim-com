@@ -2,7 +2,12 @@
 
 @mixin grid-cell-margin(
   $breakpoints: null,
-  $sides: (top, left, right, bottom)
+  $sides: (
+    top,
+    left,
+    right,
+    bottom,
+  )
 ) {
   @if (type-of($breakpoints) == "null") {
     @include grid-cell-margin(map-keys($grid), $sides);

@@ -1,4 +1,4 @@
-import ImagePrismicType from "%types/image";
+import ImagePrismicType from "@bashkim-com/prismic/types/image";
 
 type CaseStudyContentTypeImagesTab = {
   image_header_desktop: ImagePrismicType;

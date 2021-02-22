@@ -15,7 +15,10 @@
   div {
     @extend %wysiwyg;
     @include grid-cell-padding(
-      $sides: (left, right)
+      $sides: (
+        left,
+        right,
+      )
     );
 
     max-width: 320px;

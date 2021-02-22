@@ -5,7 +5,7 @@ import styles from "./styles.module.scss";
 type CarouselImageProps = {
   figure?: React.ReactNode;
   children?: React.ReactNode;
-}
+};
 
 const CarouselImage = ({
   children,

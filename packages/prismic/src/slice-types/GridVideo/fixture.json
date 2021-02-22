@@ -1,6 +1,6 @@
 {
-  "slice_type": "GridVideoSliceType",
-  "slice_label": null,
+  "type": "GridVideoSliceType",
+  "label": null,
   "items": [
     {
       "grid_video_slice_type_poster": {

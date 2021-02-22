@@ -1,6 +1,6 @@
 {
-  "slice_type": "SubtitleSliceType",
-  "slice_label": null,
+  "type": "SubtitleSliceType",
+  "label": null,
   "items": [{}],
   "primary": {
     "subtitle_slice_type_heading": [

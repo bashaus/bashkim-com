@@ -1,6 +1,6 @@
 {
-  "slice_type": "AccoladeSliceType",
-  "slice_label": null,
+  "type": "AccoladeSliceType",
+  "label": null,
   "primary": {
     "accolade_slice_type_issuer": [
       {

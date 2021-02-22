@@ -1,6 +1,11 @@
 @mixin grid-container(
   $breakpoints: null,
-  $padding: (top, left, right, bottom)
+  $padding: (
+    top,
+    left,
+    right,
+    bottom,
+  )
 ) {
   @include clearfix;
   @include grid-container-max-width($breakpoints: $breakpoints);

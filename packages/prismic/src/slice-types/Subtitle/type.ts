@@ -1,9 +1,9 @@
 import RichTextPrismicType, {
   RichTextTypePrismicItemType,
-} from "%types/rich-text";
-import SliceType from "%types/slice";
+} from "@bashkim-com/prismic/types/rich-text";
+import SliceType from "@bashkim-com/prismic/types/slice";
 
-interface SubtitleSliceType extends SliceType {
+type SubtitleSliceType = SliceType & {
   items?: Array<{}>;
   primary: {
     subtitle_slice_type_heading: RichTextPrismicType<
@@ -11,6 +11,6 @@ interface SubtitleSliceType extends SliceType {
     >;
     subtitle_slice_type_description: RichTextPrismicType<"paragraph">;
   };
-}
+};
 
 export default SubtitleSliceType;

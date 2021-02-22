@@ -38,7 +38,12 @@
   figcaption {
     @extend %wysiwyg;
     @include grid-cell-padding(
-      $sides: (top, left, right, bottom)
+      $sides: (
+        top,
+        left,
+        right,
+        bottom,
+      )
     );
 
     text-align: center;

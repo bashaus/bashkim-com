@@ -2,7 +2,11 @@
 
 .FooterCopyright {
   @include grid-full-padding(
-    $breakpoints: (mobile-portrait, mobile-landscape, tablet-portrait)
+    $breakpoints: (
+      mobile-portrait,
+      mobile-landscape,
+      tablet-portrait,
+    )
   );
 
   @include grid-cell(

@@ -1,4 +1,4 @@
-import type { ServerConfig } from "%types/server";
+import type { ServerConfig } from "@bashkim-com/config/types/server";
 
 const defaultServerConfig: ServerConfig = {
   env: process.env.APP_ENV || "production",

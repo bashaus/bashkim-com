@@ -10,13 +10,29 @@
 
   .container {
     @include grid-container(
-      $breakpoints: (mobile-portrait, mobile-landscape),
-      $padding: (top, left, right, bottom)
+      $breakpoints: (
+        mobile-portrait,
+        mobile-landscape,
+      ),
+      $padding: (
+        top,
+        left,
+        right,
+        bottom,
+      )
     );
 
     @include grid-container(
-      $breakpoints: (tablet-portrait, tablet-landscape, desktop-narrow, desktop-wide),
-      $padding: (left, right)
+      $breakpoints: (
+        tablet-portrait,
+        tablet-landscape,
+        desktop-narrow,
+        desktop-wide,
+      ),
+      $padding: (
+        left,
+        right,
+      )
     );
   }
 

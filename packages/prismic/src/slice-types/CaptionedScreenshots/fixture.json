@@ -1,6 +1,6 @@
 {
-  "slice_type": "CaptionedScreenshotsSliceType",
-  "slice_label": null,
+  "type": "CaptionedScreenshotsSliceType",
+  "label": null,
   "items": [
     {
       "captioned_screenshots_slice_type_images": {

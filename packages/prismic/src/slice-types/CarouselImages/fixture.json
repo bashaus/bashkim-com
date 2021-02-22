@@ -1,6 +1,6 @@
 {
-  "slice_type": "CarouselImagesSliceType",
-  "slice_label": null,
+  "type": "CarouselImagesSliceType",
+  "label": null,
   "items": [
     {
       "carousel_images_slice_type_caption": [

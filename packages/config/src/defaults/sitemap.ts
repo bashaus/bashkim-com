@@ -1,4 +1,4 @@
-import type { SitemapConfig } from "%types/sitemap";
+import type { SitemapConfig } from "@bashkim-com/config/types/sitemap";
 
 const defaultSitemapConfig: SitemapConfig = {
   baseHref: "https://www.bashkim.com",

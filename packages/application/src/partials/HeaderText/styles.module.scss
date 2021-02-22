@@ -15,7 +15,10 @@
 
   .foreground {
     @include grid-container(
-      $padding: (left, right)
+      $padding: (
+        left,
+        right,
+      )
     );
 
     color: $color-white;
@@ -33,7 +36,10 @@
         desktop-narrow: 8,
         desktop-wide: 8,
       ),
-      $padding: (left, right)
+      $padding: (
+        left,
+        right,
+      )
     );
 
     position: relative;
@@ -49,7 +55,10 @@
         desktop-narrow: 4,
         desktop-wide: 4,
       ),
-      $padding: (left, right)
+      $padding: (
+        left,
+        right,
+      )
     );
   }
 

@@ -50,8 +50,16 @@
 
   a {
     @include grid-cell-padding(
-      $breakpoints: (tablet-portrait, tablet-landscape, desktop-narrow, desktop-wide),
-      $sides: (left, right)
+      $breakpoints: (
+        tablet-portrait,
+        tablet-landscape,
+        desktop-narrow,
+        desktop-wide,
+      ),
+      $sides: (
+        left,
+        right,
+      )
     );
 
     @include breakpoint($media-not-mobile) {

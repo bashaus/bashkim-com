@@ -60,12 +60,25 @@
     display: flex;
 
     @include grid-container-max-width(
-      $breakpoints: (tablet-portrait, tablet-landscape, desktop-narrow, desktop-wide)
+      $breakpoints: (
+        tablet-portrait,
+        tablet-landscape,
+        desktop-narrow,
+        desktop-wide,
+      )
     );
 
     @include grid-container-padding(
-      $breakpoints: (tablet-portrait, tablet-landscape, desktop-narrow, desktop-wide),
-      $sides: (left, right)
+      $breakpoints: (
+        tablet-portrait,
+        tablet-landscape,
+        desktop-narrow,
+        desktop-wide,
+      ),
+      $sides: (
+        left,
+        right,
+      )
     );
 
     @include breakpoint($media-mobile) {

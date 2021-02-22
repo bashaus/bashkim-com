@@ -1,6 +1,6 @@
 {
-  "slice_type": "CarouselPhonesSliceType",
-  "slice_label": null,
+  "type": "CarouselPhonesSliceType",
+  "label": null,
   "items": [
     {
       "carousel_phones_slice_type_device_type": "SMARTPHONE",

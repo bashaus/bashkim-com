@@ -1,4 +1,4 @@
-import type { GoogleAnalyticsConfig } from "%types/googleAnalytics";
+import type { GoogleAnalyticsConfig } from "@bashkim-com/config/types/googleAnalytics";
 
 const defaultGoogleAnalyticsConfig: GoogleAnalyticsConfig = {
   enabled: true,

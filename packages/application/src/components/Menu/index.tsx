@@ -36,6 +36,6 @@ const Menu = ({ backButton }: MenuProps): JSX.Element => {
       </div>
     </div>
   );
-}
+};
 
 export default Menu;

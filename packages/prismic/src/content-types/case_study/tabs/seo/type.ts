@@ -1,6 +1,6 @@
-import TraitSeoType from "%traits/seo/type";
-import TraitUidType from "%traits/uid/type";
+import TraitSeoType from "@bashkim-com/prismic/traits/seo/type";
+import TraitUidType from "@bashkim-com/prismic/traits/uid/type";
 
-interface CaseStudyContentTypeSeoTab extends TraitSeoType, TraitUidType {}
+type CaseStudyContentTypeSeoTab = TraitSeoType & TraitUidType;
 
 export default CaseStudyContentTypeSeoTab;

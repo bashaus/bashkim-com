@@ -1,4 +1,4 @@
-import TraitSeoSchema from "%traits/seo/schema";
+import TraitSeoSchema from "@bashkim-com/prismic/traits/seo/schema";
 
 export default {
   ...TraitSeoSchema,

@@ -2,7 +2,12 @@
   $columns: (
     /* $breakpoint : $span */
   ),
-  $padding: (top, left, right, bottom)
+  $padding: (
+    top,
+    left,
+    right,
+    bottom,
+  )
 ) {
   @each $breakpoint, $span in $columns {
     @include grid-cell-padding($breakpoint, $padding);

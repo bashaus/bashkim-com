@@ -1,6 +1,6 @@
 {
-  "slice_type": "GridEmbedSliceType",
-  "slice_label": null,
+  "type": "GridEmbedSliceType",
+  "label": null,
   "items": [
     {
       "grid_embed_slice_type_embed": {

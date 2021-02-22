@@ -2,7 +2,12 @@
 
 .Logo {
   @include grid-cell-padding(
-    $breakpoints: (tablet-portrait, tablet-landscape, desktop-narrow, desktop-wide)
+    $breakpoints: (
+      tablet-portrait,
+      tablet-landscape,
+      desktop-narrow,
+      desktop-wide,
+    )
   );
 
   display: flex;

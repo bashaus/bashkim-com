@@ -1,12 +1,12 @@
-import PrismicContentType from "%traits/content-type";
+import PrismicContentType from "@bashkim-com/prismic/traits/content-type";
 
 import PageTabPropType from "./tabs/page/type";
 import SeoTabPropType from "./tabs/seo/type";
 
-interface HomePageContentTypeData extends PageTabPropType, SeoTabPropType {}
+type HomePageContentTypeData = PageTabPropType & SeoTabPropType;
 
-interface HomePageContentType extends PrismicContentType {
+type HomePageContentType = PrismicContentType & {
   data: HomePageContentTypeData;
-}
+};
 
 export default HomePageContentType;

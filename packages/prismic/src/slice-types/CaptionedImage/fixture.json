@@ -1,6 +1,6 @@
 {
-  "slice_type": "CaptionedImageSliceType",
-  "slice_label": null,
+  "type": "CaptionedImageSliceType",
+  "label": null,
   "items": [{}],
   "primary": {
     "captioned_image_slice_type_caption": [

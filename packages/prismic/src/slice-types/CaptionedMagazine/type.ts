@@ -1,8 +1,8 @@
-import ImagePrismicType from "%types/image";
-import RichTextPrismicType from "%types/rich-text";
-import SliceType from "%types/slice";
+import ImagePrismicType from "@bashkim-com/prismic/types/image";
+import RichTextPrismicType from "@bashkim-com/prismic/types/rich-text";
+import SliceType from "@bashkim-com/prismic/types/slice";
 
-interface CaptionedMagazineSliceType extends SliceType {
+type CaptionedMagazineSliceType = SliceType & {
   items: Array<{
     captioned_magazine_slice_type_images: ImagePrismicType;
   }>;
@@ -18,6 +18,6 @@ interface CaptionedMagazineSliceType extends SliceType {
       | "o-list-item"
     >;
   };
-}
+};
 
 export default CaptionedMagazineSliceType;

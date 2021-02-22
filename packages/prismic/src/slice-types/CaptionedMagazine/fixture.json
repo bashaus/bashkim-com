@@ -1,6 +1,6 @@
 {
-  "slice_type": "CaptionedMagazineSliceType",
-  "slice_label": null,
+  "type": "CaptionedMagazineSliceType",
+  "label": null,
   "items": [
     {
       "captioned_magazine_slice_type_images": {

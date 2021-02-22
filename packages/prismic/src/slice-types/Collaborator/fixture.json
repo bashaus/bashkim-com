@@ -1,6 +1,6 @@
 {
-  "slice_type": "CollaboratorSliceType",
-  "slice_label": null,
+  "type": "CollaboratorSliceType",
+  "label": null,
   "items": [{}],
   "primary": {
     "collaborator_slice_type_peer": {

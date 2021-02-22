@@ -1,6 +1,6 @@
 {
-  "slice_type": "GridVideoSliceType",
-  "slice_label": null,
+  "type": "GridVideoSliceType",
+  "label": null,
   "items": [
     {
       "newspaper_slice_type_group": [

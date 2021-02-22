@@ -1,6 +1,6 @@
 {
-  "slice_type": "CaptionedVideoSliceType",
-  "slice_label": null,
+  "type": "CaptionedVideoSliceType",
+  "label": null,
   "items": [{}],
   "primary": {
     "captioned_video_slice_type_caption": [

@@ -8,6 +8,6 @@
     "noUnusedParameters": true,
     "removeComments": true,
     "resolveJsonModule": true,
-    "target": "es5",
+    "target": "es5"
   }
 }

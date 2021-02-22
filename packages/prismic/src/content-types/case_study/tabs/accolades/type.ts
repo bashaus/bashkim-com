@@ -1,4 +1,4 @@
-import AccoladeSliceType from "%slice-types/Accolade/type";
+import AccoladeSliceType from "@bashkim-com/prismic/slice-types/Accolade/type";
 
 type CaseStudyContentTypeAccoladesTab = {
   accolades: Array<AccoladeSliceType>;

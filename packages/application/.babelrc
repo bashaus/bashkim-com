@@ -4,20 +4,23 @@
   "presets": ["next/babel"],
 
   "plugins": [
-    ["module-resolver", {
-      "root": ["./"],
-      "alias": {
-        "%components": "./src/components",
-        "%contexts": "./src/contexts",
-        "%libraries": "./src/libraries",
-        "%partials": "./src/partials",
-        "%prismic": "./src/libraries/prismic",
-        "%public": "./public",
-        "%slices": "./src/slices",
-        "%storybook": "./.storybook",
-        "%styleguide": "./src/styleguide"
+    [
+      "module-resolver",
+      {
+        "root": ["./"],
+        "alias": {
+          "%components": "./src/components",
+          "%contexts": "./src/contexts",
+          "%libraries": "./src/libraries",
+          "%partials": "./src/partials",
+          "%prismic": "./src/libraries/prismic",
+          "%public": "./public",
+          "%slices": "./src/slices",
+          "%storybook": "./.storybook",
+          "%styleguide": "./src/styleguide"
+        }
       }
-    }]
+    ]
   ],
 
   "env": {

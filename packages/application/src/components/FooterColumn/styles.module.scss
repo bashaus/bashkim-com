@@ -11,7 +11,11 @@
   padding-bottom: 0;
 
   @include grid-cell-padding(
-    $breakpoints: (tablet-landscape, desktop-narrow, desktop-wide)
+    $breakpoints: (
+      tablet-landscape,
+      desktop-narrow,
+      desktop-wide,
+    )
   );
 
   @include breakpoint($media-screen-small) {
@@ -35,7 +39,11 @@
 
   .label {
     @include grid-full-padding(
-      $breakpoints: (mobile-portrait, mobile-landscape, tablet-portrait)
+      $breakpoints: (
+        mobile-portrait,
+        mobile-landscape,
+        tablet-portrait,
+      )
     );
 
     display: block;
@@ -106,7 +114,11 @@
 
   ul {
     @include grid-full-padding(
-      $breakpoints: (mobile-portrait, mobile-landscape, tablet-portrait)
+      $breakpoints: (
+        mobile-portrait,
+        mobile-landscape,
+        tablet-portrait,
+      )
     );
   }
 

@@ -1,7 +1,7 @@
-import DocumentLinkPrismicType from "%types/document-link";
-import SliceType from "%types/slice";
+import DocumentLinkPrismicType from "@bashkim-com/prismic/types/document-link";
+import SliceType from "@bashkim-com/prismic/types/slice";
 
-interface CollaboratorSliceType extends SliceType {
+type CollaboratorSliceType = SliceType & {
   items: Array<any>;
   primary: {
     collaborator_slice_type_peer: DocumentLinkPrismicType<{
@@ -10,6 +10,6 @@ interface CollaboratorSliceType extends SliceType {
     collaborator_slice_type_company?: string;
     collaborator_slice_type_role?: string;
   };
-}
+};
 
 export default CollaboratorSliceType;

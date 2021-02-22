@@ -1,4 +1,4 @@
-import LinkPrismicType from "%types/link";
+import LinkPrismicType from "@bashkim-com/prismic/types/link";
 
 type PeerContentTypeMainTab = {
   peer_name: string;

@@ -1,7 +1,7 @@
-import RichTextPrismicType from "%types/rich-text";
-import SliceType from "%types/slice";
+import RichTextPrismicType from "@bashkim-com/prismic/types/rich-text";
+import SliceType from "@bashkim-com/prismic/types/slice";
 
-interface NewspaperSliceType extends SliceType {
+type NewspaperSliceType = SliceType & {
   items: Array<{
     newspaper_slice_type_group: RichTextPrismicType<
       | "paragraph"
@@ -17,6 +17,6 @@ interface NewspaperSliceType extends SliceType {
     >;
   }>;
   primary: {};
-}
+};
 
 export default NewspaperSliceType;

@@ -1,16 +1,13 @@
 import { ConfigPartialType } from "../types";
 
+import googleAnalytics from "./local/googleAnalytics";
+import next from "./local/next";
+import sentry from "./local/sentry";
+import sitemap from "./local/sitemap";
+
 export const localConfig: ConfigPartialType = {
-  googleAnalytics: {
-    enabled: false,
-  },
-  next: {
-    dev: true,
-  },
-  sentry: {
-    enabled: false,
-  },
-  sitemap: {
-    baseHref: "http://localhost:3000",
-  },
+  googleAnalytics,
+  next,
+  sentry,
+  sitemap,
 };

@@ -18,7 +18,10 @@
     tr {
       display: block;
       @include grid-cell-padding(
-        $sides: (top, bottom)
+        $sides: (
+          top,
+          bottom,
+        )
       );
     }
 
@@ -58,14 +61,21 @@
 
     thead th {
       @include grid-cell-padding(
-        $sides: (left, right)
+        $sides: (
+          left,
+          right,
+        )
       );
     }
 
     tbody th,
     tbody td {
       @include grid-cell-padding(
-        $sides: (top, left, right)
+        $sides: (
+          top,
+          left,
+          right,
+        )
       );
     }
 

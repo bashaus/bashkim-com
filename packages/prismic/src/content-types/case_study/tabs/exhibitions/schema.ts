@@ -1,4 +1,4 @@
-import ExhibitionSliceType from "%slice-types/Exhibition/schema.json";
+import ExhibitionSliceType from "@bashkim-com/prismic/slice-types/Exhibition/schema.json";
 
 export default {
   exhibitions: {
