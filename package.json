@@ -1,13 +1,6 @@
 {
   "name": "bashkim-com",
   "private": true,
-  "workspaces": [
-    "packages/config",
-    "packages/prismic",
-    "packages/seo",
-    "packages/sitemap",
-    "packages/application"
-  ],
   "description": "Portfolio of case studies by Bashkim Isai",
   "repository": "github:bashaus/bashkim-com",
   "license": "SEE LICENSE IN LICENSE.md",
@@ -15,13 +8,20 @@
     "name": "Bashkim Isai",
     "url": "https://www.bashkim.com/"
   },
+  "workspaces": [
+    "packages/config",
+    "packages/prismic",
+    "packages/seo",
+    "packages/sitemap",
+    "packages/application"
+  ],
   "scripts": {
     "build": "yarn workspaces run build",
     "clean": "yarn workspaces run clean",
     "dev": "sls offline --noPrependStageInUrl=true",
-    "javascripts:lint": "eslint --ext .js,.jsx,.ts,.tsx .",
-    "lint": "yarn javascripts:lint && yarn stylesheets:lint",
-    "stylesheets:lint": "stylelint '**/*.scss' '**/*.css'",
+    "scripts:lint": "eslint --ext .js,.ts,.tsx .",
+    "lint": "yarn scripts:lint && yarn styles:lint",
+    "styles:lint": "stylelint '**/*.scss' '**/*.css'",
     "test": "yarn workspaces run test"
   },
   "dependencies": {
@@ -52,8 +52,10 @@
     "serverless-jetpack": "^0.10.6",
     "serverless-offline": "^6.1.5",
     "serverless-sentry": "^2.0.0",
+    "sort-package-json": "^1.49.0",
     "stylelint": "^13.3.3",
     "stylelint-config-standard": "^20.0.0",
+    "stylelint-junit-formatter": "^0.2.2",
     "stylelint-scss": "^3.1.0",
     "typescript": "^4.0.3"
   }

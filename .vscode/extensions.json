@@ -2,7 +2,7 @@
   "recommendations": [
     "dbaeumer.vscode-eslint",
     "editorconfig.editorconfig",
-    "esbenp.prettier-vscode",
+    "graphql.vscode-graphql",
     "mhutchie.git-graph",
     "mikestead.dotenv",
     "stylelint.vscode-stylelint",

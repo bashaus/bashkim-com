@@ -19,4 +19,8 @@ module.exports = {
   moduleNameMapper: {
     "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy",
   },
+  reporters: [
+    "default",
+    ["jest-junit", { outputDirectory: "../../.reports/application/" }],
+  ],
 };
