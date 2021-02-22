@@ -20,6 +20,9 @@ jobs:
     executor: exec-node
     steps:
       - checkout
+      - restore_cache:
+          keys:
+            - yarn-lock-{{ checksum "yarn.lock" }}
       - run: yarn install --frozen-lockfile
       - run:
           command: yarn test
@@ -30,10 +33,16 @@ jobs:
       - run:
           command: yarn styles:lint
           when: always
+      - save_cache:
+          key: yarn-lock-{{ checksum "yarn.lock" }}
+          paths:
+            - node_modules
+            - packages/*/node_modules/
       - persist_to_workspace:
           root: ./
           paths:
             - node_modules/
+            - packages/*/node_modules/
 
   build:
     executor: exec-node
