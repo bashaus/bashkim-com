@@ -92,6 +92,9 @@ functions:
           path: /sitemap/{any+}
   seo:
     handler: packages/seo/build/lambda.handler
+    jetpack:
+      roots:
+        - "packages/seo"
     events:
       - http:
           method: ANY
