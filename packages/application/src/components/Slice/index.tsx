@@ -1,5 +1,5 @@
 import dynamic from "next/dynamic";
-import React from "react";
+import React, { ComponentType } from "react";
 
 import { SlicePrismicType } from "@bashkim-com/prismic";
 
@@ -28,7 +28,7 @@ type SliceProps = {
 const Slice = (props: SliceProps): JSX.Element => {
   const { slice } = props;
 
-  const SliceTypeComponent: React.ComponentType<any> =
+  const SliceTypeComponent: ComponentType<any> =
     SliceTypeComponentMap[slice.type];
 
   return <SliceTypeComponent {...props} />;

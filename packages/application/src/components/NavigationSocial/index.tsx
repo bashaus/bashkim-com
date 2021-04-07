@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import React from "react";
+import React, { useContext } from "react";
 
 import { ReactComponent as LogoGitHub } from "%public/static/vectors/social/github.svg";
 import { ReactComponent as LogoLinkedIn } from "%public/static/vectors/social/linkedin.svg";
@@ -10,7 +10,7 @@ import { NavigationContext } from "%contexts/Navigation";
 import styles from "./styles.module.scss";
 
 const NavigationSocial = (): JSX.Element => {
-  const { state: navigationState } = React.useContext(NavigationContext);
+  const { state: navigationState } = useContext(NavigationContext);
 
   return (
     <nav

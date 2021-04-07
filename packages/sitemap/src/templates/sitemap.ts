@@ -1,5 +1,5 @@
-import express from "express";
-import xmlbuilder from "xmlbuilder";
+import type express from "express";
+import { create as xmlCreate } from "xmlbuilder";
 
 export type UrlType = {
   url: {
@@ -15,7 +15,7 @@ const SitemapTemplate = (sitemap: () => Promise<Array<UrlType>>) => {
     _req: express.Request,
     res: express.Response
   ): Promise<void> => {
-    const doc = xmlbuilder.create(
+    const doc = xmlCreate(
       {
         urlset: {
           "@xmlns": "http://www.sitemaps.org/schemas/sitemap/0.9",

@@ -1,4 +1,4 @@
-import CSS from "csstype";
+import { Properties as CSSProperties } from "csstype";
 import React from "react";
 
 import styles from "./style.module.scss";
@@ -12,7 +12,7 @@ const PartialSplitItem = ({
   backgroundImage,
   children,
 }: PartialSplitItemProps): JSX.Element => {
-  const style: CSS.Properties = {};
+  const style: CSSProperties = {};
   const className = [styles.PartialSplitItem];
 
   if (backgroundImage) {

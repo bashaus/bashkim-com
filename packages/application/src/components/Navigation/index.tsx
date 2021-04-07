@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import React from "react";
+import React, { useContext } from "react";
 
 import NavigationPrimary from "%components/NavigationPrimary";
 import NavigationSocial from "%components/NavigationSocial";
@@ -12,7 +12,7 @@ type NavigationProps = {
 };
 
 const Navigation = ({ theme }: NavigationProps): JSX.Element => {
-  const { state: navigationState } = React.useContext(NavigationContext);
+  const { state: navigationState } = useContext(NavigationContext);
 
   return (
     <div

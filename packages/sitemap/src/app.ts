@@ -1,13 +1,13 @@
-import express from "express";
+import express, { static as eStatic } from "express";
 import path from "path";
 
 import SitemapTemplate from "./templates/sitemap";
 import SitemapIndexTemplate from "./templates/sitemapindex";
 
-import SitemapIndex from "./sitemapindexes/index";
+import { SitemapIndex } from "./sitemapindexes/index";
 
-import CaseStudiesSitemap from "./sitemaps/case-studies";
-import PagesSitemap from "./sitemaps/pages";
+import { CaseStudiesSitemap } from "./sitemaps/case-studies";
+import { PagesSitemap } from "./sitemaps/pages";
 
 const app = express();
 
@@ -19,6 +19,6 @@ app.get("/sitemap/pages.xml", SitemapTemplate(PagesSitemap));
 app.get("/sitemap/case-studies.xml", SitemapTemplate(CaseStudiesSitemap));
 
 // static files
-app.use(express.static(path.resolve(__dirname, "../public")));
+app.use(eStatic(path.resolve(__dirname, "../public")));
 
 export default app;

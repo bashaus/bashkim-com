@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { createContext, useEffect, useReducer } from "react";
 import createPersistedState from "use-persisted-state";
 
 import CookiesReducer from "./reducer";
@@ -10,7 +10,7 @@ import {
 
 const useCounterState = createPersistedState("cookiesDismissed");
 
-export const CookiesContext = React.createContext<CookiesContextType>({
+export const CookiesContext = createContext<CookiesContextType>({
   state: INITIAL_STATE,
   dispatch: () => {
     /* void */
@@ -30,7 +30,7 @@ const CookiesStore = ({ children }: CookiesStoreProps): JSX.Element => {
     isDismissed,
   };
 
-  const [state, dispatch] = React.useReducer(CookiesReducer, initialState);
+  const [state, dispatch] = useReducer(CookiesReducer, initialState);
 
   /* Persist state when it changes */
   useEffect(() => setIsDismissed(state.isDismissed), [

@@ -2,7 +2,7 @@ import dayjs from "dayjs";
 import config from "@bashkim-com/config";
 import { UrlType } from "../templates/sitemap";
 
-export const CaseStudiesSitemap = async (): Promise<Array<UrlType>> => {
+export const PagesSitemap = async (): Promise<Array<UrlType>> => {
   const urlset: Array<UrlType> = [];
   const now = dayjs().format();
 
@@ -35,5 +35,3 @@ export const CaseStudiesSitemap = async (): Promise<Array<UrlType>> => {
 
   return urlset;
 };
-
-export default CaseStudiesSitemap;

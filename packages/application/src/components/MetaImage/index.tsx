@@ -1,5 +1,5 @@
 import Head from "next/head";
-import mime from "mime";
+import { getType as getMimeType } from "mime";
 import React from "react";
 
 type MetaImageProps = {
@@ -24,7 +24,7 @@ const MetaImage = ({
       <meta
         key="MetaImage.opengraph.type"
         property="og:image:type"
-        content={mime.getType(url) as string}
+        content={getMimeType(url)}
       />
       {width && height && (
         <>

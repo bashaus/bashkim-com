@@ -1,8 +1,8 @@
-import React from "react";
+import React, { createContext, useReducer } from "react";
 import NavigationReducer from "./reducer";
 import { NavigationContextType, INITIAL_STATE } from "./state";
 
-export const NavigationContext = React.createContext<NavigationContextType>({
+export const NavigationContext = createContext<NavigationContextType>({
   state: INITIAL_STATE,
   dispatch: () => {
     /* void */
@@ -14,7 +14,7 @@ type NavigationStoreProps = {
 };
 
 const NavigationStore = ({ children }: NavigationStoreProps): JSX.Element => {
-  const [state, dispatch] = React.useReducer(NavigationReducer, INITIAL_STATE);
+  const [state, dispatch] = useReducer(NavigationReducer, INITIAL_STATE);
 
   return (
     <NavigationContext.Provider value={{ state, dispatch }}>

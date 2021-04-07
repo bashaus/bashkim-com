@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import React from "react";
+import React, { useState } from "react";
 
 import styles from "./styles.module.scss";
 
@@ -14,7 +14,7 @@ const FooterColumn = ({
   label,
   children,
 }: FooterColumnProps): JSX.Element => {
-  const [isVisible, setIsVisible] = React.useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   const handleHeaderClick = (): void => {
     setIsVisible(!isVisible);

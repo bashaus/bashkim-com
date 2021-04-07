@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useCallback } from "react";
+import React, { useCallback, useContext, useEffect, useRef } from "react";
 import debounce from "lodash.debounce";
 
 import { NavigationContext } from "%contexts/Navigation";
@@ -11,7 +11,7 @@ let lastScrollTop = 0;
 
 const HeaderIntersection = (): JSX.Element => {
   const { dispatch: navigationDispatch } = useContext(NavigationContext);
-  const ref = React.useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
 
   /* SCROLL_AT_TOP */
 

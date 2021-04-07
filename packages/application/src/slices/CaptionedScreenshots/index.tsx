@@ -1,5 +1,5 @@
 import { RichText } from "prismic-reactjs";
-import React, { ChangeEvent } from "react";
+import React, { ChangeEvent, useState } from "react";
 import { CaptionedScreenshotsSliceType } from "@bashkim-com/prismic";
 
 import Octicon, { DeviceMobile, DeviceDesktop } from "@primer/octicons-react";
@@ -38,9 +38,7 @@ const CaptionedScreenshotsSlice = ({
       initialWidth
   );
 
-  const [selectedIndex, setSelectedIndex] = React.useState(
-    defaultSelectedIndex
-  );
+  const [selectedIndex, setSelectedIndex] = useState(defaultSelectedIndex);
   const selectedImage =
     fields[selectedIndex].captioned_screenshots_slice_type_images;
 

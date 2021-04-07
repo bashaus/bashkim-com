@@ -1,5 +1,5 @@
-import express from "express";
-import xmlbuilder from "xmlbuilder";
+import type express from "express";
+import { create as xmlCreate } from "xmlbuilder";
 
 export type SitemapType = {
   sitemap: {
@@ -12,7 +12,7 @@ const SitemapIndexTemplate = (sitemaps: () => Promise<Array<SitemapType>>) => {
     _req: express.Request,
     res: express.Response
   ): Promise<void> => {
-    const doc = xmlbuilder.create(
+    const doc = xmlCreate(
       {
         sitemapindex: {
           "@xmlns": "http://www.sitemaps.org/schemas/sitemap/0.9",

@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import React from "react";
+import React, { useContext } from "react";
 
 import Logo from "%components/Logo";
 import Navigation from "%components/Navigation";
@@ -12,7 +12,7 @@ type HeaderProps = {
 };
 
 const Header = ({ theme }: HeaderProps): JSX.Element => {
-  const { state: navigationState } = React.useContext(NavigationContext);
+  const { state: navigationState } = useContext(NavigationContext);
 
   return (
     <header

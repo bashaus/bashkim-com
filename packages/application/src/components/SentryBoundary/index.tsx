@@ -1,5 +1,5 @@
 import * as Sentry from "@sentry/browser";
-import React from "react";
+import React, { PureComponent } from "react";
 
 import styles from "./styles.module.scss";
 
@@ -11,7 +11,7 @@ type SentryBoundaryState = {
   error?: Error;
 };
 
-export default class SentryBoundary extends React.Component<
+export default class SentryBoundary extends PureComponent<
   SentryBoundaryProps,
   SentryBoundaryState
 > {

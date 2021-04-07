@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import Router from "next/router";
+import { Router } from "next/router";
 import React, { useCallback, useContext, useEffect } from "react";
 
 import Footer from "%components/Footer";
@@ -28,7 +28,7 @@ const Page = ({
   );
 
   const handleRouteChange = useCallback(
-    (/* url */) => {
+    (/* url: string */) => {
       navigationDispatch({ type: NavigationActions.MENU_HIDE });
     },
     [navigationDispatch]

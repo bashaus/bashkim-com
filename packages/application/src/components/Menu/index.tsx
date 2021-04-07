@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import React from "react";
+import React, { useContext } from "react";
 
 import Logo from "%components/Logo";
 import MenuSignifierButton from "%components/MenuSignifierButton";
@@ -13,7 +13,7 @@ type MenuProps = {
 };
 
 const Menu = ({ backButton }: MenuProps): JSX.Element => {
-  const { state: navigationState } = React.useContext(NavigationContext);
+  const { state: navigationState } = useContext(NavigationContext);
 
   return (
     <div

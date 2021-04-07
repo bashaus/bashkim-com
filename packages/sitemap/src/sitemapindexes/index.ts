@@ -18,5 +18,3 @@ export const SitemapIndex = async (): Promise<Array<SitemapType>> => {
 
   return sitemaps;
 };
-
-export default SitemapIndex;

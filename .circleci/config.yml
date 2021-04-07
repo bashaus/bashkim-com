@@ -23,7 +23,10 @@ jobs:
       - restore_cache:
           keys:
             - yarn-lock-{{ checksum "yarn.lock" }}
-      - run: yarn install --frozen-lockfile
+      - run:
+          name: yarn
+          command: |
+            yarn install --frozen-lockfile
       - run:
           name: jest
           command: yarn test

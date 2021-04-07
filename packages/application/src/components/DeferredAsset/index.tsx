@@ -1,4 +1,4 @@
-import CSS from "csstype";
+import { Properties as CSSProperties } from "csstype";
 import React, { useState } from "react";
 import VisibilitySensor from "react-visibility-sensor";
 
@@ -37,7 +37,7 @@ const DeferredAsset = ({
     ratioValue = height / width;
   }
 
-  const style: CSS.Properties = {
+  const style: CSSProperties = {
     paddingBottom: `${ratioValue * 100}%`,
   };
 

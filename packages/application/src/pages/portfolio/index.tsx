@@ -1,7 +1,6 @@
 import { GetServerSideProps } from "next";
 import React from "react";
-import PrismicClient from "@bashkim-com/prismic";
-import {
+import PrismicClient, {
   CaseStudyContentType,
   PortfolioPageContentType,
 } from "@bashkim-com/prismic";

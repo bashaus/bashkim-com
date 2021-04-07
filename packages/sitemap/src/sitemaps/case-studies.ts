@@ -41,5 +41,3 @@ export const CaseStudiesSitemap = async (): Promise<Array<UrlType>> => {
 
   return urlset;
 };
-
-export default CaseStudiesSitemap;

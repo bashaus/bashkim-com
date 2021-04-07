@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import React from "react";
+import React, { PureComponent, createRef } from "react";
 
 import $ from "jquery";
 
@@ -26,10 +26,10 @@ type TurnState = {
   isInitialized: boolean;
 };
 
-class Turn extends React.PureComponent<TurnProps, TurnState> {
-  public containerRef = React.createRef<HTMLDivElement>();
+class Turn extends PureComponent<TurnProps, TurnState> {
+  public containerRef = createRef<HTMLDivElement>();
 
-  public pagesRef = React.createRef<HTMLOListElement>();
+  public pagesRef = createRef<HTMLOListElement>();
 
   constructor(props: TurnProps) {
     super(props);
