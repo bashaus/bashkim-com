@@ -1,7 +1,6 @@
 service: bashkim-com
 
 plugins:
-  - serverless-offline
   - serverless-dotenv-plugin
   - serverless-sentry
   - serverless-ignore
@@ -9,6 +8,8 @@ plugins:
 
 package:
   individually: true
+  exclude:
+    - "**/node_modules/aws-sdk/**" # included on Lambda
 
 custom:
   stage: ${opt:stage, env:SLS_STAGE, 'production'}
@@ -19,6 +20,10 @@ custom:
   sentry:
     dsn: ${env:SENTRY_DSN, ''}
     environment: ${self:custom.stage}
+
+  jetpack:
+    preInclude:
+      - "!packages/**"
 
   ignore:
     file: .slsignore
@@ -44,35 +49,26 @@ provider:
   timeout: 15
   environment:
     APP_ENV: ${self:custom.stage}
+    APP_WEBHOOKS_CIRCLE_API_KEY: ${env:APP_WEBHOOKS_CIRCLE_API_KEY}
+    APP_WEBHOOKS_CIRCLE_PROJECT_SLUG: ${env:APP_WEBHOOKS_CIRCLE_PROJECT_SLUG}
+    APP_WEBHOOKS_PRISMIC_SECRET_KEY: ${env:APP_WEBHOOKS_PRISMIC_SECRET_KEY}
     GIT_COMMIT: ${self:custom.website.commitHash}
-    NODE_ENV: ${self:custom.stage}
     LAMBDA_ENV: true
+    NODE_ENV: ${self:custom.stage}
     SENTRY_DSN: ${self:custom.sentry.dsn}
 
 functions:
-  application:
-    handler: packages/application/lambda.handler
+  webhooks:
+    handler: packages/webhooks/build/lambda.handler
     jetpack:
       roots:
-        - "packages/application"
-        - "packages/config"
-        - "packages/prismic"
+        - "packages/webhooks"
+      preInclude:
+        - "packages/webhooks/build/**"
     events:
       - http:
           method: ANY
-          path: /
-      - http:
-          method: ANY
-          path: /about
-      - http:
-          method: ANY
-          path: /portfolio
-      - http:
-          method: ANY
-          path: /portfolio/{any+}
-      - http:
-          method: ANY
-          path: /legal/cookie-policy
+          path: /webhooks/{any+}
   sitemap:
     handler: packages/sitemap/build/lambda.handler
     jetpack:
@@ -80,6 +76,10 @@ functions:
         - "packages/config"
         - "packages/prismic"
         - "packages/sitemap"
+      preInclude:
+        - "packages/config/build/**"
+        - "packages/prismic/build/**"
+        - "packages/sitemap/build/**"
     events:
       - http:
           method: GET
@@ -95,6 +95,8 @@ functions:
     jetpack:
       roots:
         - "packages/seo"
+      preInclude:
+        - "packages/seo/build/**"
     events:
       - http:
           method: ANY
@@ -103,7 +105,7 @@ functions:
 resources:
   Description: bashkim-com
   extensions:
-    ApplicationLogGroup:
+    WebhooksLogGroup:
       Properties:
         RetentionInDays: "3"
     SeoLogGroup:
@@ -142,7 +144,7 @@ resources:
           Origins:
             - DomainName:
                 Fn::GetAtt: [WebsiteBucket, DomainName]
-              Id: WebsiteBucket
+              Id: WebsiteBucketOrigin
               S3OriginConfig:
                 OriginAccessIdentity:
                   Fn::Join:
@@ -156,7 +158,7 @@ resources:
                     - ".execute-api."
                     - ${self:custom.region}
                     - ".amazonaws.com"
-              Id: APIGWOrigin
+              Id: ApiGatewayOrigin
               OriginPath: "/${self:custom.stage}"
               CustomOriginConfig:
                 OriginKeepaliveTimeout: 60
@@ -169,44 +171,41 @@ resources:
                   - "TLSv1.1"
                   - "TLSv1.2"
           CacheBehaviors:
-            - PathPattern: /_next/*
+            - PathPattern: /webhooks/*
               AllowedMethods:
                 - GET
                 - HEAD
                 - OPTIONS
-              TargetOriginId: WebsiteBucket
+                - PUT
+                - PATCH
+                - POST
+                - DELETE
+              TargetOriginId: ApiGatewayOrigin
               Compress: true
+              MinTTL: 60
+              DefaultTTL: 60
               ForwardedValues:
-                QueryString: false
-              ViewerProtocolPolicy: https-only
-            - PathPattern: /static/*
-              AllowedMethods:
-                - GET
-                - HEAD
-                - OPTIONS
-              TargetOriginId: WebsiteBucket
-              Compress: true
-              ForwardedValues:
-                QueryString: false
+                QueryString: true
+                Cookies:
+                  Forward: none
               ViewerProtocolPolicy: https-only
           DefaultCacheBehavior:
             AllowedMethods:
               - GET
               - HEAD
-            TargetOriginId: APIGWOrigin
+              - OPTIONS
+            TargetOriginId: WebsiteBucketOrigin
             Compress: true
-            MinTTL: 60
-            DefaultTTL: 60
             ForwardedValues:
-              QueryString: true
-              Cookies:
-                Forward: none
+              QueryString: false
             ViewerProtocolPolicy: redirect-to-https
 
     WebsiteBucket:
       Type: AWS::S3::Bucket
       Properties:
         BucketName: ${self:custom.website.bucketName}
+        WebsiteConfiguration:
+          IndexDocument: index.html
 
     WebsiteBucketPolicy:
       Type: "AWS::S3::BucketPolicy"
@@ -224,7 +223,7 @@ resources:
                 Fn::Join:
                   - ""
                   - - Fn::GetAtt: [WebsiteBucket, Arn]
-                    - "/**"
+                    - "/*"
               Principal:
                 CanonicalUser:
                   Fn::GetAtt:
@@ -308,7 +307,4 @@ resources:
               Principal:
                 CanonicalUser:
                   Fn::GetAtt:
-                    [
-                      StyleguideCloudFrontOriginAccessIdentity,
-                      S3CanonicalUserId,
-                    ]
+                    [StyleguideCloudFrontOriginAccessIdentity, S3CanonicalUserId]

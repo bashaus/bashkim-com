@@ -1,4 +1,4 @@
-import { GetServerSideProps } from "next";
+import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from "next";
 import React from "react";
 import PrismicClient, { CaseStudyContentType } from "@bashkim-com/prismic";
 
@@ -19,6 +19,7 @@ import NotFoundError from "%libraries/next/errors/NotFoundError";
 
 import { CaseStudyPageQuery } from "%prismic/queries/CaseStudyPageQuery";
 import { CaseStudyBodyQuery } from "%prismic/queries/CaseStudyBodyQuery";
+import { CaseStudiesQuery } from "%prismic/queries/CaseStudiesQuery";
 
 type CaseStudyPageProps = {
   caseStudyPage: CaseStudyContentType;
@@ -85,9 +86,23 @@ const CaseStudyPage = ({
   );
 };
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
-  const { query } = context;
-  const { caseStudySlug } = query;
+export const getStaticPaths: GetStaticPaths = async () => {
+  const caseStudiesResult = await PrismicClient.query({
+    query: CaseStudiesQuery,
+  });
+
+  return {
+    fallback: false,
+    paths: caseStudiesResult.data.caseStudies.edges.map((caseStudy) => ({
+      params: { caseStudySlug: caseStudy.node._meta.uid },
+    })),
+  };
+};
+
+export const getStaticProps: GetStaticProps = async (
+  context: GetStaticPropsContext
+) => {
+  const { caseStudySlug } = context.params;
 
   const caseStudyPagePromise = PrismicClient.query({
     query: CaseStudyPageQuery,

@@ -5,6 +5,7 @@ const webpack = require("webpack");
 const nextConfig = {
   target: "serverless",
   publicRuntimeConfig,
+  trailingSlash: true,
   webpack: (config, { isServer }) => {
     // Perform customizations to webpack config
     config.resolve.alias["%styleguide"] = path.resolve(__dirname, "styleguide");

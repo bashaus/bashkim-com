@@ -1,20 +1,21 @@
 {
   "name": "@bashkim-com/prismic",
-  "private": true,
   "version": "1.0.0",
+  "private": true,
   "main": "./build/index.js",
   "typings": "./build/index.d.ts",
   "scripts": {
+    "prebuild": "yarn clean",
     "build": "tsc",
     "clean": "rm -rf build/",
-    "prebuild": "yarn clean",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
   "dependencies": {
     "@apollo/client": "^3.2.5",
     "@bashkim-com/config": "1.0.0",
     "apollo-link-prismic": "^1.0.8",
-    "graphql": "^15.4.0"
+    "graphql": "^15.4.0",
+    "node-fetch": "^2.6.1"
   },
   "devDependencies": {
     "typescript": "^4.0.3"

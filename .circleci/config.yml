@@ -81,10 +81,12 @@ jobs:
           paths:
             - packages/application/.next/
             - packages/application/.storybook-static/
+            - packages/application/dest/
             - packages/config/build/
             - packages/prismic/build/
             - packages/seo/build/
             - packages/sitemap/build/
+            - packages/webhooks/build/
 
   deploy:
     executor: exec-node
@@ -102,15 +104,8 @@ jobs:
           at: ./
 
       - aws-s3/sync:
-          from: ./packages/application/public/static
-          to: "s3://${DEPLOY_S3_WEBSITE_BUCKET}/static"
-          overwrite: true
-          arguments: |
-            --cache-control "max-age=86400"
-
-      - aws-s3/sync:
-          from: ./packages/application/.next
-          to: "s3://${DEPLOY_S3_WEBSITE_BUCKET}/_next"
+          from: ./packages/application/dest
+          to: "s3://${DEPLOY_S3_WEBSITE_BUCKET}"
           overwrite: true
           arguments: |
             --cache-control "max-age=86400"
@@ -152,19 +147,10 @@ workflows:
                 - master
                 - develop
 
-      - approve:
-          type: approval
-          requires:
-            - build
-          filters:
-            branches:
-              only:
-                - master
-
       - deploy:
           context: bashkim-com-prod
           requires:
-            - approve
+            - build
 
       - synchronize:
           context: bashkim-com-prod

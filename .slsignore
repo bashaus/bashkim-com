@@ -2,13 +2,6 @@
 packages/*/src/**
 packages/*/tsconfig.json
 
-# Package: application
-packages/application/.jest/**
-packages/application/.storybook/**
-packages/application/.storybook-static/**
-packages/application/public/**
-packages/application/jest.config.js
-
 # Folders
 .circleci/*
 .git/

@@ -1,4 +1,4 @@
-import { GetServerSideProps } from "next";
+import { GetStaticProps } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import React from "react";
@@ -145,7 +145,7 @@ const HomePage = ({ homePage }: HomePageProps): JSX.Element => {
   );
 };
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const result = await PrismicClient.query({
     query: HomePageQuery,
   });
