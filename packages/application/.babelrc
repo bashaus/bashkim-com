@@ -1,8 +1,6 @@
 {
   "sourceMaps": true,
-
   "presets": ["next/babel"],
-
   "plugins": [
     [
       "module-resolver",
@@ -22,7 +20,6 @@
       }
     ]
   ],
-
   "env": {
     "production": {
       "sourceMaps": false

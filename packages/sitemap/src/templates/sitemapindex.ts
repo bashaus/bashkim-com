@@ -8,7 +8,10 @@ export type SitemapType = {
 };
 
 const SitemapIndexTemplate = (sitemaps: () => Promise<Array<SitemapType>>) => {
-  return async (_req: express.Request, res: express.Response) => {
+  return async (
+    _req: express.Request,
+    res: express.Response
+  ): Promise<void> => {
     const doc = xmlbuilder.create(
       {
         sitemapindex: {

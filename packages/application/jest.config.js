@@ -21,6 +21,6 @@ module.exports = {
   },
   reporters: [
     "default",
-    ["jest-junit", { outputDirectory: "../../.reports/application/" }],
+    ["jest-junit", { outputDirectory: "../../test-results/application/" }],
   ],
 };

@@ -12,7 +12,9 @@ const useCounterState = createPersistedState("cookiesDismissed");
 
 export const CookiesContext = React.createContext<CookiesContextType>({
   state: INITIAL_STATE,
-  dispatch: () => {},
+  dispatch: () => {
+    /* void */
+  },
 });
 
 type CookiesStoreProps = {

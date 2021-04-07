@@ -9,7 +9,7 @@ type GridVideoSliceType = SliceType & {
     grid_video_slice_type_poster: ImagePrismicType;
     grid_video_slice_type_description: RichTextPrismicType<"paragraph">;
   }>;
-  primary: {};
+  primary: unknown;
 };
 
 export default GridVideoSliceType;

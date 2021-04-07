@@ -4,7 +4,7 @@ import RichTextPrismicType, {
 import SliceType from "@bashkim-com/prismic/types/slice";
 
 type FullTextSliceType = SliceType & {
-  items?: Array<{}>;
+  items?: Array<unknown>;
   primary: {
     full_text_slice_type_body: RichTextPrismicType<RichTextTypePrismicItemType>;
   };

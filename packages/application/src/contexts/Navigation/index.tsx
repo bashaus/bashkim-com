@@ -4,7 +4,9 @@ import { NavigationContextType, INITIAL_STATE } from "./state";
 
 export const NavigationContext = React.createContext<NavigationContextType>({
   state: INITIAL_STATE,
-  dispatch: () => {},
+  dispatch: () => {
+    /* void */
+  },
 });
 
 type NavigationStoreProps = {

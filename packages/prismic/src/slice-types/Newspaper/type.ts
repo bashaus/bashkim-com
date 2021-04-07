@@ -16,7 +16,7 @@ type NewspaperSliceType = SliceType & {
       | "o-list-item"
     >;
   }>;
-  primary: {};
+  primary: unknown;
 };
 
 export default NewspaperSliceType;

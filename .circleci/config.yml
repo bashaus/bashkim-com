@@ -25,27 +25,31 @@ jobs:
             - yarn-lock-{{ checksum "yarn.lock" }}
       - run: yarn install --frozen-lockfile
       - run:
+          name: jest
           command: yarn test
           when: always
       - run:
           name: eslint
           when: always
-          command: yarn lint:scripts
+          command: |
+            mkdir -p test-results/eslint/
+            npx eslint \
+              --format junit \
+              --ext .js,.ts,.tsx \
+              . \
+            > test-results/eslint/junit.xml
       - run:
           name: stylelint
           when: always
           command: |
-            mkdir -p .reports/stylelint/
+            mkdir -p test-results/stylelint/
             npx stylelint \
               --custom-formatter 'node_modules/stylelint-junit-formatter' \
               '**/*.scss' \
               '**/*.css' \
-            > .reports/stylelint/test-results.xml
-      - run:
-          name: prettier
-          when: always
-          command: |
-            npx prettier --check .
+            > test-results/stylelint/junit.xml
+      - store_test_results:
+          path: test-results
       - save_cache:
           key: yarn-lock-{{ checksum "yarn.lock" }}
           paths:

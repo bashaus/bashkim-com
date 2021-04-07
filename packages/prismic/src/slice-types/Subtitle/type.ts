@@ -4,7 +4,7 @@ import RichTextPrismicType, {
 import SliceType from "@bashkim-com/prismic/types/slice";
 
 type SubtitleSliceType = SliceType & {
-  items?: Array<{}>;
+  items?: Array<unknown>;
   primary: {
     subtitle_slice_type_heading: RichTextPrismicType<
       RichTextTypePrismicItemType.HEADING2

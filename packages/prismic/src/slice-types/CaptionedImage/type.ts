@@ -3,7 +3,7 @@ import RichTextPrismic from "@bashkim-com/prismic/types/rich-text";
 import SlicePrismicType from "@bashkim-com/prismic/types/slice";
 
 type CaptionedImageSliceType = SlicePrismicType & {
-  items?: Array<{}>;
+  items?: Array<unknown>;
   primary: {
     captioned_image_slice_type_image: ImagePrismic;
     captioned_image_slice_type_caption: RichTextPrismic<

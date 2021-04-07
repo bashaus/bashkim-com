@@ -1,12 +1,12 @@
 import React from "react";
-import SlickSlider from "react-slick";
+import SlickSlider, { ResponsiveObject } from "react-slick";
 
 import styles from "./styles.module.scss";
 import dotsStyles from "./styles.dots.module.scss";
 
 type CarouselProps = {
   children: React.ReactNode;
-  responsive?: any;
+  responsive?: Array<ResponsiveObject>;
   slidesToShow?: number;
   slidestoScroll?: number;
 };

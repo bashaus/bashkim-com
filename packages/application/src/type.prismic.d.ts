@@ -39,7 +39,7 @@ declare module "prismic-reactjs" {
   type RichTextBlock = {
     type: string;
     text: string;
-    spans: RichTextSpan[];
+    spans: Array<RichTextSpan>;
   };
 
   type LinkType = {

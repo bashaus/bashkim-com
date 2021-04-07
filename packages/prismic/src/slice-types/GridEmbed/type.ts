@@ -5,7 +5,7 @@ type GridEmbedSliceType = SliceType & {
   items: Array<{
     grid_embed_slice_type_embed: EmbedPrismicType;
   }>;
-  primary: {};
+  primary: unknown;
 };
 
 export default GridEmbedSliceType;
