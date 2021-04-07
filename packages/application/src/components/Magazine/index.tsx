@@ -77,7 +77,7 @@ const Magazine = ({
         pageNumbers,
       } as MagazineSpreadChangeEvent);
     },
-    [display]
+    [display, onSpreadChange, pages]
   );
 
   const handleTurnPageChange = useCallback(
@@ -85,7 +85,7 @@ const Magazine = ({
       const newSpread = convertPageToSpread(display, newPage);
       handleSpreadChange(newSpread);
     },
-    [display]
+    [display, handleSpreadChange]
   );
 
   const handleTurnInitialize = (): void => {
@@ -105,11 +105,12 @@ const Magazine = ({
     };
   }, []);
 
-  useEffect(() => {
-    if (isInitialized) {
-      handleSpreadChange(spread);
-    }
-  }, [display, spread]);
+  useEffect(() => isInitialized && handleSpreadChange(spread), [
+    display,
+    spread,
+    handleSpreadChange,
+    isInitialized,
+  ]);
 
   return (
     <Turn

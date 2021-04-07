@@ -31,9 +31,10 @@ const CookiesStore = ({ children }: CookiesStoreProps): JSX.Element => {
   const [state, dispatch] = React.useReducer(CookiesReducer, initialState);
 
   /* Persist state when it changes */
-  useEffect(() => {
-    setIsDismissed(state.isDismissed);
-  }, [state]);
+  useEffect(() => setIsDismissed(state.isDismissed), [
+    state.isDismissed,
+    setIsDismissed,
+  ]);
 
   return (
     <CookiesContext.Provider value={{ state, dispatch }}>

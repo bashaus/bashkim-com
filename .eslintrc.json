@@ -1,9 +1,9 @@
 {
-  "plugins": ["promise", "react", "prettier"],
+  "plugins": ["promise", "react", "react-hooks"],
   "extends": [
     "plugin:promise/recommended",
     "plugin:react/recommended",
-    "plugin:prettier/recommended"
+    "plugin:react-hooks/recommended"
   ],
   "rules": {
     "jsx-a11y/anchor-is-valid": 0
@@ -28,21 +28,6 @@
         "ecmaVersion": 2018,
         "sourceType": "module",
         "project": "./tsconfig.json"
-      },
-      "plugins": ["promise", "react", "prettier"],
-      "extends": [
-        "plugin:promise/recommended",
-        "plugin:react/recommended",
-        "plugin:prettier/recommended"
-      ],
-      "rules": {
-        "spaced-comment": [
-          "error",
-          "always",
-          {
-            "markers": ["/"]
-          }
-        ]
       },
       "settings": {
         "import/parsers": {
