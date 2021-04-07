@@ -3,15 +3,13 @@
     @each $breakpoint, $span in $columns {
       @include grid-cell-width($breakpoint, $span);
     }
-  }
-  @else if (type-of($columns) == "string") {
+  } @else if (type-of($columns) == "string") {
     $breakpoint: $columns;
 
     @if ($span == 0) {
       @error "grid-cell( #{$breakpoint}, #{$span} )"
         "$span expects unitless number of columns";
-    }
-    @else if (unitless($span) == false) {
+    } @else if (unitless($span) == false) {
       @error "grid-cell( #{$breakpoint}, #{$span} )"
         "$span expects unitless number of columns";
     }
@@ -20,8 +18,7 @@
       flex: $span 0 (100% / 12 * $span);
       max-width: (100% / 12 * $span);
     }
-  }
-  @else {
+  } @else {
     @error "grid-cell-width( #{type-of($columns)}, #{type-of($span)} ): "
       "$columns received type #{type-of($columns)}, "
       "expected `map` or `string`";

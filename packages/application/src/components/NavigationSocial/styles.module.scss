@@ -26,7 +26,7 @@
       font-weight: bold;
       line-height: 48px;
       text-transform: uppercase;
-      color: #B6B6B6;
+      color: #b6b6b6;
     }
   }
 
@@ -93,7 +93,7 @@
 
   @include breakpoint($media-not-mobile) {
     a:hover svg path {
-      fill: #0366D6;
+      fill: #0366d6;
     }
   }
 }
@@ -109,7 +109,7 @@
 
   @include breakpoint($media-not-mobile) {
     a:hover svg path {
-      fill: #0077B5;
+      fill: #0077b5;
     }
   }
 }
@@ -126,11 +126,11 @@
 
   @include breakpoint($media-not-mobile) {
     a:hover svg :global(.stackoverflow_svg__stackoverflow-container) {
-      fill: #BCBBBB;
+      fill: #bcbbbb;
     }
 
     a:hover svg :global(.stackoverflow_svg__stackoverflow-stack) {
-      fill: #F48024;
+      fill: #f48024;
     }
   }
 }

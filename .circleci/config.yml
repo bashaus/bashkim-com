@@ -28,11 +28,24 @@ jobs:
           command: yarn test
           when: always
       - run:
-          command: yarn scripts:lint
+          name: eslint
           when: always
+          command: yarn lint:scripts
       - run:
-          command: yarn styles:lint
+          name: stylelint
           when: always
+          command: |
+            mkdir -p .reports/stylelint/
+            npx stylelint \
+              --custom-formatter 'node_modules/stylelint-junit-formatter' \
+              '**/*.scss' \
+              '**/*.css' \
+            > .reports/stylelint/test-results.xml
+      - run:
+          name: prettier
+          when: always
+          command: |
+            npx prettier --check .
       - save_cache:
           key: yarn-lock-{{ checksum "yarn.lock" }}
           paths:
