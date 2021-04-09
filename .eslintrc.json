@@ -6,6 +6,12 @@
     "plugin:jsx-a11y/recommended",
     "plugin:prettier/recommended"
   ],
+  "parserOptions": {
+    "ecmaVersion": 2017
+  },
+  "env": {
+    "es6": true
+  },
   "plugins": ["promise", "react", "react-hooks", "jsx-a11y", "prettier"],
   "rules": {
     "prettier/prettier": "error",
@@ -17,10 +23,6 @@
     }
   },
   "overrides": [
-    {
-      "files": ["**/*.js"],
-      "parser": "babel-eslint"
-    },
     {
       "files": ["**/*.ts", "**/*.tsx"],
       "extends": [
