@@ -1,9 +1,9 @@
 import classNames from "classnames";
 import { useContext } from "react";
 
-import { ReactComponent as LogoGitHub } from "%public/static/vectors/social/github.svg";
-import { ReactComponent as LogoLinkedIn } from "%public/static/vectors/social/linkedin.svg";
-import { ReactComponent as LogoStackOverflow } from "%public/static/vectors/social/stackoverflow.svg";
+import LogoGitHub from "%public/static/vectors/social/github.svg";
+import LogoLinkedIn from "%public/static/vectors/social/linkedin.svg";
+import LogoStackOverflow from "%public/static/vectors/social/stackoverflow.svg";
 
 import { NavigationContext } from "%contexts/Navigation/context";
 

@@ -5,7 +5,7 @@ import { AccoladeSliceType } from "@bashkim-com/prismic";
 
 import LinkResolver from "%prismic/LinkResolver";
 
-import { ReactComponent as TrophyImage } from "%public/static/vectors/icons/trophy.svg";
+import IconTrophy from "%public/static/vectors/icons/trophy.svg";
 
 import styles from "./styles.module.scss";
 
@@ -45,7 +45,7 @@ const AccoladeSlice = ({ slice }: AccoladeSliceProps): JSX.Element => {
               <a href={awardHref} target="_blank" rel="noopener noreferrer">
                 <h3>{awardPlace}</h3>
                 <svg className={classNames(styles.trophy, styles[awardPlace])}>
-                  <TrophyImage />
+                  <IconTrophy />
                 </svg>
                 {awardCategory && RichText.render(awardCategory, LinkResolver)}
               </a>

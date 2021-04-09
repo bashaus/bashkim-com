@@ -6,14 +6,17 @@ const nextConfig = {
   target: "serverless",
   publicRuntimeConfig,
   trailingSlash: true,
-  webpack: (config, { isServer }) => {
+  future: {
+    webpack5: true,
+  },
+  webpack: (config) => {
     // Perform customizations to webpack config
     config.resolve.alias["%styleguide"] = path.resolve(__dirname, "styleguide");
 
     // Inline SVG support
     config.module.rules.push({
       test: /\.svg$/,
-      use: ["@svgr/webpack", "file-loader"],
+      use: [{ loader: "@svgr/webpack" }],
     });
 
     // Global for jQuery
@@ -23,12 +26,6 @@ const nextConfig = {
         jQuery: "jquery",
       })
     );
-
-    if (!isServer) {
-      config.node = {
-        fs: "empty",
-      };
-    }
 
     return config;
   },

@@ -2,7 +2,7 @@ import { RichText } from "prismic-reactjs";
 import { ChangeEvent, useState } from "react";
 import { CaptionedScreenshotsSliceType } from "@bashkim-com/prismic";
 
-import Octicon, { DeviceMobile, DeviceDesktop } from "@primer/octicons-react";
+import { DeviceMobileIcon, DeviceDesktopIcon } from "@primer/octicons-react";
 import DeferredAsset from "%components/DeferredAsset";
 import PartialCaptioned from "%partials/Captioned";
 import LinkResolver from "%prismic/LinkResolver";
@@ -66,11 +66,11 @@ const CaptionedScreenshotsSlice = ({
 
       <div className={styles.slider}>
         <span className={styles.iconMobile}>
-          <Octicon icon={DeviceMobile} size="small" ariaLabel="Mobile" />
+          <DeviceMobileIcon size="small" aria-label="Mobile" />
         </span>
 
         <span className={styles.iconDesktop}>
-          <Octicon icon={DeviceDesktop} size="medium" ariaLabel="Desktop" />
+          <DeviceDesktopIcon size="medium" aria-label="Desktop" />
         </span>
 
         <input

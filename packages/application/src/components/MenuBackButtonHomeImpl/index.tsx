@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Octicon, { Home } from "@primer/octicons-react";
+import { HomeIcon } from "@primer/octicons-react";
 
 import MenuBackButton from "%components/MenuBackButton";
 
@@ -7,7 +7,7 @@ export default (
   <MenuBackButton>
     <Link href="/">
       <a>
-        <Octicon icon={Home} size="small" ariaLabel="Back to Homepage" />
+        <HomeIcon size="small" aria-label="Back to Homepage" />
       </a>
     </Link>
   </MenuBackButton>

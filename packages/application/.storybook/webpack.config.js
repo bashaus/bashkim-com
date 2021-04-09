@@ -8,12 +8,26 @@ module.exports = ({ config }) => {
     "%styleguide": path.resolve(__dirname, "..", "src", "styleguide"),
   };
 
+  /* svg */
+
+  const fileLoaderRule = config.module.rules.find(rule => rule.test.test('.svg'));
+  fileLoaderRule.exclude = path.resolve('..')
+
+  config.module.rules.push({
+    test: /\.svg$/,
+    use: [
+      { loader: "@svgr/webpack" }
+    ],
+  });
+
+  /* css and scss */
+
   config.module.rules.push({
     test: /\.scss$/,
-    loaders: [
-      require.resolve("style-loader"),
+    use: [
+      { loader: "style-loader" },
       {
-        loader: require.resolve("css-loader"),
+        loader: "css-loader",
         options: {
           importLoaders: 1,
           modules: {
@@ -21,34 +35,35 @@ module.exports = ({ config }) => {
           },
         },
       },
-      require.resolve("sass-loader"),
+      { loader: "sass-loader" },
     ],
   });
 
   config.module.rules.push({
     test: /\.css$/,
-    loaders: [require.resolve("style-loader"), require.resolve("css-loader")],
+    use: [
+      { loader: "style-loader" },
+      { loader: "css-loader" },
+    ],
   });
 
-  config.module.rules.push({
-    test: /\.svg$/,
-    use: ["@svgr/webpack"],
-  });
+  /* typescript */
 
+  config.resolve.extensions.push(".ts", ".tsx");
   config.module.rules.push({
     test: /\.tsx?$/,
-    loader: require.resolve("babel-loader"),
+    use: [
+      { loader: "babel-loader" }
+    ],
   });
 
-  // Global for jQuery
+  /* jquery */
   config.plugins.push(
     new webpack.ProvidePlugin({
       $: "jquery",
       jQuery: "jquery",
     })
   );
-
-  config.resolve.extensions.push(".ts", ".tsx");
 
   return config;
 };

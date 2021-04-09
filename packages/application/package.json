@@ -10,11 +10,11 @@
   "scripts": {
     "build": "next build",
     "postbuild": "next export -o build",
-    "clean": "rm -rf .next/",
+    "clean": "rm -rf .next/ build/",
     "dev": "node --inspect ./node_modules/.bin/next dev",
     "start": "next start",
     "styleguide:build": "build-storybook -o .storybook-static",
-    "styleguide:start": "start-storybook -p 3010 -s ./public",
+    "styleguide:start": "start-storybook -p 3010 -s public",
     "test": "jest ."
   },
   "jest": {
@@ -26,7 +26,7 @@
     "@apollo/client": "^3.2.5",
     "@bashkim-com/config": "1.0.0",
     "@bashkim-com/prismic": "1.0.0",
-    "@primer/octicons-react": "^9.3.1",
+    "@primer/octicons-react": "^13.0.0",
     "@sentry/browser": "^5.15.5",
     "@sentry/node": "^5.15.5",
     "@vendia/serverless-express": "^4.3.3",
@@ -50,7 +50,7 @@
     "serverless-sentry-lib": "^2.0.1",
     "slick-carousel": "^1.8.1",
     "use-persisted-state": "^0.3.0",
-    "webpack": "^4.43.0"
+    "webpack": "^5.31.2"
   },
   "devDependencies": {
     "@babel/core": "^7.13.8",
@@ -61,6 +61,7 @@
     "@storybook/addon-links": "^6.2.7",
     "@storybook/addon-viewport": "^6.2.7",
     "@storybook/addons": "^6.2.7",
+    "@storybook/builder-webpack5": "^6.2.7",
     "@storybook/react": "^6.2.7",
     "@svgr/webpack": "^5.4.0",
     "@types/aws-lambda": "^8.10.3",
@@ -78,7 +79,6 @@
     "babel-plugin-module-resolver": "^4.1.0",
     "csstype": "^2.6.10",
     "faker": "^4.1.0",
-    "file-loader": "^6.1.1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.0.1",
     "jest-junit": "^12.0.0",
