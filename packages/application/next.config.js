@@ -6,9 +6,6 @@ const nextConfig = {
   target: "serverless",
   publicRuntimeConfig,
   trailingSlash: true,
-  future: {
-    webpack5: true,
-  },
   webpack: (config) => {
     // Perform customizations to webpack config
     config.resolve.alias["%styleguide"] = path.resolve(__dirname, "styleguide");
