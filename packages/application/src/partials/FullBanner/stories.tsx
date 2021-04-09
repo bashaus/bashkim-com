@@ -1,4 +1,3 @@
-import React from "react";
 import { withKnobs, files, text } from "@storybook/addon-knobs";
 
 import PartialFullBanner from ".";

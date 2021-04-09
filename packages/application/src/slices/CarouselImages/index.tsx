@@ -1,5 +1,4 @@
 import { RichText } from "prismic-reactjs";
-import React from "react";
 import { CarouselImagesSliceType } from "@bashkim-com/prismic";
 
 import PartialFullImage from "%partials/FullImage";

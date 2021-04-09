@@ -1,5 +1,5 @@
 import { RichText } from "prismic-reactjs";
-import React, { ChangeEvent, useState } from "react";
+import { ChangeEvent, useState } from "react";
 import { CaptionedScreenshotsSliceType } from "@bashkim-com/prismic";
 
 import Octicon, { DeviceMobile, DeviceDesktop } from "@primer/octicons-react";

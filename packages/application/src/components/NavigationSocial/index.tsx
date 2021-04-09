@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import React, { useContext } from "react";
+import { useContext } from "react";
 
 import { ReactComponent as LogoGitHub } from "%public/static/vectors/social/github.svg";
 import { ReactComponent as LogoLinkedIn } from "%public/static/vectors/social/linkedin.svg";

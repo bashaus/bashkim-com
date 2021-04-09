@@ -1,6 +1,5 @@
 import getConfig from "next/config";
 import Head from "next/head";
-import React from "react";
 
 const GoogleAnalytics = (): JSX.Element => {
   const { publicRuntimeConfig: config } = getConfig();

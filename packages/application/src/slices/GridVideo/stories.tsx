@@ -1,4 +1,3 @@
-import React from "react";
 import { GridVideoSliceFixture } from "@bashkim-com/prismic";
 
 import GridVideoSlice from ".";

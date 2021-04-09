@@ -1,5 +1,5 @@
-import React from "react";
 import { withKnobs, text } from "@storybook/addon-knobs";
+
 import ComponentDecorator from "%storybook/decorators/component";
 
 import CallToAction from ".";

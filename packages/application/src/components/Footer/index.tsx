@@ -1,5 +1,3 @@
-import React from "react";
-
 import FooterCopyright from "%components/FooterCopyright";
 import FooterLinks from "%components/FooterLinks";
 import FooterSocial from "%components/FooterSocial";

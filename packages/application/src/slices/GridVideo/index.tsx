@@ -1,6 +1,5 @@
 import classNames from "classnames";
 import { RichText } from "prismic-reactjs";
-import React from "react";
 import { GridVideoSliceType } from "@bashkim-com/prismic";
 
 import DeferredAsset from "%components/DeferredAsset";

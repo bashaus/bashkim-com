@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import React, { PureComponent, createRef } from "react";
+import { PureComponent, createRef } from "react";
 
 import $ from "jquery";
 

@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import React, { useContext } from "react";
+import { useContext } from "react";
 
 import Logo from "%components/Logo";
 import MenuSignifierButton from "%components/MenuSignifierButton";

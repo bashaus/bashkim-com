@@ -1,5 +1,3 @@
-import React from "react";
-
 import GoogleAnalytics from "%components/GoogleAnalytics";
 import CookiesNotice from "%components/CookiesNotice";
 import Page from "%components/Page";

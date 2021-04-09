@@ -1,5 +1,3 @@
-import React from "react";
-
 import PartialTitle from "%partials/Title";
 
 import styles from "./styles.module.scss";

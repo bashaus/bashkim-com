@@ -1,5 +1,4 @@
 import { RichText } from "prismic-reactjs";
-import React from "react";
 import { FullTextSliceType } from "@bashkim-com/prismic";
 
 import LinkResolver from "%prismic/LinkResolver";

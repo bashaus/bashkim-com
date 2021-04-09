@@ -1,5 +1,3 @@
-import React from "react";
-
 import { AccoladeSliceType } from "@bashkim-com/prismic";
 
 import PartialSubtitle from "%partials/Subtitle";

@@ -1,5 +1,4 @@
 import { RichText } from "prismic-reactjs";
-import React from "react";
 import { NewspaperSliceType } from "@bashkim-com/prismic";
 
 import PartialNewspaper from "%partials/Newspaper";

@@ -1,5 +1,3 @@
-import React from "react";
-
 import LayoutDefault from "%components/LayoutDefault";
 import MenuBackButtonHomeImpl from "%components/MenuBackButtonHomeImpl";
 import MetaDescription from "%components/MetaDescription";

@@ -1,5 +1,3 @@
-import React from "react";
-
 import Header from ".";
 
 import { NavigationProvider } from "%contexts/Navigation/provider";

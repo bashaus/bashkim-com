@@ -1,5 +1,5 @@
 import faker from "faker";
-import React from "react";
+
 import ComponentDecorator from "%storybook/decorators/component";
 
 import Carousel from ".";

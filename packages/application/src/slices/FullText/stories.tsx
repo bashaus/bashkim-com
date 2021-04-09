@@ -1,4 +1,3 @@
-import React from "react";
 import { FullTextSliceFixture } from "@bashkim-com/prismic";
 
 import FullTextSlice from ".";

@@ -1,4 +1,3 @@
-import React from "react";
 import { withKnobs, files } from "@storybook/addon-knobs";
 
 import PartialHeaderImage from ".";

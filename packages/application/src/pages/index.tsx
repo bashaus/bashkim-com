@@ -1,7 +1,6 @@
 import { GetStaticProps } from "next";
 import Head from "next/head";
 import Link from "next/link";
-import React from "react";
 
 import PrismicClient, { HomePageContentType } from "@bashkim-com/prismic";
 

@@ -1,5 +1,4 @@
 import { RichText } from "prismic-reactjs";
-import React from "react";
 import { SubtitleSliceType } from "@bashkim-com/prismic";
 
 import PartialSubtitle from "%partials/Subtitle";

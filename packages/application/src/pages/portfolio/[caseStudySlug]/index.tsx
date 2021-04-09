@@ -1,5 +1,4 @@
 import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from "next";
-import React from "react";
 import PrismicClient, { CaseStudyContentType } from "@bashkim-com/prismic";
 
 import CaseStudyAccolades from "%components/CaseStudyAccolades";

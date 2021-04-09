@@ -1,4 +1,3 @@
-import React from "react";
 import { AccoladeSliceFixture } from "@bashkim-com/prismic";
 
 import AccoladeSlice from ".";

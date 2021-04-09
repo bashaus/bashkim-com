@@ -1,5 +1,4 @@
 import dayjs from "dayjs";
-import React from "react";
 
 type CaseStudyLifespanProps = {
   launched?: string;

@@ -1,4 +1,3 @@
-import React from "react";
 import SlickSlider, { ResponsiveObject } from "react-slick";
 
 import styles from "./styles.module.scss";

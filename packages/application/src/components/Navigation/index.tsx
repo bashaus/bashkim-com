@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import React, { useContext } from "react";
+import { useContext } from "react";
 
 import NavigationPrimary from "%components/NavigationPrimary";
 import NavigationSocial from "%components/NavigationSocial";

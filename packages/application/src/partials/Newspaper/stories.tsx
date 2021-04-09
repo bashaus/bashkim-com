@@ -1,5 +1,4 @@
 import faker from "faker";
-import React from "react";
 import { withKnobs } from "@storybook/addon-knobs";
 
 import PartialNewspaper from ".";

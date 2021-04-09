@@ -1,5 +1,4 @@
 import { RichText } from "prismic-reactjs";
-import React from "react";
 import { CaptionedImageSliceType } from "@bashkim-com/prismic";
 
 import PartialCaptioned from "%partials/Captioned";

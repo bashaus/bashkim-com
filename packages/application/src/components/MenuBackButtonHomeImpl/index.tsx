@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Octicon, { Home } from "@primer/octicons-react";
-import React from "react";
 
 import MenuBackButton from "%components/MenuBackButton";
 

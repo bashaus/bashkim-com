@@ -1,4 +1,3 @@
-import React from "react";
 import { SubtitleSliceFixture } from "@bashkim-com/prismic";
 
 import SubtitleType from ".";

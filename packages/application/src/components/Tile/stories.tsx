@@ -1,5 +1,5 @@
-import React from "react";
 import { withKnobs, files, text } from "@storybook/addon-knobs";
+
 import ComponentDecorator from "%storybook/decorators/component";
 
 import Tile from ".";

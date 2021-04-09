@@ -1,5 +1,4 @@
 import { RichText } from "prismic-reactjs";
-import React from "react";
 import { ExhibitionSliceType } from "@bashkim-com/prismic";
 
 import CaseStudyLifespan from "%components/CaseStudyLifespan/index";

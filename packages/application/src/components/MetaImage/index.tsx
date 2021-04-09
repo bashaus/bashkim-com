@@ -1,6 +1,5 @@
 import Head from "next/head";
 import { getType as getMimeType } from "mime";
-import React from "react";
 
 type MetaImageProps = {
   width?: number;

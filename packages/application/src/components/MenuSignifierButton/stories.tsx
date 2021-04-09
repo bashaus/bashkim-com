@@ -1,4 +1,3 @@
-import React from "react";
 import ComponentDecorator from "%storybook/decorators/component";
 
 import { NavigationProvider } from "%contexts/Navigation/provider";

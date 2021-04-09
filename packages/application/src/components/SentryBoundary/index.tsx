@@ -1,5 +1,5 @@
 import * as Sentry from "@sentry/browser";
-import React, { PureComponent } from "react";
+import { PureComponent } from "react";
 
 import styles from "./styles.module.scss";
 

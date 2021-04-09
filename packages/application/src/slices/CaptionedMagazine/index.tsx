@@ -1,5 +1,5 @@
 import { RichText } from "prismic-reactjs";
-import React, { useState } from "react";
+import { useState } from "react";
 import { CaptionedMagazineSliceType } from "@bashkim-com/prismic";
 
 import DeferredAsset from "%components/DeferredAsset";

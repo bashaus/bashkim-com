@@ -1,7 +1,4 @@
-import React from "react";
-
 import PartialSubtitle from "%partials/Subtitle/index";
-
 import ExhibitionSlice from "%slices/Exhibition";
 
 import styles from "./styles.module.scss";

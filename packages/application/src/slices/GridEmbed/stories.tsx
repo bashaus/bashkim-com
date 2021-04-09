@@ -1,4 +1,3 @@
-import React from "react";
 import { GridEmbedSliceFixture } from "@bashkim-com/prismic";
 
 import GridEmbedSlice from ".";

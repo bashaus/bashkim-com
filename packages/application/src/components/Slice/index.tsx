@@ -1,5 +1,5 @@
 import dynamic from "next/dynamic";
-import React, { ComponentType } from "react";
+import { ComponentType } from "react";
 
 import { SlicePrismicType } from "@bashkim-com/prismic";
 

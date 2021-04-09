@@ -1,5 +1,3 @@
-import React from "react";
-
 import Menu from ".";
 import MenuBackButtonHomeImpl from "%components/MenuBackButtonHomeImpl";
 import MenuBackButtonPortfolioImpl from "%components/MenuBackButtonPortfolioImpl";

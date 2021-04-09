@@ -1,5 +1,3 @@
-import React from "react";
-
 import PartialSplitItem from "%partials/Split.Item";
 
 import styles from "./styles.module.scss";

@@ -1,4 +1,3 @@
-import React from "react";
 import { CaptionedVideoSliceFixture } from "@bashkim-com/prismic";
 
 import CaptionedVideoSlice from ".";

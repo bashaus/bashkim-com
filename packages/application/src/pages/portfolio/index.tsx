@@ -1,5 +1,4 @@
 import { GetStaticProps } from "next";
-import React from "react";
 import PrismicClient, {
   CaseStudyContentType,
   PortfolioPageContentType,

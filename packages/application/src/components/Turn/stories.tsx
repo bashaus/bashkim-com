@@ -1,8 +1,8 @@
-import React from "react";
 import { action } from "@storybook/addon-actions";
 import { withKnobs, boolean, number, select } from "@storybook/addon-knobs";
 
 import ComponentDecorator from "%storybook/decorators/component";
+
 import Turn, { Display } from ".";
 
 export default {

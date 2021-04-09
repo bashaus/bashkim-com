@@ -1,6 +1,6 @@
-import React from "react";
 import { withKnobs, number } from "@storybook/addon-knobs";
 import { action } from "@storybook/addon-actions";
+
 import ComponentDecorator from "%storybook/decorators/component";
 
 import Magazine from ".";

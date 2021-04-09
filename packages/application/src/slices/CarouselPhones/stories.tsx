@@ -1,4 +1,3 @@
-import React from "react";
 import { CarouselPhonesSliceFixture } from "@bashkim-com/prismic";
 
 import CarouselPhonesSlice from ".";

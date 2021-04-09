@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { RichText } from "prismic-reactjs";
-import React from "react";
 
 import Tile from "%components/Tile";
 import LinkResolver from "%prismic/LinkResolver";

@@ -1,5 +1,5 @@
 import { Properties as CSSProperties } from "csstype";
-import React, { useState } from "react";
+import { useState } from "react";
 import VisibilitySensor from "react-visibility-sensor";
 
 import styles from "./styles.module.scss";

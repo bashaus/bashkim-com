@@ -1,5 +1,3 @@
-import React from "react";
-
 import AboutProfile from "%components/AboutProfile";
 import AboutEmployment from "%components/AboutEmployment";
 import AboutTutoring from "%components/AboutTutoring";

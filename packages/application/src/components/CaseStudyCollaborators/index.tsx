@@ -1,8 +1,6 @@
 import Link from "next/link";
-import React from "react";
 
 import PartialSubtitle from "%partials/Subtitle";
-
 import CollaboratorSlice from "%slices/Collaborator";
 
 import styles from "./styles.module.scss";

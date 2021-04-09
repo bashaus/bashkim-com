@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 
 import { NavigationContext } from "%contexts/Navigation/context";
 import { NavigationActionsTypes } from "%contexts/Navigation/actions";

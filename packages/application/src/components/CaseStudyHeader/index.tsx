@@ -1,4 +1,3 @@
-import React from "react";
 import { CaseStudyContentType } from "@bashkim-com/prismic";
 
 import CaseStudyDetails from "%components/CaseStudyDetails";

@@ -1,4 +1,3 @@
-import React from "react";
 import { NewspaperSliceFixture } from "@bashkim-com/prismic";
 
 import NewspaperSlice from ".";

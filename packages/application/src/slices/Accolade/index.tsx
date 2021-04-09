@@ -1,6 +1,5 @@
 import classNames from "classnames";
 import { RichText, Link } from "prismic-reactjs";
-import React from "react";
 import dayjs from "dayjs";
 import { AccoladeSliceType } from "@bashkim-com/prismic";
 

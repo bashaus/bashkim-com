@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import { Router } from "next/router";
-import React, { useCallback, useContext, useEffect } from "react";
+import { useCallback, useContext, useEffect } from "react";
 
 import Footer from "%components/Footer";
 import Header from "%components/Header";

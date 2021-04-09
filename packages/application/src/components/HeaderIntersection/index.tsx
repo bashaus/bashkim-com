@@ -1,4 +1,4 @@
-import React, { useCallback, useContext, useEffect, useRef } from "react";
+import { useCallback, useContext, useEffect, useRef } from "react";
 import debounce from "lodash.debounce";
 
 import { NavigationContext } from "%contexts/Navigation/context";

@@ -1,5 +1,3 @@
-import React from "react";
-
 import PartialSplit from "%partials/Split";
 import PartialSubtitle from "%partials/Subtitle";
 

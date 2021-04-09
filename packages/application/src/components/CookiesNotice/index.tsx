@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React, { useContext, useState } from "react";
+import { useContext, useState } from "react";
 import AnimateHeight from "react-animate-height";
 
 import { CookiesActionsTypes } from "%contexts/Cookies/actions";

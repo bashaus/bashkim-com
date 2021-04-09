@@ -1,5 +1,4 @@
 import { Properties as CSSProperties } from "csstype";
-import React from "react";
 
 import styles from "./style.module.scss";
 
