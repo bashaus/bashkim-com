@@ -51,7 +51,7 @@ const CaseStudyPage = ({
           />
         )}
 
-        <MetaCanonical href={`/portfolio/${caseStudyPage.uid}`} />
+        <MetaCanonical href={`/portfolio/${caseStudyPage._meta.uid}`} />
 
         <CaseStudyHeader caseStudy={caseStudyPage} />
 
