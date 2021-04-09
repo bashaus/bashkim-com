@@ -12,7 +12,6 @@
     "packages/webhooks",
     "packages/config",
     "packages/prismic",
-    "packages/seo",
     "packages/sitemap",
     "packages/application"
   ],

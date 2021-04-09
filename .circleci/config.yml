@@ -84,7 +84,6 @@ jobs:
             - packages/application/build/
             - packages/config/build/
             - packages/prismic/build/
-            - packages/seo/build/
             - packages/sitemap/build/
             - packages/webhooks/build/
 

@@ -6,6 +6,7 @@ packages/*/tsconfig.json
 .circleci/*
 .git/
 .vscode/*
+infrastructure/*
 
 # Filenames
 **/.babelrc

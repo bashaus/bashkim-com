@@ -90,25 +90,11 @@ functions:
       - http:
           method: GET
           path: /sitemap/{any+}
-  seo:
-    handler: packages/seo/build/lambda.handler
-    jetpack:
-      roots:
-        - "packages/seo"
-      preInclude:
-        - "packages/seo/build/**"
-    events:
-      - http:
-          method: ANY
-          path: /{any+}
 
 resources:
   Description: bashkim-com
   extensions:
     WebhooksLogGroup:
-      Properties:
-        RetentionInDays: "3"
-    SeoLogGroup:
       Properties:
         RetentionInDays: "3"
     SitemapLogGroup:
@@ -213,6 +199,7 @@ resources:
         BucketName: ${self:custom.website.bucketName}
         WebsiteConfiguration:
           IndexDocument: index.html
+          RoutingRules: ${file(./infrastructure/WebsiteBucket/RoutingRules.yml):RoutingRules}
 
     WebsiteBucketPolicy:
       Type: "AWS::S3::BucketPolicy"

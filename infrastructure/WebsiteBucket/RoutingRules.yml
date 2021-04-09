@@ -1,0 +1,168 @@
+RoutingRules:
+  - RoutingRuleCondition:
+      KeyPrefixEquals: "blog/2013/11/physical-computing-article-on-make-magazine"
+    RedirectRule:
+      HttpRedirectCode: 301
+      Protocol: https
+      HostName: medium.com
+      ReplaceKeyWith: "@bashaus/web-based-physical-computing-1213fafb448c"
+
+  - RoutingRuleCondition:
+      KeyPrefixEquals: "blog/2013/07/web-based-physical-computing"
+    RedirectRule:
+      HttpRedirectCode: 301
+      Protocol: https
+      HostName: medium.com
+      ReplaceKeyWith: "@bashaus/web-based-physical-computing-1213fafb448c"
+
+  - RoutingRuleCondition:
+      KeyPrefixEquals: "blog/2013/01/accessing-apache-from-across-a-network"
+    RedirectRule:
+      HttpRedirectCode: 301
+      Protocol: https
+      HostName: medium.com
+      ReplaceKeyWith: "@bashaus/accessing-a-web-server-from-across-your-network-b6f8e6fe90b6"
+
+  - RoutingRuleCondition:
+      KeyPrefixEquals: "blog/2014/09/launched-facebook-page-for-game-boy-homebrew-developers"
+    RedirectRule:
+      HttpRedirectCode: 301
+      Protocol: https
+      HostName: www.facebook.com
+      ReplaceKeyWith: "gbdk.developers/"
+
+  - RoutingRuleCondition:
+      KeyPrefixEquals: "blog/2014/12/gbtiles-ruby-gem-released"
+    RedirectRule:
+      HttpRedirectCode: 301
+      Protocol: https
+      HostName: rubygems.org
+      ReplaceKeyWith: "gems/gbtiles"
+
+  - RoutingRuleCondition:
+      KeyPrefixEquals: "blog/2015/06/looking-for-you-cannes-lions"
+    RedirectRule:
+      HttpRedirectCode: 301
+      Protocol: https
+      HostName: www.bashkim.com
+      ReplaceKeyWith: "portfolio/battersea-looking-for-you"
+
+  - RoutingRuleCondition:
+      KeyPrefixEquals: "blog/2015/12/looking-for-you-dma-awards"
+    RedirectRule:
+      HttpRedirectCode: 301
+      Protocol: https
+      HostName: www.bashkim.com
+      ReplaceKeyWith: "portfolio/battersea-looking-for-you"
+
+  - RoutingRuleCondition:
+      KeyPrefixEquals: "blog/2015/12/campaign-battersea-top-10-in-2015"
+    RedirectRule:
+      HttpRedirectCode: 301
+      Protocol: https
+      HostName: www.bashkim.com
+      ReplaceKeyWith: "portfolio/battersea-looking-for-you"
+
+  - RoutingRuleCondition:
+      KeyPrefixEquals: "blog"
+    RedirectRule:
+      HttpRedirectCode: 301
+      Protocol: https
+      HostName: medium.com
+      ReplaceKeyWith: "@bashaus"
+
+  - RoutingRuleCondition:
+      KeyPrefixEquals: "contact"
+    RedirectRule:
+      HttpRedirectCode: 301
+      Protocol: https
+      HostName: www.bashkim.com
+      ReplaceKeyWith: "about"
+
+  - RoutingRuleCondition:
+      KeyPrefixEquals: "portfolio.html"
+    RedirectRule:
+      HttpRedirectCode: 301
+      Protocol: https
+      HostName: www.bashkim.com
+      ReplaceKeyWith: "portfolio"
+
+  - RoutingRuleCondition:
+      KeyPrefixEquals: "portfolio-ludic-lift.html"
+    RedirectRule:
+      HttpRedirectCode: 301
+      Protocol: https
+      HostName: www.bashkim.com
+      ReplaceKeyWith: "portfolio/ludic-lift"
+
+  - RoutingRuleCondition:
+      KeyPrefixEquals: "talks.html"
+    RedirectRule:
+      HttpRedirectCode: 301
+      Protocol: https
+      HostName: www.bashkim.com
+      ReplaceKeyWith: "portfolio"
+
+  - RoutingRuleCondition:
+      KeyPrefixEquals: "project/commodore/interaction-game-play.html"
+    RedirectRule:
+      HttpRedirectCode: 301
+      Protocol: http
+      HostName: commodore-game.com
+      ReplaceKeyWith: "interaction-game-play.html"
+
+  - RoutingRuleCondition:
+      KeyPrefixEquals: "project/commodore/interaction-starting-a-game.html"
+    RedirectRule:
+      HttpRedirectCode: 301
+      Protocol: http
+      HostName: commodore-game.com
+      ReplaceKeyWith: "interaction-starting-a-game.html"
+
+  - RoutingRuleCondition:
+      KeyPrefixEquals: "publicity/2010/10/studio-farrago-at-pecha-kucha-brisbane"
+    RedirectRule:
+      HttpRedirectCode: 301
+      Protocol: https
+      HostName: medium.com
+      ReplaceKeyWith: "@bashaus/studio-farrago-at-pecha-kucha-brisbane-ca86cb5f39fa"
+
+  - RoutingRuleCondition:
+      KeyPrefixEquals: "publicity/2010/11/meet-eater-articles"
+    RedirectRule:
+      HttpRedirectCode: 301
+      Protocol: https
+      HostName: www.bashkim.com
+      ReplaceKeyWith: "portfolio/meet-eater"
+
+  - RoutingRuleCondition:
+      KeyPrefixEquals: "publicity/2013/12/model-engineer-show-2013"
+    RedirectRule:
+      HttpRedirectCode: 301
+      Protocol: https
+      HostName: medium.com
+      ReplaceKeyWith: "@bashaus/model-engineering-show-2013-9c19a703442f"
+
+  - RoutingRuleCondition:
+      KeyPrefixEquals: "publicity/2014/01/message-queues-article-published-on-sitepoint"
+    RedirectRule:
+      HttpRedirectCode: 301
+      Protocol: https
+      HostName: www.sitepoint.com
+      ReplaceKeyWith: "message-queues-comparing-beanstalkd-ironmq-amazon-sqs/"
+
+  - RoutingRuleCondition:
+      KeyPrefixEquals: "publicity/2015/05/feature-detection-article-published-on-sitepoint"
+    RedirectRule:
+      HttpRedirectCode: 301
+      Protocol: https
+      HostName: www.sitepoint.com
+      ReplaceKeyWith: "migrating-flexbox-cutting-mustard/"
+
+  - RoutingRuleCondition:
+      KeyPrefixEquals: "publicity"
+    RedirectRule:
+      HttpRedirectCode: 301
+      Protocol: https
+      HostName: www.bashkim.com
+      ReplaceKeyWith: "portfolio"
