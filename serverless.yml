@@ -142,23 +142,32 @@ resources:
             MinimumProtocolVersion: TLSv1.1_2016
             SslSupportMethod: sni-only
           Origins:
-            - DomainName:
-                Fn::GetAtt: [WebsiteBucket, DomainName]
-              Id: WebsiteBucketOrigin
-              S3OriginConfig:
-                OriginAccessIdentity:
-                  Fn::Join:
-                    - ""
-                    - - "origin-access-identity/cloudfront/"
-                      - Ref: WebsiteCloudFrontOriginAccessIdentity
-            - DomainName:
+            - Id: WebsiteBucketOrigin
+              DomainName: "${self:custom.website.bucketName}.s3-website-eu-west-1.amazonaws.com"
+              CustomOriginConfig:
+                OriginKeepaliveTimeout: 60
+                OriginReadTimeout: 15
+                HTTPPort: 80
+                HTTPSPort: 443
+                OriginProtocolPolicy: https-only
+                OriginSSLProtocols:
+                  - "TLSv1"
+                  - "TLSv1.1"
+                  - "TLSv1.2"
+              # S3OriginConfig:
+              #   OriginAccessIdentity:
+              #     Fn::Join:
+              #       - ""
+              #       - - "origin-access-identity/cloudfront/"
+              #         - Ref: WebsiteCloudFrontOriginAccessIdentity
+            - Id: ApiGatewayOrigin
+              DomainName:
                 Fn::Join:
                   - ""
                   - - Ref: ApiGatewayRestApi
                     - ".execute-api."
                     - ${self:custom.region}
                     - ".amazonaws.com"
-              Id: ApiGatewayOrigin
               OriginPath: "/${self:custom.stage}"
               CustomOriginConfig:
                 OriginKeepaliveTimeout: 60
