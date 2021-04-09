@@ -29,18 +29,20 @@
   }
 
   @include breakpoint($media-not-mobile) {
-    .navigation_portfolio a:hover,
-    .navigation_portfolio.selected a {
+    .selected span {
+      border-bottom: solid 1.5px currentColor;
+      padding-bottom: 1px;
+    }
+
+    .navigation_portfolio a:hover {
       color: $color-theme-portfolio;
     }
 
-    .navigation_about a:hover,
-    .navigation_about.selected a {
+    .navigation_about a:hover {
       color: $color-theme-about;
     }
 
-    .navigation_blog a:hover,
-    .navigation_blog.selected a {
+    .navigation_blog a:hover {
       color: $color-theme-blog;
     }
   }
@@ -48,18 +50,6 @@
   @include breakpoint($media-tablet-portrait) {
     a {
       padding: 0 14px;
-    }
-
-    .navigation_portfolio.selected span {
-      border-bottom-color: $color-theme-portfolio;
-    }
-
-    .navigation_about.selected span {
-      border-bottom-color: $color-theme-about;
-    }
-
-    .navigation_blog.selected span {
-      border-bottom-color: $color-theme-blog;
     }
   }
 

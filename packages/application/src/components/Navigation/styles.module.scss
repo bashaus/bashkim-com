@@ -37,12 +37,6 @@
     transition: color 0.3s ease-in-out;
   }
 
-  @include breakpoint($media-tablet) {
-    span {
-      border-bottom: solid 2px transparent;
-    }
-  }
-
   @include breakpoint($media-not-mobile) {
     color: #b6b6b6;
 
@@ -55,11 +49,6 @@
       display: block;
       text-decoration: none;
       text-transform: uppercase;
-      color: inherit;
-    }
-
-    span {
-      padding-bottom: 3px;
       color: inherit;
     }
 
