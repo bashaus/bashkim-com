@@ -1,5 +1,7 @@
 version: 2.1
 
+
+
 executors:
   exec-node:
     working_directory: ~/repo
@@ -11,26 +13,75 @@ executors:
     docker:
       - image: "circleci/python:3.6"
 
+
+
 orbs:
   aws-s3: circleci/aws-s3@1.0.11
   # aws-serverless: circleci/aws-serverless@1.0.1
 
+
+
 jobs:
+  build:
+    executor: exec-node
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+            - yarn-lock-{{ checksum "yarn.lock" }}
+
+      - run:
+          name: yarn install
+          command: |
+            yarn install --frozen-lockfile
+
+      - run:
+          name: yarn build
+          command: |
+            yarn build
+
+      - run:
+          name: "styleguide build"
+          working_directory: packages/application
+          command: |
+            yarn styleguide:build
+
+      - save_cache:
+          key: yarn-lock-{{ checksum "yarn.lock" }}
+          paths:
+            - node_modules
+            - packages/*/node_modules/
+
+      - persist_to_workspace:
+          root: ./
+          paths:
+            - node_modules/
+            - packages/*/node_modules/
+            - packages/application/.next/
+            - packages/application/.storybook-static/
+            - packages/application/build/
+            - packages/config/build/
+            - packages/prismic/build/
+            - packages/sitemap/build/
+            - packages/webhooks/build/
+
+
+
   test:
     executor: exec-node
     steps:
       - checkout
-      - restore_cache:
-          keys:
-            - yarn-lock-{{ checksum "yarn.lock" }}
-      - run:
-          name: yarn
-          command: |
-            yarn install --frozen-lockfile
+
+      - attach_workspace:
+          at: ./
+
       - run:
           name: jest
-          command: yarn test
           when: always
+          command: |
+            yarn test
+
       - run:
           name: eslint
           when: always
@@ -41,6 +92,7 @@ jobs:
               --ext .js,.ts,.tsx \
               . \
             > test-results/eslint/junit.xml
+
       - run:
           name: stylelint
           when: always
@@ -51,54 +103,32 @@ jobs:
               '**/*.scss' \
               '**/*.css' \
             > test-results/stylelint/junit.xml
+
       - store_test_results:
           path: test-results
-      - save_cache:
-          key: yarn-lock-{{ checksum "yarn.lock" }}
-          paths:
-            - node_modules
-            - packages/*/node_modules/
-      - persist_to_workspace:
-          root: ./
-          paths:
-            - node_modules/
-            - packages/*/node_modules/
 
-  build:
-    executor: exec-node
-    steps:
-      - checkout
-      - attach_workspace:
-          at: ./
-      - run: yarn build
-      - run:
-          name: "styleguide build"
-          command: yarn styleguide:build
-          working_directory: packages/application
 
-      - persist_to_workspace:
-          root: ./
-          paths:
-            - packages/application/.next/
-            - packages/application/.storybook-static/
-            - packages/application/build/
-            - packages/config/build/
-            - packages/prismic/build/
-            - packages/sitemap/build/
-            - packages/webhooks/build/
 
   deploy:
     executor: exec-node
     steps:
       - checkout
+
       - attach_workspace:
           at: ./
-      - run: npx serverless deploy
+
+      - run:
+          name: serverless deploy
+          command: |
+            npx serverless deploy
+
+
 
   synchronize:
     executor: exec-python
     steps:
       - checkout
+
       - attach_workspace:
           at: ./
 
@@ -130,14 +160,21 @@ jobs:
               --distribution-id "${DEPLOY_CLOUDFRONT_STYLEGUIDE_DISTRIBUTION}" \
               --paths "/*"
 
+
+
 workflows:
   version: 2
 
   publish:
     jobs:
-      - test
+      - build
 
-      - build:
+      - test:
+          requires:
+            - build
+
+      - deploy:
+          context: bashkim-com-prod
           requires:
             - test
           filters:
@@ -145,11 +182,6 @@ workflows:
               only:
                 - master
                 - develop
-
-      - deploy:
-          context: bashkim-com-prod
-          requires:
-            - build
 
       - synchronize:
           context: bashkim-com-prod
