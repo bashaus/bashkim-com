@@ -182,8 +182,6 @@ resources:
                 - DELETE
               TargetOriginId: ApiGatewayOrigin
               Compress: true
-              MinTTL: 60
-              DefaultTTL: 60
               ForwardedValues:
                 QueryString: true
                 Cookies:

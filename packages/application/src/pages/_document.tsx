@@ -1,17 +1,12 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import React from "react";
 
-export default class MyDocument extends Document {
+class MyDocument extends Document {
   render(): JSX.Element {
     return (
       <Html lang="en" dir="ltr">
         <Head>
           <meta key="MyDocument.charSet" charSet="utf-8" />
-          <meta
-            key="MyDocument.viewport"
-            name="viewport"
-            content="width=device-width, initial-scale=1, viewport-fit=cover"
-          />
           <meta key="MyDocument.robots" name="robots" content="INDEX,FOLLOW" />
           <meta
             key="MyDocument.opengraph.site_name"
@@ -70,3 +65,5 @@ export default class MyDocument extends Document {
     );
   }
 }
+
+export default MyDocument;
