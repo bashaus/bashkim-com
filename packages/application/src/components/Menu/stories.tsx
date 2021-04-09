@@ -3,26 +3,27 @@ import React from "react";
 import Menu from ".";
 import MenuBackButtonHomeImpl from "%components/MenuBackButtonHomeImpl";
 import MenuBackButtonPortfolioImpl from "%components/MenuBackButtonPortfolioImpl";
-import NavigationStore from "%contexts/Navigation";
+
+import { NavigationProvider } from "%contexts/Navigation/provider";
 
 export default {
   title: "Components/Menu",
 };
 
 export const Render = (): JSX.Element => (
-  <NavigationStore>
+  <NavigationProvider>
     <Menu />
-  </NavigationStore>
+  </NavigationProvider>
 );
 
 export const Home = (): JSX.Element => (
-  <NavigationStore>
+  <NavigationProvider>
     <Menu backButton={MenuBackButtonHomeImpl} />
-  </NavigationStore>
+  </NavigationProvider>
 );
 
 export const Portfolio = (): JSX.Element => (
-  <NavigationStore>
+  <NavigationProvider>
     <Menu backButton={MenuBackButtonPortfolioImpl} />
-  </NavigationStore>
+  </NavigationProvider>
 );

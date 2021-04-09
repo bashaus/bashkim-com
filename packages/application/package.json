@@ -9,7 +9,7 @@
   },
   "scripts": {
     "build": "next build",
-    "postbuild": "next export -o dest",
+    "postbuild": "next export -o build",
     "clean": "rm -rf .next/",
     "dev": "node --inspect ./node_modules/.bin/next dev",
     "start": "next start",

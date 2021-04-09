@@ -1,14 +1,15 @@
 import React from "react";
 
 import Header from ".";
-import NavigationStore from "%contexts/Navigation";
+
+import { NavigationProvider } from "%contexts/Navigation/provider";
 
 export default {
   title: "Components/Header",
 };
 
 export const Render = (): JSX.Element => (
-  <NavigationStore>
+  <NavigationProvider>
     <Header theme="default" />
-  </NavigationStore>
+  </NavigationProvider>
 );

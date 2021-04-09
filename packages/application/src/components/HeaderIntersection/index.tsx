@@ -1,8 +1,8 @@
 import React, { useCallback, useContext, useEffect, useRef } from "react";
 import debounce from "lodash.debounce";
 
-import { NavigationContext } from "%contexts/Navigation";
-import * as NavigationActions from "%contexts/Navigation/actions";
+import { NavigationContext } from "%contexts/Navigation/context";
+import { NavigationActionsTypes } from "%contexts/Navigation/actions";
 
 import styles from "./styles.module.scss";
 import { ScrollDirection } from "%contexts/Navigation/types";
@@ -19,7 +19,7 @@ const HeaderIntersection = (): JSX.Element => {
     (entries: Array<IntersectionObserverEntry>): void => {
       entries.forEach((entry) =>
         navigationDispatch({
-          type: NavigationActions.SET_SCROLL_AT_TOP,
+          type: NavigationActionsTypes.SET_SCROLL_AT_TOP,
           payload: entry.isIntersecting,
         })
       );
@@ -58,7 +58,7 @@ const HeaderIntersection = (): JSX.Element => {
       const { scrollTop } = document.documentElement;
 
       navigationDispatch({
-        type: NavigationActions.SET_SCROLL_DIRECTION,
+        type: NavigationActionsTypes.SET_SCROLL_DIRECTION,
         payload:
           lastScrollTop < scrollTop ? ScrollDirection.UP : ScrollDirection.DOWN,
       });

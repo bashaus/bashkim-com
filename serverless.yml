@@ -305,4 +305,7 @@ resources:
               Principal:
                 CanonicalUser:
                   Fn::GetAtt:
-                    [StyleguideCloudFrontOriginAccessIdentity, S3CanonicalUserId]
+                    [
+                      StyleguideCloudFrontOriginAccessIdentity,
+                      S3CanonicalUserId,
+                    ]

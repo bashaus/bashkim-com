@@ -1,12 +1,12 @@
-import * as actions from "./actions";
-import { CookiesContextState } from "./state";
+import { CookiesActions, CookiesActionsTypes } from "./actions";
+import { CookiesState } from "./state";
 
-const CookiesReducer = (
-  state: CookiesContextState,
-  action: any
-): CookiesContextState => {
+export const CookiesReducer = (
+  state: CookiesState,
+  action: CookiesActions
+): CookiesState => {
   switch (action.type) {
-    case actions.DISMISS: {
+    case CookiesActionsTypes.DISMISS: {
       return { ...state, isDismissed: true };
     }
 
@@ -15,5 +15,3 @@ const CookiesReducer = (
     }
   }
 };
-
-export default CookiesReducer;

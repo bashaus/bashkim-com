@@ -1,12 +1,14 @@
-export type CookiesContextState = {
+import { CookiesActions } from "./actions";
+
+export type CookiesState = {
   isDismissed: boolean;
 };
 
-export type CookiesContextType = {
-  state: CookiesContextState;
-  dispatch: React.Dispatch<any>;
+export type CookiesValue = {
+  state: CookiesState;
+  dispatch: React.Dispatch<CookiesActions>;
 };
 
-export const INITIAL_STATE: CookiesContextState = {
+export const INITIAL_STATE: CookiesState = {
   isDismissed: false,
 };

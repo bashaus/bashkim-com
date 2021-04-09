@@ -7,8 +7,8 @@ import Header from "%components/Header";
 import HeaderIntersection from "%components/HeaderIntersection";
 import Menu from "%components/Menu";
 
-import { NavigationContext } from "%contexts/Navigation";
-import * as NavigationActions from "%contexts/Navigation/actions";
+import { NavigationContext } from "%contexts/Navigation/context";
+import { NavigationActionsTypes } from "%contexts/Navigation/actions";
 
 import styles from "./styles.module.scss";
 
@@ -29,7 +29,7 @@ const Page = ({
 
   const handleRouteChange = useCallback(
     (/* url: string */) => {
-      navigationDispatch({ type: NavigationActions.MENU_HIDE });
+      navigationDispatch({ type: NavigationActionsTypes.MENU_HIDE });
     },
     [navigationDispatch]
   );

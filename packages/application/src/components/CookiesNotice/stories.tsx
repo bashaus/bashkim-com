@@ -1,6 +1,6 @@
 import React from "react";
 
-import CookiesProvider from "%contexts/Cookies";
+import CookiesProvider from "%contexts/Cookies/provider";
 import CookiesNotice from ".";
 
 export default {

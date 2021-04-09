@@ -3,8 +3,8 @@ import React from "react";
 import GoogleAnalytics from "%components/GoogleAnalytics";
 import CookiesNotice from "%components/CookiesNotice";
 import Page from "%components/Page";
-import CookiesProvider from "%contexts/Cookies";
-import NavigationStore from "%contexts/Navigation";
+import CookiesProvider from "%contexts/Cookies/provider";
+import { NavigationProvider } from "%contexts/Navigation/provider";
 
 type LayoutDefaultProps = {
   backButton?: React.ReactNode;
@@ -35,11 +35,11 @@ const LayoutDefault = ({
         <CookiesNotice />
       </CookiesProvider>
 
-      <NavigationStore>
+      <NavigationProvider>
         <Page backButton={backButton} theme={theme}>
           {children}
         </Page>
-      </NavigationStore>
+      </NavigationProvider>
 
       <GoogleAnalytics />
     </>

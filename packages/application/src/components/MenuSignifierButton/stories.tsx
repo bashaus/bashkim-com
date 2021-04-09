@@ -1,7 +1,8 @@
 import React from "react";
 import ComponentDecorator from "%storybook/decorators/component";
 
-import NavigationStore from "%contexts/Navigation";
+import { NavigationProvider } from "%contexts/Navigation/provider";
+
 import MenuSignifierButton from ".";
 
 export default {
@@ -10,7 +11,7 @@ export default {
 };
 
 export const Render = (): JSX.Element => (
-  <NavigationStore>
+  <NavigationProvider>
     <MenuSignifierButton />
-  </NavigationStore>
+  </NavigationProvider>
 );

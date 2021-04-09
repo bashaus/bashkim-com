@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 
 import Logo from "%components/Logo";
 import MenuSignifierButton from "%components/MenuSignifierButton";
-import { NavigationContext } from "%contexts/Navigation";
+import { NavigationContext } from "%contexts/Navigation/context";
 
 import styles from "./styles.module.scss";
 import { ScrollDirection } from "%contexts/Navigation/types";

@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 
-import { NavigationContext } from "%contexts/Navigation";
-import * as NavigationActions from "%contexts/Navigation/actions";
+import { NavigationContext } from "%contexts/Navigation/context";
+import { NavigationActionsTypes } from "%contexts/Navigation/actions";
 
 import styles from "./styles.module.scss";
 
@@ -11,7 +11,7 @@ const MenuSignifierButton = (): JSX.Element => {
   );
 
   const handleSignifierClick = (): void => {
-    navigationDispatch({ type: NavigationActions.MENU_TOGGLE });
+    navigationDispatch({ type: NavigationActionsTypes.MENU_TOGGLE });
   };
 
   return (

@@ -81,7 +81,7 @@ jobs:
           paths:
             - packages/application/.next/
             - packages/application/.storybook-static/
-            - packages/application/dest/
+            - packages/application/build/
             - packages/config/build/
             - packages/prismic/build/
             - packages/seo/build/
@@ -104,7 +104,7 @@ jobs:
           at: ./
 
       - aws-s3/sync:
-          from: ./packages/application/dest
+          from: ./packages/application/build
           to: "s3://${DEPLOY_S3_WEBSITE_BUCKET}"
           overwrite: true
           arguments: |

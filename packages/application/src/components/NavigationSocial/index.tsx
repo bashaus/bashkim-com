@@ -5,7 +5,7 @@ import { ReactComponent as LogoGitHub } from "%public/static/vectors/social/gith
 import { ReactComponent as LogoLinkedIn } from "%public/static/vectors/social/linkedin.svg";
 import { ReactComponent as LogoStackOverflow } from "%public/static/vectors/social/stackoverflow.svg";
 
-import { NavigationContext } from "%contexts/Navigation";
+import { NavigationContext } from "%contexts/Navigation/context";
 
 import styles from "./styles.module.scss";
 

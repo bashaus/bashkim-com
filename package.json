@@ -19,7 +19,7 @@
   "scripts": {
     "build": "yarn workspaces run build",
     "clean": "yarn workspaces run clean",
-    "lint": "yarn lint:scripts && yarn lint:styles",
+    "lint": "yarn lint:scripts; yarn lint:styles",
     "lint:scripts": "eslint --ext .js,.ts,.tsx .",
     "lint:styles": "stylelint '**/*.scss' '**/*.css'",
     "test": "yarn workspaces run test"

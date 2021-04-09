@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 
 import NavigationPrimary from "%components/NavigationPrimary";
 import NavigationSocial from "%components/NavigationSocial";
-import { NavigationContext } from "%contexts/Navigation";
+import { NavigationContext } from "%contexts/Navigation/context";
 
 import styles from "./styles.module.scss";
 
