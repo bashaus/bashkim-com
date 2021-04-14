@@ -5,7 +5,7 @@ import PartialSubtitle from "%partials/Subtitle";
 
 import LinkResolver from "%prismic/LinkResolver";
 
-type SubtitleSliceProps = {
+export type SubtitleSliceProps = {
   slice: SubtitleSliceType;
 };
 

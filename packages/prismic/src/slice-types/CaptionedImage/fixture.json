@@ -1,17 +1,16 @@
 {
   "type": "CaptionedImageSliceType",
   "label": null,
-  "items": [{}],
   "primary": {
     "captioned_image_slice_type_caption": [
       {
         "type": "heading3",
-        "text": "Campaign website",
+        "text": "Captioned image",
         "spans": []
       },
       {
         "type": "paragraph",
-        "text": "Barley walks on screen and greets visitors by telling his story. The content encourages visitors to find out more information about the charity and provides a call to action to adopt or donate.",
+        "text": "Example of the CaptionedImageSliceType.",
         "spans": []
       }
     ],

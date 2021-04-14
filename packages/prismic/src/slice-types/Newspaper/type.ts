@@ -1,22 +1,19 @@
-import type RichTextPrismicType from "@bashkim-com/prismic/types/rich-text";
-import type SliceType from "@bashkim-com/prismic/types/slice";
+import type { PrismicSliceType } from "@bashkim-com/prismic/types/Slice";
+import type {
+  PrismicRichTextType,
+  PrismicRichTextElement,
+} from "@bashkim-com/prismic/types/RichText";
 
-type NewspaperSliceType = SliceType & {
-  items: Array<{
-    newspaper_slice_type_group: RichTextPrismicType<
-      | "paragraph"
-      | "heading3"
-      | "strong"
-      | "em"
-      | "hyperlink"
-      | "image"
-      | "embed"
-      | "list-item"
-      | "o-list-item"
-      | "o-list-item"
-    >;
-  }>;
-  primary: unknown;
+export type NewspaperSliceType = PrismicSliceType & {
+  fields: Array<{
+    newspaper_slice_type_group: PrismicRichTextType<
+      | PrismicRichTextElement.PARAGRAPH
+      | PrismicRichTextElement.HEADING3
+      | PrismicRichTextElement.STRONG
+      | PrismicRichTextElement.EM
+      | PrismicRichTextElement.HYPERLINK
+      | PrismicRichTextElement.LIST_ITEM
+      | PrismicRichTextElement.O_LIST_ITEM
+    > | null;
+  }> | null;
 };
-
-export default NewspaperSliceType;

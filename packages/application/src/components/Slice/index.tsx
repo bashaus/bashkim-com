@@ -1,9 +1,8 @@
 import dynamic from "next/dynamic";
-import { ComponentType } from "react";
 
-import type { SlicePrismicType } from "@bashkim-com/prismic";
+import type { PrismicSliceType } from "@bashkim-com/prismic";
 
-const SliceTypeComponentMap: Record<string, any> = {
+const SliceTypeComponentMap = {
   CaptionedImageSliceType: dynamic(() => import("%slices/CaptionedImage")),
   CaptionedMagazineSliceType: dynamic(() =>
     import("%slices/CaptionedMagazine")
@@ -22,15 +21,13 @@ const SliceTypeComponentMap: Record<string, any> = {
 };
 
 type SliceProps = {
-  slice: SlicePrismicType;
+  slice: PrismicSliceType;
 };
 
 const Slice = (props: SliceProps): JSX.Element => {
   const { slice } = props;
 
-  const SliceTypeComponent: ComponentType<any> =
-    SliceTypeComponentMap[slice.type];
-
+  const SliceTypeComponent = SliceTypeComponentMap[slice.type];
   return <SliceTypeComponent {...props} />;
 };
 

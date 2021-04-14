@@ -5,7 +5,7 @@ import PartialNewspaper from "%partials/Newspaper";
 
 import LinkResolver from "%prismic/LinkResolver";
 
-type NewspaperSliceProps = {
+export type NewspaperSliceProps = {
   slice: NewspaperSliceType;
 };
 

@@ -1,7 +1,7 @@
 {
   "type": "CarouselPhonesSliceType",
   "label": null,
-  "items": [
+  "fields": [
     {
       "carousel_phones_slice_type_device_type": "SMARTPHONE",
       "carousel_phones_slice_type_caption": [
@@ -50,6 +50,5 @@
         "url": "https://placehold.it/600x1200"
       }
     }
-  ],
-  "primary": {}
+  ]
 }

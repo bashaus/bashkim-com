@@ -1,12 +1,13 @@
-import type RichTextPrismicType from "@bashkim-com/prismic/types/rich-text";
-import type { RichTextTypePrismicItemType } from "@bashkim-com/prismic/types/rich-text";
-import type SliceType from "@bashkim-com/prismic/types/slice";
+import type { PrismicSliceType } from "@bashkim-com/prismic/types/Slice";
+import type {
+  PrismicRichTextType,
+  PrismicRichTextElement,
+} from "@bashkim-com/prismic/types/RichText";
 
-type FullTextSliceType = SliceType & {
-  items?: Array<unknown>;
+export type FullTextSliceType = PrismicSliceType & {
   primary: {
-    full_text_slice_type_body: RichTextPrismicType<RichTextTypePrismicItemType>;
-  };
+    full_text_slice_type_body: PrismicRichTextType<
+      PrismicRichTextElement
+    > | null;
+  } | null;
 };
-
-export default FullTextSliceType;

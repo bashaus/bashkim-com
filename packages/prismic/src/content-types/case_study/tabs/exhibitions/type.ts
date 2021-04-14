@@ -1,7 +1,5 @@
-import type ExhibitionSlicePropType from "@bashkim-com/prismic/slice-types/Exhibition/type";
+import type { ExhibitionSliceType } from "@bashkim-com/prismic/slice-types/Exhibition/type";
 
-type CaseStudyContentTypeExhibitionsTab = {
-  exhibitions: Array<ExhibitionSlicePropType>;
+export type CaseStudyContentTypeExhibitionsTab = {
+  exhibitions: Array<ExhibitionSliceType>;
 };
-
-export default CaseStudyContentTypeExhibitionsTab;

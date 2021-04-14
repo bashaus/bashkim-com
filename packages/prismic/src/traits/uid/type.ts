@@ -1,5 +1,1 @@
-type UidPrismicTrait = {
-  uid: string;
-};
-
-export default UidPrismicTrait;
+export type UidTraitType = Record<string, never>;

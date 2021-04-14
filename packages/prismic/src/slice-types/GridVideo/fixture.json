@@ -1,7 +1,7 @@
 {
   "type": "GridVideoSliceType",
   "label": null,
-  "items": [
+  "fields": [
     {
       "grid_video_slice_type_poster": {
         "dimensions": {
@@ -110,6 +110,5 @@
         "embed_url": "https://www.youtube.com/watch?v=2CEo8If6rmQ"
       }
     }
-  ],
-  "primary": {}
+  ]
 }

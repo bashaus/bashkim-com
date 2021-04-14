@@ -9,7 +9,7 @@ import LinkResolver from "%prismic/LinkResolver";
 
 import styles from "./styles.module.scss";
 
-type CaptionedMagazineSliceProps = {
+export type CaptionedMagazineSliceProps = {
   slice: CaptionedMagazineSliceType;
 };
 

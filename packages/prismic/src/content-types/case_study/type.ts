@@ -1,31 +1,18 @@
-import CaseStudyContentTypeAccoladesTab from "./tabs/accolades/type";
-import CaseStudyContentTypeCollaboratorsTab from "./tabs/collaborators/type";
-import CaseStudyContentTypeExhibitionsTab from "./tabs/exhibitions/type";
-import CaseStudyContentTypeImagesTab from "./tabs/images/type";
-import CaseStudyContentTypeInfoTab from "./tabs/info/type";
-import CaseStudyContentTypePageTab from "./tabs/page/type";
-import CaseStudyContentTypeSeoTab from "./tabs/seo/type";
+import type { PrismicContentType } from "@bashkim-com/prismic/traits/content-type";
 
-type CaseStudyContentType = {
-  _meta: {
-    id: string;
-    uid: string;
-    type: string;
-    href: string;
-    tags: Array<string>;
-    first_publication_date: string;
-    last_publication_date: string;
-    slugs?: Array<string>;
-    linked_documents?: Array<any>;
-    lang: string;
-    alternate_languages: Array<any>;
-  };
-} & CaseStudyContentTypeAccoladesTab &
+import type { CaseStudyContentTypeAccoladesTab } from "./tabs/accolades/type";
+import type { CaseStudyContentTypeCollaboratorsTab } from "./tabs/collaborators/type";
+import type { CaseStudyContentTypeExhibitionsTab } from "./tabs/exhibitions/type";
+import type { CaseStudyContentTypeImagesTab } from "./tabs/images/type";
+import type { CaseStudyContentTypeInfoTab } from "./tabs/info/type";
+import type { CaseStudyContentTypePageTab } from "./tabs/page/type";
+import type { CaseStudyContentTypeSeoTab } from "./tabs/seo/type";
+
+export type CaseStudyContentType = PrismicContentType &
+  CaseStudyContentTypeAccoladesTab &
   CaseStudyContentTypeCollaboratorsTab &
   CaseStudyContentTypeExhibitionsTab &
   CaseStudyContentTypeImagesTab &
   CaseStudyContentTypeInfoTab &
   CaseStudyContentTypePageTab &
   CaseStudyContentTypeSeoTab;
-
-export default CaseStudyContentType;

@@ -2,7 +2,7 @@ import type { GridEmbedSliceType } from "@bashkim-com/prismic";
 
 import styles from "./styles.module.scss";
 
-type GridEmbedSliceProps = {
+export type GridEmbedSliceProps = {
   slice: GridEmbedSliceType;
 };
 

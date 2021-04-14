@@ -1,7 +1,7 @@
 {
   "type": "GridEmbedSliceType",
   "label": null,
-  "items": [
+  "fields": [
     {
       "grid_embed_slice_type_embed": {
         "url": "https://twitter.com/TropicanaJuices/status/421604896379400192",
@@ -104,6 +104,5 @@
         "title": "Tropicana on Twitter: \"Struggling to stick to a NY resolution? Tweet your temptation to #ResolutionRescue for the chance to win prizes! http://t.co/LfTUpt7jes\""
       }
     }
-  ],
-  "primary": {}
+  ]
 }

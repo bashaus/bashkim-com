@@ -1,15 +1,17 @@
-import type EmbedPrismicType from "@bashkim-com/prismic/types/embed";
-import type ImagePrismicType from "@bashkim-com/prismic/types/image";
-import type RichTextPrismicType from "@bashkim-com/prismic/types/rich-text";
-import type SliceType from "@bashkim-com/prismic/types/slice";
+import type { PrismicEmbedType } from "@bashkim-com/prismic/types/Embed";
+import type { PrismicImageType } from "@bashkim-com/prismic/types/Image";
+import type { PrismicSliceType } from "@bashkim-com/prismic/types/Slice";
+import type {
+  PrismicRichTextType,
+  PrismicRichTextElement,
+} from "@bashkim-com/prismic/types/RichText";
 
-type GridVideoSliceType = SliceType & {
-  items: Array<{
-    grid_video_slice_type_video: EmbedPrismicType;
-    grid_video_slice_type_poster: ImagePrismicType;
-    grid_video_slice_type_description: RichTextPrismicType<"paragraph">;
-  }>;
-  primary: unknown;
+export type GridVideoSliceType = PrismicSliceType & {
+  fields: Array<{
+    grid_video_slice_type_video: PrismicEmbedType | null;
+    grid_video_slice_type_poster: PrismicImageType | null;
+    grid_video_slice_type_description: PrismicRichTextType<
+      PrismicRichTextElement.PARAGRAPH
+    > | null;
+  }> | null;
 };
-
-export default GridVideoSliceType;

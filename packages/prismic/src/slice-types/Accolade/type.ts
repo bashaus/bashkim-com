@@ -1,30 +1,34 @@
-import type LinkPrismicType from "@bashkim-com/prismic/types/link";
-import type SlicePrismicType from "@bashkim-com/prismic/types/slice";
-import type RichTextPrismicType from "@bashkim-com/prismic/types/rich-text";
-import type { RichTextTypePrismicItemType } from "@bashkim-com/prismic/types/rich-text";
+import type { PrismicDate } from "@bashkim-com/prismic/types/Date";
+import type { PrismicLinkType } from "@bashkim-com/prismic/types/Link";
+import type { PrismicSliceType } from "@bashkim-com/prismic/types/Slice";
+import type {
+  PrismicRichTextType,
+  PrismicRichTextElement,
+} from "@bashkim-com/prismic/types/RichText";
 
-type AccoladeSliceType = SlicePrismicType & {
-  items: Array<{
-    accolade_slice_type_award_place:
-      | "gold"
-      | "silver"
-      | "bronze"
-      | "honour"
-      | "shortlist";
-    accolade_slice_type_award_link: LinkPrismicType;
-    accolade_slice_type_award_category: RichTextPrismicType<
-      RichTextTypePrismicItemType.PARAGRAPH
-    >;
-  }>;
+export enum AccoladeSliceTypeAwardPlace {
+  GOLD = "gold",
+  SILVER = "silver",
+  BRONZE = "bronze",
+  HONOUR = "honour",
+  SHORTLIST = "shortlist",
+}
+
+export type AccoladeSliceType = PrismicSliceType & {
   primary: {
-    accolade_slice_type_issuer: null | RichTextPrismicType<
-      RichTextTypePrismicItemType.HEADING3
-    >;
-    accolade_slice_type_description: null | RichTextPrismicType<
-      RichTextTypePrismicItemType.PARAGRAPH
-    >;
-    accolade_slice_type_date: null | string;
-  };
+    accolade_slice_type_issuer: PrismicRichTextType<
+      PrismicRichTextElement.HEADING3
+    > | null;
+    accolade_slice_type_description: PrismicRichTextType<
+      PrismicRichTextElement.PARAGRAPH
+    > | null;
+    accolade_slice_type_date: PrismicDate | null;
+  } | null;
+  fields: Array<{
+    accolade_slice_type_award_place: AccoladeSliceTypeAwardPlace | null;
+    accolade_slice_type_award_link: PrismicLinkType | null;
+    accolade_slice_type_award_category: PrismicRichTextType<
+      PrismicRichTextElement.PARAGRAPH
+    > | null;
+  }> | null;
 };
-
-export default AccoladeSliceType;

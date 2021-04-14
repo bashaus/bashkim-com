@@ -5,7 +5,7 @@ import LinkResolver from "%prismic/LinkResolver";
 
 import PartialFullText from "%partials/FullText";
 
-type FullTextSliceProps = {
+export type FullTextSliceProps = {
   slice: FullTextSliceType;
 };
 

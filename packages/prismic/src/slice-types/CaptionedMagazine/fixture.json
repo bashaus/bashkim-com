@@ -1,7 +1,21 @@
 {
   "type": "CaptionedMagazineSliceType",
   "label": null,
-  "items": [
+  "primary": {
+    "captioned_magazine_slice_type_caption": [
+      {
+        "type": "heading3",
+        "text": "Captioned magazine",
+        "spans": []
+      },
+      {
+        "type": "paragraph",
+        "text": "Example of the CaptionedMagazineSliceType.",
+        "spans": []
+      }
+    ]
+  },
+  "fields": [
     {
       "captioned_magazine_slice_type_images": {
         "dimensions": {
@@ -46,19 +60,5 @@
         "url": "https://placehold.it/720x1016?text=Page+4"
       }
     }
-  ],
-  "primary": {
-    "captioned_magazine_slice_type_caption": [
-      {
-        "type": "heading3",
-        "text": "Lorem ipsum",
-        "spans": []
-      },
-      {
-        "type": "paragraph",
-        "text": "Curabitur viverra semper leo, vitae tempus nulla luctus sed. Fusce fermentum tincidunt sodales. In vel libero ac dui dapibus sollicitudin. Vestibulum at imperdiet risus. Etiam congue tempor dui, a fermentum.",
-        "spans": []
-      }
-    ]
-  }
+  ]
 }

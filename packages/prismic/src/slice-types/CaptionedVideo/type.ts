@@ -1,22 +1,21 @@
-import type EmbedPrismicType from "@bashkim-com/prismic/types/embed";
-import type RichTextPrismicType from "@bashkim-com/prismic/types/rich-text";
-import type SliceType from "@bashkim-com/prismic/types/slice";
+import type { PrismicEmbedType } from "@bashkim-com/prismic/types/Embed";
+import type { PrismicSliceType } from "@bashkim-com/prismic/types/Slice";
+import type {
+  PrismicRichTextType,
+  PrismicRichTextElement,
+} from "@bashkim-com/prismic/types/RichText";
 
-type CaptionedVideoSliceType = SliceType & {
-  items: Array<any>;
+export type CaptionedVideoSliceType = PrismicSliceType & {
   primary: {
-    captioned_video_slice_type_caption: RichTextPrismicType<
-      | "paragraph"
-      | "heading3"
-      | "strong"
-      | "em"
-      | "hyperlink"
-      | "list-item"
-      | "o-list-item"
-      | "o-list-item"
-    >;
-    captioned_video_slice_type_video: EmbedPrismicType;
-  };
+    captioned_video_slice_type_caption: PrismicRichTextType<
+      | PrismicRichTextElement.PARAGRAPH
+      | PrismicRichTextElement.HEADING3
+      | PrismicRichTextElement.STRONG
+      | PrismicRichTextElement.EM
+      | PrismicRichTextElement.HYPERLINK
+      | PrismicRichTextElement.LIST_ITEM
+      | PrismicRichTextElement.O_LIST_ITEM
+    > | null;
+    captioned_video_slice_type_video: PrismicEmbedType | null;
+  } | null;
 };
-
-export default CaptionedVideoSliceType;

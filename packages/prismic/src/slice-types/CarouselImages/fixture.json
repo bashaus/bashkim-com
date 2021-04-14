@@ -1,7 +1,7 @@
 {
   "type": "CarouselImagesSliceType",
   "label": null,
-  "items": [
+  "fields": [
     {
       "carousel_images_slice_type_caption": [
         {

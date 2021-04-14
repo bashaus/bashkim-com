@@ -6,7 +6,7 @@ import Carousel from "%components/Carousel";
 import CarouselImage from "%components/CarouselImage";
 import LinkResolver from "%prismic/LinkResolver";
 
-type CarouselImagesSliceProps = {
+export type CarouselImagesSliceProps = {
   slice: CarouselImagesSliceType;
 };
 

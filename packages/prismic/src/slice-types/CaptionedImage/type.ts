@@ -1,22 +1,21 @@
-import type ImagePrismic from "@bashkim-com/prismic/types/image";
-import type RichTextPrismic from "@bashkim-com/prismic/types/rich-text";
-import type SlicePrismicType from "@bashkim-com/prismic/types/slice";
+import type { PrismicImageType } from "@bashkim-com/prismic/types/Image";
+import type {
+  PrismicRichTextType,
+  PrismicRichTextElement,
+} from "@bashkim-com/prismic/types/RichText";
+import type { PrismicSliceType } from "@bashkim-com/prismic/types/Slice";
 
-type CaptionedImageSliceType = SlicePrismicType & {
-  items?: Array<unknown>;
+export type CaptionedImageSliceType = PrismicSliceType & {
   primary: {
-    captioned_image_slice_type_image: ImagePrismic;
-    captioned_image_slice_type_caption: RichTextPrismic<
-      | "paragraph"
-      | "heading3"
-      | "strong"
-      | "em"
-      | "hyperlink"
-      | "list-item"
-      | "o-list-item"
-      | "o-list-item"
-    >;
-  };
+    captioned_image_slice_type_image: PrismicImageType | null;
+    captioned_image_slice_type_caption: PrismicRichTextType<
+      | PrismicRichTextElement.PARAGRAPH
+      | PrismicRichTextElement.HEADING3
+      | PrismicRichTextElement.STRONG
+      | PrismicRichTextElement.EM
+      | PrismicRichTextElement.HYPERLINK
+      | PrismicRichTextElement.LIST_ITEM
+      | PrismicRichTextElement.O_LIST_ITEM
+    > | null;
+  } | null;
 };
-
-export default CaptionedImageSliceType;

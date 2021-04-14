@@ -1,4 +1,4 @@
-type ImagePrismicType = {
+export type PrismicImageType = {
   dimensions: {
     width: number;
     height: number;
@@ -7,5 +7,3 @@ type ImagePrismicType = {
   copyright: string | null;
   url: string;
 };
-
-export default ImagePrismicType;

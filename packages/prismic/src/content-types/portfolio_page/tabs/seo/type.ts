@@ -1,5 +1,3 @@
-import type TraitSeoType from "@bashkim-com/prismic/traits/seo/type";
+import type { SeoTraitType } from "@bashkim-com/prismic/traits/seo/type";
 
-type PortfolioPageContentTypeSeoTab = TraitSeoType;
-
-export default PortfolioPageContentTypeSeoTab;
+export type PortfolioPageContentTypeSeoTab = SeoTraitType;

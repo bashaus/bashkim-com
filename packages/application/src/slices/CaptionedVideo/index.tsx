@@ -6,7 +6,7 @@ import PartialCaptioned from "%partials/Captioned";
 import VideoPlayerYouTube from "%components/VideoPlayerYouTube";
 import LinkResolver from "%prismic/LinkResolver";
 
-type CaptionedVideoSliceProps = {
+export type CaptionedVideoSliceProps = {
   slice: CaptionedVideoSliceType;
 };
 

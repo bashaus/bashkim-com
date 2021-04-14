@@ -16,75 +16,19 @@
         "spans": []
       }
     ],
-    "accolade_slice_type_date": "2015-12-01"
+    "accolade_slice_type_date": "2020-01-01"
   },
-  "items": [
-    {
-      "accolade_slice_type_award_place": "gold",
-      "accolade_slice_type_award_link": {
-        "link_type": "Web",
-        "url": "https://www.example.com"
-      },
-      "accolade_slice_type_award_category": [
-        {
-          "type": "paragraph",
-          "text": "Gold Award",
-          "spans": []
-        }
-      ]
-    },
+  "fields": [
     {
       "accolade_slice_type_award_place": "silver",
       "accolade_slice_type_award_link": {
-        "link_type": "Web",
-        "url": "https://www.example.com"
+        "url": "https://www.example.com/",
+        "target": null
       },
       "accolade_slice_type_award_category": [
         {
           "type": "paragraph",
           "text": "Silver Award",
-          "spans": []
-        }
-      ]
-    },
-    {
-      "accolade_slice_type_award_place": "bronze",
-      "accolade_slice_type_award_link": {
-        "link_type": "Web",
-        "url": "https://www.example.com"
-      },
-      "accolade_slice_type_award_category": [
-        {
-          "type": "paragraph",
-          "text": "Bronze Award",
-          "spans": []
-        }
-      ]
-    },
-    {
-      "accolade_slice_type_award_place": "honour",
-      "accolade_slice_type_award_link": {
-        "link_type": "Web",
-        "url": "https://www.example.com"
-      },
-      "accolade_slice_type_award_category": [
-        {
-          "type": "paragraph",
-          "text": "Honour",
-          "spans": []
-        }
-      ]
-    },
-    {
-      "accolade_slice_type_award_place": "shortlist",
-      "accolade_slice_type_award_link": {
-        "link_type": "Web",
-        "url": "https://www.example.com"
-      },
-      "accolade_slice_type_award_category": [
-        {
-          "type": "paragraph",
-          "text": "Shortlist",
           "spans": []
         }
       ]

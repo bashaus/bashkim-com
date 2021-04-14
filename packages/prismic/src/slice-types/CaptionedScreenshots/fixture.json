@@ -1,7 +1,21 @@
 {
   "type": "CaptionedScreenshotsSliceType",
   "label": null,
-  "items": [
+  "primary": {
+    "captioned_screenshots_slice_type_caption": [
+      {
+        "type": "heading3",
+        "text": "Captioned screenshots",
+        "spans": []
+      },
+      {
+        "type": "paragraph",
+        "text": "Example of the CaptionedScreenshotsSliceType.",
+        "spans": []
+      }
+    ]
+  },
+  "fields": [
     {
       "captioned_screenshots_slice_type_images": {
         "dimensions": {
@@ -68,19 +82,5 @@
         "url": "https://placehold.it/1440x800?text=Desktop%20Wide"
       }
     }
-  ],
-  "primary": {
-    "captioned_screenshots_slice_type_caption": [
-      {
-        "type": "heading3",
-        "text": "Campaign website",
-        "spans": []
-      },
-      {
-        "type": "paragraph",
-        "text": "Barley walks on screen and greets visitors by telling his story. The content encourages visitors to find out more information about the charity and provides a call to action to adopt or donate.",
-        "spans": []
-      }
-    ]
-  }
+  ]
 }

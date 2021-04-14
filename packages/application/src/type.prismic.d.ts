@@ -47,8 +47,10 @@ declare module "prismic-reactjs" {
     url?: string;
   };
 
+  type LinkResolver = (doc: { type: string; uid: string }) => string;
+
   const Link: {
-    url(link: LinkType, linkResolver: any): string;
+    url(link: LinkType, linkResolver: LinkResolver): string;
   };
 
   type htmlSerializerType = (
@@ -60,7 +62,10 @@ declare module "prismic-reactjs" {
   ) => React.ReactElement | null;
 
   const RichText: {
-    render(content: any, linkResolver: any): RichTextBlock;
+    render(
+      content: Array<RichTextBlock>,
+      linkResolver: LinkResolver
+    ): RichTextBlock;
     htmlSerializer: htmlSerializerType;
   };
 }

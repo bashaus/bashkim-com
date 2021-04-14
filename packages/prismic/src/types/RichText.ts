@@ -1,4 +1,4 @@
-export enum RichTextTypePrismicItemType {
+export enum PrismicRichTextElement {
   PARAGRAPH = "paragraph",
   PREFORMATTED = "preformatted",
   HEADING1 = "heading1",
@@ -16,12 +16,10 @@ export enum RichTextTypePrismicItemType {
   O_LIST_ITEM = "o-list-item",
 }
 
-interface RichTextPrismicItemType<Type> {
-  type: Type;
+export type PrismicRichTextTypeItem<TType> = {
+  type: TType;
   text: string;
-  spans: Array<any>;
-}
+  spans: Array<Record<string, never>>;
+};
 
-type RichTextPrismicType<Type> = Array<RichTextPrismicItemType<Type>>;
-
-export default RichTextPrismicType;
+export type PrismicRichTextType<TType> = Array<PrismicRichTextTypeItem<TType>>;

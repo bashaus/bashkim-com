@@ -29,7 +29,7 @@ const DeviceTypeComponents = {
   FEATURE_PHONE: DeviceFeaturePhone,
 };
 
-type CarouselPhonesSliceProps = {
+export type CarouselPhonesSliceProps = {
   slice: CarouselPhonesSliceType;
 };
 

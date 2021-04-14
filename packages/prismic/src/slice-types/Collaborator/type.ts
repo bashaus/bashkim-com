@@ -1,15 +1,10 @@
-import type DocumentLinkPrismicType from "@bashkim-com/prismic/types/document-link";
-import type SliceType from "@bashkim-com/prismic/types/slice";
+import type { PeerContentType } from "@bashkim-com/prismic/content-types";
+import type { PrismicSliceType } from "@bashkim-com/prismic/types/Slice";
 
-type CollaboratorSliceType = SliceType & {
-  items: Array<any>;
+export type CollaboratorSliceType = PrismicSliceType & {
   primary: {
-    collaborator_slice_type_peer: DocumentLinkPrismicType<{
-      peer_name: string | null;
-    }>;
+    collaborator_slice_type_peer: PeerContentType | null;
     collaborator_slice_type_company: string | null;
     collaborator_slice_type_role: string | null;
   };
 };
-
-export default CollaboratorSliceType;

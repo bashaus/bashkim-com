@@ -1,7 +1,7 @@
 {
   "type": "GridVideoSliceType",
   "label": null,
-  "items": [
+  "fields": [
     {
       "newspaper_slice_type_group": [
         {
@@ -38,6 +38,5 @@
         }
       ]
     }
-  ],
-  "primary": {}
+  ]
 }

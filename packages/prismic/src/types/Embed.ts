@@ -1,4 +1,4 @@
-type EmbedPrismicType = {
+export type PrismicEmbedType = {
   author_name?: string;
   author_url?: string;
   embed_url?: string;
@@ -14,5 +14,3 @@ type EmbedPrismicType = {
   version?: string;
   width?: number | null;
 };
-
-export default EmbedPrismicType;

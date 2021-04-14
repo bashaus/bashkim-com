@@ -1,15 +1,16 @@
-import type RichTextPrismicType from "@bashkim-com/prismic/types/rich-text";
-import type { RichTextTypePrismicItemType } from "@bashkim-com/prismic/types/rich-text";
-import type SliceType from "@bashkim-com/prismic/types/slice";
+import type { PrismicSliceType } from "@bashkim-com/prismic/types/Slice";
+import type {
+  PrismicRichTextType,
+  PrismicRichTextElement,
+} from "@bashkim-com/prismic/types/RichText";
 
-type SubtitleSliceType = SliceType & {
-  items?: Array<unknown>;
+export type SubtitleSliceType = PrismicSliceType & {
   primary: {
-    subtitle_slice_type_heading: RichTextPrismicType<
-      RichTextTypePrismicItemType.HEADING2
-    >;
-    subtitle_slice_type_description: RichTextPrismicType<"paragraph">;
-  };
+    subtitle_slice_type_heading: PrismicRichTextType<
+      PrismicRichTextElement.HEADING2
+    > | null;
+    subtitle_slice_type_description: PrismicRichTextType<
+      PrismicRichTextElement.PARAGRAPH
+    > | null;
+  } | null;
 };
-
-export default SubtitleSliceType;

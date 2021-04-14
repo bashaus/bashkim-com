@@ -7,7 +7,7 @@ import LinkResolver from "%prismic/LinkResolver";
 
 import styles from "./styles.module.scss";
 
-type GridVideoSliceProps = {
+export type GridVideoSliceProps = {
   slice: GridVideoSliceType;
 };
 

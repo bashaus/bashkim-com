@@ -1,37 +1,43 @@
-import type DocumentLinkPrismicType from "@bashkim-com/prismic/types/document-link";
-import type ImagePrismicType from "@bashkim-com/prismic/types/image";
-import type LinkPrismicType from "@bashkim-com/prismic/types/link";
+import type { TechnologyContentType } from "@bashkim-com/prismic/content-types/technology/type";
+import type { PrismicLinkType } from "@bashkim-com/prismic/types/Link";
 
-type CaseStudyContentTypeInfoTab = {
-  info_brief: string;
-  info_strategy: string;
-  info_implementation: string;
-  info_deliverables: Array<{
-    info_deliverable_name: string;
-    info_deliverable_link: LinkPrismicType;
-  }>;
-  info_client?: string;
-  info_agency?: string;
-  info_role?: string;
-  info_institution?: string;
-  info_degree?: string;
-  info_launch_date: string;
-  info_decommission_date?: string;
-  info_target_audiences: Array<{
-    info_target_audience_name?: string;
-  }>;
-  info_markets: Array<{
-    info_market?: string;
-  }>;
-  info_outcomes: Array<{
-    info_outcome?: string;
-  }>;
-  info_technologies: Array<{
-    info_technology: DocumentLinkPrismicType<{
-      technology_name?: string;
-      technology_icon: ImagePrismicType;
-    }>;
-  }>;
+export type CaseStudyContentTypeInfoTabDeliverable = {
+  info_deliverable_name: string | null;
+  info_deliverable_link: PrismicLinkType | null;
 };
 
-export default CaseStudyContentTypeInfoTab;
+export type CaseStudyContentTypeInfoTabTargetAudience = {
+  info_target_audience_name: string | null;
+};
+
+export type CaseStudyContentTypeInfoTabMarket = {
+  info_market: string | null;
+};
+
+export type CaseStudyContentTypeInfoTabOutcome = {
+  info_outcome: string | null;
+};
+
+export type CaseStudyContentTypeInfoTabTechnology = {
+  info_technology: TechnologyContentType | null;
+};
+
+export type CaseStudyContentTypeInfoTab = {
+  info_brief: string | null;
+  info_strategy: string | null;
+  info_implementation: string | null;
+  info_deliverables: Array<CaseStudyContentTypeInfoTabDeliverable> | null;
+  info_client: string | null;
+  info_agency: string | null;
+  info_role: string | null;
+  info_institution: string | null;
+  info_degree: string | null;
+  info_launch_date: Date | null;
+  info_decommission_date: Date | null;
+  info_target_audiences: Array<
+    CaseStudyContentTypeInfoTabTargetAudience
+  > | null;
+  info_markets: Array<CaseStudyContentTypeInfoTabMarket> | null;
+  info_outcomes: Array<CaseStudyContentTypeInfoTabOutcome> | null;
+  info_technologies: Array<CaseStudyContentTypeInfoTabTechnology> | null;
+};

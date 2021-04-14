@@ -1,17 +1,19 @@
-import type ImagePropType from "@bashkim-com/prismic/types/image";
-import type DocumentLinkPropType from "@bashkim-com/prismic/types/document-link";
+import { DeepPartial } from "utility-types";
 
-type PortfolioPageContentTypePageTab = {
-  featured: Array<{
-    featured_title: string;
-    featured_description: string;
-    featured_case_study: DocumentLinkPropType<{
-      meta_title: string;
-      meta_description: string;
-      image_header_desktop: ImagePropType;
-      image_header_mobile: ImagePropType;
-    }>;
-  }>;
+import { CaseStudyContentType } from "@bashkim-com/prismic/content-types/case_study/type";
+import {
+  PrismicRichTextElement,
+  PrismicRichTextType,
+} from "@bashkim-com/prismic/types/RichText";
+
+export type PortfolioPageContentTypePageTabFeatured = {
+  featured_title: PrismicRichTextType<PrismicRichTextElement.HEADING3> | null;
+  featured_description: PrismicRichTextType<
+    PrismicRichTextElement.PARAGRAPH
+  > | null;
+  featured_case_study: DeepPartial<CaseStudyContentType> | null;
 };
 
-export default PortfolioPageContentTypePageTab;
+export type PortfolioPageContentTypePageTab = {
+  featured: Array<PortfolioPageContentTypePageTabFeatured> | null;
+};

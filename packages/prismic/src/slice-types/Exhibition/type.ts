@@ -1,16 +1,21 @@
-import type LinkPrismicType from "@bashkim-com/prismic/types/link";
-import type RichTextPrismicType from "@bashkim-com/prismic/types/rich-text";
-import type SliceType from "@bashkim-com/prismic/types/slice";
+import type { PrismicDate } from "@bashkim-com/prismic/types/Date";
+import type { PrismicLinkType } from "@bashkim-com/prismic/types/Link";
+import type { PrismicSliceType } from "@bashkim-com/prismic/types/Slice";
+import type {
+  PrismicRichTextType,
+  PrismicRichTextElement,
+} from "@bashkim-com/prismic/types/RichText";
 
-type ExhibitionSliceType = SliceType & {
-  items: Array<any>;
+export type ExhibitionSliceType = PrismicSliceType & {
   primary: {
-    exhibition_slice_type_name: RichTextPrismicType<"heading3">;
-    exhibition_slice_type_link: LinkPrismicType;
-    exhibition_slice_type_opening_date: null | string;
-    exhibition_slice_type_closing_date: null | string;
-    exhibition_slice_type_location: RichTextPrismicType<"paragraph">;
+    exhibition_slice_type_name: PrismicRichTextType<
+      PrismicRichTextElement.HEADING3
+    >;
+    exhibition_slice_type_link: PrismicLinkType;
+    exhibition_slice_type_opening_date: PrismicDate | null;
+    exhibition_slice_type_closing_date: PrismicDate | null;
+    exhibition_slice_type_location: PrismicRichTextType<
+      PrismicRichTextElement.PARAGRAPH
+    >;
   };
 };
-
-export default ExhibitionSliceType;

@@ -1,10 +1,8 @@
-import type ImagePrismicType from "@bashkim-com/prismic/types/image";
+import type { PrismicImageType } from "@bashkim-com/prismic/types/Image";
 
-type CaseStudyContentTypeImagesTab = {
-  image_header_desktop: ImagePrismicType;
-  image_header_mobile: ImagePrismicType;
-  image_icon: ImagePrismicType;
-  image_poster: ImagePrismicType;
+export type CaseStudyContentTypeImagesTab = {
+  image_header_desktop: PrismicImageType;
+  image_header_mobile: PrismicImageType;
+  image_icon: PrismicImageType;
+  image_poster: PrismicImageType;
 };
-
-export default CaseStudyContentTypeImagesTab;

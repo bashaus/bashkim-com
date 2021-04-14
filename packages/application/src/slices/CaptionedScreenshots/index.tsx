@@ -9,7 +9,7 @@ import LinkResolver from "%prismic/LinkResolver";
 
 import styles from "./styles.module.scss";
 
-type CaptionedScreenshotsSliceProps = {
+export type CaptionedScreenshotsSliceProps = {
   initialWidth?: number;
   slice: CaptionedScreenshotsSliceType;
 };

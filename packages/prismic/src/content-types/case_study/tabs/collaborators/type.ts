@@ -1,7 +1,5 @@
-import type CollaboratorSliceType from "@bashkim-com/prismic/slice-types/Collaborator/type";
+import type { CollaboratorSliceType } from "@bashkim-com/prismic/slice-types/Collaborator/type";
 
-type CaseStudyContentTypeCollaboratorsTab = {
+export type CaseStudyContentTypeCollaboratorsTab = {
   collaborators: Array<CollaboratorSliceType>;
 };
-
-export default CaseStudyContentTypeCollaboratorsTab;

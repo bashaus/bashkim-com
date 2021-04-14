@@ -1,10 +1,12 @@
+import { ExhibitionSliceType } from "@bashkim-com/prismic";
+
 import PartialSubtitle from "%partials/Subtitle/index";
 import ExhibitionSlice from "%slices/Exhibition";
 
 import styles from "./styles.module.scss";
 
 type CaseStudyExhibitionsProps = {
-  slices: Array<any>;
+  slices: Array<ExhibitionSliceType>;
 };
 
 const CaseStudyExhibitions = ({

@@ -1,17 +1,17 @@
 {
   "type": "ExhibitionSliceType",
   "label": null,
-  "items": [{}],
   "primary": {
     "exhibition_slice_type_name": [
       {
         "type": "heading3",
-        "text": "Westfield Stratford",
+        "text": "Exhibition slice",
         "spans": []
       }
     ],
     "exhibition_slice_type_link": {
-      "link_type": "Any"
+      "url": "https://www.example.com",
+      "target": null
     },
     "exhibition_slice_type_opening_date": "2015-04-27",
     "exhibition_slice_type_closing_date": "2015-05-06",
