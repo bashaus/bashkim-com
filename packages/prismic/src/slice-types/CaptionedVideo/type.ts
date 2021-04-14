@@ -1,6 +1,6 @@
-import EmbedPrismicType from "@bashkim-com/prismic/types/embed";
-import RichTextPrismicType from "@bashkim-com/prismic/types/rich-text";
-import SliceType from "@bashkim-com/prismic/types/slice";
+import type EmbedPrismicType from "@bashkim-com/prismic/types/embed";
+import type RichTextPrismicType from "@bashkim-com/prismic/types/rich-text";
+import type SliceType from "@bashkim-com/prismic/types/slice";
 
 type CaptionedVideoSliceType = SliceType & {
   items: Array<any>;

@@ -1,6 +1,6 @@
-import PrismicContentType from "@bashkim-com/prismic/traits/content-type";
+import type PrismicContentType from "@bashkim-com/prismic/traits/content-type";
 
-import TechnologyContentTypeTechnologyTab from "./tabs/technology/type";
+import type TechnologyContentTypeTechnologyTab from "./tabs/technology/type";
 
 type TechnologyContentTypeData = TechnologyContentTypeTechnologyTab;
 

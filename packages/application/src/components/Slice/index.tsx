@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic";
 import { ComponentType } from "react";
 
-import { SlicePrismicType } from "@bashkim-com/prismic";
+import type { SlicePrismicType } from "@bashkim-com/prismic";
 
 const SliceTypeComponentMap: Record<string, any> = {
   CaptionedImageSliceType: dynamic(() => import("%slices/CaptionedImage")),

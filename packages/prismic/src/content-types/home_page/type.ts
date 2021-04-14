@@ -1,7 +1,7 @@
-import PrismicContentType from "@bashkim-com/prismic/traits/content-type";
+import type PrismicContentType from "@bashkim-com/prismic/traits/content-type";
 
-import PageTabPropType from "./tabs/page/type";
-import SeoTabPropType from "./tabs/seo/type";
+import type PageTabPropType from "./tabs/page/type";
+import type SeoTabPropType from "./tabs/seo/type";
 
 type HomePageContentTypeData = PageTabPropType & SeoTabPropType;
 

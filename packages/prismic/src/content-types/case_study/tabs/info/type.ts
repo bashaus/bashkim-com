@@ -1,6 +1,6 @@
-import DocumentLinkPrismicType from "@bashkim-com/prismic/types/document-link";
-import ImagePrismicType from "@bashkim-com/prismic/types/image";
-import LinkPrismicType from "@bashkim-com/prismic/types/link";
+import type DocumentLinkPrismicType from "@bashkim-com/prismic/types/document-link";
+import type ImagePrismicType from "@bashkim-com/prismic/types/image";
+import type LinkPrismicType from "@bashkim-com/prismic/types/link";
 
 type CaseStudyContentTypeInfoTab = {
   info_brief: string;

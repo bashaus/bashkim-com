@@ -1,4 +1,4 @@
-import TraitSeoPropType from "@bashkim-com/prismic/traits/seo/type";
+import type TraitSeoPropType from "@bashkim-com/prismic/traits/seo/type";
 
 type HomePageContentTypeSeoTab = TraitSeoPropType;
 

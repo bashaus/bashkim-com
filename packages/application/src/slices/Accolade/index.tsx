@@ -1,7 +1,8 @@
 import classNames from "classnames";
 import { RichText, Link } from "prismic-reactjs";
 import dayjs from "dayjs";
-import { AccoladeSliceType } from "@bashkim-com/prismic";
+
+import type { AccoladeSliceType } from "@bashkim-com/prismic";
 
 import LinkResolver from "%prismic/LinkResolver";
 

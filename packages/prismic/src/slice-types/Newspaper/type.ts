@@ -1,5 +1,5 @@
-import RichTextPrismicType from "@bashkim-com/prismic/types/rich-text";
-import SliceType from "@bashkim-com/prismic/types/slice";
+import type RichTextPrismicType from "@bashkim-com/prismic/types/rich-text";
+import type SliceType from "@bashkim-com/prismic/types/slice";
 
 type NewspaperSliceType = SliceType & {
   items: Array<{

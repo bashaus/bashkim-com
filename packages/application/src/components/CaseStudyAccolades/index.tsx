@@ -1,4 +1,4 @@
-import { AccoladeSliceType } from "@bashkim-com/prismic";
+import type { AccoladeSliceType } from "@bashkim-com/prismic";
 
 import PartialSubtitle from "%partials/Subtitle";
 import AccoladeSlice from "%slices/Accolade";

@@ -1,6 +1,6 @@
-import PrismicContentType from "@bashkim-com/prismic/traits/content-type";
+import type PrismicContentType from "@bashkim-com/prismic/traits/content-type";
 
-import PeerContentTypeMainTab from "./tabs/main/type";
+import type PeerContentTypeMainTab from "./tabs/main/type";
 
 type PeerContentTypeData = PeerContentTypeMainTab;
 

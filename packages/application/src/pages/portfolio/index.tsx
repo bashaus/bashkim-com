@@ -1,5 +1,7 @@
 import { GetStaticProps } from "next";
-import PrismicClient, {
+
+import PrismicClient from "@bashkim-com/prismic";
+import type {
   CaseStudyContentType,
   PortfolioPageContentType,
 } from "@bashkim-com/prismic";

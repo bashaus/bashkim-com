@@ -1,5 +1,5 @@
 import { RichText } from "prismic-reactjs";
-import { CarouselPhonesSliceType } from "@bashkim-com/prismic";
+import type { CarouselPhonesSliceType } from "@bashkim-com/prismic";
 
 import Carousel from "%components/Carousel";
 import CarouselImage from "%components/CarouselImage";

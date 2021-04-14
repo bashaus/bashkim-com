@@ -1,5 +1,5 @@
 import { Link } from "prismic-reactjs";
-import { CollaboratorSliceType } from "@bashkim-com/prismic";
+import type { CollaboratorSliceType } from "@bashkim-com/prismic";
 
 import LinkResolver from "%prismic/LinkResolver";
 

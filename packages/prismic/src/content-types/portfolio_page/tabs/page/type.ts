@@ -1,5 +1,5 @@
-import ImagePropType from "@bashkim-com/prismic/types/image";
-import DocumentLinkPropType from "@bashkim-com/prismic/types/document-link";
+import type ImagePropType from "@bashkim-com/prismic/types/image";
+import type DocumentLinkPropType from "@bashkim-com/prismic/types/document-link";
 
 type PortfolioPageContentTypePageTab = {
   featured: Array<{

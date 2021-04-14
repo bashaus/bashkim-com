@@ -1,6 +1,6 @@
 import { RichText } from "prismic-reactjs";
 import { useCallback, useState } from "react";
-import { CaptionedMagazineSliceType } from "@bashkim-com/prismic";
+import type { CaptionedMagazineSliceType } from "@bashkim-com/prismic";
 
 import DeferredAsset from "%components/DeferredAsset";
 import Magazine, { MagazineSpreadChangeEvent } from "%components/Magazine";

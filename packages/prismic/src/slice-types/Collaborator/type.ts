@@ -1,5 +1,5 @@
-import DocumentLinkPrismicType from "@bashkim-com/prismic/types/document-link";
-import SliceType from "@bashkim-com/prismic/types/slice";
+import type DocumentLinkPrismicType from "@bashkim-com/prismic/types/document-link";
+import type SliceType from "@bashkim-com/prismic/types/slice";
 
 type CollaboratorSliceType = SliceType & {
   items: Array<any>;

@@ -1,4 +1,4 @@
-import ImagePropType from "@bashkim-com/prismic/types/image";
+import type ImagePropType from "@bashkim-com/prismic/types/image";
 
 type HomePageContentTypePageTab = {
   featured_case_studies: Array<{

@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { CaseStudyContentType } from "@bashkim-com/prismic";
+
+import type { CaseStudyContentType } from "@bashkim-com/prismic";
 
 import Brick from "%components/Brick";
 

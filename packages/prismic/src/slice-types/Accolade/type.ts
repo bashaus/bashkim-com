@@ -1,8 +1,7 @@
-import LinkPrismicType from "@bashkim-com/prismic/types/link";
-import SlicePrismicType from "@bashkim-com/prismic/types/slice";
-import RichTextPrismicType, {
-  RichTextTypePrismicItemType,
-} from "@bashkim-com/prismic/types/rich-text";
+import type LinkPrismicType from "@bashkim-com/prismic/types/link";
+import type SlicePrismicType from "@bashkim-com/prismic/types/slice";
+import type RichTextPrismicType from "@bashkim-com/prismic/types/rich-text";
+import type { RichTextTypePrismicItemType } from "@bashkim-com/prismic/types/rich-text";
 
 type AccoladeSliceType = SlicePrismicType & {
   items: Array<{

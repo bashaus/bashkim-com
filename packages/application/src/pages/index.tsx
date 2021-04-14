@@ -2,7 +2,8 @@ import { GetStaticProps } from "next";
 import Head from "next/head";
 import Link from "next/link";
 
-import PrismicClient, { HomePageContentType } from "@bashkim-com/prismic";
+import PrismicClient from "@bashkim-com/prismic";
+import type { HomePageContentType } from "@bashkim-com/prismic";
 
 import HomeBrands from "%components/HomeBrands";
 import HomeHello from "%components/HomeHello";

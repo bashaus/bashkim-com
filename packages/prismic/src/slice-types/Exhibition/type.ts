@@ -1,6 +1,6 @@
-import LinkPrismicType from "@bashkim-com/prismic/types/link";
-import RichTextPrismicType from "@bashkim-com/prismic/types/rich-text";
-import SliceType from "@bashkim-com/prismic/types/slice";
+import type LinkPrismicType from "@bashkim-com/prismic/types/link";
+import type RichTextPrismicType from "@bashkim-com/prismic/types/rich-text";
+import type SliceType from "@bashkim-com/prismic/types/slice";
 
 type ExhibitionSliceType = SliceType & {
   items: Array<any>;

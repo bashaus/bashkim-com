@@ -1,4 +1,4 @@
-import { GridEmbedSliceType } from "@bashkim-com/prismic";
+import type { GridEmbedSliceType } from "@bashkim-com/prismic";
 
 import styles from "./styles.module.scss";
 

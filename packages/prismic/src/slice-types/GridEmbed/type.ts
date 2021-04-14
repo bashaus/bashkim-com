@@ -1,5 +1,5 @@
-import EmbedPrismicType from "@bashkim-com/prismic/types/embed";
-import SliceType from "@bashkim-com/prismic/types/slice";
+import type EmbedPrismicType from "@bashkim-com/prismic/types/embed";
+import type SliceType from "@bashkim-com/prismic/types/slice";
 
 type GridEmbedSliceType = SliceType & {
   items: Array<{

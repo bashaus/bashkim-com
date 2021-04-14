@@ -1,5 +1,5 @@
 import { RichText } from "prismic-reactjs";
-import { CaptionedVideoSliceType } from "@bashkim-com/prismic";
+import type { CaptionedVideoSliceType } from "@bashkim-com/prismic";
 
 import DeferredAsset from "%components/DeferredAsset";
 import PartialCaptioned from "%partials/Captioned";

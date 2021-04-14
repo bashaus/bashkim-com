@@ -1,6 +1,6 @@
 import { RichText } from "prismic-reactjs";
 import { ChangeEvent, useCallback, useState } from "react";
-import { CaptionedScreenshotsSliceType } from "@bashkim-com/prismic";
+import type { CaptionedScreenshotsSliceType } from "@bashkim-com/prismic";
 
 import { DeviceMobileIcon, DeviceDesktopIcon } from "@primer/octicons-react";
 import DeferredAsset from "%components/DeferredAsset";

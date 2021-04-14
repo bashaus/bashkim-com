@@ -1,4 +1,4 @@
-import { CaseStudyContentType } from "@bashkim-com/prismic";
+import type { CaseStudyContentType } from "@bashkim-com/prismic";
 
 import CaseStudyDetails from "%components/CaseStudyDetails";
 import CaseStudyTechnologies from "%components/CaseStudyTechnologies";

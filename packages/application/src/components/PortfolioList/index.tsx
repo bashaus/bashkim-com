@@ -1,4 +1,4 @@
-import { CaseStudyContentType } from "@bashkim-com/prismic";
+import type { CaseStudyContentType } from "@bashkim-com/prismic";
 
 import PortfolioListBrick from "%components/PortfolioListBrick";
 

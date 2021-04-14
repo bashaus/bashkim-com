@@ -1,6 +1,6 @@
-import ImagePrismic from "@bashkim-com/prismic/types/image";
-import RichTextPrismic from "@bashkim-com/prismic/types/rich-text";
-import SlicePrismicType from "@bashkim-com/prismic/types/slice";
+import type ImagePrismic from "@bashkim-com/prismic/types/image";
+import type RichTextPrismic from "@bashkim-com/prismic/types/rich-text";
+import type SlicePrismicType from "@bashkim-com/prismic/types/slice";
 
 type CaptionedImageSliceType = SlicePrismicType & {
   items?: Array<unknown>;
