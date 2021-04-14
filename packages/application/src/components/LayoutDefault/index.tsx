@@ -1,6 +1,9 @@
+import { useEffect } from "react";
+
 import GoogleAnalytics from "%components/GoogleAnalytics";
 import CookiesNotice from "%components/CookiesNotice";
 import Page from "%components/Page";
+
 import CookiesProvider from "%contexts/Cookies/provider";
 import { NavigationProvider } from "%contexts/Navigation/provider";
 
@@ -15,17 +18,9 @@ const LayoutDefault = ({
   children,
   theme = "default",
 }: LayoutDefaultProps): JSX.Element => {
-  const handleDocumentReady = (): void => {
+  useEffect((): void => {
     document.documentElement.classList.add("ready");
-  };
-
-  if (typeof window !== typeof undefined) {
-    if (window.requestAnimationFrame) {
-      window.requestAnimationFrame(handleDocumentReady);
-    } else {
-      setTimeout(handleDocumentReady, 1);
-    }
-  }
+  }, []);
 
   return (
     <>

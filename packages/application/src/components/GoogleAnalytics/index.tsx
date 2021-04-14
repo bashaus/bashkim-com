@@ -1,21 +1,26 @@
+import { useMemo } from "react";
+
 import getConfig from "next/config";
 import Head from "next/head";
 
 const GoogleAnalytics = (): JSX.Element => {
   const { publicRuntimeConfig: config } = getConfig();
 
+  const GA_SCRIPT = useMemo(
+    () => ({
+      __html: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '${config.googleAnalytics.ua}');
+      `,
+    }),
+    [config.googleAnalytics.ua]
+  );
+
   if (!config.googleAnalytics.enabled) {
     return null;
   }
-
-  const GA_SCRIPT = {
-    __html: `
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', '${config.googleAnalytics.ua}');
-    `,
-  };
 
   return (
     <Head>

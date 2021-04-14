@@ -1,5 +1,5 @@
 import { RichText } from "prismic-reactjs";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { CaptionedMagazineSliceType } from "@bashkim-com/prismic";
 
 import DeferredAsset from "%components/DeferredAsset";
@@ -35,33 +35,39 @@ const CaptionedMagazineSlice = ({
   const pages = fields.length;
 
   /* handlers */
-  const handleImageDrag = (e: React.DragEvent<HTMLImageElement>): void => {
-    e.preventDefault();
-  };
+  const handleImageDrag = useCallback(
+    (event: React.DragEvent<HTMLImageElement>): void => event.preventDefault(),
+    []
+  );
 
-  const handleMagazineInitialize = (): void => {
-    setMagazineIsInitialized(true);
-  };
+  const handleMagazineInitialize = useCallback(
+    (): void => setMagazineIsInitialized(true),
+    []
+  );
 
-  const handleMagazineSpreadChange = (
-    event: MagazineSpreadChangeEvent
-  ): void => {
-    setSpread(event.spread);
-    setSpreads(event.spreads);
-    setPageNumbers(event.pageNumbers);
-  };
+  const handleMagazineSpreadChange = useCallback(
+    (event: MagazineSpreadChangeEvent): void => {
+      setSpread(event.spread);
+      setSpreads(event.spreads);
+      setPageNumbers(event.pageNumbers);
+    },
+    []
+  );
 
-  const handleSpreadChange = (e: React.FormEvent<HTMLInputElement>): void => {
-    setSpread(+e.currentTarget.value);
-  };
+  const handleSpreadChange = useCallback(
+    (event: React.FormEvent<HTMLInputElement>): void => {
+      setSpread(+event.currentTarget.value);
+    },
+    []
+  );
 
-  const handlePaginationBack = (): void => {
+  const handlePaginationBack = useCallback((): void => {
     setSpread(spread - 1);
-  };
+  }, [spread]);
 
-  const handlePaginationNext = (): void => {
+  const handlePaginationNext = useCallback((): void => {
     setSpread(spread + 1);
-  };
+  }, [spread]);
 
   const isFirstSpread = spread === 1;
   const isLastSpread = spread === spreads;

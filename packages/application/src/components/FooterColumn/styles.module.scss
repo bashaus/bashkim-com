@@ -23,7 +23,7 @@
       display: none;
     }
 
-    &.visible ul {
+    &[aria-expanded] ul {
       display: block;
     }
   }
@@ -86,7 +86,7 @@
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     }
 
-    &.visible .label::after {
+    &[aria-expanded] .label::after {
       content: "-";
     }
   }

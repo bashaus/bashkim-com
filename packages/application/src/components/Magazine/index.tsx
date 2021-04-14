@@ -53,14 +53,14 @@ const Magazine = ({
   const page = convertSpreadToPage(display, spread);
 
   /* handlers */
-  const handleWindowResize = (): void => {
+  const handleWindowResize = useCallback((): void => {
     const matched = RESPONSIVE.find((responsive) => responsive.media.matches);
     if (!matched) {
       return;
     }
 
     setDisplay(matched.display);
-  };
+  }, []);
 
   const handleSpreadChange = useCallback(
     (newSpread: number): void => {
@@ -88,11 +88,10 @@ const Magazine = ({
     [display, handleSpreadChange]
   );
 
-  const handleTurnInitialize = (): void => {
-    if (onInitialize) {
-      onInitialize();
-    }
-  };
+  const handleTurnInitialize = useCallback(
+    (): void => onInitialize && onInitialize(),
+    [onInitialize]
+  );
 
   /* effects */
   useEffect(() => {
@@ -103,14 +102,11 @@ const Magazine = ({
     return (): void => {
       window.removeEventListener("resize", handleWindowResize);
     };
-  }, []);
+  }, [handleWindowResize]);
 
-  useEffect(() => isInitialized && handleSpreadChange(spread), [
-    display,
-    spread,
-    handleSpreadChange,
-    isInitialized,
-  ]);
+  useEffect(() => {
+    isInitialized && handleSpreadChange(spread);
+  }, [display, spread, handleSpreadChange, isInitialized]);
 
   return (
     <Turn

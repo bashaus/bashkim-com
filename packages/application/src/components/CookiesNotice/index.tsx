@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useContext, useState } from "react";
+import { useCallback, useContext, useState } from "react";
 import AnimateHeight from "react-animate-height";
 
 import { CookiesActionsTypes } from "%contexts/Cookies/actions";
@@ -14,16 +14,16 @@ const CookiesNotice = (): JSX.Element | null => {
 
   const [isVisible, setIsVisible] = useState(!cookiesState.isDismissed);
 
-  const handleDismissClick = (): void => {
+  const handleDismissClick = useCallback((): void => {
     cookiesDispatch({ type: CookiesActionsTypes.DISMISS });
-  };
+  }, [cookiesDispatch]);
 
-  const handleAnimationEnd = (): void => {
+  const handleAnimationEnd = useCallback((): void => {
     setIsVisible(false);
-  };
+  }, []);
 
   if (!isVisible) {
-    return <div />;
+    return null;
   }
 
   return (

@@ -1,5 +1,5 @@
 import { RichText } from "prismic-reactjs";
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, useCallback, useState } from "react";
 import { CaptionedScreenshotsSliceType } from "@bashkim-com/prismic";
 
 import { DeviceMobileIcon, DeviceDesktopIcon } from "@primer/octicons-react";
@@ -42,9 +42,12 @@ const CaptionedScreenshotsSlice = ({
   const selectedImage =
     fields[selectedIndex].captioned_screenshots_slice_type_images;
 
-  const handleSizeChange = (e: ChangeEvent<HTMLInputElement>): void => {
-    setSelectedIndex(parseInt(e.currentTarget.value, 10));
-  };
+  const handleSizeChange = useCallback(
+    (event: ChangeEvent<HTMLInputElement>): void => {
+      setSelectedIndex(+event.currentTarget.value);
+    },
+    []
+  );
 
   return (
     <PartialCaptioned

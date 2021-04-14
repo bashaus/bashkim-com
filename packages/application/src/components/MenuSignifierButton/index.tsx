@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useCallback, useContext } from "react";
 
 import { NavigationContext } from "%contexts/Navigation/context";
 import { NavigationActionsTypes } from "%contexts/Navigation/actions";
@@ -10,9 +10,9 @@ const MenuSignifierButton = (): JSX.Element => {
     NavigationContext
   );
 
-  const handleSignifierClick = (): void => {
+  const handleSignifierClick = useCallback((): void => {
     navigationDispatch({ type: NavigationActionsTypes.MENU_TOGGLE });
-  };
+  }, [navigationDispatch]);
 
   return (
     <button

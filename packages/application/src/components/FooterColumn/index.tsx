@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 
 import styles from "./styles.module.scss";
 
@@ -16,16 +16,14 @@ const FooterColumn = ({
 }: FooterColumnProps): JSX.Element => {
   const [isVisible, setIsVisible] = useState(false);
 
-  const handleHeaderClick = (): void => {
+  const handleHeaderClick = useCallback((): void => {
     setIsVisible(!isVisible);
-  };
+  }, [isVisible]);
 
   return (
     <div
-      className={classNames(className, {
-        [styles.FooterColumn]: true,
-        [styles.visible]: isVisible,
-      })}
+      aria-expanded={isVisible}
+      className={classNames(className, styles.FooterColumn)}
     >
       <div
         role="menuitem"

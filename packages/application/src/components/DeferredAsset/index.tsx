@@ -1,5 +1,5 @@
 import { Properties as CSSProperties } from "csstype";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import VisibilitySensor from "react-visibility-sensor";
 
 import styles from "./styles.module.scss";
@@ -19,11 +19,14 @@ const DeferredAsset = ({
 }: DeferredAssetProps): JSX.Element => {
   const [isVisible, setIsVisible] = useState(false);
 
-  const handleVisibilityChange = (_isVisible: boolean): void => {
-    if (!isVisible && _isVisible) {
-      setIsVisible(true);
-    }
-  };
+  const handleVisibilityChange = useCallback(
+    (newVisible: boolean): void => {
+      if (!isVisible && newVisible) {
+        setIsVisible(true);
+      }
+    },
+    [isVisible]
+  );
 
   if (isVisible) {
     return children;

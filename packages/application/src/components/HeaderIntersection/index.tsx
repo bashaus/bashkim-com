@@ -53,21 +53,25 @@ const HeaderIntersection = (): JSX.Element => {
 
   /* SCROLL DIRECTION */
 
-  const handleScroll = debounce(
-    () => {
-      const { scrollTop } = document.documentElement;
+  const handleScroll = useCallback(() => {
+    debounce(
+      () => {
+        const { scrollTop } = document.documentElement;
 
-      navigationDispatch({
-        type: NavigationActionsTypes.SET_SCROLL_DIRECTION,
-        payload:
-          lastScrollTop < scrollTop ? ScrollDirection.UP : ScrollDirection.DOWN,
-      });
+        navigationDispatch({
+          type: NavigationActionsTypes.SET_SCROLL_DIRECTION,
+          payload:
+            lastScrollTop < scrollTop
+              ? ScrollDirection.UP
+              : ScrollDirection.DOWN,
+        });
 
-      lastScrollTop = scrollTop;
-    },
-    50,
-    { leading: true, trailing: true, maxWait: 200 }
-  );
+        lastScrollTop = scrollTop;
+      },
+      50,
+      { leading: true, trailing: true, maxWait: 200 }
+    );
+  }, [navigationDispatch]);
 
   useEffect(() => {
     document.addEventListener("scroll", handleScroll);

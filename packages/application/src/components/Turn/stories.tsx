@@ -18,11 +18,7 @@ export const Render = (): JSX.Element => {
   const pagesArray = new Array(pages).fill("").map((_value, index) => index);
 
   return (
-    <div
-      style={{
-        maxWidth: 800,
-      }}
-    >
+    <div style={{ maxWidth: 800 }}>
       <Turn
         center={center}
         display={display as Display}

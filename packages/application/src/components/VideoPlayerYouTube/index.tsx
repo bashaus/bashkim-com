@@ -1,5 +1,3 @@
-import QueryString from "querystring";
-
 import styles from "./styles.module.scss";
 
 type VideoPlayerYouTubeProps = {
@@ -7,26 +5,22 @@ type VideoPlayerYouTubeProps = {
   v: string;
 };
 
-const VideoPlayerYouTube = ({
-  title,
-  v,
-}: VideoPlayerYouTubeProps): JSX.Element => {
-  const iframeSrc = `https://www.youtube-nocookie.com/embed/${v}?${QueryString.stringify(
-    {
-      rel: "0",
-      hd: "1",
-      showinfo: "0",
-      showsearch: "0",
-      iv_load_policy: "3",
-      modestbranding: "1",
-      enablejsapi: "1",
-      playsinline: "0",
-    }
-  )}`;
+const VideoPlayerYouTube = (props: VideoPlayerYouTubeProps): JSX.Element => {
+  const { title, v } = props;
+
+  const src = new URL(`https://www.youtube-nocookie.com/embed/${v}`);
+  src.searchParams.append("rel", "0");
+  src.searchParams.append("hd", "1");
+  src.searchParams.append("showinfo", "0");
+  src.searchParams.append("showsearch", "0");
+  src.searchParams.append("iv_load_policy", "3");
+  src.searchParams.append("modestbranding", "1");
+  src.searchParams.append("enablejsapi", "1");
+  src.searchParams.append("playsinline", "0");
 
   return (
     <div className={styles.VideoPlayerYouTube}>
-      <iframe allowFullScreen src={iframeSrc} title={title} frameBorder={0} />
+      <iframe allowFullScreen src={src.href} title={title} frameBorder={0} />
     </div>
   );
 };
