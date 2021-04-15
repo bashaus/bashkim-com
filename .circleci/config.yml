@@ -181,9 +181,12 @@ workflows:
             branches:
               only:
                 - master
-                - develop
 
       - synchronize:
           context: bashkim-com-prod
           requires:
-            - deploy
+            - test
+          filters:
+            branches:
+              only:
+                - master
