@@ -19,6 +19,13 @@
         "thumbnails": [],
         "label": "Image"
       }
+    },
+    "captioned_image_slice_type_image_blurhash": {
+      "type": "Text",
+      "config": {
+        "label": "BlurHash",
+        "placeholder": "Blur hash for this image preload"
+      }
     }
   },
   "repeat": {}

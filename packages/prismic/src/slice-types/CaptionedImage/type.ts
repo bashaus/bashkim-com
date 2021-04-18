@@ -17,5 +17,6 @@ export type CaptionedImageSliceType = PrismicSliceType & {
       | PrismicRichTextElement.LIST_ITEM
       | PrismicRichTextElement.O_LIST_ITEM
     > | null;
+    captioned_image_slice_type_image_blurhash: string | null;
   } | null;
 };

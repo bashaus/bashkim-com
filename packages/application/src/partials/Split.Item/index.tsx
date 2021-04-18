@@ -1,4 +1,4 @@
-import { Properties as CSSProperties } from "csstype";
+import { CSSProperties } from "react";
 
 import styles from "./style.module.scss";
 

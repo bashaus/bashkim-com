@@ -1,0 +1,28 @@
+@import "~%styleguide/utils/colors";
+
+.Asset {
+  width: 100%;
+  display: block;
+  background-color: $color-shade-border;
+}
+
+.fadeEnter {
+  opacity: 0;
+}
+
+.fadeExit {
+  opacity: 1;
+}
+
+.fadeEnterActive {
+  opacity: 1;
+}
+
+.fadeExitActive {
+  opacity: 0;
+}
+
+.fadeEnterActive,
+.fadeExitActive {
+  transition: opacity 500ms;
+}

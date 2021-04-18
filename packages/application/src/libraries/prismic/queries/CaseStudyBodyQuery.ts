@@ -44,6 +44,7 @@ export const CaseStudyBodyQuery = gql`
               primary {
                 captioned_image_slice_type_caption
                 captioned_image_slice_type_image
+                captioned_image_slice_type_image_blurhash
               }
             }
             ... on Case_studyBodyCaptionedvideoslicetype {
