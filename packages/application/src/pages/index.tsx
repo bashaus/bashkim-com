@@ -90,8 +90,11 @@ const HomePage = ({ homePage }: HomePageProps): JSX.Element => {
                   <p>{caseStudy.meta_description}</p>
                   <CallToAction>
                     <Link
-                      href="/portfolio/[caseStudySlug]"
-                      as={LinkResolver(caseStudy)}
+                      href="/portfolio/[caseStudySlug]/"
+                      as={LinkResolver({
+                        type: "case_study",
+                        uid: caseStudy._meta.uid,
+                      })}
                     >
                       <a>
                         <span>Read case study</span>

@@ -13,6 +13,7 @@ export const HomePageQuery = gql`
               ... on Case_study {
                 _meta {
                   id
+                  uid
                 }
                 meta_title
                 meta_description
