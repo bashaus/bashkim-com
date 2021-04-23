@@ -1,9 +1,11 @@
 import classNames from "classnames";
 import { Link } from "prismic-reactjs";
-import dayjs from "dayjs";
 
 import type { AccoladeSliceType } from "@bashkim-com/prismic";
 
+import { FormattedDate } from "%components/FormattedDate";
+
+import { PrismicDate } from "%prismic/helpers/Date";
 import { PrismicLinkResolver } from "%prismic/helpers/Link";
 import { PrismicRichText } from "%prismic/helpers/RichText";
 
@@ -28,7 +30,9 @@ const AccoladeSlice = ({ slice }: AccoladeSliceProps): JSX.Element => {
         <PrismicRichText render={issuer} />
         <PrismicRichText render={description} />
         <p>
-          <small>{dayjs(date).format("MMMM YYYY")}</small>
+          <small>
+            <FormattedDate date={PrismicDate(date)} />
+          </small>
         </p>
       </div>
 

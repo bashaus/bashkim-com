@@ -1,7 +1,8 @@
-import dayjs from "dayjs";
+import { FormattedDate } from "%components/FormattedDate";
+import { PrismicDate } from "%prismic/helpers/Date";
 
 type CaseStudyLifespanProps = {
-  launched?: string;
+  launched: string;
   decommissioned?: string;
 };
 
@@ -9,26 +10,30 @@ const CaseStudyLifespan = ({
   launched,
   decommissioned,
 }: CaseStudyLifespanProps): JSX.Element => {
-  const formattedLaunched = dayjs(launched).format("DD MMMM YYYY");
+  const formattedLaunched = <FormattedDate date={PrismicDate(launched)} />;
 
   // If there is no decommissioned date, this is an on-going project
-  if (decommissioned === null) {
-    return <>{formattedLaunched}</>;
+  if (!decommissioned) {
+    return formattedLaunched;
   }
 
   // If launch/decommission date match, this was an event
   if (launched === decommissioned) {
-    return <>{formattedLaunched}</>;
+    return formattedLaunched;
   }
 
   // There is a launch and decommission date
-  const formattedDecommissioned = dayjs(decommissioned).format("DD MMMM YYYY");
+  const formattedDecommissioned = (
+    <FormattedDate date={PrismicDate(decommissioned)} />
+  );
 
   return (
     <>
-      {`Launch: ${formattedLaunched}`}
+      {`Launch: `}
+      {formattedLaunched}
       <br />
-      {`Retired: ${formattedDecommissioned}`}
+      {`Retired: `}
+      {formattedDecommissioned}
     </>
   );
 };
