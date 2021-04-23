@@ -1,7 +1,7 @@
 import * as Sentry from "@sentry/browser";
 import type { LinkResolver } from "prismic-reactjs";
 
-const PrismicLinkResolver: LinkResolver = (doc) => {
+export const PrismicLinkResolver: LinkResolver = (doc) => {
   switch (doc.type) {
     case "case_study": {
       return `/portfolio/${doc.uid}/`;
@@ -16,5 +16,3 @@ const PrismicLinkResolver: LinkResolver = (doc) => {
 
   return "/";
 };
-
-export default PrismicLinkResolver;

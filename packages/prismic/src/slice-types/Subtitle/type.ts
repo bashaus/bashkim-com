@@ -1,16 +1,10 @@
+import type { RichTextBlock } from "prismic-reactjs";
+
 import type { PrismicSliceType } from "@bashkim-com/prismic/types/Slice";
-import type {
-  PrismicRichTextType,
-  PrismicRichTextElement,
-} from "@bashkim-com/prismic/types/RichText";
 
 export type SubtitleSliceType = PrismicSliceType & {
   primary: {
-    subtitle_slice_type_heading: PrismicRichTextType<
-      PrismicRichTextElement.HEADING2
-    > | null;
-    subtitle_slice_type_description: PrismicRichTextType<
-      PrismicRichTextElement.PARAGRAPH
-    > | null;
+    subtitle_slice_type_heading: Array<RichTextBlock> | null;
+    subtitle_slice_type_description: Array<RichTextBlock> | null;
   } | null;
 };

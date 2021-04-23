@@ -1,9 +1,9 @@
-import { RichText } from "prismic-reactjs";
 import type { CaptionedImageSliceType } from "@bashkim-com/prismic";
 
 import PartialCaptioned from "%partials/Captioned";
 import DeferredImage from "%components/DeferredImage";
-import LinkResolver from "%prismic/LinkResolver";
+
+import { PrismicRichText } from "%prismic/helpers/RichText";
 
 export type CaptionedImageSliceProps = {
   slice: CaptionedImageSliceType;
@@ -33,7 +33,7 @@ const CaptionedImageSlice = ({
         )
       }
     >
-      {caption && RichText.render(caption, LinkResolver)}
+      <PrismicRichText render={caption} />
     </PartialCaptioned>
   );
 };

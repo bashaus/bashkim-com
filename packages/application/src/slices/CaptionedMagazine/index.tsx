@@ -1,11 +1,11 @@
-import { RichText } from "prismic-reactjs";
 import { useCallback, useState } from "react";
 import type { CaptionedMagazineSliceType } from "@bashkim-com/prismic";
 
 import DeferredAsset from "%components/DeferredAsset";
 import Magazine, { MagazineSpreadChangeEvent } from "%components/Magazine";
 import PartialCaptioned from "%partials/Captioned";
-import LinkResolver from "%prismic/LinkResolver";
+
+import { PrismicRichText } from "%prismic/helpers/RichText";
 
 import styles from "./styles.module.scss";
 
@@ -106,7 +106,7 @@ const CaptionedMagazineSlice = ({
         </DeferredAsset>
       }
     >
-      {caption && RichText.render(caption, LinkResolver)}
+      <PrismicRichText render={caption} />
       {magazineIsInitialized && (
         <div className={styles.slider}>
           <button

@@ -1,9 +1,8 @@
 import classNames from "classnames";
-import { RichText } from "prismic-reactjs";
 import type { GridVideoSliceType } from "@bashkim-com/prismic";
 
 import DeferredAsset from "%components/DeferredAsset";
-import LinkResolver from "%prismic/LinkResolver";
+import { PrismicRichText } from "%prismic/helpers/RichText";
 
 import styles from "./styles.module.scss";
 
@@ -35,7 +34,7 @@ const GridVideoSlice = ({ slice }: GridVideoSliceProps): JSX.Element => (
               <img src={poster.url} alt={video.title} />
             </DeferredAsset>
             <div className={styles.description}>
-              {description && RichText.render(description, LinkResolver)}
+              <PrismicRichText render={description} />
             </div>
           </a>
         </li>

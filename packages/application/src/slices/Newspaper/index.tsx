@@ -1,9 +1,8 @@
-import { RichText } from "prismic-reactjs";
 import type { NewspaperSliceType } from "@bashkim-com/prismic";
 
 import PartialNewspaper from "%partials/Newspaper";
 
-import LinkResolver from "%prismic/LinkResolver";
+import { PrismicRichText } from "%prismic/helpers/RichText";
 
 export type NewspaperSliceProps = {
   slice: NewspaperSliceType;
@@ -13,7 +12,11 @@ const NewspaperSlice = ({ slice }: NewspaperSliceProps): JSX.Element => (
   <PartialNewspaper>
     {slice.fields.map((field, i) => {
       const { newspaper_slice_type_group: group } = field;
-      return <div key={i}>{group && RichText.render(group, LinkResolver)}</div>;
+      return (
+        <div key={i}>
+          <PrismicRichText render={group} />
+        </div>
+      );
     })}
   </PartialNewspaper>
 );

@@ -1,11 +1,11 @@
-import { RichText } from "prismic-reactjs";
 import { ChangeEvent, useCallback, useState } from "react";
 import type { CaptionedScreenshotsSliceType } from "@bashkim-com/prismic";
 
 import { DeviceMobileIcon, DeviceDesktopIcon } from "@primer/octicons-react";
 import DeferredAsset from "%components/DeferredAsset";
 import PartialCaptioned from "%partials/Captioned";
-import LinkResolver from "%prismic/LinkResolver";
+
+import { PrismicRichText } from "%prismic/helpers/RichText";
 
 import styles from "./styles.module.scss";
 
@@ -65,7 +65,7 @@ const CaptionedScreenshotsSlice = ({
         </DeferredAsset>
       }
     >
-      {caption && RichText.render(caption, LinkResolver)}
+      <PrismicRichText render={caption} />
 
       <div className={styles.slider}>
         <span className={styles.iconMobile}>

@@ -1,9 +1,8 @@
-import { RichText } from "prismic-reactjs";
 import type { SubtitleSliceType } from "@bashkim-com/prismic";
 
 import PartialSubtitle from "%partials/Subtitle";
 
-import LinkResolver from "%prismic/LinkResolver";
+import { PrismicRichText } from "%prismic/helpers/RichText";
 
 export type SubtitleSliceProps = {
   slice: SubtitleSliceType;
@@ -17,8 +16,8 @@ const SubtitleSlice = ({ slice }: SubtitleSliceProps): JSX.Element => {
 
   return (
     <PartialSubtitle>
-      {heading && RichText.render(heading, LinkResolver)}
-      {description && RichText.render(description, LinkResolver)}
+      <PrismicRichText render={heading} />
+      <PrismicRichText render={description} />
     </PartialSubtitle>
   );
 };

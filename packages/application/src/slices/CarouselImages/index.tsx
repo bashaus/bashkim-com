@@ -1,10 +1,10 @@
-import { RichText } from "prismic-reactjs";
 import type { CarouselImagesSliceType } from "@bashkim-com/prismic";
 
 import PartialFullImage from "%partials/FullImage";
 import Carousel from "%components/Carousel";
 import CarouselImage from "%components/CarouselImage";
-import LinkResolver from "%prismic/LinkResolver";
+
+import { PrismicRichText } from "%prismic/helpers/RichText";
 
 export type CarouselImagesSliceProps = {
   slice: CarouselImagesSliceType;
@@ -33,7 +33,7 @@ const CarouselImagesSlice = ({
               />
             }
           >
-            {caption && RichText.render(caption, LinkResolver)}
+            <PrismicRichText render={caption} />
           </CarouselImage>
         );
       })}

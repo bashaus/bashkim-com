@@ -1,4 +1,3 @@
-import { RichText } from "prismic-reactjs";
 import type { CarouselPhonesSliceType } from "@bashkim-com/prismic";
 
 import Carousel from "%components/Carousel";
@@ -7,7 +6,8 @@ import DeferredAsset from "%components/DeferredAsset";
 import DeviceSmartphone from "%components/DeviceSmartphone";
 import DeviceFeaturePhone from "%components/DeviceFeaturePhone";
 import PartialFullImage from "%partials/FullImage";
-import LinkResolver from "%prismic/LinkResolver";
+
+import { PrismicRichText } from "%prismic/helpers/RichText";
 
 const CAROUSEL_RESPONSIVE = [
   {
@@ -66,7 +66,7 @@ const CarouselPhonesSlice = ({
                   </DeferredAsset>
                 }
               >
-                {caption && RichText.render(caption, LinkResolver)}
+                <PrismicRichText render={caption} />
               </DeviceComponent>
             }
           />

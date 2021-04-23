@@ -1,7 +1,7 @@
 import { Link } from "prismic-reactjs";
 import type { CollaboratorSliceType } from "@bashkim-com/prismic";
 
-import LinkResolver from "%prismic/LinkResolver";
+import { PrismicLinkResolver } from "%prismic/helpers/Link";
 
 type CollaboratorSliceProps = {
   slice: CollaboratorSliceType;
@@ -14,7 +14,7 @@ const CollaboratorSlice = ({ slice }: CollaboratorSliceProps): JSX.Element => {
     collaborator_slice_type_peer: { peer_name: name, peer_website: website },
   } = slice.primary;
 
-  const url = Link.url(website, LinkResolver);
+  const url = Link.url(website, PrismicLinkResolver);
 
   return (
     <li>

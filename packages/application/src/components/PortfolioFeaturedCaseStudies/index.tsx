@@ -1,10 +1,9 @@
 import Link from "next/link";
-import { RichText } from "prismic-reactjs";
 import type { PortfolioPageContentTypePageTabFeatured } from "@bashkim-com/prismic";
 
 import Tile from "%components/Tile";
 
-import LinkResolver from "%prismic/LinkResolver";
+import { PrismicRichText } from "%prismic/helpers/RichText";
 
 import styles from "./styles.module.scss";
 
@@ -26,8 +25,8 @@ const PortfolioFeaturedCaseStudies = ({
       return (
         <li className={styles.item} key={caseStudy._meta.id}>
           <div className={styles.details}>
-            {title && RichText.render(title, LinkResolver)}
-            {description && RichText.render(description, LinkResolver)}
+            <PrismicRichText render={title} />
+            <PrismicRichText render={description} />
           </div>
 
           <Link

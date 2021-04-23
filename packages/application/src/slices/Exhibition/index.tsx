@@ -1,8 +1,8 @@
-import { RichText } from "prismic-reactjs";
 import type { ExhibitionSliceType } from "@bashkim-com/prismic";
 
 import CaseStudyLifespan from "%components/CaseStudyLifespan/index";
-import LinkResolver from "%prismic/LinkResolver";
+
+import { PrismicRichText } from "%prismic/helpers/RichText";
 
 type ExhibitionSliceProps = {
   slice: ExhibitionSliceType;
@@ -19,8 +19,8 @@ const ExhibitionSlice = ({ slice }: ExhibitionSliceProps): JSX.Element => {
 
   return (
     <li>
-      {name && RichText.render(name, LinkResolver)}
-      {location && RichText.render(location, LinkResolver)}
+      <PrismicRichText render={name} />
+      <PrismicRichText render={location} />
       <CaseStudyLifespan launched={openingDate} decommissioned={closingDate} />
     </li>
   );

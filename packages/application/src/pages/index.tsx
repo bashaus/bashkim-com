@@ -16,7 +16,7 @@ import PartialFullBanner from "%partials/FullBanner";
 import PartialSplit from "%partials/Split";
 import PartialSubtitle from "%partials/Subtitle";
 
-import LinkResolver from "%prismic/LinkResolver";
+import { PrismicLinkResolver } from "%prismic/helpers/Link";
 import { HomePageQuery } from "%prismic/queries/HomePageQuery";
 
 type HomePageProps = {
@@ -91,7 +91,7 @@ const HomePage = ({ homePage }: HomePageProps): JSX.Element => {
                   <CallToAction>
                     <Link
                       href="/portfolio/[caseStudySlug]/"
-                      as={LinkResolver({
+                      as={PrismicLinkResolver({
                         type: "case_study",
                         uid: caseStudy._meta.uid,
                       })}

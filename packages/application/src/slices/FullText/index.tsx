@@ -1,7 +1,6 @@
-import { RichText } from "prismic-reactjs";
 import type { FullTextSliceType } from "@bashkim-com/prismic";
 
-import LinkResolver from "%prismic/LinkResolver";
+import { PrismicRichText } from "%prismic/helpers/RichText";
 
 import PartialFullText from "%partials/FullText";
 
@@ -14,7 +13,7 @@ const FullTextSlice = ({ slice }: FullTextSliceProps): JSX.Element => {
 
   return (
     <PartialFullText>
-      {body && RichText.render(body, LinkResolver)}
+      <PrismicRichText render={body} />
     </PartialFullText>
   );
 };

@@ -9,7 +9,9 @@
     "module": "esnext",
     "isolatedModules": true,
     "baseUrl": "./src",
+    "typeRoots": ["./types"],
     "paths": {
+      "@bashkim-com/prismic/*": ["../../prismic/build"],
       "%components/*": ["./components/*"],
       "%contexts/*": ["./contexts/*"],
       "%libraries/*": ["./libraries/*"],

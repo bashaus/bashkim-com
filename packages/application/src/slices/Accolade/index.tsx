@@ -1,10 +1,11 @@
 import classNames from "classnames";
-import { RichText, Link } from "prismic-reactjs";
+import { Link } from "prismic-reactjs";
 import dayjs from "dayjs";
 
 import type { AccoladeSliceType } from "@bashkim-com/prismic";
 
-import LinkResolver from "%prismic/LinkResolver";
+import { PrismicLinkResolver } from "%prismic/helpers/Link";
+import { PrismicRichText } from "%prismic/helpers/RichText";
 
 import IconTrophy from "%public/static/vectors/icons/trophy.svg";
 
@@ -24,8 +25,8 @@ const AccoladeSlice = ({ slice }: AccoladeSliceProps): JSX.Element => {
   return (
     <div className={styles.AccoladeSlice}>
       <div className={styles.accoladeDetails}>
-        {issuer && RichText.render(issuer, LinkResolver)}
-        {description && RichText.render(description, LinkResolver)}
+        <PrismicRichText render={issuer} />
+        <PrismicRichText render={description} />
         <p>
           <small>{dayjs(date).format("MMMM YYYY")}</small>
         </p>
@@ -39,7 +40,7 @@ const AccoladeSlice = ({ slice }: AccoladeSliceProps): JSX.Element => {
             accolade_slice_type_award_category: awardCategory,
           } = field;
 
-          const awardHref = Link.url(awardLink, LinkResolver);
+          const awardHref = Link.url(awardLink, PrismicLinkResolver);
 
           return (
             <li className={styles.award} key={i}>
@@ -48,7 +49,7 @@ const AccoladeSlice = ({ slice }: AccoladeSliceProps): JSX.Element => {
                 <svg className={classNames(styles.trophy, styles[awardPlace])}>
                   <IconTrophy />
                 </svg>
-                {awardCategory && RichText.render(awardCategory, LinkResolver)}
+                <PrismicRichText render={awardCategory} />
               </a>
             </li>
           );

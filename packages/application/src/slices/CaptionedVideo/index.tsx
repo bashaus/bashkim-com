@@ -1,10 +1,10 @@
-import { RichText } from "prismic-reactjs";
 import type { CaptionedVideoSliceType } from "@bashkim-com/prismic";
 
 import DeferredAsset from "%components/DeferredAsset";
 import PartialCaptioned from "%partials/Captioned";
 import VideoPlayerYouTube from "%components/VideoPlayerYouTube";
-import LinkResolver from "%prismic/LinkResolver";
+
+import { PrismicRichText } from "%prismic/helpers/RichText";
 
 export type CaptionedVideoSliceProps = {
   slice: CaptionedVideoSliceType;
@@ -37,7 +37,7 @@ const CaptionedVideoSlice = ({
         </DeferredAsset>
       }
     >
-      {caption && RichText.render(caption, LinkResolver)}
+      <PrismicRichText render={caption} />
     </PartialCaptioned>
   );
 };
