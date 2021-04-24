@@ -1,4 +1,4 @@
-import { GoogleAnalyticsConfig } from "@bashkim-com/config/types/googleAnalytics";
+import { GoogleAnalyticsConfig } from "types/googleAnalytics";
 
 const localGoogleAnalytics: Partial<GoogleAnalyticsConfig> = {
   enabled: false,

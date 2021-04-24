@@ -1,5 +1,5 @@
 import dayjs from "dayjs";
-import config from "@bashkim-com/config";
+import { config } from "@bashkim-com/config";
 import PrismicClient from "@bashkim-com/prismic";
 
 import {

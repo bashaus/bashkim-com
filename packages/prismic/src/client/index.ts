@@ -1,7 +1,7 @@
 import { ApolloClient, InMemoryCache } from "@apollo/client";
 import { PrismicLink } from "apollo-link-prismic";
 
-import config from "@bashkim-com/config";
+import { config } from "@bashkim-com/config";
 
 const client = new ApolloClient({
   link: PrismicLink({

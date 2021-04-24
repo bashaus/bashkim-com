@@ -1,4 +1,4 @@
-import { SentryConfig } from "@bashkim-com/config/types/sentry";
+import { SentryConfig } from "types/sentry";
 
 const localSentry: Partial<SentryConfig> = {
   enabled: false,

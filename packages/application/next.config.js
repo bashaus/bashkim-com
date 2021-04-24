@@ -1,4 +1,4 @@
-const { default: publicRuntimeConfig } = require("@bashkim-com/config");
+const { config: publicRuntimeConfig } = require("@bashkim-com/config");
 const path = require("path");
 const webpack = require("webpack");
 

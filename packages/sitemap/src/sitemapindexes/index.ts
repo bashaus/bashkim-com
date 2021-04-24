@@ -1,4 +1,4 @@
-import config from "@bashkim-com/config";
+import { config } from "@bashkim-com/config";
 import { SitemapType } from "../templates/sitemapindex";
 
 export const SitemapIndex = async (): Promise<Array<SitemapType>> => {

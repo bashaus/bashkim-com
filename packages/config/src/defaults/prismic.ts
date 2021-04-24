@@ -1,4 +1,4 @@
-import type { PrismicConfig } from "@bashkim-com/config/types/prismic";
+import type { PrismicConfig } from "types/prismic";
 
 const defaultPrismicConfig: PrismicConfig = {
   uri: "https://bashkim-com.prismic.io/graphql",

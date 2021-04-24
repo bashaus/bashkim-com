@@ -1,13 +1,14 @@
 {
   "name": "@bashkim-com/config",
-  "private": true,
   "version": "1.0.0",
+  "private": true,
   "main": "./build/index.js",
+  "module": "./build/index.es.js",
   "typings": "./build/index.d.ts",
   "scripts": {
-    "build": "tsc",
-    "clean": "rm -rf build/",
     "prebuild": "yarn clean",
+    "build": "rollup -c",
+    "clean": "rm -rf build/",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
   "dependencies": {
@@ -15,7 +16,12 @@
     "lodash.defaultsdeep": "^4.6.1"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^18.0.0",
+    "@rollup/plugin-node-resolve": "^11.2.1",
     "@types/lodash.defaultsdeep": "^4.6.6",
+    "rollup": "^2.45.2",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-typescript2": "^0.30.0",
     "typescript": "^4.2.4",
     "utility-types": "^3.10.0"
   }

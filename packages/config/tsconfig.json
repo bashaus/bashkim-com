@@ -2,11 +2,11 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "declaration": true,
-    "rootDir": "./src",
+    "declarationDir": "build",
+
     "outDir": "./build",
-    "baseUrl": "../",
-    "paths": {
-      "@bashkim-com/config/*": ["config/src/*"]
-    }
+
+    "rootDir": "./src",
+    "baseUrl": "./src"
   }
 }

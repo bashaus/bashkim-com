@@ -1,4 +1,4 @@
-import { SitemapConfig } from "@bashkim-com/config/types/sitemap";
+import { SitemapConfig } from "types/sitemap";
 
 const localSitemap: Partial<SitemapConfig> = {
   baseHref: "http://localhost:3000",

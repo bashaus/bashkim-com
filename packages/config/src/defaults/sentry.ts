@@ -1,4 +1,4 @@
-import type { SentryConfig } from "@bashkim-com/config/types/sentry";
+import type { SentryConfig } from "types/sentry";
 
 const defaultSentryConfig: SentryConfig = {
   enabled: true,

@@ -1,4 +1,4 @@
-import { NextConfig } from "@bashkim-com/config/types/next";
+import { NextConfig } from "types/next";
 
 const localNext: Partial<NextConfig> = {
   dev: true,

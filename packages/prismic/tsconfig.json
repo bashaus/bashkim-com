@@ -6,7 +6,7 @@
     "baseUrl": "../",
     "typeRoots": ["./types"],
     "paths": {
-      "@bashkim-com/config/*": ["config/src/*"],
+      "@bashkim-com/config/*": ["config/build/*"],
       "@bashkim-com/prismic/*": ["prismic/src/*"]
     }
   }
