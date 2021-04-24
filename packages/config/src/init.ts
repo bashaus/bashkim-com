@@ -1,2 +1,2 @@
 import { config as dotenv } from "dotenv";
-dotenv();
+dotenv({ path: `${__dirname}/../../../.env` });

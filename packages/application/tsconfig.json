@@ -2,15 +2,12 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "allowJs": true,
-    "skipLibCheck": true,
-    "strict": false,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-    "isolatedModules": true,
     "baseUrl": "./src",
-    "typeRoots": ["./types"],
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "noEmit": true,
     "paths": {
-      "@bashkim-com/prismic/*": ["../../prismic/build"],
       "%components/*": ["./components/*"],
       "%contexts/*": ["./contexts/*"],
       "%libraries/*": ["./libraries/*"],
@@ -21,8 +18,10 @@
       "%storybook/*": ["../.storybook/*"],
       "%styleguide/*": ["./styleguide/*"]
     },
-    "jsx": "preserve"
+    "skipLibCheck": true,
+    "strict": false,
+    "typeRoots": ["./types"],
   },
   "exclude": ["node_modules"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
 }

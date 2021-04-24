@@ -12,8 +12,8 @@
     "test": "echo \"Error: no test specified\" && exit 0"
   },
   "dependencies": {
-    "dotenv": "^8.2.0",
-    "lodash.defaultsdeep": "^4.6.1"
+    "defaults-deep-ts": "^0.2.1",
+    "dotenv": "^8.2.0"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^18.0.0",
