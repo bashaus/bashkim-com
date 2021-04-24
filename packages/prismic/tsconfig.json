@@ -1,13 +1,15 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "baseUrl": "../",
+    "baseUrl": "./src",
     "declaration": true,
+    "declarationDir": "./build",
     "outDir": "./build",
     "paths": {
-      "@bashkim-com/config/*": ["config/build/*"],
-      "@bashkim-com/prismic/*": ["prismic/src/*"]
+      "@bashkim-com/config/*": ["../../config/build/*"],
+      "@bashkim-com/prismic/*": ["../../prismic/src/*"]
     },
+    "rootDir": "./src",
     "typeRoots": ["./types"],
   }
 }
