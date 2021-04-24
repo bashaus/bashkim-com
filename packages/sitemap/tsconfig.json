@@ -4,7 +4,6 @@
     "baseUrl": "./src",
     "outDir": "./build",
     "paths": {
-      "@bashkim-com/config/*": ["../../config/build/*"],
       "@bashkim-com/prismic/*": ["../../prismic/build/*"]
     },
     "rootDir": "./src",
