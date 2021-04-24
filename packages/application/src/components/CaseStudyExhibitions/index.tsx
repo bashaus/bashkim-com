@@ -1,4 +1,4 @@
-import { ExhibitionSliceType } from "@bashkim-com/prismic";
+import type { ExhibitionSliceType } from "@bashkim-com/prismic";
 
 import { PartialSubtitle } from "%partials/Subtitle/index";
 import { ExhibitionSlice } from "%slices/Exhibition";
