@@ -53,7 +53,6 @@ provider:
     APP_WEBHOOKS_CIRCLE_PROJECT_SLUG: ${env:APP_WEBHOOKS_CIRCLE_PROJECT_SLUG}
     APP_WEBHOOKS_PRISMIC_SECRET_KEY: ${env:APP_WEBHOOKS_PRISMIC_SECRET_KEY}
     GIT_COMMIT: ${self:custom.website.commitHash}
-    LAMBDA_ENV: true
     NODE_ENV: ${self:custom.stage}
     SENTRY_DSN: ${self:custom.sentry.dsn}
 

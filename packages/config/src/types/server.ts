@@ -8,9 +8,4 @@ export type ServerConfig = {
    * The port to bind
    */
   port: number;
-
-  /**
-   * Whether or not the server is running on AWS Lambda
-   */
-  lambda: boolean;
 };
