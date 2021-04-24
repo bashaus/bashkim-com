@@ -1,5 +1,5 @@
-import { PrismicDateTime } from "../types/DateTime";
-import { PrismicRelatedDocument } from "../types/RelatedDocument";
+import { PrismicDateTimeType } from "../types/DateTime";
+import { PrismicRelatedDocumentType } from "../types/RelatedDocument";
 
 export type PrismicContentType = {
   _meta: {
@@ -31,18 +31,18 @@ export type PrismicContentType = {
     /**
      * Alternate languages the document.
      */
-    alternateLanguages: Array<PrismicRelatedDocument>;
+    alternateLanguages: Array<PrismicRelatedDocumentType>;
 
     /**
      * The first publication date of the document.
      * @type DateTime
      */
-    firstPublicationDate: PrismicDateTime | null;
+    firstPublicationDate: PrismicDateTimeType | null;
 
     /**
      * The last publication date of the document.
      * @type DateTime
      */
-    lastPublicationDate: PrismicDateTime | null;
+    lastPublicationDate: PrismicDateTimeType | null;
   };
 };

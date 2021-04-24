@@ -1,6 +1,6 @@
 import type { RichTextBlock } from "prismic-reactjs";
 
-import type { PrismicDate } from "@bashkim-com/prismic/types/Date";
+import type { PrismicDateType } from "@bashkim-com/prismic/types/Date";
 import type { PrismicLinkType } from "@bashkim-com/prismic/types/Link";
 import type { PrismicSliceType } from "@bashkim-com/prismic/types/Slice";
 
@@ -16,7 +16,7 @@ export type AccoladeSliceType = PrismicSliceType & {
   primary: {
     accolade_slice_type_issuer: Array<RichTextBlock> | null;
     accolade_slice_type_description: Array<RichTextBlock> | null;
-    accolade_slice_type_date: PrismicDate | null;
+    accolade_slice_type_date: PrismicDateType | null;
   } | null;
   fields: Array<{
     accolade_slice_type_award_place: AccoladeSliceTypeAwardPlace | null;

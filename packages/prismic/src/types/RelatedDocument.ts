@@ -1,4 +1,4 @@
-export type PrismicRelatedDocument = {
+export type PrismicRelatedDocumentType = {
   /**
    * The id of the document.
    */

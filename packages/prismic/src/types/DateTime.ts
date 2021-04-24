@@ -1,1 +1,1 @@
-export type PrismicDateTime = string;
+export type PrismicDateTimeType = string;
