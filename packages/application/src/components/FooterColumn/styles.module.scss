@@ -23,7 +23,7 @@
       display: none;
     }
 
-    &[aria-expanded] ul {
+    &[aria-expanded="true"] ul {
       display: block;
     }
   }
@@ -75,19 +75,20 @@
 
     /* Expand/collapse icon */
     .label::after {
-      content: "+";
+      content: "▽";
       position: absolute;
       top: 50%;
       right: 1em;
+      width: 1.5em;
       height: 3em;
+      text-align: center;
       transform: translateY(-50%);
-      text-align: right;
       line-height: 3em;
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     }
 
-    &[aria-expanded] .label::after {
-      content: "-";
+    &[aria-expanded="true"] .label::after {
+      transform: translateY(-50%) rotate(180deg);
     }
   }
 
