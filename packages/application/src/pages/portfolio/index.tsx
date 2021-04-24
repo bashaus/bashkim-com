@@ -1,7 +1,7 @@
 import { DeepPartial } from "utility-types";
 import { GetStaticProps } from "next";
 
-import PrismicClient from "@bashkim-com/prismic";
+import { PrismicClient } from "@bashkim-com/prismic";
 import type {
   CaseStudyContentType,
   PortfolioPageContentType,

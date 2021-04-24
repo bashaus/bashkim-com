@@ -1,6 +1,6 @@
 import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from "next";
 
-import PrismicClient from "@bashkim-com/prismic";
+import { PrismicClient } from "@bashkim-com/prismic";
 import type { CaseStudyContentType } from "@bashkim-com/prismic";
 
 import CaseStudyAccolades from "%components/CaseStudyAccolades";

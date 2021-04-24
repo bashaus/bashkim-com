@@ -1,6 +1,6 @@
 import dayjs from "dayjs";
 import { config } from "@bashkim-com/config";
-import PrismicClient from "@bashkim-com/prismic";
+import { PrismicClient } from "@bashkim-com/prismic";
 
 import {
   CaseStudiesQuery,

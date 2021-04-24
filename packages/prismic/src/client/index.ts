@@ -3,11 +3,9 @@ import { PrismicLink } from "apollo-link-prismic";
 
 import { config } from "@bashkim-com/config";
 
-const client = new ApolloClient({
+export const PrismicClient = new ApolloClient({
   link: PrismicLink({
     uri: config.prismic.uri,
   }),
   cache: new InMemoryCache(),
 });
-
-export default client;
