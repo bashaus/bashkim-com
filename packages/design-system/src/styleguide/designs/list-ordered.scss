@@ -1,0 +1,9 @@
+@import "./list.scss";
+
+%list-ordered {
+  @extend %list;
+
+  li::before {
+    content: counter(li) ".";
+  }
+}

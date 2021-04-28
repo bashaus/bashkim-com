@@ -1,0 +1,67 @@
+@import "~breakpoint-sass";
+
+@import "src/styleguide/designs/wysiwyg.scss";
+@import "src/styleguide/utils/grid.scss";
+@import "src/styleguide/utils/media.scss";
+
+.PartialCaptioned {
+  @include grid-container;
+
+  .caption {
+    @extend %wysiwyg;
+    @include grid-cell(
+      $columns: (
+        mobile-portrait: 12,
+        mobile-landscape: 12,
+        tablet-portrait: 8,
+        tablet-landscape: 3,
+        desktop-narrow: 3,
+        desktop-wide: 3,
+      ),
+      $padding: (
+        top,
+        left,
+        right,
+        bottom,
+      )
+    );
+  }
+
+  .figure {
+    @include grid-cell(
+      $columns: (
+        mobile-portrait: 12,
+        mobile-landscape: 12,
+        tablet-portrait: 12,
+        tablet-landscape: 9,
+        desktop-narrow: 9,
+        desktop-wide: 9,
+      ),
+      $padding: (
+        top,
+        left,
+        right,
+        bottom,
+      )
+    );
+  }
+
+  .figure > * {
+    // box-shadow: 0 0 5px 0 rgba(200, 200, 200, 0.75);
+    margin: 0 auto;
+  }
+
+  @include breakpoint($media-screen-small) {
+    .caption {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  @include breakpoint($media-desktop) {
+    cite {
+      display: block;
+      font-size: 10px;
+    }
+  }
+}

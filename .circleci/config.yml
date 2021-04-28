@@ -68,14 +68,14 @@ jobs:
 
       - run:
           name: "styleguide build"
-          working_directory: packages/application
+          working_directory: packages/design-system
           command: |
             yarn styleguide:build
 
       - persist_to_workspace:
           root: ./
           paths:
-            - packages/application/.storybook-static/
+            - packages/design-system/.storybook-static/
 
 
 
@@ -200,7 +200,7 @@ jobs:
           at: ./
 
       - aws-s3/sync:
-          from: ./packages/application/.storybook-static
+          from: ./packages/design-system/.storybook-static
           to: "s3://${DEPLOY_S3_STYLEGUIDE_BUCKET}/"
           overwrite: true
           arguments: |

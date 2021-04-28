@@ -1,7 +1,8 @@
 @import "~breakpoint-sass";
-@import "~%styleguide/base/headings/styles";
-@import "~%styleguide/utils/grid";
-@import "~%styleguide/utils/media";
+
+@import "~@bashkim-com/design-system/src/styleguide/designs/headings.scss";
+@import "~@bashkim-com/design-system/src/styleguide/utils/grid.scss";
+@import "~@bashkim-com/design-system/src/styleguide/utils/media.scss";
 
 .CaseStudyTechnologies {
   h3 {

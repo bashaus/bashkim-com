@@ -1,9 +1,11 @@
+import {
+  PartialCaptioned,
+  VideoPlayerYouTube,
+} from "@bashkim-com/design-system";
+
 import type { CaptionedVideoSliceType } from "@bashkim-com/prismic";
 
 import { DeferredAsset } from "%components/DeferredAsset";
-import { VideoPlayerYouTube } from "%components/VideoPlayerYouTube";
-
-import { PartialCaptioned } from "%partials/Captioned";
 
 import { PrismicRichText } from "%libraries/prismic/helpers/RichText";
 

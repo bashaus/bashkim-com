@@ -4,6 +4,14 @@ import Link from "next/link";
 
 import { PrismicClient } from "@bashkim-com/prismic";
 import type { HomePageContentType } from "@bashkim-com/prismic";
+import {
+  CallToAction,
+  Group,
+  GroupDesign,
+  PartialFullBanner,
+  PartialSplit,
+  PartialSubtitle,
+} from "@bashkim-com/design-system";
 
 import { HomeBrands } from "%components/HomeBrands";
 import { HomeHello } from "%components/HomeHello";
@@ -11,10 +19,6 @@ import { LayoutDefault } from "%components/LayoutDefault";
 import { MetaDescription } from "%components/MetaDescription";
 import { MetaKeywords } from "%components/MetaKeywords";
 import { MetaTitle } from "%components/MetaTitle";
-import { CallToAction } from "%components/CallToAction";
-import { PartialFullBanner } from "%partials/FullBanner";
-import { PartialSplit } from "%partials/Split";
-import { PartialSubtitle } from "%partials/Subtitle";
 
 import { PrismicLinkResolver } from "%libraries/prismic/helpers/Link";
 import { HomePageQuery } from "%libraries/prismic/queries/HomePageQuery";
@@ -65,7 +69,7 @@ const HomePage = ({ homePage }: HomePageProps): JSX.Element => {
 
       <HomeHello />
 
-      <section className="group">
+      <Group>
         <PartialSubtitle>
           <h2>Featured case studies</h2>
         </PartialSubtitle>
@@ -106,16 +110,16 @@ const HomePage = ({ homePage }: HomePageProps): JSX.Element => {
             );
           })}
         </ul>
-      </section>
+      </Group>
 
-      <section className="group">
+      <Group>
         <PartialSubtitle>
           <h2>And some great brands I&apos;ve worked with</h2>
         </PartialSubtitle>
         <HomeBrands />
-      </section>
+      </Group>
 
-      <section className="group-alternate">
+      <Group design={GroupDesign.ALTERNATE}>
         <PartialSplit>
           <PartialSplit.Item>
             <div>
@@ -143,7 +147,7 @@ const HomePage = ({ homePage }: HomePageProps): JSX.Element => {
             </div>
           </PartialSplit.Item>
         </PartialSplit>
-      </section>
+      </Group>
     </LayoutDefault>
   );
 };

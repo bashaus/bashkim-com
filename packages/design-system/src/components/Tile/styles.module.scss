@@ -1,0 +1,86 @@
+@import "~breakpoint-sass";
+
+@import "src/styleguide/designs/headings.scss";
+@import "src/styleguide/designs/wysiwyg.scss";
+@import "src/styleguide/utils/colors.scss";
+@import "src/styleguide/utils/media.scss";
+
+.Tile {
+  @extend %wysiwyg;
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  color: $color-text-copy !important;
+  background-color: $color-white;
+  box-shadow: 0 0 14px 1px rgba(204, 204, 204, 0.5);
+  padding: 10px;
+  transition: all 0.3s ease-in-out;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: auto;
+  height: 100%;
+
+  &:hover {
+    box-shadow: 0 0 20px 3px rgba(204, 204, 204, 0.7);
+  }
+
+  .poster {
+    width: calc(100% + 10px + 10px);
+    margin-top: -10px;
+    margin-left: -10px;
+    height: 1px;
+    padding-bottom: 56.25%;
+    order: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .icon {
+    position: relative;
+    margin-top: -79px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 158px;
+    height: 158px;
+    order: 2;
+    border-radius: 50%;
+    border: solid 4px $color-white;
+    background-color: $color-white;
+    overflow: hidden;
+  }
+
+  .icon img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  h3 {
+    order: 3;
+    margin-top: 25px;
+  }
+
+  p {
+    order: 4;
+    width: 100%;
+  }
+
+  ul {
+    order: 5;
+    margin-top: 10px;
+  }
+
+  li {
+    margin-left: 5px !important;
+  }
+
+  li::before {
+    display: none !important;
+  }
+
+  @include breakpoint($media-mobile-portrait) {
+    a {
+      border-top: solid 1px $color-shade-border;
+    }
+  }
+}

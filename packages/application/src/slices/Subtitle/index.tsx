@@ -1,6 +1,5 @@
+import { PartialSubtitle } from "@bashkim-com/design-system";
 import type { SubtitleSliceType } from "@bashkim-com/prismic";
-
-import { PartialSubtitle } from "%partials/Subtitle";
 
 import { PrismicRichText } from "%libraries/prismic/helpers/RichText";
 

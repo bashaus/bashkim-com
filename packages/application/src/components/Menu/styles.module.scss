@@ -1,5 +1,6 @@
-@import "~%styleguide/utils/colors";
-@import "~%styleguide/utils/z-index";
+@import "~@bashkim-com/design-system/src/styleguide/utils/colors.scss";
+
+@import "~%styleguide/utils/z-index.scss";
 
 .Menu {
   display: flex;

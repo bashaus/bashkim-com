@@ -1,9 +1,8 @@
 import classNames from "classnames";
 import { Link } from "prismic-reactjs";
 
+import { FormattedDate } from "@bashkim-com/design-system";
 import type { AccoladeSliceType } from "@bashkim-com/prismic";
-
-import { FormattedDate } from "%components/FormattedDate";
 
 import { PrismicDate } from "%libraries/prismic/helpers/Date";
 import { PrismicLinkResolver } from "%libraries/prismic/helpers/Link";

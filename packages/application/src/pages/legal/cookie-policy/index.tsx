@@ -1,10 +1,14 @@
+import {
+  Group,
+  PartialFullText,
+  PartialHeaderText,
+  PartialSubtitle,
+} from "@bashkim-com/design-system";
+
 import { LayoutDefault } from "%components/LayoutDefault";
 import { MenuBackButtonHomeImpl } from "%components/MenuBackButtonHomeImpl";
 import { MetaDescription } from "%components/MetaDescription";
 import { MetaTitle } from "%components/MetaTitle";
-import { PartialFullText } from "%partials/FullText";
-import { PartialHeaderText } from "%partials/HeaderText";
-import { PartialSubtitle } from "%partials/Subtitle";
 
 import styles from "./styles.module.scss";
 
@@ -18,7 +22,7 @@ const CookiePolicyPage = (): JSX.Element => (
       <p>How your information is used on this website</p>
     </PartialHeaderText>
 
-    <section className="group">
+    <Group>
       <PartialFullText>
         <p>
           This website sends and receives data (known as <em>cookies</em>) to
@@ -146,7 +150,7 @@ const CookiePolicyPage = (): JSX.Element => (
 
         <p>Last updated 01 June 2018</p>
       </PartialFullText>
-    </section>
+    </Group>
   </LayoutDefault>
 );
 

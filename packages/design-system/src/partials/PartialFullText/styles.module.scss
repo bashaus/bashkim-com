@@ -1,0 +1,18 @@
+@import "~breakpoint-sass";
+
+@import "src/styleguide/designs/wysiwyg.scss";
+@import "src/styleguide/utils/grid.scss";
+@import "src/styleguide/utils/media.scss";
+
+.PartialFullText {
+  @extend %wysiwyg;
+  @include grid-full;
+
+  @include breakpoint($media-tablet-portrait) {
+    max-width: 526px !important;
+  }
+
+  @include breakpoint($media-screen-large) {
+    max-width: 648px !important;
+  }
+}

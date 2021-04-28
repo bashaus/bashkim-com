@@ -1,6 +1,6 @@
 import type { ExhibitionSliceType } from "@bashkim-com/prismic";
+import { PartialSubtitle } from "@bashkim-com/design-system";
 
-import { PartialSubtitle } from "%partials/Subtitle/index";
 import { ExhibitionSlice } from "%slices/Exhibition";
 
 import styles from "./styles.module.scss";

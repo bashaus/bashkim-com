@@ -1,4 +1,6 @@
 .env
+yarn-error.log
+
 .serverless/
 node_modules/
 test-results/

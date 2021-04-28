@@ -1,11 +1,14 @@
 import type { CarouselPhonesSliceType } from "@bashkim-com/prismic";
 
-import { Carousel } from "%components/Carousel";
-import { CarouselImage } from "%components/CarouselImage";
+import {
+  Carousel,
+  CarouselImage,
+  DeviceSmartphone,
+  DeviceFeaturePhone,
+  PartialFullImage,
+} from "@bashkim-com/design-system";
+
 import { DeferredAsset } from "%components/DeferredAsset";
-import { DeviceSmartphone } from "%components/DeviceSmartphone";
-import { DeviceFeaturePhone } from "%components/DeviceFeaturePhone";
-import { PartialFullImage } from "%partials/FullImage";
 
 import { PrismicRichText } from "%libraries/prismic/helpers/RichText";
 

@@ -1,0 +1,49 @@
+@import "../designs/headings.scss";
+@import "../designs/list-ordered.scss";
+@import "../designs/list-unordered.scss";
+@import "../utils/colors.scss";
+@import "../utils/grid.scss";
+
+%wysiwyg {
+  * + * {
+    @include breakpoint($media-mobile-portrait) {
+      margin-top: grid-gutter($breakpoint: mobile-portrait) / 2;
+    }
+
+    @include breakpoint($media-mobile-landscape) {
+      margin-top: grid-gutter($breakpoint: mobile-landscape) / 2;
+    }
+
+    @include breakpoint($media-tablet-portrait) {
+      margin-top: grid-gutter($breakpoint: tablet-portrait) / 2;
+    }
+
+    @include breakpoint($media-tablet-landscape) {
+      margin-top: grid-gutter($breakpoint: tablet-landscape) / 2;
+    }
+
+    @include breakpoint($media-desktop-narrow) {
+      margin-top: grid-gutter($breakpoint: desktop-narrow) / 2;
+    }
+
+    @include breakpoint($media-desktop-wide) {
+      margin-top: grid-gutter($breakpoint: desktop-wide) / 2;
+    }
+  }
+
+  h3 {
+    @extend %heading3;
+  }
+
+  ol {
+    @extend %list-ordered;
+  }
+
+  ul {
+    @extend %list-unordered;
+  }
+
+  strong {
+    font-weight: bold;
+  }
+}

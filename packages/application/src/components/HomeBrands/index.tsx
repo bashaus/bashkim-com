@@ -1,9 +1,11 @@
 import Link from "next/link";
 
+import { Group } from "@bashkim-com/design-system";
+
 import styles from "./styles.module.scss";
 
 export const HomeBrands = (): JSX.Element => (
-  <section className="group">
+  <Group>
     <ul className={styles.brands}>
       <li>
         <Link
@@ -56,5 +58,5 @@ export const HomeBrands = (): JSX.Element => (
         </Link>
       </li>
     </ul>
-  </section>
+  </Group>
 );

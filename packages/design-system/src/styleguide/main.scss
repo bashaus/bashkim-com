@@ -1,0 +1,9 @@
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&family=Roboto:wght@400;700&display=swap");
+
+/* reset & normalize */
+@import "~reset-scss";
+@import "./utils/normalize.scss";
+
+/* third party */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css");

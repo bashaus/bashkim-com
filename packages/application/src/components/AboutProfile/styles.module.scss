@@ -1,8 +1,9 @@
 @import "~breakpoint-sass";
-@import "~%styleguide/utils/colors";
-@import "~%styleguide/utils/grid";
-@import "~%styleguide/utils/media";
-@import "~%styleguide/utils/wysiwyg";
+
+@import "~@bashkim-com/design-system/src/styleguide/utils/colors.scss";
+@import "~@bashkim-com/design-system/src/styleguide/utils/grid.scss";
+@import "~@bashkim-com/design-system/src/styleguide/utils/media.scss";
+@import "~@bashkim-com/design-system/src/styleguide/designs/wysiwyg.scss";
 
 .principles {
   @include grid-container;

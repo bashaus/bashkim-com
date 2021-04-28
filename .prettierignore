@@ -4,5 +4,5 @@ packages/*/node_modules
 packages/*/build
 
 packages/application/.next
-packages/application/.storybook-static
+packages/design-system/.storybook-static
 packages/application/libraries/turn

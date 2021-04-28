@@ -1,0 +1,45 @@
+@import "~breakpoint-sass";
+
+@import "src/styleguide/utils/fonts.scss";
+@import "src/styleguide/utils/grid.scss";
+@import "src/styleguide/utils/media.scss";
+
+.PartialSubtitle {
+  @include grid-full;
+
+  font-family: $font-family-heading;
+  font-weight: bold;
+
+  h2 {
+    display: inline-block;
+    position: relative;
+
+    @include breakpoint($media-mobile) {
+      line-height: 28px;
+      font-size: 24px;
+      letter-spacing: -0.72px;
+    }
+
+    @include breakpoint($media-not-mobile) {
+      line-height: 48px;
+      font-size: 40px;
+      letter-spacing: -1.2px;
+    }
+  }
+
+  @include breakpoint($media-mobile) {
+    p {
+      margin-top: 12px;
+      margin-bottom: 12px;
+    }
+  }
+
+  @include breakpoint($media-not-mobile) {
+    p {
+      font-size: 20px;
+      line-height: 26px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  }
+}

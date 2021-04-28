@@ -2,7 +2,7 @@ import classNames from "classnames";
 import Link from "next/link";
 import { useContext } from "react";
 
-import { Logo } from "%components/Logo";
+import { Logo } from "@bashkim-com/design-system";
 import { Navigation } from "%components/Navigation";
 
 import { NavigationContext } from "%contexts/Navigation/context";

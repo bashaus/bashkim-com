@@ -1,10 +1,9 @@
 import { useCallback, useState } from "react";
 import type { CaptionedMagazineSliceType } from "@bashkim-com/prismic";
+import { PartialCaptioned } from "@bashkim-com/design-system";
 
 import { DeferredAsset } from "%components/DeferredAsset";
 import { Magazine, MagazineSpreadChangeEvent } from "%components/Magazine";
-
-import { PartialCaptioned } from "%partials/Captioned";
 
 import { PrismicRichText } from "%libraries/prismic/helpers/RichText";
 

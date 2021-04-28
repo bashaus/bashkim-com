@@ -1,3 +1,11 @@
+import {
+  CallToAction,
+  Group,
+  PartialHeaderImage,
+  PartialSplit,
+  PartialSubtitle,
+} from "@bashkim-com/design-system";
+
 import { AboutProfile } from "%components/AboutProfile";
 import { AboutEmployment } from "%components/AboutEmployment";
 import { AboutTutoring } from "%components/AboutTutoring";
@@ -8,10 +16,6 @@ import { MenuBackButtonHomeImpl } from "%components/MenuBackButtonHomeImpl";
 import { MetaDescription } from "%components/MetaDescription";
 import { MetaKeywords } from "%components/MetaKeywords";
 import { MetaTitle } from "%components/MetaTitle";
-import { CallToAction } from "%components/CallToAction";
-import { PartialHeaderImage } from "%partials/HeaderImage";
-import { PartialSplit } from "%partials/Split";
-import { PartialSubtitle } from "%partials/Subtitle";
 
 import styles from "./styles.module.scss";
 
@@ -28,7 +32,7 @@ const AboutPage = (): JSX.Element => (
     <AboutEducation />
     <AboutCertifications />
 
-    <section className="group">
+    <Group>
       <PartialSubtitle>
         <h2>Looking for more?</h2>
       </PartialSubtitle>
@@ -64,7 +68,7 @@ const AboutPage = (): JSX.Element => (
           </div>
         </PartialSplit.Item>
       </PartialSplit>
-    </section>
+    </Group>
   </LayoutDefault>
 );
 

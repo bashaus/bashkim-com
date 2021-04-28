@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { CollaboratorSliceType } from "@bashkim-com/prismic";
+import { PartialSubtitle } from "@bashkim-com/design-system";
 
-import { PartialSubtitle } from "%partials/Subtitle";
 import { CollaboratorSlice } from "%slices/Collaborator";
 
 import styles from "./styles.module.scss";

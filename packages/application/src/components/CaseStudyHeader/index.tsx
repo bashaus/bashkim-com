@@ -2,9 +2,13 @@ import type { CaseStudyContentType } from "@bashkim-com/prismic";
 
 import { CaseStudyDetails } from "%components/CaseStudyDetails";
 import { CaseStudyTechnologies } from "%components/CaseStudyTechnologies";
-import { PartialHeaderImage } from "%partials/HeaderImage";
-import { PartialTitle } from "%partials/Title";
-import { PartialSubtitle } from "%partials/Subtitle";
+import {
+  Group,
+  GroupDesign,
+  PartialHeaderImage,
+  PartialTitle,
+  PartialSubtitle,
+} from "@bashkim-com/design-system";
 
 import styles from "./styles.module.scss";
 
@@ -22,14 +26,14 @@ export const CaseStudyHeader = ({
       imageMobile={caseStudy.image_header_mobile?.url}
     />
 
-    <section className="group">
+    <Group>
       <PartialTitle image={caseStudy.image_icon.url}>
         <h1>{caseStudy.meta_title}</h1>
         <p>{caseStudy.meta_description}</p>
       </PartialTitle>
-    </section>
+    </Group>
 
-    <section className="group-alternate">
+    <Group design={GroupDesign.ALTERNATE}>
       <PartialSubtitle>
         <h2>Project details</h2>
       </PartialSubtitle>
@@ -42,6 +46,6 @@ export const CaseStudyHeader = ({
           <CaseStudyTechnologies caseStudy={caseStudy} />
         </div>
       </div>
-    </section>
+    </Group>
   </>
 );

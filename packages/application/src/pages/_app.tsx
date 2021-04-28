@@ -4,8 +4,6 @@ import Head from "next/head";
 import "%libraries/sentry/init";
 import { SentryBoundary } from "%components/SentryBoundary";
 
-import "%styleguide/main.scss";
-
 const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => (
   <SentryBoundary>
     <Head>

@@ -1,8 +1,7 @@
+import { PartialFullText } from "@bashkim-com/design-system";
 import type { FullTextSliceType } from "@bashkim-com/prismic";
 
 import { PrismicRichText } from "%libraries/prismic/helpers/RichText";
-
-import { PartialFullText } from "%partials/FullText";
 
 export type FullTextSliceProps = {
   slice: FullTextSliceType;

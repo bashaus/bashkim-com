@@ -1,9 +1,9 @@
-import { PartialTitle } from "%partials/Title";
+import { Group, PartialTitle } from "@bashkim-com/design-system";
 
 import styles from "./styles.module.scss";
 
 export const AboutProfile = (): JSX.Element => (
-  <section className="group">
+  <Group>
     <PartialTitle image="/static/images/about/profile/photo@4x.jpg">
       <h1>About Bash</h1>
       <p>
@@ -116,5 +116,5 @@ export const AboutProfile = (): JSX.Element => (
         </p>
       </li>
     </ul>
-  </section>
+  </Group>
 );

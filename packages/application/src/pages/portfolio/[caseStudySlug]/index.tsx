@@ -3,6 +3,8 @@ import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from "next";
 import { PrismicClient } from "@bashkim-com/prismic";
 import type { CaseStudyContentType } from "@bashkim-com/prismic";
 
+import { Group, GroupDesign } from "@bashkim-com/design-system";
+
 import { CaseStudyAccolades } from "%components/CaseStudyAccolades";
 import { CaseStudyCollaborators } from "%components/CaseStudyCollaborators";
 import { CaseStudyExhibitions } from "%components/CaseStudyExhibitions";
@@ -56,31 +58,31 @@ const CaseStudyPage = ({
 
         <CaseStudyHeader caseStudy={caseStudyPage} />
 
-        <section className="group">
+        <Group>
           {caseStudyBody.body.map((slice, i) => (
             <Slice slice={slice} key={i} />
           ))}
-        </section>
+        </Group>
 
         {exhibitionSlices && exhibitionSlices.length > 0 && (
-          <section className="group-alternate">
+          <Group design={GroupDesign.ALTERNATE}>
             <CaseStudyExhibitions slices={exhibitionSlices} />
-          </section>
+          </Group>
         )}
 
         {accoladeSlices && accoladeSlices.length > 0 && (
-          <section className="group-alternate">
+          <Group design={GroupDesign.ALTERNATE}>
             <CaseStudyAccolades slices={accoladeSlices} />
-          </section>
+          </Group>
         )}
 
         {collaboratorSlices && collaboratorSlices.length > 0 && (
-          <section className="group-alternate">
+          <Group design={GroupDesign.ALTERNATE}>
             <CaseStudyCollaborators
               myRole={caseStudyPage.info_role}
               slices={collaboratorSlices}
             />
-          </section>
+          </Group>
         )}
       </article>
     </LayoutDefault>

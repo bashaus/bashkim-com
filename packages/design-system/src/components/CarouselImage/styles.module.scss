@@ -1,0 +1,13 @@
+@import "src/styleguide/designs/wysiwyg.scss";
+
+.CarouselImage {
+  margin: 0;
+
+  .figure {
+    margin-bottom: 30px;
+  }
+
+  figcaption {
+    @extend %wysiwyg;
+  }
+}

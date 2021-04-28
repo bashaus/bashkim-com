@@ -1,10 +1,13 @@
-import { PartialSplit } from "%partials/Split";
-import { PartialSubtitle } from "%partials/Subtitle";
+import {
+  Group,
+  PartialSplit,
+  PartialSubtitle,
+} from "@bashkim-com/design-system";
 
 import styles from "./styles.module.scss";
 
 export const AboutTutoring = (): JSX.Element => (
-  <section className="group">
+  <Group>
     <PartialSubtitle>
       <h2>Tutoring</h2>
     </PartialSubtitle>
@@ -56,5 +59,5 @@ export const AboutTutoring = (): JSX.Element => (
         </div>
       </PartialSplit.Item>
     </PartialSplit>
-  </section>
+  </Group>
 );

@@ -1,8 +1,9 @@
 import type { CarouselImagesSliceType } from "@bashkim-com/prismic";
-
-import { PartialFullImage } from "%partials/FullImage";
-import { Carousel } from "%components/Carousel";
-import { CarouselImage } from "%components/CarouselImage";
+import {
+  Carousel,
+  CarouselImage,
+  PartialFullImage,
+} from "@bashkim-com/design-system";
 
 import { PrismicRichText } from "%libraries/prismic/helpers/RichText";
 

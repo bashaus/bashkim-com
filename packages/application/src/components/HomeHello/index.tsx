@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { PartialHeaderText } from "%partials/HeaderText";
+import { PartialHeaderText } from "@bashkim-com/design-system";
 
 import IconGitHub from "%public/static/vectors/social/github.svg";
 import IconPortfolio from "%public/static/vectors/icons/portfolio.svg";

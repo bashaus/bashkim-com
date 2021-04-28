@@ -1,0 +1,30 @@
+@import "~breakpoint-sass";
+
+@import "src/styleguide/utils/chevron.scss";
+@import "src/styleguide/utils/media.scss";
+
+.PartialSplit {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  &.odd {
+    flex-direction: row-reverse;
+  }
+
+  @include breakpoint($media-mobile) {
+    :global(.PartialSplit_chevron) {
+      @include chevron-down;
+    }
+  }
+
+  @include breakpoint($media-not-mobile) {
+    &.odd :global(.PartialSplit_chevron) {
+      @include chevron-left;
+    }
+
+    &.even :global(.PartialSplit_chevron) {
+      @include chevron-right;
+    }
+  }
+}

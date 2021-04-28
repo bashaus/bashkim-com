@@ -1,0 +1,10 @@
+@import "./list.scss";
+
+%list-unordered {
+  @extend %list;
+
+  li::before {
+    content: "\2022";
+    font-weight: bold;
+  }
+}

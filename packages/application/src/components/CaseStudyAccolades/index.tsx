@@ -1,6 +1,6 @@
+import { PartialSubtitle } from "@bashkim-com/design-system";
 import type { AccoladeSliceType } from "@bashkim-com/prismic";
 
-import { PartialSubtitle } from "%partials/Subtitle";
 import { AccoladeSlice } from "%slices/Accolade";
 
 export type CaseStudyAccoladesProps = {

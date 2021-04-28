@@ -2,7 +2,7 @@ import classNames from "classnames";
 import Link from "next/link";
 import { useContext } from "react";
 
-import { Logo } from "%components/Logo";
+import { Logo } from "@bashkim-com/design-system";
 import { MenuSignifierButton } from "%components/MenuSignifierButton";
 import { NavigationContext } from "%contexts/Navigation/context";
 import { ScrollDirection } from "%contexts/Navigation/types";

@@ -12,6 +12,7 @@
     "packages/webhooks",
     "packages/config",
     "packages/prismic",
+    "packages/design-system",
     "packages/sitemap",
     "packages/application"
   ],

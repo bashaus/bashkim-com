@@ -7,6 +7,13 @@ import type {
   PortfolioPageContentType,
 } from "@bashkim-com/prismic";
 
+import {
+  Group,
+  GroupDesign,
+  PartialHeaderText,
+  PartialSubtitle,
+} from "@bashkim-com/design-system";
+
 import { LayoutDefault } from "%components/LayoutDefault";
 import { MenuBackButtonHomeImpl } from "%components/MenuBackButtonHomeImpl";
 import { MetaDescription } from "%components/MetaDescription";
@@ -14,9 +21,6 @@ import { MetaKeywords } from "%components/MetaKeywords";
 import { MetaTitle } from "%components/MetaTitle";
 import { PortfolioFeaturedCaseStudies } from "%components/PortfolioFeaturedCaseStudies";
 import { PortfolioList } from "%components/PortfolioList";
-
-import { PartialHeaderText } from "%partials/HeaderText";
-import { PartialSubtitle } from "%partials/Subtitle";
 
 import { PortfolioPageQuery } from "%libraries/prismic/queries/PortfolioPageQuery";
 
@@ -47,20 +51,20 @@ const PortfolioPage = ({
         <p>{metaDescription}</p>
       </PartialHeaderText>
 
-      <section className="group-alternate">
+      <Group design={GroupDesign.ALTERNATE}>
         <PartialSubtitle>
           <h2>Featured case studies</h2>
         </PartialSubtitle>
         <PortfolioFeaturedCaseStudies featured={featured} />
-      </section>
+      </Group>
 
-      <section className="group">
+      <Group>
         <PartialSubtitle>
           <h2>All case studies</h2>
         </PartialSubtitle>
 
         <PortfolioList caseStudies={caseStudies} />
-      </section>
+      </Group>
     </LayoutDefault>
   );
 };

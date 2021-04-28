@@ -1,5 +1,6 @@
 @import "~breakpoint-sass";
-@import "~%styleguide/utils/media";
+
+@import "~@bashkim-com/design-system/src/styleguide/utils/media.scss";
 
 .content {
   position: relative;

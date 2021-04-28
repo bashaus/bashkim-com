@@ -1,6 +1,5 @@
+import { PartialNewspaper } from "@bashkim-com/design-system";
 import type { NewspaperSliceType } from "@bashkim-com/prismic";
-
-import { PartialNewspaper } from "%partials/Newspaper";
 
 import { PrismicRichText } from "%libraries/prismic/helpers/RichText";
 

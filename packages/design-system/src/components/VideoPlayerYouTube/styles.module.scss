@@ -1,0 +1,10 @@
+@import "src/styleguide/utils/colors.scss";
+@import "src/styleguide/utils/ratios.scss";
+
+.VideoPlayerYouTube {
+  @extend %ratio-widescreen;
+
+  background-color: $color-charcol;
+  color: $color-white;
+  width: 100%;
+}

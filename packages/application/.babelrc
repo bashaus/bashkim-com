@@ -10,8 +10,7 @@
           "%components": "./src/components",
           "%contexts": "./src/contexts",
           "%libraries": "./src/libraries",
-          "%machines/*": "./src/machines/*",
-          "%partials": "./src/partials",
+          "%machines": "./src/machines",
           "%public": "./public",
           "%slices": "./src/slices",
           "%styleguide": "./src/styleguide"

@@ -1,0 +1,20 @@
+@import "~breakpoint-sass";
+
+@import "src/styleguide/utils/colors.scss";
+@import "src/styleguide/utils/media.scss";
+
+.Group {
+  @include breakpoint($media-mobile) {
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+  }
+
+  @include breakpoint($media-not-mobile) {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+  }
+
+  &[data-props-design="alternate"] {
+    background-color: $color-shade-background;
+  }
+}

@@ -12,7 +12,6 @@
       "%contexts/*": ["./contexts/*"],
       "%libraries/*": ["./libraries/*"],
       "%machines/*": ["./machines/*"],
-      "%partials/*": ["./partials/*"],
       "%public/*": ["../public/*"],
       "%slices/*": ["./slices/*"],
       "%styleguide/*": ["./styleguide/*"]

@@ -1,5 +1,5 @@
-@import "~%styleguide/utils/grid";
-@import "~%styleguide/utils/wysiwyg";
+@import "~@bashkim-com/design-system/src/styleguide/utils/grid.scss";
+@import "~@bashkim-com/design-system/src/styleguide/designs/wysiwyg.scss";
 
 .CaseStudyCollaborators {
   @include grid-container;
