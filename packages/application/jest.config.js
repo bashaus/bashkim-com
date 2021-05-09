@@ -9,7 +9,7 @@ module.exports = {
   // ],
   testPathIgnorePatterns: ["/node_modules/", "/.next/", "/build/"],
   transform: {
-    "^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/../../node_modules/babel-jest",
+    "^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/node_modules/babel-jest",
     "^.+\\.css$": "<rootDir>/.jest/cssTransform.js",
   },
   transformIgnorePatterns: [
