@@ -13,6 +13,8 @@ export const Render = (): JSX.Element => (
   <Brick
     title={text("title", "Brick title")}
     description={text("description", "Brick description")}
-    icon={files("icon", "", ["https://placehold.it/300x300?text=icon"])[0]}
+    icon={
+      files("icon", "", ["https://via.placeholder.com/300x300?text=icon"])[0]
+    }
   />
 );

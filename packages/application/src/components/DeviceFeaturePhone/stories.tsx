@@ -14,7 +14,9 @@ export const Render = (): JSX.Element => (
     figure={
       <img
         src={
-          files("figure", "", ["https://placehold.it/496x390?text=figure"])[0]
+          files("figure", "", [
+            "https://via.placeholder.com/496x390?text=figure",
+          ])[0]
         }
         alt=""
       />

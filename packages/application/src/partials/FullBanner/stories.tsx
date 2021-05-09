@@ -11,12 +11,12 @@ export const Render = (): JSX.Element => (
   <PartialFullBanner
     backgroundDesktop={
       files("backgroundDesktop", "", [
-        "https://placehold.it/1920x400?text=backgroundDesktop",
+        "https://via.placeholder.com/1920x400?text=backgroundDesktop",
       ])[0]
     }
     backgroundMobile={
       files("backgroundMobile", "", [
-        "https://placehold.it/1000x800?text=backgroundMobile",
+        "https://via.placeholder.com/1000x800?text=backgroundMobile",
       ])[0]
     }
     id="PartialFullBanner"

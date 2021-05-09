@@ -33,7 +33,7 @@ export const Render = (): JSX.Element => {
         {pagesArrray.map((i) => (
           <li key={i}>
             <img
-              src={`https://placehold.it/300x450?text=Page+${i + 1}`}
+              src={`https://via.placeholder.com/300x450?text=Page+${i + 1}`}
               alt={`Page ${i + 1}`}
               width={300}
               height={450}

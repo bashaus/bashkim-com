@@ -17,9 +17,13 @@ export const Render = (): JSX.Element => (
   >
     <Tile
       description={text("description", "description")}
-      icon={files("icon", "", ["https://placehold.it/300x300?text=icon"])[0]}
+      icon={
+        files("icon", "", ["https://via.placeholder.com/300x300?text=icon"])[0]
+      }
       poster={
-        files("poster", "", ["https://placehold.it/640x360?text=poster"])[0]
+        files("poster", "", [
+          "https://via.placeholder.com/640x360?text=poster",
+        ])[0]
       }
       title={text("title", "title")}
     />

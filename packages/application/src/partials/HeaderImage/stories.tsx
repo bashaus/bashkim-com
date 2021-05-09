@@ -12,12 +12,12 @@ export const Render = (): JSX.Element => (
     id="PartialHeaderImage"
     imageDesktop={
       files("imageDesktop", "", [
-        "https://placehold.it/1920x400?text=imageDesktop",
+        "https://via.placeholder.com/1920x400?text=imageDesktop",
       ])[0]
     }
     imageMobile={
       files("imageMobile", "", [
-        "https://placehold.it/1000x8000?text=imageMobile",
+        "https://via.placeholder.com/1000x8000?text=imageMobile",
       ])[0]
     }
   />

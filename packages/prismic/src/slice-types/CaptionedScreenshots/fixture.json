@@ -24,7 +24,7 @@
         },
         "alt": null,
         "copyright": null,
-        "url": "https://placehold.it/320x1362?text=Mobile%20Portrait"
+        "url": "https://via.placeholder.com/320x1362?text=Mobile%20Portrait"
       }
     },
     {
@@ -35,7 +35,7 @@
         },
         "alt": null,
         "copyright": null,
-        "url": "https://placehold.it/480x1160?text=Mobile%20Landscape"
+        "url": "https://via.placeholder.com/480x1160?text=Mobile%20Landscape"
       }
     },
     {
@@ -46,7 +46,7 @@
         },
         "alt": null,
         "copyright": null,
-        "url": "https://placehold.it/768x1135?text=Tablet%20Portrait"
+        "url": "https://via.placeholder.com/768x1135?text=Tablet%20Portrait"
       }
     },
     {
@@ -57,7 +57,7 @@
         },
         "alt": null,
         "copyright": null,
-        "url": "https://placehold.it/1024x650?text=Tablet%20Landscape"
+        "url": "https://via.placeholder.com/1024x650?text=Tablet%20Landscape"
       }
     },
     {
@@ -68,7 +68,7 @@
         },
         "alt": null,
         "copyright": null,
-        "url": "https://placehold.it/1280x800?text=Desktop%20Narrow"
+        "url": "https://via.placeholder.com/1280x800?text=Desktop%20Narrow"
       }
     },
     {
@@ -79,7 +79,7 @@
         },
         "alt": null,
         "copyright": null,
-        "url": "https://placehold.it/1440x800?text=Desktop%20Wide"
+        "url": "https://via.placeholder.com/1440x800?text=Desktop%20Wide"
       }
     }
   ]

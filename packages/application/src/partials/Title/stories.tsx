@@ -9,7 +9,9 @@ export default {
 
 export const Render = (): JSX.Element => (
   <PartialTitle
-    image={files("image", "", ["https://placehold.it/300x300?text=image"])[0]}
+    image={
+      files("image", "", ["https://via.placeholder.com/300x300?text=image"])[0]
+    }
   >
     <h1>{text("Title", "Hello World")}</h1>
     <p>{text("Description", "Lorem ipsum dolar sit a met.")}</p>
