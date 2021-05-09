@@ -4,6 +4,7 @@
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
     "plugin:jsx-a11y/recommended",
+    "plugin:jest/recommended",
     "plugin:prettier/recommended"
   ],
   "parserOptions": {
@@ -13,7 +14,14 @@
   "env": {
     "es6": true
   },
-  "plugins": ["promise", "react", "react-hooks", "jsx-a11y", "prettier"],
+  "plugins": [
+    "promise",
+    "react",
+    "react-hooks",
+    "jsx-a11y",
+    "jest",
+    "prettier"
+  ],
   "rules": {
     "prettier/prettier": "error",
     "jsx-a11y/anchor-is-valid": 0,
