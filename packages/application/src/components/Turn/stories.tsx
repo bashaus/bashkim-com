@@ -1,9 +1,11 @@
-import { Turn, TurnProps } from ".";
+import { Turn, TurnProps, TurnDisplay } from ".";
 
 export default {
   component: Turn,
   title: "Components/Turn",
   argTypes: {
+    display: { defaultValue: TurnDisplay.DOUBLE },
+    center: { control: "boolean" },
     onInitialize: { action: "onInitialize" },
     onPageChange: { action: "onPageChange" },
   },

@@ -17,6 +17,14 @@ export type AccoladeSliceProps = {
   slice: AccoladeSliceType;
 };
 
+const AwardPlaceName = {
+  gold: "Gold",
+  silver: "Silver",
+  bronze: "Bronze",
+  honour: "Honour",
+  shortlist: "Shortlist",
+};
+
 export const AccoladeSlice = ({ slice }: AccoladeSliceProps): JSX.Element => {
   const {
     accolade_slice_type_issuer: issuer,
@@ -49,7 +57,7 @@ export const AccoladeSlice = ({ slice }: AccoladeSliceProps): JSX.Element => {
           return (
             <li className={styles.award} key={i}>
               <a href={awardHref} target="_blank" rel="noopener noreferrer">
-                <h3>{awardPlace}</h3>
+                <h3>{AwardPlaceName[awardPlace]}</h3>
                 <svg className={classNames(styles.trophy, styles[awardPlace])}>
                   <IconTrophy />
                 </svg>

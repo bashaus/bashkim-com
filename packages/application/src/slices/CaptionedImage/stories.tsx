@@ -4,9 +4,15 @@ import { CaptionedImageSlice, CaptionedImageSliceProps } from ".";
 
 export default {
   component: CaptionedImageSlice,
-  title: "Slices/CaptionedImage",
+  title: "Prismic/Slices/CaptionedImage",
   argTypes: {
-    slice: { control: "json" },
+    slice: {
+      control: "object",
+      table: { category: "Prismic fixture" },
+    },
+  },
+  parameters: {
+    controls: { expanded: false },
   },
 };
 

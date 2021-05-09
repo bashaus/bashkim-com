@@ -4,9 +4,15 @@ import { CarouselImagesSlice, CarouselImagesSliceProps } from ".";
 
 export default {
   component: CarouselImagesSlice,
-  title: "Slices/CarouselImages",
+  title: "Prismic/Slices/CarouselImages",
   argTypes: {
-    slice: { control: "json" },
+    slice: {
+      control: "object",
+      table: { category: "Prismic fixture" },
+    },
+  },
+  parameters: {
+    controls: { expanded: false },
   },
 };
 

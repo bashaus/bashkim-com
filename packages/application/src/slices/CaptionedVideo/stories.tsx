@@ -4,9 +4,15 @@ import { CaptionedVideoSlice, CaptionedVideoSliceProps } from ".";
 
 export default {
   component: CaptionedVideoSlice,
-  title: "Slices/CaptionedVideo",
+  title: "Prismic/Slices/CaptionedVideo",
   argTypes: {
-    slice: { control: "json" },
+    slice: {
+      control: "object",
+      table: { category: "Prismic fixture" },
+    },
+  },
+  parameters: {
+    controls: { expanded: false },
   },
 };
 

@@ -4,9 +4,15 @@ import { NewspaperSlice, NewspaperSliceProps } from ".";
 
 export default {
   component: NewspaperSlice,
-  title: "Slices/Newspaper",
+  title: "Prismic/Slices/Newspaper",
   argTypes: {
-    slice: { control: "json" },
+    slice: {
+      control: "object",
+      table: { category: "Prismic fixture" },
+    },
+  },
+  parameters: {
+    controls: { expanded: false },
   },
 };
 

@@ -4,9 +4,15 @@ import { GridVideoSlice, GridVideoSliceProps } from ".";
 
 export default {
   component: GridVideoSlice,
-  title: "Slices/GridVideo",
+  title: "Prismic/Slices/GridVideo",
   argTypes: {
-    slice: { control: "json" },
+    slice: {
+      control: "object",
+      table: { category: "Prismic fixture" },
+    },
+  },
+  parameters: {
+    controls: { expanded: false },
   },
 };
 

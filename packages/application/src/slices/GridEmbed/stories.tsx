@@ -4,9 +4,15 @@ import { GridEmbedSlice, GridEmbedSliceProps } from ".";
 
 export default {
   component: GridEmbedSlice,
-  title: "Slices/GridEmbed",
+  title: "Prismic/Slices/GridEmbed",
   argTypes: {
-    slice: { control: "json" },
+    slice: {
+      control: "object",
+      table: { category: "Prismic fixture" },
+    },
+  },
+  parameters: {
+    controls: { expanded: false },
   },
 };
 

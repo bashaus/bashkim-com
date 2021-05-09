@@ -4,9 +4,15 @@ import { FullTextSlice, FullTextSliceProps } from ".";
 
 export default {
   component: FullTextSlice,
-  title: "Slices/FullText",
+  title: "Prismic/Slices/FullText",
   argTypes: {
-    slice: { control: "json" },
+    slice: {
+      control: "object",
+      table: { category: "Prismic fixture" },
+    },
+  },
+  parameters: {
+    controls: { expanded: false },
   },
 };
 

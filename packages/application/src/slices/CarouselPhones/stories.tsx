@@ -4,9 +4,15 @@ import { CarouselPhonesSlice, CarouselPhonesSliceProps } from ".";
 
 export default {
   component: CarouselPhonesSlice,
-  title: "Slices/CarouselPhones",
+  title: "Prismic/Slices/CarouselPhones",
   argTypes: {
-    slice: { control: "json" },
+    slice: {
+      control: "object",
+      table: { category: "Prismic fixture" },
+    },
+  },
+  parameters: {
+    controls: { expanded: false },
   },
 };
 

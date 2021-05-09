@@ -4,9 +4,15 @@ import { CaptionedScreenshotsSlice, CaptionedScreenshotsSliceProps } from ".";
 
 export default {
   component: CaptionedScreenshotsSlice,
-  title: "Slices/CaptionedScreenshots",
+  title: "Prismic/Slices/CaptionedScreenshots",
   argTypes: {
-    slice: { control: "json" },
+    slice: {
+      control: "object",
+      table: { category: "Prismic fixture" },
+    },
+  },
+  parameters: {
+    controls: { expanded: false },
   },
 };
 

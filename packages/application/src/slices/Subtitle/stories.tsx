@@ -4,9 +4,15 @@ import { SubtitleSlice, SubtitleSliceProps } from ".";
 
 export default {
   component: SubtitleSlice,
-  title: "Slices/Subtitle",
+  title: "Prismic/Slices/Subtitle",
   argTypes: {
-    slice: { control: "json" },
+    slice: {
+      control: "object",
+      table: { category: "Prismic fixture" },
+    },
+  },
+  parameters: {
+    controls: { expanded: false },
   },
 };
 

@@ -66,5 +66,8 @@ module.exports = ({ config }) => {
     })
   );
 
+  config.node = config.node || {}
+  config.node.fs = "empty";
+
   return config;
 };

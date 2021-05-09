@@ -4,9 +4,15 @@ import { CaptionedMagazineSlice, CaptionedMagazineSliceProps } from ".";
 
 export default {
   component: CaptionedMagazineSlice,
-  title: "Slices/CaptionedMagazine",
+  title: "Prismic/Slices/CaptionedMagazine",
   argTypes: {
-    slice: { control: "json" },
+    slice: {
+      control: "object",
+      table: { category: "Prismic fixture" },
+    },
+  },
+  parameters: {
+    controls: { expanded: false },
   },
 };
 

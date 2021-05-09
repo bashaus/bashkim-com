@@ -2,7 +2,7 @@ import { VideoPlayerYouTube, VideoPlayerYouTubeProps } from ".";
 
 export default {
   component: VideoPlayerYouTube,
-  title: "Components/Video Player YouTube",
+  title: "Components/Video Player (YouTube)",
   parameters: {
     layout: "centered",
   },

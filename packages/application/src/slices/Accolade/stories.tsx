@@ -4,9 +4,15 @@ import { AccoladeSlice, AccoladeSliceProps } from ".";
 
 export default {
   component: AccoladeSlice,
-  title: "Slices/Accolade",
+  title: "Prismic/Slices/Accolade",
   argTypes: {
-    slice: { control: "json" },
+    slice: {
+      control: "object",
+      table: { category: "Prismic fixture" },
+    },
+  },
+  parameters: {
+    controls: { expanded: false },
   },
 };
 
