@@ -1,11 +1,20 @@
 import { CaptionedVideoSliceFixture } from "@bashkim-com/prismic";
 
-import CaptionedVideoSlice from ".";
+import { CaptionedVideoSlice, CaptionedVideoSliceProps } from ".";
 
 export default {
-  title: "Slices/Captioned Video",
+  component: CaptionedVideoSlice,
+  title: "Slices/CaptionedVideo",
+  argTypes: {
+    slice: { control: "json" },
+  },
 };
 
-export const Render = (): JSX.Element => (
-  <CaptionedVideoSlice slice={CaptionedVideoSliceFixture} />
+const Template = ({ ...args }: CaptionedVideoSliceProps) => (
+  <CaptionedVideoSlice {...args} />
 );
+
+export const Render = Template.bind({});
+Render.args = {
+  slice: CaptionedVideoSliceFixture,
+};

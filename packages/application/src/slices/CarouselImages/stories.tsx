@@ -1,11 +1,20 @@
 import { CarouselImagesSliceFixture } from "@bashkim-com/prismic";
 
-import { CarouselImagesSlice } from ".";
+import { CarouselImagesSlice, CarouselImagesSliceProps } from ".";
 
 export default {
-  title: "Slices/Carousel Images",
+  component: CarouselImagesSlice,
+  title: "Slices/CarouselImages",
+  argTypes: {
+    slice: { control: "json" },
+  },
 };
 
-export const Render = (): JSX.Element => (
-  <CarouselImagesSlice slice={CarouselImagesSliceFixture} />
+const Template = ({ ...args }: CarouselImagesSliceProps) => (
+  <CarouselImagesSlice {...args} />
 );
+
+export const Render = Template.bind({});
+Render.args = {
+  slice: CarouselImagesSliceFixture,
+};

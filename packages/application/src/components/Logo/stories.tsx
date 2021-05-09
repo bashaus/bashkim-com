@@ -1,10 +1,14 @@
-import { ComponentDecorator } from "%storybook/decorators/component";
-
 import { Logo } from ".";
 
 export default {
+  component: Logo,
   title: "Components/Logo",
-  decorators: [ComponentDecorator],
+  parameters: {
+    layout: "centered",
+  },
 };
 
-export const Render = (): JSX.Element => <Logo />;
+const Template = ({ ...args }) => <Logo {...args} />;
+
+export const Render = Template.bind({});
+Render.args = {};

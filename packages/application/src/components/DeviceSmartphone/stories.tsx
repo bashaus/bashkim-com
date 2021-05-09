@@ -1,27 +1,32 @@
-import { withKnobs, files, text } from "@storybook/addon-knobs";
+import faker from "faker";
 
-import { ComponentDecorator } from "%storybook/decorators/component";
-
-import { DeviceSmartphone } from ".";
+import { DeviceSmartphone, DeviceSmartphoneProps } from ".";
 
 export default {
+  component: DeviceSmartphone,
   title: "Components/DeviceSmartphone",
-  decorators: [withKnobs, ComponentDecorator],
+  argTypes: {
+    figure: { control: "file" },
+    caption: { control: "text" },
+  },
+  parameters: {
+    layout: "centered",
+  },
 };
 
-export const Render = (): JSX.Element => (
-  <DeviceSmartphone
-    figure={
-      <img
-        src={
-          files("figure", "", [
-            "https://via.placeholder.com/640x1130?text=figure",
-          ])[0]
-        }
-        alt=""
-      />
-    }
-  >
-    <p>{text("caption", "caption")}</p>
+type DeviceSmartphoneStoryProps = DeviceSmartphoneProps & {
+  figure: Array<string>;
+  caption: string;
+};
+
+const Template = ({ caption, figure, ...args }: DeviceSmartphoneStoryProps) => (
+  <DeviceSmartphone figure={<img src={figure[0]} alt="" />} {...args}>
+    <p>{caption}</p>
   </DeviceSmartphone>
 );
+
+export const Render = Template.bind({});
+Render.args = {
+  figure: ["https://via.placeholder.com/640x1130?text=figure"],
+  caption: faker.lorem.sentence(8),
+};

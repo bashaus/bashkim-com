@@ -1,21 +1,24 @@
-import { withKnobs, files } from "@storybook/addon-knobs";
-
-import { PartialFullImage } from ".";
+import { PartialFullImage, PartialFullImageProps } from ".";
 
 export default {
+  component: PartialFullImage,
   title: "Partials/Full Image",
-  decorators: [withKnobs],
+  argTypes: {
+    figure: { control: "file" },
+  },
 };
 
-export const Render = (): JSX.Element => (
-  <PartialFullImage>
-    <img
-      alt=""
-      src={
-        files("figure", "", [
-          "https://via.placeholder.com/1200x630?text=figure",
-        ])[0]
-      }
-    />
+type PartialFullImageStoryProps = PartialFullImageProps & {
+  figure: Array<string>;
+};
+
+const Template = ({ figure, ...args }: PartialFullImageStoryProps) => (
+  <PartialFullImage {...args}>
+    <img alt="" src={figure[0]} />
   </PartialFullImage>
 );
+
+export const Render = Template.bind({});
+Render.args = {
+  figure: ["https://via.placeholder.com/1200x630?text=figure"],
+};

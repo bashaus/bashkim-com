@@ -1,24 +1,21 @@
-import { withKnobs, text } from "@storybook/addon-knobs";
-
-import { ComponentDecorator } from "%storybook/decorators/component";
-
-import { VideoPlayerYouTube } from ".";
+import { VideoPlayerYouTube, VideoPlayerYouTubeProps } from ".";
 
 export default {
+  component: VideoPlayerYouTube,
   title: "Components/Video Player YouTube",
-  decorators: [withKnobs, ComponentDecorator],
+  parameters: {
+    layout: "centered",
+  },
 };
 
-export const Render = (): JSX.Element => (
-  <div
-    style={{
-      width: "100%",
-      maxWidth: 600,
-    }}
-  >
-    <VideoPlayerYouTube
-      v={text("v", "a-q_dnOErQY")}
-      title={text("title", "Looking For You - Making-of Video")}
-    />
+const Template = ({ ...args }: VideoPlayerYouTubeProps) => (
+  <div style={{ maxWidth: 600, width: "100vw" }}>
+    <VideoPlayerYouTube {...args} />
   </div>
 );
+
+export const Render = Template.bind({});
+Render.args = {
+  v: "aqz-KE-bpKQ",
+  title: "Big Buck Bunny 60fps 4K - Official Blender Foundation Short Film",
+};

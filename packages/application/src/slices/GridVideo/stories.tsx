@@ -1,11 +1,20 @@
 import { GridVideoSliceFixture } from "@bashkim-com/prismic";
 
-import { GridVideoSlice } from ".";
+import { GridVideoSlice, GridVideoSliceProps } from ".";
 
 export default {
-  title: "Slices/Grid Video",
+  component: GridVideoSlice,
+  title: "Slices/GridVideo",
+  argTypes: {
+    slice: { control: "json" },
+  },
 };
 
-export const Render = (): JSX.Element => (
-  <GridVideoSlice slice={GridVideoSliceFixture} />
+const Template = ({ ...args }: GridVideoSliceProps) => (
+  <GridVideoSlice {...args} />
 );
+
+export const Render = Template.bind({});
+Render.args = {
+  slice: GridVideoSliceFixture,
+};

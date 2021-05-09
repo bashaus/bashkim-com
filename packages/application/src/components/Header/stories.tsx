@@ -1,13 +1,19 @@
-import { Header } from ".";
+import { Header, HeaderProps } from ".";
 
 import { NavigationProvider } from "%contexts/Navigation/provider";
 
 export default {
+  component: Header,
   title: "Components/Header",
 };
 
-export const Render = (): JSX.Element => (
+const Template = ({ ...args }: HeaderProps) => (
   <NavigationProvider>
-    <Header theme="default" />
+    <Header {...args} />
   </NavigationProvider>
 );
+
+export const Render = Template.bind({});
+Render.args = {
+  theme: "default",
+};

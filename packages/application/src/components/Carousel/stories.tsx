@@ -1,43 +1,47 @@
 import faker from "faker";
 
-import { ComponentDecorator } from "%storybook/decorators/component";
-
-import { Carousel } from ".";
+import { Carousel, CarouselProps } from ".";
 
 export default {
+  component: Carousel,
   title: "Components/Carousel",
-  decorators: [ComponentDecorator],
+  argTypes: {
+    slides: { control: "number" },
+  },
+  parameters: {
+    layout: "centered",
+  },
 };
 
-export const Render = (): JSX.Element => (
+type CarouselStoryProps = CarouselProps & {
+  slides: number;
+};
+
+const Template = ({ slides, ...args }: CarouselStoryProps) => (
   <div
     style={{
+      width: "100vw",
       maxWidth: 600,
       marginLeft: 30,
       marginRight: 30,
     }}
   >
-    <Carousel>
-      <div>
-        <h3>Slide 1</h3>
-        <p>{faker.lorem.paragraph()}</p>
-        <p>{faker.lorem.paragraph()}</p>
-        <p>{faker.lorem.paragraph()}</p>
-      </div>
-
-      <div>
-        <h3>Slide 2</h3>
-        <p>{faker.lorem.paragraph()}</p>
-        <p>{faker.lorem.paragraph()}</p>
-        <p>{faker.lorem.paragraph()}</p>
-      </div>
-
-      <div>
-        <h3>Slide 3</h3>
-        <p>{faker.lorem.paragraph()}</p>
-        <p>{faker.lorem.paragraph()}</p>
-        <p>{faker.lorem.paragraph()}</p>
-      </div>
+    <Carousel {...args}>
+      {Array(slides)
+        .fill("")
+        .map((_value, index) => (
+          <div key={index}>
+            <h3>Slide {index + 1}</h3>
+            <p>{faker.lorem.paragraph(2)}</p>
+            <p>{faker.lorem.paragraph(2)}</p>
+            <p>{faker.lorem.paragraph(2)}</p>
+          </div>
+        ))}
     </Carousel>
   </div>
 );
+
+export const Render = Template.bind({});
+Render.args = {
+  slides: 3,
+};

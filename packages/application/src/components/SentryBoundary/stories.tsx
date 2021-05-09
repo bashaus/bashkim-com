@@ -1,19 +1,22 @@
-import { withKnobs } from "@storybook/addon-knobs";
-import { ComponentDecorator } from "%storybook/decorators/component";
-
 import { SentryBoundary } from ".";
 
 export default {
+  component: SentryBoundary,
   title: "Components/SentryBoundary",
-  decorators: [withKnobs, ComponentDecorator],
+  parameters: {
+    layout: "centered",
+  },
 };
 
 const ThrowErrorComponent = () => {
   throw new Error("Error");
 };
 
-export const Render = (): JSX.Element => (
-  <SentryBoundary>
+const Template = (...args) => (
+  <SentryBoundary {...args}>
     <ThrowErrorComponent />
   </SentryBoundary>
 );
+
+export const Render = Template.bind({});
+Render.args = {};

@@ -1,26 +1,44 @@
-import { withKnobs, files, text } from "@storybook/addon-knobs";
+import faker from "faker";
 
-import { PartialCaptioned } from ".";
+import { PartialCaptioned, PartialCaptionedProps } from ".";
 
 export default {
+  component: PartialCaptioned,
   title: "Partials/Captioned",
-  decorators: [withKnobs],
+  argTypes: {
+    figure: { control: "file" },
+    title: {
+      control: "text",
+      description: "Example of a title (within children)",
+    },
+    subtitle: {
+      control: "text",
+      description: "Example of a subtitle (within children)",
+    },
+  },
 };
 
-export const Render = (): JSX.Element => (
-  <PartialCaptioned
-    figure={
-      <img
-        src={
-          files("figure", "", [
-            "https://via.placeholder.com/1200x630?text=figure",
-          ])[0]
-        }
-        alt=""
-      />
-    }
-  >
-    <h3>{text("heading", "heading")}</h3>
-    <p>{text("text", "text")}</p>
+type PartialCaptionedStoryProps = PartialCaptionedProps & {
+  figure: Array<string>;
+  title: string;
+  subtitle: string;
+};
+
+const Template = ({
+  title,
+  subtitle,
+  figure,
+  ...args
+}: PartialCaptionedStoryProps) => (
+  <PartialCaptioned figure={<img src={figure[0]} alt="" />} {...args}>
+    <h3>{title}</h3>
+    <p>{subtitle}</p>
   </PartialCaptioned>
 );
+
+export const Render = Template.bind({});
+Render.args = {
+  figure: ["https://via.placeholder.com/1200x630?text=figure"],
+  title: "PartialCaptioned",
+  subtitle: faker.lorem.paragraph(),
+};

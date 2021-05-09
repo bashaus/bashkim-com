@@ -5,6 +5,7 @@ module.exports = ({ config }) => {
   config.resolve.alias = {
     ...config.resolve.alias,
     "%contexts": path.resolve(__dirname, "..", "src", "contexts"),
+    "%machines": path.resolve(__dirname, "..", "src", "machines"),
     "%styleguide": path.resolve(__dirname, "..", "src", "styleguide"),
   };
 

@@ -1,20 +1,29 @@
-import { withKnobs, files, text } from "@storybook/addon-knobs";
+import faker from "faker";
 
-import { ComponentDecorator } from "%storybook/decorators/component";
-
-import { Brick } from ".";
+import { Brick, BrickProps } from ".";
 
 export default {
+  component: Brick,
   title: "Components/Brick",
-  decorators: [withKnobs, ComponentDecorator],
+  argTypes: {
+    icon: { control: "file" },
+  },
+  parameters: {
+    layout: "centered",
+  },
 };
 
-export const Render = (): JSX.Element => (
-  <Brick
-    title={text("title", "Brick title")}
-    description={text("description", "Brick description")}
-    icon={
-      files("icon", "", ["https://via.placeholder.com/300x300?text=icon"])[0]
-    }
-  />
+type BrickStoryProps = BrickProps & {
+  icon: Array<string>;
+};
+
+const Template = ({ icon, ...args }: BrickStoryProps): JSX.Element => (
+  <Brick {...args} icon={icon[0]} />
 );
+
+export const Render = Template.bind({});
+Render.args = {
+  icon: ["https://via.placeholder.com/300x300?text=icon"],
+  title: "Brick",
+  description: faker.lorem.sentence(8),
+};

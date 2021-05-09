@@ -1,11 +1,20 @@
 import { CaptionedImageSliceFixture } from "@bashkim-com/prismic";
 
-import { CaptionedImageSlice } from ".";
+import { CaptionedImageSlice, CaptionedImageSliceProps } from ".";
 
 export default {
-  title: "Slices/Captioned Image",
+  component: CaptionedImageSlice,
+  title: "Slices/CaptionedImage",
+  argTypes: {
+    slice: { control: "json" },
+  },
 };
 
-export const Render = (): JSX.Element => (
-  <CaptionedImageSlice slice={CaptionedImageSliceFixture} />
+const Template = ({ ...args }: CaptionedImageSliceProps) => (
+  <CaptionedImageSlice {...args} />
 );
+
+export const Render = Template.bind({});
+Render.args = {
+  slice: CaptionedImageSliceFixture,
+};

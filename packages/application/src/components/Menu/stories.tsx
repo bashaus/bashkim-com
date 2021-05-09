@@ -1,27 +1,31 @@
-import { Menu } from ".";
+import { Menu, MenuProps } from ".";
 import { MenuBackButtonHomeImpl } from "%components/MenuBackButtonHomeImpl";
 import { MenuBackButtonPortfolioImpl } from "%components/MenuBackButtonPortfolioImpl";
 
 import { NavigationProvider } from "%contexts/Navigation/provider";
 
 export default {
+  component: Menu,
   title: "Components/Menu",
 };
 
-export const Render = (): JSX.Element => (
+const Template = ({ ...args }: MenuProps) => (
   <NavigationProvider>
-    <Menu />
+    <Menu {...args} />
   </NavigationProvider>
 );
 
-export const Home = (): JSX.Element => (
-  <NavigationProvider>
-    <Menu backButton={MenuBackButtonHomeImpl} />
-  </NavigationProvider>
-);
+export const Render = Template.bind({});
+Render.args = {
+  backButton: undefined,
+};
 
-export const Portfolio = (): JSX.Element => (
-  <NavigationProvider>
-    <Menu backButton={MenuBackButtonPortfolioImpl} />
-  </NavigationProvider>
-);
+export const Home = Template.bind({});
+Home.args = {
+  backButton: MenuBackButtonHomeImpl,
+};
+
+export const Portfolio = Template.bind({});
+Portfolio.args = {
+  backButton: MenuBackButtonPortfolioImpl,
+};

@@ -2,6 +2,10 @@ import styles from "./styles.module.scss";
 
 export type PartialCaptionedProps = {
   children: React.ReactNode;
+
+  /**
+   * An image, canvas, etc. which represents the figure
+   */
   figure: React.ReactNode;
 };
 

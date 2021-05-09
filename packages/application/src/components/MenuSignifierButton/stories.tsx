@@ -1,16 +1,20 @@
-import { ComponentDecorator } from "%storybook/decorators/component";
-
 import { NavigationProvider } from "%contexts/Navigation/provider";
 
 import { MenuSignifierButton } from ".";
 
 export default {
+  component: MenuSignifierButton,
   title: "Components/MenuSignifierButton",
-  decorators: [ComponentDecorator],
+  parameters: {
+    layout: "centered",
+  },
 };
 
-export const Render = (): JSX.Element => (
+const Template = ({ ...args }) => (
   <NavigationProvider>
-    <MenuSignifierButton />
+    <MenuSignifierButton {...args} />
   </NavigationProvider>
 );
+
+export const Render = Template.bind({});
+Render.args = {};

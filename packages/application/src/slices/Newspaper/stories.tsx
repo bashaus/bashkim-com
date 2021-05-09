@@ -1,11 +1,20 @@
 import { NewspaperSliceFixture } from "@bashkim-com/prismic";
 
-import { NewspaperSlice } from ".";
+import { NewspaperSlice, NewspaperSliceProps } from ".";
 
 export default {
-  title: "Slices/Grid Video",
+  component: NewspaperSlice,
+  title: "Slices/Newspaper",
+  argTypes: {
+    slice: { control: "json" },
+  },
 };
 
-export const Render = (): JSX.Element => (
-  <NewspaperSlice slice={NewspaperSliceFixture} />
+const Template = ({ ...args }: NewspaperSliceProps) => (
+  <NewspaperSlice {...args} />
 );
+
+export const Render = Template.bind({});
+Render.args = {
+  slice: NewspaperSliceFixture,
+};

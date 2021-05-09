@@ -1,46 +1,41 @@
-import { withKnobs, number } from "@storybook/addon-knobs";
-import { action } from "@storybook/addon-actions";
-
-import { ComponentDecorator } from "%storybook/decorators/component";
-
-import { Magazine } from ".";
+import { Magazine, MagazineProps } from ".";
 
 export default {
+  component: Magazine,
   title: "Components/Magazine",
-  decorators: [withKnobs, ComponentDecorator],
+  argTypes: {
+    spread: { control: "number", min: 1, max: 3 },
+  },
+  parameters: {
+    layout: "centered",
+  },
 };
 
-export const Render = (): JSX.Element => {
-  const spread = number("spread", 1, { min: 1, max: 3 });
-  const pages = 4;
-  const pagesArrray = new Array(pages).fill("").map((_value, index) => index);
-
-  return (
-    <div
-      style={{
-        maxWidth: 600,
-        width: "100%",
-      }}
-    >
-      <Magazine
-        spread={spread}
-        pages={pages}
-        pageWidth={300}
-        pageHeight={450}
-        onInitialize={action("onInitialize")}
-        onSpreadChange={action("onSpreadChange")}
-      >
-        {pagesArrray.map((i) => (
-          <li key={i}>
+const Template = ({ ...args }: MagazineProps) => (
+  <div style={{ maxWidth: 600, width: "100vw" }}>
+    <Magazine {...args}>
+      {Array(args.pages)
+        .fill("")
+        .map((_value, index) => (
+          <li key={index}>
             <img
-              src={`https://via.placeholder.com/300x450?text=Page+${i + 1}`}
-              alt={`Page ${i + 1}`}
-              width={300}
-              height={450}
+              src={`https://via.placeholder.com/${args.pageWidth}x${
+                args.pageHeight
+              }?text=Page+${index + 1}`}
+              alt={`Page ${index + 1}`}
+              width={args.pageWidth}
+              height={args.pageHeight}
             />
           </li>
         ))}
-      </Magazine>
-    </div>
-  );
+    </Magazine>
+  </div>
+);
+
+export const Render = Template.bind({});
+Render.args = {
+  pageWidth: 350,
+  pageHeight: 450,
+  spread: 1,
+  pages: 6,
 };

@@ -10,11 +10,11 @@
           "%components": "./src/components",
           "%contexts": "./src/contexts",
           "%libraries": "./src/libraries",
+          "%machines/*": "./src/machines/*",
           "%partials": "./src/partials",
           "%prismic": "./src/libraries/prismic",
           "%public": "./public",
           "%slices": "./src/slices",
-          "%storybook": "./.storybook",
           "%styleguide": "./src/styleguide"
         }
       }

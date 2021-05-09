@@ -1,11 +1,20 @@
 import { CaptionedMagazineSliceFixture } from "@bashkim-com/prismic";
 
-import { CaptionedMagazineSlice } from ".";
+import { CaptionedMagazineSlice, CaptionedMagazineSliceProps } from ".";
 
 export default {
-  title: "Slices/Captioned Magazine",
+  component: CaptionedMagazineSlice,
+  title: "Slices/CaptionedMagazine",
+  argTypes: {
+    slice: { control: "json" },
+  },
 };
 
-export const Render = (): JSX.Element => (
-  <CaptionedMagazineSlice slice={CaptionedMagazineSliceFixture} />
+const Template = ({ ...args }: CaptionedMagazineSliceProps) => (
+  <CaptionedMagazineSlice {...args} />
 );
+
+export const Render = Template.bind({});
+Render.args = {
+  slice: CaptionedMagazineSliceFixture,
+};

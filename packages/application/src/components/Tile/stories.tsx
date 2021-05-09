@@ -1,31 +1,29 @@
-import { withKnobs, files, text } from "@storybook/addon-knobs";
+import faker from "faker";
 
-import { ComponentDecorator } from "%storybook/decorators/component";
-
-import { Tile } from ".";
+import { Tile, TileProps } from ".";
 
 export default {
+  component: Tile,
   title: "Components/Tile",
-  decorators: [withKnobs, ComponentDecorator],
+  argTypes: {
+    icon: { control: "file" },
+    poster: { control: "file" },
+  },
+  parameters: {
+    layout: "centered",
+  },
 };
 
-export const Render = (): JSX.Element => (
-  <div
-    style={{
-      maxWidth: 200,
-    }}
-  >
-    <Tile
-      description={text("description", "description")}
-      icon={
-        files("icon", "", ["https://via.placeholder.com/300x300?text=icon"])[0]
-      }
-      poster={
-        files("poster", "", [
-          "https://via.placeholder.com/640x360?text=poster",
-        ])[0]
-      }
-      title={text("title", "title")}
-    />
+const Template = ({ icon, poster, ...args }: TileProps) => (
+  <div style={{ maxWidth: 200, width: "100vw" }}>
+    <Tile {...args} icon={icon[0]} poster={poster[0]} />
   </div>
 );
+
+export const Render = Template.bind({});
+Render.args = {
+  title: "Tile",
+  description: faker.lorem.sentence(8),
+  icon: ["https://via.placeholder.com/300x300?text=icon"],
+  poster: ["https://via.placeholder.com/640x360?text=poster"],
+};

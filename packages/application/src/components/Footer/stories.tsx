@@ -1,7 +1,11 @@
 import { Footer } from ".";
 
 export default {
+  component: Footer,
   title: "Components/Footer",
 };
 
-export const Render = (): JSX.Element => <Footer />;
+const Template = ({ ...args }) => <Footer {...args} />;
+
+export const Render = Template.bind({});
+Render.args = {};

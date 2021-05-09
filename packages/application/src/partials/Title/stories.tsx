@@ -1,19 +1,38 @@
-import { withKnobs, files, text } from "@storybook/addon-knobs";
+import faker from "faker";
 
-import { PartialTitle } from ".";
+import { PartialTitle, PartialTitleProps } from ".";
 
 export default {
+  component: PartialTitle,
   title: "Partials/Title",
-  decorators: [withKnobs],
+  argTypes: {
+    image: { control: "file" },
+    title: { control: "text" },
+    subtitle: { control: "text" },
+  },
 };
 
-export const Render = (): JSX.Element => (
-  <PartialTitle
-    image={
-      files("image", "", ["https://via.placeholder.com/300x300?text=image"])[0]
-    }
-  >
-    <h1>{text("Title", "Hello World")}</h1>
-    <p>{text("Description", "Lorem ipsum dolar sit a met.")}</p>
+type PartialTitleStoryProps = PartialTitleProps & {
+  image: Array<string>;
+  title: string;
+  subtitle: string;
+};
+
+const Template = ({
+  image,
+  title,
+  subtitle,
+  ...args
+}: PartialTitleStoryProps) => (
+  <PartialTitle image={image[0]} {...args}>
+    <h1>{title}</h1>
+    <p>{subtitle}</p>
   </PartialTitle>
 );
+
+export const Render = Template.bind({});
+Render.args = {
+  image: ["https://via.placeholder.com/300x300?text=image"],
+  title: "PartialTitle",
+  subtitle: faker.lorem.sentence(8),
+};

@@ -11,11 +11,11 @@
       "%components/*": ["./components/*"],
       "%contexts/*": ["./contexts/*"],
       "%libraries/*": ["./libraries/*"],
+      "%machines/*": ["./machines/*"],
       "%partials/*": ["./partials/*"],
       "%prismic/*": ["./libraries/prismic/*"],
       "%public/*": ["../public/*"],
       "%slices/*": ["./slices/*"],
-      "%storybook/*": ["../.storybook/*"],
       "%styleguide/*": ["./styleguide/*"]
     },
     "skipLibCheck": true,

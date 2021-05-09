@@ -1,13 +1,16 @@
-import { CookiesProvider } from "%contexts/Cookies/provider";
-
-import { CookiesNotice } from ".";
+import { CookiesNotice, CookiesNoticeProps } from ".";
 
 export default {
+  component: CookiesNotice,
   title: "Components/CookiesNotice",
+  parameters: {
+    controls: { hideNoControlsWarning: true },
+  },
 };
 
-export const Render = (): JSX.Element => (
-  <CookiesProvider>
-    <CookiesNotice />
-  </CookiesProvider>
+const Template = ({ ...args }: CookiesNoticeProps) => (
+  <CookiesNotice {...args} />
 );
+
+export const Render = Template.bind({});
+Render.args = {};

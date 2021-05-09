@@ -1,18 +1,29 @@
-import { withKnobs, text } from "@storybook/addon-knobs";
-
-import { ComponentDecorator } from "%storybook/decorators/component";
-
-import { CallToAction } from ".";
+import { CallToAction, CallToActionProps } from ".";
 
 export default {
+  component: CallToAction,
   title: "Components/CallToAction",
-  decorators: [withKnobs, ComponentDecorator],
+  argTypes: {
+    content: { control: "text" },
+  },
+  parameters: {
+    layout: "centered",
+  },
 };
 
-export const Render = (): JSX.Element => (
-  <CallToAction>
+type CallToActionStoryProps = CallToActionProps & {
+  content: string;
+};
+
+const Template = ({ content, ...args }: CallToActionStoryProps) => (
+  <CallToAction {...args}>
     <a>
-      <span>{text("content", "Content")}</span>
+      <span>{content}</span>
     </a>
   </CallToAction>
 );
+
+export const Render = Template.bind({});
+Render.args = {
+  content: "CallToAction",
+};

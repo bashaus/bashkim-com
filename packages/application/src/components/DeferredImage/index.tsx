@@ -5,10 +5,10 @@ import { BlurhashCanvas } from "react-blurhash";
 import { CSSTransition, SwitchTransition } from "react-transition-group";
 import VisibilitySensor from "react-visibility-sensor";
 
-import { PromiseFetchEvent, PromiseEvent } from "machines/Promise/events";
-import { PromiseMachine } from "machines/Promise/machine";
-import { PromiseService } from "machines/Promise/services";
-import { PromiseState } from "machines/Promise/states";
+import { PromiseFetchEvent, PromiseEvent } from "%machines/Promise/events";
+import { PromiseMachine } from "%machines/Promise/machine";
+import { PromiseService } from "%machines/Promise/services";
+import { PromiseState } from "%machines/Promise/states";
 
 import styles from "./styles.module.scss";
 

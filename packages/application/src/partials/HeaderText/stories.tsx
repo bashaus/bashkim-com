@@ -1,15 +1,34 @@
-import { withKnobs, text } from "@storybook/addon-knobs";
+import faker from "faker";
 
-import { PartialHeaderText } from ".";
+import { PartialHeaderText, PartialHeaderTextProps } from ".";
 
 export default {
+  component: PartialHeaderText,
   title: "Partials/Header Text",
-  decorators: [withKnobs],
+  argTypes: {
+    title: { control: "text" },
+    subtitle: { control: "text" },
+  },
 };
 
-export const Render = (): JSX.Element => (
-  <PartialHeaderText>
-    <h1>{text("<h1>", "Hello World")}</h1>
-    <p>{text("<p>", "Lorem ipsum dolar sit a met")}</p>
+type PartialHeaderTextStoryProps = PartialHeaderTextProps & {
+  title: string;
+  subtitle: string;
+};
+
+const Template = ({
+  title,
+  subtitle,
+  ...args
+}: PartialHeaderTextStoryProps) => (
+  <PartialHeaderText {...args}>
+    <h1>{title}</h1>
+    <p>{subtitle}</p>
   </PartialHeaderText>
 );
+
+export const Render = Template.bind({});
+Render.args = {
+  title: "PartialHeaderText",
+  subtitle: faker.lorem.sentence(8),
+};

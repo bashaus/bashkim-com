@@ -1,15 +1,30 @@
-import { withKnobs, text } from "@storybook/addon-knobs";
+import faker from "faker";
 
-import { PartialSubtitle } from ".";
+import { PartialSubtitle, PartialSubtitleProps } from ".";
 
 export default {
+  components: PartialSubtitle,
   title: "Partials/Subtitle",
-  decorators: [withKnobs],
+  argTypes: {
+    title: { control: "text" },
+    subtitle: { control: "text" },
+  },
 };
 
-export const Render = (): JSX.Element => (
-  <PartialSubtitle>
-    <h2>{text("heading", "heading")}</h2>
-    <p>{text("subtitle", "subheading")}</p>
+type PartialSubtitleStoryProps = PartialSubtitleProps & {
+  title: string;
+  subtitle: string;
+};
+
+const Template = ({ title, subtitle, ...args }: PartialSubtitleStoryProps) => (
+  <PartialSubtitle {...args}>
+    <h2>{title}</h2>
+    <p>{subtitle}</p>
   </PartialSubtitle>
 );
+
+export const Render = Template.bind({});
+Render.args = {
+  title: "PartialSubtitle",
+  subtitle: faker.lorem.sentence(8),
+};

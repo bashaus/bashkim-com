@@ -1,26 +1,32 @@
 import faker from "faker";
-import { withKnobs } from "@storybook/addon-knobs";
 
-import { PartialNewspaper } from ".";
+import { PartialNewspaper, PartialNewspaperProps } from ".";
 
 export default {
+  component: PartialNewspaper,
   title: "Partials/Newspaper",
-  decorators: [withKnobs],
+  argTypes: {
+    paragraphs: { control: "number", min: 1, max: 100 },
+  },
 };
 
-export const Render = (): JSX.Element => (
-  <PartialNewspaper>
-    <div>{faker.lorem.paragraph()}</div>
-    <div>{faker.lorem.paragraph()}</div>
-    <div>{faker.lorem.paragraph()}</div>
-    <div>{faker.lorem.paragraph()}</div>
-    <div>{faker.lorem.paragraph()}</div>
-    <div>{faker.lorem.paragraph()}</div>
-    <div>{faker.lorem.paragraph()}</div>
-    <div>{faker.lorem.paragraph()}</div>
-    <div>{faker.lorem.paragraph()}</div>
-    <div>{faker.lorem.paragraph()}</div>
-    <div>{faker.lorem.paragraph()}</div>
-    <div>{faker.lorem.paragraph()}</div>
+type PartialNewspaperStoryProps = PartialNewspaperProps & {
+  paragraphs: number;
+};
+
+const Template = ({ paragraphs, ...args }: PartialNewspaperStoryProps) => (
+  <PartialNewspaper {...args}>
+    {Array(paragraphs)
+      .fill("")
+      .map((_value, index) => (
+        <div key={index}>
+          Paragraph {index + 1}: {faker.lorem.paragraph()}
+        </div>
+      ))}
   </PartialNewspaper>
 );
+
+export const Render = Template.bind({});
+Render.args = {
+  paragraphs: 10,
+};

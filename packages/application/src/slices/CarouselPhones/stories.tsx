@@ -1,11 +1,20 @@
 import { CarouselPhonesSliceFixture } from "@bashkim-com/prismic";
 
-import { CarouselPhonesSlice } from ".";
+import { CarouselPhonesSlice, CarouselPhonesSliceProps } from ".";
 
 export default {
-  title: "Slices/Carousel Phones",
+  component: CarouselPhonesSlice,
+  title: "Slices/CarouselPhones",
+  argTypes: {
+    slice: { control: "json" },
+  },
 };
 
-export const Render = (): JSX.Element => (
-  <CarouselPhonesSlice slice={CarouselPhonesSliceFixture} />
+const Template = ({ ...args }: CarouselPhonesSliceProps) => (
+  <CarouselPhonesSlice {...args} />
 );
+
+export const Render = Template.bind({});
+Render.args = {
+  slice: CarouselPhonesSliceFixture,
+};

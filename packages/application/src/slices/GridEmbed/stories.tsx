@@ -1,11 +1,20 @@
 import { GridEmbedSliceFixture } from "@bashkim-com/prismic";
 
-import { GridEmbedSlice } from ".";
+import { GridEmbedSlice, GridEmbedSliceProps } from ".";
 
 export default {
-  title: "Slices/Grid Embed",
+  component: GridEmbedSlice,
+  title: "Slices/GridEmbed",
+  argTypes: {
+    slice: { control: "json" },
+  },
 };
 
-export const Render = (): JSX.Element => (
-  <GridEmbedSlice slice={GridEmbedSliceFixture} />
+const Template = ({ ...args }: GridEmbedSliceProps) => (
+  <GridEmbedSlice {...args} />
 );
+
+export const Render = Template.bind({});
+Render.args = {
+  slice: GridEmbedSliceFixture,
+};

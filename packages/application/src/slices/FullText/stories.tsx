@@ -1,11 +1,20 @@
 import { FullTextSliceFixture } from "@bashkim-com/prismic";
 
-import { FullTextSlice } from ".";
+import { FullTextSlice, FullTextSliceProps } from ".";
 
 export default {
-  title: "Slices/Full Text",
+  component: FullTextSlice,
+  title: "Slices/FullText",
+  argTypes: {
+    slice: { control: "json" },
+  },
 };
 
-export const Render = (): JSX.Element => (
-  <FullTextSlice slice={FullTextSliceFixture} />
+const Template = ({ ...args }: FullTextSliceProps) => (
+  <FullTextSlice {...args} />
 );
+
+export const Render = Template.bind({});
+Render.args = {
+  slice: FullTextSliceFixture,
+};

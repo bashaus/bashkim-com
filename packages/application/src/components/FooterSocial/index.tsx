@@ -4,7 +4,7 @@ import styles from "./styles.module.scss";
 
 export const FooterSocial = (): JSX.Element => (
   <div className={styles.FooterSocial}>
-    <FooterColumn label="Connect">
+    <FooterColumn label="Connect" className={styles.FooterColumn}>
       <ul>
         <li>
           <a

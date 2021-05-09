@@ -7,7 +7,13 @@ import { CookiesContext } from "%contexts/Cookies/context";
 
 import styles from "./styles.module.scss";
 
-export const CookiesNotice = (): JSX.Element | null => {
+export type CookiesNoticeProps = {
+  onDismiss?(): void;
+};
+
+export const CookiesNotice = ({
+  onDismiss,
+}: CookiesNoticeProps): JSX.Element | null => {
   const { state: cookiesState, dispatch: cookiesDispatch } = useContext(
     CookiesContext
   );
@@ -16,7 +22,8 @@ export const CookiesNotice = (): JSX.Element | null => {
 
   const handleDismissClick = useCallback((): void => {
     cookiesDispatch({ type: CookiesActionsTypes.DISMISS });
-  }, [cookiesDispatch]);
+    onDismiss && onDismiss();
+  }, [cookiesDispatch, onDismiss]);
 
   const handleAnimationEnd = useCallback((): void => {
     setIsVisible(false);

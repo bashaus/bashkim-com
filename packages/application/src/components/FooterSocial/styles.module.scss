@@ -16,5 +16,9 @@
 
   @include breakpoint($media-screen-large) {
     text-align: right;
+
+    .FooterColumn {
+      float: right;
+    }
   }
 }
