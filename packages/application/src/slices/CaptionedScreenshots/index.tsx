@@ -2,8 +2,8 @@ import { ChangeEvent, useCallback, useState } from "react";
 import type { CaptionedScreenshotsSliceType } from "@bashkim-com/prismic";
 
 import { DeviceMobileIcon, DeviceDesktopIcon } from "@primer/octicons-react";
-import DeferredAsset from "%components/DeferredAsset";
-import PartialCaptioned from "%partials/Captioned";
+import { DeferredAsset } from "%components/DeferredAsset";
+import { PartialCaptioned } from "%partials/Captioned";
 
 import { PrismicRichText } from "%prismic/helpers/RichText";
 
@@ -14,7 +14,7 @@ export type CaptionedScreenshotsSliceProps = {
   slice: CaptionedScreenshotsSliceType;
 };
 
-const CaptionedScreenshotsSlice = ({
+export const CaptionedScreenshotsSlice = ({
   slice,
   initialWidth = 1024,
 }: CaptionedScreenshotsSliceProps): JSX.Element => {

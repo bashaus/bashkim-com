@@ -1,6 +1,6 @@
 import { AccoladeSliceFixture } from "@bashkim-com/prismic";
 
-import AccoladeSlice from ".";
+import { AccoladeSlice } from ".";
 
 export default {
   title: "Slices/Accolade",

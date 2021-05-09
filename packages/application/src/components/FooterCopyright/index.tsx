@@ -1,6 +1,6 @@
 import styles from "./styles.module.scss";
 
-const FooterCopyright = (): JSX.Element => (
+export const FooterCopyright = (): JSX.Element => (
   <p
     className={styles.FooterCopyright}
     role="contentinfo"
@@ -19,5 +19,3 @@ const FooterCopyright = (): JSX.Element => (
     </span>
   </p>
 );
-
-export default FooterCopyright;

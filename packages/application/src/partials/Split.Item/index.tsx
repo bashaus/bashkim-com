@@ -2,12 +2,12 @@ import { CSSProperties } from "react";
 
 import styles from "./style.module.scss";
 
-type PartialSplitItemProps = {
+export type PartialSplitItemProps = {
   backgroundImage?: string;
   children?: React.ReactNode;
 };
 
-const PartialSplitItem = ({
+export const PartialSplitItem = ({
   backgroundImage,
   children,
 }: PartialSplitItemProps): JSX.Element => {
@@ -28,5 +28,3 @@ const PartialSplitItem = ({
     </div>
   );
 };
-
-export default PartialSplitItem;

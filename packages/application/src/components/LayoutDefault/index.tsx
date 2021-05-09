@@ -1,19 +1,19 @@
 import { useEffect } from "react";
 
-import GoogleAnalytics from "%components/GoogleAnalytics";
-import CookiesNotice from "%components/CookiesNotice";
-import Page from "%components/Page";
+import { GoogleAnalytics } from "%components/GoogleAnalytics";
+import { CookiesNotice } from "%components/CookiesNotice";
+import { Page } from "%components/Page";
 
-import CookiesProvider from "%contexts/Cookies/provider";
+import { CookiesProvider } from "%contexts/Cookies/provider";
 import { NavigationProvider } from "%contexts/Navigation/provider";
 
-type LayoutDefaultProps = {
+export type LayoutDefaultProps = {
   backButton?: React.ReactNode;
   children?: React.ReactNode;
   theme?: string;
 };
 
-const LayoutDefault = ({
+export const LayoutDefault = ({
   backButton,
   children,
   theme = "default",
@@ -38,5 +38,3 @@ const LayoutDefault = ({
     </>
   );
 };
-
-export default LayoutDefault;

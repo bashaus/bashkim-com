@@ -4,13 +4,15 @@ import createPersistedState from "use-persisted-state";
 import { CookiesContext } from "./context";
 import { CookiesReducer } from "./reducer";
 
-type CookiesProviderProps = {
+export type CookiesProviderProps = {
   children: React.ReactNode;
 };
 
 const useCookiesDismissedState = createPersistedState("cookiesDismissed");
 
-const CookiesProvider = ({ children }: CookiesProviderProps): JSX.Element => {
+export const CookiesProvider = ({
+  children,
+}: CookiesProviderProps): JSX.Element => {
   const [isDismissed, setIsDismissed] = useCookiesDismissedState(false);
 
   const [state, dispatch] = useReducer(CookiesReducer, {
@@ -29,5 +31,3 @@ const CookiesProvider = ({ children }: CookiesProviderProps): JSX.Element => {
     </CookiesContext.Provider>
   );
 };
-
-export default CookiesProvider;

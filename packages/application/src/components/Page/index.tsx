@@ -2,23 +2,23 @@ import classNames from "classnames";
 import { Router } from "next/router";
 import { useCallback, useContext, useEffect } from "react";
 
-import Footer from "%components/Footer";
-import Header from "%components/Header";
-import HeaderIntersection from "%components/HeaderIntersection";
-import Menu from "%components/Menu";
+import { Footer } from "%components/Footer";
+import { Header } from "%components/Header";
+import { HeaderIntersection } from "%components/HeaderIntersection";
+import { Menu } from "%components/Menu";
 
 import { NavigationContext } from "%contexts/Navigation/context";
 import { NavigationActionsTypes } from "%contexts/Navigation/actions";
 
 import styles from "./styles.module.scss";
 
-type PageProps = {
+export type PageProps = {
   backButton?: React.ReactNode;
   children?: React.ReactNode;
   theme?: string;
 };
 
-const Page = ({
+export const Page = ({
   backButton,
   children,
   theme = "default",
@@ -69,5 +69,3 @@ const Page = ({
     </>
   );
 };
-
-export default Page;

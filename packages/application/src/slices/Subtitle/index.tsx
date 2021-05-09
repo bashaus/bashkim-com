@@ -1,6 +1,6 @@
 import type { SubtitleSliceType } from "@bashkim-com/prismic";
 
-import PartialSubtitle from "%partials/Subtitle";
+import { PartialSubtitle } from "%partials/Subtitle";
 
 import { PrismicRichText } from "%prismic/helpers/RichText";
 
@@ -8,7 +8,7 @@ export type SubtitleSliceProps = {
   slice: SubtitleSliceType;
 };
 
-const SubtitleSlice = ({ slice }: SubtitleSliceProps): JSX.Element => {
+export const SubtitleSlice = ({ slice }: SubtitleSliceProps): JSX.Element => {
   const {
     subtitle_slice_type_heading: heading,
     subtitle_slice_type_description: description,

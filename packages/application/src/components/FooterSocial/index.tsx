@@ -1,8 +1,8 @@
-import FooterColumn from "%components/FooterColumn";
+import { FooterColumn } from "%components/FooterColumn";
 
 import styles from "./styles.module.scss";
 
-const FooterSocial = (): JSX.Element => (
+export const FooterSocial = (): JSX.Element => (
   <div className={styles.FooterSocial}>
     <FooterColumn label="Connect">
       <ul>
@@ -28,5 +28,3 @@ const FooterSocial = (): JSX.Element => (
     </FooterColumn>
   </div>
 );
-
-export default FooterSocial;

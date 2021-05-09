@@ -1,10 +1,10 @@
 import Link from "next/link";
 
-import FooterColumn from "%components/FooterColumn";
+import { FooterColumn } from "%components/FooterColumn";
 
 import styles from "./styles.module.scss";
 
-const FooterLinks = (): JSX.Element => (
+export const FooterLinks = (): JSX.Element => (
   <div className={styles.FooterLinks}>
     <FooterColumn label="Articles">
       <ul>
@@ -59,5 +59,3 @@ const FooterLinks = (): JSX.Element => (
     </FooterColumn>
   </div>
 );
-
-export default FooterLinks;

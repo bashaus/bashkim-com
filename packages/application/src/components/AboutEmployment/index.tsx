@@ -1,9 +1,9 @@
-import PartialSplit from "%partials/Split";
-import PartialSubtitle from "%partials/Subtitle";
+import { PartialSplit } from "%partials/Split";
+import { PartialSubtitle } from "%partials/Subtitle";
 
 import styles from "./styles.module.scss";
 
-const AboutProfile = (): JSX.Element => (
+export const AboutEmployment = (): JSX.Element => (
   <section className="group">
     <PartialSubtitle>
       <h2>Employment</h2>
@@ -179,5 +179,3 @@ const AboutProfile = (): JSX.Element => (
     </PartialSplit>
   </section>
 );
-
-export default AboutProfile;

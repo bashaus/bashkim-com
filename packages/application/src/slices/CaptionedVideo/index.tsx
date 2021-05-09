@@ -1,8 +1,9 @@
 import type { CaptionedVideoSliceType } from "@bashkim-com/prismic";
 
-import DeferredAsset from "%components/DeferredAsset";
-import PartialCaptioned from "%partials/Captioned";
-import VideoPlayerYouTube from "%components/VideoPlayerYouTube";
+import { DeferredAsset } from "%components/DeferredAsset";
+import { VideoPlayerYouTube } from "%components/VideoPlayerYouTube";
+
+import { PartialCaptioned } from "%partials/Captioned";
 
 import { PrismicRichText } from "%prismic/helpers/RichText";
 
@@ -10,7 +11,7 @@ export type CaptionedVideoSliceProps = {
   slice: CaptionedVideoSliceType;
 };
 
-const CaptionedVideoSlice = ({
+export const CaptionedVideoSlice = ({
   slice,
 }: CaptionedVideoSliceProps): JSX.Element | null => {
   const {

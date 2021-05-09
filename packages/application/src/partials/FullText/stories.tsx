@@ -1,7 +1,7 @@
 import faker from "faker";
 import { withKnobs, text } from "@storybook/addon-knobs";
 
-import PartialFullText from ".";
+import { PartialFullText } from ".";
 
 export default {
   title: "Partials/Full Text",

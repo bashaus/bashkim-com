@@ -1,6 +1,6 @@
 import { withKnobs, text } from "@storybook/addon-knobs";
 
-import PartialHeaderText from ".";
+import { PartialHeaderText } from ".";
 
 export default {
   title: "Partials/Header Text",

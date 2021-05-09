@@ -5,7 +5,7 @@ import { NavigationActionsTypes } from "%contexts/Navigation/actions";
 
 import styles from "./styles.module.scss";
 
-const MenuSignifierButton = (): JSX.Element => {
+export const MenuSignifierButton = (): JSX.Element => {
   const { state: navigationState, dispatch: navigationDispatch } = useContext(
     NavigationContext
   );
@@ -31,5 +31,3 @@ const MenuSignifierButton = (): JSX.Element => {
     </button>
   );
 };
-
-export default MenuSignifierButton;

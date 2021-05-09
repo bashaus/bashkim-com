@@ -1,15 +1,15 @@
 import { ExhibitionSliceType } from "@bashkim-com/prismic";
 
-import PartialSubtitle from "%partials/Subtitle/index";
-import ExhibitionSlice from "%slices/Exhibition";
+import { PartialSubtitle } from "%partials/Subtitle/index";
+import { ExhibitionSlice } from "%slices/Exhibition";
 
 import styles from "./styles.module.scss";
 
-type CaseStudyExhibitionsProps = {
+export type CaseStudyExhibitionsProps = {
   slices: Array<ExhibitionSliceType>;
 };
 
-const CaseStudyExhibitions = ({
+export const CaseStudyExhibitions = ({
   slices = [],
 }: CaseStudyExhibitionsProps): JSX.Element | null => {
   if (!slices.length) {
@@ -30,5 +30,3 @@ const CaseStudyExhibitions = ({
     </>
   );
 };
-
-export default CaseStudyExhibitions;

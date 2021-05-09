@@ -1,6 +1,6 @@
 import { withKnobs, files } from "@storybook/addon-knobs";
 
-import PartialFullImage from ".";
+import { PartialFullImage } from ".";
 
 export default {
   title: "Partials/Full Image",

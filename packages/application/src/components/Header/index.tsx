@@ -1,18 +1,18 @@
 import classNames from "classnames";
 import { useContext } from "react";
 
-import Logo from "%components/Logo";
-import Navigation from "%components/Navigation";
+import { Logo } from "%components/Logo";
+import { Navigation } from "%components/Navigation";
 
 import { NavigationContext } from "%contexts/Navigation/context";
 
 import styles from "./styles.module.scss";
 
-type HeaderProps = {
+export type HeaderProps = {
   theme: string;
 };
 
-const Header = ({ theme }: HeaderProps): JSX.Element => {
+export const Header = ({ theme }: HeaderProps): JSX.Element => {
   const { state: navigationState } = useContext(NavigationContext);
 
   return (
@@ -32,5 +32,3 @@ const Header = ({ theme }: HeaderProps): JSX.Element => {
     </header>
   );
 };
-
-export default Header;

@@ -1,17 +1,18 @@
 import classNames from "classnames";
 import { useContext } from "react";
 
-import NavigationPrimary from "%components/NavigationPrimary";
-import NavigationSocial from "%components/NavigationSocial";
+import { NavigationPrimary } from "%components/NavigationPrimary";
+import { NavigationSocial } from "%components/NavigationSocial";
+
 import { NavigationContext } from "%contexts/Navigation/context";
 
 import styles from "./styles.module.scss";
 
-type NavigationProps = {
+export type NavigationProps = {
   theme: string;
 };
 
-const Navigation = ({ theme }: NavigationProps): JSX.Element => {
+export const Navigation = ({ theme }: NavigationProps): JSX.Element => {
   const { state: navigationState } = useContext(NavigationContext);
 
   return (
@@ -26,5 +27,3 @@ const Navigation = ({ theme }: NavigationProps): JSX.Element => {
     </div>
   );
 };
-
-export default Navigation;

@@ -1,13 +1,13 @@
 import type { AccoladeSliceType } from "@bashkim-com/prismic";
 
-import PartialSubtitle from "%partials/Subtitle";
-import AccoladeSlice from "%slices/Accolade";
+import { PartialSubtitle } from "%partials/Subtitle";
+import { AccoladeSlice } from "%slices/Accolade";
 
-type CaseStudyAccoladesProps = {
+export type CaseStudyAccoladesProps = {
   slices: Array<AccoladeSliceType>;
 };
 
-const CaseStudyAccolades = ({
+export const CaseStudyAccolades = ({
   slices = [],
 }: CaseStudyAccoladesProps): JSX.Element | null => {
   if (!slices.length) {
@@ -28,5 +28,3 @@ const CaseStudyAccolades = ({
     </>
   );
 };
-
-export default CaseStudyAccolades;

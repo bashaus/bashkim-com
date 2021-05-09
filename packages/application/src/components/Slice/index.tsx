@@ -1,5 +1,4 @@
 import dynamic from "next/dynamic";
-
 import type { PrismicSliceType } from "@bashkim-com/prismic";
 
 const SliceTypeComponentMap = {
@@ -20,15 +19,12 @@ const SliceTypeComponentMap = {
   SubtitleSliceType: dynamic(() => import("%slices/Subtitle")),
 };
 
-type SliceProps = {
+export type SliceProps = {
   slice: PrismicSliceType;
 };
 
-const Slice = (props: SliceProps): JSX.Element => {
+export const Slice = (props: SliceProps): JSX.Element => {
   const { slice } = props;
-
   const SliceTypeComponent = SliceTypeComponentMap[slice.type];
   return <SliceTypeComponent {...props} />;
 };
-
-export default Slice;

@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { ArrowLeftIcon } from "@primer/octicons-react";
 
-import MenuBackButton from "%components/MenuBackButton";
+import { MenuBackButton } from "%components/MenuBackButton";
 
-export default (
+export const MenuBackButtonPortfolioImpl = (
   <MenuBackButton>
     <Link href="/portfolio">
       <a>

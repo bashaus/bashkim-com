@@ -1,6 +1,6 @@
 import { CarouselImagesSliceFixture } from "@bashkim-com/prismic";
 
-import CarouselImagesSlice from ".";
+import { CarouselImagesSlice } from ".";
 
 export default {
   title: "Slices/Carousel Images",

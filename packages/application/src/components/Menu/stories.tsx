@@ -1,6 +1,6 @@
-import Menu from ".";
-import MenuBackButtonHomeImpl from "%components/MenuBackButtonHomeImpl";
-import MenuBackButtonPortfolioImpl from "%components/MenuBackButtonPortfolioImpl";
+import { Menu } from ".";
+import { MenuBackButtonHomeImpl } from "%components/MenuBackButtonHomeImpl";
+import { MenuBackButtonPortfolioImpl } from "%components/MenuBackButtonPortfolioImpl";
 
 import { NavigationProvider } from "%contexts/Navigation/provider";
 

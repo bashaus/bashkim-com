@@ -3,11 +3,13 @@ import Link from "next/link";
 
 import styles from "./styles.module.scss";
 
-type NavigationPrimaryProps = {
+export type NavigationPrimaryProps = {
   theme: string;
 };
 
-const NavigationPrimary = ({ theme }: NavigationPrimaryProps): JSX.Element => (
+export const NavigationPrimary = ({
+  theme,
+}: NavigationPrimaryProps): JSX.Element => (
   <nav
     data-heading="Main menu"
     aria-label="Main menu"
@@ -55,5 +57,3 @@ const NavigationPrimary = ({ theme }: NavigationPrimaryProps): JSX.Element => (
     </ul>
   </nav>
 );
-
-export default NavigationPrimary;

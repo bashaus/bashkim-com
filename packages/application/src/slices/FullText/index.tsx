@@ -2,13 +2,13 @@ import type { FullTextSliceType } from "@bashkim-com/prismic";
 
 import { PrismicRichText } from "%prismic/helpers/RichText";
 
-import PartialFullText from "%partials/FullText";
+import { PartialFullText } from "%partials/FullText";
 
 export type FullTextSliceProps = {
   slice: FullTextSliceType;
 };
 
-const FullTextSlice = ({ slice }: FullTextSliceProps): JSX.Element => {
+export const FullTextSlice = ({ slice }: FullTextSliceProps): JSX.Element => {
   const { full_text_slice_type_body: body } = slice.primary;
 
   return (

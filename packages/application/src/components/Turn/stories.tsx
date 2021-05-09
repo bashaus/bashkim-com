@@ -1,9 +1,9 @@
 import { action } from "@storybook/addon-actions";
 import { withKnobs, boolean, number, select } from "@storybook/addon-knobs";
 
-import ComponentDecorator from "%storybook/decorators/component";
+import { ComponentDecorator } from "%storybook/decorators/component";
 
-import Turn, { Display } from ".";
+import { Turn, TurnDisplay } from ".";
 
 export default {
   title: "Components/Turn",
@@ -21,7 +21,7 @@ export const Render = (): JSX.Element => {
     <div style={{ maxWidth: 800 }}>
       <Turn
         center={center}
-        display={display as Display}
+        display={display as TurnDisplay}
         page={page}
         pages={pages}
         pageWidth={300}

@@ -1,11 +1,11 @@
 import styles from "./styles.module.scss";
 
-type PartialCaptionedProps = {
+export type PartialCaptionedProps = {
   children: React.ReactNode;
   figure: React.ReactNode;
 };
 
-const PartialCaptioned = ({
+export const PartialCaptioned = ({
   children,
   figure,
 }: PartialCaptionedProps): JSX.Element => (
@@ -15,5 +15,3 @@ const PartialCaptioned = ({
     <div className={styles.figure}>{figure}</div>
   </figure>
 );
-
-export default PartialCaptioned;

@@ -1,13 +1,13 @@
-import PartialSplitItem from "%partials/Split.Item";
+import { PartialSplitItem } from "%partials/Split.Item";
 
 import styles from "./styles.module.scss";
 
-type PartialSplitProps = {
+export type PartialSplitProps = {
   index?: number;
   children?: React.ReactNode;
 };
 
-const PartialSplit = ({
+export const PartialSplit = ({
   children,
   index = 0,
 }: PartialSplitProps): JSX.Element => {
@@ -20,5 +20,3 @@ const PartialSplit = ({
 };
 
 PartialSplit.Item = PartialSplitItem;
-
-export default PartialSplit;

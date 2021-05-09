@@ -1,6 +1,6 @@
 import { GridVideoSliceFixture } from "@bashkim-com/prismic";
 
-import GridVideoSlice from ".";
+import { GridVideoSlice } from ".";
 
 export default {
   title: "Slices/Grid Video",

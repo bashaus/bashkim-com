@@ -1,6 +1,6 @@
 import { withKnobs, files, text } from "@storybook/addon-knobs";
 
-import PartialTitle from ".";
+import { PartialTitle } from ".";
 
 export default {
   title: "Partials/Title",

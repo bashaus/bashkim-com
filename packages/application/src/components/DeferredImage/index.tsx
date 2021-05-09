@@ -12,7 +12,7 @@ import { PromiseState } from "machines/Promise/states";
 
 import styles from "./styles.module.scss";
 
-type DeferredImageProps = {
+export type DeferredImageProps = {
   alt: string;
   blurHash?: string;
   src: string;
@@ -20,7 +20,7 @@ type DeferredImageProps = {
   height: number;
 };
 
-const DeferredImage = ({
+export const DeferredImage = ({
   alt,
   blurHash,
   src,
@@ -118,5 +118,3 @@ const DeferredImage = ({
     </SwitchTransition>
   );
 };
-
-export default DeferredImage;

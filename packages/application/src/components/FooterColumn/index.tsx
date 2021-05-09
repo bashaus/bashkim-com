@@ -3,13 +3,13 @@ import { useCallback, useState } from "react";
 
 import styles from "./styles.module.scss";
 
-type FooterColumnProps = {
+export type FooterColumnProps = {
   children: React.ReactNode;
   className?: string;
   label: string;
 };
 
-const FooterColumn = ({
+export const FooterColumn = ({
   className,
   label,
   children,
@@ -39,5 +39,3 @@ const FooterColumn = ({
     </div>
   );
 };
-
-export default FooterColumn;

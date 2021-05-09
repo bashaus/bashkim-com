@@ -2,7 +2,7 @@ import { AppProps } from "next/app";
 import Head from "next/head";
 
 import "%libraries/sentry/init";
-import SentryBoundary from "%components/SentryBoundary";
+import { SentryBoundary } from "%components/SentryBoundary";
 
 import "%styleguide/main.scss";
 

@@ -1,11 +1,11 @@
 import styles from "./styles.module.scss";
 
-type DeviceSmartphoneProps = {
+export type DeviceSmartphoneProps = {
   children: React.ReactNode;
   figure: React.ReactNode;
 };
 
-const DeviceSmartphone = ({
+export const DeviceSmartphone = ({
   children,
   figure,
 }: DeviceSmartphoneProps): JSX.Element => (
@@ -17,5 +17,3 @@ const DeviceSmartphone = ({
     <figcaption>{children}</figcaption>
   </figure>
 );
-
-export default DeviceSmartphone;

@@ -13,11 +13,11 @@ import IconTrophy from "%public/static/vectors/icons/trophy.svg";
 
 import styles from "./styles.module.scss";
 
-type AccoladeSliceProps = {
+export type AccoladeSliceProps = {
   slice: AccoladeSliceType;
 };
 
-const AccoladeSlice = ({ slice }: AccoladeSliceProps): JSX.Element => {
+export const AccoladeSlice = ({ slice }: AccoladeSliceProps): JSX.Element => {
   const {
     accolade_slice_type_issuer: issuer,
     accolade_slice_type_description: description,
@@ -62,5 +62,3 @@ const AccoladeSlice = ({ slice }: AccoladeSliceProps): JSX.Element => {
     </div>
   );
 };
-
-export default AccoladeSlice;

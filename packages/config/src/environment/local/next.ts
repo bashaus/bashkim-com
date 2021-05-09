@@ -1,7 +1,5 @@
 import { NextConfig } from "types/next";
 
-const localNext: Partial<NextConfig> = {
+export const next: Partial<NextConfig> = {
   dev: true,
 };
-
-export default localNext;

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import styles from "./styles.module.scss";
 
-const HomeBrands = (): JSX.Element => (
+export const HomeBrands = (): JSX.Element => (
   <section className="group">
     <ul className={styles.brands}>
       <li>
@@ -58,5 +58,3 @@ const HomeBrands = (): JSX.Element => (
     </ul>
   </section>
 );
-
-export default HomeBrands;

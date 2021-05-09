@@ -1,17 +1,17 @@
-import AboutProfile from "%components/AboutProfile";
-import AboutEmployment from "%components/AboutEmployment";
-import AboutTutoring from "%components/AboutTutoring";
-import AboutEducation from "%components/AboutEducation";
-import AboutCertifications from "%components/AboutCertifications";
-import LayoutDefault from "%components/LayoutDefault";
-import MenuBackButtonHomeImpl from "%components/MenuBackButtonHomeImpl";
-import MetaDescription from "%components/MetaDescription";
-import MetaKeywords from "%components/MetaKeywords";
-import MetaTitle from "%components/MetaTitle";
-import CallToAction from "%components/CallToAction";
-import PartialHeaderImage from "%partials/HeaderImage";
-import PartialSplit from "%partials/Split";
-import PartialSubtitle from "%partials/Subtitle";
+import { AboutProfile } from "%components/AboutProfile";
+import { AboutEmployment } from "%components/AboutEmployment";
+import { AboutTutoring } from "%components/AboutTutoring";
+import { AboutEducation } from "%components/AboutEducation";
+import { AboutCertifications } from "%components/AboutCertifications";
+import { LayoutDefault } from "%components/LayoutDefault";
+import { MenuBackButtonHomeImpl } from "%components/MenuBackButtonHomeImpl";
+import { MetaDescription } from "%components/MetaDescription";
+import { MetaKeywords } from "%components/MetaKeywords";
+import { MetaTitle } from "%components/MetaTitle";
+import { CallToAction } from "%components/CallToAction";
+import { PartialHeaderImage } from "%partials/HeaderImage";
+import { PartialSplit } from "%partials/Split";
+import { PartialSubtitle } from "%partials/Subtitle";
 
 import styles from "./styles.module.scss";
 

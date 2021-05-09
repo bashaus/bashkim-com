@@ -7,7 +7,7 @@ import { CookiesContext } from "%contexts/Cookies/context";
 
 import styles from "./styles.module.scss";
 
-const CookiesNotice = (): JSX.Element | null => {
+export const CookiesNotice = (): JSX.Element | null => {
   const { state: cookiesState, dispatch: cookiesDispatch } = useContext(
     CookiesContext
   );
@@ -53,5 +53,3 @@ const CookiesNotice = (): JSX.Element | null => {
     </div>
   );
 };
-
-export default CookiesNotice;

@@ -1,14 +1,16 @@
 import type { CaseStudyContentType } from "@bashkim-com/prismic";
 
-import PortfolioListBrick from "%components/PortfolioListBrick";
+import { PortfolioListBrick } from "%components/PortfolioListBrick";
 
 import styles from "./styles.module.scss";
 
-type PortfolioListProps = {
+export type PortfolioListProps = {
   caseStudies: Array<CaseStudyContentType>;
 };
 
-const PortfolioList = ({ caseStudies }: PortfolioListProps): JSX.Element => (
+export const PortfolioList = ({
+  caseStudies,
+}: PortfolioListProps): JSX.Element => (
   <ul className={styles.PortfolioList}>
     {caseStudies.map((caseStudy: CaseStudyContentType) => (
       <li key={caseStudy._meta.uid}>
@@ -17,5 +19,3 @@ const PortfolioList = ({ caseStudies }: PortfolioListProps): JSX.Element => (
     ))}
   </ul>
 );
-
-export default PortfolioList;

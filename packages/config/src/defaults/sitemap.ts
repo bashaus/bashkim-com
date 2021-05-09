@@ -1,7 +1,5 @@
 import type { SitemapConfig } from "types/sitemap";
 
-const defaultSitemapConfig: SitemapConfig = {
+export const sitemap: SitemapConfig = {
   baseHref: "https://www.bashkim.com",
 };
-
-export default defaultSitemapConfig;

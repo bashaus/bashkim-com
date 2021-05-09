@@ -1,11 +1,13 @@
 import styles from "./styles.module.scss";
 
-type VideoPlayerYouTubeProps = {
+export type VideoPlayerYouTubeProps = {
   title?: string;
   v: string;
 };
 
-const VideoPlayerYouTube = (props: VideoPlayerYouTubeProps): JSX.Element => {
+export const VideoPlayerYouTube = (
+  props: VideoPlayerYouTubeProps
+): JSX.Element => {
   const { title, v } = props;
 
   const src = new URL(`https://www.youtube-nocookie.com/embed/${v}`);
@@ -24,5 +26,3 @@ const VideoPlayerYouTube = (props: VideoPlayerYouTubeProps): JSX.Element => {
     </div>
   );
 };
-
-export default VideoPlayerYouTube;

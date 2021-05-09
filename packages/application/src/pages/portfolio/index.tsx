@@ -7,15 +7,16 @@ import type {
   PortfolioPageContentType,
 } from "@bashkim-com/prismic";
 
-import LayoutDefault from "%components/LayoutDefault";
-import MenuBackButtonHomeImpl from "%components/MenuBackButtonHomeImpl";
-import MetaDescription from "%components/MetaDescription";
-import MetaKeywords from "%components/MetaKeywords";
-import MetaTitle from "%components/MetaTitle";
-import PartialHeaderText from "%partials/HeaderText";
-import PartialSubtitle from "%partials/Subtitle";
-import PortfolioFeaturedCaseStudies from "%components/PortfolioFeaturedCaseStudies";
-import PortfolioList from "%components/PortfolioList";
+import { LayoutDefault } from "%components/LayoutDefault";
+import { MenuBackButtonHomeImpl } from "%components/MenuBackButtonHomeImpl";
+import { MetaDescription } from "%components/MetaDescription";
+import { MetaKeywords } from "%components/MetaKeywords";
+import { MetaTitle } from "%components/MetaTitle";
+import { PortfolioFeaturedCaseStudies } from "%components/PortfolioFeaturedCaseStudies";
+import { PortfolioList } from "%components/PortfolioList";
+
+import { PartialHeaderText } from "%partials/HeaderText";
+import { PartialSubtitle } from "%partials/Subtitle";
 
 import { PortfolioPageQuery } from "%prismic/queries/PortfolioPageQuery";
 

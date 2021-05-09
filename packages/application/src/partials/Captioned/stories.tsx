@@ -1,6 +1,6 @@
 import { withKnobs, files, text } from "@storybook/addon-knobs";
 
-import PartialCaptioned from ".";
+import { PartialCaptioned } from ".";
 
 export default {
   title: "Partials/Captioned",

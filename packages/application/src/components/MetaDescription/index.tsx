@@ -1,10 +1,10 @@
 import Head from "next/head";
 
-type MetaDescriptionProps = {
+export type MetaDescriptionProps = {
   content?: string;
 };
 
-const MetaDescription = ({
+export const MetaDescription = ({
   content,
 }: MetaDescriptionProps): JSX.Element | null => {
   if (!content) {
@@ -27,5 +27,3 @@ const MetaDescription = ({
     </Head>
   );
 };
-
-export default MetaDescription;

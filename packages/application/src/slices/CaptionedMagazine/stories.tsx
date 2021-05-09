@@ -1,6 +1,6 @@
 import { CaptionedMagazineSliceFixture } from "@bashkim-com/prismic";
 
-import CaptionedMagazineSlice from ".";
+import { CaptionedMagazineSlice } from ".";
 
 export default {
   title: "Slices/Captioned Magazine",

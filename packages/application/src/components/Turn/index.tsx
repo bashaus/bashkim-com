@@ -1,19 +1,18 @@
+import $ from "jquery";
 import classNames from "classnames";
 import { PureComponent, createRef } from "react";
 
-import $ from "jquery";
-
 import styles from "./styles.module.scss";
 
-export enum Display {
+export enum TurnDisplay {
   SINGLE = "single",
   DOUBLE = "double",
 }
 
-type TurnProps = {
+export type TurnProps = {
   center?: boolean;
   children: React.ReactNode;
-  display: Display;
+  display: TurnDisplay;
   page: number;
   pages: number;
   pageWidth: number;
@@ -22,11 +21,11 @@ type TurnProps = {
   onPageChange?(pageNumber: number): void;
 };
 
-type TurnState = {
+export type TurnState = {
   isInitialized: boolean;
 };
 
-class Turn extends PureComponent<TurnProps, TurnState> {
+export class Turn extends PureComponent<TurnProps, TurnState> {
   public containerRef = createRef<HTMLDivElement>();
 
   public pagesRef = createRef<HTMLOListElement>();
@@ -119,7 +118,7 @@ class Turn extends PureComponent<TurnProps, TurnState> {
     const outerWidth = Math.floor(containerWidth);
     let outerHeight = Math.floor(containerWidth / ratio);
 
-    if (display === Display.DOUBLE) {
+    if (display === TurnDisplay.DOUBLE) {
       outerHeight /= 2;
     }
 
@@ -142,7 +141,7 @@ class Turn extends PureComponent<TurnProps, TurnState> {
       return;
     }
 
-    if (display === Display.DOUBLE) {
+    if (display === TurnDisplay.DOUBLE) {
       onPageChange(page - 2);
     } else {
       onPageChange(page - 1);
@@ -156,7 +155,7 @@ class Turn extends PureComponent<TurnProps, TurnState> {
       return;
     }
 
-    if (display === Display.DOUBLE) {
+    if (display === TurnDisplay.DOUBLE) {
       onPageChange(page + 2);
     } else {
       onPageChange(page + 1);
@@ -184,5 +183,3 @@ class Turn extends PureComponent<TurnProps, TurnState> {
     );
   }
 }
-
-export default Turn;

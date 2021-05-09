@@ -1,8 +1,8 @@
-import PartialTitle from "%partials/Title";
+import { PartialTitle } from "%partials/Title";
 
 import styles from "./styles.module.scss";
 
-const AboutProfile = (): JSX.Element => (
+export const AboutProfile = (): JSX.Element => (
   <section className="group">
     <PartialTitle image="/static/images/about/profile/photo@4x.jpg">
       <h1>About Bash</h1>
@@ -118,5 +118,3 @@ const AboutProfile = (): JSX.Element => (
     </ul>
   </section>
 );
-
-export default AboutProfile;

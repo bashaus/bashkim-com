@@ -1,10 +1,12 @@
 import Head from "next/head";
 
-type MetaKeywordsProps = {
+export type MetaKeywordsProps = {
   content?: string;
 };
 
-const MetaKeywords = ({ content }: MetaKeywordsProps): JSX.Element | null => {
+export const MetaKeywords = ({
+  content,
+}: MetaKeywordsProps): JSX.Element | null => {
   if (!content) {
     return null;
   }
@@ -15,5 +17,3 @@ const MetaKeywords = ({ content }: MetaKeywordsProps): JSX.Element | null => {
     </Head>
   );
 };
-
-export default MetaKeywords;

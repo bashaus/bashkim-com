@@ -1,8 +1,8 @@
 import faker from "faker";
 
-import ComponentDecorator from "%storybook/decorators/component";
+import { ComponentDecorator } from "%storybook/decorators/component";
 
-import Carousel from ".";
+import { Carousel } from ".";
 
 export default {
   title: "Components/Carousel",

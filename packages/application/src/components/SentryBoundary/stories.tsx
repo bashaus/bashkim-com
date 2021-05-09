@@ -1,7 +1,7 @@
 import { withKnobs } from "@storybook/addon-knobs";
-import ComponentDecorator from "%storybook/decorators/component";
+import { ComponentDecorator } from "%storybook/decorators/component";
 
-import SentryBoundary from ".";
+import { SentryBoundary } from ".";
 
 export default {
   title: "Components/SentryBoundary",

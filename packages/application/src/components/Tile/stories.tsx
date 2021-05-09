@@ -1,8 +1,8 @@
 import { withKnobs, files, text } from "@storybook/addon-knobs";
 
-import ComponentDecorator from "%storybook/decorators/component";
+import { ComponentDecorator } from "%storybook/decorators/component";
 
-import Tile from ".";
+import { Tile } from ".";
 
 export default {
   title: "Components/Tile",

@@ -2,11 +2,11 @@ import type { CaseStudyContentType } from "@bashkim-com/prismic";
 
 import styles from "./styles.module.scss";
 
-type CaseStudyTechnologiesProps = {
+export type CaseStudyTechnologiesProps = {
   caseStudy: CaseStudyContentType;
 };
 
-const CaseStudyTechnologies = ({
+export const CaseStudyTechnologies = ({
   caseStudy,
 }: CaseStudyTechnologiesProps): JSX.Element => (
   <div className={styles.CaseStudyTechnologies}>
@@ -35,5 +35,3 @@ const CaseStudyTechnologies = ({
     </ul>
   </div>
 );
-
-export default CaseStudyTechnologies;

@@ -1,7 +1,7 @@
 import faker from "faker";
 import { withKnobs } from "@storybook/addon-knobs";
 
-import PartialNewspaper from ".";
+import { PartialNewspaper } from ".";
 
 export default {
   title: "Partials/Newspaper",

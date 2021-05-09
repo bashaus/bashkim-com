@@ -1,6 +1,6 @@
 import { FullTextSliceFixture } from "@bashkim-com/prismic";
 
-import FullTextSlice from ".";
+import { FullTextSlice } from ".";
 
 export default {
   title: "Slices/Full Text",

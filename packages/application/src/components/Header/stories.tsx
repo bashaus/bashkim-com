@@ -1,4 +1,4 @@
-import Header from ".";
+import { Header } from ".";
 
 import { NavigationProvider } from "%contexts/Navigation/provider";
 

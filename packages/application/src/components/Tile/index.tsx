@@ -1,13 +1,18 @@
 import styles from "./styles.module.scss";
 
-type TileProps = {
+export type TileProps = {
   description: string;
   icon: string;
   poster: string;
   title: string;
 };
 
-const Tile = ({ description, title, icon, poster }: TileProps): JSX.Element => (
+export const Tile = ({
+  description,
+  title,
+  icon,
+  poster,
+}: TileProps): JSX.Element => (
   <article
     className={styles.Tile}
     itemScope
@@ -29,5 +34,3 @@ const Tile = ({ description, title, icon, poster }: TileProps): JSX.Element => (
     <p itemProp="description">{description}</p>
   </article>
 );
-
-export default Tile;

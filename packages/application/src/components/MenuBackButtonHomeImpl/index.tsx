@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { HomeIcon } from "@primer/octicons-react";
 
-import MenuBackButton from "%components/MenuBackButton";
+import { MenuBackButton } from "%components/MenuBackButton";
 
-export default (
+export const MenuBackButtonHomeImpl = (
   <MenuBackButton>
     <Link href="/">
       <a>

@@ -1,9 +1,7 @@
 import styles from "./styles.module.scss";
 
-const ComponentDecorator = (storyFn: Function): JSX.Element => (
+export const ComponentDecorator = (storyFn: Function): JSX.Element => (
   <div className={styles.ComponentDecorator}>
     {storyFn()}
   </div>
 );
-
-export default ComponentDecorator;

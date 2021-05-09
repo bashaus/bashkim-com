@@ -1,6 +1,6 @@
-import CookiesProvider from "%contexts/Cookies/provider";
+import { CookiesProvider } from "%contexts/Cookies/provider";
 
-import CookiesNotice from ".";
+import { CookiesNotice } from ".";
 
 export default {
   title: "Components/CookiesNotice",

@@ -2,14 +2,14 @@ import classNames from "classnames";
 
 import styles from "./styles.module.scss";
 
-type PartialHeaderImageProps = {
+export type PartialHeaderImageProps = {
   className?: string;
   id: string;
   imageDesktop?: string;
   imageMobile?: string;
 };
 
-const PartialHeaderImage = ({
+export const PartialHeaderImage = ({
   className,
   id,
   imageDesktop,
@@ -44,5 +44,3 @@ const PartialHeaderImage = ({
     />
   </header>
 );
-
-export default PartialHeaderImage;

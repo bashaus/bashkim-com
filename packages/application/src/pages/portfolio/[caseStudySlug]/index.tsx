@@ -3,20 +3,20 @@ import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from "next";
 import { PrismicClient } from "@bashkim-com/prismic";
 import type { CaseStudyContentType } from "@bashkim-com/prismic";
 
-import CaseStudyAccolades from "%components/CaseStudyAccolades";
-import CaseStudyCollaborators from "%components/CaseStudyCollaborators";
-import CaseStudyExhibitions from "%components/CaseStudyExhibitions";
-import CaseStudyHeader from "%components/CaseStudyHeader";
-import LayoutDefault from "%components/LayoutDefault";
-import MenuBackButtonPortfolioImpl from "%components/MenuBackButtonPortfolioImpl";
-import MetaCanonical from "%components/MetaCanonical";
-import MetaDescription from "%components/MetaDescription";
-import MetaImage from "%components/MetaImage";
-import MetaKeywords from "%components/MetaKeywords";
-import MetaTitle from "%components/MetaTitle";
-import Slice from "%components/Slice";
+import { CaseStudyAccolades } from "%components/CaseStudyAccolades";
+import { CaseStudyCollaborators } from "%components/CaseStudyCollaborators";
+import { CaseStudyExhibitions } from "%components/CaseStudyExhibitions";
+import { CaseStudyHeader } from "%components/CaseStudyHeader";
+import { LayoutDefault } from "%components/LayoutDefault";
+import { MenuBackButtonPortfolioImpl } from "%components/MenuBackButtonPortfolioImpl";
+import { MetaCanonical } from "%components/MetaCanonical";
+import { MetaDescription } from "%components/MetaDescription";
+import { MetaImage } from "%components/MetaImage";
+import { MetaKeywords } from "%components/MetaKeywords";
+import { MetaTitle } from "%components/MetaTitle";
+import { Slice } from "%components/Slice";
 
-import NotFoundError from "%libraries/next/errors/NotFoundError";
+import { NotFoundError } from "%libraries/next/errors/NotFoundError";
 
 import { CaseStudyPageQuery } from "%prismic/queries/CaseStudyPageQuery";
 import { CaseStudyBodyQuery } from "%prismic/queries/CaseStudyBodyQuery";

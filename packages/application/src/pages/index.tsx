@@ -5,16 +5,16 @@ import Link from "next/link";
 import { PrismicClient } from "@bashkim-com/prismic";
 import type { HomePageContentType } from "@bashkim-com/prismic";
 
-import HomeBrands from "%components/HomeBrands";
-import HomeHello from "%components/HomeHello";
-import LayoutDefault from "%components/LayoutDefault";
-import MetaDescription from "%components/MetaDescription";
-import MetaKeywords from "%components/MetaKeywords";
-import MetaTitle from "%components/MetaTitle";
-import CallToAction from "%components/CallToAction";
-import PartialFullBanner from "%partials/FullBanner";
-import PartialSplit from "%partials/Split";
-import PartialSubtitle from "%partials/Subtitle";
+import { HomeBrands } from "%components/HomeBrands";
+import { HomeHello } from "%components/HomeHello";
+import { LayoutDefault } from "%components/LayoutDefault";
+import { MetaDescription } from "%components/MetaDescription";
+import { MetaKeywords } from "%components/MetaKeywords";
+import { MetaTitle } from "%components/MetaTitle";
+import { CallToAction } from "%components/CallToAction";
+import { PartialFullBanner } from "%partials/FullBanner";
+import { PartialSplit } from "%partials/Split";
+import { PartialSubtitle } from "%partials/Subtitle";
 
 import { PrismicLinkResolver } from "%prismic/helpers/Link";
 import { HomePageQuery } from "%prismic/queries/HomePageQuery";

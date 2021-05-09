@@ -1,9 +1,10 @@
 import { useCallback, useState } from "react";
 import type { CaptionedMagazineSliceType } from "@bashkim-com/prismic";
 
-import DeferredAsset from "%components/DeferredAsset";
-import Magazine, { MagazineSpreadChangeEvent } from "%components/Magazine";
-import PartialCaptioned from "%partials/Captioned";
+import { DeferredAsset } from "%components/DeferredAsset";
+import { Magazine, MagazineSpreadChangeEvent } from "%components/Magazine";
+
+import { PartialCaptioned } from "%partials/Captioned";
 
 import { PrismicRichText } from "%prismic/helpers/RichText";
 
@@ -13,7 +14,7 @@ export type CaptionedMagazineSliceProps = {
   slice: CaptionedMagazineSliceType;
 };
 
-const CaptionedMagazineSlice = ({
+export const CaptionedMagazineSlice = ({
   slice,
 }: CaptionedMagazineSliceProps): JSX.Element => {
   /* infinite state */

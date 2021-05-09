@@ -1,18 +1,20 @@
 import type { CaseStudyContentType } from "@bashkim-com/prismic";
 
-import CaseStudyDetails from "%components/CaseStudyDetails";
-import CaseStudyTechnologies from "%components/CaseStudyTechnologies";
-import PartialHeaderImage from "%partials/HeaderImage";
-import PartialTitle from "%partials/Title";
+import { CaseStudyDetails } from "%components/CaseStudyDetails";
+import { CaseStudyTechnologies } from "%components/CaseStudyTechnologies";
+import { PartialHeaderImage } from "%partials/HeaderImage";
+import { PartialTitle } from "%partials/Title";
+import { PartialSubtitle } from "%partials/Subtitle";
 
 import styles from "./styles.module.scss";
-import PartialSubtitle from "%partials/Subtitle";
 
-type CaseStudyHeaderProps = {
+export type CaseStudyHeaderProps = {
   caseStudy: CaseStudyContentType;
 };
 
-const CaseStudyHeader = ({ caseStudy }: CaseStudyHeaderProps): JSX.Element => (
+export const CaseStudyHeader = ({
+  caseStudy,
+}: CaseStudyHeaderProps): JSX.Element => (
   <>
     <PartialHeaderImage
       id="CaseStudyPage-Header"
@@ -43,5 +45,3 @@ const CaseStudyHeader = ({ caseStudy }: CaseStudyHeaderProps): JSX.Element => (
     </section>
   </>
 );
-
-export default CaseStudyHeader;

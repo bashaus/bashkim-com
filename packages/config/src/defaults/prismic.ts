@@ -1,7 +1,5 @@
 import type { PrismicConfig } from "types/prismic";
 
-const defaultPrismicConfig: PrismicConfig = {
+export const prismic: PrismicConfig = {
   uri: "https://bashkim-com.prismic.io/graphql",
 };
-
-export default defaultPrismicConfig;

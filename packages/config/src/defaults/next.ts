@@ -1,7 +1,5 @@
 import type { NextConfig } from "types/next";
 
-const defaultNextConfig: NextConfig = {
+export const next: NextConfig = {
   dev: false,
 };
-
-export default defaultNextConfig;

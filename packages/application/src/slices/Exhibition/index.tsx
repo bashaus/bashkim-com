@@ -1,14 +1,16 @@
 import type { ExhibitionSliceType } from "@bashkim-com/prismic";
 
-import CaseStudyLifespan from "%components/CaseStudyLifespan/index";
+import { CaseStudyLifespan } from "%components/CaseStudyLifespan/index";
 
 import { PrismicRichText } from "%prismic/helpers/RichText";
 
-type ExhibitionSliceProps = {
+export type ExhibitionSliceProps = {
   slice: ExhibitionSliceType;
 };
 
-const ExhibitionSlice = ({ slice }: ExhibitionSliceProps): JSX.Element => {
+export const ExhibitionSlice = ({
+  slice,
+}: ExhibitionSliceProps): JSX.Element => {
   const {
     exhibition_slice_type_name: name,
     // exhibition_slice_type_link: link,
@@ -25,5 +27,3 @@ const ExhibitionSlice = ({ slice }: ExhibitionSliceProps): JSX.Element => {
     </li>
   );
 };
-
-export default ExhibitionSlice;

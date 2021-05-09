@@ -1,13 +1,13 @@
 import Head from "next/head";
 import { getType as getMimeType } from "mime";
 
-type MetaImageProps = {
+export type MetaImageProps = {
   width?: number;
   height?: number;
   url?: string;
 };
 
-const MetaImage = ({
+export const MetaImage = ({
   url,
   width,
   height,
@@ -42,5 +42,3 @@ const MetaImage = ({
     </Head>
   );
 };
-
-export default MetaImage;

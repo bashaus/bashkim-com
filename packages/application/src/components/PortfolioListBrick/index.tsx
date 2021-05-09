@@ -2,13 +2,13 @@ import Link from "next/link";
 
 import type { CaseStudyContentType } from "@bashkim-com/prismic";
 
-import Brick from "%components/Brick";
+import { Brick } from "%components/Brick";
 
-type PortfolioListBrickProps = {
+export type PortfolioListBrickProps = {
   caseStudy: CaseStudyContentType;
 };
 
-const PortfolioListBrick = ({
+export const PortfolioListBrick = ({
   caseStudy,
 }: PortfolioListBrickProps): JSX.Element => (
   <Link
@@ -24,5 +24,3 @@ const PortfolioListBrick = ({
     </a>
   </Link>
 );
-
-export default PortfolioListBrick;

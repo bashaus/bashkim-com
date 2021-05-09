@@ -1,11 +1,13 @@
 import getConfig from "next/config";
 import Head from "next/head";
 
-type MetaCanonicalProps = {
+export type MetaCanonicalProps = {
   href?: string;
 };
 
-const MetaCanonical = ({ href }: MetaCanonicalProps): JSX.Element | null => {
+export const MetaCanonical = ({
+  href,
+}: MetaCanonicalProps): JSX.Element | null => {
   const { publicRuntimeConfig: config } = getConfig();
 
   if (!href) {
@@ -20,5 +22,3 @@ const MetaCanonical = ({ href }: MetaCanonicalProps): JSX.Element | null => {
     </Head>
   );
 };
-
-export default MetaCanonical;

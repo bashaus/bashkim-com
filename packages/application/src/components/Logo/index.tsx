@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import styles from "./styles.module.scss";
 
-const Logo = (): JSX.Element => (
+export const Logo = (): JSX.Element => (
   <Link href="/">
     <a className={styles.Logo}>
       <strong>Bashkim Isai</strong>
@@ -10,5 +10,3 @@ const Logo = (): JSX.Element => (
     </a>
   </Link>
 );
-
-export default Logo;

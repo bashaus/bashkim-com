@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 
-import Turn, { Display } from "%components/Turn";
+import { Turn, TurnDisplay } from "%components/Turn";
 import {
   convertPageToSpread,
   convertSpreadToPageNumbers,
@@ -12,15 +12,15 @@ const RESPONSIVE = !process.browser
   : [
       {
         media: window.matchMedia("(max-width: 767px)"),
-        display: Display.SINGLE,
+        display: TurnDisplay.SINGLE,
       },
       {
         media: window.matchMedia("(min-width: 768px)"),
-        display: Display.DOUBLE,
+        display: TurnDisplay.DOUBLE,
       },
     ];
 
-type MagazineProps = {
+export type MagazineProps = {
   children: React.ReactNode;
   onInitialize?(): void;
   onSpreadChange?(event: MagazineSpreadChangeEvent): void;
@@ -36,7 +36,7 @@ export type MagazineSpreadChangeEvent = {
   pageNumbers: Array<number>;
 };
 
-const Magazine = ({
+export const Magazine = ({
   children,
   onInitialize,
   onSpreadChange,
@@ -47,7 +47,7 @@ const Magazine = ({
 }: MagazineProps): JSX.Element => {
   /* infinite state */
   const [isInitialized, setIsInitialized] = useState<boolean>(false);
-  const [display, setDisplay] = useState<Display>(Display.SINGLE);
+  const [display, setDisplay] = useState<TurnDisplay>(TurnDisplay.SINGLE);
 
   /* helpers */
   const page = convertSpreadToPage(display, spread);
@@ -123,5 +123,3 @@ const Magazine = ({
     </Turn>
   );
 };
-
-export default Magazine;

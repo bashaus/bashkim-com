@@ -1,8 +1,8 @@
-import ComponentDecorator from "%storybook/decorators/component";
+import { ComponentDecorator } from "%storybook/decorators/component";
 
 import { NavigationProvider } from "%contexts/Navigation/provider";
 
-import MenuSignifierButton from ".";
+import { MenuSignifierButton } from ".";
 
 export default {
   title: "Components/MenuSignifierButton",

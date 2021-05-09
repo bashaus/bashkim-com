@@ -1,14 +1,14 @@
 import type { CaseStudyContentType } from "@bashkim-com/prismic";
 
-import CaseStudyLifespan from "%components/CaseStudyLifespan";
+import { CaseStudyLifespan } from "%components/CaseStudyLifespan";
 
 import styles from "./styles.module.scss";
 
-type CaseStudyDetailsProps = {
+export type CaseStudyDetailsProps = {
   caseStudy: CaseStudyContentType;
 };
 
-const CaseStudyDetails = ({
+export const CaseStudyDetails = ({
   caseStudy,
 }: CaseStudyDetailsProps): JSX.Element => {
   const {
@@ -149,5 +149,3 @@ const CaseStudyDetails = ({
     </div>
   );
 };
-
-export default CaseStudyDetails;

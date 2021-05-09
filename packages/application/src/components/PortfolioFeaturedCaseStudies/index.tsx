@@ -1,17 +1,17 @@
 import Link from "next/link";
 import type { PortfolioPageContentTypePageTabFeatured } from "@bashkim-com/prismic";
 
-import Tile from "%components/Tile";
+import { Tile } from "%components/Tile";
 
 import { PrismicRichText } from "%prismic/helpers/RichText";
 
 import styles from "./styles.module.scss";
 
-type PortfolioFeaturedCaseStudiesProps = {
+export type PortfolioFeaturedCaseStudiesProps = {
   featured: Array<PortfolioPageContentTypePageTabFeatured>;
 };
 
-const PortfolioFeaturedCaseStudies = ({
+export const PortfolioFeaturedCaseStudies = ({
   featured,
 }: PortfolioFeaturedCaseStudiesProps): JSX.Element => (
   <ul className={styles.PortfolioFeaturedCaseStudies}>
@@ -47,5 +47,3 @@ const PortfolioFeaturedCaseStudies = ({
     })}
   </ul>
 );
-
-export default PortfolioFeaturedCaseStudies;

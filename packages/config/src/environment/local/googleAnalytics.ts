@@ -1,7 +1,5 @@
 import { GoogleAnalyticsConfig } from "types/googleAnalytics";
 
-const localGoogleAnalytics: Partial<GoogleAnalyticsConfig> = {
+export const googleAnalytics: Partial<GoogleAnalyticsConfig> = {
   enabled: false,
 };
-
-export default localGoogleAnalytics;

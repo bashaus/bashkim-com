@@ -1,11 +1,11 @@
 import type { CarouselPhonesSliceType } from "@bashkim-com/prismic";
 
-import Carousel from "%components/Carousel";
-import CarouselImage from "%components/CarouselImage";
-import DeferredAsset from "%components/DeferredAsset";
-import DeviceSmartphone from "%components/DeviceSmartphone";
-import DeviceFeaturePhone from "%components/DeviceFeaturePhone";
-import PartialFullImage from "%partials/FullImage";
+import { Carousel } from "%components/Carousel";
+import { CarouselImage } from "%components/CarouselImage";
+import { DeferredAsset } from "%components/DeferredAsset";
+import { DeviceSmartphone } from "%components/DeviceSmartphone";
+import { DeviceFeaturePhone } from "%components/DeviceFeaturePhone";
+import { PartialFullImage } from "%partials/FullImage";
 
 import { PrismicRichText } from "%prismic/helpers/RichText";
 
@@ -33,7 +33,7 @@ export type CarouselPhonesSliceProps = {
   slice: CarouselPhonesSliceType;
 };
 
-const CarouselPhonesSlice = ({
+export const CarouselPhonesSlice = ({
   slice,
 }: CarouselPhonesSliceProps): JSX.Element => (
   <PartialFullImage>

@@ -3,15 +3,15 @@ import { PureComponent } from "react";
 
 import styles from "./styles.module.scss";
 
-type SentryBoundaryProps = {
+export type SentryBoundaryProps = {
   children: React.ReactNode;
 };
 
-type SentryBoundaryState = {
+export type SentryBoundaryState = {
   error?: Error;
 };
 
-export default class SentryBoundary extends PureComponent<
+export class SentryBoundary extends PureComponent<
   SentryBoundaryProps,
   SentryBoundaryState
 > {

@@ -1,7 +1,7 @@
 import type { CaptionedImageSliceType } from "@bashkim-com/prismic";
 
-import PartialCaptioned from "%partials/Captioned";
-import DeferredImage from "%components/DeferredImage";
+import { DeferredImage } from "%components/DeferredImage";
+import { PartialCaptioned } from "%partials/Captioned";
 
 import { PrismicRichText } from "%prismic/helpers/RichText";
 
@@ -9,7 +9,7 @@ export type CaptionedImageSliceProps = {
   slice: CaptionedImageSliceType;
 };
 
-const CaptionedImageSlice = ({
+export const CaptionedImageSlice = ({
   slice,
 }: CaptionedImageSliceProps): JSX.Element => {
   const {

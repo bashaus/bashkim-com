@@ -1,7 +1,5 @@
 import { SitemapConfig } from "types/sitemap";
 
-const localSitemap: Partial<SitemapConfig> = {
+export const sitemap: Partial<SitemapConfig> = {
   baseHref: "http://localhost:3000",
 };
-
-export default localSitemap;

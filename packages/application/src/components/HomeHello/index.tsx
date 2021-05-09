@@ -1,13 +1,13 @@
 import Link from "next/link";
 
-import PartialHeaderText from "%partials/HeaderText";
+import { PartialHeaderText } from "%partials/HeaderText";
 
 import IconGitHub from "%public/static/vectors/social/github.svg";
 import IconPortfolio from "%public/static/vectors/icons/portfolio.svg";
 
 import styles from "./styles.module.scss";
 
-const HomeHello = (): JSX.Element => (
+export const HomeHello = (): JSX.Element => (
   <div className={styles.HomeHello}>
     <PartialHeaderText
       backgroundClassName={styles.background}
@@ -68,5 +68,3 @@ const HomeHello = (): JSX.Element => (
     </PartialHeaderText>
   </div>
 );
-
-export default HomeHello;

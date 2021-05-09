@@ -1,10 +1,10 @@
-import LayoutDefault from "%components/LayoutDefault";
-import MenuBackButtonHomeImpl from "%components/MenuBackButtonHomeImpl";
-import MetaDescription from "%components/MetaDescription";
-import MetaTitle from "%components/MetaTitle";
-import PartialFullText from "%partials/FullText";
-import PartialHeaderText from "%partials/HeaderText";
-import PartialSubtitle from "%partials/Subtitle";
+import { LayoutDefault } from "%components/LayoutDefault";
+import { MenuBackButtonHomeImpl } from "%components/MenuBackButtonHomeImpl";
+import { MetaDescription } from "%components/MetaDescription";
+import { MetaTitle } from "%components/MetaTitle";
+import { PartialFullText } from "%partials/FullText";
+import { PartialHeaderText } from "%partials/HeaderText";
+import { PartialSubtitle } from "%partials/Subtitle";
 
 import styles from "./styles.module.scss";
 

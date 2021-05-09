@@ -6,7 +6,7 @@ export type GridEmbedSliceProps = {
   slice: GridEmbedSliceType;
 };
 
-const GridEmbedSlice = ({ slice }: GridEmbedSliceProps): JSX.Element => (
+export const GridEmbedSlice = ({ slice }: GridEmbedSliceProps): JSX.Element => (
   <div className={styles.GridEmbedSlice}>
     {slice.fields.map((field, i) => {
       const { grid_embed_slice_type_embed: embed } = field;

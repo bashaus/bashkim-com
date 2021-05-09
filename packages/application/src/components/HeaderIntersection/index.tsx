@@ -4,12 +4,13 @@ import debounce from "lodash.debounce";
 import { NavigationContext } from "%contexts/Navigation/context";
 import { NavigationActionsTypes } from "%contexts/Navigation/actions";
 
-import styles from "./styles.module.scss";
 import { ScrollDirection } from "%contexts/Navigation/types";
+
+import styles from "./styles.module.scss";
 
 let lastScrollTop = 0;
 
-const HeaderIntersection = (): JSX.Element => {
+export const HeaderIntersection = (): JSX.Element => {
   const { dispatch: navigationDispatch } = useContext(NavigationContext);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -82,5 +83,3 @@ const HeaderIntersection = (): JSX.Element => {
 
   return <div ref={ref} className={styles.HeaderIntersection} />;
 };
-
-export default HeaderIntersection;

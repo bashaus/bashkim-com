@@ -1,11 +1,11 @@
 import Head from "next/head";
 
-type MetaTitleProps = {
+export type MetaTitleProps = {
   content?: string;
   standalone?: boolean;
 };
 
-const MetaTitle = ({
+export const MetaTitle = ({
   content,
   standalone = false,
 }: MetaTitleProps): JSX.Element => {
@@ -23,5 +23,3 @@ const MetaTitle = ({
     </Head>
   );
 };
-
-export default MetaTitle;

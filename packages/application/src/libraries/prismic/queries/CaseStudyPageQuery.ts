@@ -1,6 +1,6 @@
 import { gql } from "@apollo/client";
 
-import ExternalLinkFragment from "%prismic/fragments/ExternalLink";
+import { ExternalLinkFragment } from "%prismic/fragments/ExternalLink";
 
 export const CaseStudyPageQuery = gql`
   query CaseStudyPage($caseStudySlug: String) {

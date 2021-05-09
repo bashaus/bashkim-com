@@ -1,12 +1,12 @@
 import { FormattedDate } from "%components/FormattedDate";
 import { PrismicDate } from "%prismic/helpers/Date";
 
-type CaseStudyLifespanProps = {
+export type CaseStudyLifespanProps = {
   launched: string;
   decommissioned?: string;
 };
 
-const CaseStudyLifespan = ({
+export const CaseStudyLifespan = ({
   launched,
   decommissioned,
 }: CaseStudyLifespanProps): JSX.Element => {
@@ -37,5 +37,3 @@ const CaseStudyLifespan = ({
     </>
   );
 };
-
-export default CaseStudyLifespan;

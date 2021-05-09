@@ -2,13 +2,13 @@ import classNames from "classnames";
 
 import styles from "./styles.module.scss";
 
-type PartialHeaderTextProps = {
+export type PartialHeaderTextProps = {
   aside?: React.ReactNode;
   backgroundClassName?: string;
   children?: React.ReactNode;
 };
 
-const PartialHeaderText = ({
+export const PartialHeaderText = ({
   aside,
   backgroundClassName,
   children,
@@ -26,5 +26,3 @@ const PartialHeaderText = ({
     />
   </header>
 );
-
-export default PartialHeaderText;

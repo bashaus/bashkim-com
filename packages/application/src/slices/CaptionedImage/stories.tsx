@@ -1,6 +1,6 @@
 import { CaptionedImageSliceFixture } from "@bashkim-com/prismic";
 
-import CaptionedImageSlice from ".";
+import { CaptionedImageSlice } from ".";
 
 export default {
   title: "Slices/Captioned Image",

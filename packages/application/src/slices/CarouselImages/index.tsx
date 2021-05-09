@@ -1,8 +1,8 @@
 import type { CarouselImagesSliceType } from "@bashkim-com/prismic";
 
-import PartialFullImage from "%partials/FullImage";
-import Carousel from "%components/Carousel";
-import CarouselImage from "%components/CarouselImage";
+import { PartialFullImage } from "%partials/FullImage";
+import { Carousel } from "%components/Carousel";
+import { CarouselImage } from "%components/CarouselImage";
 
 import { PrismicRichText } from "%prismic/helpers/RichText";
 
@@ -10,7 +10,7 @@ export type CarouselImagesSliceProps = {
   slice: CarouselImagesSliceType;
 };
 
-const CarouselImagesSlice = ({
+export const CarouselImagesSlice = ({
   slice,
 }: CarouselImagesSliceProps): JSX.Element => (
   <PartialFullImage>

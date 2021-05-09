@@ -1,8 +1,8 @@
 import { withKnobs, files, text } from "@storybook/addon-knobs";
 
-import ComponentDecorator from "%storybook/decorators/component";
+import { ComponentDecorator } from "%storybook/decorators/component";
 
-import DeviceFeaturePhone from ".";
+import { DeviceFeaturePhone } from ".";
 
 export default {
   title: "Components/DeviceFeaturePhone",

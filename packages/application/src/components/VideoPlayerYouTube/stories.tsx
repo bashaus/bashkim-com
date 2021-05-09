@@ -1,8 +1,8 @@
 import { withKnobs, text } from "@storybook/addon-knobs";
 
-import ComponentDecorator from "%storybook/decorators/component";
+import { ComponentDecorator } from "%storybook/decorators/component";
 
-import VideoPlayerYouTube from ".";
+import { VideoPlayerYouTube } from ".";
 
 export default {
   title: "Components/Video Player YouTube",

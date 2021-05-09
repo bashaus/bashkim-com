@@ -10,7 +10,7 @@ export type UrlType = {
   };
 };
 
-const SitemapTemplate = (sitemap: () => Promise<Array<UrlType>>) => {
+export const SitemapTemplate = (sitemap: () => Promise<Array<UrlType>>) => {
   return async (
     _req: express.Request,
     res: express.Response
@@ -39,5 +39,3 @@ const SitemapTemplate = (sitemap: () => Promise<Array<UrlType>>) => {
     res.send(doc.end({ pretty: true }));
   };
 };
-
-export default SitemapTemplate;

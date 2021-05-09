@@ -1,6 +1,6 @@
 import { withKnobs, files } from "@storybook/addon-knobs";
 
-import PartialHeaderImage from ".";
+import { PartialHeaderImage } from ".";
 
 export default {
   title: "Partials/Header Image",

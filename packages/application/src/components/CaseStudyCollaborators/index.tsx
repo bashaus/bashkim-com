@@ -1,17 +1,17 @@
 import Link from "next/link";
 import { CollaboratorSliceType } from "@bashkim-com/prismic";
 
-import PartialSubtitle from "%partials/Subtitle";
-import CollaboratorSlice from "%slices/Collaborator";
+import { PartialSubtitle } from "%partials/Subtitle";
+import { CollaboratorSlice } from "%slices/Collaborator";
 
 import styles from "./styles.module.scss";
 
-type CaseStudyCollaboratorsProps = {
+export type CaseStudyCollaboratorsProps = {
   myRole?: string;
   slices: Array<CollaboratorSliceType>;
 };
 
-const CaseStudyCollaborators = ({
+export const CaseStudyCollaborators = ({
   slices = [],
   myRole,
 }: CaseStudyCollaboratorsProps): JSX.Element | null => {
@@ -43,5 +43,3 @@ const CaseStudyCollaborators = ({
     </>
   );
 };
-
-export default CaseStudyCollaborators;

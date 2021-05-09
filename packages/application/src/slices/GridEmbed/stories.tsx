@@ -1,6 +1,6 @@
 import { GridEmbedSliceFixture } from "@bashkim-com/prismic";
 
-import GridEmbedSlice from ".";
+import { GridEmbedSlice } from ".";
 
 export default {
   title: "Slices/Grid Embed",

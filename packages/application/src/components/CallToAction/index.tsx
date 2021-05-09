@@ -1,11 +1,9 @@
 import styles from "./styles.module.scss";
 
-type CallToActionProps = {
+export type CallToActionProps = {
   children: React.ReactNode;
 };
 
-const CallToAction = ({ children }: CallToActionProps): JSX.Element => (
+export const CallToAction = ({ children }: CallToActionProps): JSX.Element => (
   <div className={styles.CallToAction}>{children}</div>
 );
-
-export default CallToAction;

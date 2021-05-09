@@ -1,6 +1,6 @@
 import { NewspaperSliceFixture } from "@bashkim-com/prismic";
 
-import NewspaperSlice from ".";
+import { NewspaperSlice } from ".";
 
 export default {
   title: "Slices/Grid Video",

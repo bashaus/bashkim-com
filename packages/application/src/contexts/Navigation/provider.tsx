@@ -4,7 +4,7 @@ import { NavigationContext } from "./context";
 import { NavigationReducer } from "./reducer";
 import { INITIAL_STATE } from "./state";
 
-type NavigationProviderProps = {
+export type NavigationProviderProps = {
   children: React.ReactNode;
 };
 

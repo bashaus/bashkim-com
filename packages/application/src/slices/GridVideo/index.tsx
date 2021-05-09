@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import type { GridVideoSliceType } from "@bashkim-com/prismic";
 
-import DeferredAsset from "%components/DeferredAsset";
+import { DeferredAsset } from "%components/DeferredAsset";
 import { PrismicRichText } from "%prismic/helpers/RichText";
 
 import styles from "./styles.module.scss";
@@ -10,7 +10,7 @@ export type GridVideoSliceProps = {
   slice: GridVideoSliceType;
 };
 
-const GridVideoSlice = ({ slice }: GridVideoSliceProps): JSX.Element => (
+export const GridVideoSlice = ({ slice }: GridVideoSliceProps): JSX.Element => (
   <ol
     className={classNames(
       styles.GridVideoSlice,

@@ -3,7 +3,7 @@ import { useMemo } from "react";
 import getConfig from "next/config";
 import Head from "next/head";
 
-const GoogleAnalytics = (): JSX.Element => {
+export const GoogleAnalytics = (): JSX.Element => {
   const { publicRuntimeConfig: config } = getConfig();
 
   const GA_SCRIPT = useMemo(
@@ -36,5 +36,3 @@ const GoogleAnalytics = (): JSX.Element => {
     </Head>
   );
 };
-
-export default GoogleAnalytics;

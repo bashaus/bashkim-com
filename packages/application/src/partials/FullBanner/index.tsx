@@ -1,13 +1,13 @@
 import styles from "./styles.module.scss";
 
-type PartialFullBannerProps = {
+export type PartialFullBannerProps = {
   backgroundDesktop?: string;
   backgroundMobile?: string;
   children: React.ReactNode;
   id: string;
 };
 
-const PartialFullBanner = ({
+export const PartialFullBanner = ({
   backgroundDesktop,
   backgroundMobile,
   children,
@@ -41,5 +41,3 @@ const PartialFullBanner = ({
     )}
   </div>
 );
-
-export default PartialFullBanner;

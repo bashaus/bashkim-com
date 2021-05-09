@@ -1,6 +1,6 @@
 import { CaptionedScreenshotsSliceFixture } from "@bashkim-com/prismic";
 
-import CaptionedScreenshotsSlice from ".";
+import { CaptionedScreenshotsSlice } from ".";
 
 export default {
   title: "Slices/Captioned Screenshots",

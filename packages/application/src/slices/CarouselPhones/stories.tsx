@@ -1,6 +1,6 @@
 import { CarouselPhonesSliceFixture } from "@bashkim-com/prismic";
 
-import CarouselPhonesSlice from ".";
+import { CarouselPhonesSlice } from ".";
 
 export default {
   title: "Slices/Carousel Phones",

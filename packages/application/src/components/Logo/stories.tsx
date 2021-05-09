@@ -1,6 +1,6 @@
-import ComponentDecorator from "%storybook/decorators/component";
+import { ComponentDecorator } from "%storybook/decorators/component";
 
-import Logo from ".";
+import { Logo } from ".";
 
 export default {
   title: "Components/Logo",

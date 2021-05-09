@@ -1,18 +1,18 @@
 import classNames from "classnames";
 import { useContext } from "react";
 
-import Logo from "%components/Logo";
-import MenuSignifierButton from "%components/MenuSignifierButton";
+import { Logo } from "%components/Logo";
+import { MenuSignifierButton } from "%components/MenuSignifierButton";
 import { NavigationContext } from "%contexts/Navigation/context";
-
-import styles from "./styles.module.scss";
 import { ScrollDirection } from "%contexts/Navigation/types";
 
-type MenuProps = {
+import styles from "./styles.module.scss";
+
+export type MenuProps = {
   backButton?: React.ReactNode;
 };
 
-const Menu = ({ backButton }: MenuProps): JSX.Element => {
+export const Menu = ({ backButton }: MenuProps): JSX.Element => {
   const { state: navigationState } = useContext(NavigationContext);
 
   return (
@@ -37,5 +37,3 @@ const Menu = ({ backButton }: MenuProps): JSX.Element => {
     </div>
   );
 };
-
-export default Menu;

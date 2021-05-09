@@ -3,11 +3,13 @@ import type { CollaboratorSliceType } from "@bashkim-com/prismic";
 
 import { PrismicLinkResolver } from "%prismic/helpers/Link";
 
-type CollaboratorSliceProps = {
+export type CollaboratorSliceProps = {
   slice: CollaboratorSliceType;
 };
 
-const CollaboratorSlice = ({ slice }: CollaboratorSliceProps): JSX.Element => {
+export const CollaboratorSlice = ({
+  slice,
+}: CollaboratorSliceProps): JSX.Element => {
   const {
     collaborator_slice_type_company: company,
     collaborator_slice_type_role: role,
@@ -40,5 +42,3 @@ const CollaboratorSlice = ({ slice }: CollaboratorSliceProps): JSX.Element => {
     </li>
   );
 };
-
-export default CollaboratorSlice;

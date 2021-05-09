@@ -1,15 +1,15 @@
 import classNames from "classnames";
 import { useContext } from "react";
 
+import { NavigationContext } from "%contexts/Navigation/context";
+
 import LogoGitHub from "%public/static/vectors/social/github.svg";
 import LogoLinkedIn from "%public/static/vectors/social/linkedin.svg";
 import LogoStackOverflow from "%public/static/vectors/social/stackoverflow.svg";
 
-import { NavigationContext } from "%contexts/Navigation/context";
-
 import styles from "./styles.module.scss";
 
-const NavigationSocial = (): JSX.Element => {
+export const NavigationSocial = (): JSX.Element => {
   const { state: navigationState } = useContext(NavigationContext);
 
   return (
@@ -89,5 +89,3 @@ const NavigationSocial = (): JSX.Element => {
     </nav>
   );
 };
-
-export default NavigationSocial;

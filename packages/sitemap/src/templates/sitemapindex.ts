@@ -7,7 +7,9 @@ export type SitemapType = {
   };
 };
 
-const SitemapIndexTemplate = (sitemaps: () => Promise<Array<SitemapType>>) => {
+export const SitemapIndexTemplate = (
+  sitemaps: () => Promise<Array<SitemapType>>
+) => {
   return async (
     _req: express.Request,
     res: express.Response
@@ -33,5 +35,3 @@ const SitemapIndexTemplate = (sitemaps: () => Promise<Array<SitemapType>>) => {
     res.send(doc.end({ pretty: true }));
   };
 };
-
-export default SitemapIndexTemplate;

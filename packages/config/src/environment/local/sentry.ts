@@ -1,7 +1,5 @@
 import { SentryConfig } from "types/sentry";
 
-const localSentry: Partial<SentryConfig> = {
+export const sentry: Partial<SentryConfig> = {
   enabled: false,
 };
-
-export default localSentry;

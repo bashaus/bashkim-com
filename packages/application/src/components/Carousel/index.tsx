@@ -3,14 +3,14 @@ import SlickSlider, { ResponsiveObject } from "react-slick";
 import styles from "./styles.module.scss";
 import dotsStyles from "./styles.dots.module.scss";
 
-type CarouselProps = {
+export type CarouselProps = {
   children: React.ReactNode;
   responsive?: Array<ResponsiveObject>;
   slidesToShow?: number;
   slidestoScroll?: number;
 };
 
-const Carousel = ({
+export const Carousel = ({
   children,
   responsive,
   slidesToShow = 1,
@@ -32,5 +32,3 @@ const Carousel = ({
     </SlickSlider>
   </div>
 );
-
-export default Carousel;
