@@ -6,7 +6,12 @@ export default {
   component: PartialNewspaper,
   title: "Partials/Newspaper",
   argTypes: {
-    paragraphs: { control: "number", min: 1, max: 100 },
+    paragraphs: {
+      control: "number",
+      min: 1,
+      max: 100,
+      table: { category: "Story helpers" },
+    },
   },
 };
 

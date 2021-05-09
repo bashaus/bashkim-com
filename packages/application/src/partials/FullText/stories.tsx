@@ -6,7 +6,10 @@ export default {
   component: PartialFullText,
   title: "Partials/Full Text",
   argTypes: {
-    title: { control: "text" },
+    title: {
+      control: "text",
+      table: { category: "Story helpers" },
+    },
   },
 };
 

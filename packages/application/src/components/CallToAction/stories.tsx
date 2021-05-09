@@ -4,26 +4,22 @@ export default {
   component: CallToAction,
   title: "Components/CallToAction",
   argTypes: {
-    content: { control: "text" },
+    children: { control: "text" },
   },
   parameters: {
     layout: "centered",
   },
 };
 
-type CallToActionStoryProps = CallToActionProps & {
-  content: string;
-};
-
-const Template = ({ content, ...args }: CallToActionStoryProps) => (
+const Template = ({ children, ...args }: CallToActionProps) => (
   <CallToAction {...args}>
     <a>
-      <span>{content}</span>
+      <span>{children}</span>
     </a>
   </CallToAction>
 );
 
 export const Render = Template.bind({});
 Render.args = {
-  content: "CallToAction",
+  children: "Call to action label",
 };

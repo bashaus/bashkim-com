@@ -5,6 +5,9 @@ export type DeviceSmartphoneProps = {
   figure: React.ReactNode;
 };
 
+/**
+ * A scrollable screenshot encapsulated by a smartphone design.
+ */
 export const DeviceSmartphone = ({
   children,
   figure,

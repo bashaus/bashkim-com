@@ -1,15 +1,26 @@
 import styles from "./styles.module.scss";
 
 export type BrickProps = {
-  title: string;
+  /**
+   * The description text, wrapped with `<p>`
+   */
+  description: React.ReactNode;
+
+  /**
+   * A URL to the image to use as the icon
+   */
   icon: string;
-  description: string;
+
+  /**
+   * The title or heading, wrapped with `<h3>`
+   */
+  title: React.ReactNode;
 };
 
 export const Brick = ({
-  title,
-  icon,
   description,
+  icon,
+  title,
 }: BrickProps): JSX.Element => (
   <article className={styles.Brick}>
     <div className={styles.inner}>

@@ -1,6 +1,10 @@
 import styles from "./styles.module.scss";
 
 export type CallToActionProps = {
+  /**
+   * The content of the call to action. In code, this should be wrapped with
+   * `<a><span>...</span></a>`
+   */
   children: React.ReactNode;
 };
 

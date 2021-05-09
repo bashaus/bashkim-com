@@ -10,10 +10,12 @@ export default {
     title: {
       control: "text",
       description: "Example of a title (within children)",
+      table: { category: "Story helpers" },
     },
     subtitle: {
       control: "text",
       description: "Example of a subtitle (within children)",
+      table: { category: "Story helpers" },
     },
   },
 };

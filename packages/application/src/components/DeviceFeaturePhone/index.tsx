@@ -5,6 +5,9 @@ export type DeviceFeaturePhoneProps = {
   figure: React.ReactNode;
 };
 
+/**
+ * A scrollable screenshot encapsulated by a feature phone design.
+ */
 export const DeviceFeaturePhone = ({
   children,
   figure,

@@ -6,7 +6,13 @@ export default {
   component: Carousel,
   title: "Components/Carousel",
   argTypes: {
-    slides: { control: "number" },
+    slides: {
+      control: "number",
+      min: 1,
+      table: {
+        category: "Story helpers",
+      },
+    },
   },
   parameters: {
     layout: "centered",
