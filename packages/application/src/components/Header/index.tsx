@@ -1,4 +1,5 @@
 import classNames from "classnames";
+import Link from "next/link";
 import { useContext } from "react";
 
 import { Logo } from "%components/Logo";
@@ -25,7 +26,9 @@ export const Header = ({ theme }: HeaderProps): JSX.Element => {
     >
       <div className={styles.headerContainer}>
         <div className={styles.headerLogo}>
-          <Logo />
+          <Link href="/">
+            <Logo />
+          </Link>
         </div>
         <Navigation theme={theme} />
       </div>

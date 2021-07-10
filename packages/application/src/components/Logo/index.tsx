@@ -1,12 +1,13 @@
-import Link from "next/link";
+import classNames from "classnames";
+import { HTMLAttributes } from "react";
 
 import styles from "./styles.module.scss";
 
-export const Logo = (): JSX.Element => (
-  <Link href="/">
-    <a className={styles.Logo}>
-      <strong>Bashkim Isai</strong>
-      <span>Creative Technologist</span>
-    </a>
-  </Link>
+export type LogoProps = HTMLAttributes<HTMLDivElement>;
+
+export const Logo = ({ className, ...props }: LogoProps): JSX.Element => (
+  <div className={classNames(className, styles.Logo)} {...props}>
+    <strong>Bashkim Isai</strong>
+    <span>Creative Technologist</span>
+  </div>
 );
