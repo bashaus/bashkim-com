@@ -3,7 +3,7 @@ import type { CaptionedImageSliceType } from "@bashkim-com/prismic";
 import { DeferredImage } from "%components/DeferredImage";
 import { PartialCaptioned } from "%partials/Captioned";
 
-import { PrismicRichText } from "%prismic/helpers/RichText";
+import { PrismicRichText } from "%libraries/prismic/helpers/RichText";
 
 export type CaptionedImageSliceProps = {
   slice: CaptionedImageSliceType;

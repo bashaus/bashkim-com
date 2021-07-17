@@ -1,7 +1,7 @@
 import { Link } from "prismic-reactjs";
 import type { CollaboratorSliceType } from "@bashkim-com/prismic";
 
-import { PrismicLinkResolver } from "%prismic/helpers/Link";
+import { PrismicLinkResolver } from "%libraries/prismic/helpers/Link";
 
 export type CollaboratorSliceProps = {
   slice: CollaboratorSliceType;

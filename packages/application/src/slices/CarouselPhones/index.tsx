@@ -7,7 +7,7 @@ import { DeviceSmartphone } from "%components/DeviceSmartphone";
 import { DeviceFeaturePhone } from "%components/DeviceFeaturePhone";
 import { PartialFullImage } from "%partials/FullImage";
 
-import { PrismicRichText } from "%prismic/helpers/RichText";
+import { PrismicRichText } from "%libraries/prismic/helpers/RichText";
 
 const CAROUSEL_RESPONSIVE = [
   {

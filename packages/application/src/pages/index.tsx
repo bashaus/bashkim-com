@@ -16,8 +16,8 @@ import { PartialFullBanner } from "%partials/FullBanner";
 import { PartialSplit } from "%partials/Split";
 import { PartialSubtitle } from "%partials/Subtitle";
 
-import { PrismicLinkResolver } from "%prismic/helpers/Link";
-import { HomePageQuery } from "%prismic/queries/HomePageQuery";
+import { PrismicLinkResolver } from "%libraries/prismic/helpers/Link";
+import { HomePageQuery } from "%libraries/prismic/queries/HomePageQuery";
 
 type HomePageProps = {
   homePage: HomePageContentType;

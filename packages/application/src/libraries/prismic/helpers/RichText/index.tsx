@@ -1,6 +1,6 @@
 import { RichText, RichTextBlock } from "prismic-reactjs";
 
-import { PrismicLinkResolver } from "%prismic/helpers/Link";
+import { PrismicLinkResolver } from "%libraries/prismic/helpers/Link";
 
 export type PrismicRichTextProps = {
   render?: Array<RichTextBlock>;

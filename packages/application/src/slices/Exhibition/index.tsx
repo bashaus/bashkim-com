@@ -2,7 +2,7 @@ import type { ExhibitionSliceType } from "@bashkim-com/prismic";
 
 import { CaseStudyLifespan } from "%components/CaseStudyLifespan/index";
 
-import { PrismicRichText } from "%prismic/helpers/RichText";
+import { PrismicRichText } from "%libraries/prismic/helpers/RichText";
 
 export type ExhibitionSliceProps = {
   slice: ExhibitionSliceType;

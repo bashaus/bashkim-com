@@ -12,7 +12,6 @@
           "%libraries": "./src/libraries",
           "%machines/*": "./src/machines/*",
           "%partials": "./src/partials",
-          "%prismic": "./src/libraries/prismic",
           "%public": "./public",
           "%slices": "./src/slices",
           "%styleguide": "./src/styleguide"

@@ -13,7 +13,6 @@
       "%libraries/*": ["./libraries/*"],
       "%machines/*": ["./machines/*"],
       "%partials/*": ["./partials/*"],
-      "%prismic/*": ["./libraries/prismic/*"],
       "%public/*": ["../public/*"],
       "%slices/*": ["./slices/*"],
       "%styleguide/*": ["./styleguide/*"]

@@ -2,7 +2,7 @@ import type { SubtitleSliceType } from "@bashkim-com/prismic";
 
 import { PartialSubtitle } from "%partials/Subtitle";
 
-import { PrismicRichText } from "%prismic/helpers/RichText";
+import { PrismicRichText } from "%libraries/prismic/helpers/RichText";
 
 export type SubtitleSliceProps = {
   slice: SubtitleSliceType;

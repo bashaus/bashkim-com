@@ -5,7 +5,7 @@ import { DeviceMobileIcon, DeviceDesktopIcon } from "@primer/octicons-react";
 import { DeferredAsset } from "%components/DeferredAsset";
 import { PartialCaptioned } from "%partials/Captioned";
 
-import { PrismicRichText } from "%prismic/helpers/RichText";
+import { PrismicRichText } from "%libraries/prismic/helpers/RichText";
 
 import styles from "./styles.module.scss";
 

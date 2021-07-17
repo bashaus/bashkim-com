@@ -18,7 +18,7 @@ import { PortfolioList } from "%components/PortfolioList";
 import { PartialHeaderText } from "%partials/HeaderText";
 import { PartialSubtitle } from "%partials/Subtitle";
 
-import { PortfolioPageQuery } from "%prismic/queries/PortfolioPageQuery";
+import { PortfolioPageQuery } from "%libraries/prismic/queries/PortfolioPageQuery";
 
 type PortfolioPageProps = {
   caseStudies: Array<CaseStudyContentType>;

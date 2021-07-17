@@ -5,7 +5,7 @@ import { VideoPlayerYouTube } from "%components/VideoPlayerYouTube";
 
 import { PartialCaptioned } from "%partials/Captioned";
 
-import { PrismicRichText } from "%prismic/helpers/RichText";
+import { PrismicRichText } from "%libraries/prismic/helpers/RichText";
 
 export type CaptionedVideoSliceProps = {
   slice: CaptionedVideoSliceType;

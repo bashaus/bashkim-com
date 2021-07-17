@@ -4,7 +4,7 @@ import { PartialFullImage } from "%partials/FullImage";
 import { Carousel } from "%components/Carousel";
 import { CarouselImage } from "%components/CarouselImage";
 
-import { PrismicRichText } from "%prismic/helpers/RichText";
+import { PrismicRichText } from "%libraries/prismic/helpers/RichText";
 
 export type CarouselImagesSliceProps = {
   slice: CarouselImagesSliceType;

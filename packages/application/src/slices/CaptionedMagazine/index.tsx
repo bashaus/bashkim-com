@@ -6,7 +6,7 @@ import { Magazine, MagazineSpreadChangeEvent } from "%components/Magazine";
 
 import { PartialCaptioned } from "%partials/Captioned";
 
-import { PrismicRichText } from "%prismic/helpers/RichText";
+import { PrismicRichText } from "%libraries/prismic/helpers/RichText";
 
 import styles from "./styles.module.scss";
 

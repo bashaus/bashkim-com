@@ -1,5 +1,5 @@
 import { FormattedDate } from "%components/FormattedDate";
-import { PrismicDate } from "%prismic/helpers/Date";
+import { PrismicDate } from "%libraries/prismic/helpers/Date";
 
 export type CaseStudyLifespanProps = {
   launched: string;

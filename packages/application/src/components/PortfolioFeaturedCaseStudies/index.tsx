@@ -3,7 +3,7 @@ import type { PortfolioPageContentTypePageTabFeatured } from "@bashkim-com/prism
 
 import { Tile } from "%components/Tile";
 
-import { PrismicRichText } from "%prismic/helpers/RichText";
+import { PrismicRichText } from "%libraries/prismic/helpers/RichText";
 
 import styles from "./styles.module.scss";
 

@@ -18,9 +18,9 @@ import { Slice } from "%components/Slice";
 
 import { NotFoundError } from "%libraries/next/errors/NotFoundError";
 
-import { CaseStudyPageQuery } from "%prismic/queries/CaseStudyPageQuery";
-import { CaseStudyBodyQuery } from "%prismic/queries/CaseStudyBodyQuery";
-import { CaseStudiesQuery } from "%prismic/queries/CaseStudiesQuery";
+import { CaseStudyPageQuery } from "%libraries/prismic/queries/CaseStudyPageQuery";
+import { CaseStudyBodyQuery } from "%libraries/prismic/queries/CaseStudyBodyQuery";
+import { CaseStudiesQuery } from "%libraries/prismic/queries/CaseStudiesQuery";
 
 type CaseStudyPageProps = {
   caseStudyPage: CaseStudyContentType;

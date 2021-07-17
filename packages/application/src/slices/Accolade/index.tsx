@@ -5,9 +5,9 @@ import type { AccoladeSliceType } from "@bashkim-com/prismic";
 
 import { FormattedDate } from "%components/FormattedDate";
 
-import { PrismicDate } from "%prismic/helpers/Date";
-import { PrismicLinkResolver } from "%prismic/helpers/Link";
-import { PrismicRichText } from "%prismic/helpers/RichText";
+import { PrismicDate } from "%libraries/prismic/helpers/Date";
+import { PrismicLinkResolver } from "%libraries/prismic/helpers/Link";
+import { PrismicRichText } from "%libraries/prismic/helpers/RichText";
 
 import IconTrophy from "%public/static/vectors/icons/trophy.svg";
 
