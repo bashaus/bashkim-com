@@ -78,7 +78,6 @@ jobs:
 
       - run:
           name: jest
-          when: always
           command: |
             yarn test
 
@@ -97,7 +96,6 @@ jobs:
 
       - run:
           name: eslint
-          when: always
           command: |
             mkdir -p test-results/eslint/
             npx eslint \
@@ -121,7 +119,6 @@ jobs:
 
       - run:
           name: stylelint
-          when: always
           command: |
             mkdir -p test-results/stylelint/
             npx stylelint \
@@ -133,6 +130,15 @@ jobs:
       - store_test_results:
           path: test-results
 
+
+
+  test:
+    executor: exec-node
+    steps:
+      - run:
+          name: test
+          command: |
+            echo "done"
 
 
   deploy:
@@ -207,12 +213,16 @@ workflows:
           requires:
             - build
 
-      - deploy:
-          context: bashkim-com-prod
+      - test:
           requires:
             - test-jest
             - test-eslint
             - test-stylelint
+
+      - deploy:
+          context: bashkim-com-prod
+          requires:
+            - test
           filters:
             branches:
               only:
@@ -221,9 +231,7 @@ workflows:
       - synchronize:
           context: bashkim-com-prod
           requires:
-            - test-jest
-            - test-eslint
-            - test-stylelint
+            - test
           filters:
             branches:
               only:
