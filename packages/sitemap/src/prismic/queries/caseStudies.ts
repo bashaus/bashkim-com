@@ -19,18 +19,3 @@ export const CaseStudiesQuery = gql`
     }
   }
 `;
-
-export type CaseuStudiesResult = {
-  caseStudies: {
-    edges: Array<{
-      node: {
-        _meta: {
-          uid: string;
-          lastPublicationDate: Date;
-        };
-        sitemap_changefreq: string;
-        sitemap_priority: string;
-      };
-    }>;
-  };
-};

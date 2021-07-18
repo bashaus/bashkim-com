@@ -1,10 +1,9 @@
-import dayjs from "dayjs";
 import { config } from "@bashkim-com/config";
 import { UrlType } from "../templates/sitemap";
 
 export const PagesSitemap = async (): Promise<Array<UrlType>> => {
   const urlset: Array<UrlType> = [];
-  const now = dayjs().format();
+  const now = new Date().toISOString();
 
   urlset.push({
     url: {

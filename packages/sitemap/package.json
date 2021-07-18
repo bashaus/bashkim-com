@@ -13,7 +13,7 @@
     "@bashkim-com/config": "1.0.0",
     "@bashkim-com/prismic": "1.0.0",
     "@vendia/serverless-express": "^4.3.3",
-    "dayjs": "^1.8.27",
+    "prismic-reactjs": "^1.3.3",
     "express": "^4.17.1",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
