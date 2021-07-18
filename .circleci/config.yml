@@ -68,7 +68,7 @@ jobs:
 
 
 
-  test:
+  test-jest:
     executor: exec-node
     steps:
       - checkout
@@ -82,6 +82,19 @@ jobs:
           command: |
             yarn test
 
+      - store_test_results:
+          path: test-results
+
+
+
+  test-eslint:
+    executor: exec-node
+    steps:
+      - checkout
+
+      - attach_workspace:
+          at: ./
+
       - run:
           name: eslint
           when: always
@@ -92,6 +105,19 @@ jobs:
               --ext .js,.ts,.tsx \
               . \
             > test-results/eslint/junit.xml
+
+      - store_test_results:
+          path: test-results
+
+
+
+  test-stylelint:
+    executor: exec-node
+    steps:
+      - checkout
+
+      - attach_workspace:
+          at: ./
 
       - run:
           name: stylelint
@@ -169,14 +195,24 @@ workflows:
     jobs:
       - build
 
-      - test:
+      - test-jest:
+          requires:
+            - build
+
+      - test-eslint:
+          requires:
+            - build
+
+      - test-stylelint:
           requires:
             - build
 
       - deploy:
           context: bashkim-com-prod
           requires:
-            - test
+            - test-jest
+            - test-eslint
+            - test-stylelint
           filters:
             branches:
               only:
@@ -185,7 +221,9 @@ workflows:
       - synchronize:
           context: bashkim-com-prod
           requires:
-            - test
+            - test-jest
+            - test-eslint
+            - test-stylelint
           filters:
             branches:
               only:
