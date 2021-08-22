@@ -42,7 +42,7 @@ custom:
 
 provider:
   name: aws
-  runtime: nodejs12.x
+  runtime: nodejs14.x
   stage: ${self:custom.stage}
   region: ${self:custom.region}
   memorySize: 512
