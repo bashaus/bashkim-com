@@ -14,9 +14,8 @@ export type CookiesNoticeProps = {
 export const CookiesNotice = ({
   onDismiss,
 }: CookiesNoticeProps): JSX.Element | null => {
-  const { state: cookiesState, dispatch: cookiesDispatch } = useContext(
-    CookiesContext
-  );
+  const { state: cookiesState, dispatch: cookiesDispatch } =
+    useContext(CookiesContext);
 
   const [isVisible, setIsVisible] = useState(!cookiesState.isDismissed);
 

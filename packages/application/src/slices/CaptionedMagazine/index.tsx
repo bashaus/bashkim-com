@@ -17,9 +17,9 @@ export const CaptionedMagazineSlice = ({
   slice,
 }: CaptionedMagazineSliceProps): JSX.Element => {
   /* infinite state */
-  const [magazineIsInitialized, setMagazineIsInitialized] = useState<boolean>(
-    false
-  );
+  const [magazineIsInitialized, setMagazineIsInitialized] =
+    useState<boolean>(false);
+
   const [spread, setSpread] = useState<number>(1);
   const [spreads, setSpreads] = useState<number>(1);
   const [pageNumbers, setPageNumbers] = useState<Array<number>>([1]);

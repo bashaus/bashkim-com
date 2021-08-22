@@ -41,14 +41,22 @@ import SubtitleSliceJson from "./Subtitle/fixture.json";
 import type { SubtitleSliceType } from "./Subtitle/type";
 
 export const AccoladeSliceFixture = AccoladeSliceJson as AccoladeSliceType;
-export const CaptionedImageSliceFixture = CaptionedImageSliceJson as CaptionedImageSliceType;
-export const CaptionedMagazineSliceFixture = CaptionedMagazineSliceJson as CaptionedMagazineSliceType;
-export const CaptionedScreenshotsSliceFixture = CaptionedScreenshotsSliceJson as CaptionedScreenshotsSliceType;
-export const CaptionedVideoSliceFixture = CaptionedVideoSliceJson as CaptionedVideoSliceType;
-export const CarouselImagesSliceFixture = CarouselImagesSliceJson as CarouselImagesSliceType;
-export const CarouselPhonesSliceFixture = CarouselPhonesSliceJson as CarouselPhonesSliceType;
-export const CollaboratorSliceFixture = CollaboratorSliceJson as CollaboratorSliceType;
-export const ExhibitionSliceFixture = ExhibitionSliceJson as ExhibitionSliceType;
+export const CaptionedImageSliceFixture =
+  CaptionedImageSliceJson as CaptionedImageSliceType;
+export const CaptionedMagazineSliceFixture =
+  CaptionedMagazineSliceJson as CaptionedMagazineSliceType;
+export const CaptionedScreenshotsSliceFixture =
+  CaptionedScreenshotsSliceJson as CaptionedScreenshotsSliceType;
+export const CaptionedVideoSliceFixture =
+  CaptionedVideoSliceJson as CaptionedVideoSliceType;
+export const CarouselImagesSliceFixture =
+  CarouselImagesSliceJson as CarouselImagesSliceType;
+export const CarouselPhonesSliceFixture =
+  CarouselPhonesSliceJson as CarouselPhonesSliceType;
+export const CollaboratorSliceFixture =
+  CollaboratorSliceJson as CollaboratorSliceType;
+export const ExhibitionSliceFixture =
+  ExhibitionSliceJson as ExhibitionSliceType;
 export const FullTextSliceFixture = FullTextSliceJson as FullTextSliceType;
 export const GridEmbedSliceFixture = GridEmbedSliceJson as GridEmbedSliceType;
 export const GridVideoSliceFixture = GridVideoSliceJson as GridVideoSliceType;

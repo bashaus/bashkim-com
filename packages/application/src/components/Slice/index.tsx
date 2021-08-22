@@ -3,11 +3,11 @@ import type { PrismicSliceType } from "@bashkim-com/prismic";
 
 const SliceTypeComponentMap = {
   CaptionedImageSliceType: dynamic(() => import("%slices/CaptionedImage")),
-  CaptionedMagazineSliceType: dynamic(() =>
-    import("%slices/CaptionedMagazine")
+  CaptionedMagazineSliceType: dynamic(
+    () => import("%slices/CaptionedMagazine")
   ),
-  CaptionedScreenshotsSliceType: dynamic(() =>
-    import("%slices/CaptionedScreenshots")
+  CaptionedScreenshotsSliceType: dynamic(
+    () => import("%slices/CaptionedScreenshots")
   ),
   CaptionedVideoSliceType: dynamic(() => import("%slices/CaptionedVideo")),
   CarouselImagesSliceType: dynamic(() => import("%slices/CarouselImages")),

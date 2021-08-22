@@ -20,10 +20,8 @@ export const CaseStudyTechnologies = ({
           return null;
         }
 
-        const {
-          technology_name: name,
-          technology_icon: icon,
-        } = technology.info_technology;
+        const { technology_name: name, technology_icon: icon } =
+          technology.info_technology;
 
         return (
           <li key={name}>

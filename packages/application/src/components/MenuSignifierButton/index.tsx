@@ -6,9 +6,8 @@ import { NavigationActionsTypes } from "%contexts/Navigation/actions";
 import styles from "./styles.module.scss";
 
 export const MenuSignifierButton = (): JSX.Element => {
-  const { state: navigationState, dispatch: navigationDispatch } = useContext(
-    NavigationContext
-  );
+  const { state: navigationState, dispatch: navigationDispatch } =
+    useContext(NavigationContext);
 
   const handleSignifierClick = useCallback((): void => {
     navigationDispatch({ type: NavigationActionsTypes.MENU_TOGGLE });

@@ -23,9 +23,8 @@ export const Page = ({
   children,
   theme = "default",
 }: PageProps): JSX.Element => {
-  const { state: navigationState, dispatch: navigationDispatch } = useContext(
-    NavigationContext
-  );
+  const { state: navigationState, dispatch: navigationDispatch } =
+    useContext(NavigationContext);
 
   const handleRouteChange = useCallback(
     (/* url: string */) => {

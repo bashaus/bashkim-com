@@ -34,9 +34,7 @@ export type CaseStudyContentTypeInfoTab = {
   info_degree: string | null;
   info_launch_date: Date | null;
   info_decommission_date: Date | null;
-  info_target_audiences: Array<
-    CaseStudyContentTypeInfoTabTargetAudience
-  > | null;
+  info_target_audiences: Array<CaseStudyContentTypeInfoTabTargetAudience> | null;
   info_markets: Array<CaseStudyContentTypeInfoTabMarket> | null;
   info_outcomes: Array<CaseStudyContentTypeInfoTabOutcome> | null;
   info_technologies: Array<CaseStudyContentTypeInfoTabTechnology> | null;

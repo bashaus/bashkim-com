@@ -20,10 +20,10 @@ export const CookiesProvider = ({
   });
 
   /* Persist state when it changes */
-  useEffect(() => setIsDismissed(state.isDismissed), [
-    state.isDismissed,
-    setIsDismissed,
-  ]);
+  useEffect(
+    () => setIsDismissed(state.isDismissed),
+    [state.isDismissed, setIsDismissed]
+  );
 
   return (
     <CookiesContext.Provider value={{ state, dispatch }}>

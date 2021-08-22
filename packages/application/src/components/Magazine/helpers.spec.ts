@@ -135,12 +135,10 @@ describe("Magazine/Helpers", () => {
 
       it("returns middle pages as range", () => {
         expect(convertSpreadToPageNumbers(TurnDisplay.DOUBLE, 2, 4)).toEqual([
-          2,
-          3,
+          2, 3,
         ]);
         expect(convertSpreadToPageNumbers(TurnDisplay.DOUBLE, 4, 100)).toEqual([
-          6,
-          7,
+          6, 7,
         ]);
       });
     });
