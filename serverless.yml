@@ -128,7 +128,7 @@ resources:
             SslSupportMethod: sni-only
           Origins:
             - Id: WebsiteBucketOrigin
-              DomainName: "${self:custom.website.bucketName}.s3-website-eu-west-1.amazonaws.com"
+              DomainName: "${self:custom.website.bucketName}.s3-website-${self:custom.region}.amazonaws.com"
               CustomOriginConfig:
                 OriginKeepaliveTimeout: 60
                 OriginReadTimeout: 15
@@ -167,13 +167,13 @@ resources:
           CacheBehaviors:
             - PathPattern: /webhooks/*
               AllowedMethods:
+                - DELETE
                 - GET
                 - HEAD
                 - OPTIONS
-                - PUT
                 - PATCH
                 - POST
-                - DELETE
+                - PUT
               TargetOriginId: ApiGatewayOrigin
               Compress: true
               ForwardedValues:
