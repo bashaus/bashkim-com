@@ -3,6 +3,7 @@
     "dbaeumer.vscode-eslint",
     "editorconfig.editorconfig",
     "graphql.vscode-graphql",
+    "hashicorp.terraform",
     "jock.svg",
     "mhutchie.git-graph",
     "mikestead.dotenv",

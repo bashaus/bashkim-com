@@ -3,10 +3,9 @@ packages/*/src/**
 packages/*/tsconfig.json
 
 # Folders
-.circleci/*
+.circleci/
 .git/
-.vscode/*
-infrastructure/*
+.vscode/
 
 # Filenames
 **/.babelrc
@@ -16,7 +15,7 @@ infrastructure/*
 .env
 .env.example
 .eslintignore
-.eslintrc.json
+.eslintrc.js
 .gitignore
 .huskyrc.json
 .lintstagedrc.json
