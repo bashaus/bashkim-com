@@ -6,7 +6,7 @@ executors:
   exec-node:
     working_directory: ~/repo
     docker:
-      - image: node:14.15.5
+      - image: node:14.17.6
 
   exec-python:
     working_directory: ~/repo
