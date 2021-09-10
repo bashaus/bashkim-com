@@ -3,6 +3,11 @@ variable "stack_name" {
   default = "bashkim-com"
 }
 
+variable "serverless_api_domain" {
+  type = string
+  default = ""
+}
+
 variable "certificate_arn" {
   type = string
   default = ""

@@ -16,13 +16,13 @@ resource "aws_cloudfront_distribution" "distribution" {
       http_port               = 80
       https_port              = 443
       origin_protocol_policy  = "http-only"
-      origin_ssl_protocols    = ["TLSv1", "TLSv1.1", "TLSv1.2"]
+      origin_ssl_protocols      = ["TLSv1.2"]
     }
   }
 
   origin {
     origin_id           = "ApiGatewayOrigin"
-    domain_name         = "j1rzctrvgj.execute-api.eu-west-1.amazonaws.com"
+    domain_name         = var.serverless_api_domain
     origin_path         = "/production"
     connection_attempts = 3
     connection_timeout  = 10
@@ -33,7 +33,7 @@ resource "aws_cloudfront_distribution" "distribution" {
       http_port                 = 80
       https_port                = 443
       origin_protocol_policy    = "https-only"
-      origin_ssl_protocols      = ["TLSv1", "TLSv1.1", "TLSv1.2"]
+      origin_ssl_protocols      = ["TLSv1.2"]
     }
   }
 
@@ -130,7 +130,7 @@ resource "aws_cloudfront_distribution" "distribution" {
   viewer_certificate {
     cloudfront_default_certificate = false
     acm_certificate_arn = var.certificate_arn
-    minimum_protocol_version = "TLSv1.1_2016"
+    minimum_protocol_version = "TLSv1.2_2021"
     ssl_support_method = "sni-only"
   }
 }
