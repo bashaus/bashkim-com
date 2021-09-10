@@ -1,13 +1,25 @@
 module.exports = {
   collectCoverageFrom: [
-    "**/*.{js,jsx,ts,tsx}",
+    "src/**/*.{js,jsx,ts,tsx}",
     "!**/*.d.ts",
+    "!**/stories.tsx",
     "!**/node_modules/**",
+  ],
+  coveragePathIgnorePatterns: [
+    "/node_modules/",
+    "/.next/",
+    "/build/",
+    "/coverage/",
   ],
   // setupFilesAfterEnv: [
   //   '<rootDir>/setupTests.js'
   // ],
-  testPathIgnorePatterns: ["/node_modules/", "/.next/", "/build/"],
+  testPathIgnorePatterns: [
+    "/node_modules/",
+    "/.next/",
+    "/build/",
+    "/coverage/",
+  ],
   transform: {
     "^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/node_modules/babel-jest",
     "^.+\\.css$": "<rootDir>/.jest/cssTransform.js",
