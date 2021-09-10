@@ -42,6 +42,7 @@ const CaseStudyPage = ({
   return (
     <LayoutDefault backButton={MenuBackButtonPortfolioImpl} theme="portfolio">
       <article itemScope itemType="http://schema.org/CreativeWork">
+        <MetaCanonical href={`/portfolio/${caseStudyPage._meta.uid}/`} />
         <MetaTitle content={caseStudyPage.meta_title} />
         <MetaDescription content={caseStudyPage.meta_description} />
         <MetaKeywords content={caseStudyPage.meta_keywords} />
@@ -53,8 +54,6 @@ const CaseStudyPage = ({
             height={caseStudyPage.image_poster.dimensions.height}
           />
         )}
-
-        <MetaCanonical href={`/portfolio/${caseStudyPage._meta.uid}`} />
 
         <CaseStudyHeader caseStudy={caseStudyPage} />
 

@@ -47,8 +47,6 @@ class MyDocument extends Document {
           <meta name="msapplication-TileColor" content="#29E5D0" />
 
           {/* These are now on a per-page basis
-
-            <link rel="canonical" href={ canonical if canonical else destinationPath } />
             <meta property="og:type" content={ appConfig.meta.type } />
             <meta property="og:url" content={ destinationPath } />
             <meta name="twitter:url" content={ destinationPath } />
