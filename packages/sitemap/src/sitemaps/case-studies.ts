@@ -11,7 +11,7 @@ export const CaseStudiesSitemap = async (): Promise<Array<UrlType>> => {
   /* Portfolio index */
   urlset.push({
     url: {
-      loc: `${config.sitemap.baseHref}/portfolio`,
+      loc: `${config.sitemap.baseHref}/portfolio/`,
       lastmod: new Date().toISOString(),
       changefreq: "monthly",
       priority: "1.0",
@@ -27,7 +27,7 @@ export const CaseStudiesSitemap = async (): Promise<Array<UrlType>> => {
     ({ node: caseStudy }: { node: CaseStudyContentType }) => {
       urlset.push({
         url: {
-          loc: `${config.sitemap.baseHref}/portfolio/${caseStudy._meta.uid}`,
+          loc: `${config.sitemap.baseHref}/portfolio/${caseStudy._meta.uid}/`,
           lastmod: caseStudy._meta.lastPublicationDate
             ? PrismicDate(caseStudy._meta.lastPublicationDate).toISOString()
             : undefined,

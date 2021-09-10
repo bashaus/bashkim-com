@@ -7,7 +7,7 @@ export const PagesSitemap = async (): Promise<Array<UrlType>> => {
 
   urlset.push({
     url: {
-      loc: `${config.sitemap.baseHref}`,
+      loc: `${config.sitemap.baseHref}/`,
       lastmod: now,
       changefreq: "monthly",
       priority: "1.0",
@@ -16,7 +16,7 @@ export const PagesSitemap = async (): Promise<Array<UrlType>> => {
 
   urlset.push({
     url: {
-      loc: `${config.sitemap.baseHref}/about`,
+      loc: `${config.sitemap.baseHref}/about/`,
       lastmod: now,
       changefreq: "monthly",
       priority: "1.0",
@@ -25,7 +25,7 @@ export const PagesSitemap = async (): Promise<Array<UrlType>> => {
 
   urlset.push({
     url: {
-      loc: `${config.sitemap.baseHref}/legal/cookie-policy`,
+      loc: `${config.sitemap.baseHref}/legal/cookie-policy/`,
       lastmod: now,
       changefreq: "monthly",
       priority: "1.0",
