@@ -1,8 +1,8 @@
 @import "~breakpoint-sass";
 
-@import "src/styleguide/utils/fonts.scss";
-@import "src/styleguide/utils/grid.scss";
-@import "src/styleguide/utils/media.scss";
+@import "src/styleguide/utils/fonts";
+@import "src/styleguide/utils/grid";
+@import "src/styleguide/utils/media";
 
 .PartialSubtitle {
   @include grid-full;

@@ -1,6 +1,8 @@
 {
-  "plugins": ["stylelint-prettier"],
+  "plugins": ["stylelint-prettier", "stylelint-scss"],
   "rules": {
-    "prettier/prettier": true
+    "prettier/prettier": true,
+    "scss/at-import-no-partial-leading-underscore": true,
+    "scss/at-import-partial-extension-blacklist": ["scss"]
   }
 }

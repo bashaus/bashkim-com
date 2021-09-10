@@ -1,7 +1,7 @@
 @import "~breakpoint-sass";
 
-@import "src/styleguide/utils/grid.scss";
-@import "src/styleguide/utils/media.scss";
+@import "src/styleguide/utils/grid";
+@import "src/styleguide/utils/media";
 
 .PartialTitle {
   @include grid-full;

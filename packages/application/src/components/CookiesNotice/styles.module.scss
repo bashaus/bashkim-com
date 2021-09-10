@@ -1,10 +1,10 @@
 @import "~breakpoint-sass";
 
-@import "~@bashkim-com/design-system/src/styleguide/utils/colors.scss";
-@import "~@bashkim-com/design-system/src/styleguide/utils/grid.scss";
-@import "~@bashkim-com/design-system/src/styleguide/utils/media.scss";
+@import "~@bashkim-com/design-system/src/styleguide/utils/colors";
+@import "~@bashkim-com/design-system/src/styleguide/utils/grid";
+@import "~@bashkim-com/design-system/src/styleguide/utils/media";
 
-@import "~%styleguide/utils/z-index.scss";
+@import "~%styleguide/utils/z-index";
 
 .CookiesNotice {
   background-color: $color-white;

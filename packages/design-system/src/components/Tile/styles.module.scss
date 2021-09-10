@@ -1,9 +1,9 @@
 @import "~breakpoint-sass";
 
-@import "src/styleguide/designs/headings.scss";
-@import "src/styleguide/designs/wysiwyg.scss";
-@import "src/styleguide/utils/colors.scss";
-@import "src/styleguide/utils/media.scss";
+@import "src/styleguide/designs/headings";
+@import "src/styleguide/designs/wysiwyg";
+@import "src/styleguide/utils/colors";
+@import "src/styleguide/utils/media";
 
 .Tile {
   @extend %wysiwyg;

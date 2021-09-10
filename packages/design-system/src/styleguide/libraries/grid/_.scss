@@ -1,16 +1,16 @@
 @import "~breakpoint-sass";
 
-@import "./cell/_.scss";
-@import "./cell/margin.scss";
-@import "./cell/padding.scss";
-@import "./cell/width.scss";
+@import "./cell/_";
+@import "./cell/margin";
+@import "./cell/padding";
+@import "./cell/width";
 
-@import "./container/_.scss";
-@import "./container/max-width.scss";
-@import "./container/padding.scss";
+@import "./container/_";
+@import "./container/max-width";
+@import "./container/padding";
 
-@import "./full/_.scss";
-@import "./full/padding.scss";
+@import "./full/_";
+@import "./full/padding";
 
 @function grid-breakpoint($breakpoint) {
   @return map-get($grid, $breakpoint);

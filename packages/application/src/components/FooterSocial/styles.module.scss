@@ -1,7 +1,7 @@
 @import "~breakpoint-sass";
 
-@import "~@bashkim-com/design-system/src/styleguide/utils/grid.scss";
-@import "~@bashkim-com/design-system/src/styleguide/utils/media.scss";
+@import "~@bashkim-com/design-system/src/styleguide/utils/grid";
+@import "~@bashkim-com/design-system/src/styleguide/utils/media";
 
 .FooterSocial {
   @include grid-cell-width(

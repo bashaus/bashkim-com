@@ -1,5 +1,5 @@
-@import "src/styleguide/utils/chevron.scss";
-@import "src/styleguide/utils/colors.scss";
+@import "src/styleguide/utils/chevron";
+@import "src/styleguide/utils/colors";
 
 .background {
   @include chevron-down;

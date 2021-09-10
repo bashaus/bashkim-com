@@ -1,5 +1,5 @@
-@import "src/styleguide/utils/colors.scss";
-@import "src/styleguide/utils/ratios.scss";
+@import "src/styleguide/utils/colors";
+@import "src/styleguide/utils/ratios";
 
 .VideoPlayerYouTube {
   @extend %ratio-widescreen;

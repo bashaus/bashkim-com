@@ -1,9 +1,9 @@
 @import "~breakpoint-sass";
 
-@import "~@bashkim-com/design-system/src/styleguide/utils/clearfix.scss";
-@import "~@bashkim-com/design-system/src/styleguide/utils/media.scss";
+@import "~@bashkim-com/design-system/src/styleguide/utils/clearfix";
+@import "~@bashkim-com/design-system/src/styleguide/utils/media";
 
-@import "~%styleguide/utils/z-index.scss";
+@import "~%styleguide/utils/z-index";
 
 .Turn {
   @include clearfix;

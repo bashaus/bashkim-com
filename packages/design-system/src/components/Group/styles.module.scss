@@ -1,7 +1,7 @@
 @import "~breakpoint-sass";
 
-@import "src/styleguide/utils/colors.scss";
-@import "src/styleguide/utils/media.scss";
+@import "src/styleguide/utils/colors";
+@import "src/styleguide/utils/media";
 
 .Group {
   @include breakpoint($media-mobile) {

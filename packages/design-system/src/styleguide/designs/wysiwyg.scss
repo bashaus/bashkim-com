@@ -1,8 +1,8 @@
-@import "../designs/headings.scss";
-@import "../designs/list-ordered.scss";
-@import "../designs/list-unordered.scss";
-@import "../utils/colors.scss";
-@import "../utils/grid.scss";
+@import "../designs/headings";
+@import "../designs/list-ordered";
+@import "../designs/list-unordered";
+@import "../utils/colors";
+@import "../utils/grid";
 
 %wysiwyg {
   * + * {
