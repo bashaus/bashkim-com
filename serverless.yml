@@ -79,6 +79,7 @@ functions:
         - "packages/config/build/**"
         - "packages/prismic/build/**"
         - "packages/sitemap/build/**"
+        - "packages/sitemap/public/**"
     events:
       - http:
           method: GET
