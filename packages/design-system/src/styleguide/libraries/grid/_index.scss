@@ -1,15 +1,15 @@
 @import "~breakpoint-sass";
 
-@import "./cell/_";
+@import "./cell/index";
 @import "./cell/margin";
 @import "./cell/padding";
 @import "./cell/width";
 
-@import "./container/_";
+@import "./container/index";
 @import "./container/max-width";
 @import "./container/padding";
 
-@import "./full/_";
+@import "./full/index";
 @import "./full/padding";
 
 @function grid-breakpoint($breakpoint) {
