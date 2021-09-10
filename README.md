@@ -2,12 +2,5 @@
 
 Portfolio of case studies by Bashkim Isai
 
-## Introduction
-
-This is the codebase for the website available from [bashkim.com](https://www.bashkim.com/). This `README.md` file details some of the decisions and principles adhered to in the development of this site.
-
-## Styleguide
-
-This website uses [storybook](https://storybook.js.org/) to manage a styleguide and development the visual components of the application.
-
-- [View the styleguide](https://styleguide.bashkim.com/)
+- [View website](https://www.bashkim.com/)
+- [View design system](https://design-system.bashkim.com/)

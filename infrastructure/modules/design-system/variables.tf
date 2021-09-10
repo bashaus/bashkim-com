@@ -10,5 +10,5 @@ variable "certificate_arn" {
 
 variable "domain_name" {
   type = string
-  default = "styleguide.bashkim.com"
+  default = "design-system.bashkim.com"
 }

@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "bucket" {
-  bucket        = "${var.stack_name}-production-styleguide"
+  bucket        = "${var.stack_name}-production-design-system"
   acl           = "private"
   force_destroy = false
 

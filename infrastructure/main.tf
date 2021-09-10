@@ -20,12 +20,12 @@ provider "aws" {
   region  = "eu-west-1"
 }
 
-module "styleguide" {
-  source = "./modules/styleguide"
+module "design-system" {
+  source = "./modules/design-system"
 
   stack_name = "bashkim-com"
   certificate_arn = "arn:aws:acm:us-east-1:409535992503:certificate/931d3c5c-33c6-410e-a01f-f45176fb0b99"
-  domain_name = "styleguide.bashkim.com"
+  domain_name = "design-system.bashkim.com"
 }
 
 module "website" {

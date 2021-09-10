@@ -9,9 +9,9 @@
     "prebuild": "yarn clean",
     "build": "rollup -c",
     "clean": "rm -rf build/",
-    "prestyleguide:build": "rm -rf .storybook-static",
-    "styleguide:build": "build-storybook -o .storybook-static",
-    "styleguide:start": "start-storybook -p 3010",
+    "prestorybook:build": "rm -rf .storybook-static",
+    "storybook:build": "build-storybook -o .storybook-static",
+    "storybook:start": "start-storybook -p 3010",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
   "dependencies": {

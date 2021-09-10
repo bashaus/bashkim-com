@@ -9,7 +9,7 @@ resource "aws_cloudfront_distribution" "distribution" {
   origin {
     connection_attempts = 3
     connection_timeout  = 10
-    origin_id           = "StyleguideBucket"
+    origin_id           = "DesignSystemBucket"
 
     domain_name = aws_s3_bucket.bucket.bucket_regional_domain_name
     s3_origin_config {
@@ -21,7 +21,7 @@ resource "aws_cloudfront_distribution" "distribution" {
     allowed_methods         = ["GET", "HEAD", "OPTIONS"]
     cached_methods          = ["GET", "HEAD"]
     compress                = true
-    target_origin_id        = "StyleguideBucket"
+    target_origin_id        = "DesignSystemBucket"
     viewer_protocol_policy  = "redirect-to-https"
 
     forwarded_values {
