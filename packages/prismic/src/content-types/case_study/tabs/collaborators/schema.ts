@@ -1,4 +1,4 @@
-import CollaboratorSliceType from "@bashkim-com/prismic/slice-types/Collaborator/schema.json";
+import CollaboratorSliceType from "../../../../slice-types/Collaborator/schema.json";
 
 export default {
   collaborators: {

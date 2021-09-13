@@ -15,7 +15,8 @@
     "exhibition_slice_type_link": {
       "type": "Link",
       "config": {
-        "label": "Link"
+        "label": "Link",
+        "select": null
       }
     },
     "exhibition_slice_type_opening_date": {

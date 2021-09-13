@@ -6,9 +6,10 @@
   "module": "./build/index.es.js",
   "typings": "./build/index.d.ts",
   "scripts": {
-    "prebuild": "yarn clean",
+    "prebuild": "yarn clean && yarn schema:build",
     "build": "rollup -c",
-    "clean": "rm -rf build/",
+    "clean": "rm -rf dist/ build/",
+    "schema:build": "ts-node --project tsconfig.schema.json src/schema.ts",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
   "dependencies": {
@@ -22,10 +23,12 @@
     "@rollup/plugin-commonjs": "^18.0.0",
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^11.2.1",
+    "@types/node": "^16.9.1",
     "react": "^17.0.2",
     "rollup": "^2.45.2",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-typescript2": "^0.30.0",
+    "ts-node": "^10.2.1",
     "typescript": "^4.3.5",
     "utility-types": "^3.10.0"
   },

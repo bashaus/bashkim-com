@@ -25,19 +25,30 @@ export const PortfolioPageQuery = gql`
               }
             }
           }
-        }
-      }
-    }
 
-    caseStudies: allCase_studys(sortBy: info_launch_date_DESC, first: 100) {
-      edges {
-        node {
-          _meta {
-            uid
+          portfolio_categories {
+            ... on Portfolio_pagePortfolio_categoriesPortfoliocategoryslicetype {
+              primary {
+                portfolio_category_slug
+                portfolio_category_title
+                portfolio_category_description
+              }
+              fields {
+                portfolio_category_case_study {
+                  ... on Case_study {
+                    _meta {
+                      id
+                      uid
+                    }
+
+                    meta_title
+                    meta_description
+                    image_icon
+                  }
+                }
+              }
+            }
           }
-          meta_title
-          meta_description
-          image_icon
         }
       }
     }

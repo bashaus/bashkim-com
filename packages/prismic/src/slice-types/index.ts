@@ -11,6 +11,7 @@ import type { FullTextSliceType } from "./FullText/type";
 import type { GridEmbedSliceType } from "./GridEmbed/type";
 import type { GridVideoSliceType } from "./GridVideo/type";
 import type { NewspaperSliceType } from "./Newspaper/type";
+import type { PortfolioCategorySliceType } from "./PortfolioCategory/type";
 import type { SubtitleSliceType } from "./Subtitle/type";
 
 export {
@@ -27,5 +28,6 @@ export {
   GridEmbedSliceType,
   GridVideoSliceType,
   NewspaperSliceType,
+  PortfolioCategorySliceType,
   SubtitleSliceType,
 };

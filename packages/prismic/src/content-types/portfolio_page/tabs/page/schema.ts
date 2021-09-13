@@ -1,3 +1,5 @@
+import PortfolioCategorySliceType from "../../../../slice-types/PortfolioCategory/schema.json";
+
 export default {
   featured: {
     type: "Group",
@@ -13,7 +15,7 @@ export default {
         featured_description: {
           type: "StructuredText",
           config: {
-            multi: "paragraph, list-item",
+            multi: "paragraph,list-item",
             label: "Description",
           },
         },
@@ -27,6 +29,16 @@ export default {
         },
       },
       label: "Featured Case Studies",
+    },
+  },
+  portfolio_categories: {
+    type: "Slices",
+    fieldset: "Portfolio categories",
+    config: {
+      labels: null,
+      choices: {
+        PortfolioCategorySliceType,
+      },
     },
   },
 };

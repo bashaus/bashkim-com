@@ -37,7 +37,8 @@
     "accolade_slice_type_award_link": {
       "type": "Link",
       "config": {
-        "label": "Link"
+        "label": "Link",
+        "select": null
       }
     },
     "accolade_slice_type_award_category": {

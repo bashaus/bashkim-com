@@ -17,7 +17,6 @@ executors:
 
 orbs:
   aws-s3: circleci/aws-s3@1.0.11
-  # aws-serverless: circleci/aws-serverless@1.0.1
 
 
 
@@ -243,6 +242,10 @@ workflows:
             - test-jest
             - test-eslint
             - test-stylelint
+          filters:
+            branches:
+              only:
+                - master
 
       - deploy:
           context: bashkim-com-prod

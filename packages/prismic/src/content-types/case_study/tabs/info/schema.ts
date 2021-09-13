@@ -31,6 +31,7 @@ export default {
           type: "Link",
           config: {
             label: "Deliverable link",
+            select: null,
           },
         },
       },

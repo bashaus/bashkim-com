@@ -37,6 +37,9 @@ import type { GridVideoSliceType } from "./GridVideo/type";
 import NewspaperSliceJson from "./Newspaper/fixture.json";
 import type { NewspaperSliceType } from "./Newspaper/type";
 
+import PortfolioCategorySliceJson from "./PortfolioCategory/fixture.json";
+import type { PortfolioCategorySliceType } from "./PortfolioCategory/type";
+
 import SubtitleSliceJson from "./Subtitle/fixture.json";
 import type { SubtitleSliceType } from "./Subtitle/type";
 
@@ -61,4 +64,6 @@ export const FullTextSliceFixture = FullTextSliceJson as FullTextSliceType;
 export const GridEmbedSliceFixture = GridEmbedSliceJson as GridEmbedSliceType;
 export const GridVideoSliceFixture = GridVideoSliceJson as GridVideoSliceType;
 export const NewspaperSliceFixture = NewspaperSliceJson as NewspaperSliceType;
+export const PortfolioCategorySliceFixture =
+  PortfolioCategorySliceJson as PortfolioCategorySliceType;
 export const SubtitleSliceFixture = SubtitleSliceJson as SubtitleSliceType;

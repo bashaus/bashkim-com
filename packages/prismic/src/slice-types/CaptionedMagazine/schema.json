@@ -8,7 +8,7 @@
     "captioned_magazine_slice_type_caption": {
       "type": "StructuredText",
       "config": {
-        "multi": "paragraph, heading3, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+        "multi": "paragraph,heading3,strong,em,hyperlink,image,embed,list-item,o-list-item,o-list-item",
         "label": "Caption"
       }
     }

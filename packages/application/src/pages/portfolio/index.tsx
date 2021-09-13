@@ -1,4 +1,3 @@
-import { DeepPartial } from "utility-types";
 import { GetStaticProps } from "next";
 
 import { PrismicClient } from "@bashkim-com/prismic";
@@ -20,7 +19,7 @@ import { MetaDescription } from "%components/MetaDescription";
 import { MetaKeywords } from "%components/MetaKeywords";
 import { MetaTitle } from "%components/MetaTitle";
 import { PortfolioFeaturedCaseStudies } from "%components/PortfolioFeaturedCaseStudies";
-import { PortfolioList } from "%components/PortfolioList";
+import { PortfolioCategory } from "%components/PortfolioCategory";
 
 import { PortfolioPageQuery } from "%libraries/prismic/queries/PortfolioPageQuery";
 
@@ -29,15 +28,13 @@ type PortfolioPageProps = {
   portfolioPage: PortfolioPageContentType;
 };
 
-const PortfolioPage = ({
-  caseStudies,
-  portfolioPage,
-}: PortfolioPageProps): JSX.Element => {
+const PortfolioPage = ({ portfolioPage }: PortfolioPageProps): JSX.Element => {
   const {
     meta_title: metaTitle,
     meta_description: metaDescription,
     meta_keywords: metaKeywords,
     featured,
+    portfolio_categories: portfolioCategories,
   } = portfolioPage;
 
   return (
@@ -58,13 +55,11 @@ const PortfolioPage = ({
         <PortfolioFeaturedCaseStudies featured={featured} />
       </Group>
 
-      <Group>
-        <PartialSubtitle>
-          <h2>All case studies</h2>
-        </PartialSubtitle>
-
-        <PortfolioList caseStudies={caseStudies} />
-      </Group>
+      {portfolioCategories.map((portfolioCategory, i) => (
+        <Group key={i}>
+          <PortfolioCategory portfolioCategory={portfolioCategory} />
+        </Group>
+      ))}
     </LayoutDefault>
   );
 };
@@ -77,9 +72,6 @@ export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {
       portfolioPage: result.data.portfolioPage.edges[0].node,
-      caseStudies: result.data.caseStudies.edges.map(
-        (caseStudy: DeepPartial<CaseStudyContentType>) => caseStudy.node
-      ),
     } as PortfolioPageProps,
   };
 };

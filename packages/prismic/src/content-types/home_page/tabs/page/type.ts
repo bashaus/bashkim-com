@@ -1,4 +1,5 @@
-import type { PrismicImageType } from "@bashkim-com/prismic/types/Image";
+import type { DeepPartial } from "utility-types";
+import type { CaseStudyContentType } from "@bashkim-com/prismic/content-types";
 
 export type HomePageContentTypePageTab = {
   featured_case_studies: Array<{
@@ -9,12 +10,7 @@ export type HomePageContentTypePageTab = {
       slug: string;
       lang: string;
       uid: string;
-      data: {
-        meta_title?: string;
-        meta_description?: string;
-        image_header_desktop?: PrismicImageType;
-        image_header_mobile?: PrismicImageType;
-      };
+      data: DeepPartial<CaseStudyContentType>;
       link_type?: string;
       isBroken: boolean;
     };

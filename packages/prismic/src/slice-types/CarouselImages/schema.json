@@ -17,7 +17,7 @@
     "carousel_images_slice_type_caption": {
       "type": "StructuredText",
       "config": {
-        "multi": "paragraph, preformatted, heading3, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+        "multi": "paragraph,preformatted,heading3,strong,em,hyperlink,image,embed,list-item,o-list-item,o-list-item",
         "label": "Caption"
       }
     }

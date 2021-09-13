@@ -1,0 +1,39 @@
+{
+  "type": "Slice",
+  "fieldset": "Portfolio categories",
+  "description": "A group of portfolio categories",
+  "icon": "contacts",
+  "display": "grid",
+  "non-repeat": {
+    "portfolio_category_slug": {
+      "type": "Text",
+      "config": {
+        "label": "Slug"
+      }
+    },
+    "portfolio_category_title": {
+      "type": "StructuredText",
+      "config": {
+        "label": "Title",
+        "single": "heading2"
+      }
+    },
+    "portfolio_category_description": {
+      "type": "StructuredText",
+      "config": {
+        "label": "Description",
+        "multi": "paragraph,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item"
+      }
+    }
+  },
+  "repeat": {
+    "portfolio_category_case_study": {
+      "type": "Link",
+      "config": {
+        "label": "Case study",
+        "select": "document",
+        "customtypes": ["case_study"]
+      }
+    }
+  }
+}

@@ -54,7 +54,7 @@ export const HomeHello = (): JSX.Element => (
           <span className={styles.spiel}>
             I&apos;m a London&#8209;based Creative Technologist specialising in
             <span> </span>
-            <Link href="/portfolio#physical-computing">
+            <Link href="/portfolio#tangible-media">
               <a>tangible&nbsp;media</a>
             </Link>
             <span> and </span>

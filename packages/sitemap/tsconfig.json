@@ -6,7 +6,6 @@
     "outDir": "./build",
     "paths": {
       "@bashkim-com/prismic/*": ["../../prismic/build/*"]
-    },
-    "rootDir": "./src",
+    }
   }
 }

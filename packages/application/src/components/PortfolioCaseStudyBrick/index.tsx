@@ -4,13 +4,13 @@ import { Brick } from "@bashkim-com/design-system";
 
 import type { CaseStudyContentType } from "@bashkim-com/prismic";
 
-export type PortfolioListBrickProps = {
+export type PortfolioCaseStudyBrickProps = {
   caseStudy: CaseStudyContentType;
 };
 
-export const PortfolioListBrick = ({
+export const PortfolioCaseStudyBrick = ({
   caseStudy,
-}: PortfolioListBrickProps): JSX.Element => (
+}: PortfolioCaseStudyBrickProps): JSX.Element => (
   <Link
     href="/portfolio/[caseStudySlug]"
     as={`/portfolio/${caseStudy._meta.uid}`}

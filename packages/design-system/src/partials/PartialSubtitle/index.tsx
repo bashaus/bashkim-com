@@ -1,12 +1,13 @@
-import React from "react";
+import classNames from "classnames";
+import React, { HTMLAttributes } from "react";
+
 import styles from "./styles.module.scss";
 
-export type PartialSubtitleProps = {
-  children?: React.ReactNode;
-};
+export type PartialSubtitleProps = HTMLAttributes<HTMLDivElement>;
 
 export const PartialSubtitle = ({
-  children,
+  className,
+  ...props
 }: PartialSubtitleProps): JSX.Element => (
-  <div className={styles.PartialSubtitle}>{children}</div>
+  <div className={classNames(className, styles.PartialSubtitle)} {...props} />
 );

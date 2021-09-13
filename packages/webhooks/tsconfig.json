@@ -3,7 +3,6 @@
   "compilerOptions": {
     "baseUrl": "./src",
     "module": "commonjs",
-    "outDir": "./build",
-    "rootDir": "./src",
+    "outDir": "./build"
   }
 }

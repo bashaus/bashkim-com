@@ -4,7 +4,6 @@
     "baseUrl": "./src",
     "declaration": true,
     "declarationDir": "./build",
-    "outDir": "./build",
-    "rootDir": "./src",
+    "outDir": "./build"
   }
 }
