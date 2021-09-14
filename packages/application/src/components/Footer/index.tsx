@@ -6,7 +6,7 @@ import styles from "./styles.module.scss";
 
 export const Footer = (): JSX.Element => (
   <footer className={styles.Footer}>
-    <div className={styles.wrapper}>
+    <div className={styles.Container}>
       <FooterLinks />
       <FooterSocial />
       <FooterCopyright />

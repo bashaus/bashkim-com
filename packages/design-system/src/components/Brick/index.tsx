@@ -24,10 +24,10 @@ export const Brick = ({
   title,
 }: BrickProps): JSX.Element => (
   <article className={styles.Brick}>
-    <div className={styles.inner}>
+    <div className={styles.Inner}>
       <h3>{title}</h3>
 
-      <div className={styles.image}>
+      <div className={styles.Image}>
         <img alt="" src={icon} />
       </div>
 

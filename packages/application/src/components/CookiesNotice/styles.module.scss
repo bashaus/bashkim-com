@@ -11,7 +11,7 @@
   font-size: 16px;
   line-height: 140%;
 
-  .container {
+  .Container {
     @include grid-container(
       $breakpoints: (
         mobile-portrait,
@@ -39,7 +39,7 @@
     );
   }
 
-  .content {
+  .Content {
     @include grid-cell-padding;
 
     align-self: center;
@@ -48,7 +48,7 @@
     color: $color-charcol;
   }
 
-  .close {
+  .Close {
     @include grid-cell-padding;
   }
 
@@ -84,11 +84,11 @@
     background-color: $color-white;
     box-shadow: 0 -10px 20px -13px rgba(30, 30, 30, 0.75);
 
-    .content {
+    .Content {
       flex-basis: 100%;
     }
 
-    .close {
+    .Close {
       flex-basis: 100%;
     }
 
@@ -98,11 +98,11 @@
   }
 
   @include breakpoint($media-not-mobile) {
-    .content {
+    .Content {
       flex-basis: calc(100% - 200px);
     }
 
-    .close {
+    .Close {
       flex-grow: 0;
       flex-shrink: 0;
       flex-basis: auto;

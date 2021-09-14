@@ -21,7 +21,7 @@ export const MenuSignifierButton = (): JSX.Element => {
       onClick={handleSignifierClick}
       className={styles.MenuSignifierButton}
     >
-      <span className={styles.icon}>
+      <span className={styles.Icon}>
         <span />
         <span />
         <span />

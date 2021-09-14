@@ -34,7 +34,7 @@
     }
   }
 
-  :global(html.ready) .header & a {
+  :global(html.isReady) & a {
     transition: color 0.3s ease-in-out;
   }
 
@@ -53,7 +53,7 @@
       color: inherit;
     }
 
-    &.scrollAtTop {
+    &.isScrollAtTop {
       color: $color-white;
     }
   }

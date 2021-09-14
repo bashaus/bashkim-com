@@ -15,8 +15,8 @@ export const DeviceSmartphone = ({
   figure,
 }: DeviceSmartphoneProps): JSX.Element => (
   <figure className={styles.DeviceSmartphone}>
-    <div className={styles.wrapper}>
-      <div className={styles.content}>{figure}</div>
+    <div className={styles.Wrapper}>
+      <div className={styles.Content}>{figure}</div>
     </div>
 
     <figcaption>{children}</figcaption>

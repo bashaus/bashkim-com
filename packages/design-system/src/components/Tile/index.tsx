@@ -22,13 +22,13 @@ export const Tile = ({
     <h3 itemProp="headline">{title}</h3>
 
     <div
-      className={styles.poster}
+      className={styles.Poster}
       style={{
         backgroundImage: `url(${poster})`,
       }}
     />
 
-    <div className={styles.icon}>
+    <div className={styles.Icon}>
       <img alt="" itemProp="image" src={icon} />
     </div>
 

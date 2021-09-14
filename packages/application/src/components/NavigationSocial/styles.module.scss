@@ -45,7 +45,7 @@
   }
 }
 
-%socialIcon {
+%SocialIcon {
   background-repeat: no-repeat;
   background-position: center center;
 
@@ -78,13 +78,13 @@
     transition: fill 0.3s ease-in-out;
   }
 
-  .NavigationSocial.scrollAtTop & svg {
+  .NavigationSocial.isScrollAtTop & svg {
     fill: $color-white;
   }
 }
 
-.icon_GitHub {
-  @extend %socialIcon;
+.IconGitHub {
+  @extend %SocialIcon;
 
   @include breakpoint($media-mobile) {
     svg path {
@@ -94,13 +94,13 @@
 
   @include breakpoint($media-not-mobile) {
     a:hover svg path {
-      fill: #0366d6;
+      fill: #24292f;
     }
   }
 }
 
-.icon_LinkedIn {
-  @extend %socialIcon;
+.IconLinkedIn {
+  @extend %SocialIcon;
 
   @include breakpoint($media-mobile) {
     svg path {
@@ -115,22 +115,22 @@
   }
 }
 
-.icon_StackOverflow {
-  @extend %socialIcon;
+.IconStackOverflow {
+  @extend %SocialIcon;
 
   @include breakpoint($media-mobile) {
-    svg :global(.stackoverflow_svg__stackoverflow-container),
-    svg :global(.stackoverflow_svg__stackoverflow-stack) {
+    svg :global(.stackoverflow_svg__Container),
+    svg :global(.stackoverflow_svg__Stack) {
       fill: $color-shade-border;
     }
   }
 
   @include breakpoint($media-not-mobile) {
-    a:hover svg :global(.stackoverflow_svg__stackoverflow-container) {
+    a:hover svg :global(.stackoverflow_svg__Container) {
       fill: #bcbbbb;
     }
 
-    a:hover svg :global(.stackoverflow_svg__stackoverflow-stack) {
+    a:hover svg :global(.stackoverflow_svg__Stack) {
       fill: #f48024;
     }
   }

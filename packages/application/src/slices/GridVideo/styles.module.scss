@@ -22,13 +22,13 @@
   );
 }
 
-.columns-1,
-.columns-2,
-.columns-3 {
+.GridVideoSlice[data-column-count="1"],
+.GridVideoSlice[data-column-count="2"],
+.GridVideoSlice[data-column-count="3"] {
   justify-content: center;
 }
 
-.description {
+.Description {
   display: block;
   text-align: center;
 }

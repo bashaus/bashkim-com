@@ -38,7 +38,7 @@
 
   /* Heading */
 
-  .label {
+  .Label {
     @include grid-full-padding(
       $breakpoints: (
         mobile-portrait,
@@ -55,14 +55,14 @@
   }
 
   @include breakpoint($media-screen-small) {
-    .label {
+    .Label {
       position: relative;
       padding-top: 1px;
       padding-bottom: 0;
     }
 
     /* Line */
-    .label::before {
+    .Label::before {
       content: "";
       display: block;
       position: absolute;
@@ -75,7 +75,7 @@
     }
 
     /* Expand/collapse icon */
-    .label::after {
+    .Label::after {
       content: "▽";
       position: absolute;
       top: 50%;
@@ -88,17 +88,17 @@
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     }
 
-    &[aria-expanded="true"] .label::after {
+    &[aria-expanded="true"] .Label::after {
       transform: translateY(-50%) rotate(180deg);
     }
   }
 
   @include breakpoint($media-screen-large) {
-    .label {
+    .Label {
       cursor: inherit;
     }
 
-    &:nth-last-child(n + 2) .label::after {
+    &:nth-last-child(n + 2) .Label::after {
       content: "";
       display: block;
       position: absolute;

@@ -1,4 +1,4 @@
-.slider {
+.Slider {
   position: relative;
   margin-top: 20px;
   padding-top: 40px;
@@ -14,17 +14,17 @@
     font-size: 80%;
   }
 
-  .iconMobile,
-  .iconDesktop {
+  .IconMobile,
+  .IconDesktop {
     position: absolute;
   }
 
-  .iconMobile {
+  .IconMobile {
     top: 10px;
     left: 0;
   }
 
-  .iconDesktop {
+  .IconDesktop {
     top: 0;
     right: 0;
   }

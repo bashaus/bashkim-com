@@ -35,8 +35,8 @@
     text-transform: uppercase;
   }
 
-  :global(html.ready) .header & strong,
-  :global(html.ready) .header & span {
+  :global(html.isReady) & strong,
+  :global(html.isReady) & span {
     transition: all 0.3s ease-in-out;
   }
 }

@@ -12,7 +12,7 @@ export const AboutProfile = (): JSX.Element => (
       </p>
     </PartialTitle>
 
-    <ul className={styles.principles}>
+    <ul className={styles.Principles}>
       <li>
         <h3>On-time</h3>
         <img

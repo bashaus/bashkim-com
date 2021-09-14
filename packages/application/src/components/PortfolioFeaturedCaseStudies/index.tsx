@@ -24,8 +24,8 @@ export const PortfolioFeaturedCaseStudies = ({
       } = feature;
 
       return (
-        <li className={styles.item} key={caseStudy._meta.id}>
-          <div className={styles.details}>
+        <li className={styles.Item} key={caseStudy._meta.id}>
+          <div className={styles.Details}>
             <PrismicRichText render={title} />
             <PrismicRichText render={description} />
           </div>
@@ -34,7 +34,7 @@ export const PortfolioFeaturedCaseStudies = ({
             href="/portfolio/[caseStudySlug]"
             as={`/portfolio/${caseStudy._meta.uid}`}
           >
-            <a className={styles.tile}>
+            <a className={styles.Tile}>
               <Tile
                 title={caseStudy.meta_title}
                 description={caseStudy.meta_description}

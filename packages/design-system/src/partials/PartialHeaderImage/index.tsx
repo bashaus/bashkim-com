@@ -41,7 +41,7 @@ export const PartialHeaderImage = ({
 
     <div
       aria-hidden="true"
-      className={classNames(styles.background, "background")}
+      className={classNames(styles.Background, "background")}
     />
   </header>
 );

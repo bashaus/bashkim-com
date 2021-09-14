@@ -134,6 +134,7 @@ export class Turn extends PureComponent<TurnProps, TurnState> {
     }
   };
 
+  /*
   handlePaginationPrevClick = (): void => {
     const { display, page, onPageChange } = this.props;
 
@@ -161,8 +162,8 @@ export class Turn extends PureComponent<TurnProps, TurnState> {
       onPageChange(page + 1);
     }
   };
+  */
 
-  /* render */
   render(): JSX.Element {
     const { children } = this.props;
     const { isInitialized } = this.state;
@@ -170,13 +171,12 @@ export class Turn extends PureComponent<TurnProps, TurnState> {
     return (
       <div
         ref={this.containerRef}
-        className={classNames({
-          [styles.Turn]: true,
-          [styles.initialized]: isInitialized,
-          [styles.uninitialized]: !isInitialized,
+        className={classNames(styles.Turn, {
+          [styles.isInitialized]: isInitialized,
+          [styles.isUninitialized]: !isInitialized,
         })}
       >
-        <ol ref={this.pagesRef} className={styles.pages}>
+        <ol ref={this.pagesRef} className={styles.Pages}>
           {children}
         </ol>
       </div>

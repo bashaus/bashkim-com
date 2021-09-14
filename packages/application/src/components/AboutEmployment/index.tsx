@@ -31,7 +31,7 @@ export const AboutEmployment = (): JSX.Element => (
         <div>
           <img
             alt=""
-            className={styles.logo}
+            className={styles.Logo}
             src="/static/images/about/employment/mmt/logo.svg"
           />
         </div>
@@ -57,7 +57,7 @@ export const AboutEmployment = (): JSX.Element => (
         <div>
           <img
             alt=""
-            className={styles.logo}
+            className={styles.Logo}
             src="/static/images/about/employment/trouva/logo.jpg"
           />
         </div>
@@ -99,7 +99,7 @@ export const AboutEmployment = (): JSX.Element => (
         <div>
           <img
             alt=""
-            className={styles.logo}
+            className={styles.Logo}
             src="/static/images/about/employment/ogilvy/logo.png"
           />
         </div>
@@ -141,7 +141,7 @@ export const AboutEmployment = (): JSX.Element => (
         <div>
           <img
             alt=""
-            className={styles.logo}
+            className={styles.Logo}
             src="/static/images/about/employment/agency-republic/logo.jpg"
           />
         </div>
@@ -174,7 +174,7 @@ export const AboutEmployment = (): JSX.Element => (
         <div>
           <img
             alt=""
-            className={styles.logo}
+            className={styles.Logo}
             src="/static/images/about/employment/studio-farrago/logo.jpg"
           />
         </div>

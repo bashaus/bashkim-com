@@ -17,9 +17,8 @@ export const Navigation = ({ theme }: NavigationProps): JSX.Element => {
 
   return (
     <div
-      className={classNames({
-        [styles.Navigation]: true,
-        [styles.scrollAtTop]: navigationState.scrollAtTop,
+      className={classNames(styles.Navigation, {
+        [styles.isScrollAtTop]: navigationState.scrollAtTop,
       })}
     >
       <NavigationPrimary theme={theme} />

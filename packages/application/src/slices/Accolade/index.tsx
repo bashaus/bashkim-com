@@ -1,4 +1,3 @@
-import classNames from "classnames";
 import { Link } from "prismic-reactjs";
 
 import { FormattedDate } from "@bashkim-com/design-system";
@@ -33,7 +32,7 @@ export const AccoladeSlice = ({ slice }: AccoladeSliceProps): JSX.Element => {
 
   return (
     <div className={styles.AccoladeSlice}>
-      <div className={styles.accoladeDetails}>
+      <div className={styles.Details}>
         <PrismicRichText render={issuer} />
         <PrismicRichText render={description} />
         <p>
@@ -43,7 +42,7 @@ export const AccoladeSlice = ({ slice }: AccoladeSliceProps): JSX.Element => {
         </p>
       </div>
 
-      <ol className={styles.awards}>
+      <ol className={styles.Awards}>
         {slice.fields.map((field, i) => {
           const {
             accolade_slice_type_award_place: awardPlace,
@@ -54,10 +53,13 @@ export const AccoladeSlice = ({ slice }: AccoladeSliceProps): JSX.Element => {
           const awardHref = Link.url(awardLink, PrismicLinkResolver);
 
           return (
-            <li className={styles.award} key={i}>
+            <li className={styles.Award} key={i}>
               <a href={awardHref} target="_blank" rel="noopener noreferrer">
                 <h3>{AwardPlaceName[awardPlace]}</h3>
-                <svg className={classNames(styles.trophy, styles[awardPlace])}>
+                <svg
+                  className={styles.Trophy}
+                  data-prop-place={styles[awardPlace]}
+                >
                   <IconTrophy />
                 </svg>
                 <PrismicRichText render={awardCategory} />

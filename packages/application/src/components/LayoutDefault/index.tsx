@@ -19,7 +19,7 @@ export const LayoutDefault = ({
   theme = "default",
 }: LayoutDefaultProps): JSX.Element => {
   useEffect((): void => {
-    document.documentElement.classList.add("ready");
+    document.documentElement.classList.add("isReady");
   }, []);
 
   return (

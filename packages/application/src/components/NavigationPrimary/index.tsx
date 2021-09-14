@@ -17,9 +17,8 @@ export const NavigationPrimary = ({
   >
     <ul>
       <li
-        className={classNames({
-          [styles.navigation_portfolio]: true,
-          [styles.selected]: theme === "portfolio",
+        className={classNames(styles.NavigationPortfolio, {
+          [styles.isSelected]: theme === "portfolio",
         })}
       >
         <Link href="/portfolio">
@@ -29,9 +28,8 @@ export const NavigationPrimary = ({
         </Link>
       </li>
       <li
-        className={classNames({
-          [styles.navigation_about]: true,
-          [styles.selected]: theme === "about",
+        className={classNames(styles.NavigationAbout, {
+          [styles.isSelected]: theme === "about",
         })}
       >
         <Link href="/about">
@@ -41,9 +39,8 @@ export const NavigationPrimary = ({
         </Link>
       </li>
       <li
-        className={classNames({
-          [styles.navigation_blog]: true,
-          [styles.selected]: theme === "blog",
+        className={classNames(styles.NavigationBlog, {
+          [styles.isSelected]: theme === "blog",
         })}
       >
         <a

@@ -14,7 +14,7 @@
     font-weight: bold;
   }
 
-  .foreground {
+  .Foreground {
     @include grid-container(
       $padding: (
         left,
@@ -27,7 +27,7 @@
     align-items: center;
   }
 
-  .content {
+  .Content {
     @include grid-cell(
       $columns: (
         mobile-portrait: 12,
@@ -46,7 +46,7 @@
     position: relative;
   }
 
-  .aside {
+  .Aside {
     @include grid-cell(
       $columns: (
         mobile-portrait: 12,
@@ -63,7 +63,7 @@
     );
   }
 
-  .background {
+  .Background {
     background-color: $color-charcol;
     position: absolute;
     top: 0;
@@ -86,12 +86,12 @@
       margin-top: 10px;
     }
 
-    .foreground {
+    .Foreground {
       padding-top: 80px;
       padding-bottom: 35px;
     }
 
-    .background {
+    .Background {
       background-position-x: center;
       background-position-y: bottom;
     }
@@ -112,12 +112,12 @@
       margin-top: 20px;
     }
 
-    .foreground {
+    .Foreground {
       padding-top: 80px;
       padding-bottom: 40px;
     }
 
-    .background {
+    .Background {
       background-position-x: center;
       background-position-y: center;
     }

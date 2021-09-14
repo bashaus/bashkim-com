@@ -39,10 +39,10 @@ export const CaseStudyHeader = ({
       </PartialSubtitle>
 
       <div className={styles.CaseStudyHeader}>
-        <div className={styles.details}>
+        <div className={styles.Details}>
           <CaseStudyDetails caseStudy={caseStudy} />
         </div>
-        <div className={styles.technologies}>
+        <div className={styles.Technologies}>
           <CaseStudyTechnologies caseStudy={caseStudy} />
         </div>
       </div>

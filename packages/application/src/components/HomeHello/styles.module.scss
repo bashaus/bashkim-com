@@ -4,15 +4,13 @@
 @import "~@bashkim-com/design-system/src/styleguide/utils/grid";
 @import "~@bashkim-com/design-system/src/styleguide/utils/media";
 
-.HomeHello {
-  .background {
-    animation-duration: 20s;
-    animation-name: HomeHello--Background;
-    animation-iteration-count: infinite;
-    background: linear-gradient(230deg, #a24bcf, #4b79cf, #4bc5cf);
-    background-size: 300% 300%;
-    color: $color-white;
-  }
+.Background {
+  animation-duration: 20s;
+  animation-name: HomeHello--Background;
+  animation-iteration-count: infinite;
+  background: linear-gradient(230deg, #a24bcf, #4b79cf, #4bc5cf);
+  background-size: 300% 300%;
+  color: $color-white;
 }
 
 @keyframes HomeHello--Background {
@@ -29,7 +27,7 @@
   }
 }
 
-.HomeHello_Introduction {
+.Introduction {
   a {
     font-weight: bold;
     display: inline-block;
@@ -52,17 +50,17 @@
       line-height: 24px;
     }
 
-    .name {
+    .Name {
       display: block;
       margin-bottom: 20px;
     }
 
-    .name::after {
+    .Name::after {
       content: ".";
       display: inline;
     }
 
-    .spiel {
+    .Spiel {
       display: block;
     }
   }
@@ -73,14 +71,14 @@
       line-height: 24px;
     }
 
-    .name::after {
+    .Name::after {
       content: ",";
       display: inline-block;
     }
   }
 }
 
-.HomeHello_Links {
+.Links {
   display: flex;
   flex-direction: row;
 
@@ -91,7 +89,7 @@
     font-weight: bold;
   }
 
-  .icon {
+  .Icon {
     display: block;
     margin: 12px auto;
     fill: #ffffff;
@@ -99,11 +97,11 @@
     height: 75px;
   }
 
-  a .icon {
+  a .Icon {
     transition: transform 0.3s ease-in-out;
   }
 
-  a:hover .icon {
+  a:hover .Icon {
     transform: scale(1.1);
   }
 

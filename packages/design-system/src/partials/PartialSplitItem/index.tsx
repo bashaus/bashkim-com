@@ -17,10 +17,10 @@ export const PartialSplitItem = ({
 
   if (backgroundImage) {
     style.backgroundImage = `url("${backgroundImage}")`;
-    className.push(styles.background);
+    className.push(styles.Background);
     className.push("PartialSplit_chevron");
   } else {
-    className.push(styles.foreground);
+    className.push(styles.Foreground);
   }
 
   return (

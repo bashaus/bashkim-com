@@ -33,7 +33,7 @@ export const AboutCertifications = (): JSX.Element => (
         <img
           alt="Duke - The Java Mascot"
           src="/static/images/about/certifications/java/logo.jpg"
-          className={styles.logo}
+          className={styles.Logo}
         />
       </PartialSplit.Item>
     </PartialSplit>
@@ -65,7 +65,7 @@ export const AboutCertifications = (): JSX.Element => (
       <PartialSplit.Item backgroundImage="/static/images/about/certifications/php/background.jpg">
         <img
           alt="ElePHPant"
-          className={styles.logo}
+          className={styles.Logo}
           src="/static/images/about/certifications/php/logo.png"
         />
       </PartialSplit.Item>

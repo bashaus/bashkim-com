@@ -30,20 +30,20 @@
   }
 
   @include breakpoint($media-not-mobile) {
-    .selected span {
+    .isSelected span {
       border-bottom: solid 1.5px currentColor;
       padding-bottom: 1px;
     }
 
-    .navigation_portfolio a:hover {
+    .NavigationPortfolio a:hover {
       color: $color-theme-portfolio;
     }
 
-    .navigation_about a:hover {
+    .NavigationAbout a:hover {
       color: $color-theme-about;
     }
 
-    .navigation_blog a:hover {
+    .NavigationBlog a:hover {
       color: $color-theme-blog;
     }
   }

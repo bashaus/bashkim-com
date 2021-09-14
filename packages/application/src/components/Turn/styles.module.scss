@@ -8,11 +8,11 @@
 .Turn {
   @include clearfix;
 
-  &.uninitialized {
+  &.isUninitialized {
     zoom: 1;
   }
 
-  &.initialized {
+  &.isInitialized {
     zoom: 1;
   }
 
@@ -21,13 +21,13 @@
   margin-right: auto;
   z-index: z-index("Turn");
 
-  .pages {
+  .Pages {
     margin-left: auto;
     margin-right: auto;
     transition: margin-left 1s;
   }
 
-  .pages img {
+  .Pages img {
     max-width: 100%;
     width: 100%;
     height: 100%;
@@ -37,13 +37,13 @@
   @include breakpoint($media-screen-small) {
     margin-bottom: 40px;
 
-    &.initialized {
+    &.isInitialized {
       margin-bottom: 50px;
     }
   }
 
   @include breakpoint($media-screen-large) {
-    &.uninitialized {
+    &.isUninitialized {
       li {
         float: left;
         width: 50%;

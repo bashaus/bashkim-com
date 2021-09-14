@@ -8,7 +8,7 @@
   flex-direction: row;
   flex-wrap: wrap;
 
-  &.odd {
+  &.isOdd {
     flex-direction: row-reverse;
   }
 
@@ -19,11 +19,11 @@
   }
 
   @include breakpoint($media-not-mobile) {
-    &.odd :global(.PartialSplit_chevron) {
+    &.isOdd :global(.PartialSplit_chevron) {
       @include chevron-left;
     }
 
-    &.even :global(.PartialSplit_chevron) {
+    &.isEven :global(.PartialSplit_chevron) {
       @include chevron-right;
     }
   }

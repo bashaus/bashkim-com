@@ -10,11 +10,11 @@
   background-color: $color-charcol;
   color: $color-white;
 
-  .container {
+  .Container {
     @include grid-container;
   }
 
-  .content {
+  .Content {
     @extend %wysiwyg;
     @include grid-cell(
       $columns: (
@@ -34,7 +34,7 @@
     padding-top: 10px;
     padding-bottom: 75vw;
 
-    .content h3 {
+    .Content h3 {
       font-size: 18px;
       line-height: 120%;
       font-weight: bold;
@@ -46,17 +46,17 @@
     background-size: auto 100%;
     background-position: center center;
 
-    .container {
+    .Container {
       height: 400px;
       max-height: 450px;
     }
 
-    .content {
+    .Content {
       align-self: center;
       padding-bottom: 30px;
     }
 
-    .content h3 {
+    .Content h3 {
       font-size: 32px;
       line-height: 150%;
       font-weight: bold;

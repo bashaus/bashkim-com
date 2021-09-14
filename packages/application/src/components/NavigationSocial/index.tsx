@@ -16,13 +16,12 @@ export const NavigationSocial = (): JSX.Element => {
     <nav
       data-heading="Social media"
       aria-label="Social media"
-      className={classNames({
-        [styles.NavigationSocial]: true,
-        [styles.scrollAtTop]: navigationState.scrollAtTop,
+      className={classNames(styles.NavigationSocial, {
+        [styles.isScrollAtTop]: navigationState.scrollAtTop,
       })}
     >
       <ul>
-        <li className={styles.icon_GitHub}>
+        <li className={styles.IconGitHub}>
           <a
             href="https://github.com/bashaus?tab=repositories"
             target="_blank"
@@ -43,7 +42,7 @@ export const NavigationSocial = (): JSX.Element => {
             <span>GitHub</span>
           </a>
         </li>
-        <li className={styles.icon_StackOverflow}>
+        <li className={styles.IconStackOverflow}>
           <a
             href="https://stackoverflow.com/users/600240/bashaus"
             target="_blank"
@@ -64,7 +63,7 @@ export const NavigationSocial = (): JSX.Element => {
             <span>Stack Overflow</span>
           </a>
         </li>
-        <li className={styles.icon_LinkedIn}>
+        <li className={styles.IconLinkedIn}>
           <a
             href="https://www.linkedin.com/in/bashaus"
             target="_blank"

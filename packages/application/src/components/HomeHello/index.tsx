@@ -10,25 +10,25 @@ import styles from "./styles.module.scss";
 export const HomeHello = (): JSX.Element => (
   <div className={styles.HomeHello}>
     <PartialHeaderText
-      backgroundClassName={styles.background}
+      backgroundClassName={styles.Background}
       aside={
-        <ul className={styles.HomeHello_Links}>
+        <ul className={styles.Links}>
           <li>
             <a
               href="https://github.com/bashaus?tab=repositories"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <svg className={styles.icon}>
+              <svg className={styles.Icon}>
                 <IconGitHub />
               </svg>
               View code
             </a>
           </li>
           <li>
-            <Link href="/portfolio">
+            <Link href="/portfolio" passHref>
               <a>
-                <svg className={styles.icon}>
+                <svg className={styles.Icon}>
                   <IconPortfolio />
                 </svg>
                 View portfolio
@@ -38,20 +38,18 @@ export const HomeHello = (): JSX.Element => (
         </ul>
       }
     >
-      <div className={styles.HomeHello_Introduction}>
-        <div className={styles.content}>
-          <h1 className={styles.text}>Hello!</h1>
-        </div>
+      <div className={styles.Introduction}>
+        <h1>Hello!</h1>
 
         <p>
-          <span className={styles.name}>
+          <span className={styles.Name}>
             <span>My name is </span>
             <Link href="/about">
               <a>Bash</a>
             </Link>
           </span>
           <span> </span>
-          <span className={styles.spiel}>
+          <span className={styles.Spiel}>
             I&apos;m a London&#8209;based Creative Technologist specialising in
             <span> </span>
             <Link href="/portfolio#tangible-media">

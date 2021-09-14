@@ -54,7 +54,7 @@ export const AboutTutoring = (): JSX.Element => (
           <img
             alt=""
             src="/static/images/about/education/qut/logo.jpg"
-            className={styles.logo}
+            className={styles.Logo}
           />
         </div>
       </PartialSplit.Item>

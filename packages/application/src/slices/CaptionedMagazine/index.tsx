@@ -108,10 +108,10 @@ export const CaptionedMagazineSlice = ({
     >
       <PrismicRichText render={caption} />
       {magazineIsInitialized && (
-        <div className={styles.slider}>
+        <div className={styles.Slider}>
           <button
             type="button"
-            className={styles.paginationBack}
+            className={styles.PaginationBack}
             disabled={isFirstSpread}
             onClick={handlePaginationBack}
           >
@@ -122,7 +122,7 @@ export const CaptionedMagazineSlice = ({
 
           <button
             type="button"
-            className={styles.paginationNext}
+            className={styles.PaginationNext}
             disabled={isLastSpread}
             onClick={handlePaginationNext}
           >

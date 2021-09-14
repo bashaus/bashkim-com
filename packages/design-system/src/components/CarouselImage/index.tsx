@@ -11,7 +11,7 @@ export const CarouselImage = ({
   figure,
 }: CarouselImageProps): JSX.Element => (
   <figure className={styles.CarouselImage}>
-    <div className={styles.figure}>{figure}</div>
+    <div className={styles.Figure}>{figure}</div>
     {children && <figcaption>{children}</figcaption>}
   </figure>
 );

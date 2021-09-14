@@ -1,4 +1,3 @@
-import classNames from "classnames";
 import type { GridVideoSliceType } from "@bashkim-com/prismic";
 
 import { DeferredAsset } from "%components/DeferredAsset";
@@ -11,12 +10,7 @@ export type GridVideoSliceProps = {
 };
 
 export const GridVideoSlice = ({ slice }: GridVideoSliceProps): JSX.Element => (
-  <ol
-    className={classNames(
-      styles.GridVideoSlice,
-      styles[`columns-${slice.fields.length}`]
-    )}
-  >
+  <ol className={styles.GridVideoSlice} data-column-count={slice.fields.length}>
     {slice.fields.map((field, i) => {
       const {
         grid_video_slice_type_description: description,
@@ -33,7 +27,7 @@ export const GridVideoSlice = ({ slice }: GridVideoSliceProps): JSX.Element => (
             >
               <img src={poster.url} alt={video.title} />
             </DeferredAsset>
-            <div className={styles.description}>
+            <div className={styles.Description}>
               <PrismicRichText render={description} />
             </div>
           </a>

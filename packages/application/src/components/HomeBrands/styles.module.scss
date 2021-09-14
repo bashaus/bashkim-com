@@ -10,7 +10,7 @@
   overflow: hidden;
 }
 
-.brands {
+.Brands {
   @include grid-container;
 
   > li {
@@ -31,37 +31,37 @@
   }
 }
 
-.brand_vodafone {
+.BrandVodafone {
   @extend %brand;
 
   background-image: url("/static/vectors/brands/vodafone.svg");
 }
 
-.brand_ihg {
+.BrandIHG {
   @extend %brand;
 
   background-image: url("/static/vectors/brands/ihg.svg");
 }
 
-.brand_battersea {
+.BrandBattersea {
   @extend %brand;
 
   background-image: url("/static/vectors/brands/battersea.svg");
 }
 
-.brand_converse {
+.BrandConverse {
   @extend %brand;
 
   background-image: url("/static/vectors/brands/converse.svg");
 }
 
-.brand_jack_daniels {
+.BrandJackDaniels {
   @extend %brand;
 
   background-image: url("/static/vectors/brands/jack-daniels.svg");
 }
 
-.brand_huawei {
+.BrandHuawei {
   @extend %brand;
 
   background-image: url("/static/vectors/brands/huawei.svg");

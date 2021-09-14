@@ -6,7 +6,7 @@
 
 @import "~%styleguide/utils/z-index";
 
-.header {
+.Header {
   z-index: z-index("Header");
   border-bottom: solid 1px $color-shade-border;
   background-color: $color-white;
@@ -27,7 +27,7 @@
     transition: all 0.3s ease-in-out;
     overflow-y: scroll;
 
-    &.menuIsVisible {
+    &.isMenuVisible {
       right: 0;
     }
   }
@@ -40,25 +40,25 @@
     height: 61px;
     text-shadow: 0 0 0 rgba(48, 48, 48, 0);
 
-    :global(html.ready) & {
+    :global(html.isReady) & {
       transition-property: background-color, box-shadow, color;
       transition-duration: 0.3s;
       transition-timing-function: ease-in-out;
     }
 
-    &.scrollAtTop {
+    &.isAtScrollTop {
       border-bottom: transparent;
       background-color: rgba(255, 255, 255, 0);
       box-shadow: inset 0 40px 40px -20px rgba(50, 50, 50, 0.6);
       text-shadow: 0 0 2px transparentize($color-charcol, 0.2);
     }
 
-    &.scrollAtTop .headerLogo {
+    &.isAtScrollTop .Logo {
       color: $color-white;
     }
   }
 
-  .headerContainer {
+  .Container {
     display: flex;
 
     @include grid-container-max-width(
@@ -95,7 +95,7 @@
   }
 }
 
-.headerLogo {
+.Logo {
   @include breakpoint($media-mobile) {
     display: none;
   }
@@ -106,8 +106,8 @@
     flex-shrink: 0;
     flex-basis: auto;
 
-    &.scrollAtTop strong,
-    &.scrollAtTop span {
+    &.isAtScrollTop strong,
+    &.isAtScrollTop span {
       color: $color-white;
     }
   }

@@ -14,7 +14,7 @@ export const PartialSplit = ({
 }: PartialSplitProps): JSX.Element => {
   const className = [
     styles.PartialSplit,
-    index % 2 === 1 ? styles.odd : styles.even,
+    index % 2 === 1 ? styles.isOdd : styles.isEven,
   ].join(" ");
 
   return <div className={className}>{children}</div>;

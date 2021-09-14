@@ -9,7 +9,7 @@
   @include grid-container;
 }
 
-.details {
+.Details {
   @include grid-cell-width(
     $columns: (
       mobile-portrait: 12,
@@ -22,7 +22,7 @@
   );
 }
 
-.technologies {
+.Technologies {
   @include grid-cell(
     $columns: (
       mobile-portrait: 12,

@@ -4,7 +4,7 @@
 .PortfolioFeaturedCaseStudies {
   @include grid-container;
 
-  .item {
+  .Item {
     display: flex;
     flex-direction: column;
 
@@ -20,13 +20,13 @@
     );
   }
 
-  .details {
+  .Details {
     @extend %wysiwyg;
 
     flex-grow: 0;
   }
 
-  .tile {
+  .Tile {
     display: block;
     margin-top: 26px;
     flex-grow: 1;

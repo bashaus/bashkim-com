@@ -79,7 +79,7 @@ const CookiePolicyPage = (): JSX.Element => (
 
         <p>Google Analytics sets the following cookies:</p>
 
-        <table className={styles.cookieList}>
+        <table className={styles.CookieList}>
           <thead>
             <tr>
               <th>Name</th>

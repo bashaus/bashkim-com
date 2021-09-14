@@ -40,8 +40,8 @@ export const CookiesNotice = ({
         easing="ease-out"
         onAnimationEnd={handleAnimationEnd}
       >
-        <div className={styles.container}>
-          <div className={styles.content}>
+        <div className={styles.Container}>
+          <div className={styles.Content}>
             Even a small website like this uses cookies to give you the best
             possible browsing experience. By&nbsp;continuing, you agree to the{" "}
             <Link href="/legal/cookie-policy/">
@@ -49,7 +49,7 @@ export const CookiesNotice = ({
             </Link>
             .
           </div>
-          <div className={styles.close}>
+          <div className={styles.Close}>
             <button type="button" onClick={handleDismissClick}>
               OK, Cool
             </button>

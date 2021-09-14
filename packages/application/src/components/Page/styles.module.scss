@@ -2,7 +2,7 @@
 
 @import "~@bashkim-com/design-system/src/styleguide/utils/media";
 
-.content {
+.Content {
   position: relative;
   outline: none;
   overflow: hidden;
@@ -16,17 +16,17 @@
   }
 }
 
-.menu {
+.Menu {
   @include breakpoint($media-not-mobile) {
     display: none;
   }
 }
 
 @include breakpoint($media-mobile) {
-  .menuSignified {
+  .MenuSignified {
     transition: all 0.3s ease-in-out;
 
-    &.menuIsVisible {
+    &.isMenuVisible {
       transform: translateX(-260px);
     }
   }

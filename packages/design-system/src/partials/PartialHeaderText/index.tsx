@@ -15,14 +15,14 @@ export const PartialHeaderText = ({
   children,
 }: PartialHeaderTextProps): JSX.Element => (
   <header className={styles.PartialHeaderText}>
-    <div className={styles.foreground}>
-      <div className={styles.content}>{children}</div>
+    <div className={styles.Foreground}>
+      <div className={styles.Content}>{children}</div>
 
-      {aside && <aside className={styles.aside}>{aside}</aside>}
+      {aside && <aside className={styles.Aside}>{aside}</aside>}
     </div>
 
     <div
-      className={classNames(styles.background, backgroundClassName)}
+      className={classNames(styles.Background, backgroundClassName)}
       aria-hidden="true"
     />
   </header>

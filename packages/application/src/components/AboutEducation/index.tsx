@@ -33,7 +33,7 @@ export const AboutEducation = (): JSX.Element => (
           <img
             alt=""
             src="/static/images/about/education/uq/logo.png"
-            className={styles.logo}
+            className={styles.Logo}
           />
         </div>
       </PartialSplit.Item>
@@ -87,7 +87,7 @@ export const AboutEducation = (): JSX.Element => (
           <img
             alt=""
             src="/static/images/about/education/qut/logo.jpg"
-            className={styles.logo}
+            className={styles.Logo}
           />
         </div>
       </PartialSplit.Item>

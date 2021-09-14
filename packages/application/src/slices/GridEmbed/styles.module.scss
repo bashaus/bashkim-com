@@ -5,7 +5,7 @@
   @include grid-container;
 }
 
-.item {
+.Item {
   @include grid-cell(
     $columns: (
       mobile-portrait: 12,

@@ -48,18 +48,14 @@ export const Page = ({
 
       <div
         className={classNames({
-          [styles.menuIsVisible]: navigationState.menuIsVisible,
+          [styles.isMenuVisible]: navigationState.menuIsVisible,
         })}
       >
-        <div className={styles.menu}>
+        <div className={styles.Menu}>
           <Menu backButton={backButton} />
         </div>
 
-        <main
-          id="content"
-          className={classNames(styles.content, styles[`theme-${theme}`])}
-          tabIndex={-1}
-        >
+        <main id="content" className={styles.Content} tabIndex={-1}>
           {children}
         </main>
 

@@ -5,7 +5,7 @@
 @import "~@bashkim-com/design-system/src/styleguide/utils/media";
 
 .Footer {
-  .wrapper {
+  .Container {
     @include grid-container(
       $breakpoints: (
         tablet-landscape desktop-narrow desktop-wide,
@@ -28,7 +28,7 @@
       background-color: $color-charcol;
     }
 
-    .wrapper {
+    .Container {
       padding-top: 0;
       padding-bottom: 0;
     }

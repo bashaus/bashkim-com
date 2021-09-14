@@ -25,7 +25,7 @@ const AboutPage = (): JSX.Element => (
     <MetaDescription content="Information on the work history of Bashkim Isai" />
     <MetaKeywords content="bashkim isai, creative technologist, london" />
 
-    <PartialHeaderImage id="AboutPage-Header" className={styles.header} />
+    <PartialHeaderImage id="AboutPage-Header" className={styles.Header} />
     <AboutProfile />
     <AboutEmployment />
     <AboutTutoring />

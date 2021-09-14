@@ -68,12 +68,12 @@ export const CaptionedScreenshotsSlice = ({
     >
       <PrismicRichText render={caption} />
 
-      <div className={styles.slider}>
-        <span className={styles.iconMobile}>
+      <div className={styles.Slider}>
+        <span className={styles.IconMobile}>
           <DeviceMobileIcon size="small" aria-label="Mobile" />
         </span>
 
-        <span className={styles.iconDesktop}>
+        <span className={styles.IconDesktop}>
           <DeviceDesktopIcon size="medium" aria-label="Desktop" />
         </span>
 

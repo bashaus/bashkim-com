@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useContext } from "react";
 
 import { Logo } from "@bashkim-com/design-system";
+
 import { Navigation } from "%components/Navigation";
 
 import { NavigationContext } from "%contexts/Navigation/context";
@@ -18,14 +19,13 @@ export const Header = ({ theme }: HeaderProps): JSX.Element => {
 
   return (
     <header
-      className={classNames({
-        [styles.header]: true,
-        [styles.scrollAtTop]: navigationState.scrollAtTop,
-        [styles.menuIsVisible]: navigationState.menuIsVisible,
+      className={classNames(styles.Header, {
+        [styles.isAtScrollTop]: navigationState.scrollAtTop,
+        [styles.isMenuVisible]: navigationState.menuIsVisible,
       })}
     >
-      <div className={styles.headerContainer}>
-        <div className={styles.headerLogo}>
+      <div className={styles.Container}>
+        <div className={styles.Logo}>
           <Link href="/">
             <Logo />
           </Link>

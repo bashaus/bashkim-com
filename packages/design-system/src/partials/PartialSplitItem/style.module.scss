@@ -34,14 +34,14 @@
     margin: 0 auto;
   }
 
-  &.background {
+  &.Background {
     background-color: #efefef;
     background-size: cover;
     background-position: center center;
   }
 
-  &.background::before,
-  &.background::after {
+  &.Background::before,
+  &.Background::after {
     border-color: $color-white;
   }
 
@@ -49,11 +49,11 @@
     width: 100%;
     order: 2;
 
-    &.foreground {
+    &.Foreground {
       padding: 20px;
     }
 
-    &.background {
+    &.Background {
       min-height: 60vw;
       order: 1;
     }
@@ -67,11 +67,11 @@
     width: 50%;
     min-height: calc(9 / 16 * 50vw);
 
-    &.foreground {
+    &.Foreground {
       padding: 40px;
     }
 
-    &.background {
+    &.Background {
       width: calc(50% + 20px);
     }
 

@@ -79,7 +79,5 @@ export const HeaderIntersection = (): JSX.Element => {
     return () => document.removeEventListener("scroll", handleScroll);
   }, [handleScroll]);
 
-  /* Render */
-
   return <div ref={ref} className={styles.HeaderIntersection} />;
 };

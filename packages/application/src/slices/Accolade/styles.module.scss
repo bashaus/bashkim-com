@@ -8,7 +8,7 @@
   padding-top: 20px;
 }
 
-.accoladeDetails {
+.Details {
   @extend %wysiwyg;
 
   @include grid-cell(
@@ -23,7 +23,7 @@
   );
 }
 
-.awards {
+.Awards {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -40,7 +40,7 @@
   );
 }
 
-.award {
+.Award {
   @extend %wysiwyg;
   @include grid-cell(
     $columns: (
@@ -54,14 +54,14 @@
   );
 }
 
-.award a {
+.Award a {
   display: block;
   position: relative;
   padding-top: 3px;
   padding-left: 75px;
 }
 
-.trophy {
+.Trophy {
   position: absolute;
   top: 0;
   left: 0;
@@ -69,19 +69,19 @@
   height: 50px;
   margin-top: 0;
 
-  &.gold {
+  &[data-prop-place="gold"] {
     fill: $color-accolade-gold;
   }
 
-  &.silver {
+  &[data-prop-place="silver"] {
     fill: $color-accolade-silver;
   }
 
-  &.bronze {
+  &[data-prop-place="bronze"] {
     fill: $color-accolade-bronze;
   }
 
-  &.honour {
+  &[data-prop-place="honour"] {
     fill: $color-accolade-honour;
   }
 }

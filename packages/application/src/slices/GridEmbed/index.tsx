@@ -12,7 +12,7 @@ export const GridEmbedSlice = ({ slice }: GridEmbedSliceProps): JSX.Element => (
       const { grid_embed_slice_type_embed: embed } = field;
 
       return (
-        <div className={styles.item} key={i}>
+        <div className={styles.Item} key={i}>
           {/* eslint-disable-next-line react/no-danger */}
           <span dangerouslySetInnerHTML={{ __html: embed.html }} />
         </div>

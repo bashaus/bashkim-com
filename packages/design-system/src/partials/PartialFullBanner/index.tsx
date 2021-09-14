@@ -15,8 +15,8 @@ export const PartialFullBanner = ({
   id,
 }: PartialFullBannerProps): JSX.Element => (
   <div className={styles.PartialFullBanner} id={id}>
-    <div className={styles.container}>
-      <div className={styles.content}>{children}</div>
+    <div className={styles.Container}>
+      <div className={styles.Content}>{children}</div>
     </div>
 
     {backgroundDesktop && (

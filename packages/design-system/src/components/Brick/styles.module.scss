@@ -5,7 +5,7 @@
   display: block;
   height: 100%;
 
-  .inner {
+  .Inner {
     position: relative;
     display: block;
     flex-wrap: wrap;
@@ -18,11 +18,11 @@
     text-decoration: none;
   }
 
-  .inner:hover {
+  .Inner:hover {
     color: $color-charcol !important;
   }
 
-  .image {
+  .Image {
     position: absolute;
     top: 0;
     left: -80px;
@@ -33,7 +33,7 @@
     overflow: hidden;
   }
 
-  .image img {
+  .Image img {
     max-width: 100%;
     height: auto;
   }

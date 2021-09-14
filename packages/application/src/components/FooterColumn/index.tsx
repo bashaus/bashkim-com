@@ -28,7 +28,7 @@ export const FooterColumn = ({
       <div
         role="menuitem"
         tabIndex={0}
-        className={styles.label}
+        className={styles.Label}
         onClick={handleHeaderClick}
         onKeyPress={handleHeaderClick}
       >

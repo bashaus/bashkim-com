@@ -10,9 +10,7 @@ export const CaseStudyTechnologies = ({
   caseStudy,
 }: CaseStudyTechnologiesProps): JSX.Element => (
   <div className={styles.CaseStudyTechnologies}>
-    <div className={styles.header}>
-      <h3>Key technologies</h3>
-    </div>
+    <h3>Key technologies</h3>
 
     <ul>
       {caseStudy.info_technologies.map((technology) => {
@@ -25,8 +23,8 @@ export const CaseStudyTechnologies = ({
 
         return (
           <li key={name}>
-            <img src={icon.url} alt="" className={styles.icon} />
-            <span className={styles.name}>{name}</span>
+            <img src={icon.url} alt="" className={styles.TechnologyIcon} />
+            <span className={styles.TechnologyName}>{name}</span>
           </li>
         );
       })}

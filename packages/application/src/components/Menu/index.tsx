@@ -18,23 +18,22 @@ export const Menu = ({ backButton }: MenuProps): JSX.Element => {
 
   return (
     <div
-      className={classNames({
-        [styles.Menu]: true,
+      className={classNames(styles.Menu, {
         [styles.isVisible]:
           navigationState.scrollAtTop ||
           navigationState.menuIsVisible ||
           navigationState.scrollDirection === ScrollDirection.DOWN,
       })}
     >
-      <div className={styles.back}>{backButton}</div>
+      <div className={styles.Back}>{backButton}</div>
 
-      <div className={styles.logo}>
+      <div className={styles.Logo}>
         <Link href="/">
           <Logo />
         </Link>
       </div>
 
-      <div className={styles.signifier} aria-label="Menu">
+      <div className={styles.Signifier} aria-label="Menu">
         <MenuSignifierButton />
       </div>
     </div>
