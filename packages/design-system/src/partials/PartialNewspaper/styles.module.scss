@@ -5,14 +5,7 @@
 @import "src/styleguide/utils/media";
 
 .PartialNewspaper {
-  @include grid-container-max-width;
-  @include grid-container-padding;
-
-  margin: 0 auto;
-  column-gap: 0;
-  column-rule-style: none;
-  column-rule-width: 0;
-  column-rule-color: transparent;
+  @include grid-container-bounds;
 
   @include breakpoint($media-mobile-portrait) {
     column-count: 1;
@@ -32,10 +25,8 @@
 
   > div {
     @extend %wysiwyg;
-    @include grid-cell-padding;
-
     display: inline-block;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }

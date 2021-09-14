@@ -4,6 +4,7 @@ import classNames from "classnames";
 import styles from "./styles.module.scss";
 
 export type PartialHeaderImageProps = {
+  backgroundClassName?: string;
   className?: string;
   id: string;
   imageDesktop?: string;
@@ -11,6 +12,7 @@ export type PartialHeaderImageProps = {
 };
 
 export const PartialHeaderImage = ({
+  backgroundClassName,
   className,
   id,
   imageDesktop,
@@ -20,7 +22,7 @@ export const PartialHeaderImage = ({
     {imageDesktop && (
       <style type="text/css">
         {`
-          #${id} .background {
+          #${id} .${styles.Background} {
             background-image: url(${imageDesktop});
           }
         `}
@@ -31,7 +33,7 @@ export const PartialHeaderImage = ({
       <style type="text/css">
         {`
           @media screen and (max-width: 767px) {
-            #${id} .background {
+            #${id} .${styles.Background} {
               background-image: url(${imageMobile});
             }
           }
@@ -41,7 +43,7 @@ export const PartialHeaderImage = ({
 
     <div
       aria-hidden="true"
-      className={classNames(styles.Background, "background")}
+      className={classNames(styles.Background, backgroundClassName)}
     />
   </header>
 );

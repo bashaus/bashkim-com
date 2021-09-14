@@ -11,7 +11,7 @@
   color: $color-white;
 
   .Container {
-    @include grid-container;
+    @include grid-container($margin: ());
   }
 
   .Content {
@@ -53,7 +53,6 @@
 
     .Content {
       align-self: center;
-      padding-bottom: 30px;
     }
 
     .Content h3 {

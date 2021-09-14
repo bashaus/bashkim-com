@@ -12,7 +12,7 @@
   }
 
   ul {
-    @include grid-container($padding: ());
+    @include grid-container;
   }
 
   li {
@@ -24,10 +24,6 @@
         tablet-landscape: 6,
         desktop-narrow: 6,
         desktop-wide: 6,
-      ),
-      $padding: (
-        top,
-        bottom,
       )
     );
   }

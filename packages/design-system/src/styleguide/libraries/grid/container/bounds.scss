@@ -1,0 +1,17 @@
+@import "./gutter";
+@import "./max-width";
+@import "./margin";
+@import "./padding";
+
+@mixin grid-container-bounds(
+  $breakpoints: null,
+  $margin: null,
+  $padding: null
+) {
+  margin-left: auto;
+  margin-right: auto;
+  @include grid-container-max-width($breakpoints);
+  @include grid-container-gutter($breakpoints);
+  @include grid-container-margin($breakpoints, $sides: $margin);
+  @include grid-container-padding($breakpoints, $sides: $padding);
+}

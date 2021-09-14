@@ -17,7 +17,7 @@ export const FooterSocial = (): JSX.Element => (
         </li>
         <li>
           <a
-            href="https://www.linkedin.com/in/bashaus"
+            href="https://www.linkedin.com/in/bashaus/"
             target="_blank"
             rel="noopener noreferrer"
           >

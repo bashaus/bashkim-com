@@ -1,22 +1,7 @@
-@import "~@bashkim-com/design-system/src/styleguide/utils/clearfix";
+@import "./bounds";
 
-@mixin grid-container(
-  $breakpoints: null,
-  $padding: (
-    top,
-    left,
-    right,
-    bottom,
-  )
-) {
-  @include clearfix;
-  @include grid-container-max-width($breakpoints: $breakpoints);
-  @include grid-container-padding($breakpoints: $breakpoints, $sides: $padding);
-
-  clear: both;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin-left: auto;
-  margin-right: auto;
+@mixin grid-container($breakpoints: null, $margin: null, $padding: null) {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  @include grid-container-bounds($breakpoints, $margin, $padding);
 }

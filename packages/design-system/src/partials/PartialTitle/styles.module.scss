@@ -1,26 +1,15 @@
 @import "~breakpoint-sass";
 
+@import "src/styleguide/designs/headings";
+@import "src/styleguide/utils/fonts";
 @import "src/styleguide/utils/grid";
 @import "src/styleguide/utils/media";
 
 .PartialTitle {
-  @include grid-full;
+  @include grid-container-bounds;
 
   display: flex;
   flex-direction: column;
-
-  h1 {
-    font-weight: bold;
-    display: block;
-    order: 2;
-    text-align: center;
-  }
-
-  div {
-    display: block;
-    order: 3;
-    text-align: center;
-  }
 
   img {
     border-radius: 50%;
@@ -31,32 +20,20 @@
     order: 1;
   }
 
-  /* mobile */
+  div {
+    display: block;
+    order: 2;
+    text-align: center;
+  }
 
-  @include breakpoint($media-mobile) {
-    h1 {
-      font-size: 20px;
-      line-height: 32px;
-      text-align: center;
-    }
-
-    div {
-      text-align: center;
-    }
-
-    img {
-      display: block;
-    }
+  h1 {
+    @extend %heading2;
+    text-align: center;
+    margin-bottom: 5px;
   }
 
   @include breakpoint($media-not-mobile) {
-    h1 {
-      font-size: 24px;
-      line-height: 36px;
-      margin-bottom: 5px;
-    }
-
-    div {
+    p {
       font-size: 16px;
       line-height: 24px;
     }

@@ -8,16 +8,6 @@
 
 .FooterColumn {
   position: relative;
-  padding-top: 0;
-  padding-bottom: 0;
-
-  @include grid-cell-padding(
-    $breakpoints: (
-      tablet-landscape,
-      desktop-narrow,
-      desktop-wide,
-    )
-  );
 
   @include breakpoint($media-screen-small) {
     ul {
@@ -105,7 +95,7 @@
       top: 0;
       height: 1em;
       width: 1px;
-      right: -1px;
+      right: 10px;
       background-color: $color-white;
       margin-top: 1em;
       z-index: 1;

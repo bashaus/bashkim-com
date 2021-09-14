@@ -10,17 +10,19 @@
 
   position: relative;
 
-  h1 {
-    font-weight: bold;
+  .Background {
+    background-color: $color-charcol;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-repeat: no-repeat;
   }
 
   .Foreground {
-    @include grid-container(
-      $padding: (
-        left,
-        right,
-      )
-    );
+    @include grid-container($margin: ());
 
     color: $color-white;
     width: 100%;
@@ -36,14 +38,14 @@
         tablet-landscape: 7,
         desktop-narrow: 8,
         desktop-wide: 8,
-      ),
-      $padding: (
-        left,
-        right,
       )
     );
 
     position: relative;
+  }
+
+  h1 {
+    font-weight: bold;
   }
 
   .Aside {
@@ -55,23 +57,8 @@
         tablet-landscape: 5,
         desktop-narrow: 4,
         desktop-wide: 4,
-      ),
-      $padding: (
-        left,
-        right,
       )
     );
-  }
-
-  .Background {
-    background-color: $color-charcol;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    background-repeat: no-repeat;
   }
 
   @include breakpoint($media-mobile) {

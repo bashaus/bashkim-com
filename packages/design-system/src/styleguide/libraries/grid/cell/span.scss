@@ -1,7 +1,7 @@
-@mixin grid-cell-width($columns: null, $span: null) {
+@mixin grid-cell-span($columns: null, $span: null) {
   @if (type-of($columns) == "map") {
     @each $breakpoint, $span in $columns {
-      @include grid-cell-width($breakpoint, $span);
+      @include grid-cell-span($breakpoint, $span);
     }
   } @else if (type-of($columns) == "string") {
     $breakpoint: $columns;
@@ -15,12 +15,10 @@
     }
 
     @include breakpoint(grid-query($breakpoint)) {
-      flex: $span 0 (100% / 12 * $span);
-      max-width: (100% / 12 * $span);
+      grid-column: span $span;
     }
   } @else {
-    @error "grid-cell-width( #{type-of($columns)}, #{type-of($span)} ): "
-      "$columns received type #{type-of($columns)}, "
-      "expected `map` or `string`";
+    @error "grid-cell-span( #{type-of($columns)}, #{type-of($span)} ): "
+      "$columns expected `map` or `string`";
   }
 }

@@ -14,13 +14,7 @@ export const Tile = ({
   icon,
   poster,
 }: TileProps): JSX.Element => (
-  <article
-    className={styles.Tile}
-    itemScope
-    itemType="http://schema.org/CreativeWork"
-  >
-    <h3 itemProp="headline">{title}</h3>
-
+  <div className={styles.Tile}>
     <div
       className={styles.Poster}
       style={{
@@ -28,10 +22,14 @@ export const Tile = ({
       }}
     />
 
-    <div className={styles.Icon}>
-      <img alt="" itemProp="image" src={icon} />
-    </div>
+    <div className={styles.Content}>
+      <h3>{title}</h3>
 
-    <p itemProp="description">{description}</p>
-  </article>
+      <div className={styles.Icon}>
+        <img alt="" src={icon} />
+      </div>
+
+      <p>{description}</p>
+    </div>
+  </div>
 );

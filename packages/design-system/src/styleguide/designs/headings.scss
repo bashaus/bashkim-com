@@ -1,3 +1,25 @@
+@import "~breakpoint-sass";
+
+@import "../utils/fonts";
+@import "../utils/media";
+
+%heading2 {
+  font-family: $font-family-heading;
+  font-weight: bold;
+
+  @include breakpoint($media-mobile) {
+    line-height: 28px;
+    font-size: 24px;
+    letter-spacing: -0.5px;
+  }
+
+  @include breakpoint($media-not-mobile) {
+    line-height: 48px;
+    font-size: 40px;
+    letter-spacing: 0px;
+  }
+}
+
 %heading3 {
   font-weight: bold;
   font-size: 16px;

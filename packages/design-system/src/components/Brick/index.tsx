@@ -24,7 +24,7 @@ export const Brick = ({
   title,
 }: BrickProps): JSX.Element => (
   <article className={styles.Brick}>
-    <div className={styles.Inner}>
+    <div className={styles.Content}>
       <h3>{title}</h3>
 
       <div className={styles.Image}>

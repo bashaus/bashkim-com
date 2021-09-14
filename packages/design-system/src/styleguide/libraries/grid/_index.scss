@@ -1,13 +1,9 @@
 @import "~breakpoint-sass";
 
 @import "./cell/index";
-@import "./cell/margin";
 @import "./cell/padding";
-@import "./cell/width";
 
 @import "./container/index";
-@import "./container/max-width";
-@import "./container/padding";
 
 @import "./full/index";
 @import "./full/padding";

@@ -17,7 +17,6 @@
     }
   } @else {
     @error "grid-container-max-width( #{type-of($breakpoints)} ): "
-      "$breakpoints received type #{type-of($breakpoints)}, "
-      "expected `null`, `map`, `list` or `string`";
+      "$breakpoints expected `map`, `list` or `string`";
   }
 }

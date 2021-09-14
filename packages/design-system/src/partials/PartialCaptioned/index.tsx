@@ -16,7 +16,6 @@ export const PartialCaptioned = ({
 }: PartialCaptionedProps): JSX.Element => (
   <figure className={styles.PartialCaptioned}>
     <figcaption className={styles.Caption}>{children}</figcaption>
-
     <div className={styles.Figure}>{figure}</div>
   </figure>
 );

@@ -1,15 +1,6 @@
 @import "~@bashkim-com/design-system/src/styleguide/utils/grid";
 
 .Logo {
-  @include grid-cell-padding(
-    $breakpoints: (
-      tablet-portrait,
-      tablet-landscape,
-      desktop-narrow,
-      desktop-wide,
-    )
-  );
-
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;

@@ -4,8 +4,6 @@
 .CaseStudyExhibitions {
   @include grid-container;
 
-  justify-content: center;
-
   > li {
     @extend %wysiwyg;
     @include grid-cell(
@@ -16,15 +14,7 @@
         tablet-landscape: 3,
         desktop-narrow: 3,
         desktop-wide: 3,
-      ),
-      $padding: (
-        top,
-        left,
-        right,
-        bottom,
       )
     );
-
-    text-align: center;
   }
 }

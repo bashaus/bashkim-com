@@ -6,13 +6,13 @@
 
 .PartialFullText {
   @extend %wysiwyg;
-  @include grid-full;
+  @include grid-container-bounds;
 
   @include breakpoint($media-tablet-portrait) {
-    max-width: 526px !important;
+    max-width: 526px;
   }
 
   @include breakpoint($media-screen-large) {
-    max-width: 648px !important;
+    max-width: 648px;
   }
 }

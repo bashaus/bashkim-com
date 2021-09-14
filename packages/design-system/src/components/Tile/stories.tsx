@@ -16,9 +16,7 @@ export default {
 };
 
 const Template = ({ icon, poster, ...args }: TileProps) => (
-  <div style={{ maxWidth: 200, width: "100vw" }}>
-    <Tile {...args} icon={icon[0]} poster={poster[0]} />
-  </div>
+  <Tile {...args} icon={icon[0]} poster={poster[0]} />
 );
 
 export const Render = Template.bind({});

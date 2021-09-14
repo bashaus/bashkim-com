@@ -4,8 +4,6 @@
 
 .AccoladeSlice {
   @include grid-container;
-
-  padding-top: 20px;
 }
 
 .Details {
@@ -28,7 +26,7 @@
   flex-direction: row;
   flex-wrap: wrap;
 
-  @include grid-cell-width(
+  @include grid-cell(
     $columns: (
       mobile-portrait: 12,
       mobile-landscape: 12,

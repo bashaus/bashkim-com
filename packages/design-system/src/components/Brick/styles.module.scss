@@ -4,8 +4,9 @@
 .Brick {
   display: block;
   height: 100%;
+  max-width: 450px;
 
-  .Inner {
+  .Content {
     position: relative;
     display: block;
     flex-wrap: wrap;
@@ -18,7 +19,7 @@
     text-decoration: none;
   }
 
-  .Inner:hover {
+  .Content:hover {
     color: $color-charcol !important;
   }
 

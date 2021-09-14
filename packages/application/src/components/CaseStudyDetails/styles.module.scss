@@ -2,10 +2,12 @@
 @import "~@bashkim-com/design-system/src/styleguide/designs/wysiwyg";
 
 .CaseStudyDetails {
-  @include grid-container($padding: ());
+  @include grid-container($margin: (), $padding: ());
+  flex-wrap: wrap;
 
   > * {
     @extend %wysiwyg;
+    display: inline-block;
     @include grid-cell(
       $columns: (
         mobile-portrait: 12,
@@ -14,14 +16,7 @@
         tablet-landscape: 4,
         desktop-narrow: 4,
         desktop-wide: 4,
-      ),
-      $padding: (
-        left,
-        right,
       )
     );
-
-    padding-top: 12px;
-    padding-bottom: 12px;
   }
 }

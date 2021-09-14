@@ -1,7 +1,7 @@
 @import "~@bashkim-com/design-system/src/styleguide/utils/grid";
 
 .FooterLinks {
-  @include grid-cell-width(
+  @include grid-cell(
     $columns: (
       mobile-portrait: 12,
       mobile-landscape: 12,

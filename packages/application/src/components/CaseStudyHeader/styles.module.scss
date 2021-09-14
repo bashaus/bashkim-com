@@ -10,7 +10,7 @@
 }
 
 .Details {
-  @include grid-cell-width(
+  @include grid-cell(
     $columns: (
       mobile-portrait: 12,
       mobile-landscape: 12,

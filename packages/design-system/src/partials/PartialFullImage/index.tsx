@@ -1,12 +1,12 @@
-import React from "react";
+import classNames from "classnames";
+import React, { HTMLAttributes } from "react";
 import styles from "./styles.module.scss";
 
-export type PartialFullImageProps = {
-  children?: React.ReactNode;
-};
+export type PartialFullImageProps = HTMLAttributes<HTMLDivElement>;
 
 export const PartialFullImage = ({
-  children,
+  className,
+  ...props
 }: PartialFullImageProps): JSX.Element => (
-  <div className={styles.PartialFullImage}>{children}</div>
+  <div className={classNames(className, styles.PartialFullImage)} {...props} />
 );

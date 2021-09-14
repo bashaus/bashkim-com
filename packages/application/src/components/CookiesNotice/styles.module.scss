@@ -12,35 +12,29 @@
   line-height: 140%;
 
   .Container {
-    @include grid-container(
-      $breakpoints: (
-        mobile-portrait,
-        mobile-landscape,
-      ),
-      $padding: (
-        top,
-        left,
-        right,
-        bottom,
-      )
-    );
-
-    @include grid-container(
-      $breakpoints: (
-        tablet-portrait,
-        tablet-landscape,
-        desktop-narrow,
-        desktop-wide,
-      ),
+    @include grid-container-bounds(
+      $margin: (),
       $padding: (
         left,
         right,
       )
     );
+    display: flex;
+    padding-top: 12px;
+    padding-bottom: 12px;
   }
 
   .Content {
-    @include grid-cell-padding;
+    @include grid-cell(
+      $columns: (
+        mobile-portrait: 12,
+        mobile-landscape: 12,
+        tablet-portrait: 12,
+        tablet-landscape: 12,
+        desktop-narrow: 10,
+        desktop-wide: 10,
+      )
+    );
 
     align-self: center;
     flex-grow: 1;
@@ -49,7 +43,16 @@
   }
 
   .Close {
-    @include grid-cell-padding;
+    @include grid-cell(
+      $columns: (
+        mobile-portrait: 12,
+        mobile-landscape: 12,
+        tablet-portrait: 12,
+        tablet-landscape: 12,
+        desktop-narrow: 2,
+        desktop-wide: 2,
+      )
+    );
   }
 
   a {

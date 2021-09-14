@@ -17,12 +17,6 @@
         tablet-landscape: 3,
         desktop-narrow: 3,
         desktop-wide: 3,
-      ),
-      $padding: (
-        top,
-        left,
-        right,
-        bottom,
       )
     );
   }
@@ -36,32 +30,11 @@
         tablet-landscape: 9,
         desktop-narrow: 9,
         desktop-wide: 9,
-      ),
-      $padding: (
-        top,
-        left,
-        right,
-        bottom,
       )
     );
   }
 
   .Figure > * {
-    // box-shadow: 0 0 5px 0 rgba(200, 200, 200, 0.75);
     margin: 0 auto;
-  }
-
-  @include breakpoint($media-screen-small) {
-    .Caption {
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
-
-  @include breakpoint($media-desktop) {
-    cite {
-      display: block;
-      font-size: 10px;
-    }
   }
 }

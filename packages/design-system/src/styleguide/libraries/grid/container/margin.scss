@@ -1,38 +1,38 @@
-@mixin grid-container-padding($breakpoints: null, $sides: null) {
-  $signature: "grid-container-padding( #{type-of($breakpoints)}, #{type-of($sides)} )";
+@mixin grid-container-margin($breakpoints: null, $sides: null) {
+  $signature: "grid-container-margin( #{type-of($breakpoints)}, #{type-of($sides)} )";
 
   @if (type-of($sides) == "null") {
-    $sides: (left, right);
+    $sides: (top, bottom);
   } @else if (type-of($sides) != "list") {
     @error $signature ": $sides expected `null` or `list`";
   }
 
   @if (type-of($breakpoints) == "null") {
-    @include grid-container-padding(map-keys($grid), $sides);
+    @include grid-container-margin(map-keys($grid), $sides);
   } @else if (type-of($breakpoints) == "map") {
-    @include grid-container-padding(map-keys($breakpoints), $sides);
+    @include grid-container-margin(map-keys($breakpoints), $sides);
   } @else if (type-of($breakpoints) == "list") {
     @each $breakpoint in $breakpoints {
-      @include grid-container-padding($breakpoint, $sides);
+      @include grid-container-margin($breakpoint, $sides);
     }
   } @else if (type-of($breakpoints) == "string") {
     $breakpoint: $breakpoints;
 
     @include breakpoint(grid-query($breakpoint)) {
       @if (index($sides, "top")) {
-        padding-top: grid-margin($breakpoint);
+        margin-top: grid-margin($breakpoint);
       }
 
       @if (index($sides, "left")) {
-        padding-left: grid-margin($breakpoint);
+        margin-left: grid-margin($breakpoint);
       }
 
       @if (index($sides, "right")) {
-        padding-right: grid-margin($breakpoint);
+        margin-right: grid-margin($breakpoint);
       }
 
       @if (index($sides, "bottom")) {
-        padding-bottom: grid-margin($breakpoint);
+        margin-bottom: grid-margin($breakpoint);
       }
     }
   } @else {

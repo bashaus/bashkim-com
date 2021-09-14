@@ -65,7 +65,7 @@ export const NavigationSocial = (): JSX.Element => {
         </li>
         <li className={styles.IconLinkedIn}>
           <a
-            href="https://www.linkedin.com/in/bashaus"
+            href="https://www.linkedin.com/in/bashaus/"
             target="_blank"
             rel="noreferrer noopener"
             title="Linked In"

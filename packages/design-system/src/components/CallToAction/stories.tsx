@@ -22,5 +22,5 @@ const Template = ({ children, ...args }: CallToActionProps) => (
 
 export const Render = Template.bind({});
 Render.args = {
-  children: "Call to action label",
+  children: "Call to action",
 };

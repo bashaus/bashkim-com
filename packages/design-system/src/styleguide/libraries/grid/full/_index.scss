@@ -1,31 +1,33 @@
 @mixin grid-full(
   $breakpoints: null,
+  $margin: (
+    left,
+    right,
+  ),
   $padding: (
     top,
     left,
-    right,
-    bottom,
   )
 ) {
   @if (type-of($breakpoints) == "null") {
-    @include grid-full(map-keys($grid), $padding);
+    @include grid-container-gutter(map-keys($grid));
   } @else if (type-of($breakpoints) == "map") {
-    @include grid-full(map-keys($breakpoints), $padding);
+    @include grid-full(map-keys($breakpoints), $margin);
   } @else if (type-of($breakpoints) == "list") {
     @each $breakpoint in $breakpoints {
-      @include grid-full($breakpoint, $padding);
+      @include grid-full($breakpoint, $margin);
     }
   } @else if (type-of($breakpoints) == "string") {
     $breakpoint: $breakpoints;
-    @include grid-full-padding($breakpoint, $padding);
     @include grid-container-max-width($breakpoint);
+    @include grid-container-margin($breakpoint, $margin);
+    @include grid-container-padding($breakpoint, $padding);
 
     width: 100%;
     margin-left: auto;
     margin-right: auto;
   } @else {
-    @error "grid-full( #{type-of($breakpoints)}, #{type-of($padding)} ): "
-      "$breakpoints received type #{type-of($breakpoints)}, "
-      "expected `null`, `list`, `map` or `string`";
+    @error "grid-full( #{type-of($breakpoints)}, #{type-of($margin)} ): "
+      "$breakpoints expected `null`, `list`, `map` or `string`";
   }
 }

@@ -7,8 +7,6 @@ import {
 } from "@bashkim-com/design-system";
 
 import { AboutProfile } from "%components/AboutProfile";
-import { AboutEmployment } from "%components/AboutEmployment";
-import { AboutTutoring } from "%components/AboutTutoring";
 import { AboutEducation } from "%components/AboutEducation";
 import { AboutCertifications } from "%components/AboutCertifications";
 import { LayoutDefault } from "%components/LayoutDefault";
@@ -25,10 +23,12 @@ const AboutPage = (): JSX.Element => (
     <MetaDescription content="Information on the work history of Bashkim Isai" />
     <MetaKeywords content="bashkim isai, creative technologist, london" />
 
-    <PartialHeaderImage id="AboutPage-Header" className={styles.Header} />
+    <PartialHeaderImage
+      backgroundClassName={styles.Background}
+      className={styles.Header}
+      id="AboutPage-Header"
+    />
     <AboutProfile />
-    <AboutEmployment />
-    <AboutTutoring />
     <AboutEducation />
     <AboutCertifications />
 

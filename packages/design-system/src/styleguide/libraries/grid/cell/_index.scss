@@ -1,16 +1,11 @@
+@import "./span";
+
 @mixin grid-cell(
   $columns: (
     /* $breakpoint : $span */
-  ),
-  $padding: (
-    top,
-    left,
-    right,
-    bottom,
   )
 ) {
   @each $breakpoint, $span in $columns {
-    @include grid-cell-padding($breakpoint, $padding);
-    @include grid-cell-width($breakpoint, $span);
+    @include grid-cell-span($breakpoint, $span);
   }
 }
