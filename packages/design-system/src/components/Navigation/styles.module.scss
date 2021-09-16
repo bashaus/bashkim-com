@@ -1,0 +1,42 @@
+@import "~breakpoint-sass";
+
+@import "src/styleguide/utils/media";
+
+.Navigation {
+  position: relative;
+
+  .Content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  @include breakpoint($media-mobile) {
+    &::after {
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0, #fff 85%);
+      content: "";
+      display: block;
+      pointer-events: none;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 50px;
+    }
+
+    .Content {
+      padding: 0 10px;
+      overflow: auto hidden;
+      scrollbar-width: thin;
+      white-space: nowrap;
+    }
+  }
+
+  @include breakpoint($media-not-mobile) {
+    flex-grow: 1;
+
+    .Content {
+      justify-content: flex-end;
+    }
+  }
+}

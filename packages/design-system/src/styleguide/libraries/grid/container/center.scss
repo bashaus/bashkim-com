@@ -1,0 +1,23 @@
+@mixin grid-container-center($breakpoints: null) {
+  @if (type-of($breakpoints) == "null") {
+    @include grid-container-center(map-keys($grid));
+  } @else if (type-of($breakpoints) == "map") {
+    @include grid-container-center(map-keys($breakpoints));
+  } @else if (type-of($breakpoints) == "list") {
+    @each $breakpoint in $breakpoints {
+      @include grid-container-center($breakpoint);
+    }
+  } @else if (type-of($breakpoints) == "string") {
+    $breakpoint: $breakpoints;
+
+    @include breakpoint(grid-query($breakpoint)) {
+      @if map-has-key(grid-breakpoint($breakpoint), gutter) {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  } @else {
+    @error "grid-container-center( #{type-of($breakpoints)} ): "
+      "$breakpoints expected `null`, `map`, `list` or `string`";
+  }
+}

@@ -40,7 +40,7 @@ const CaseStudyPage = ({
   } = caseStudyPage;
 
   return (
-    <LayoutDefault backButton={MenuBackButtonPortfolioImpl} theme="portfolio">
+    <LayoutDefault backButton={MenuBackButtonPortfolioImpl}>
       <article itemScope itemType="http://schema.org/CreativeWork">
         <MetaCanonical href={`/portfolio/${caseStudyPage._meta.uid}/`} />
         <MetaTitle content={caseStudyPage.meta_title} />

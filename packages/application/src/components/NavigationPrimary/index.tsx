@@ -1,56 +1,35 @@
-import classNames from "classnames";
+import { useRouter } from "next/router";
 import Link from "next/link";
+
+import { NavigationGroup, NavigationItem } from "@bashkim-com/design-system";
 
 import styles from "./styles.module.scss";
 
-export type NavigationPrimaryProps = {
-  theme: string;
-};
+export const NavigationPrimary = (): JSX.Element => {
+  const router = useRouter();
 
-export const NavigationPrimary = ({
-  theme,
-}: NavigationPrimaryProps): JSX.Element => (
-  <nav
-    data-heading="Main menu"
-    aria-label="Main menu"
-    className={styles.NavigationPrimary}
-  >
-    <ul>
-      <li
-        className={classNames(styles.NavigationPortfolio, {
-          [styles.isSelected]: theme === "portfolio",
-        })}
+  return (
+    <NavigationGroup className={styles.NavigationPrimary}>
+      <NavigationItem
+        className={styles.Portfolio}
+        isSelected={router.asPath.startsWith("/portfolio")}
       >
         <Link href="/portfolio">
           <a>
             <span>Portfolio</span>
           </a>
         </Link>
-      </li>
-      <li
-        className={classNames(styles.NavigationAbout, {
-          [styles.isSelected]: theme === "about",
-        })}
+      </NavigationItem>
+      <NavigationItem
+        className={styles.About}
+        isSelected={router.asPath.startsWith("/about")}
       >
         <Link href="/about">
           <a>
             <span>About</span>
           </a>
         </Link>
-      </li>
-      <li
-        className={classNames(styles.NavigationBlog, {
-          [styles.isSelected]: theme === "blog",
-        })}
-      >
-        <a
-          href="https://medium.com/@bashaus"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span>Blog</span>
-        </a>
-      </li>
-    </ul>
-  </nav>
-);
+      </NavigationItem>
+    </NavigationGroup>
+  );
+};

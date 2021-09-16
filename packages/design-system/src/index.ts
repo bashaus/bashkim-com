@@ -9,6 +9,9 @@ export { DeviceFeaturePhone } from "./components/DeviceFeaturePhone";
 export { DeviceSmartphone } from "./components/DeviceSmartphone";
 export { Group, GroupDesign } from "./components/Group";
 export { Logo } from "./components/Logo";
+export { Navigation } from "./components/Navigation";
+export { NavigationGroup } from "./components/NavigationGroup";
+export { NavigationItem } from "./components/NavigationItem";
 export { Tile } from "./components/Tile";
 export { VideoPlayerYouTube } from "./components/VideoPlayerYouTube";
 

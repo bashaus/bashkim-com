@@ -4,61 +4,13 @@
 @import "~@bashkim-com/design-system/src/styleguide/utils/media";
 
 .NavigationPrimary {
-  a {
-    font-weight: bold;
-  }
-
-  span {
-    transition: all 0.3s ease-in-out;
-  }
-
-  @include breakpoint($media-mobile) {
-    a {
-      display: block;
-      line-height: 48px;
-      text-transform: uppercase;
-      color: #b6b6b6;
-      text-decoration: none;
-      font-weight: bold;
-    }
-  }
-
   @include breakpoint($media-not-mobile) {
-    ul {
-      display: flex;
-    }
-  }
-
-  @include breakpoint($media-not-mobile) {
-    .isSelected span {
-      border-bottom: solid 1.5px currentColor;
-      padding-bottom: 1px;
-    }
-
-    .NavigationPortfolio a:hover {
+    .Portfolio a:hover {
       color: $color-theme-portfolio;
     }
 
-    .NavigationAbout a:hover {
+    .About a:hover {
       color: $color-theme-about;
-    }
-
-    .NavigationBlog a:hover {
-      color: $color-theme-blog;
-    }
-  }
-
-  @include breakpoint($media-tablet-portrait) {
-    a {
-      padding: 0 14px;
-    }
-  }
-
-  @include breakpoint($media-screen-large) {
-    a {
-      padding: 0 27px;
-      border-left: solid 1px rgba(255, 255, 255, 0);
-      border-right: solid 1px rgba(255, 255, 255, 0);
     }
   }
 }

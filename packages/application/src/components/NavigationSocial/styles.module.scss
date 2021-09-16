@@ -5,38 +5,20 @@
 @import "~@bashkim-com/design-system/src/styleguide/utils/media";
 
 .NavigationSocial {
-  a {
-    display: block;
-  }
-
   @include breakpoint($media-mobile) {
-    a {
-      display: flex;
-    }
-
     svg {
-      flex-grow: 0;
-      flex-shrink: 0;
-      flex-basis: 30px;
-      margin-top: 7px;
-      margin-right: 10px;
-      margin-bottom: 13px;
-    }
-
-    span {
-      font-weight: bold;
-      line-height: 48px;
-      text-transform: uppercase;
-      color: #b6b6b6;
+      margin-right: 5px;
+      width: 25px;
+      height: 25px;
     }
   }
 
   @include breakpoint($media-not-mobile) {
     padding-left: 12px;
 
-    ul {
-      display: flex;
-      flex-wrap: wrap;
+    svg {
+      width: 30px;
+      height: 30px;
     }
 
     span {
@@ -46,40 +28,14 @@
 }
 
 %SocialIcon {
-  background-repeat: no-repeat;
-  background-position: center center;
-
-  a {
-    @include grid-cell-padding(
-      $breakpoints: (
-        tablet-portrait,
-        tablet-landscape,
-        desktop-narrow,
-        desktop-wide,
-      ),
-      $sides: (
-        left,
-        right,
-      )
-    );
-
-    @include breakpoint($media-not-mobile) {
-      padding-top: 15px;
-      padding-bottom: 15px;
-    }
-  }
-
   svg {
-    display: block;
-    fill: $color-shade-border;
+    fill: currentColor;
   }
 
-  path {
+  path,
+  circle,
+  ellipse {
     transition: fill 0.3s ease-in-out;
-  }
-
-  .NavigationSocial.isScrollAtTop & svg {
-    fill: $color-white;
   }
 }
 
@@ -88,7 +44,7 @@
 
   @include breakpoint($media-mobile) {
     svg path {
-      fill: $color-shade-border;
+      fill: currentColor;
     }
   }
 
@@ -104,7 +60,7 @@
 
   @include breakpoint($media-mobile) {
     svg path {
-      fill: $color-shade-border;
+      fill: currentColor;
     }
   }
 
@@ -115,13 +71,31 @@
   }
 }
 
+.IconMedium {
+  @extend %SocialIcon;
+
+  @include breakpoint($media-mobile) {
+    svg circle,
+    svg ellipse {
+      fill: currentColor;
+    }
+  }
+
+  @include breakpoint($media-not-mobile) {
+    a:hover svg circle,
+    a:hover svg ellipse {
+      fill: #191919;
+    }
+  }
+}
+
 .IconStackOverflow {
   @extend %SocialIcon;
 
   @include breakpoint($media-mobile) {
     svg :global(.stack-overflow_svg__Container),
     svg :global(.stack-overflow_svg__Stack) {
-      fill: $color-shade-border;
+      fill: currentColor;
     }
   }
 

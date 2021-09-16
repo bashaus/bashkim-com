@@ -53,9 +53,7 @@ class MyDocument extends Document {
           */}
         </Head>
         <body>
-          <div className="peep--site">
-            <Main />
-          </div>
+          <Main />
           <NextScript />
         </body>
       </Html>

@@ -38,7 +38,7 @@ const PortfolioPage = ({ portfolioPage }: PortfolioPageProps): JSX.Element => {
   } = portfolioPage;
 
   return (
-    <LayoutDefault backButton={MenuBackButtonHomeImpl} theme="portfolio">
+    <LayoutDefault backButton={MenuBackButtonHomeImpl}>
       <MetaTitle content={metaTitle} />
       <MetaDescription content={metaDescription} />
       <MetaKeywords content={metaKeywords} />

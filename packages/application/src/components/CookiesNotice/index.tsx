@@ -29,7 +29,7 @@ export const CookiesNotice = ({
   }, []);
 
   if (!isVisible) {
-    return null;
+    return <div />;
   }
 
   return (

@@ -27,7 +27,9 @@ export default {
     peerDepsExternal(),
     postcss({
       extract: false,
-      modules: true,
+      modules: {
+        generateScopedName: "ds___[local]___[hash:base64:5]",
+      },
       plugins: [
         url({
           url: "inline",

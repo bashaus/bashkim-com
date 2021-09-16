@@ -19,7 +19,7 @@ import { MetaTitle } from "%components/MetaTitle";
 import styles from "./styles.module.scss";
 
 const AboutPage = (): JSX.Element => (
-  <LayoutDefault backButton={MenuBackButtonHomeImpl} theme="about">
+  <LayoutDefault backButton={MenuBackButtonHomeImpl}>
     <MetaTitle content="About" />
     <MetaDescription content="Information on the work history of Bashkim Isai" />
     <MetaKeywords content="bashkim isai, creative technologist, london" />
