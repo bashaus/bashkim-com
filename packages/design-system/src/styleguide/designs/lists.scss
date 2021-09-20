@@ -18,3 +18,20 @@
     margin-left: -20px;
   }
 }
+
+%list-ordered {
+  @extend %list;
+
+  li::before {
+    content: counter(li) ".";
+  }
+}
+
+%list-unordered {
+  @extend %list;
+
+  li::before {
+    content: "\2022";
+    font-weight: bold;
+  }
+}

@@ -24,7 +24,7 @@ const Template = (args: FormattedRichTextProps) => (
     <h3>Heading three</h3>
     <p>{faker.lorem.paragraph()}</p>
     <p>
-      {faker.lorem.sentences(1)} <strong>{faker.lorem.sentences(1)}</strong>.
+      {faker.lorem.sentences(1)} <strong>{faker.lorem.sentences(1)}</strong>
     </p>
     <ul>
       <li>{faker.lorem.words(5)}</li>
