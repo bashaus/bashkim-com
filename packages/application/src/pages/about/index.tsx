@@ -3,6 +3,7 @@ import {
   Group,
   PartialHeaderImage,
   PartialSplit,
+  PartialSplitItem,
   PartialSubtitle,
 } from "@bashkim-com/design-system";
 
@@ -38,7 +39,7 @@ const AboutPage = (): JSX.Element => (
       </PartialSubtitle>
 
       <PartialSplit>
-        <PartialSplit.Item>
+        <PartialSplitItem>
           <div>
             <p>Looking for recommendations from industry professionals?</p>
             <CallToAction>
@@ -51,9 +52,9 @@ const AboutPage = (): JSX.Element => (
               </a>
             </CallToAction>
           </div>
-        </PartialSplit.Item>
+        </PartialSplitItem>
 
-        <PartialSplit.Item>
+        <PartialSplitItem>
           <div>
             <p>Looking to see some examples of code?</p>
             <CallToAction>
@@ -66,7 +67,7 @@ const AboutPage = (): JSX.Element => (
               </a>
             </CallToAction>
           </div>
-        </PartialSplit.Item>
+        </PartialSplitItem>
       </PartialSplit>
     </Group>
   </LayoutDefault>

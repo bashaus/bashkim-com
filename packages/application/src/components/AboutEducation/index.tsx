@@ -1,6 +1,7 @@
 import {
   Group,
   PartialSplit,
+  PartialSplitItem,
   PartialSubtitle,
 } from "@bashkim-com/design-system";
 
@@ -13,7 +14,7 @@ export const AboutEducation = (): JSX.Element => (
     </PartialSubtitle>
 
     <PartialSplit index={0}>
-      <PartialSplit.Item>
+      <PartialSplitItem>
         <div>
           <h3>Postgraduate</h3>
           <p>University of Queensland</p>
@@ -26,9 +27,9 @@ export const AboutEducation = (): JSX.Element => (
             Interaction&nbsp;Design
           </p>
         </div>
-      </PartialSplit.Item>
+      </PartialSplitItem>
 
-      <PartialSplit.Item backgroundImage="/static/images/about/education/uq/background.jpg">
+      <PartialSplitItem backgroundImage="/static/images/about/education/uq/background.jpg">
         <div>
           <img
             alt=""
@@ -36,11 +37,11 @@ export const AboutEducation = (): JSX.Element => (
             className={styles.Logo}
           />
         </div>
-      </PartialSplit.Item>
+      </PartialSplitItem>
     </PartialSplit>
 
     <PartialSplit index={1}>
-      <PartialSplit.Item>
+      <PartialSplitItem>
         <div>
           <h3>Undergraduate</h3>
           <p>Queensland University of Technology</p>
@@ -80,9 +81,9 @@ export const AboutEducation = (): JSX.Element => (
             Communication&nbsp;Design
           </p>
         </div>
-      </PartialSplit.Item>
+      </PartialSplitItem>
 
-      <PartialSplit.Item backgroundImage="/static/images/about/education/qut/gardens-point.jpg">
+      <PartialSplitItem backgroundImage="/static/images/about/education/qut/gardens-point.jpg">
         <div>
           <img
             alt=""
@@ -90,7 +91,7 @@ export const AboutEducation = (): JSX.Element => (
             className={styles.Logo}
           />
         </div>
-      </PartialSplit.Item>
+      </PartialSplitItem>
     </PartialSplit>
   </Group>
 );

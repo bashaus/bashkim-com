@@ -1,6 +1,7 @@
 import React from "react";
 
 import { PartialSplit, PartialSplitProps } from ".";
+import { PartialSplitItem } from "../PartialSplitItem";
 
 export default {
   component: PartialSplit,
@@ -24,17 +25,17 @@ const Template = ({
 }: PartialSplitStoryProps) => (
   <>
     <PartialSplit {...args} index={index}>
-      <PartialSplit.Item>
+      <PartialSplitItem>
         <div>PartialSplit</div>
-      </PartialSplit.Item>
-      <PartialSplit.Item backgroundImage={backgroundImage[0]} />
+      </PartialSplitItem>
+      <PartialSplitItem backgroundImage={backgroundImage[0]} />
     </PartialSplit>
 
     <PartialSplit {...args} index={index + 1}>
-      <PartialSplit.Item>
+      <PartialSplitItem>
         <div>PartialSplit (alternate)</div>
-      </PartialSplit.Item>
-      <PartialSplit.Item backgroundImage={backgroundImage[0]} />
+      </PartialSplitItem>
+      <PartialSplitItem backgroundImage={backgroundImage[0]} />
     </PartialSplit>
   </>
 );

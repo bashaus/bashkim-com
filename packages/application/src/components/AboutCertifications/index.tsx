@@ -1,6 +1,7 @@
 import {
   Group,
   PartialSplit,
+  PartialSplitItem,
   PartialSubtitle,
 } from "@bashkim-com/design-system";
 
@@ -13,7 +14,7 @@ export const AboutCertifications = (): JSX.Element => (
     </PartialSubtitle>
 
     <PartialSplit index={0}>
-      <PartialSplit.Item>
+      <PartialSplitItem>
         <div>
           <h3>Java 8</h3>
           <p>
@@ -28,18 +29,18 @@ export const AboutCertifications = (): JSX.Element => (
             />
           </p>
         </div>
-      </PartialSplit.Item>
-      <PartialSplit.Item backgroundImage="/static/images/about/certifications/java/background.jpg">
+      </PartialSplitItem>
+      <PartialSplitItem backgroundImage="/static/images/about/certifications/java/background.jpg">
         <img
           alt="Duke - The Java Mascot"
           src="/static/images/about/certifications/java/logo.jpg"
           className={styles.Logo}
         />
-      </PartialSplit.Item>
+      </PartialSplitItem>
     </PartialSplit>
 
     <PartialSplit index={1}>
-      <PartialSplit.Item>
+      <PartialSplitItem>
         <div>
           <h3>PHP 5.3</h3>
           <p>
@@ -60,15 +61,15 @@ export const AboutCertifications = (): JSX.Element => (
             </a>
           </p>
         </div>
-      </PartialSplit.Item>
+      </PartialSplitItem>
 
-      <PartialSplit.Item backgroundImage="/static/images/about/certifications/php/background.jpg">
+      <PartialSplitItem backgroundImage="/static/images/about/certifications/php/background.jpg">
         <img
           alt="ElePHPant"
           className={styles.Logo}
           src="/static/images/about/certifications/php/logo.png"
         />
-      </PartialSplit.Item>
+      </PartialSplitItem>
     </PartialSplit>
   </Group>
 );
