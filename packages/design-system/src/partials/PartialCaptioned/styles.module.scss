@@ -1,6 +1,5 @@
 @import "~breakpoint-sass";
 
-@import "src/styleguide/designs/wysiwyg";
 @import "src/styleguide/utils/grid";
 @import "src/styleguide/utils/media";
 
@@ -8,7 +7,6 @@
   @include grid-container;
 
   .Caption {
-    @extend %wysiwyg;
     @include grid-cell(
       $columns: (
         mobile-portrait: 12,

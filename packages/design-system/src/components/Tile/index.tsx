@@ -1,4 +1,7 @@
 import React from "react";
+
+import { FormattedRichText } from "../../formatters/FormattedRichText";
+
 import styles from "./styles.module.scss";
 
 export type TileProps = {
@@ -22,7 +25,7 @@ export const Tile = ({
       }}
     />
 
-    <div className={styles.Content}>
+    <FormattedRichText className={styles.Content}>
       <h3>{title}</h3>
 
       <div className={styles.Icon}>
@@ -30,6 +33,6 @@ export const Tile = ({
       </div>
 
       <p>{description}</p>
-    </div>
+    </FormattedRichText>
   </div>
 );

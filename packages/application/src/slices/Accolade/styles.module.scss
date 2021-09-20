@@ -1,14 +1,11 @@
 @import "~@bashkim-com/design-system/src/styleguide/utils/colors";
 @import "~@bashkim-com/design-system/src/styleguide/utils/grid";
-@import "~@bashkim-com/design-system/src/styleguide/designs/wysiwyg";
 
 .AccoladeSlice {
   @include grid-container;
 }
 
 .Details {
-  @extend %wysiwyg;
-
   @include grid-cell(
     $columns: (
       mobile-portrait: 12,
@@ -39,7 +36,6 @@
 }
 
 .Award {
-  @extend %wysiwyg;
   @include grid-cell(
     $columns: (
       mobile-portrait: 12,
@@ -67,19 +63,19 @@
   height: 50px;
   margin-top: 0;
 
-  &[data-prop-place="gold"] {
+  [data-prop-place="gold"] & {
     fill: $color-accolade-gold;
   }
 
-  &[data-prop-place="silver"] {
+  [data-prop-place="silver"] & {
     fill: $color-accolade-silver;
   }
 
-  &[data-prop-place="bronze"] {
+  [data-prop-place="bronze"] & {
     fill: $color-accolade-bronze;
   }
 
-  &[data-prop-place="honour"] {
+  [data-prop-place="honour"] & {
     fill: $color-accolade-honour;
   }
 }

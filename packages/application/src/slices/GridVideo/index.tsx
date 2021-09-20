@@ -25,7 +25,12 @@ export const GridVideoSlice = ({ slice }: GridVideoSliceProps): JSX.Element => (
               width={poster.dimensions.width}
               height={poster.dimensions.height}
             >
-              <img src={poster.url} alt={video.title} />
+              <img
+                src={poster.url}
+                alt={video.title}
+                width={poster.dimensions.width}
+                height={poster.dimensions.height}
+              />
             </DeferredAsset>
             <div className={styles.Description}>
               <PrismicRichText render={description} />

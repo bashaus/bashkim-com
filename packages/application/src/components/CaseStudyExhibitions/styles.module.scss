@@ -1,11 +1,9 @@
 @import "~@bashkim-com/design-system/src/styleguide/utils/grid";
-@import "~@bashkim-com/design-system/src/styleguide/designs/wysiwyg";
 
 .CaseStudyExhibitions {
   @include grid-container;
 
   > li {
-    @extend %wysiwyg;
     @include grid-cell(
       $columns: (
         mobile-portrait: 12,

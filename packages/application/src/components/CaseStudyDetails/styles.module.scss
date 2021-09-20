@@ -1,13 +1,10 @@
 @import "~@bashkim-com/design-system/src/styleguide/utils/grid";
-@import "~@bashkim-com/design-system/src/styleguide/designs/wysiwyg";
 
 .CaseStudyDetails {
   @include grid-container($margin: (), $padding: ());
   flex-wrap: wrap;
 
   > * {
-    @extend %wysiwyg;
-    display: inline-block;
     @include grid-cell(
       $columns: (
         mobile-portrait: 12,

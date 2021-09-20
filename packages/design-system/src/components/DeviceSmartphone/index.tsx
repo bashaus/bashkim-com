@@ -1,5 +1,7 @@
 import React from "react";
 
+import { FormattedRichText } from "../../formatters/FormattedRichText";
+
 import styles from "./styles.module.scss";
 
 export type DeviceSmartphoneProps = {
@@ -19,6 +21,8 @@ export const DeviceSmartphone = ({
       <div className={styles.Content}>{figure}</div>
     </div>
 
-    <figcaption>{children}</figcaption>
+    <figcaption>
+      <FormattedRichText>{children}</FormattedRichText>
+    </figcaption>
   </figure>
 );

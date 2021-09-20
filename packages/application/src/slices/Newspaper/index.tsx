@@ -1,4 +1,7 @@
-import { PartialNewspaper } from "@bashkim-com/design-system";
+import {
+  FormattedRichText,
+  PartialNewspaper,
+} from "@bashkim-com/design-system";
 import type { NewspaperSliceType } from "@bashkim-com/prismic";
 
 import { PrismicRichText } from "%libraries/prismic/helpers/RichText";
@@ -12,9 +15,9 @@ export const NewspaperSlice = ({ slice }: NewspaperSliceProps): JSX.Element => (
     {slice.fields.map((field, i) => {
       const { newspaper_slice_type_group: group } = field;
       return (
-        <div key={i}>
+        <FormattedRichText key={i}>
           <PrismicRichText render={group} />
-        </div>
+        </FormattedRichText>
       );
     })}
   </PartialNewspaper>

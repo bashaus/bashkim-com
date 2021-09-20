@@ -1,4 +1,7 @@
 import React from "react";
+
+import { FormattedRichText } from "../../formatters/FormattedRichText";
+
 import styles from "./styles.module.scss";
 
 export type PartialCaptionedProps = {
@@ -15,7 +18,9 @@ export const PartialCaptioned = ({
   figure,
 }: PartialCaptionedProps): JSX.Element => (
   <figure className={styles.PartialCaptioned}>
-    <figcaption className={styles.Caption}>{children}</figcaption>
+    <figcaption className={styles.Caption}>
+      <FormattedRichText>{children}</FormattedRichText>
+    </figcaption>
     <div className={styles.Figure}>{figure}</div>
   </figure>
 );

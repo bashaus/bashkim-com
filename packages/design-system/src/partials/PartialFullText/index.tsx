@@ -1,4 +1,7 @@
 import React from "react";
+
+import { FormattedRichText } from "../../formatters/FormattedRichText";
+
 import styles from "./styles.module.scss";
 
 export type PartialFullTextProps = {
@@ -8,5 +11,7 @@ export type PartialFullTextProps = {
 export const PartialFullText = ({
   children,
 }: PartialFullTextProps): JSX.Element => (
-  <div className={styles.PartialFullText}>{children}</div>
+  <FormattedRichText className={styles.PartialFullText}>
+    {children}
+  </FormattedRichText>
 );

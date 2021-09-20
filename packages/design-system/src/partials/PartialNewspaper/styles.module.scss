@@ -1,6 +1,5 @@
 @import "~breakpoint-sass";
 
-@import "src/styleguide/designs/wysiwyg";
 @import "src/styleguide/utils/grid";
 @import "src/styleguide/utils/media";
 
@@ -24,7 +23,6 @@
   }
 
   > div {
-    @extend %wysiwyg;
     display: inline-block;
     padding-top: 10px;
     padding-bottom: 10px;

@@ -1,13 +1,10 @@
 @import "~breakpoint-sass";
 
 @import "src/styleguide/designs/headings";
-@import "src/styleguide/designs/wysiwyg";
 @import "src/styleguide/utils/colors";
 @import "src/styleguide/utils/media";
 
 .Tile {
-  @extend %wysiwyg;
-
   color: $color-text-copy;
   background-color: $color-white;
   box-shadow: 0 0 14px 1px rgba(204, 204, 204, 0.5);

@@ -1,4 +1,3 @@
-@import "src/styleguide/designs/wysiwyg";
 @import "src/styleguide/utils/grid";
 
 .DeviceSmartphone {
@@ -35,7 +34,6 @@
   }
 
   figcaption {
-    @extend %wysiwyg;
     @include grid-cell-padding(
       $sides: (
         top,

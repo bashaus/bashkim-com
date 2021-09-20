@@ -1,11 +1,9 @@
 @import "~breakpoint-sass";
 
-@import "src/styleguide/designs/wysiwyg";
 @import "src/styleguide/utils/grid";
 @import "src/styleguide/utils/media";
 
 .PartialFullText {
-  @extend %wysiwyg;
   @include grid-container-bounds;
 
   @include breakpoint($media-tablet-portrait) {

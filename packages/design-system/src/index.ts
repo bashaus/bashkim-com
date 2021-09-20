@@ -14,6 +14,7 @@ export { VideoPlayerYouTube } from "./components/VideoPlayerYouTube";
 
 /* Formatters */
 export { FormattedDate } from "./formatters/FormattedDate";
+export { FormattedRichText } from "./formatters/FormattedRichText";
 
 /* Partials */
 export { PartialCaptioned } from "./partials/PartialCaptioned";

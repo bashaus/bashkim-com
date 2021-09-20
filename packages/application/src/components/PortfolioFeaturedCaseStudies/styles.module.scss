@@ -1,5 +1,4 @@
 @import "~@bashkim-com/design-system/src/styleguide/utils/grid";
-@import "~@bashkim-com/design-system/src/styleguide/designs/wysiwyg";
 
 .PortfolioFeaturedCaseStudies {
   @include grid-container;
@@ -21,8 +20,6 @@
   }
 
   .Details {
-    @extend %wysiwyg;
-
     flex-grow: 0;
   }
 

@@ -1,10 +1,10 @@
-@import "../designs/headings";
-@import "../designs/list-ordered";
-@import "../designs/list-unordered";
-@import "../utils/colors";
-@import "../utils/grid";
+@import "src/styleguide/designs/headings";
+@import "src/styleguide/designs/list-ordered";
+@import "src/styleguide/designs/list-unordered";
+@import "src/styleguide/utils/colors";
+@import "src/styleguide/utils/grid";
 
-%wysiwyg {
+.FormattedRichText {
   * + * {
     @include breakpoint($media-mobile-portrait) {
       margin-top: grid-gutter($breakpoint: mobile-portrait) / 2;
@@ -31,6 +31,10 @@
     }
   }
 
+  h2 {
+    @extend %heading2;
+  }
+
   h3 {
     @extend %heading3;
   }
@@ -45,5 +49,9 @@
 
   strong {
     font-weight: bold;
+  }
+
+  em {
+    font-style: italic;
   }
 }

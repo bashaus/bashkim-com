@@ -3,13 +3,11 @@
 @import "~@bashkim-com/design-system/src/styleguide/utils/colors";
 @import "~@bashkim-com/design-system/src/styleguide/utils/grid";
 @import "~@bashkim-com/design-system/src/styleguide/utils/media";
-@import "~@bashkim-com/design-system/src/styleguide/designs/wysiwyg";
 
 .Principles {
   @include grid-container;
 
   li {
-    @extend %wysiwyg;
     @include grid-cell(
       $columns: (
         mobile-portrait: 12,
@@ -20,13 +18,11 @@
         desktop-wide: 3,
       )
     );
-
-    display: flex;
-    flex-direction: column;
   }
 
-  h3 {
-    @extend %heading3;
+  .Cell {
+    display: flex;
+    flex-direction: column;
   }
 
   @include breakpoint($media-mobile-portrait) {

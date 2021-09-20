@@ -1,4 +1,7 @@
 import React from "react";
+
+import { FormattedRichText } from "../../formatters/FormattedRichText";
+
 import styles from "./styles.module.scss";
 
 export type PartialFullBannerProps = {
@@ -15,9 +18,9 @@ export const PartialFullBanner = ({
   id,
 }: PartialFullBannerProps): JSX.Element => (
   <div className={styles.PartialFullBanner} id={id}>
-    <div className={styles.Container}>
+    <FormattedRichText className={styles.Container}>
       <div className={styles.Content}>{children}</div>
-    </div>
+    </FormattedRichText>
 
     {backgroundDesktop && (
       <style type="text/css">

@@ -1,4 +1,5 @@
 import type { CaseStudyContentType } from "@bashkim-com/prismic";
+import { FormattedRichText } from "@bashkim-com/design-system";
 
 import { CaseStudyLifespan } from "%components/CaseStudyLifespan";
 
@@ -31,28 +32,28 @@ export const CaseStudyDetails = ({
   return (
     <div className={styles.CaseStudyDetails}>
       {brief && (
-        <div>
+        <FormattedRichText>
           <h3>Brief</h3>
           <p>{brief}</p>
-        </div>
+        </FormattedRichText>
       )}
 
       {strategy && (
-        <div>
+        <FormattedRichText>
           <h3>Strategy</h3>
           <p>{strategy}</p>
-        </div>
+        </FormattedRichText>
       )}
 
       {implementation && (
-        <div>
+        <FormattedRichText>
           <h3>Implementation</h3>
           <p>{implementation}</p>
-        </div>
+        </FormattedRichText>
       )}
 
       {deliverables && (
-        <div>
+        <FormattedRichText>
           <h3>Deliverables</h3>
           <ul>
             {deliverables.map((deliverable) => (
@@ -61,58 +62,58 @@ export const CaseStudyDetails = ({
               </li>
             ))}
           </ul>
-        </div>
+        </FormattedRichText>
       )}
 
       {client && (
-        <div>
+        <FormattedRichText>
           <h3>Client</h3>
           <p>{client}</p>
-        </div>
+        </FormattedRichText>
       )}
 
       {agency && (
-        <div>
+        <FormattedRichText>
           <h3>Agency</h3>
           <p>
             {agency}
             <br />
             {role}
           </p>
-        </div>
+        </FormattedRichText>
       )}
 
       {institution && (
-        <div>
+        <FormattedRichText>
           <h3>Institution</h3>
           <p>{institution}</p>
-        </div>
+        </FormattedRichText>
       )}
 
       {degree && (
-        <div>
+        <FormattedRichText>
           <h3>Degree</h3>
           <p>
             {degree}
             <br />
             {role}
           </p>
-        </div>
+        </FormattedRichText>
       )}
 
       {markets && (
-        <div>
+        <FormattedRichText>
           <h3>Markets</h3>
           <ul>
             {markets.map((market) => (
               <li key={market.info_market}>{market.info_market}</li>
             ))}
           </ul>
-        </div>
+        </FormattedRichText>
       )}
 
       {targetAudiences && (
-        <div>
+        <FormattedRichText>
           <h3>Audience</h3>
           <ol>
             {targetAudiences.map((audience) => (
@@ -121,11 +122,11 @@ export const CaseStudyDetails = ({
               </li>
             ))}
           </ol>
-        </div>
+        </FormattedRichText>
       )}
 
       {launchDate && (
-        <div>
+        <FormattedRichText>
           <h3>Lifespan</h3>
           <p>
             <CaseStudyLifespan
@@ -133,18 +134,18 @@ export const CaseStudyDetails = ({
               decommissioned={decommissionDate}
             />
           </p>
-        </div>
+        </FormattedRichText>
       )}
 
       {outcomes.length > 0 && (
-        <div>
+        <FormattedRichText>
           <h3>Outcomes</h3>
           <ul>
             {outcomes.map((outcome) => (
               <li key={outcome.info_outcome}>{outcome.info_outcome}</li>
             ))}
           </ul>
-        </div>
+        </FormattedRichText>
       )}
     </div>
   );

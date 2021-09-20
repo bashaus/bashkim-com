@@ -1,3 +1,4 @@
+import { FormattedRichText } from "@bashkim-com/design-system";
 import type { ExhibitionSliceType } from "@bashkim-com/prismic";
 
 import { CaseStudyLifespan } from "%components/CaseStudyLifespan/index";
@@ -21,9 +22,14 @@ export const ExhibitionSlice = ({
 
   return (
     <li>
-      <PrismicRichText render={name} />
-      <PrismicRichText render={location} />
-      <CaseStudyLifespan launched={openingDate} decommissioned={closingDate} />
+      <FormattedRichText>
+        <PrismicRichText render={name} />
+        <PrismicRichText render={location} />
+        <CaseStudyLifespan
+          launched={openingDate}
+          decommissioned={closingDate}
+        />
+      </FormattedRichText>
     </li>
   );
 };

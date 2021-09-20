@@ -1,7 +1,6 @@
 import * as Sentry from "@sentry/browser";
 import { PureComponent } from "react";
-
-import styles from "./styles.module.scss";
+import { FormattedRichText } from "@bashkim-com/design-system";
 
 export type SentryBoundaryProps = {
   children: React.ReactNode;
@@ -46,7 +45,7 @@ export class SentryBoundary extends PureComponent<
 
     /* Has error: show message */
     return (
-      <div className={styles.SentryBoundary}>
+      <FormattedRichText>
         <h3>An error occurred</h3>
         <p>
           Sorry, but an unexpected error occurred while trying to render this
@@ -54,7 +53,7 @@ export class SentryBoundary extends PureComponent<
           information.
         </p>
         <p>Please refresh this page to continue using this website.</p>
-      </div>
+      </FormattedRichText>
     );
   }
 }
