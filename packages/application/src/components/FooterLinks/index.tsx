@@ -51,7 +51,7 @@ export const FooterLinks = (): JSX.Element => (
     <FooterColumn label="Legal">
       <ul>
         <li>
-          <Link href="/legal/cookie-policy">
+          <Link href="/cookies">
             <a>Cookie Policy</a>
           </Link>
         </li>

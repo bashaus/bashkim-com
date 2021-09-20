@@ -44,7 +44,7 @@ export const CookiesNotice = ({
           <div className={styles.Content}>
             Even a small website like this uses cookies to give you the best
             possible browsing experience. By&nbsp;continuing, you agree to the{" "}
-            <Link href="/legal/cookie-policy/">
+            <Link href="/cookies/">
               <a>Cookie&nbsp;Policy</a>
             </Link>
             .

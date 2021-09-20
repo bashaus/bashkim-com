@@ -1,6 +1,9 @@
 {
   "package.json": ["sort-package-json"],
+  "*.{css,scss}": ["stylelint"],
   "*.{js,ts,tsx}": ["eslint"],
-  "*.{md,html,json}": ["prettier --write"],
-  "*.{css,scss}": ["stylelint"]
+  "*.html": ["prettier --write"],
+  "*.json": ["prettier --write"],
+  "*.md": ["prettier --write"],
+  "*.{yml,yaml}": ["yamllint"]
 }

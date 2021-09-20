@@ -25,7 +25,7 @@ export const PagesSitemap = async (): Promise<Array<UrlType>> => {
 
   urlset.push({
     url: {
-      loc: `${config.sitemap.baseHref}/legal/cookie-policy/`,
+      loc: `${config.sitemap.baseHref}/cookies/`,
       lastmod: now,
       changefreq: "monthly",
       priority: "1.0",
