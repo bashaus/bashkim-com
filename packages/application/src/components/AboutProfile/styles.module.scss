@@ -20,6 +20,11 @@
     );
   }
 
+  svg {
+    width: 50px;
+    height: 50px;
+  }
+
   .Cell {
     display: flex;
     flex-direction: column;
@@ -33,7 +38,7 @@
       padding-bottom: 15px;
     }
 
-    img {
+    svg {
       position: absolute;
       top: 10px;
       left: 10px;
@@ -52,7 +57,7 @@
   }
 
   @include breakpoint($media-not-mobile-portrait) {
-    img {
+    svg {
       order: 1;
       display: block;
       margin-top: 20px;

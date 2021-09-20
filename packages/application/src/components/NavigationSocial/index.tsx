@@ -4,8 +4,8 @@ import { useContext } from "react";
 import { NavigationContext } from "%contexts/Navigation/context";
 
 import LogoGitHub from "%public/static/vectors/social/github.svg";
-import LogoLinkedIn from "%public/static/vectors/social/linkedin.svg";
-import LogoStackOverflow from "%public/static/vectors/social/stackoverflow.svg";
+import LogoLinkedIn from "%public/static/vectors/social/linked-in.svg";
+import LogoStackOverflow from "%public/static/vectors/social/stack-overflow.svg";
 
 import styles from "./styles.module.scss";
 

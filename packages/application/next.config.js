@@ -13,7 +13,14 @@ const nextConfig = {
     // Inline SVG support
     config.module.rules.push({
       test: /\.svg$/,
-      use: [{ loader: "@svgr/webpack" }],
+      use: [
+        {
+          loader: "@svgr/webpack",
+          options: {
+            runtimeConfig: true,
+          },
+        },
+      ],
     });
 
     // Global for jQuery
