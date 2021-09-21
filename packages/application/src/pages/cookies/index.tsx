@@ -5,7 +5,7 @@ import {
   PartialSubtitle,
 } from "@bashkim-com/design-system";
 
-import { LayoutDefault } from "%components/LayoutDefault";
+import { Page } from "%components/Page";
 import { MenuBackButtonHomeImpl } from "%components/MenuBackButtonHomeImpl";
 import { MetaDescription } from "%components/MetaDescription";
 import { MetaTitle } from "%components/MetaTitle";
@@ -13,7 +13,7 @@ import { MetaTitle } from "%components/MetaTitle";
 import styles from "./styles.module.scss";
 
 const CookiePolicyPage = (): JSX.Element => (
-  <LayoutDefault backButton={MenuBackButtonHomeImpl}>
+  <Page backButton={MenuBackButtonHomeImpl}>
     <MetaTitle content="Cookie policy" />
     <MetaDescription content="How your personal information is collected and used on this website" />
 
@@ -151,7 +151,7 @@ const CookiePolicyPage = (): JSX.Element => (
         <p>Last updated 01 June 2018</p>
       </PartialFullText>
     </Group>
-  </LayoutDefault>
+  </Page>
 );
 
 export default CookiePolicyPage;

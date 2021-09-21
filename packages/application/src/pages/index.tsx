@@ -13,7 +13,7 @@ import {
 
 import { HomeFeatured } from "%components/HomeFeatured";
 import { HomeHello } from "%components/HomeHello";
-import { LayoutDefault } from "%components/LayoutDefault";
+import { Page } from "%components/Page";
 import { MetaDescription } from "%components/MetaDescription";
 import { MetaKeywords } from "%components/MetaKeywords";
 import { MetaTitle } from "%components/MetaTitle";
@@ -33,7 +33,7 @@ const HomePage = ({ homePage }: HomePageProps): JSX.Element => {
   } = homePage;
 
   return (
-    <LayoutDefault>
+    <Page>
       <MetaTitle standalone content={metaTitle} />
       <MetaDescription content={metaDescription} />
       <MetaKeywords content={metaKeywords} />
@@ -96,7 +96,7 @@ const HomePage = ({ homePage }: HomePageProps): JSX.Element => {
           </PartialSplitItem>
         </PartialSplit>
       </Group>
-    </LayoutDefault>
+    </Page>
   );
 };
 

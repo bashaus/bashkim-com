@@ -3,7 +3,7 @@ import { VideoPlayerYouTube, VideoPlayerYouTubeProps } from ".";
 
 export default {
   component: VideoPlayerYouTube,
-  title: "Components/Video Player (YouTube)",
+  title: "Video Player/YouTube",
   parameters: {
     layout: "centered",
   },
@@ -15,8 +15,8 @@ const Template = ({ ...args }: VideoPlayerYouTubeProps) => (
   </div>
 );
 
-export const Render = Template.bind({});
-Render.args = {
+export const YouTube = Template.bind({});
+YouTube.args = {
   v: "aqz-KE-bpKQ",
   title: "Big Buck Bunny 60fps 4K - Official Blender Foundation Short Film",
 };

@@ -13,7 +13,7 @@ import {
   PartialSubtitle,
 } from "@bashkim-com/design-system";
 
-import { LayoutDefault } from "%components/LayoutDefault";
+import { Page } from "%components/Page";
 import { MenuBackButtonHomeImpl } from "%components/MenuBackButtonHomeImpl";
 import { MetaDescription } from "%components/MetaDescription";
 import { MetaKeywords } from "%components/MetaKeywords";
@@ -38,7 +38,7 @@ const PortfolioPage = ({ portfolioPage }: PortfolioPageProps): JSX.Element => {
   } = portfolioPage;
 
   return (
-    <LayoutDefault backButton={MenuBackButtonHomeImpl}>
+    <Page backButton={MenuBackButtonHomeImpl}>
       <MetaTitle content={metaTitle} />
       <MetaDescription content={metaDescription} />
       <MetaKeywords content={metaKeywords} />
@@ -60,7 +60,7 @@ const PortfolioPage = ({ portfolioPage }: PortfolioPageProps): JSX.Element => {
           <PortfolioCategory portfolioCategory={portfolioCategory} />
         </Group>
       ))}
-    </LayoutDefault>
+    </Page>
   );
 };
 

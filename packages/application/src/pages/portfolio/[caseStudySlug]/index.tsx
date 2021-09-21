@@ -9,7 +9,7 @@ import { CaseStudyAccolades } from "%components/CaseStudyAccolades";
 import { CaseStudyCollaborators } from "%components/CaseStudyCollaborators";
 import { CaseStudyExhibitions } from "%components/CaseStudyExhibitions";
 import { CaseStudyHeader } from "%components/CaseStudyHeader";
-import { LayoutDefault } from "%components/LayoutDefault";
+import { Page } from "%components/Page";
 import { MenuBackButtonPortfolioImpl } from "%components/MenuBackButtonPortfolioImpl";
 import { MetaCanonical } from "%components/MetaCanonical";
 import { MetaDescription } from "%components/MetaDescription";
@@ -40,7 +40,7 @@ const CaseStudyPage = ({
   } = caseStudyPage;
 
   return (
-    <LayoutDefault backButton={MenuBackButtonPortfolioImpl}>
+    <Page backButton={MenuBackButtonPortfolioImpl}>
       <article itemScope itemType="http://schema.org/CreativeWork">
         <MetaCanonical href={`/portfolio/${caseStudyPage._meta.uid}/`} />
         <MetaTitle content={caseStudyPage.meta_title} />
@@ -84,7 +84,7 @@ const CaseStudyPage = ({
           </Group>
         )}
       </article>
-    </LayoutDefault>
+    </Page>
   );
 };
 

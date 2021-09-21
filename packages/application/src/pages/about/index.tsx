@@ -10,7 +10,7 @@ import {
 import { AboutProfile } from "%components/AboutProfile";
 import { AboutEducation } from "%components/AboutEducation";
 import { AboutCertifications } from "%components/AboutCertifications";
-import { LayoutDefault } from "%components/LayoutDefault";
+import { Page } from "%components/Page";
 import { MenuBackButtonHomeImpl } from "%components/MenuBackButtonHomeImpl";
 import { MetaDescription } from "%components/MetaDescription";
 import { MetaKeywords } from "%components/MetaKeywords";
@@ -19,7 +19,7 @@ import { MetaTitle } from "%components/MetaTitle";
 import styles from "./styles.module.scss";
 
 const AboutPage = (): JSX.Element => (
-  <LayoutDefault backButton={MenuBackButtonHomeImpl}>
+  <Page backButton={MenuBackButtonHomeImpl}>
     <MetaTitle content="About" />
     <MetaDescription content="Information on the work history of Bashkim Isai" />
     <MetaKeywords content="bashkim isai, creative technologist, london" />
@@ -70,7 +70,7 @@ const AboutPage = (): JSX.Element => (
         </PartialSplitItem>
       </PartialSplit>
     </Group>
-  </LayoutDefault>
+  </Page>
 );
 
 export default AboutPage;
