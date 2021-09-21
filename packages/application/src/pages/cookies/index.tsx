@@ -14,12 +14,12 @@ import styles from "./styles.module.scss";
 
 const CookiePolicyPage = (): JSX.Element => (
   <LayoutDefault backButton={MenuBackButtonHomeImpl}>
-    <MetaTitle content="Cookie Policy" />
+    <MetaTitle content="Cookie policy" />
     <MetaDescription content="How your personal information is collected and used on this website" />
 
     <PartialHeaderText>
-      <h1>Cookie Policy</h1>
-      <p>How your information is used on this website</p>
+      <h1>Cookie policy</h1>
+      <p>Because even a small website like this uses cookies</p>
     </PartialHeaderText>
 
     <Group>

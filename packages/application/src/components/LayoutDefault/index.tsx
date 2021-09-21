@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 
 import { GoogleAnalytics } from "%components/GoogleAnalytics";
-import { CookiesNotice } from "%components/CookiesNotice";
 import { Page } from "%components/Page";
 
 import { CookiesProvider } from "%contexts/Cookies/provider";
@@ -21,9 +20,6 @@ export const LayoutDefault = ({
 
   return (
     <>
-      <CookiesProvider>
-        <CookiesNotice />
-      </CookiesProvider>
       <Page backButton={backButton}>{children}</Page>
       <GoogleAnalytics />
     </>

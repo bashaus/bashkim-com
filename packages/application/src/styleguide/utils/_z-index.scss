@@ -1,4 +1,4 @@
-$z-indexes: "Turn" "Header" "Menu" "CookiesNotice";
+$z-indexes: "Turn" "Header" "Menu";
 
 @function z-index($name) {
   @return index($z-indexes, $name) * 10;
