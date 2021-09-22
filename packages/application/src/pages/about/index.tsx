@@ -16,7 +16,7 @@ import { MetaDescription } from "%components/MetaDescription";
 import { MetaKeywords } from "%components/MetaKeywords";
 import { MetaTitle } from "%components/MetaTitle";
 
-import styles from "./styles.module.scss";
+import HeaderDesktopImage from "%public/static/images/about/header-desktop.jpg";
 
 const AboutPage = (): JSX.Element => (
   <Page backButton={MenuBackButtonHomeImpl}>
@@ -25,10 +25,10 @@ const AboutPage = (): JSX.Element => (
     <MetaKeywords content="bashkim isai, creative technologist, london" />
 
     <PartialHeaderImage
-      backgroundClassName={styles.Background}
-      className={styles.Header}
       id="AboutPage-Header"
+      imageDesktop={HeaderDesktopImage.src}
     />
+
     <AboutProfile />
     <AboutEducation />
     <AboutCertifications />

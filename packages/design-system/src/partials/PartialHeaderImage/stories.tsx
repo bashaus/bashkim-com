@@ -7,7 +7,6 @@ export default {
   argTypes: {
     imageDesktop: { control: "file" },
     imageMobile: { control: "file" },
-    id: { defaultValue: "PartialHeaderImage" },
   },
 };
 
@@ -30,6 +29,7 @@ const Template = ({
 
 export const Render = Template.bind({});
 Render.args = {
+  id: "PartialHeaderImage",
   imageDesktop: ["https://via.placeholder.com/1920x400?text=imageDesktop"],
   imageMobile: ["https://via.placeholder.com/1000x8000?text=imageMobile"],
 };

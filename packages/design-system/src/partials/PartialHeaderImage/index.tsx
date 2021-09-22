@@ -1,24 +1,19 @@
 import React from "react";
-import classNames from "classnames";
 
 import styles from "./styles.module.scss";
 
 export type PartialHeaderImageProps = {
-  backgroundClassName?: string;
-  className?: string;
   id: string;
   imageDesktop?: string;
   imageMobile?: string;
 };
 
 export const PartialHeaderImage = ({
-  backgroundClassName,
-  className,
   id,
   imageDesktop,
   imageMobile,
 }: PartialHeaderImageProps): JSX.Element => (
-  <header id={id} className={className}>
+  <header id={id}>
     {imageDesktop && (
       <style type="text/css">
         {`
@@ -41,9 +36,6 @@ export const PartialHeaderImage = ({
       </style>
     )}
 
-    <div
-      aria-hidden="true"
-      className={classNames(styles.Background, backgroundClassName)}
-    />
+    <div aria-hidden="true" className={styles.Background} />
   </header>
 );
