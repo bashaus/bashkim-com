@@ -1,8 +1,7 @@
 import {
   Group,
   PartialFullText,
-  PartialHeaderText,
-  PartialSubtitle,
+  PartialHeaderImage,
 } from "@bashkim-com/design-system";
 
 import { Page } from "%components/Page";
@@ -10,25 +9,30 @@ import { MenuBackButtonHomeImpl } from "%components/MenuBackButtonHomeImpl";
 import { MetaDescription } from "%components/MetaDescription";
 import { MetaTitle } from "%components/MetaTitle";
 
+import HeaderDesktopImage from "%public/static/images/cookies/header-desktop.jpg";
+import HeaderMobileImage from "%public/static/images/cookies/header-mobile.jpg";
+
 import styles from "./styles.module.scss";
 
-const CookiePolicyPage = (): JSX.Element => (
+const CookiesPage = (): JSX.Element => (
   <Page backButton={MenuBackButtonHomeImpl}>
     <MetaTitle content="Cookie policy" />
     <MetaDescription content="How your personal information is collected and used on this website" />
 
-    <PartialHeaderText>
-      <h1>Cookie policy</h1>
-      <p>Because even a small website like this uses cookies</p>
-    </PartialHeaderText>
+    <PartialHeaderImage
+      id="CookiesPage-Header"
+      imageDesktop={HeaderDesktopImage.src}
+      imageMobile={HeaderMobileImage.src}
+    />
 
     <Group>
       <PartialFullText>
+        <h2>Cookie policy</h2>
         <p>
           This website sends and receives data (known as <em>cookies</em>) to
-          help understand how you browse the site and deliver you the best
-          possible experience. Cookies on this website are used to measure how
-          you use the website so it can be improved with informed insights.
+          understand how you browse the site and deliver the best possible
+          experience. These cookies measure how you use the website to inform
+          improvements with insights.
         </p>
 
         <p>
@@ -37,44 +41,39 @@ const CookiePolicyPage = (): JSX.Element => (
         </p>
 
         <p>
-          More information about
+          More information about{" "}
           <a
             href="https://ico.org.uk/for-the-public/online/cookies/"
             target="_blank"
             rel="noopener noreferrer"
           >
             how to manage cookies
-          </a>
+          </a>{" "}
           can be found on the Information&nbsp;Commissioner&apos;s&nbsp;Office
           website.
         </p>
-      </PartialFullText>
 
-      <PartialSubtitle>
-        <h2>How cookies are used on this website</h2>
-      </PartialSubtitle>
+        <h2>How are cookies used on this website?</h2>
 
-      <PartialFullText>
         <h3>Google Analytics</h3>
         <p>
-          This website implements Google Analytics to collect information about
-          how you engage with the content. This is done to help inform decisions
-          on making improvements for the site.
+          Google Analytics collects information about how you engage with this
+          website; this informs decisions on making improvements for the site.
         </p>
 
         <p>Google Analytics stores information about:</p>
 
         <ul>
           <li>The pages you visit on this website;</li>
-          <li>How long you spend on each page of this website;</li>
+          <li>Time spent on each page of this website;</li>
           <li>How you got to this website;</li>
-          <li>What you click on while you&apos;re visiting this website.</li>
+          <li>What you click on during your visit to this website.</li>
         </ul>
 
         <p>
-          This information is collected anonymously. No personally identifiable
-          information (for example your name or address) is collected or stored;
-          so this information can not be used to identify you personally.
+          This information is collected anonymously and no personally
+          identifiable information (e.g.: your name or address) is collected or
+          stored.
         </p>
 
         <p>Google Analytics sets the following cookies:</p>
@@ -137,21 +136,21 @@ const CookiePolicyPage = (): JSX.Element => (
 
         <p>
           This website utilises the embedded player from YouTube to present
-          video of work and associated artefacts.
+          videos of work and associated artefacts.
         </p>
 
         <p>
           Requests made from this website specifically require YouTube to avoid
-          using any session-based cookies which could identify you; and instead
+          using any session-based cookies which could identify you, and instead
           will only set functional cookies when required.
         </p>
 
         <p>&nbsp;</p>
 
-        <p>Last updated 01 June 2018</p>
+        <p>Last updated 22 September 2021</p>
       </PartialFullText>
     </Group>
   </Page>
 );
 
-export default CookiePolicyPage;
+export default CookiesPage;
