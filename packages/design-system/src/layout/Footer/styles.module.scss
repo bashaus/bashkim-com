@@ -1,0 +1,23 @@
+@import "~breakpoint-sass";
+
+@import "src/styleguide/utils/colors";
+@import "src/styleguide/utils/grid";
+@import "src/styleguide/utils/media";
+
+.Footer {
+  @include breakpoint($media-screen-large) {
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 3em;
+      background-color: $color-charcol;
+    }
+  }
+}

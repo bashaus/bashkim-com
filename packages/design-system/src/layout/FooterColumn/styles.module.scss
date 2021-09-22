@@ -1,8 +1,8 @@
 @import "~breakpoint-sass";
 
-@import "~@bashkim-com/design-system/src/styleguide/utils/colors";
-@import "~@bashkim-com/design-system/src/styleguide/utils/grid";
-@import "~@bashkim-com/design-system/src/styleguide/utils/media";
+@import "src/styleguide/utils/colors";
+@import "src/styleguide/utils/grid";
+@import "src/styleguide/utils/media";
 
 /* Core */
 
@@ -10,17 +10,16 @@
   position: relative;
 
   @include breakpoint($media-screen-small) {
-    ul {
+    .Content {
       display: none;
     }
 
-    &[aria-expanded="true"] ul {
+    &[aria-expanded="true"] .Content {
       display: block;
     }
   }
 
   @include breakpoint($media-screen-large) {
-    float: left;
     width: 200px;
     padding-top: 0;
     padding-bottom: 0;
@@ -104,7 +103,7 @@
 
   /* Content */
 
-  ul {
+  .Content {
     @include grid-full-padding(
       $breakpoints: (
         mobile-portrait,
@@ -112,53 +111,14 @@
         tablet-portrait,
       )
     );
-  }
 
-  a {
-    display: block;
-    text-transform: uppercase;
-    color: $color-text-copy;
-    font-size: 1em;
-  }
-
-  @include breakpoint($media-screen-small) {
-    ul {
+    @include breakpoint($media-screen-small) {
       padding-top: 0.5em;
       padding-bottom: 0.5em;
     }
 
-    a {
-      display: block;
-      position: relative;
-      line-height: 3em;
-      font-size: 1em;
-    }
-
-    a::before {
-      content: "\2022";
-      display: inline-block;
-      width: 1em;
-      font-weight: bold;
-      font-size: 20px;
-    }
-  }
-
-  @include breakpoint($media-screen-large) {
-    ul {
+    @include breakpoint($media-screen-large) {
       padding-top: 1em;
-      padding-bottom: 1em;
-    }
-
-    li {
-      height: 2em;
-    }
-
-    a {
-      font-size: 1em;
-    }
-
-    a:hover {
-      text-decoration: underline;
     }
   }
 }

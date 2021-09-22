@@ -1,26 +1,8 @@
 @import "~@bashkim-com/design-system/src/styleguide/utils/grid";
 
 .FooterCopyright {
-  @include grid-cell(
-    $columns: (
-      mobile-portrait: 12,
-      mobile-landscape: 12,
-      tablet-portrait: 12,
-      tablet-landscape: 12,
-      desktop-narrow: 12,
-      desktop-wide: 12,
-    )
-  );
-
-  @include grid-full-padding(
-    $breakpoints: (
-      mobile-portrait,
-      mobile-landscape,
-      tablet-portrait,
-    )
-  );
+  @include grid-container;
 
   display: block;
-  padding-bottom: 30px;
   font-size: 80%;
 }

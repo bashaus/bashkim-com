@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { useCallback, useState } from "react";
+import React, { useCallback, useState } from "react";
 
 import styles from "./styles.module.scss";
 
@@ -35,7 +35,7 @@ export const FooterColumn = ({
         {label}
       </div>
 
-      {children}
+      <div className={styles.Content}>{children}</div>
     </div>
   );
 };

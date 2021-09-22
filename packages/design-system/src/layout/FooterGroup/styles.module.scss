@@ -1,0 +1,20 @@
+@import "~breakpoint-sass";
+
+@import "src/styleguide/utils/grid";
+@import "src/styleguide/utils/media";
+
+.FooterGroup {
+  @include grid-container-bounds(
+    $breakpoints: (
+      tablet-landscape,
+      desktop-narrow,
+      desktop-wide,
+    ),
+    $margin: ()
+  );
+
+  @include breakpoint($media-screen-large) {
+    display: flex;
+    grid-gap: 0;
+  }
+}

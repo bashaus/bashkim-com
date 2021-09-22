@@ -1,0 +1,44 @@
+@import "~breakpoint-sass";
+
+@import "src/styleguide/utils/colors";
+@import "src/styleguide/utils/media";
+
+.FooterLinks {
+  a {
+    display: block;
+    text-transform: uppercase;
+    color: $color-text-copy;
+    font-size: 1em;
+  }
+
+  @include breakpoint($media-screen-small) {
+    a {
+      display: block;
+      position: relative;
+      line-height: 3em;
+      font-size: 1em;
+    }
+
+    a::before {
+      content: "\2022";
+      display: inline-block;
+      width: 1em;
+      font-weight: bold;
+      font-size: 20px;
+    }
+  }
+
+  @include breakpoint($media-screen-large) {
+    li {
+      height: 2em;
+    }
+
+    a {
+      font-size: 1em;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+}

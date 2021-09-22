@@ -7,17 +7,23 @@ export { Carousel } from "./components/Carousel";
 export { CarouselImage } from "./components/CarouselImage";
 export { DeviceFeaturePhone } from "./components/DeviceFeaturePhone";
 export { DeviceSmartphone } from "./components/DeviceSmartphone";
-export { Group, GroupDesign } from "./components/Group";
 export { Logo } from "./components/Logo";
-export { Navigation } from "./components/Navigation";
-export { NavigationGroup } from "./components/NavigationGroup";
-export { NavigationItem } from "./components/NavigationItem";
 export { Tile } from "./components/Tile";
 export { VideoPlayerYouTube } from "./components/VideoPlayerYouTube";
 
 /* Formatters */
 export { FormattedDate } from "./formatters/FormattedDate";
 export { FormattedRichText } from "./formatters/FormattedRichText";
+
+/* Layout */
+export { Footer } from "./layout/Footer";
+export { FooterColumn } from "./layout/FooterColumn";
+export { FooterGroup } from "./layout/FooterGroup";
+export { FooterLinks } from "./layout/FooterLinks";
+export { Group, GroupDesign } from "./layout/Group";
+export { Navigation } from "./layout/Navigation";
+export { NavigationGroup } from "./layout/NavigationGroup";
+export { NavigationItem } from "./layout/NavigationItem";
 
 /* Partials */
 export { PartialCaptioned } from "./partials/PartialCaptioned";

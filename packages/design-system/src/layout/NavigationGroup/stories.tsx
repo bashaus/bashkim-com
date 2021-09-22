@@ -1,11 +1,12 @@
 import React from "react";
 
 import { NavigationItem } from "../NavigationItem";
+
 import { NavigationGroup, NavigationGroupProps } from ".";
 
 export default {
   component: NavigationGroup,
-  title: "Navigation/NavigationGroup",
+  title: "Layout/NavigationGroup",
 };
 
 const Template = ({ children, ...args }: NavigationGroupProps) => (
