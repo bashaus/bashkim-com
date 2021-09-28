@@ -16,7 +16,7 @@
     "@apollo/client": "^3.2.5",
     "@bashkim-com/config": "1.0.0",
     "apollo-link-prismic": "^1.0.8",
-    "graphql": "^15.4.0",
+    "graphql": "^15.6.0",
     "prismic-reactjs": "^1.3.3"
   },
   "devDependencies": {
@@ -36,7 +36,7 @@
     "@apollo/client": "^3.2.5",
     "@bashkim-com/config": "1.0.0",
     "apollo-link-prismic": "^1.0.8",
-    "graphql": "^15.4.0",
+    "graphql": "^15.6.0",
     "prismic-reactjs": "^1.3.3"
   }
 }
