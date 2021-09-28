@@ -3,25 +3,67 @@
 @import "../utils/fonts";
 @import "../utils/media";
 
-%heading2 {
+%heading {
   font-family: $font-family-heading;
   font-weight: bold;
+}
+
+%heading1 {
+  @extend %heading;
 
   @include breakpoint($media-mobile) {
-    line-height: 28px;
-    font-size: 24px;
-    letter-spacing: -0.5px;
+    font-size: 32px;
+    line-height: 125%;
   }
 
   @include breakpoint($media-not-mobile) {
-    line-height: 48px;
-    font-size: 40px;
-    letter-spacing: 0px;
+    font-size: 46px;
+    line-height: 125%;
+  }
+}
+
+%heading2 {
+  @extend %heading;
+
+  @include breakpoint($media-mobile) {
+    font-size: 22px;
+    line-height: 125%;
+    letter-spacing: -0.5px;
+
+    &:not(:first-child) {
+      margin-top: 1.2em;
+    }
+  }
+
+  @include breakpoint($media-not-mobile) {
+    font-size: 30px;
+    line-height: 120%;
+
+    &:not(:first-child) {
+      margin-top: 1.2em;
+    }
   }
 }
 
 %heading3 {
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 16px;
+  @extend %heading;
+
+  @include breakpoint($media-mobile) {
+    font-size: 18px;
+    line-height: 130%;
+
+    &:not(:first-child) {
+      margin-top: 1.23em;
+    }
+  }
+
+  @include breakpoint($media-not-mobile) {
+    font-size: 22px;
+    line-height: 130%;
+    letter-spacing: -1px;
+
+    &:not(:first-child) {
+      margin-top: 1.72em;
+    }
+  }
 }

@@ -27,7 +27,7 @@ const CookiesPage = (): JSX.Element => (
 
     <Group>
       <PartialFullText>
-        <h2>Cookie policy</h2>
+        <h1>Cookie policy</h1>
         <p>
           This website sends and receives data (known as <em>cookies</em>) to
           understand how you browse the site and deliver the best possible
@@ -83,7 +83,7 @@ const CookiesPage = (): JSX.Element => (
             <tr>
               <th>Name</th>
               <th>Purpose</th>
-              <th>Expires</th>
+              <th>Lifetime</th>
             </tr>
           </thead>
           <tbody>
@@ -130,8 +130,6 @@ const CookiesPage = (): JSX.Element => (
           by following the instructions provided by Google.
         </p>
 
-        <p>&nbsp;</p>
-
         <h3>YouTube</h3>
 
         <p>
@@ -145,9 +143,11 @@ const CookiesPage = (): JSX.Element => (
           will only set functional cookies when required.
         </p>
 
-        <p>&nbsp;</p>
+        <hr />
 
-        <p>Last updated 22 September 2021</p>
+        <p>
+          <small>Last updated 22 September 2021</small>
+        </p>
       </PartialFullText>
     </Group>
   </Page>

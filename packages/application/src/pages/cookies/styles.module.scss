@@ -47,17 +47,17 @@
     }
 
     tbody td:nth-child(2)::before {
-      content: "Description";
+      content: "Purpose";
     }
 
     tbody td:nth-child(3)::before {
-      content: "Expires";
+      content: "Lifetime";
     }
   }
 
   @include breakpoint($media-not-mobile) {
     th {
-      min-width: 75px;
+      min-width: 100px;
     }
 
     thead th {
@@ -88,6 +88,7 @@
     thead th:last-child,
     tbody td:last-child {
       padding-right: 0 !important;
+      text-align: right;
     }
   }
 }

@@ -1,35 +1,12 @@
-@import "~breakpoint-sass";
-
-@import "src/styleguide/designs/headings";
-@import "src/styleguide/utils/fonts";
 @import "src/styleguide/utils/grid";
-@import "src/styleguide/utils/media";
 
 .PartialSubtitle {
-  @include grid-container-bounds;
-
-  h2 {
-    @extend %heading2;
-  }
-
-  p {
-    font-family: $font-family-heading;
-    font-weight: bold;
-  }
-
-  @include breakpoint($media-mobile) {
-    p {
-      margin-top: 12px;
-      margin-bottom: 12px;
-    }
-  }
-
-  @include breakpoint($media-not-mobile) {
-    p {
-      font-size: 20px;
-      line-height: 26px;
-      margin-top: 20px;
-      margin-bottom: 20px;
-    }
-  }
+  @include grid-container-bounds(
+    $padding: (
+      top,
+      left,
+      right,
+      bottom,
+    )
+  );
 }

@@ -1,14 +1,9 @@
-@import "~breakpoint-sass";
-
-@import "src/styleguide/designs/headings";
 @import "src/styleguide/utils/colors";
-@import "src/styleguide/utils/media";
 
 .Tile {
   color: $color-text-copy;
   background-color: $color-white;
   box-shadow: 0 0 14px 1px rgba(204, 204, 204, 0.5);
-  // padding: 10px;
   transition: all 0.3s ease-in-out;
   flex-grow: 1;
   flex-shrink: 0;
@@ -40,6 +35,7 @@
     position: relative;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 24px;
     width: 158px;
     height: 158px;
     order: 2;
@@ -56,30 +52,11 @@
 
   h3 {
     order: 3;
-    margin-top: 25px;
+    font-weight: bold;
   }
 
   p {
     order: 4;
-    width: 100%;
-  }
-
-  ul {
-    order: 5;
     margin-top: 10px;
-  }
-
-  li {
-    margin-left: 5px !important;
-  }
-
-  li::before {
-    display: none !important;
-  }
-
-  @include breakpoint($media-mobile-portrait) {
-    a {
-      border-top: solid 1px $color-shade-border;
-    }
   }
 }
