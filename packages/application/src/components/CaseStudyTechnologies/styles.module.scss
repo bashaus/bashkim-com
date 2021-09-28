@@ -7,7 +7,6 @@
 .CaseStudyTechnologies {
   h3 {
     @extend %heading3;
-
     text-align: center;
   }
 
@@ -42,18 +41,5 @@
     font-size: small;
     font-weight: bold;
     text-transform: uppercase;
-  }
-
-  @include breakpoint($media-mobile) {
-    h3 {
-      margin-top: 24px;
-      margin-bottom: 12px;
-    }
-  }
-
-  @include breakpoint($media-screen-large) {
-    h3 {
-      margin-bottom: 24px;
-    }
   }
 }

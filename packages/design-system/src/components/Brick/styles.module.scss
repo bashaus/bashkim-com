@@ -1,4 +1,5 @@
 @import "src/styleguide/designs/headings";
+@import "src/styleguide/utils/grid";
 @import "src/styleguide/utils/colors";
 
 .Brick {
@@ -29,7 +30,6 @@
     left: -80px;
     width: 75px;
     height: 75px;
-    order: 2;
     border-radius: 50%;
     overflow: hidden;
   }
@@ -40,13 +40,15 @@
   }
 
   h3 {
-    @extend %heading3;
-
-    order: 3;
+    font-weight: bold;
     transition: all 0.3s ease-in-out;
   }
 
   p {
-    order: 4;
+    @include grid-cell-padding(
+      $sides: (
+        top,
+      )
+    );
   }
 }

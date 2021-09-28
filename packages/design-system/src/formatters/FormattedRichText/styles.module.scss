@@ -6,28 +6,32 @@
 .FormattedRichText {
   * + * {
     @include breakpoint($media-mobile-portrait) {
-      margin-top: grid-gutter($breakpoint: mobile-portrait) / 2;
+      margin-top: grid-gutter($breakpoint: mobile-portrait);
     }
 
     @include breakpoint($media-mobile-landscape) {
-      margin-top: grid-gutter($breakpoint: mobile-landscape) / 2;
+      margin-top: grid-gutter($breakpoint: mobile-landscape);
     }
 
     @include breakpoint($media-tablet-portrait) {
-      margin-top: grid-gutter($breakpoint: tablet-portrait) / 2;
+      margin-top: grid-gutter($breakpoint: tablet-portrait);
     }
 
     @include breakpoint($media-tablet-landscape) {
-      margin-top: grid-gutter($breakpoint: tablet-landscape) / 2;
+      margin-top: grid-gutter($breakpoint: tablet-landscape);
     }
 
     @include breakpoint($media-desktop-narrow) {
-      margin-top: grid-gutter($breakpoint: desktop-narrow) / 2;
+      margin-top: grid-gutter($breakpoint: desktop-narrow);
     }
 
     @include breakpoint($media-desktop-wide) {
-      margin-top: grid-gutter($breakpoint: desktop-wide) / 2;
+      margin-top: grid-gutter($breakpoint: desktop-wide);
     }
+  }
+
+  h1 {
+    @extend %heading1;
   }
 
   h2 {
@@ -44,6 +48,10 @@
 
   ul {
     @extend %list-unordered;
+  }
+
+  li {
+    margin-top: 0;
   }
 
   strong {

@@ -6,7 +6,7 @@ export const FooterCopyright = (): JSX.Element => (
     role="contentinfo"
     aria-label="Copyright, Two-Thousand-and-Eight to Two-Thousand-and-Twenty, Bashkim Isai. All rights reserved."
   >
-    <span aria-hidden="true">
+    <small aria-hidden="true">
       Copyright &copy;{" "}
       <time dateTime="2008" title="2008">
         MMVIII
@@ -16,6 +16,6 @@ export const FooterCopyright = (): JSX.Element => (
         MMXXI
       </time>
       , Bashkim&nbsp;Isai. All&nbsp;rights&nbsp;reserved.
-    </span>
+    </small>
   </p>
 );

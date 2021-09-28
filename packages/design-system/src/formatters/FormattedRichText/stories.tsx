@@ -13,14 +13,16 @@ export default {
 
 const Template = (args: FormattedRichTextProps) => (
   <FormattedRichText {...args}>
-    <h2>&lt;FormattedRichText /&gt;</h2>
+    <h1>&lt;FormattedRichText /&gt;</h1>
     <p>
       The FormattedRichText component is designed to take semantical HTML and
       display it to the browser with some basic styling principles applied. This
-      is particularly useful for Prismic Rich Text areas where the structured
+      formatter is useful for Prismic Rich Text areas, where the structured
       content is provided externally.
     </p>
 
+    <h1>Heading one</h1>
+    <h2>Heading two</h2>
     <h3>Heading three</h3>
     <p>{faker.lorem.paragraph()}</p>
     <p>
