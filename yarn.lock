@@ -8446,10 +8446,10 @@ deepmerge@^4.2.2:
   resolved "https://registry.yarnpkg.com/deepmerge/-/deepmerge-4.2.2.tgz#44d2ea3679b8f4d4ffba33f03d865fc1e7bf4955"
   integrity sha512-FJ3UgI4gIl+PHZm53knsuSFpE+nESMr7M4v9QcgB7S63Kj/6WqMiFQJpBBYz1Pt+66bZpP3Q7Lye0Oo9MPKEdg==
 
-defaults-deep-ts@^0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/defaults-deep-ts/-/defaults-deep-ts-0.2.1.tgz#7b0f7416e7ec0501aeb8240c1ecaf51f5839b1e4"
-  integrity sha512-n0Jae0E0rUJobHEk2nfkwi3AoHe0VwB1pX16Lr7MZjyPS/9C8e6j7YwmWlEUqag/WnEGZh1AEjTLIk6RKFejhg==
+defaults-deep-ts@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/defaults-deep-ts/-/defaults-deep-ts-0.2.2.tgz#bc5ea9baa31a2d2c99ef8db280bfab2723bedc13"
+  integrity sha512-iOaBoFWogPimSLRghQzS8zxOAhRY8sXtahKeS3glxmsitGqszeZ6zsOVeoq61UP3YAaZZ5oi2Bd7M9QJFkl9vw==
 
 defer-to-connect@^1.0.1:
   version "1.1.3"
