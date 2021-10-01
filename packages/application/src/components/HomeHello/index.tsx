@@ -1,8 +1,8 @@
 import { HeaderTextPartial } from "@bashkim-com/design-system";
 import Link from "next/link";
 
-import IconPortfolio from "%public/static/vectors/icons/portfolio.svg";
-import IconGitHub from "%public/static/vectors/social/github.svg";
+import PortfolioVector from "%assets/vectors/icons/portfolio.svg";
+import GitHubVector from "%assets/vectors/social/github.svg";
 
 import styles from "./styles.module.scss";
 
@@ -19,7 +19,7 @@ export const HomeHello = (): JSX.Element => (
               rel="noreferrer"
             >
               <svg className={styles.Icon}>
-                <IconGitHub />
+                <GitHubVector />
               </svg>
               View code
             </a>
@@ -28,7 +28,7 @@ export const HomeHello = (): JSX.Element => (
             <Link href="/portfolio" passHref>
               <a>
                 <svg className={styles.Icon}>
-                  <IconPortfolio />
+                  <PortfolioVector />
                 </svg>
                 View portfolio
               </a>

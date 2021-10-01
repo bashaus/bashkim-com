@@ -5,6 +5,13 @@ import {
   SubtitlePartial,
 } from "@bashkim-com/design-system";
 
+// import JavaBackgroundImage from "%assets/images/about/certifications/java/background.jpg";
+import JavaLogoImage from "%assets/images/about/certifications/java/logo.jpg";
+import JavaOcaImage from "%assets/images/about/certifications/java/oca.png";
+// import PhpBackgroundImage from "%assets/images/about/certifications/php/background.jpg";
+import PhpLogoImage from "%assets/images/about/certifications/php/logo.png";
+import PhpZceImage from "%assets/images/about/certifications/php/zce.jpg";
+
 import styles from "./styles.module.scss";
 
 export const AboutCertifications = (): JSX.Element => (
@@ -23,17 +30,16 @@ export const AboutCertifications = (): JSX.Element => (
             <time dateTime="2012-08-23">April 2016</time>
           </p>
           <p>
-            <img
-              alt="Oracle Certified Associate"
-              src="/static/images/about/certifications/java/oca.png"
-            />
+            <img alt="Oracle Certified Associate" src={JavaOcaImage.src} />
           </p>
         </div>
       </SplitItemPartial>
-      <SplitItemPartial backgroundImage="/static/images/about/certifications/java/background.jpg">
+      <SplitItemPartial
+      // backgroundImage={JavaBackgroundImage.src}
+      >
         <img
           alt="Duke - The Java Mascot"
-          src="/static/images/about/certifications/java/logo.jpg"
+          src={JavaLogoImage.src}
           className={styles.Logo}
         />
       </SplitItemPartial>
@@ -54,21 +60,16 @@ export const AboutCertifications = (): JSX.Element => (
               target="_blank"
               rel="noreferrer"
             >
-              <img
-                alt="Zend Certified Engineer"
-                src="/static/images/about/certifications/php/zce.jpg"
-              />
+              <img alt="Zend Certified Engineer" src={PhpZceImage.src} />
             </a>
           </p>
         </div>
       </SplitItemPartial>
 
-      <SplitItemPartial backgroundImage="/static/images/about/certifications/php/background.jpg">
-        <img
-          alt="ElePHPant"
-          className={styles.Logo}
-          src="/static/images/about/certifications/php/logo.png"
-        />
+      <SplitItemPartial
+      // backgroundImage={PhpBackgroundImage.src}
+      >
+        <img alt="ElePHPant" className={styles.Logo} src={PhpLogoImage.src} />
       </SplitItemPartial>
     </SplitPartial>
   </Group>

@@ -4,20 +4,21 @@ import {
   TitlePartial,
 } from "@bashkim-com/design-system";
 
-import EthicallyImage from "%public/static/vectors/principles/ethically.svg";
-import MaintainableImage from "%public/static/vectors/principles/maintainable.svg";
-import OnTimeImage from "%public/static/vectors/principles/on-time.svg";
-import RobustImage from "%public/static/vectors/principles/robust.svg";
-import SecurelyImage from "%public/static/vectors/principles/securely.svg";
-import ToSatisfactionImage from "%public/static/vectors/principles/to-satisfaction.svg";
-import ToSpecificationImage from "%public/static/vectors/principles/to-specification.svg";
-import WithinBudgetImage from "%public/static/vectors/principles/within-budget.svg";
+import PhotoImage from "%assets/images/about/profile/photo@4x.jpg";
+import EthicallyVector from "%assets/vectors/principles/ethically.svg";
+import MaintainableVector from "%assets/vectors/principles/maintainable.svg";
+import OnTimeVector from "%assets/vectors/principles/on-time.svg";
+import RobustVector from "%assets/vectors/principles/robust.svg";
+import SecurelyVector from "%assets/vectors/principles/securely.svg";
+import ToSatisfactionVector from "%assets/vectors/principles/to-satisfaction.svg";
+import ToSpecificationVector from "%assets/vectors/principles/to-specification.svg";
+import WithinBudgetVector from "%assets/vectors/principles/within-budget.svg";
 
 import styles from "./styles.module.scss";
 
 export const AboutProfile = (): JSX.Element => (
   <Group>
-    <TitlePartial image="/static/images/about/profile/photo@4x.jpg">
+    <TitlePartial image={PhotoImage.src}>
       <h1>About Bash</h1>
       <p>
         My core principles for successfully delivering creative software
@@ -29,7 +30,7 @@ export const AboutProfile = (): JSX.Element => (
       <li>
         <RichTextFormatter className={styles.Cell}>
           <h3>On-time</h3>
-          <OnTimeImage />
+          <OnTimeVector />
           <p>
             Committed to delivering a resolved product to an
             agreed&nbsp;schedule
@@ -39,7 +40,7 @@ export const AboutProfile = (): JSX.Element => (
       <li>
         <RichTextFormatter className={styles.Cell}>
           <h3>Within budget</h3>
-          <WithinBudgetImage />
+          <WithinBudgetVector />
           <p>
             Because all financial investments are a risk, there needs to be a
             responsibility to&nbsp;deliver
@@ -49,7 +50,7 @@ export const AboutProfile = (): JSX.Element => (
       <li>
         <RichTextFormatter className={styles.Cell}>
           <h3>To specification</h3>
-          <ToSpecificationImage />
+          <ToSpecificationVector />
           <p>
             Producing exactly what everyone agrees to the highest
             possible&nbsp;standards
@@ -59,7 +60,7 @@ export const AboutProfile = (): JSX.Element => (
       <li>
         <RichTextFormatter className={styles.Cell}>
           <h3>To satisfaction</h3>
-          <ToSatisfactionImage />
+          <ToSatisfactionVector />
           <p>
             Software is designed for people, so let&apos;s put a&nbsp;smile on
             our client&apos;s customers&apos;&nbsp;faces
@@ -69,7 +70,7 @@ export const AboutProfile = (): JSX.Element => (
       <li>
         <RichTextFormatter className={styles.Cell}>
           <h3>Maintainable</h3>
-          <MaintainableImage />
+          <MaintainableVector />
           <p>
             Everyone who works on the project also has to fall in love with the
             code&nbsp;too
@@ -79,7 +80,7 @@ export const AboutProfile = (): JSX.Element => (
       <li>
         <RichTextFormatter className={styles.Cell}>
           <h3>Securely</h3>
-          <SecurelyImage />
+          <SecurelyVector />
           <p>
             No client wants media attention for the wrong reasons, especially
             because of your&nbsp;work
@@ -89,7 +90,7 @@ export const AboutProfile = (): JSX.Element => (
       <li>
         <RichTextFormatter className={styles.Cell}>
           <h3>Ethically</h3>
-          <EthicallyImage />
+          <EthicallyVector />
           <p>
             Projects must increase the quality of life for all&nbsp;stakeholders
           </p>
@@ -98,7 +99,7 @@ export const AboutProfile = (): JSX.Element => (
       <li>
         <RichTextFormatter className={styles.Cell}>
           <h3>Robust</h3>
-          <RobustImage />
+          <RobustVector />
           <p>
             Responsible testing methodologies accompanied with continuous
             integration and automated&nbsp;deployment

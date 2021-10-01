@@ -7,7 +7,7 @@ import {
 import { Link } from "prismic-reactjs";
 import { useContext } from "react";
 
-import { ReactComponent as IconTrophy } from "../../assets/vectors/trophy.svg";
+import { ReactComponent as TrophyVector } from "../../assets/vectors/trophy.svg";
 import { DateFormatter } from "../../formatters/DateFormatter";
 import { RichTextFormatter } from "../../formatters/RichTextFormatter";
 import styles from "./styles.module.scss";
@@ -66,7 +66,7 @@ export const AccoladeSlice = ({
           return (
             <div className={styles.Award} key={i} data-prop-place={awardPlace}>
               <a href={awardHref} target="_blank" rel="noreferrer">
-                <IconTrophy className={styles.Trophy} />
+                <TrophyVector className={styles.Trophy} />
                 <RichTextFormatter>
                   {awardPlace && <h3>{AwardPlaceName[awardPlace]}</h3>}
                   <PrismicRichText render={awardCategory} />

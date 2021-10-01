@@ -4,12 +4,12 @@ import {
   HeaderImagePartial,
 } from "@bashkim-com/design-system";
 
+import HeaderDesktopImage from "%assets/images/cookies/header-desktop.jpg";
+import HeaderMobileImage from "%assets/images/cookies/header-mobile.jpg";
 import { MenuBackButtonHomeImpl } from "%components/MenuBackButtonHomeImpl";
 import { MetaDescription } from "%components/MetaDescription";
 import { MetaTitle } from "%components/MetaTitle";
 import { Page } from "%components/Page";
-import HeaderDesktopImage from "%public/static/images/cookies/header-desktop.jpg";
-import HeaderMobileImage from "%public/static/images/cookies/header-mobile.jpg";
 
 import styles from "./styles.module.scss";
 

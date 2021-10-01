@@ -1,9 +1,9 @@
 import { NavigationGroup, NavigationItem } from "@bashkim-com/design-system";
 
-import LogoGitHub from "%public/static/vectors/social/github.svg";
-import LogoLinkedIn from "%public/static/vectors/social/linked-in.svg";
-import LogoMedium from "%public/static/vectors/social/medium.svg";
-import LogoStackOverflow from "%public/static/vectors/social/stack-overflow.svg";
+import GitHubVector from "%assets/vectors/social/github.svg";
+import LinkedInVector from "%assets/vectors/social/linked-in.svg";
+import MediumVector from "%assets/vectors/social/medium.svg";
+import StackOverflowVector from "%assets/vectors/social/stack-overflow.svg";
 
 import styles from "./styles.module.scss";
 
@@ -16,7 +16,7 @@ export const NavigationSocial = (): JSX.Element => (
         rel="noreferrer"
         title="GitHub"
       >
-        <LogoGitHub />
+        <GitHubVector />
         <span>GitHub</span>
       </a>
     </NavigationItem>
@@ -27,7 +27,7 @@ export const NavigationSocial = (): JSX.Element => (
         rel="noreferrer"
         title="Medium"
       >
-        <LogoMedium />
+        <MediumVector />
         <span>Medium</span>
       </a>
     </NavigationItem>
@@ -38,7 +38,7 @@ export const NavigationSocial = (): JSX.Element => (
         rel="noreferrer"
         title="StackOverflow"
       >
-        <LogoStackOverflow />
+        <StackOverflowVector />
         <span>Stack Overflow</span>
       </a>
     </NavigationItem>
@@ -49,7 +49,7 @@ export const NavigationSocial = (): JSX.Element => (
         rel="noreferrer"
         title="Linked In"
       >
-        <LogoLinkedIn />
+        <LinkedInVector />
         <span>Linked In</span>
       </a>
     </NavigationItem>

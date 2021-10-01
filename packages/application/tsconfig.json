@@ -8,11 +8,11 @@
     "jsx": "preserve",
     "noEmit": true,
     "paths": {
+      "%assets/*": ["./assets/*"],
       "%components/*": ["./components/*"],
       "%contexts/*": ["./contexts/*"],
       "%libraries/*": ["./libraries/*"],
       "%machines/*": ["./machines/*"],
-      "%public/*": ["../public/*"],
       "%styleguide/*": ["./styleguide/*"]
     },
     "skipLibCheck": true,
