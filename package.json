@@ -45,7 +45,7 @@
     "husky": "^7.0.2",
     "lint-staged": "^11.1.2",
     "prettier": "^2.3.2",
-    "serverless": "^1.83.2",
+    "serverless": "^2.60.2",
     "serverless-dotenv-plugin": "^3.9.0",
     "serverless-ignore": "^0.1.6",
     "serverless-jetpack": "^0.11.1",
