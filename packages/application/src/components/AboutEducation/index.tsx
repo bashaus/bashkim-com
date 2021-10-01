@@ -5,6 +5,11 @@ import {
   SubtitlePartial,
 } from "@bashkim-com/design-system";
 
+import QutGardensPointImage from "%assets/images/about/education/qut/gardens-point.jpg";
+import QutLogoImage from "%assets/images/about/education/qut/logo.jpg";
+import UqBackgroundImage from "%assets/images/about/education/uq/background.jpg";
+import UqLogoImage from "%assets/images/about/education/uq/logo.png";
+
 import styles from "./styles.module.scss";
 
 export const AboutEducation = (): JSX.Element => (
@@ -29,13 +34,9 @@ export const AboutEducation = (): JSX.Element => (
         </div>
       </SplitItemPartial>
 
-      <SplitItemPartial backgroundImage="/static/images/about/education/uq/background.jpg">
+      <SplitItemPartial backgroundImage={UqBackgroundImage.src}>
         <div>
-          <img
-            alt=""
-            src="/static/images/about/education/uq/logo.png"
-            className={styles.Logo}
-          />
+          <img alt="" src={UqLogoImage.src} className={styles.Logo} />
         </div>
       </SplitItemPartial>
     </SplitPartial>
@@ -83,13 +84,9 @@ export const AboutEducation = (): JSX.Element => (
         </div>
       </SplitItemPartial>
 
-      <SplitItemPartial backgroundImage="/static/images/about/education/qut/gardens-point.jpg">
+      <SplitItemPartial backgroundImage={QutGardensPointImage.src}>
         <div>
-          <img
-            alt=""
-            src="/static/images/about/education/qut/logo.jpg"
-            className={styles.Logo}
-          />
+          <img alt="" src={QutLogoImage.src} className={styles.Logo} />
         </div>
       </SplitItemPartial>
     </SplitPartial>
