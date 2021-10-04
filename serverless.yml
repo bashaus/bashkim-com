@@ -1,21 +1,30 @@
+---
 service: bashkim-com
 
+variablesResolutionMode: "20210326"
+
 plugins:
-  - serverless-dotenv-plugin
   - serverless-sentry
   - serverless-ignore
   - serverless-jetpack
 
 package:
   individually: true
-  exclude:
-    - "**/node_modules/aws-sdk/**" # included on Lambda
+  patterns:
+    - "!**/node_modules/aws-sdk/**"  # included on Lambda
 
 custom:
   stage: ${opt:stage, env:SLS_STAGE, 'production'}
   region: ${opt:region, env:AWS_DEFAULT_REGION, 'eu-west-1'}
-  website:
-    commitHash: ${env:CIRCLE_SHA1, ''}
+
+  app:
+    website:
+      commitHash: ${env:CIRCLE_SHA1, ''}
+
+    webhooks:
+      circleApiKey: ${env:APP_WEBHOOKS_CIRCLE_API_KEY, ''}
+      circleProjectSlug: ${env:APP_WEBHOOKS_CIRCLE_PROJECT_SLUG, ''}
+      prismicSecretKey: ${env:APP_WEBHOOKS_PRISMIC_SECRET_KEY, ''}
 
   sentry:
     dsn: ${env:SENTRY_DSN, ''}
@@ -35,12 +44,16 @@ provider:
   region: ${self:custom.region}
   memorySize: 512
   timeout: 15
+  lambdaHashingVersion: "20201221"
   environment:
     APP_ENV: ${self:custom.stage}
-    APP_WEBHOOKS_CIRCLE_API_KEY: ${env:APP_WEBHOOKS_CIRCLE_API_KEY}
-    APP_WEBHOOKS_CIRCLE_PROJECT_SLUG: ${env:APP_WEBHOOKS_CIRCLE_PROJECT_SLUG}
-    APP_WEBHOOKS_PRISMIC_SECRET_KEY: ${env:APP_WEBHOOKS_PRISMIC_SECRET_KEY}
-    GIT_COMMIT: ${self:custom.website.commitHash}
+    APP_WEBHOOKS_CIRCLE_API_KEY:
+      ${self:custom.app.webhooks.circleApiKey}
+    APP_WEBHOOKS_CIRCLE_PROJECT_SLUG:
+      ${self:custom.app.webhooks.circleProjectSlug}
+    APP_WEBHOOKS_PRISMIC_SECRET_KEY:
+      ${self:custom.app.webhooks.prismicSecretKey}
+    GIT_COMMIT: ${self:custom.app.website.commitHash}
     NODE_ENV: ${self:custom.stage}
     SENTRY_DSN: ${self:custom.sentry.dsn}
 
