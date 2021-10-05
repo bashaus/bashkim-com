@@ -3702,7 +3702,7 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@storybook/addon-a11y@^6.3.8":
+"@storybook/addon-a11y@^6.3.9":
   version "6.3.9"
   resolved "https://registry.yarnpkg.com/@storybook/addon-a11y/-/addon-a11y-6.3.9.tgz#c703f7d1faeabf14f61e0cb993ae2512cd644374"
   integrity sha512-C93lZY9RdCYvtRimDIl7Es/QwfgTAfY6VZQcUupzVRwAAsf5Do2L+dcLpF7x8NRcDVnSIzfWLIllFiM7D9A/qg==
@@ -3829,7 +3829,7 @@
     ts-dedent "^2.0.0"
     util-deprecate "^1.0.2"
 
-"@storybook/addon-essentials@^6.3.8":
+"@storybook/addon-essentials@^6.3.9":
   version "6.3.9"
   resolved "https://registry.yarnpkg.com/@storybook/addon-essentials/-/addon-essentials-6.3.9.tgz#c29109c87f33f309b8cbcc38e0730798db23a15d"
   integrity sha512-F5FP9eqSSX++Dh7n/jAxVbfKGSh58EDIj7YdDVlCvf0qc9wLscV3dMS0kEcx/pP7z293JA4ADnztITOVSzf+qQ==
@@ -3884,7 +3884,7 @@
     prop-types "^15.7.2"
     regenerator-runtime "^0.13.7"
 
-"@storybook/addons@6.3.9", "@storybook/addons@^6.3.8":
+"@storybook/addons@6.3.9", "@storybook/addons@^6.3.9":
   version "6.3.9"
   resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-6.3.9.tgz#e12c8d4351b861d67cb6b8d64ed33b1f6b90994f"
   integrity sha512-5tRkeHgdb/I/rp3GBkxonDLVsA45Vpgh/vFrsecrS/98wkSYfPEhqrDGLOosJHFrN3J2pznAuNFaA05158uBsw==
@@ -4413,7 +4413,7 @@
     react-docgen-typescript "^2.0.0"
     tslib "^2.0.0"
 
-"@storybook/react@^6.3.8":
+"@storybook/react@^6.3.9":
   version "6.3.9"
   resolved "https://registry.yarnpkg.com/@storybook/react/-/react-6.3.9.tgz#3d93a3606a6a9ae1ece8d0d56f382a9c15df5254"
   integrity sha512-LYlAURnKvFsf3CZG2CDvQwvlF/vy5VsKuNiNmyTk6zggmkbitXrwkuT7KoElYrz4REkyhd/HA6Uw6lfkPsyuHA==
@@ -5150,7 +5150,7 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-slick@^0.23.4":
+"@types/react-slick@^0.23.5":
   version "0.23.5"
   resolved "https://registry.yarnpkg.com/@types/react-slick/-/react-slick-0.23.5.tgz#e55fdc79bf19022ef77a6f22e9d64fd0f7463cc4"
   integrity sha512-dQ/HwsLpnWXD5d+52WwXIQTfNCRpgd+0CKb+aA8g2CaIpA9T9COdjVYb9KI40Osb4rIgqR7u2AqtL2/HGbBMpg==
@@ -5569,7 +5569,7 @@
   dependencies:
     tslib "^1.9.3"
 
-"@xstate/react@^1.5.1":
+"@xstate/react@^1.6.1":
   version "1.6.1"
   resolved "https://registry.yarnpkg.com/@xstate/react/-/react-1.6.1.tgz#7e920520ba54d3c2ade55639761d7ca2c25c4900"
   integrity sha512-M3b32nGhA0K3N6NrYKAMXx3dgGlLmuZfJU/EsZT04kQyVbWSiT3z7p9rdPisQyaQYFUwdqspQZ68wRNWbUkfVQ==
@@ -5968,7 +5968,7 @@ apollo-link-http@^1.3.1, apollo-link-http@^1.5.16:
     apollo-link-http-common "^0.2.16"
     tslib "^1.9.3"
 
-apollo-link-prismic@^1.0.8:
+apollo-link-prismic@^1.0.9:
   version "1.0.9"
   resolved "https://registry.yarnpkg.com/apollo-link-prismic/-/apollo-link-prismic-1.0.9.tgz#2849cbf2c10f0c0c34b198e25726f11cf715ea05"
   integrity sha512-Iha/yCd2Cqwg3KgxzzvIsKkUr232M3XIEkBy+iJaH+A1Kub3JP0ye3s+0LQWn+6k0T7aWW5XBgWnY3zDd9x95Q==
@@ -17370,7 +17370,7 @@ rollup-pluginutils@^2.8.2:
   dependencies:
     estree-walker "^0.6.1"
 
-rollup@^2.45.2:
+rollup@^2.58.0:
   version "2.58.0"
   resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.58.0.tgz#a643983365e7bf7f5b7c62a8331b983b7c4c67fb"
   integrity sha512-NOXpusKnaRpbS7ZVSzcEXqxcLDOagN6iFS8p45RkoiMqPHDLwJm758UF05KlMoCRbLBTZsPOIa887gZJ1AiXvw==
