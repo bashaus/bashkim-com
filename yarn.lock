@@ -5761,10 +5761,10 @@ apollo-link-http@^1.3.1, apollo-link-http@^1.5.16:
     apollo-link-http-common "^0.2.16"
     tslib "^1.9.3"
 
-apollo-link-prismic@^1.0.8:
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/apollo-link-prismic/-/apollo-link-prismic-1.0.8.tgz#0565e9fb01a81036afd54e9f6058f0136c9a3802"
-  integrity sha512-dxCN5JSiIcD1sb5T4ZS/FNcFR8WftimJQjwIMzPywQ8DO/5AF+844YLnUkINrBqxMw0IP0CO6yWGV7svu1Jjdw==
+apollo-link-prismic@^1.0.9:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/apollo-link-prismic/-/apollo-link-prismic-1.0.9.tgz#2849cbf2c10f0c0c34b198e25726f11cf715ea05"
+  integrity sha512-Iha/yCd2Cqwg3KgxzzvIsKkUr232M3XIEkBy+iJaH+A1Kub3JP0ye3s+0LQWn+6k0T7aWW5XBgWnY3zDd9x95Q==
   dependencies:
     apollo-boost "^0.4.4"
     apollo-cache-inmemory "^1.6.3"
