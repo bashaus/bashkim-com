@@ -21,8 +21,8 @@ module.exports = {
     "/coverage/",
   ],
   transform: {
-    "^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/node_modules/babel-jest",
-    "^.+\\.css$": "<rootDir>/.jest/cssTransform.js",
+    "^.+\\.(js|jsx|ts|tsx)$": "babel-jest",
+    ".+\\.(css|scss)$": "jest-css-modules-transform",
   },
   transformIgnorePatterns: [
     "/node_modules/",
