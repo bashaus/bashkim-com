@@ -19,7 +19,7 @@
     "react-slick": "^0.28.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.14.0",
+    "@babel/core": "^7.15.5",
     "@rollup/plugin-commonjs": "^18.0.0",
     "@rollup/plugin-node-resolve": "^13.0.5",
     "@storybook/addon-a11y": "^6.3.9",
