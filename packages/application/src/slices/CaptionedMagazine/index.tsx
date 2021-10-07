@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react";
+import { DragEvent, FormEvent, useCallback, useState } from "react";
 import type { CaptionedMagazineSliceType } from "@bashkim-com/prismic";
 import { PartialCaptioned } from "@bashkim-com/design-system";
 
@@ -36,7 +36,7 @@ export const CaptionedMagazineSlice = ({
 
   /* handlers */
   const handleImageDrag = useCallback(
-    (event: React.DragEvent<HTMLImageElement>): void => event.preventDefault(),
+    (event: DragEvent<HTMLImageElement>): void => event.preventDefault(),
     []
   );
 
@@ -55,7 +55,7 @@ export const CaptionedMagazineSlice = ({
   );
 
   const handleSpreadChange = useCallback(
-    (event: React.FormEvent<HTMLInputElement>): void => {
+    (event: FormEvent<HTMLInputElement>): void => {
       setSpread(+event.currentTarget.value);
     },
     []

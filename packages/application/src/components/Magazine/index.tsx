@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { ReactNode, useCallback, useEffect, useState } from "react";
 
 import { Turn, TurnDisplay } from "%components/Turn";
 import {
@@ -21,7 +21,7 @@ const RESPONSIVE = !process.browser
     ];
 
 export type MagazineProps = {
-  children: React.ReactNode;
+  children: ReactNode;
   onInitialize?(): void;
   onSpreadChange?(event: MagazineSpreadChangeEvent): void;
   spread: number;

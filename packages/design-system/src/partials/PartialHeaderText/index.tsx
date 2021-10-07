@@ -1,12 +1,12 @@
-import React from "react";
+import { ReactNode } from "react";
 import classNames from "classnames";
 
 import styles from "./styles.module.scss";
 
 export type PartialHeaderTextProps = {
-  aside?: React.ReactNode;
+  aside?: ReactNode;
   backgroundClassName?: string;
-  children?: React.ReactNode;
+  children?: ReactNode;
 };
 
 export const PartialHeaderText = ({

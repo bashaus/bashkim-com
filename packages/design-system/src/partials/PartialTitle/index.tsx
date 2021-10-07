@@ -1,8 +1,8 @@
-import React from "react";
+import { ReactNode } from "react";
 import styles from "./styles.module.scss";
 
 export type PartialTitleProps = {
-  children?: React.ReactNode;
+  children?: ReactNode;
   image?: string;
 };
 

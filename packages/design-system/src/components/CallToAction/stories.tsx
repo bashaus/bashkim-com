@@ -1,4 +1,3 @@
-import React from "react";
 import { CallToAction, CallToActionProps } from ".";
 
 export default {

@@ -1,6 +1,6 @@
 import $ from "jquery";
 import classNames from "classnames";
-import { PureComponent, createRef } from "react";
+import { PureComponent, ReactNode, createRef } from "react";
 
 import styles from "./styles.module.scss";
 
@@ -11,7 +11,7 @@ export enum TurnDisplay {
 
 export type TurnProps = {
   center?: boolean;
-  children: React.ReactNode;
+  children: ReactNode;
   display: TurnDisplay;
   page: number;
   pages: number;

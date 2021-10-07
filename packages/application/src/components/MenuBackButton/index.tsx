@@ -1,7 +1,8 @@
+import { ReactNode } from "react";
 import styles from "./styles.module.scss";
 
 export type MenuBackButtonProps = {
-  children?: React.ReactNode;
+  children?: ReactNode;
 };
 
 export const MenuBackButton = ({

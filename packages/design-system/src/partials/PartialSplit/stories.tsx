@@ -1,5 +1,3 @@
-import React from "react";
-
 import { PartialSplit, PartialSplitProps } from ".";
 import { PartialSplitItem } from "../PartialSplitItem";
 

@@ -1,4 +1,4 @@
-import React from "react";
+import { ReactNode } from "react";
 
 import { FormattedRichText } from "../../formatters/FormattedRichText";
 
@@ -7,7 +7,7 @@ import styles from "./styles.module.scss";
 export type PartialFullBannerProps = {
   backgroundDesktop?: string;
   backgroundMobile?: string;
-  children: React.ReactNode;
+  children: ReactNode;
   id: string;
 };
 

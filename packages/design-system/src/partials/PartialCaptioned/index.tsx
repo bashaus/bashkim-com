@@ -1,16 +1,16 @@
-import React from "react";
+import { ReactNode } from "react";
 
 import { FormattedRichText } from "../../formatters/FormattedRichText";
 
 import styles from "./styles.module.scss";
 
 export type PartialCaptionedProps = {
-  children: React.ReactNode;
+  children: ReactNode;
 
   /**
    * An image, canvas, etc. which represents the figure
    */
-  figure: React.ReactNode;
+  figure: ReactNode;
 };
 
 export const PartialCaptioned = ({

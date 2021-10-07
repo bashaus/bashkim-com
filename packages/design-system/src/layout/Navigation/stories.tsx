@@ -1,5 +1,3 @@
-import React from "react";
-
 import { NavigationGroup } from "../NavigationGroup";
 import { NavigationItem } from "../NavigationItem";
 

@@ -26,6 +26,7 @@
     "@storybook/addon-essentials": "^6.3.9",
     "@storybook/addons": "^6.3.9",
     "@storybook/react": "^6.3.9",
+    "@types/react": "^17.0.27",
     "@types/react-slick": "^0.23.5",
     "babel-loader": "^8.2.2",
     "breakpoint-sass": "^2.7.1",

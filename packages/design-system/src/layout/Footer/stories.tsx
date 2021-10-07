@@ -1,5 +1,3 @@
-import React from "react";
-
 import { FooterGroup } from "../FooterGroup";
 import { FooterColumn } from "../FooterColumn";
 import { FooterLinks } from "../FooterLinks";

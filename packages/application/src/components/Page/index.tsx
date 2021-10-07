@@ -1,10 +1,11 @@
+import { ReactNode } from "react";
 import { HeaderIntersection } from "%components/HeaderIntersection";
 import { Header } from "%components/Header";
 import { Footer } from "%components/Footer";
 
 export type PageProps = {
-  backButton?: React.ReactNode;
-  children?: React.ReactNode;
+  backButton?: ReactNode;
+  children?: ReactNode;
 };
 
 export const Page = ({ backButton, children }: PageProps): JSX.Element => (

@@ -1,9 +1,10 @@
 import * as Sentry from "@sentry/browser";
-import { PureComponent } from "react";
+import { PureComponent, ErrorInfo, ReactNode } from "react";
+
 import { FormattedRichText } from "@bashkim-com/design-system";
 
 export type SentryBoundaryProps = {
-  children: React.ReactNode;
+  children: ReactNode;
 };
 
 export type SentryBoundaryState = {
@@ -22,7 +23,7 @@ export class SentryBoundary extends PureComponent<
     };
   }
 
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo): void {
+  componentDidCatch(error: Error, errorInfo: ErrorInfo): void {
     Sentry.withScope((scope) => {
       Object.keys(errorInfo).forEach((key) => {
         scope.setExtra(key, errorInfo[key]);
@@ -34,7 +35,7 @@ export class SentryBoundary extends PureComponent<
     this.setState({ error });
   }
 
-  render(): React.ReactNode {
+  render(): ReactNode {
     const { children } = this.props;
     const { error } = this.state;
 

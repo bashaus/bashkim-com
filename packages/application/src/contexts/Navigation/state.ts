@@ -1,3 +1,4 @@
+import { Dispatch } from "react";
 import { NavigationActions } from "./actions";
 
 export type NavigationState = {
@@ -6,7 +7,7 @@ export type NavigationState = {
 
 export type NavigationContextType = {
   state: NavigationState;
-  dispatch: React.Dispatch<NavigationActions>;
+  dispatch: Dispatch<NavigationActions>;
 };
 
 export const INITIAL_STATE: NavigationState = {

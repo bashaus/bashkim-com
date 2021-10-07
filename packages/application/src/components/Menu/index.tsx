@@ -1,11 +1,12 @@
 import Link from "next/link";
+import { ReactNode } from "react";
 
 import { Logo } from "@bashkim-com/design-system";
 
 import styles from "./styles.module.scss";
 
 export type MenuProps = {
-  backButton?: React.ReactNode;
+  backButton?: ReactNode;
 };
 
 export const Menu = ({ backButton }: MenuProps): JSX.Element => (

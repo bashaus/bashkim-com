@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import React, { CSSProperties, HTMLAttributes } from "react";
+import { CSSProperties, HTMLAttributes, ReactNode } from "react";
 
 import { FormattedRichText } from "../../formatters/FormattedRichText";
 
@@ -7,7 +7,7 @@ import styles from "./style.module.scss";
 
 export type PartialSplitItemProps = HTMLAttributes<HTMLDivElement> & {
   backgroundImage?: string;
-  children?: React.ReactNode;
+  children?: ReactNode;
 };
 
 export const PartialSplitItem = ({

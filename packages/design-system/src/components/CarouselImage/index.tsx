@@ -1,12 +1,12 @@
-import React from "react";
+import { ReactNode } from "react";
 
 import { FormattedRichText } from "../../formatters/FormattedRichText";
 
 import styles from "./styles.module.scss";
 
 export type CarouselImageProps = {
-  figure?: React.ReactNode;
-  children?: React.ReactNode;
+  figure?: ReactNode;
+  children?: ReactNode;
 };
 
 export const CarouselImage = ({
