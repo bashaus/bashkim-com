@@ -1,11 +1,11 @@
-import React from "react";
+import { ReactNode } from "react";
 
 import { FormattedRichText } from "../../formatters/FormattedRichText";
 
 import styles from "./styles.module.scss";
 
 export type PartialFullTextProps = {
-  children?: React.ReactNode;
+  children?: ReactNode;
 };
 
 export const PartialFullText = ({

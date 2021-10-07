@@ -1,4 +1,3 @@
-import React from "react";
 import { FormattedDate, FormattedDateProps } from ".";
 
 export default {

@@ -1,12 +1,12 @@
-import React from "react";
+import { ReactNode } from "react";
 
 import { FormattedRichText } from "../../formatters/FormattedRichText";
 
 import styles from "./styles.module.scss";
 
 export type DeviceSmartphoneProps = {
-  children: React.ReactNode;
-  figure: React.ReactNode;
+  children: ReactNode;
+  figure: ReactNode;
 };
 
 /**

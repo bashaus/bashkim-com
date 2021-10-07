@@ -1,4 +1,3 @@
-import React from "react";
 import { PartialHeaderImage, PartialHeaderImageProps } from ".";
 
 export default {

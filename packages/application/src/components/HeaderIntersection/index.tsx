@@ -1,11 +1,11 @@
-import React, { useCallback, useContext, useEffect, useRef } from "react";
+import { memo, useCallback, useContext, useEffect, useRef } from "react";
 
 import { NavigationContext } from "%contexts/Navigation/context";
 import { NavigationActionsTypes } from "%contexts/Navigation/actions";
 
 import styles from "./styles.module.scss";
 
-export const HeaderIntersection = React.memo(
+export const HeaderIntersection = memo(
   function HeaderIntersection(): JSX.Element {
     const { dispatch: navigationDispatch } = useContext(NavigationContext);
     const ref = useRef<HTMLDivElement>(null);

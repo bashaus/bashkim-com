@@ -1,8 +1,8 @@
-import React from "react";
+import { ReactNode } from "react";
 import styles from "./styles.module.scss";
 
 export type PartialNewspaperProps = {
-  children?: React.ReactNode;
+  children?: ReactNode;
 };
 
 export const PartialNewspaper = ({

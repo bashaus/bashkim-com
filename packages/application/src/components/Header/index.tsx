@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { ReactNode, useContext } from "react";
 
 import { Navigation } from "%components/Navigation";
 import { Menu } from "%components/Menu";
@@ -8,7 +8,7 @@ import { NavigationContext } from "%contexts/Navigation/context";
 import styles from "./styles.module.scss";
 
 export type HeaderProps = {
-  backButton?: React.ReactNode;
+  backButton?: ReactNode;
 };
 
 export const Header = ({ backButton }: HeaderProps): JSX.Element => {

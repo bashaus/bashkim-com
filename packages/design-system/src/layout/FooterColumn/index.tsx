@@ -1,10 +1,10 @@
 import classNames from "classnames";
-import React, { useCallback, useState } from "react";
+import { ReactNode, useCallback, useState } from "react";
 
 import styles from "./styles.module.scss";
 
 export type FooterColumnProps = {
-  children: React.ReactNode;
+  children: ReactNode;
   className?: string;
   label: string;
 };

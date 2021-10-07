@@ -1,11 +1,11 @@
-import React from "react";
+import { ReactNode } from "react";
 import styles from "./styles.module.scss";
 
 export type BrickProps = {
   /**
    * The description text, wrapped with `<p>`
    */
-  description: React.ReactNode;
+  description: ReactNode;
 
   /**
    * A URL to the image to use as the icon
@@ -15,7 +15,7 @@ export type BrickProps = {
   /**
    * The title or heading, wrapped with `<h3>`
    */
-  title: React.ReactNode;
+  title: ReactNode;
 };
 
 export const Brick = ({

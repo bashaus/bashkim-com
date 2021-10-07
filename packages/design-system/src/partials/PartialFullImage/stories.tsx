@@ -1,4 +1,3 @@
-import React from "react";
 import { PartialFullImage, PartialFullImageProps } from ".";
 
 export default {
