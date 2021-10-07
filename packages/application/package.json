@@ -42,7 +42,7 @@
     "react-visibility-sensor": "^5.1.1",
     "slick-carousel": "^1.8.1",
     "use-persisted-state": "^0.3.3",
-    "webpack": "^4.46.0",
+    "webpack": "^5.57.1",
     "xstate": "^4.23.1"
   },
   "devDependencies": {
