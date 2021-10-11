@@ -27,7 +27,7 @@
     "breakpoint-sass": "^2.7.1",
     "classnames": "^2.3.1",
     "graphql": "^15.6.0",
-    "jquery": "^3.5.1",
+    "jquery": "^3.6.0",
     "mime": "^2.4.5",
     "next": "^11.1.2",
     "prismic-reactjs": "^1.3.3",
