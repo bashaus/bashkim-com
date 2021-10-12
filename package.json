@@ -19,9 +19,10 @@
   "scripts": {
     "build": "yarn workspaces run build",
     "clean": "yarn workspaces run clean",
-    "lint": "yarn lint:scripts; yarn lint:styles",
+    "lint": "yarn lint:scripts; yarn lint:styles; yarn lint:yaml",
     "lint:scripts": "eslint --ext .js,.ts,.tsx .",
     "lint:styles": "stylelint '**/*.scss' '**/*.css'",
+    "lint:yaml": "yamllint --config-file .yamllintrc.yml .",
     "test": "yarn workspaces run test"
   },
   "dependencies": {

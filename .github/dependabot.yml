@@ -1,7 +1,7 @@
-# https://help.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
-
+---
 version: 2
 updates:
+  # https://help.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
   - package-ecosystem: "npm"
     directory: "/"
     schedule:

@@ -1,6 +1,5 @@
+---
 version: 2.1
-
-
 
 executors:
   exec-node:
@@ -13,12 +12,8 @@ executors:
     docker:
       - image: "circleci/python:3.6"
 
-
-
 orbs:
   aws-s3: circleci/aws-s3@1.0.11
-
-
 
 jobs:
   build-application:
@@ -55,8 +50,6 @@ jobs:
             - packages/application/.next/
             - packages/*/build/
 
-
-
   build-design-system:
     executor: exec-node
     steps:
@@ -76,8 +69,6 @@ jobs:
           paths:
             - packages/design-system/.storybook-static/
 
-
-
   test-jest:
     executor: exec-node
     steps:
@@ -93,8 +84,6 @@ jobs:
 
       - store_test_results:
           path: test-results/
-
-
 
   test-eslint:
     executor: exec-node
@@ -117,8 +106,6 @@ jobs:
       - store_test_results:
           path: test-results/
 
-
-
   test-stylelint:
     executor: exec-node
     steps:
@@ -140,8 +127,6 @@ jobs:
       - store_test_results:
           path: test-results/
 
-
-
   test:
     executor: exec-node
     steps:
@@ -149,7 +134,6 @@ jobs:
           name: test
           command: |
             echo "done"
-
 
   deploy:
     executor: exec-node
@@ -163,8 +147,6 @@ jobs:
           name: serverless deploy
           command: |
             npx serverless deploy
-
-
 
   synchronize-application:
     executor: exec-python
@@ -185,10 +167,9 @@ jobs:
           name: invalidate website cloudfront
           command: |
             aws cloudfront create-invalidation \
-              --distribution-id "${DEPLOY_CLOUDFRONT_WEBSITE_DISTRIBUTION}" \
+              --distribution-id \
+                "${DEPLOY_CLOUDFRONT_WEBSITE_DISTRIBUTION}" \
               --paths "/*"
-
-
 
   synchronize-design-system:
     executor: exec-python
@@ -209,10 +190,9 @@ jobs:
           name: invalidate design system cloudfront
           command: |
             aws cloudfront create-invalidation \
-              --distribution-id "${DEPLOY_CLOUDFRONT_DESIGN_SYSTEM_DISTRIBUTION}" \
+              --distribution-id \
+                "${DEPLOY_CLOUDFRONT_DESIGN_SYSTEM_DISTRIBUTION}" \
               --paths "/*"
-
-
 
 workflows:
   version: 2
