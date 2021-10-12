@@ -4,7 +4,6 @@ service: bashkim-com
 variablesResolutionMode: "20210326"
 
 plugins:
-  - serverless-sentry
   - serverless-ignore
   - serverless-jetpack
 
@@ -25,10 +24,6 @@ custom:
       circleApiKey: ${env:APP_WEBHOOKS_CIRCLE_API_KEY, ''}
       circleProjectSlug: ${env:APP_WEBHOOKS_CIRCLE_PROJECT_SLUG, ''}
       prismicSecretKey: ${env:APP_WEBHOOKS_PRISMIC_SECRET_KEY, ''}
-
-  sentry:
-    dsn: ${env:SENTRY_DSN, ''}
-    environment: ${self:custom.stage}
 
   jetpack:
     preInclude:
@@ -55,7 +50,6 @@ provider:
       ${self:custom.app.webhooks.prismicSecretKey}
     GIT_COMMIT: ${self:custom.app.website.commitHash}
     NODE_ENV: ${self:custom.stage}
-    SENTRY_DSN: ${self:custom.sentry.dsn}
 
 functions:
   webhooks:
