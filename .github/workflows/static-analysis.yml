@@ -1,9 +1,7 @@
 ---
-name: "Static analysis"
+name: Static analysis
 
 on:
-  # schedule:
-  #   - cron: '25 8 * * 4'
   push:
     branches:
       - master
