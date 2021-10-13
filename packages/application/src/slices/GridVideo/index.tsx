@@ -1,7 +1,6 @@
-import type { GridVideoSliceType } from "@bashkim-com/prismic";
+import { PrismicRichText, GridVideoSliceType } from "@bashkim-com/prismic";
 
 import { DeferredAsset } from "%components/DeferredAsset";
-import { PrismicRichText } from "%libraries/prismic/helpers/RichText";
 
 import styles from "./styles.module.scss";
 

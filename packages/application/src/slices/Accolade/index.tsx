@@ -1,11 +1,13 @@
+import { useContext } from "react";
 import { Link } from "prismic-reactjs";
 
 import { FormattedRichText, FormattedDate } from "@bashkim-com/design-system";
-import type { AccoladeSliceType } from "@bashkim-com/prismic";
-
-import { PrismicDate } from "%libraries/prismic/helpers/Date";
-import { PrismicLinkResolver } from "%libraries/prismic/helpers/Link";
-import { PrismicRichText } from "%libraries/prismic/helpers/RichText";
+import {
+  AccoladeSliceType,
+  LinkResolverContext,
+  PrismicDate,
+  PrismicRichText,
+} from "@bashkim-com/prismic";
 
 import IconTrophy from "%public/static/vectors/icons/trophy.svg";
 
@@ -24,6 +26,7 @@ const AwardPlaceName = {
 };
 
 export const AccoladeSlice = ({ slice }: AccoladeSliceProps): JSX.Element => {
+  const PrismicLinkResolver = useContext(LinkResolverContext);
   const {
     accolade_slice_type_issuer: issuer,
     accolade_slice_type_description: description,

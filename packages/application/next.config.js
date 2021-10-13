@@ -13,6 +13,9 @@ module.exports = {
         alias: {
           "%styleguide": path.resolve(__dirname, "styleguide"),
         },
+        fallback: {
+          fs: false,
+        },
       },
       plugins: [
         new webpack.ProvidePlugin({

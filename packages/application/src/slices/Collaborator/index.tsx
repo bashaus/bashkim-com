@@ -1,7 +1,9 @@
+import { useContext } from "react";
 import { Link } from "prismic-reactjs";
-import type { CollaboratorSliceType } from "@bashkim-com/prismic";
-
-import { PrismicLinkResolver } from "%libraries/prismic/helpers/Link";
+import {
+  CollaboratorSliceType,
+  LinkResolverContext,
+} from "@bashkim-com/prismic";
 
 export type CollaboratorSliceProps = {
   slice: CollaboratorSliceType;
@@ -10,6 +12,7 @@ export type CollaboratorSliceProps = {
 export const CollaboratorSlice = ({
   slice,
 }: CollaboratorSliceProps): JSX.Element => {
+  const PrismicLinkResolver = useContext(LinkResolverContext);
   const {
     collaborator_slice_type_company: company,
     collaborator_slice_type_role: role,

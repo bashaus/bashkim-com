@@ -3,11 +3,9 @@ import {
   VideoPlayerYouTube,
 } from "@bashkim-com/design-system";
 
-import type { CaptionedVideoSliceType } from "@bashkim-com/prismic";
+import { PrismicRichText, CaptionedVideoSliceType } from "@bashkim-com/prismic";
 
 import { DeferredAsset } from "%components/DeferredAsset";
-
-import { PrismicRichText } from "%libraries/prismic/helpers/RichText";
 
 export type CaptionedVideoSliceProps = {
   slice: CaptionedVideoSliceType;

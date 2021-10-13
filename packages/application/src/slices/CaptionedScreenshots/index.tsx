@@ -1,12 +1,13 @@
 import { ChangeEvent, useCallback, useState } from "react";
 import { DeviceMobileIcon, DeviceDesktopIcon } from "@primer/octicons-react";
 
-import type { CaptionedScreenshotsSliceType } from "@bashkim-com/prismic";
 import { PartialCaptioned } from "@bashkim-com/design-system";
+import {
+  PrismicRichText,
+  CaptionedScreenshotsSliceType,
+} from "@bashkim-com/prismic";
 
 import { DeferredAsset } from "%components/DeferredAsset";
-
-import { PrismicRichText } from "%libraries/prismic/helpers/RichText";
 
 import styles from "./styles.module.scss";
 
