@@ -22,10 +22,8 @@ module.exports = ({ config }) => {
 
   config.module.rules.push({
     test: /\.svg$/,
-    issuer: /\.scss?$/,
-    use: [
-      { loader: "file-loader" }
-    ],
+    issuer: /\.scss$/,
+    type: 'asset/resource',
   });
 
   /* css and scss */
