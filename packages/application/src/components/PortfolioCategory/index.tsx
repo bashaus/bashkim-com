@@ -1,11 +1,11 @@
 import { DeepPartial } from "utility-types";
+
 import { PartialSubtitle } from "@bashkim-com/design-system";
-import type {
+import {
   CaseStudyContentType,
   PortfolioCategorySliceType,
+  PrismicRichText,
 } from "@bashkim-com/prismic";
-
-import { PrismicRichText } from "%libraries/prismic/helpers/RichText";
 
 import { PortfolioCaseStudyBrick } from "%components/PortfolioCaseStudyBrick";
 

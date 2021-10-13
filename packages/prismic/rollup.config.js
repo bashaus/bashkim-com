@@ -12,12 +12,15 @@ export default {
     {
       file: packageJson.main,
       format: "cjs",
+      globals: { react: "React" },
     },
     {
       file: packageJson.module,
       format: "esm",
+      globals: { react: "React" },
     },
   ],
+  external: ["react", "react-dom"],
   plugins: [
     peerDepsExternal(),
     nodeResolve(),

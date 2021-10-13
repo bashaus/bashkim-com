@@ -2,9 +2,7 @@ import {
   FormattedRichText,
   PartialNewspaper,
 } from "@bashkim-com/design-system";
-import type { NewspaperSliceType } from "@bashkim-com/prismic";
-
-import { PrismicRichText } from "%libraries/prismic/helpers/RichText";
+import { PrismicRichText, NewspaperSliceType } from "@bashkim-com/prismic";
 
 export type NewspaperSliceProps = {
   slice: NewspaperSliceType;

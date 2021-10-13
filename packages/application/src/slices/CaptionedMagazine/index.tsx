@@ -1,11 +1,13 @@
 import { DragEvent, FormEvent, useCallback, useState } from "react";
-import type { CaptionedMagazineSliceType } from "@bashkim-com/prismic";
+
 import { PartialCaptioned } from "@bashkim-com/design-system";
+import {
+  PrismicRichText,
+  CaptionedMagazineSliceType,
+} from "@bashkim-com/prismic";
 
 import { DeferredAsset } from "%components/DeferredAsset";
 import { Magazine, MagazineSpreadChangeEvent } from "%components/Magazine";
-
-import { PrismicRichText } from "%libraries/prismic/helpers/RichText";
 
 import styles from "./styles.module.scss";
 

@@ -1,9 +1,7 @@
 import { FormattedRichText } from "@bashkim-com/design-system";
-import type { ExhibitionSliceType } from "@bashkim-com/prismic";
+import { PrismicRichText, ExhibitionSliceType } from "@bashkim-com/prismic";
 
 import { CaseStudyLifespan } from "%components/CaseStudyLifespan/index";
-
-import { PrismicRichText } from "%libraries/prismic/helpers/RichText";
 
 export type ExhibitionSliceProps = {
   slice: ExhibitionSliceType;

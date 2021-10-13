@@ -1,10 +1,10 @@
 import Link from "next/link";
 
 import { FormattedRichText, Tile } from "@bashkim-com/design-system";
-
-import type { PortfolioPageContentTypePageTabFeatured } from "@bashkim-com/prismic";
-
-import { PrismicRichText } from "%libraries/prismic/helpers/RichText";
+import {
+  PrismicRichText,
+  PortfolioPageContentTypePageTabFeatured,
+} from "@bashkim-com/prismic";
 
 import styles from "./styles.module.scss";
 

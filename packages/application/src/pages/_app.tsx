@@ -4,6 +4,9 @@ import { useEffect } from "react";
 
 import "%libraries/sentry/init";
 
+import { LinkResolverContext } from "@bashkim-com/prismic";
+import { PrismicLinkResolver } from "%libraries/prismic/link-resolver";
+
 import { NavigationProvider } from "%contexts/Navigation/provider";
 
 import { GoogleAnalytics } from "%components/GoogleAnalytics";
@@ -16,19 +19,21 @@ const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
 
   return (
     <SentryBoundary>
-      <Head>
-        <meta
-          key="MyDocument.viewport"
-          name="viewport"
-          content="width=device-width, initial-scale=1, viewport-fit=cover"
-        />
-      </Head>
+      <LinkResolverContext.Provider value={PrismicLinkResolver}>
+        <Head>
+          <meta
+            key="MyDocument.viewport"
+            name="viewport"
+            content="width=device-width, initial-scale=1, viewport-fit=cover"
+          />
+        </Head>
 
-      <NavigationProvider>
-        <Component {...pageProps} />
-      </NavigationProvider>
+        <NavigationProvider>
+          <Component {...pageProps} />
+        </NavigationProvider>
 
-      <GoogleAnalytics />
+        <GoogleAnalytics />
+      </LinkResolverContext.Provider>
     </SentryBoundary>
   );
 };

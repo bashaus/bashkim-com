@@ -10,3 +10,8 @@ export type { PrismicImageType } from "./types/Image";
 export type { PrismicLinkType } from "./types/Link";
 export type { PrismicRelatedDocumentType } from "./types/RelatedDocument";
 export type { PrismicSliceType } from "./types/Slice";
+
+export { PrismicDate } from "./helpers/Date";
+export { PrismicRichText } from "./helpers/RichText";
+
+export { LinkResolverContext } from "./contexts/LinkResolver/context";

@@ -1,5 +1,5 @@
 import { FormattedDate } from "@bashkim-com/design-system";
-import { PrismicDate } from "%libraries/prismic/helpers/Date";
+import { PrismicDate } from "@bashkim-com/prismic";
 
 export type CaseStudyLifespanProps = {
   launched: string;
