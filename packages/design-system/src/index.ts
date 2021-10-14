@@ -13,6 +13,7 @@ export { VideoPlayerYouTube } from "./components/VideoPlayerYouTube";
 
 /* Formatters */
 export { FormattedDate } from "./formatters/FormattedDate";
+export { FormattedLifespan } from "./formatters/FormattedLifespan";
 export { FormattedRichText } from "./formatters/FormattedRichText";
 
 /* Layout */
