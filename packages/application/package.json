@@ -55,7 +55,7 @@
     "@types/react-slick": "^0.23.6",
     "babel-jest": "^27.2.4",
     "babel-plugin-module-resolver": "^4.1.0",
-    "faker": "^4.1.0",
+    "faker": "^5.5.3",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.2.5",
     "jest-css-modules-transform": "^4.3.0",
