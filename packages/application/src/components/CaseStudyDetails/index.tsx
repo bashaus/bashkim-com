@@ -1,7 +1,8 @@
-import type { CaseStudyContentType } from "@bashkim-com/prismic";
-import { FormattedRichText } from "@bashkim-com/design-system";
-
-import { CaseStudyLifespan } from "%components/CaseStudyLifespan";
+import { PrismicDate, CaseStudyContentType } from "@bashkim-com/prismic";
+import {
+  FormattedRichText,
+  FormattedLifespan,
+} from "@bashkim-com/design-system";
 
 import styles from "./styles.module.scss";
 
@@ -129,9 +130,9 @@ export const CaseStudyDetails = ({
         <FormattedRichText>
           <h3>Lifespan</h3>
           <p>
-            <CaseStudyLifespan
-              launched={launchDate}
-              decommissioned={decommissionDate}
+            <FormattedLifespan
+              startDate={PrismicDate(launchDate)}
+              endDate={PrismicDate(decommissionDate)}
             />
           </p>
         </FormattedRichText>
