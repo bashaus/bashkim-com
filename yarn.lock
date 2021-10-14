@@ -4528,10 +4528,10 @@
   resolved "https://registry.yarnpkg.com/@use-it/event-listener/-/event-listener-0.1.3.tgz#a9920b2819d211cf55e68e830997546eec6886d3"
   integrity sha512-UCHkLOVU+xj3/1R8jXz8GzDTowkzfIDPESOBlVC2ndgwUSBEqiFdwCoUEs2lcGhJOOiEdmWxF+T23C5+60eEew==
 
-"@vendia/serverless-express@^4.4.0":
-  version "4.4.0"
-  resolved "https://registry.yarnpkg.com/@vendia/serverless-express/-/serverless-express-4.4.0.tgz#21d7e4322c6280180afa502fe7d0cfff57fcc758"
-  integrity sha512-WwbInZUKl5Ww/2/uRGU+fpgJzUkilaqFHXafvQilpW2xGryG4pgGymcpLH+z8lDXS5Zg2570tRSOJlUnwbTg9g==
+"@vendia/serverless-express@^4.5.1":
+  version "4.5.1"
+  resolved "https://registry.yarnpkg.com/@vendia/serverless-express/-/serverless-express-4.5.1.tgz#4ca05747af307335c2bb54b29ce990ee1c801351"
+  integrity sha512-knc5sMXAPW6Lmx2vu8pAij1hd1HrJeeEXIJucTcFWLXEgr5i9AHzGgILkjciQlwyKr6R7fsZWeLw7IPKDdHKyw==
 
 "@webassemblyjs/ast@1.11.1":
   version "1.11.1"
