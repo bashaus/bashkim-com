@@ -6,6 +6,10 @@ export const parameters = {
     expanded: true,
     sort: 'requiredFirst',
     exclude: /^(className|[a-zA-Z]+ClassName)$/,
+    matchers: {
+      color: /color$/i,
+      date: /(^date$|Date$)/,
+    },
   },
   layout: 'fullscreen'
 }
