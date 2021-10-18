@@ -1,0 +1,38 @@
+@import "~breakpoint-sass";
+
+@import "src/styleguide/utils/grid";
+@import "src/styleguide/utils/media";
+
+.CaptionedPartial {
+  @include grid-container;
+
+  .Caption {
+    @include grid-cell(
+      $columns: (
+        mobile-portrait: 12,
+        mobile-landscape: 12,
+        tablet-portrait: 8,
+        tablet-landscape: 3,
+        desktop-narrow: 3,
+        desktop-wide: 3,
+      )
+    );
+  }
+
+  .Figure {
+    @include grid-cell(
+      $columns: (
+        mobile-portrait: 12,
+        mobile-landscape: 12,
+        tablet-portrait: 12,
+        tablet-landscape: 9,
+        desktop-narrow: 9,
+        desktop-wide: 9,
+      )
+    );
+  }
+
+  .Figure > * {
+    margin: 0 auto;
+  }
+}

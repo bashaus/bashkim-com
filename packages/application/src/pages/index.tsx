@@ -6,8 +6,8 @@ import type { HomePageContentType } from "@bashkim-com/prismic";
 import {
   CallToAction,
   Group,
-  PartialSplit,
-  PartialSplitItem,
+  SplitPartial,
+  SplitItemPartial,
 } from "@bashkim-com/design-system";
 
 import { HomeFeatured } from "%components/HomeFeatured";
@@ -68,8 +68,8 @@ const HomePage = ({ homePage }: HomePageProps): JSX.Element => {
       <HomeFeatured caseStudies={featuredCaseStudies} />
 
       <Group>
-        <PartialSplit>
-          <PartialSplitItem>
+        <SplitPartial>
+          <SplitItemPartial>
             <div>
               <p>Looking for more case&nbsp;studies?</p>
               <CallToAction>
@@ -80,9 +80,9 @@ const HomePage = ({ homePage }: HomePageProps): JSX.Element => {
                 </Link>
               </CallToAction>
             </div>
-          </PartialSplitItem>
+          </SplitItemPartial>
 
-          <PartialSplitItem>
+          <SplitItemPartial>
             <div>
               <p>Want more details about my practice?</p>
               <CallToAction>
@@ -93,8 +93,8 @@ const HomePage = ({ homePage }: HomePageProps): JSX.Element => {
                 </Link>
               </CallToAction>
             </div>
-          </PartialSplitItem>
-        </PartialSplit>
+          </SplitItemPartial>
+        </SplitPartial>
       </Group>
     </Page>
   );

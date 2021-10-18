@@ -1,8 +1,6 @@
 import Link from "next/link";
 import type { CollaboratorSliceType } from "@bashkim-com/prismic";
-import { PartialSubtitle } from "@bashkim-com/design-system";
-
-import { CollaboratorSlice } from "%slices/Collaborator";
+import { CollaboratorSlice, SubtitlePartial } from "@bashkim-com/design-system";
 
 import styles from "./styles.module.scss";
 
@@ -21,9 +19,9 @@ export const CaseStudyCollaborators = ({
 
   return (
     <>
-      <PartialSubtitle>
+      <SubtitlePartial>
         <h2>Collaborators</h2>
-      </PartialSubtitle>
+      </SubtitlePartial>
 
       <ul className={styles.CaseStudyCollaborators}>
         <li>

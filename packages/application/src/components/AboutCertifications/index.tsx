@@ -1,20 +1,20 @@
 import {
   Group,
-  PartialSplit,
-  PartialSplitItem,
-  PartialSubtitle,
+  SplitPartial,
+  SplitItemPartial,
+  SubtitlePartial,
 } from "@bashkim-com/design-system";
 
 import styles from "./styles.module.scss";
 
 export const AboutCertifications = (): JSX.Element => (
   <Group>
-    <PartialSubtitle>
+    <SubtitlePartial>
       <h2>Certifications</h2>
-    </PartialSubtitle>
+    </SubtitlePartial>
 
-    <PartialSplit index={0}>
-      <PartialSplitItem>
+    <SplitPartial index={0}>
+      <SplitItemPartial>
         <div>
           <h3>Java 8</h3>
           <p>
@@ -29,18 +29,18 @@ export const AboutCertifications = (): JSX.Element => (
             />
           </p>
         </div>
-      </PartialSplitItem>
-      <PartialSplitItem backgroundImage="/static/images/about/certifications/java/background.jpg">
+      </SplitItemPartial>
+      <SplitItemPartial backgroundImage="/static/images/about/certifications/java/background.jpg">
         <img
           alt="Duke - The Java Mascot"
           src="/static/images/about/certifications/java/logo.jpg"
           className={styles.Logo}
         />
-      </PartialSplitItem>
-    </PartialSplit>
+      </SplitItemPartial>
+    </SplitPartial>
 
-    <PartialSplit index={1}>
-      <PartialSplitItem>
+    <SplitPartial index={1}>
+      <SplitItemPartial>
         <div>
           <h3>PHP 5.3</h3>
           <p>
@@ -61,15 +61,15 @@ export const AboutCertifications = (): JSX.Element => (
             </a>
           </p>
         </div>
-      </PartialSplitItem>
+      </SplitItemPartial>
 
-      <PartialSplitItem backgroundImage="/static/images/about/certifications/php/background.jpg">
+      <SplitItemPartial backgroundImage="/static/images/about/certifications/php/background.jpg">
         <img
           alt="ElePHPant"
           className={styles.Logo}
           src="/static/images/about/certifications/php/logo.png"
         />
-      </PartialSplitItem>
-    </PartialSplit>
+      </SplitItemPartial>
+    </SplitPartial>
   </Group>
 );

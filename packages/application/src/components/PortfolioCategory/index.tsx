@@ -1,6 +1,6 @@
 import { DeepPartial } from "utility-types";
 
-import { PartialSubtitle } from "@bashkim-com/design-system";
+import { SubtitlePartial } from "@bashkim-com/design-system";
 import {
   CaseStudyContentType,
   PortfolioCategorySliceType,
@@ -19,14 +19,14 @@ export const PortfolioCategory = ({
   portfolioCategory,
 }: PortfolioCategoryProps): JSX.Element => (
   <>
-    <PartialSubtitle id={portfolioCategory.primary.portfolio_category_slug}>
+    <SubtitlePartial id={portfolioCategory.primary.portfolio_category_slug}>
       <PrismicRichText
         render={portfolioCategory.primary.portfolio_category_title}
       />
       <PrismicRichText
         render={portfolioCategory.primary.portfolio_category_description}
       />
-    </PartialSubtitle>
+    </SubtitlePartial>
 
     <ul className={styles.CaseStudies}>
       {portfolioCategory.fields.map((portfolioCaseStudy) => {

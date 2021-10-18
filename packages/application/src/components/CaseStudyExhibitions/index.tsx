@@ -1,7 +1,5 @@
+import { ExhibitionSlice, SubtitlePartial } from "@bashkim-com/design-system";
 import type { ExhibitionSliceType } from "@bashkim-com/prismic";
-import { PartialSubtitle } from "@bashkim-com/design-system";
-
-import { ExhibitionSlice } from "%slices/Exhibition";
 
 import styles from "./styles.module.scss";
 
@@ -18,9 +16,9 @@ export const CaseStudyExhibitions = ({
 
   return (
     <>
-      <PartialSubtitle>
+      <SubtitlePartial>
         <h2>Exhibitions</h2>
-      </PartialSubtitle>
+      </SubtitlePartial>
 
       <ol className={styles.CaseStudyExhibitions}>
         {slices.map((slice, i) => (

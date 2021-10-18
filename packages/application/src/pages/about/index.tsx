@@ -1,10 +1,10 @@
 import {
   CallToAction,
   Group,
-  PartialHeaderImage,
-  PartialSplit,
-  PartialSplitItem,
-  PartialSubtitle,
+  HeaderImagePartial,
+  SplitPartial,
+  SplitItemPartial,
+  SubtitlePartial,
 } from "@bashkim-com/design-system";
 
 import { AboutProfile } from "%components/AboutProfile";
@@ -24,7 +24,7 @@ const AboutPage = (): JSX.Element => (
     <MetaDescription content="Information on the work history of Bashkim Isai" />
     <MetaKeywords content="bashkim isai, creative technologist, london" />
 
-    <PartialHeaderImage
+    <HeaderImagePartial
       id="AboutPage-Header"
       imageDesktop={HeaderDesktopImage.src}
     />
@@ -34,12 +34,12 @@ const AboutPage = (): JSX.Element => (
     <AboutCertifications />
 
     <Group>
-      <PartialSubtitle>
+      <SubtitlePartial>
         <h2>Looking for more?</h2>
-      </PartialSubtitle>
+      </SubtitlePartial>
 
-      <PartialSplit>
-        <PartialSplitItem>
+      <SplitPartial>
+        <SplitItemPartial>
           <div>
             <p>Looking for recommendations from industry professionals?</p>
             <CallToAction>
@@ -52,9 +52,9 @@ const AboutPage = (): JSX.Element => (
               </a>
             </CallToAction>
           </div>
-        </PartialSplitItem>
+        </SplitItemPartial>
 
-        <PartialSplitItem>
+        <SplitItemPartial>
           <div>
             <p>Looking to see some examples of code?</p>
             <CallToAction>
@@ -67,8 +67,8 @@ const AboutPage = (): JSX.Element => (
               </a>
             </CallToAction>
           </div>
-        </PartialSplitItem>
-      </PartialSplit>
+        </SplitItemPartial>
+      </SplitPartial>
     </Group>
   </Page>
 );

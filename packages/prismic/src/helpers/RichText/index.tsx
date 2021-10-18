@@ -3,7 +3,7 @@ import { RichText, RichTextBlock } from "prismic-reactjs";
 import { LinkResolverContext } from "../../contexts/LinkResolver/context";
 
 export type PrismicRichTextProps = {
-  render?: Array<RichTextBlock>;
+  render: Array<RichTextBlock> | null;
 };
 
 export const PrismicRichText = ({

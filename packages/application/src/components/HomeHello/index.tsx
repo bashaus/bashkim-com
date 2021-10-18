@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { PartialHeaderText } from "@bashkim-com/design-system";
+import { HeaderTextPartial } from "@bashkim-com/design-system";
 
 import IconGitHub from "%public/static/vectors/social/github.svg";
 import IconPortfolio from "%public/static/vectors/icons/portfolio.svg";
@@ -9,7 +9,7 @@ import styles from "./styles.module.scss";
 
 export const HomeHello = (): JSX.Element => (
   <div className={styles.HomeHello}>
-    <PartialHeaderText
+    <HeaderTextPartial
       backgroundClassName={styles.Background}
       aside={
         <ul className={styles.Links}>
@@ -63,6 +63,6 @@ export const HomeHello = (): JSX.Element => (
           </span>
         </p>
       </div>
-    </PartialHeaderText>
+    </HeaderTextPartial>
   </div>
 );

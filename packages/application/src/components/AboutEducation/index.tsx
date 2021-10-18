@@ -1,20 +1,20 @@
 import {
   Group,
-  PartialSplit,
-  PartialSplitItem,
-  PartialSubtitle,
+  SplitPartial,
+  SplitItemPartial,
+  SubtitlePartial,
 } from "@bashkim-com/design-system";
 
 import styles from "./styles.module.scss";
 
 export const AboutEducation = (): JSX.Element => (
   <Group>
-    <PartialSubtitle>
+    <SubtitlePartial>
       <h2>Education</h2>
-    </PartialSubtitle>
+    </SubtitlePartial>
 
-    <PartialSplit index={0}>
-      <PartialSplitItem>
+    <SplitPartial index={0}>
+      <SplitItemPartial>
         <div>
           <h3>Postgraduate</h3>
           <p>University of Queensland</p>
@@ -27,9 +27,9 @@ export const AboutEducation = (): JSX.Element => (
             Interaction&nbsp;Design
           </p>
         </div>
-      </PartialSplitItem>
+      </SplitItemPartial>
 
-      <PartialSplitItem backgroundImage="/static/images/about/education/uq/background.jpg">
+      <SplitItemPartial backgroundImage="/static/images/about/education/uq/background.jpg">
         <div>
           <img
             alt=""
@@ -37,11 +37,11 @@ export const AboutEducation = (): JSX.Element => (
             className={styles.Logo}
           />
         </div>
-      </PartialSplitItem>
-    </PartialSplit>
+      </SplitItemPartial>
+    </SplitPartial>
 
-    <PartialSplit index={1}>
-      <PartialSplitItem>
+    <SplitPartial index={1}>
+      <SplitItemPartial>
         <div>
           <h3>Undergraduate</h3>
           <p>Queensland University of Technology</p>
@@ -81,9 +81,9 @@ export const AboutEducation = (): JSX.Element => (
             Communication&nbsp;Design
           </p>
         </div>
-      </PartialSplitItem>
+      </SplitItemPartial>
 
-      <PartialSplitItem backgroundImage="/static/images/about/education/qut/gardens-point.jpg">
+      <SplitItemPartial backgroundImage="/static/images/about/education/qut/gardens-point.jpg">
         <div>
           <img
             alt=""
@@ -91,7 +91,7 @@ export const AboutEducation = (): JSX.Element => (
             className={styles.Logo}
           />
         </div>
-      </PartialSplitItem>
-    </PartialSplit>
+      </SplitItemPartial>
+    </SplitPartial>
   </Group>
 );

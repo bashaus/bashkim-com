@@ -1,7 +1,7 @@
 import {
   Group,
-  PartialFullText,
-  PartialHeaderImage,
+  FullTextPartial,
+  HeaderImagePartial,
 } from "@bashkim-com/design-system";
 
 import { Page } from "%components/Page";
@@ -19,14 +19,14 @@ const CookiesPage = (): JSX.Element => (
     <MetaTitle content="Cookie policy" />
     <MetaDescription content="How your personal information is collected and used on this website" />
 
-    <PartialHeaderImage
+    <HeaderImagePartial
       id="CookiesPage-Header"
       imageDesktop={HeaderDesktopImage.src}
       imageMobile={HeaderMobileImage.src}
     />
 
     <Group>
-      <PartialFullText>
+      <FullTextPartial>
         <h1>Cookie policy</h1>
         <p>
           This website sends and receives data (known as <em>cookies</em>) to
@@ -148,7 +148,7 @@ const CookiesPage = (): JSX.Element => (
         <p>
           <small>Last updated 22 September 2021</small>
         </p>
-      </PartialFullText>
+      </FullTextPartial>
     </Group>
   </Page>
 );

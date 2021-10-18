@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import Link from "next/link";
 
-import { CallToAction, PartialFullBanner } from "@bashkim-com/design-system";
+import { CallToAction, FullBannerPartial } from "@bashkim-com/design-system";
 import { HomePageContentType, LinkResolverContext } from "@bashkim-com/prismic";
 
 export type HomeFeaturedProps = {
@@ -25,10 +25,10 @@ export const HomeFeatured = ({
 
         return (
           <li key={caseStudy._meta.id}>
-            <PartialFullBanner
+            <FullBannerPartial
               backgroundDesktop={backgroundDesktop && backgroundDesktop.url}
               backgroundMobile={backgroundMobile && backgroundMobile.url}
-              id={`HomePage-PartialFullBanner-${caseStudy._meta.id}`}
+              id={`HomePage-FullBannerPartial-${caseStudy._meta.id}`}
             >
               <h3>{caseStudy.meta_title}</h3>
               <p>{caseStudy.meta_description}</p>
@@ -45,7 +45,7 @@ export const HomeFeatured = ({
                   </a>
                 </Link>
               </CallToAction>
-            </PartialFullBanner>
+            </FullBannerPartial>
           </li>
         );
       })}

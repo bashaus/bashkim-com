@@ -1,0 +1,12 @@
+@import "src/styleguide/utils/grid";
+
+.SubtitlePartial {
+  @include grid-container-bounds(
+    $padding: (
+      top,
+      left,
+      right,
+      bottom,
+    )
+  );
+}

@@ -1,0 +1,9 @@
+@import "src/styleguide/utils/grid";
+
+.FullImagePartial {
+  @include grid-container-bounds;
+
+  > * {
+    margin: 0 auto;
+  }
+}

@@ -1,7 +1,7 @@
 import { PrismicDate, CaseStudyContentType } from "@bashkim-com/prismic";
 import {
-  FormattedRichText,
-  FormattedLifespan,
+  RichTextFormatter,
+  LifespanFormatter,
 } from "@bashkim-com/design-system";
 
 import styles from "./styles.module.scss";
@@ -33,28 +33,28 @@ export const CaseStudyDetails = ({
   return (
     <div className={styles.CaseStudyDetails}>
       {brief && (
-        <FormattedRichText>
+        <RichTextFormatter>
           <h3>Brief</h3>
           <p>{brief}</p>
-        </FormattedRichText>
+        </RichTextFormatter>
       )}
 
       {strategy && (
-        <FormattedRichText>
+        <RichTextFormatter>
           <h3>Strategy</h3>
           <p>{strategy}</p>
-        </FormattedRichText>
+        </RichTextFormatter>
       )}
 
       {implementation && (
-        <FormattedRichText>
+        <RichTextFormatter>
           <h3>Implementation</h3>
           <p>{implementation}</p>
-        </FormattedRichText>
+        </RichTextFormatter>
       )}
 
       {deliverables && (
-        <FormattedRichText>
+        <RichTextFormatter>
           <h3>Deliverables</h3>
           <ul>
             {deliverables.map((deliverable) => (
@@ -63,58 +63,58 @@ export const CaseStudyDetails = ({
               </li>
             ))}
           </ul>
-        </FormattedRichText>
+        </RichTextFormatter>
       )}
 
       {client && (
-        <FormattedRichText>
+        <RichTextFormatter>
           <h3>Client</h3>
           <p>{client}</p>
-        </FormattedRichText>
+        </RichTextFormatter>
       )}
 
       {agency && (
-        <FormattedRichText>
+        <RichTextFormatter>
           <h3>Agency</h3>
           <p>
             {agency}
             <br />
             {role}
           </p>
-        </FormattedRichText>
+        </RichTextFormatter>
       )}
 
       {institution && (
-        <FormattedRichText>
+        <RichTextFormatter>
           <h3>Institution</h3>
           <p>{institution}</p>
-        </FormattedRichText>
+        </RichTextFormatter>
       )}
 
       {degree && (
-        <FormattedRichText>
+        <RichTextFormatter>
           <h3>Degree</h3>
           <p>
             {degree}
             <br />
             {role}
           </p>
-        </FormattedRichText>
+        </RichTextFormatter>
       )}
 
       {markets && (
-        <FormattedRichText>
+        <RichTextFormatter>
           <h3>Markets</h3>
           <ul>
             {markets.map((market) => (
               <li key={market.info_market}>{market.info_market}</li>
             ))}
           </ul>
-        </FormattedRichText>
+        </RichTextFormatter>
       )}
 
       {targetAudiences && (
-        <FormattedRichText>
+        <RichTextFormatter>
           <h3>Audience</h3>
           <ol>
             {targetAudiences.map((audience) => (
@@ -123,30 +123,30 @@ export const CaseStudyDetails = ({
               </li>
             ))}
           </ol>
-        </FormattedRichText>
+        </RichTextFormatter>
       )}
 
       {launchDate && (
-        <FormattedRichText>
+        <RichTextFormatter>
           <h3>Lifespan</h3>
           <p>
-            <FormattedLifespan
+            <LifespanFormatter
               startDate={PrismicDate(launchDate)}
               endDate={PrismicDate(decommissionDate)}
             />
           </p>
-        </FormattedRichText>
+        </RichTextFormatter>
       )}
 
       {outcomes.length > 0 && (
-        <FormattedRichText>
+        <RichTextFormatter>
           <h3>Outcomes</h3>
           <ul>
             {outcomes.map((outcome) => (
               <li key={outcome.info_outcome}>{outcome.info_outcome}</li>
             ))}
           </ul>
-        </FormattedRichText>
+        </RichTextFormatter>
       )}
     </div>
   );

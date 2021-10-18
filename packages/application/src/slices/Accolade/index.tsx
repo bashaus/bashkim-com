@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Link } from "prismic-reactjs";
 
-import { FormattedRichText, FormattedDate } from "@bashkim-com/design-system";
+import { RichTextFormatter, DateFormatter } from "@bashkim-com/design-system";
 import {
   AccoladeSliceType,
   LinkResolverContext,
@@ -35,15 +35,15 @@ export const AccoladeSlice = ({ slice }: AccoladeSliceProps): JSX.Element => {
 
   return (
     <div className={styles.AccoladeSlice}>
-      <FormattedRichText className={styles.Details}>
+      <RichTextFormatter className={styles.Details}>
         <PrismicRichText render={issuer} />
         <PrismicRichText render={description} />
         <p>
           <small>
-            <FormattedDate date={PrismicDate(date)} />
+            <DateFormatter date={PrismicDate(date)} />
           </small>
         </p>
-      </FormattedRichText>
+      </RichTextFormatter>
 
       <ol className={styles.Awards}>
         {slice.fields.map((field, i) => {
@@ -59,10 +59,10 @@ export const AccoladeSlice = ({ slice }: AccoladeSliceProps): JSX.Element => {
             <li className={styles.Award} key={i} data-prop-place={awardPlace}>
               <a href={awardHref} target="_blank" rel="noreferrer">
                 <IconTrophy className={styles.Trophy} />
-                <FormattedRichText>
+                <RichTextFormatter>
                   <h3>{AwardPlaceName[awardPlace]}</h3>
                   <PrismicRichText render={awardCategory} />
-                </FormattedRichText>
+                </RichTextFormatter>
               </a>
             </li>
           );

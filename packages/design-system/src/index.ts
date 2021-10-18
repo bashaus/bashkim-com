@@ -12,9 +12,9 @@ export { Tile } from "./components/Tile";
 export { VideoPlayerYouTube } from "./components/VideoPlayerYouTube";
 
 /* Formatters */
-export { FormattedDate } from "./formatters/FormattedDate";
-export { FormattedLifespan } from "./formatters/FormattedLifespan";
-export { FormattedRichText } from "./formatters/FormattedRichText";
+export { DateFormatter } from "./formatters/DateFormatter";
+export { LifespanFormatter } from "./formatters/LifespanFormatter";
+export { RichTextFormatter } from "./formatters/RichTextFormatter";
 
 /* Layout */
 export { Footer } from "./layout/Footer";
@@ -27,14 +27,28 @@ export { NavigationGroup } from "./layout/NavigationGroup";
 export { NavigationItem } from "./layout/NavigationItem";
 
 /* Partials */
-export { PartialCaptioned } from "./partials/PartialCaptioned";
-export { PartialFullBanner } from "./partials/PartialFullBanner";
-export { PartialFullImage } from "./partials/PartialFullImage";
-export { PartialFullText } from "./partials/PartialFullText";
-export { PartialHeaderImage } from "./partials/PartialHeaderImage";
-export { PartialHeaderText } from "./partials/PartialHeaderText";
-export { PartialNewspaper } from "./partials/PartialNewspaper";
-export { PartialSplit } from "./partials/PartialSplit";
-export { PartialSplitItem } from "./partials/PartialSplitItem";
-export { PartialSubtitle } from "./partials/PartialSubtitle";
-export { PartialTitle } from "./partials/PartialTitle";
+export { CaptionedPartial } from "./partials/CaptionedPartial";
+export { FullBannerPartial } from "./partials/FullBannerPartial";
+export { FullImagePartial } from "./partials/FullImagePartial";
+export { FullTextPartial } from "./partials/FullTextPartial";
+export { HeaderImagePartial } from "./partials/HeaderImagePartial";
+export { HeaderTextPartial } from "./partials/HeaderTextPartial";
+export { NewspaperPartial } from "./partials/NewspaperPartial";
+export { SplitPartial } from "./partials/SplitPartial";
+export { SplitItemPartial } from "./partials/SplitItemPartial";
+export { SubtitlePartial } from "./partials/SubtitlePartial";
+export { TitlePartial } from "./partials/TitlePartial";
+
+/* Slices */
+export { CaptionedImageSlice } from "./slices/CaptionedImageSlice";
+export { CaptionedScreenshotsSlice } from "./slices/CaptionedScreenshotsSlice";
+export { CaptionedVideoSlice } from "./slices/CaptionedVideoSlice";
+export { CarouselImagesSlice } from "./slices/CarouselImagesSlice";
+export { CarouselPhonesSlice } from "./slices/CarouselPhonesSlice";
+export { CollaboratorSlice } from "./slices/CollaboratorSlice";
+export { ExhibitionSlice } from "./slices/ExhibitionSlice";
+export { FullTextSlice } from "./slices/FullTextSlice";
+export { GridEmbedSlice } from "./slices/GridEmbedSlice";
+export { GridVideoSlice } from "./slices/GridVideoSlice";
+export { NewspaperSlice } from "./slices/NewspaperSlice";
+export { SubtitleSlice } from "./slices/SubtitleSlice";
