@@ -2,7 +2,6 @@ import { GetStaticProps } from "next";
 import Head from "next/head";
 import Link from "next/link";
 
-import { PrismicClient } from "@bashkim-com/prismic";
 import type { HomePageContentType } from "@bashkim-com/prismic";
 import {
   CallToAction,
@@ -18,6 +17,7 @@ import { MetaDescription } from "%components/MetaDescription";
 import { MetaKeywords } from "%components/MetaKeywords";
 import { MetaTitle } from "%components/MetaTitle";
 
+import { PrismicClient } from "%libraries/prismic/client";
 import { HomePageQuery } from "%libraries/prismic/queries/HomePageQuery";
 
 type HomePageProps = {
