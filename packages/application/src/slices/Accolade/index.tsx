@@ -57,7 +57,7 @@ export const AccoladeSlice = ({ slice }: AccoladeSliceProps): JSX.Element => {
 
           return (
             <li className={styles.Award} key={i} data-prop-place={awardPlace}>
-              <a href={awardHref} target="_blank" rel="noopener noreferrer">
+              <a href={awardHref} target="_blank" rel="noreferrer">
                 <IconTrophy className={styles.Trophy} />
                 <FormattedRichText>
                   <h3>{AwardPlaceName[awardPlace]}</h3>

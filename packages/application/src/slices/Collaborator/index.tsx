@@ -25,7 +25,7 @@ export const CollaboratorSlice = ({
     <li>
       <strong>
         {url && (
-          <a href={url} target="_blank" rel="noopener noreferrer">
+          <a href={url} target="_blank" rel="noreferrer">
             {name}
           </a>
         )}
