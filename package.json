@@ -9,9 +9,9 @@
     "url": "https://www.bashkim.com/"
   },
   "workspaces": [
-    "packages/config",
     "packages/prismic",
     "packages/design-system",
+    "packages/config",
     "packages/application",
     "packages/sitemap",
     "packages/webhooks"

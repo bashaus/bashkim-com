@@ -1,6 +1,5 @@
 import { GetStaticProps } from "next";
 
-import { PrismicClient } from "@bashkim-com/prismic";
 import type {
   CaseStudyContentType,
   PortfolioPageContentType,
@@ -21,6 +20,7 @@ import { MetaTitle } from "%components/MetaTitle";
 import { PortfolioFeaturedCaseStudies } from "%components/PortfolioFeaturedCaseStudies";
 import { PortfolioCategory } from "%components/PortfolioCategory";
 
+import { PrismicClient } from "%libraries/prismic/client";
 import { PortfolioPageQuery } from "%libraries/prismic/queries/PortfolioPageQuery";
 
 type PortfolioPageProps = {

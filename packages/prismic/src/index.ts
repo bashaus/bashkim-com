@@ -1,4 +1,3 @@
-export { PrismicClient } from "./client";
 export * from "./content-types";
 export * from "./slice-types";
 export * from "./slice-types/fixtures";

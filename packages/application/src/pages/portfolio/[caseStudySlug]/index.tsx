@@ -1,6 +1,5 @@
 import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from "next";
 
-import { PrismicClient } from "@bashkim-com/prismic";
 import type { CaseStudyContentType } from "@bashkim-com/prismic";
 
 import { Group, GroupDesign } from "@bashkim-com/design-system";
@@ -20,6 +19,7 @@ import { Slice } from "%components/Slice";
 
 import { NotFoundError } from "%libraries/next/errors/NotFoundError";
 
+import { PrismicClient } from "%libraries/prismic/client";
 import { CaseStudyPageQuery } from "%libraries/prismic/queries/CaseStudyPageQuery";
 import { CaseStudyBodyQuery } from "%libraries/prismic/queries/CaseStudyBodyQuery";
 import { CaseStudiesQuery } from "%libraries/prismic/queries/CaseStudiesQuery";

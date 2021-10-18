@@ -23,6 +23,7 @@
     "@primer/octicons-react": "^16.0.0",
     "@sentry/browser": "^6.13.3",
     "@xstate/react": "^1.6.1",
+    "apollo-link-prismic": "^1.0.9",
     "blurhash": "^1.1.4",
     "breakpoint-sass": "^2.7.1",
     "classnames": "^2.3.1",
