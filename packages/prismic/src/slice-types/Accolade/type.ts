@@ -1,8 +1,8 @@
 import type { RichTextBlock } from "prismic-reactjs";
 
-import type { PrismicDateType } from "@bashkim-com/prismic/types/Date";
-import type { PrismicLinkType } from "@bashkim-com/prismic/types/Link";
-import type { PrismicSliceType } from "@bashkim-com/prismic/types/Slice";
+import type { PrismicDateType } from "../../types/Date";
+import type { PrismicLinkType } from "../../types/Link";
+import type { PrismicSliceType } from "../../types/Slice";
 
 export enum AccoladeSliceTypeAwardPlace {
   GOLD = "gold",

@@ -1,8 +1,8 @@
 import { DeepPartial } from "utility-types";
 import type { RichTextBlock } from "prismic-reactjs";
 
-import { CaseStudyContentType } from "@bashkim-com/prismic/content-types/case_study/type";
-import { PortfolioCategorySliceType } from "@bashkim-com/prismic/slice-types/PortfolioCategory/type";
+import { CaseStudyContentType } from "../../../../content-types/case_study/type";
+import { PortfolioCategorySliceType } from "../../../../slice-types/PortfolioCategory/type";
 
 export type PortfolioPageContentTypePageTabFeatured = {
   featured_title: Array<RichTextBlock> | null;
@@ -12,5 +12,5 @@ export type PortfolioPageContentTypePageTabFeatured = {
 
 export type PortfolioPageContentTypePageTab = {
   featured: Array<PortfolioPageContentTypePageTabFeatured> | null;
-  portfolio_categories: PortfolioCategorySliceType;
+  portfolio_categories: Array<PortfolioCategorySliceType> | null;
 };

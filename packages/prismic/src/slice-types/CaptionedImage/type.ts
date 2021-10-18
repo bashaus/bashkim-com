@@ -1,7 +1,7 @@
 import type { RichTextBlock } from "prismic-reactjs";
 
-import type { PrismicImageType } from "@bashkim-com/prismic/types/Image";
-import type { PrismicSliceType } from "@bashkim-com/prismic/types/Slice";
+import type { PrismicImageType } from "../../types/Image";
+import type { PrismicSliceType } from "../../types/Slice";
 
 export type CaptionedImageSliceType = PrismicSliceType & {
   primary: {

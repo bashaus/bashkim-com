@@ -1,6 +1,6 @@
 import type { RichTextBlock } from "prismic-reactjs";
 
-import type { PrismicSliceType } from "@bashkim-com/prismic/types/Slice";
+import type { PrismicSliceType } from "../../types/Slice";
 
 export type SubtitleSliceType = PrismicSliceType & {
   primary: {

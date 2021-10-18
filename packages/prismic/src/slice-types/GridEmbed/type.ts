@@ -1,5 +1,5 @@
-import type { PrismicEmbedType } from "@bashkim-com/prismic/types/Embed";
-import type { PrismicSliceType } from "@bashkim-com/prismic/types/Slice";
+import type { PrismicEmbedType } from "../../types/Embed";
+import type { PrismicSliceType } from "../../types/Slice";
 
 export type GridEmbedSliceType = PrismicSliceType & {
   fields: Array<{

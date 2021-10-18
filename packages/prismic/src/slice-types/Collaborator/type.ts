@@ -1,5 +1,5 @@
-import type { PeerContentType } from "@bashkim-com/prismic/content-types";
-import type { PrismicSliceType } from "@bashkim-com/prismic/types/Slice";
+import type { PeerContentType } from "../../content-types";
+import type { PrismicSliceType } from "../../types/Slice";
 
 export type CollaboratorSliceType = PrismicSliceType & {
   primary: {

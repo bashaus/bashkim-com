@@ -1,4 +1,4 @@
-import type { PrismicImageType } from "@bashkim-com/prismic/types/Image";
+import type { PrismicImageType } from "../../../../types/Image";
 
 export type TechnologyContentTypeTechnologyTab = {
   technology_name: string;
