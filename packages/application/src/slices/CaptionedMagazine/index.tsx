@@ -1,6 +1,6 @@
 import { DragEvent, FormEvent, useCallback, useState } from "react";
 
-import { PartialCaptioned } from "@bashkim-com/design-system";
+import { CaptionedPartial } from "@bashkim-com/design-system";
 import {
   PrismicRichText,
   CaptionedMagazineSliceType,
@@ -75,7 +75,7 @@ export const CaptionedMagazineSlice = ({
   const isLastSpread = spread === spreads;
 
   return (
-    <PartialCaptioned
+    <CaptionedPartial
       figure={
         <DeferredAsset
           width={firstImage.dimensions.width * 2}
@@ -140,7 +140,7 @@ export const CaptionedMagazineSlice = ({
           />
         </div>
       )}
-    </PartialCaptioned>
+    </CaptionedPartial>
   );
 };
 

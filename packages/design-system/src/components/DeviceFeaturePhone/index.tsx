@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-import { FormattedRichText } from "../../formatters/FormattedRichText";
+import { RichTextFormatter } from "../../formatters/RichTextFormatter";
 
 import styles from "./styles.module.scss";
 
@@ -21,7 +21,7 @@ export const DeviceFeaturePhone = ({
       <div className={styles.Content}>{figure}</div>
     </div>
     <figcaption>
-      <FormattedRichText>{children}</FormattedRichText>
+      <RichTextFormatter>{children}</RichTextFormatter>
     </figcaption>
   </figure>
 );

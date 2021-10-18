@@ -3,7 +3,7 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": ["dom", "dom.iterable", "es2017"],
     "module": "esnext",
     "moduleResolution": "node",
     "noUnusedLocals": true,
@@ -11,7 +11,7 @@
     "removeComments": true,
     "resolveJsonModule": true,
     "strict": true,
-    "target": "es5",
+    "target": "es6",
     "typeRoots": ["./types"]
   }
 }

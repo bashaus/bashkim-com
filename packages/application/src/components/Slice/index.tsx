@@ -1,22 +1,32 @@
 import dynamic from "next/dynamic";
+import {
+  CaptionedImageSlice,
+  CaptionedScreenshotsSlice,
+  CaptionedVideoSlice,
+  CarouselImagesSlice,
+  CarouselPhonesSlice,
+  FullTextSlice,
+  GridEmbedSlice,
+  GridVideoSlice,
+  NewspaperSlice,
+  SubtitleSlice,
+} from "@bashkim-com/design-system";
 import type { PrismicSliceType } from "@bashkim-com/prismic";
 
 const SliceTypeComponentMap = {
-  CaptionedImageSliceType: dynamic(() => import("%slices/CaptionedImage")),
+  CaptionedImageSliceType: CaptionedImageSlice,
   CaptionedMagazineSliceType: dynamic(
     () => import("%slices/CaptionedMagazine")
   ),
-  CaptionedScreenshotsSliceType: dynamic(
-    () => import("%slices/CaptionedScreenshots")
-  ),
-  CaptionedVideoSliceType: dynamic(() => import("%slices/CaptionedVideo")),
-  CarouselImagesSliceType: dynamic(() => import("%slices/CarouselImages")),
-  CarouselPhonesSliceType: dynamic(() => import("%slices/CarouselPhones")),
-  FullTextSliceType: dynamic(() => import("%slices/FullText")),
-  GridEmbedSliceType: dynamic(() => import("%slices/GridEmbed")),
-  GridVideoSliceType: dynamic(() => import("%slices/GridVideo")),
-  NewspaperSliceType: dynamic(() => import("%slices/Newspaper")),
-  SubtitleSliceType: dynamic(() => import("%slices/Subtitle")),
+  CaptionedScreenshotsSliceType: CaptionedScreenshotsSlice,
+  CaptionedVideoSliceType: CaptionedVideoSlice,
+  CarouselImagesSliceType: CarouselImagesSlice,
+  CarouselPhonesSliceType: CarouselPhonesSlice,
+  FullTextSliceType: FullTextSlice,
+  GridEmbedSliceType: GridEmbedSlice,
+  GridVideoSliceType: GridVideoSlice,
+  NewspaperSliceType: NewspaperSlice,
+  SubtitleSliceType: SubtitleSlice,
 };
 
 export type SliceProps = {

@@ -5,9 +5,9 @@ import { CaseStudyTechnologies } from "%components/CaseStudyTechnologies";
 import {
   Group,
   GroupDesign,
-  PartialHeaderImage,
-  PartialTitle,
-  PartialSubtitle,
+  HeaderImagePartial,
+  TitlePartial,
+  SubtitlePartial,
 } from "@bashkim-com/design-system";
 
 import styles from "./styles.module.scss";
@@ -20,23 +20,23 @@ export const CaseStudyHeader = ({
   caseStudy,
 }: CaseStudyHeaderProps): JSX.Element => (
   <>
-    <PartialHeaderImage
+    <HeaderImagePartial
       id="CaseStudyPage-Header"
       imageDesktop={caseStudy.image_header_desktop?.url}
       imageMobile={caseStudy.image_header_mobile?.url}
     />
 
     <Group>
-      <PartialTitle image={caseStudy.image_icon.url}>
+      <TitlePartial image={caseStudy.image_icon.url}>
         <h1>{caseStudy.meta_title}</h1>
         <p>{caseStudy.meta_description}</p>
-      </PartialTitle>
+      </TitlePartial>
     </Group>
 
     <Group design={GroupDesign.ALTERNATE}>
-      <PartialSubtitle>
+      <SubtitlePartial>
         <h2>Project details</h2>
-      </PartialSubtitle>
+      </SubtitlePartial>
 
       <div className={styles.CaseStudyHeader}>
         <div className={styles.Details}>

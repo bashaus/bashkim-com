@@ -8,8 +8,8 @@ import type {
 import {
   Group,
   GroupDesign,
-  PartialHeaderText,
-  PartialSubtitle,
+  HeaderTextPartial,
+  SubtitlePartial,
 } from "@bashkim-com/design-system";
 
 import { Page } from "%components/Page";
@@ -43,15 +43,15 @@ const PortfolioPage = ({ portfolioPage }: PortfolioPageProps): JSX.Element => {
       <MetaDescription content={metaDescription} />
       <MetaKeywords content={metaKeywords} />
 
-      <PartialHeaderText>
+      <HeaderTextPartial>
         <h1>{metaTitle}</h1>
         <p>{metaDescription}</p>
-      </PartialHeaderText>
+      </HeaderTextPartial>
 
       <Group design={GroupDesign.ALTERNATE}>
-        <PartialSubtitle>
+        <SubtitlePartial>
           <h2>Featured case studies</h2>
-        </PartialSubtitle>
+        </SubtitlePartial>
         <PortfolioFeaturedCaseStudies featured={featured} />
       </Group>
 

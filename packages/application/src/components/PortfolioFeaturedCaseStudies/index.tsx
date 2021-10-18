@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { FormattedRichText, Tile } from "@bashkim-com/design-system";
+import { RichTextFormatter, Tile } from "@bashkim-com/design-system";
 import {
   PrismicRichText,
   PortfolioPageContentTypePageTabFeatured,
@@ -26,10 +26,10 @@ export const PortfolioFeaturedCaseStudies = ({
       return (
         <li className={styles.Item} key={caseStudy._meta.id}>
           <div className={styles.Details}>
-            <FormattedRichText>
+            <RichTextFormatter>
               <PrismicRichText render={title} />
               <PrismicRichText render={description} />
-            </FormattedRichText>
+            </RichTextFormatter>
           </div>
 
           <Link

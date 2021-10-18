@@ -1,0 +1,49 @@
+@import "~breakpoint-sass";
+
+@import "src/styleguide/utils/colors";
+@import "src/styleguide/utils/grid";
+@import "src/styleguide/utils/media";
+
+.FullBannerPartial {
+  width: 100%;
+  background-color: $color-charcol;
+  color: $color-white;
+
+  .Container {
+    @include grid-container($margin: ());
+  }
+
+  .Content {
+    @include grid-cell(
+      $columns: (
+        mobile-portrait: 12,
+        mobile-landscape: 12,
+        tablet-portrait: 6,
+        tablet-landscape: 5,
+        desktop-narrow: 4,
+        desktop-wide: 4,
+      )
+    );
+  }
+
+  @include breakpoint($media-mobile) {
+    background-size: 100% auto;
+    background-position: bottom;
+    padding-top: 10px;
+    padding-bottom: 75vw;
+  }
+
+  @include breakpoint($media-not-mobile) {
+    background-size: auto 100%;
+    background-position: center center;
+
+    .Container {
+      height: 400px;
+      max-height: 450px;
+    }
+
+    .Content {
+      align-self: center;
+    }
+  }
+}

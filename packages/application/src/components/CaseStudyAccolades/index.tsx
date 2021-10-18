@@ -1,4 +1,4 @@
-import { PartialSubtitle } from "@bashkim-com/design-system";
+import { SubtitlePartial } from "@bashkim-com/design-system";
 import type { AccoladeSliceType } from "@bashkim-com/prismic";
 
 import { AccoladeSlice } from "%slices/Accolade";
@@ -16,9 +16,9 @@ export const CaseStudyAccolades = ({
 
   return (
     <>
-      <PartialSubtitle>
+      <SubtitlePartial>
         <h2>Accolades</h2>
-      </PartialSubtitle>
+      </SubtitlePartial>
 
       <div>
         {slices.map((slice, i) => (

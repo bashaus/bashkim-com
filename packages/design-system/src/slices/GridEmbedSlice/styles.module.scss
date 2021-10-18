@@ -1,0 +1,18 @@
+@import "src/styleguide/utils/grid";
+
+.GridEmbedSlice {
+  @include grid-container;
+}
+
+.Item {
+  @include grid-cell(
+    $columns: (
+      mobile-portrait: 12,
+      mobile-landscape: 6,
+      tablet-portrait: 6,
+      tablet-landscape: 4,
+      desktop-narrow: 4,
+      desktop-wide: 4,
+    )
+  );
+}
