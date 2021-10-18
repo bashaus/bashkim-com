@@ -13,7 +13,7 @@ export const NavigationSocial = (): JSX.Element => (
       <a
         href="https://github.com/bashaus?tab=repositories"
         target="_blank"
-        rel="noreferrer noopener"
+        rel="noreferrer"
         title="GitHub"
       >
         <LogoGitHub />
@@ -24,7 +24,7 @@ export const NavigationSocial = (): JSX.Element => (
       <a
         href="https://medium.com/@bashaus"
         target="_blank"
-        rel="noreferrer noopener"
+        rel="noreferrer"
         title="Medium"
       >
         <LogoMedium />
@@ -35,7 +35,7 @@ export const NavigationSocial = (): JSX.Element => (
       <a
         href="https://stackoverflow.com/users/600240/bashaus"
         target="_blank"
-        rel="noreferrer noopener"
+        rel="noreferrer"
         title="StackOverflow"
       >
         <LogoStackOverflow />
@@ -46,7 +46,7 @@ export const NavigationSocial = (): JSX.Element => (
       <a
         href="https://www.linkedin.com/in/bashaus/"
         target="_blank"
-        rel="noreferrer noopener"
+        rel="noreferrer"
         title="Linked In"
       >
         <LogoLinkedIn />

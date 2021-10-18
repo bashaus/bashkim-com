@@ -45,7 +45,7 @@ const CookiesPage = (): JSX.Element => (
           <a
             href="https://ico.org.uk/for-the-public/online/cookies/"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noreferrer"
           >
             how to manage cookies
           </a>{" "}
@@ -123,7 +123,7 @@ const CookiesPage = (): JSX.Element => (
           <a
             href="https://tools.google.com/dlpage/gaoptout"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noreferrer"
           >
             opt-out of Google Analytics
           </a>{" "}

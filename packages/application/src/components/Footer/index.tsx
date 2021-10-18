@@ -18,7 +18,7 @@ export const Footer = (): JSX.Element => (
             <a
               href="https://medium.com/@bashaus"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noreferrer"
             >
               On Medium
             </a>
@@ -27,7 +27,7 @@ export const Footer = (): JSX.Element => (
             <a
               href="https://www.sitepoint.com/author/bashaus/"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noreferrer"
             >
               On Site Point
             </a>
@@ -46,7 +46,7 @@ export const Footer = (): JSX.Element => (
             <a
               href="https://github.com/bashaus?tab=repositories"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noreferrer"
             >
               On GitHub
             </a>
@@ -60,7 +60,7 @@ export const Footer = (): JSX.Element => (
             <a
               href="https://stackoverflow.com/users/600240/bashaus"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noreferrer"
             >
               Stack Overflow
             </a>
@@ -69,7 +69,7 @@ export const Footer = (): JSX.Element => (
             <a
               href="https://www.linkedin.com/in/bashaus/"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noreferrer"
             >
               Linked In
             </a>

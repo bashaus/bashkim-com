@@ -46,7 +46,7 @@ const AboutPage = (): JSX.Element => (
               <a
                 href="https://www.linkedin.com/in/bashaus/"
                 target="_blank"
-                rel="noreferrer noopener"
+                rel="noreferrer"
               >
                 <span>Visit my LinkedIn profile</span>
               </a>
@@ -61,7 +61,7 @@ const AboutPage = (): JSX.Element => (
               <a
                 href="https://github.com/bashaus?tab=repositories"
                 target="_blank"
-                rel="noreferrer noopener"
+                rel="noreferrer"
               >
                 <span>Visit my GitHub profile</span>
               </a>

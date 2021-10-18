@@ -17,7 +17,7 @@ export const HomeHello = (): JSX.Element => (
             <a
               href="https://github.com/bashaus?tab=repositories"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noreferrer"
             >
               <svg className={styles.Icon}>
                 <IconGitHub />

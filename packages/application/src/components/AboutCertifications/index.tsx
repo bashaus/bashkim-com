@@ -52,7 +52,7 @@ export const AboutCertifications = (): JSX.Element => (
             <a
               href="https://www.zend.com/en/yellow-pages/ZEND020625"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noreferrer"
             >
               <img
                 alt="Zend Certified Engineer"
