@@ -35,7 +35,9 @@ export const PortfolioCategory = ({
 
         return (
           <li key={caseStudy._meta.uid}>
-            <PortfolioCaseStudyBrick caseStudy={caseStudy} />
+            <PortfolioCaseStudyBrick
+              caseStudy={caseStudy as CaseStudyContentType}
+            />
           </li>
         );
       })}

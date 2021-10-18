@@ -6,9 +6,6 @@
     "declarationDir": "./build",
     "jsx": "react-jsx",
     "outDir": "./build",
-    "paths": {
-      "@bashkim-com/prismic/*": ["../../prismic/src/*"]
-    },
     "rootDir": "./src",
     "typeRoots": ["./types"]
   }

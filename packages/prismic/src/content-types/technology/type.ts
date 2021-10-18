@@ -1,4 +1,4 @@
-import type { PrismicContentType } from "@bashkim-com/prismic/traits/content-type";
+import type { PrismicContentType } from "../../traits/content-type";
 
 import type { TechnologyContentTypeTechnologyTab } from "./tabs/technology/type";
 

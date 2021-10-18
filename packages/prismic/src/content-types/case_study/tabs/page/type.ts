@@ -1,14 +1,14 @@
-import type { CaptionedImageSliceType } from "@bashkim-com/prismic/slice-types/CaptionedImage/type";
-import type { CaptionedMagazineSliceType } from "@bashkim-com/prismic/slice-types/CaptionedMagazine/type";
-import type { CaptionedScreenshotsSliceType } from "@bashkim-com/prismic/slice-types/CaptionedScreenshots/type";
-import type { CaptionedVideoSliceType } from "@bashkim-com/prismic/slice-types/CaptionedVideo/type";
-import type { CarouselImagesSliceType } from "@bashkim-com/prismic/slice-types/CarouselImages/type";
-import type { CarouselPhonesSliceType } from "@bashkim-com/prismic/slice-types/CarouselPhones/type";
-import type { FullTextSliceType } from "@bashkim-com/prismic/slice-types/FullText/type";
-import type { NewspaperSliceType } from "@bashkim-com/prismic/slice-types/Newspaper/type";
-import type { SubtitleSliceType } from "@bashkim-com/prismic/slice-types/Subtitle/type";
-import type { GridEmbedSliceType } from "@bashkim-com/prismic/slice-types/GridEmbed/type";
-import type { GridVideoSliceType } from "@bashkim-com/prismic/slice-types/GridVideo/type";
+import type { CaptionedImageSliceType } from "../../../../slice-types/CaptionedImage/type";
+import type { CaptionedMagazineSliceType } from "../../../../slice-types/CaptionedMagazine/type";
+import type { CaptionedScreenshotsSliceType } from "../../../../slice-types/CaptionedScreenshots/type";
+import type { CaptionedVideoSliceType } from "../../../../slice-types/CaptionedVideo/type";
+import type { CarouselImagesSliceType } from "../../../../slice-types/CarouselImages/type";
+import type { CarouselPhonesSliceType } from "../../../../slice-types/CarouselPhones/type";
+import type { FullTextSliceType } from "../../../../slice-types/FullText/type";
+import type { NewspaperSliceType } from "../../../../slice-types/Newspaper/type";
+import type { SubtitleSliceType } from "../../../../slice-types/Subtitle/type";
+import type { GridEmbedSliceType } from "../../../../slice-types/GridEmbed/type";
+import type { GridVideoSliceType } from "../../../../slice-types/GridVideo/type";
 
 export type CaseStudyContentTypePageTab = {
   body: Array<

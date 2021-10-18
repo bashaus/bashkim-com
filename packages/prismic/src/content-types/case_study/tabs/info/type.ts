@@ -1,5 +1,5 @@
-import type { TechnologyContentType } from "@bashkim-com/prismic/content-types/technology/type";
-import type { PrismicLinkType } from "@bashkim-com/prismic/types/Link";
+import type { TechnologyContentType } from "../../../../content-types/technology/type";
+import type { PrismicLinkType } from "../../../../types/Link";
 
 export type CaseStudyContentTypeInfoTabDeliverable = {
   info_deliverable_name: string | null;
@@ -32,8 +32,8 @@ export type CaseStudyContentTypeInfoTab = {
   info_role: string | null;
   info_institution: string | null;
   info_degree: string | null;
-  info_launch_date: Date | null;
-  info_decommission_date: Date | null;
+  info_launch_date: string | null;
+  info_decommission_date: string | null;
   info_target_audiences: Array<CaseStudyContentTypeInfoTabTargetAudience> | null;
   info_markets: Array<CaseStudyContentTypeInfoTabMarket> | null;
   info_outcomes: Array<CaseStudyContentTypeInfoTabOutcome> | null;

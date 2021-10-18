@@ -9,12 +9,12 @@
     "url": "https://www.bashkim.com/"
   },
   "workspaces": [
-    "packages/webhooks",
     "packages/config",
     "packages/prismic",
     "packages/design-system",
+    "packages/application",
     "packages/sitemap",
-    "packages/application"
+    "packages/webhooks"
   ],
   "scripts": {
     "build": "yarn workspaces run build",
