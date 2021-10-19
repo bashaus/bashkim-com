@@ -1,18 +1,17 @@
 @import "~breakpoint-sass";
 
+@import "src/styleguide/utils/grid";
+
 @import "src/styleguide/utils/colors";
 @import "src/styleguide/utils/media";
 
 .Group {
-  @include breakpoint($media-mobile) {
-    padding-top: 5vh;
-    padding-bottom: 5vh;
-  }
-
-  @include breakpoint($media-not-mobile) {
-    padding-top: 10vh;
-    padding-bottom: 10vh;
-  }
+  @include grid-container-padding(
+    $sides: (
+      top,
+      bottom,
+    )
+  );
 
   &[data-props-design="alternate"] {
     background-color: $color-shade-background;

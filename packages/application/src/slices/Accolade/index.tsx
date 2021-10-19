@@ -45,7 +45,7 @@ export const AccoladeSlice = ({ slice }: AccoladeSliceProps): JSX.Element => {
         </p>
       </RichTextFormatter>
 
-      <ol className={styles.Awards}>
+      <div className={styles.Awards}>
         {slice.fields.map((field, i) => {
           const {
             accolade_slice_type_award_place: awardPlace,
@@ -56,7 +56,7 @@ export const AccoladeSlice = ({ slice }: AccoladeSliceProps): JSX.Element => {
           const awardHref = Link.url(awardLink, PrismicLinkResolver);
 
           return (
-            <li className={styles.Award} key={i} data-prop-place={awardPlace}>
+            <div className={styles.Award} key={i} data-prop-place={awardPlace}>
               <a href={awardHref} target="_blank" rel="noreferrer">
                 <IconTrophy className={styles.Trophy} />
                 <RichTextFormatter>
@@ -64,10 +64,10 @@ export const AccoladeSlice = ({ slice }: AccoladeSliceProps): JSX.Element => {
                   <PrismicRichText render={awardCategory} />
                 </RichTextFormatter>
               </a>
-            </li>
+            </div>
           );
         })}
-      </ol>
+      </div>
     </div>
   );
 };
