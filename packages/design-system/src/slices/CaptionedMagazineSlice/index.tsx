@@ -1,13 +1,12 @@
 import { DragEvent, FormEvent, useCallback, useState } from "react";
 
-import { CaptionedPartial } from "@bashkim-com/design-system";
 import {
   PrismicRichText,
   CaptionedMagazineSliceType,
 } from "@bashkim-com/prismic";
 
-import { DeferredAsset } from "%components/DeferredAsset";
-import { Magazine, MagazineSpreadChangeEvent } from "%components/Magazine";
+import { CaptionedPartial } from "../../partials/CaptionedPartial";
+import { Magazine, MagazineSpreadChangeEvent } from "../../components/Magazine";
 
 import styles from "./styles.module.scss";
 
@@ -17,7 +16,7 @@ export type CaptionedMagazineSliceProps = {
 
 export const CaptionedMagazineSlice = ({
   slice,
-}: CaptionedMagazineSliceProps): JSX.Element => {
+}: CaptionedMagazineSliceProps): JSX.Element | null => {
   /* infinite state */
   const [magazineIsInitialized, setMagazineIsInitialized] =
     useState<boolean>(false);
@@ -26,17 +25,6 @@ export const CaptionedMagazineSlice = ({
   const [spreads, setSpreads] = useState<number>(1);
   const [pageNumbers, setPageNumbers] = useState<Array<number>>([1]);
 
-  /* non-repeat */
-  const { captioned_magazine_slice_type_caption: caption } = slice.primary;
-
-  /* repeat */
-  const { fields } = slice;
-
-  /* helpers */
-  const firstImage = fields[0].captioned_magazine_slice_type_images;
-  const pages = fields.length;
-
-  /* handlers */
   const handleImageDrag = useCallback(
     (event: DragEvent<HTMLImageElement>): void => event.preventDefault(),
     []
@@ -74,23 +62,34 @@ export const CaptionedMagazineSlice = ({
   const isFirstSpread = spread === 1;
   const isLastSpread = spread === spreads;
 
+  if (!slice.fields || !slice.primary) {
+    return null;
+  }
+
+  const { fields } = slice;
+  const { captioned_magazine_slice_type_caption: caption } = slice.primary;
+
+  const firstImage = fields[0].captioned_magazine_slice_type_images;
+  const pages = fields.length;
+
   return (
     <CaptionedPartial
       figure={
-        <DeferredAsset
-          width={firstImage.dimensions.width * 2}
-          height={firstImage.dimensions.height}
+        <Magazine
+          spread={spread}
+          pages={pages}
+          onInitialize={handleMagazineInitialize}
+          onSpreadChange={handleMagazineSpreadChange}
+          pageWidth={firstImage?.dimensions.width ?? 0}
+          pageHeight={firstImage?.dimensions.height ?? 0}
         >
-          <Magazine
-            spread={spread}
-            pages={pages}
-            onInitialize={handleMagazineInitialize}
-            onSpreadChange={handleMagazineSpreadChange}
-            pageWidth={firstImage.dimensions.width}
-            pageHeight={firstImage.dimensions.height}
-          >
-            {fields.map((field) => (
-              <li key={field.captioned_magazine_slice_type_images.url}>
+          {fields?.map((field) => {
+            if (!field.captioned_magazine_slice_type_images) {
+              return null;
+            }
+
+            return (
+              <div key={field.captioned_magazine_slice_type_images.url}>
                 <img
                   onDragStart={handleImageDrag}
                   src={field.captioned_magazine_slice_type_images.url}
@@ -102,10 +101,10 @@ export const CaptionedMagazineSlice = ({
                     field.captioned_magazine_slice_type_images.dimensions.height
                   }
                 />
-              </li>
-            ))}
-          </Magazine>
-        </DeferredAsset>
+              </div>
+            );
+          })}
+        </Magazine>
       }
     >
       <PrismicRichText render={caption} />

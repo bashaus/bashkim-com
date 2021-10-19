@@ -17,7 +17,7 @@ const Template = ({ ...args }: MagazineProps) => (
       {Array(args.pages)
         .fill("")
         .map((_value, index) => (
-          <li key={index}>
+          <div key={index}>
             <img
               src={`https://via.placeholder.com/${args.pageWidth}x${
                 args.pageHeight
@@ -26,7 +26,7 @@ const Template = ({ ...args }: MagazineProps) => (
               width={args.pageWidth}
               height={args.pageHeight}
             />
-          </li>
+          </div>
         ))}
     </Magazine>
   </div>

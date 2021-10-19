@@ -1,4 +1,4 @@
-import { TurnDisplay } from "%components/Turn";
+import { TurnDisplay } from "../Turn";
 
 export const normalizePage = (display: TurnDisplay, page: number): number => {
   switch (display) {

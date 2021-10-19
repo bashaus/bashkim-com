@@ -1,9 +1,9 @@
 @import "~breakpoint-sass";
 
-@import "~@bashkim-com/design-system/src/styleguide/utils/clearfix";
-@import "~@bashkim-com/design-system/src/styleguide/utils/media";
+@import "src/styleguide/utils/clearfix";
+@import "src/styleguide/utils/media";
 
-@import "~%styleguide/utils/z-index";
+// @import "~%styleguide/utils/z-index";
 
 .Turn {
   @include clearfix;
@@ -19,7 +19,7 @@
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  z-index: z-index("Turn");
+  // z-index: z-index("Turn");
 
   .Pages {
     margin-left: auto;

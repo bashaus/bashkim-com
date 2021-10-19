@@ -20,12 +20,12 @@ const Template = ({ ...args }: TurnProps): JSX.Element => (
       {Array(args.pages)
         .fill("")
         .map((_value, index) => (
-          <li key={index}>
+          <div key={index}>
             <img
               src={`https://via.placeholder.com/300x450?text=Page+${index + 1}`}
               alt={`Page ${index + 1}`}
             />
-          </li>
+          </div>
         ))}
     </Turn>
   </div>

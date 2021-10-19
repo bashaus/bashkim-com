@@ -1,24 +1,25 @@
 import { ReactNode, useCallback, useEffect, useState } from "react";
 
-import { Turn, TurnDisplay } from "%components/Turn";
+import { Turn, TurnDisplay } from "../Turn";
 import {
   convertPageToSpread,
   convertSpreadToPageNumbers,
   convertSpreadToPage,
 } from "./helpers";
 
-const RESPONSIVE = !process.browser
-  ? []
-  : [
-      {
-        media: window.matchMedia("(max-width: 767px)"),
-        display: TurnDisplay.SINGLE,
-      },
-      {
-        media: window.matchMedia("(min-width: 768px)"),
-        display: TurnDisplay.DOUBLE,
-      },
-    ];
+const RESPONSIVE =
+  typeof window !== typeof undefined
+    ? [
+        {
+          media: window.matchMedia("(max-width: 767px)"),
+          display: TurnDisplay.SINGLE,
+        },
+        {
+          media: window.matchMedia("(min-width: 768px)"),
+          display: TurnDisplay.DOUBLE,
+        },
+      ]
+    : [];
 
 export type MagazineProps = {
   children: ReactNode;

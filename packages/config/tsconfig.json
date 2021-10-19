@@ -4,6 +4,7 @@
     "baseUrl": "./src",
     "declaration": true,
     "declarationDir": "./build",
-    "outDir": "./build"
+    "outDir": "./build",
+    "typeRoots": ["./types"]
   }
 }

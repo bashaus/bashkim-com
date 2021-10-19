@@ -1,6 +1,6 @@
-import dynamic from "next/dynamic";
 import {
   CaptionedImageSlice,
+  CaptionedMagazineSlice,
   CaptionedScreenshotsSlice,
   CaptionedVideoSlice,
   CarouselImagesSlice,
@@ -11,13 +11,12 @@ import {
   NewspaperSlice,
   SubtitleSlice,
 } from "@bashkim-com/design-system";
+
 import type { PrismicSliceType } from "@bashkim-com/prismic";
 
 const SliceTypeComponentMap = {
   CaptionedImageSliceType: CaptionedImageSlice,
-  CaptionedMagazineSliceType: dynamic(
-    () => import("%slices/CaptionedMagazine")
-  ),
+  CaptionedMagazineSliceType: CaptionedMagazineSlice,
   CaptionedScreenshotsSliceType: CaptionedScreenshotsSlice,
   CaptionedVideoSliceType: CaptionedVideoSlice,
   CarouselImagesSliceType: CarouselImagesSlice,
