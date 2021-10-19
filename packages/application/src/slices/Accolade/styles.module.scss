@@ -2,7 +2,15 @@
 @import "~@bashkim-com/design-system/src/styleguide/utils/grid";
 
 .AccoladeSlice {
-  @include grid-container;
+  @include grid-container(
+    $margin: (),
+    $padding: (
+      top,
+      left,
+      right,
+      bottom,
+    )
+  );
 }
 
 .Details {
@@ -19,10 +27,6 @@
 }
 
 .Awards {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-
   @include grid-cell(
     $columns: (
       mobile-portrait: 12,
@@ -33,6 +37,9 @@
       desktop-wide: 9,
     )
   );
+
+  @include grid-container($margin: (), $padding: ());
+  width: 100%;
 }
 
 .Award {
@@ -46,22 +53,24 @@
       desktop-wide: 4,
     )
   );
+  @include grid-cell-padding(
+    $sides: (
+      top,
+      bottom,
+    )
+  );
 }
 
 .Award a {
   display: block;
-  position: relative;
-  padding-top: 3px;
-  padding-left: 75px;
 }
 
 .Trophy {
-  position: absolute;
-  top: 0;
-  left: 0;
+  display: block;
   width: 50px;
   height: 50px;
-  margin-top: 0;
+  margin-left: -10px;
+  margin-bottom: 20px;
 
   [data-prop-place="gold"] & {
     fill: $color-accolade-gold;
