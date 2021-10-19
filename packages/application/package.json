@@ -48,7 +48,7 @@
     "@babel/core": "^7.15.5",
     "@next/eslint-plugin-next": "^11.1.2",
     "@svgr/webpack": "^5.5.0",
-    "@types/faker": "^5.5.8",
+    "@types/faker": "^5.5.9",
     "@types/jest": "^27.0.2",
     "@types/jquery": "^3.5.7",
     "@types/mime": "^2.0.3",
