@@ -8,7 +8,9 @@ export { CarouselImage } from "./components/CarouselImage";
 export { DeviceFeaturePhone } from "./components/DeviceFeaturePhone";
 export { DeviceSmartphone } from "./components/DeviceSmartphone";
 export { Logo } from "./components/Logo";
+export { Magazine, MagazineSpreadChangeEvent } from "./components/Magazine";
 export { Tile } from "./components/Tile";
+export { Turn, TurnDisplay } from "./components/Turn";
 export { VideoPlayerYouTube } from "./components/VideoPlayerYouTube";
 
 /* Formatters */
@@ -41,6 +43,7 @@ export { TitlePartial } from "./partials/TitlePartial";
 
 /* Slices */
 export { CaptionedImageSlice } from "./slices/CaptionedImageSlice";
+export { CaptionedMagazineSlice } from "./slices/CaptionedMagazineSlice";
 export { CaptionedScreenshotsSlice } from "./slices/CaptionedScreenshotsSlice";
 export { CaptionedVideoSlice } from "./slices/CaptionedVideoSlice";
 export { CarouselImagesSlice } from "./slices/CarouselImagesSlice";

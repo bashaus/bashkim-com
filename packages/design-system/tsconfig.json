@@ -5,6 +5,9 @@
     "declaration": true,
     "declarationDir": "./build",
     "outDir": "./build",
-    "jsx": "react-jsx"
-  }
+    "jsx": "react-jsx",
+    "typeRoots": ["./types"]
+  },
+  "exclude": ["node_modules", "**/*.spec.ts", "**/*.spec.tsx"],
+  "include": ["**/*.ts", "**/*.tsx"]
 }

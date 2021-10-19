@@ -1,6 +1,7 @@
-import $ from "jquery";
 import classNames from "classnames";
 import { PureComponent, ReactNode, createRef } from "react";
+
+import $ from "../../libraries/jquery";
 
 import styles from "./styles.module.scss";
 
@@ -28,7 +29,7 @@ export type TurnState = {
 export class Turn extends PureComponent<TurnProps, TurnState> {
   public containerRef = createRef<HTMLDivElement>();
 
-  public pagesRef = createRef<HTMLOListElement>();
+  public pagesRef = createRef<HTMLDivElement>();
 
   constructor(props: TurnProps) {
     super(props);
@@ -40,9 +41,7 @@ export class Turn extends PureComponent<TurnProps, TurnState> {
 
   /* component management */
   async componentDidMount(): Promise<void> {
-    /* Must use require as turn.js is not a module */
-    /* eslint-disable-next-line global-require */
-    await require("%libraries/turn/turn.min");
+    await import("turn-js/turn.min");
 
     const { $pages } = this;
     const { display, center, onInitialize } = this.props;
@@ -70,6 +69,10 @@ export class Turn extends PureComponent<TurnProps, TurnState> {
   componentDidUpdate(prevProps: TurnProps): void {
     const { $pages } = this;
     const { center, display, page } = this.props;
+
+    if (!$pages.turn) {
+      return;
+    }
 
     if (prevProps.display !== display) {
       $pages.turn("display", display);
@@ -134,36 +137,6 @@ export class Turn extends PureComponent<TurnProps, TurnState> {
     }
   };
 
-  /*
-  handlePaginationPrevClick = (): void => {
-    const { display, page, onPageChange } = this.props;
-
-    if (!onPageChange) {
-      return;
-    }
-
-    if (display === TurnDisplay.DOUBLE) {
-      onPageChange(page - 2);
-    } else {
-      onPageChange(page - 1);
-    }
-  };
-
-  handlePaginationNextClick = (): void => {
-    const { display, page, onPageChange } = this.props;
-
-    if (!onPageChange) {
-      return;
-    }
-
-    if (display === TurnDisplay.DOUBLE) {
-      onPageChange(page + 2);
-    } else {
-      onPageChange(page + 1);
-    }
-  };
-  */
-
   render(): JSX.Element {
     const { children } = this.props;
     const { isInitialized } = this.state;
@@ -176,9 +149,9 @@ export class Turn extends PureComponent<TurnProps, TurnState> {
           [styles.isUninitialized]: !isInitialized,
         })}
       >
-        <ol ref={this.pagesRef} className={styles.Pages}>
+        <div ref={this.pagesRef} className={styles.Pages}>
           {children}
-        </ol>
+        </div>
       </div>
     );
   }

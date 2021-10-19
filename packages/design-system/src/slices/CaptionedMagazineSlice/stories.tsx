@@ -4,7 +4,7 @@ import { CaptionedMagazineSlice, CaptionedMagazineSliceProps } from ".";
 
 export default {
   component: CaptionedMagazineSlice,
-  title: "Prismic/Slices/CaptionedMagazine",
+  title: "Prismic slices/CaptionedMagazineSlice",
   argTypes: {
     slice: {
       control: "object",
