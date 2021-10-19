@@ -29,7 +29,7 @@
     "@storybook/manager-webpack5": "^6.3.12",
     "@storybook/react": "^6.3.12",
     "@svgr/webpack": "^5.5.0",
-    "@types/react": "^17.0.27",
+    "@types/react": "^17.0.30",
     "@types/react-slick": "^0.23.6",
     "babel-loader": "^8.2.2",
     "breakpoint-sass": "^2.7.1",
