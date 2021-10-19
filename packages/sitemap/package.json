@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "prebuild": "yarn clean",
     "build": "tsc",
     "clean": "rm -rf build/",
     "dev": "nodemon --config nodemon.json src/dev.ts",

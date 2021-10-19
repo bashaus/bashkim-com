@@ -6,7 +6,6 @@
   "module": "./build/index.es.js",
   "typings": "./build/index.d.ts",
   "scripts": {
-    "prebuild": "yarn clean",
     "build": "rollup -c",
     "clean": "rm -rf build/",
     "test": "echo \"Error: no test specified\" && exit 0"
