@@ -36,8 +36,8 @@ export { FullTextPartial } from "./partials/FullTextPartial";
 export { HeaderImagePartial } from "./partials/HeaderImagePartial";
 export { HeaderTextPartial } from "./partials/HeaderTextPartial";
 export { NewspaperPartial } from "./partials/NewspaperPartial";
-export { SplitPartial } from "./partials/SplitPartial";
 export { SplitItemPartial } from "./partials/SplitItemPartial";
+export { SplitPartial } from "./partials/SplitPartial";
 export { SubtitlePartial } from "./partials/SubtitlePartial";
 export { TitlePartial } from "./partials/TitlePartial";
 
