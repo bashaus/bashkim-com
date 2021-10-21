@@ -1,6 +1,6 @@
 import { createContext } from "react";
 
-import { NavigationContextType, INITIAL_STATE } from "./state";
+import { INITIAL_STATE, NavigationContextType } from "./state";
 
 export const NavigationContext = createContext<NavigationContextType>({
   state: INITIAL_STATE,

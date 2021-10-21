@@ -1,13 +1,11 @@
 import express, { static as eStatic } from "express";
 import path from "path";
 
-import { SitemapTemplate } from "./templates/sitemap";
-import { SitemapIndexTemplate } from "./templates/sitemapindex";
-
 import { SitemapIndex } from "./sitemapindexes/index";
-
 import { CaseStudiesSitemap } from "./sitemaps/case-studies";
 import { PagesSitemap } from "./sitemaps/pages";
+import { SitemapTemplate } from "./templates/sitemap";
+import { SitemapIndexTemplate } from "./templates/sitemapindex";
 
 export const app = express();
 

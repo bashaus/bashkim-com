@@ -1,16 +1,14 @@
+import "%libraries/sentry/init";
+
+import { LinkResolverContext } from "@bashkim-com/prismic";
 import { AppProps } from "next/app";
 import Head from "next/head";
 import { useEffect } from "react";
 
-import "%libraries/sentry/init";
-
-import { LinkResolverContext } from "@bashkim-com/prismic";
-import { PrismicLinkResolver } from "%libraries/prismic/link-resolver";
-
-import { NavigationProvider } from "%contexts/Navigation/provider";
-
 import { GoogleAnalytics } from "%components/GoogleAnalytics";
 import { SentryBoundary } from "%components/SentryBoundary";
+import { NavigationProvider } from "%contexts/Navigation/provider";
+import { PrismicLinkResolver } from "%libraries/prismic/link-resolver";
 
 const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
   useEffect((): void => {

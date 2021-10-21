@@ -1,8 +1,7 @@
 import { ReactNode, useContext } from "react";
 
-import { Navigation } from "%components/Navigation";
 import { Menu } from "%components/Menu";
-
+import { Navigation } from "%components/Navigation";
 import { NavigationContext } from "%contexts/Navigation/context";
 
 import styles from "./styles.module.scss";

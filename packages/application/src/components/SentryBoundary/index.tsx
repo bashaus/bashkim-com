@@ -1,7 +1,6 @@
-import * as Sentry from "@sentry/browser";
-import { PureComponent, ErrorInfo, ReactNode } from "react";
-
 import { RichTextFormatter } from "@bashkim-com/design-system";
+import * as Sentry from "@sentry/browser";
+import { ErrorInfo, PureComponent, ReactNode } from "react";
 
 export type SentryBoundaryProps = {
   children: ReactNode;

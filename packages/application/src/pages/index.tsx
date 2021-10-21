@@ -1,22 +1,20 @@
+import {
+  CallToAction,
+  Group,
+  SplitItemPartial,
+  SplitPartial,
+} from "@bashkim-com/design-system";
+import type { HomePageContentType } from "@bashkim-com/prismic";
 import { GetStaticProps } from "next";
 import Head from "next/head";
 import Link from "next/link";
 
-import type { HomePageContentType } from "@bashkim-com/prismic";
-import {
-  CallToAction,
-  Group,
-  SplitPartial,
-  SplitItemPartial,
-} from "@bashkim-com/design-system";
-
 import { HomeFeatured } from "%components/HomeFeatured";
 import { HomeHello } from "%components/HomeHello";
-import { Page } from "%components/Page";
 import { MetaDescription } from "%components/MetaDescription";
 import { MetaKeywords } from "%components/MetaKeywords";
 import { MetaTitle } from "%components/MetaTitle";
-
+import { Page } from "%components/Page";
 import { PrismicClient } from "%libraries/prismic/client";
 import { HomePageQuery } from "%libraries/prismic/queries/HomePageQuery";
 

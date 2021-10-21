@@ -1,5 +1,6 @@
-import { useContext } from "react";
 import { RichText, RichTextBlock } from "prismic-reactjs";
+import { useContext } from "react";
+
 import { LinkResolverContext } from "../../contexts/LinkResolver/context";
 
 export type PrismicRichTextProps = {

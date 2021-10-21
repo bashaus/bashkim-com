@@ -1,5 +1,5 @@
-import { DeepPartial } from "utility-types";
 import type { RichTextBlock } from "prismic-reactjs";
+import { DeepPartial } from "utility-types";
 
 import { CaseStudyContentType } from "../../../../content-types/case_study/type";
 import { PortfolioCategorySliceType } from "../../../../slice-types/PortfolioCategory/type";

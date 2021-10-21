@@ -1,8 +1,7 @@
 import classNames from "classnames";
-import { PureComponent, ReactNode, createRef } from "react";
+import { createRef, PureComponent, ReactNode } from "react";
 
 import $ from "../../libraries/jquery";
-
 import styles from "./styles.module.scss";
 
 export enum TurnDisplay {

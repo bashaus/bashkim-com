@@ -1,9 +1,9 @@
-import { useContext } from "react";
-import { Link } from "prismic-reactjs";
 import {
   CollaboratorSliceType,
   LinkResolverContext,
 } from "@bashkim-com/prismic";
+import { Link } from "prismic-reactjs";
+import { useContext } from "react";
 
 export type CollaboratorSliceProps = {
   slice: CollaboratorSliceType;

@@ -1,6 +1,5 @@
-import Script from "next/script";
-
 import getConfig from "next/config";
+import Script from "next/script";
 
 export const GoogleAnalytics = (): JSX.Element => {
   const { publicRuntimeConfig: config } = getConfig();

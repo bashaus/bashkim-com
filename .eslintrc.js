@@ -14,12 +14,21 @@ module.exports = {
   env: {
     es6: true,
   },
-  plugins: ["promise", "react", "react-hooks", "jsx-a11y", "jest", "prettier"],
+  plugins: [
+    "promise",
+    "react",
+    "react-hooks",
+    "jsx-a11y",
+    "jest",
+    "prettier",
+    "simple-import-sort",
+  ],
   rules: {
     "prettier/prettier": "error",
     "jsx-a11y/anchor-is-valid": 0,
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",
+    "simple-import-sort/imports": "error",
   },
   settings: {
     react: {

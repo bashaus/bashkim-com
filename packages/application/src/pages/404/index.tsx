@@ -1,7 +1,7 @@
 import { HeaderTextPartial } from "@bashkim-com/design-system";
 
-import { Page } from "%components/Page";
 import { MenuBackButtonHomeImpl } from "%components/MenuBackButtonHomeImpl";
+import { Page } from "%components/Page";
 
 // import styles from "./styles.module.scss";
 

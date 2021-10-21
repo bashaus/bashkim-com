@@ -2,7 +2,6 @@ import classNames from "classnames";
 import { CSSProperties, HTMLAttributes, ReactNode } from "react";
 
 import { RichTextFormatter } from "../../formatters/RichTextFormatter";
-
 import styles from "./style.module.scss";
 
 export type SplitItemPartialProps = HTMLAttributes<HTMLDivElement> & {

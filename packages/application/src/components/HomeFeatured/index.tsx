@@ -1,8 +1,7 @@
-import { useContext } from "react";
-import Link from "next/link";
-
 import { CallToAction, FullBannerPartial } from "@bashkim-com/design-system";
 import { HomePageContentType, LinkResolverContext } from "@bashkim-com/prismic";
+import Link from "next/link";
+import { useContext } from "react";
 
 export type HomeFeaturedProps = {
   caseStudies: HomePageContentType["featured_case_studies"];

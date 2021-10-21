@@ -1,5 +1,5 @@
-import Head from "next/head";
 import { getType as getMimeType } from "mime";
+import Head from "next/head";
 
 export type MetaImageProps = {
   width?: number;

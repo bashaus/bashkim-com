@@ -11,7 +11,6 @@ import {
   NewspaperSlice,
   SubtitleSlice,
 } from "@bashkim-com/design-system";
-
 import type { PrismicSliceType } from "@bashkim-com/prismic";
 
 const SliceTypeComponentMap = {

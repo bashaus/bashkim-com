@@ -1,4 +1,4 @@
-import { PrismicRichText, NewspaperSliceType } from "@bashkim-com/prismic";
+import { NewspaperSliceType, PrismicRichText } from "@bashkim-com/prismic";
 
 import { RichTextFormatter } from "../../formatters/RichTextFormatter";
 import { NewspaperPartial } from "../../partials/NewspaperPartial";

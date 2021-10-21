@@ -1,11 +1,10 @@
-import Link from "next/link";
-
 import {
   Footer as DSFooter,
-  FooterGroup,
   FooterColumn,
+  FooterGroup,
   FooterLinks,
 } from "@bashkim-com/design-system";
+import Link from "next/link";
 
 import { FooterCopyright } from "%components/FooterCopyright";
 

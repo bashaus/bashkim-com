@@ -1,45 +1,31 @@
 import AccoladeSliceJson from "./Accolade/fixture.json";
 import type { AccoladeSliceType } from "./Accolade/type";
-
 import CaptionedImageSliceJson from "./CaptionedImage/fixture.json";
 import type { CaptionedImageSliceType } from "./CaptionedImage/type";
-
 import CaptionedMagazineSliceJson from "./CaptionedMagazine/fixture.json";
 import type { CaptionedMagazineSliceType } from "./CaptionedMagazine/type";
-
 import CaptionedScreenshotsSliceJson from "./CaptionedScreenshots/fixture.json";
 import type { CaptionedScreenshotsSliceType } from "./CaptionedScreenshots/type";
-
 import CaptionedVideoSliceJson from "./CaptionedVideo/fixture.json";
 import type { CaptionedVideoSliceType } from "./CaptionedVideo/type";
-
 import CarouselImagesSliceJson from "./CarouselImages/fixture.json";
 import type { CarouselImagesSliceType } from "./CarouselImages/type";
-
 import CarouselPhonesSliceJson from "./CarouselPhones/fixture.json";
 import type { CarouselPhonesSliceType } from "./CarouselPhones/type";
-
 import CollaboratorSliceJson from "./Collaborator/fixture.json";
 import type { CollaboratorSliceType } from "./Collaborator/type";
-
 import ExhibitionSliceJson from "./Exhibition/fixture.json";
 import type { ExhibitionSliceType } from "./Exhibition/type";
-
 import FullTextSliceJson from "./FullText/fixture.json";
 import type { FullTextSliceType } from "./FullText/type";
-
 import GridEmbedSliceJson from "./GridEmbed/fixture.json";
 import type { GridEmbedSliceType } from "./GridEmbed/type";
-
 import GridVideoSliceJson from "./GridVideo/fixture.json";
 import type { GridVideoSliceType } from "./GridVideo/type";
-
 import NewspaperSliceJson from "./Newspaper/fixture.json";
 import type { NewspaperSliceType } from "./Newspaper/type";
-
 import PortfolioCategorySliceJson from "./PortfolioCategory/fixture.json";
 import type { PortfolioCategorySliceType } from "./PortfolioCategory/type";
-
 import SubtitleSliceJson from "./Subtitle/fixture.json";
 import type { SubtitleSliceType } from "./Subtitle/type";
 

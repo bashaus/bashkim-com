@@ -1,10 +1,10 @@
 import commonjs from "@rollup/plugin-commonjs";
 import nodeResolve from "@rollup/plugin-node-resolve";
+import url from "postcss-url";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
-import typescript from "rollup-plugin-typescript2";
 import postcss from "rollup-plugin-postcss";
 import svg from "rollup-plugin-svg";
-import url from "postcss-url";
+import typescript from "rollup-plugin-typescript2";
 
 import packageJson from "./package.json";
 

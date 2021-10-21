@@ -1,7 +1,6 @@
 import { ReactNode } from "react";
 
 import { RichTextFormatter } from "../../formatters/RichTextFormatter";
-
 import styles from "./styles.module.scss";
 
 export type CaptionedPartialProps = {

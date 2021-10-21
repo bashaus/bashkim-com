@@ -5,10 +5,10 @@ import CaptionedVideoSliceType from "../../../../slice-types/CaptionedVideo/sche
 import CarouselImagesSliceType from "../../../../slice-types/CarouselImages/schema.json";
 import CarouselPhonesSliceType from "../../../../slice-types/CarouselPhones/schema.json";
 import FullTextSliceType from "../../../../slice-types/FullText/schema.json";
-import NewspaperSliceType from "../../../../slice-types/Newspaper/schema.json";
-import SubtitleSliceType from "../../../../slice-types/Subtitle/schema.json";
 import GridEmbedSliceType from "../../../../slice-types/GridEmbed/schema.json";
 import GridVideoSliceType from "../../../../slice-types/GridVideo/schema.json";
+import NewspaperSliceType from "../../../../slice-types/Newspaper/schema.json";
+import SubtitleSliceType from "../../../../slice-types/Subtitle/schema.json";
 
 export default {
   body: {

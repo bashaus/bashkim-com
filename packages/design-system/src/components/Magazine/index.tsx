@@ -3,8 +3,8 @@ import { ReactNode, useCallback, useEffect, useState } from "react";
 import { Turn, TurnDisplay } from "../Turn";
 import {
   convertPageToSpread,
-  convertSpreadToPageNumbers,
   convertSpreadToPage,
+  convertSpreadToPageNumbers,
 } from "./helpers";
 
 const RESPONSIVE =

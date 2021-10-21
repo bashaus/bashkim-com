@@ -1,5 +1,5 @@
-import { createContext } from "react";
 import type { LinkResolver } from "prismic-reactjs";
+import { createContext } from "react";
 
 import { LinkResolverNotImplementedError } from "./errors";
 

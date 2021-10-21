@@ -1,5 +1,4 @@
 import { FooterLinks } from "../FooterLinks";
-
 import { FooterColumn, FooterColumnProps } from ".";
 
 export default {

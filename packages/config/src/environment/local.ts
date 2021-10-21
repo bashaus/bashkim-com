@@ -1,5 +1,4 @@
 import { ConfigPartialType } from "../types";
-
 import { googleAnalytics } from "./local/googleAnalytics";
 import { next } from "./local/next";
 import { sentry } from "./local/sentry";

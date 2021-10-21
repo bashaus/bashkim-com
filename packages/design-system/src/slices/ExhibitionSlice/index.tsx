@@ -1,7 +1,7 @@
 import {
+  ExhibitionSliceType,
   PrismicDate,
   PrismicRichText,
-  ExhibitionSliceType,
 } from "@bashkim-com/prismic";
 
 import { LifespanFormatter } from "../../formatters/LifespanFormatter";

@@ -1,4 +1,4 @@
-import { PrismicRichText, CarouselImagesSliceType } from "@bashkim-com/prismic";
+import { CarouselImagesSliceType, PrismicRichText } from "@bashkim-com/prismic";
 
 import { Carousel } from "../../components/Carousel";
 import { CarouselImage } from "../../components/CarouselImage";

@@ -1,25 +1,22 @@
-import { GetStaticProps } from "next";
-
-import type {
-  CaseStudyContentType,
-  PortfolioPageContentType,
-} from "@bashkim-com/prismic";
-
 import {
   Group,
   GroupDesign,
   HeaderTextPartial,
   SubtitlePartial,
 } from "@bashkim-com/design-system";
+import type {
+  CaseStudyContentType,
+  PortfolioPageContentType,
+} from "@bashkim-com/prismic";
+import { GetStaticProps } from "next";
 
-import { Page } from "%components/Page";
 import { MenuBackButtonHomeImpl } from "%components/MenuBackButtonHomeImpl";
 import { MetaDescription } from "%components/MetaDescription";
 import { MetaKeywords } from "%components/MetaKeywords";
 import { MetaTitle } from "%components/MetaTitle";
-import { PortfolioFeaturedCaseStudies } from "%components/PortfolioFeaturedCaseStudies";
+import { Page } from "%components/Page";
 import { PortfolioCategory } from "%components/PortfolioCategory";
-
+import { PortfolioFeaturedCaseStudies } from "%components/PortfolioFeaturedCaseStudies";
 import { PrismicClient } from "%libraries/prismic/client";
 import { PortfolioPageQuery } from "%libraries/prismic/queries/PortfolioPageQuery";
 

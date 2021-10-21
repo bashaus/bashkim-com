@@ -1,8 +1,7 @@
 import { TurnDisplay } from "../Turn";
-
 import {
-  convertSpreadToPage,
   convertPageToSpread,
+  convertSpreadToPage,
   convertSpreadToPageNumbers,
   normalizePage,
 } from "./helpers";

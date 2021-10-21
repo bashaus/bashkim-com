@@ -1,4 +1,5 @@
 import express from "express";
+
 import { app as prismic } from "./routes/prismic";
 
 export const app = express();

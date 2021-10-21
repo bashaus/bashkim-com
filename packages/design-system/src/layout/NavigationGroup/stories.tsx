@@ -1,5 +1,4 @@
 import { NavigationItem } from "../NavigationItem";
-
 import { NavigationGroup, NavigationGroupProps } from ".";
 
 export default {

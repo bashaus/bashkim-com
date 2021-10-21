@@ -4,7 +4,6 @@ import { Date as PrismicDate } from "prismic-reactjs";
 
 import { PrismicClient } from "../libraries/prismic/client";
 import { CaseStudiesQuery } from "../libraries/prismic/queries/caseStudies";
-
 import { UrlType } from "../templates/sitemap";
 
 export const CaseStudiesSitemap = async (): Promise<Array<UrlType>> => {
