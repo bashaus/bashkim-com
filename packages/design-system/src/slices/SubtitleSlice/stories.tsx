@@ -20,7 +20,7 @@ const Template = ({ ...args }: SubtitleSliceProps) => (
   <SubtitleSlice {...args} />
 );
 
-export const Render = Template.bind({});
-Render.args = {
+export const PrismicFixture = Template.bind({});
+PrismicFixture.args = {
   slice: SubtitleSliceFixture,
 };
