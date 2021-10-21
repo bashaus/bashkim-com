@@ -1,4 +1,4 @@
-import { PrismicRichText, FullTextSliceType } from "@bashkim-com/prismic";
+import { FullTextSliceType, PrismicRichText } from "@bashkim-com/prismic";
 
 import { FullTextPartial } from "../../partials/FullTextPartial";
 

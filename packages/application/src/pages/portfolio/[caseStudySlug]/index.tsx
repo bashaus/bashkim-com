@@ -1,28 +1,24 @@
-import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from "next";
-
-import type { CaseStudyContentType } from "@bashkim-com/prismic";
-
 import { Group, GroupDesign } from "@bashkim-com/design-system";
+import type { CaseStudyContentType } from "@bashkim-com/prismic";
+import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from "next";
 
 import { CaseStudyAccolades } from "%components/CaseStudyAccolades";
 import { CaseStudyCollaborators } from "%components/CaseStudyCollaborators";
 import { CaseStudyExhibitions } from "%components/CaseStudyExhibitions";
 import { CaseStudyHeader } from "%components/CaseStudyHeader";
-import { Page } from "%components/Page";
 import { MenuBackButtonPortfolioImpl } from "%components/MenuBackButtonPortfolioImpl";
 import { MetaCanonical } from "%components/MetaCanonical";
 import { MetaDescription } from "%components/MetaDescription";
 import { MetaImage } from "%components/MetaImage";
 import { MetaKeywords } from "%components/MetaKeywords";
 import { MetaTitle } from "%components/MetaTitle";
+import { Page } from "%components/Page";
 import { Slice } from "%components/Slice";
-
 import { NotFoundError } from "%libraries/next/errors/NotFoundError";
-
 import { PrismicClient } from "%libraries/prismic/client";
-import { CaseStudyPageQuery } from "%libraries/prismic/queries/CaseStudyPageQuery";
-import { CaseStudyBodyQuery } from "%libraries/prismic/queries/CaseStudyBodyQuery";
 import { CaseStudiesQuery } from "%libraries/prismic/queries/CaseStudiesQuery";
+import { CaseStudyBodyQuery } from "%libraries/prismic/queries/CaseStudyBodyQuery";
+import { CaseStudyPageQuery } from "%libraries/prismic/queries/CaseStudyPageQuery";
 
 type CaseStudyPageProps = {
   caseStudyPage: CaseStudyContentType;

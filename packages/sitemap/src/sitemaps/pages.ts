@@ -1,4 +1,5 @@
 import { config } from "@bashkim-com/config";
+
 import { UrlType } from "../templates/sitemap";
 
 export const PagesSitemap = async (): Promise<Array<UrlType>> => {

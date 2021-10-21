@@ -1,7 +1,7 @@
 import { Machine } from "xstate";
 
 import { PromiseContext } from "%machines/Promise/context";
-import { PromiseEvents, PromiseEvent } from "%machines/Promise/events";
+import { PromiseEvent, PromiseEvents } from "%machines/Promise/events";
 import { PromiseService } from "%machines/Promise/services";
 import { PromiseState } from "%machines/Promise/states";
 

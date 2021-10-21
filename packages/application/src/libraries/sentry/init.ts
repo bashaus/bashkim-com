@@ -1,5 +1,5 @@
-import getConfig from "next/config";
 import * as Sentry from "@sentry/browser";
+import getConfig from "next/config";
 
 const { publicRuntimeConfig: config } = getConfig();
 

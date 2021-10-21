@@ -1,8 +1,8 @@
-import type { DeepPartial } from "utility-types";
 import type { RichTextBlock } from "prismic-reactjs";
+import type { DeepPartial } from "utility-types";
 
-import type { PrismicSliceType } from "../../types/Slice";
 import type { CaseStudyContentType } from "../../content-types";
+import type { PrismicSliceType } from "../../types/Slice";
 
 export type PortfolioCategorySliceType = PrismicSliceType & {
   primary: {

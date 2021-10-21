@@ -1,7 +1,7 @@
-import { PrismicRichText, CaptionedVideoSliceType } from "@bashkim-com/prismic";
+import { CaptionedVideoSliceType, PrismicRichText } from "@bashkim-com/prismic";
 
-import { CaptionedPartial } from "../../partials/CaptionedPartial";
 import { VideoPlayerYouTube } from "../../components/VideoPlayerYouTube";
+import { CaptionedPartial } from "../../partials/CaptionedPartial";
 
 export type CaptionedVideoSliceProps = {
   slice: CaptionedVideoSliceType;

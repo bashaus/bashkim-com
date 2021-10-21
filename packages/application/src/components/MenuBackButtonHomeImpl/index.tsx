@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { HomeIcon } from "@primer/octicons-react";
+import Link from "next/link";
 
 import { MenuBackButton } from "%components/MenuBackButton";
 

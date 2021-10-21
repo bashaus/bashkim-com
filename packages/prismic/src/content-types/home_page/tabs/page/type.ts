@@ -1,4 +1,5 @@
 import type { DeepPartial } from "utility-types";
+
 import type { CaseStudyContentType } from "../../../../content-types";
 
 export type HomePageContentTypePageTab = {

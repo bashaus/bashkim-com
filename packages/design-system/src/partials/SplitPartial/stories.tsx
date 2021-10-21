@@ -1,5 +1,5 @@
-import { SplitPartial, SplitPartialProps } from ".";
 import { SplitItemPartial } from "../SplitItemPartial";
+import { SplitPartial, SplitPartialProps } from ".";
 
 export default {
   component: SplitPartial,

@@ -1,7 +1,6 @@
-import { FooterGroup } from "../FooterGroup";
 import { FooterColumn } from "../FooterColumn";
+import { FooterGroup } from "../FooterGroup";
 import { FooterLinks } from "../FooterLinks";
-
 import { Footer, FooterProps } from ".";
 
 export default {

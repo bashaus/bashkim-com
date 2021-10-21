@@ -1,4 +1,5 @@
 import { Dispatch } from "react";
+
 import { NavigationActions } from "./actions";
 
 export type NavigationState = {

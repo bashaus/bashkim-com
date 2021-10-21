@@ -1,10 +1,9 @@
-import Link from "next/link";
-
 import { RichTextFormatter, Tile } from "@bashkim-com/design-system";
 import {
-  PrismicRichText,
   PortfolioPageContentTypePageTabFeatured,
+  PrismicRichText,
 } from "@bashkim-com/prismic";
+import Link from "next/link";
 
 import styles from "./styles.module.scss";
 

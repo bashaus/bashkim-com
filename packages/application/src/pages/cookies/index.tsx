@@ -1,14 +1,13 @@
 import {
-  Group,
   FullTextPartial,
+  Group,
   HeaderImagePartial,
 } from "@bashkim-com/design-system";
 
-import { Page } from "%components/Page";
 import { MenuBackButtonHomeImpl } from "%components/MenuBackButtonHomeImpl";
 import { MetaDescription } from "%components/MetaDescription";
 import { MetaTitle } from "%components/MetaTitle";
-
+import { Page } from "%components/Page";
 import HeaderDesktopImage from "%public/static/images/cookies/header-desktop.jpg";
 import HeaderMobileImage from "%public/static/images/cookies/header-mobile.jpg";
 

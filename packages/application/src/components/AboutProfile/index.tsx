@@ -1,17 +1,17 @@
 import {
-  RichTextFormatter,
   Group,
+  RichTextFormatter,
   TitlePartial,
 } from "@bashkim-com/design-system";
 
-import OnTimeImage from "%public/static/vectors/principles/on-time.svg";
-import WithinBudgetImage from "%public/static/vectors/principles/within-budget.svg";
-import ToSpecificationImage from "%public/static/vectors/principles/to-specification.svg";
-import ToSatisfactionImage from "%public/static/vectors/principles/to-satisfaction.svg";
-import MaintainableImage from "%public/static/vectors/principles/maintainable.svg";
-import SecurelyImage from "%public/static/vectors/principles/securely.svg";
 import EthicallyImage from "%public/static/vectors/principles/ethically.svg";
+import MaintainableImage from "%public/static/vectors/principles/maintainable.svg";
+import OnTimeImage from "%public/static/vectors/principles/on-time.svg";
 import RobustImage from "%public/static/vectors/principles/robust.svg";
+import SecurelyImage from "%public/static/vectors/principles/securely.svg";
+import ToSatisfactionImage from "%public/static/vectors/principles/to-satisfaction.svg";
+import ToSpecificationImage from "%public/static/vectors/principles/to-specification.svg";
+import WithinBudgetImage from "%public/static/vectors/principles/within-budget.svg";
 
 import styles from "./styles.module.scss";
 

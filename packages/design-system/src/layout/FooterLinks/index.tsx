@@ -1,5 +1,5 @@
-import { HTMLAttributes } from "react";
 import classNames from "classnames";
+import { HTMLAttributes } from "react";
 
 import styles from "./styles.module.scss";
 

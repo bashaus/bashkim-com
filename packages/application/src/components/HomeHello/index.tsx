@@ -1,9 +1,8 @@
+import { HeaderTextPartial } from "@bashkim-com/design-system";
 import Link from "next/link";
 
-import { HeaderTextPartial } from "@bashkim-com/design-system";
-
-import IconGitHub from "%public/static/vectors/social/github.svg";
 import IconPortfolio from "%public/static/vectors/icons/portfolio.svg";
+import IconGitHub from "%public/static/vectors/social/github.svg";
 
 import styles from "./styles.module.scss";
 

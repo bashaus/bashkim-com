@@ -2,20 +2,19 @@ import {
   CallToAction,
   Group,
   HeaderImagePartial,
-  SplitPartial,
   SplitItemPartial,
+  SplitPartial,
   SubtitlePartial,
 } from "@bashkim-com/design-system";
 
-import { AboutProfile } from "%components/AboutProfile";
-import { AboutEducation } from "%components/AboutEducation";
 import { AboutCertifications } from "%components/AboutCertifications";
-import { Page } from "%components/Page";
+import { AboutEducation } from "%components/AboutEducation";
+import { AboutProfile } from "%components/AboutProfile";
 import { MenuBackButtonHomeImpl } from "%components/MenuBackButtonHomeImpl";
 import { MetaDescription } from "%components/MetaDescription";
 import { MetaKeywords } from "%components/MetaKeywords";
 import { MetaTitle } from "%components/MetaTitle";
-
+import { Page } from "%components/Page";
 import HeaderDesktopImage from "%public/static/images/about/header-desktop.jpg";
 
 const AboutPage = (): JSX.Element => (

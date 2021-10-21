@@ -1,14 +1,14 @@
-import type { CaseStudyContentType } from "@bashkim-com/prismic";
-
-import { CaseStudyDetails } from "%components/CaseStudyDetails";
-import { CaseStudyTechnologies } from "%components/CaseStudyTechnologies";
 import {
   Group,
   GroupDesign,
   HeaderImagePartial,
-  TitlePartial,
   SubtitlePartial,
+  TitlePartial,
 } from "@bashkim-com/design-system";
+import type { CaseStudyContentType } from "@bashkim-com/prismic";
+
+import { CaseStudyDetails } from "%components/CaseStudyDetails";
+import { CaseStudyTechnologies } from "%components/CaseStudyTechnologies";
 
 import styles from "./styles.module.scss";
 

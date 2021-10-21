@@ -5,10 +5,10 @@ import type { CaptionedVideoSliceType } from "../../../../slice-types/CaptionedV
 import type { CarouselImagesSliceType } from "../../../../slice-types/CarouselImages/type";
 import type { CarouselPhonesSliceType } from "../../../../slice-types/CarouselPhones/type";
 import type { FullTextSliceType } from "../../../../slice-types/FullText/type";
-import type { NewspaperSliceType } from "../../../../slice-types/Newspaper/type";
-import type { SubtitleSliceType } from "../../../../slice-types/Subtitle/type";
 import type { GridEmbedSliceType } from "../../../../slice-types/GridEmbed/type";
 import type { GridVideoSliceType } from "../../../../slice-types/GridVideo/type";
+import type { NewspaperSliceType } from "../../../../slice-types/Newspaper/type";
+import type { SubtitleSliceType } from "../../../../slice-types/Subtitle/type";
 
 export type CaseStudyContentTypePageTab = {
   body: Array<

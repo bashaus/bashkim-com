@@ -1,8 +1,8 @@
-import { PrismicDate, CaseStudyContentType } from "@bashkim-com/prismic";
 import {
-  RichTextFormatter,
   LifespanFormatter,
+  RichTextFormatter,
 } from "@bashkim-com/design-system";
+import { CaseStudyContentType, PrismicDate } from "@bashkim-com/prismic";
 
 import styles from "./styles.module.scss";
 

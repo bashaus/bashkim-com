@@ -1,9 +1,9 @@
-import { PrismicRichText, CarouselPhonesSliceType } from "@bashkim-com/prismic";
+import { CarouselPhonesSliceType, PrismicRichText } from "@bashkim-com/prismic";
 
 import { Carousel } from "../../components/Carousel";
 import { CarouselImage } from "../../components/CarouselImage";
-import { DeviceSmartphone } from "../../components/DeviceSmartphone";
 import { DeviceFeaturePhone } from "../../components/DeviceFeaturePhone";
+import { DeviceSmartphone } from "../../components/DeviceSmartphone";
 import { FullImagePartial } from "../../partials/FullImagePartial";
 
 const CAROUSEL_RESPONSIVE = [

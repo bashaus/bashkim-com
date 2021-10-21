@@ -1,4 +1,4 @@
-import { PrismicRichText, GridVideoSliceType } from "@bashkim-com/prismic";
+import { GridVideoSliceType, PrismicRichText } from "@bashkim-com/prismic";
 
 import styles from "./styles.module.scss";
 

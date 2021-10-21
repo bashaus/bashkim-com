@@ -1,7 +1,7 @@
 import {
   Group,
-  SplitPartial,
   SplitItemPartial,
+  SplitPartial,
   SubtitlePartial,
 } from "@bashkim-com/design-system";
 

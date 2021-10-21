@@ -2,7 +2,6 @@ import classNames from "classnames";
 import { HTMLAttributes } from "react";
 
 import { RichTextFormatter } from "../../formatters/RichTextFormatter";
-
 import styles from "./styles.module.scss";
 
 export type SubtitlePartialProps = HTMLAttributes<HTMLDivElement>;

@@ -1,4 +1,4 @@
-import { PrismicRichText, CaptionedImageSliceType } from "@bashkim-com/prismic";
+import { CaptionedImageSliceType, PrismicRichText } from "@bashkim-com/prismic";
 
 import { CaptionedPartial } from "../../partials/CaptionedPartial";
 

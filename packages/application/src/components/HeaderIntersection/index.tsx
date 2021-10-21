@@ -1,7 +1,7 @@
 import { memo, useCallback, useContext, useEffect, useRef } from "react";
 
-import { NavigationContext } from "%contexts/Navigation/context";
 import { NavigationActionsTypes } from "%contexts/Navigation/actions";
+import { NavigationContext } from "%contexts/Navigation/context";
 
 import styles from "./styles.module.scss";
 

@@ -1,6 +1,6 @@
-import Link from "next/link";
-import type { CollaboratorSliceType } from "@bashkim-com/prismic";
 import { CollaboratorSlice, SubtitlePartial } from "@bashkim-com/design-system";
+import type { CollaboratorSliceType } from "@bashkim-com/prismic";
+import Link from "next/link";
 
 import styles from "./styles.module.scss";
 

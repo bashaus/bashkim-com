@@ -1,13 +1,12 @@
-import { useContext } from "react";
-import { Link } from "prismic-reactjs";
-
-import { RichTextFormatter, DateFormatter } from "@bashkim-com/design-system";
+import { DateFormatter, RichTextFormatter } from "@bashkim-com/design-system";
 import {
   AccoladeSliceType,
   LinkResolverContext,
   PrismicDate,
   PrismicRichText,
 } from "@bashkim-com/prismic";
+import { Link } from "prismic-reactjs";
+import { useContext } from "react";
 
 import IconTrophy from "%public/static/vectors/icons/trophy.svg";
 

@@ -1,7 +1,8 @@
 import { ReactNode } from "react";
-import { HeaderIntersection } from "%components/HeaderIntersection";
-import { Header } from "%components/Header";
+
 import { Footer } from "%components/Footer";
+import { Header } from "%components/Header";
+import { HeaderIntersection } from "%components/HeaderIntersection";
 
 export type PageProps = {
   backButton?: ReactNode;

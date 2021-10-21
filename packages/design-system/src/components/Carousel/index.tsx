@@ -1,8 +1,8 @@
 import classNames from "classnames";
 import SlickSlider, { Settings } from "react-slick";
 
-import styles from "./styles.module.scss";
 import dotsStyles from "./styles.dots.module.scss";
+import styles from "./styles.module.scss";
 
 export type CarouselProps = Settings;
 
