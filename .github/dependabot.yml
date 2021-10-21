@@ -6,5 +6,5 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-    default_assignees:
+    assignees:
       - "bashaus"
