@@ -5,7 +5,14 @@ import { RichTextFormatter } from "../../formatters/RichTextFormatter";
 import styles from "./styles.module.scss";
 
 export type DeviceFeaturePhoneProps = {
-  children: ReactNode;
+  /**
+   * A caption of the figure, styled in rich text
+   */
+  children?: ReactNode;
+
+  /**
+   * The `<img />` to display as the feature phone screen
+   */
   figure: ReactNode;
 };
 
@@ -20,8 +27,10 @@ export const DeviceFeaturePhone = ({
     <div className={styles.Wrapper}>
       <div className={styles.Content}>{figure}</div>
     </div>
-    <figcaption>
-      <RichTextFormatter>{children}</RichTextFormatter>
-    </figcaption>
+    {children && (
+      <figcaption>
+        <RichTextFormatter>{children}</RichTextFormatter>
+      </figcaption>
+    )}
   </figure>
 );

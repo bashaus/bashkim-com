@@ -8,9 +8,15 @@ export default {
   argTypes: {
     backgroundDesktop: { control: "file" },
     backgroundMobile: { control: "file" },
-    title: { control: "text" },
-    subtitle: { control: "text" },
     id: { defaultValue: "FullBannerPartial" },
+    title: {
+      control: "text",
+      table: { category: "Story helpers" },
+    },
+    subtitle: {
+      control: "text",
+      table: { category: "Story helpers" },
+    },
   },
 };
 

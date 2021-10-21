@@ -22,14 +22,14 @@ const Template = ({
   ...args
 }: SplitPartialStoryProps) => (
   <>
-    <SplitPartial {...args} index={index}>
+    <SplitPartial index={index} {...args}>
       <SplitItemPartial>
         <div>SplitPartial</div>
       </SplitItemPartial>
       <SplitItemPartial backgroundImage={backgroundImage[0]} />
     </SplitPartial>
 
-    <SplitPartial {...args} index={index + 1}>
+    <SplitPartial index={index + 1} {...args}>
       <SplitItemPartial>
         <div>SplitPartial (alternate)</div>
       </SplitItemPartial>

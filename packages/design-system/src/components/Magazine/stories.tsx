@@ -4,7 +4,7 @@ export default {
   component: Magazine,
   title: "Components/Magazine",
   argTypes: {
-    spread: { control: "number", min: 1, max: 3 },
+    spread: { min: 1, max: 3 },
   },
   parameters: {
     layout: "centered",

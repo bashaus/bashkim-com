@@ -28,8 +28,11 @@ export type TurnState = {
 
 export class Turn extends PureComponent<TurnProps, TurnState> {
   public containerRef = createRef<HTMLDivElement>();
-
   public pagesRef = createRef<HTMLDivElement>();
+
+  static defaultProps = {
+    display: TurnDisplay.DOUBLE,
+  };
 
   constructor(props: TurnProps) {
     super(props);

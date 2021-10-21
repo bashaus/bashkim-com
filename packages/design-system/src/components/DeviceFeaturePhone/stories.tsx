@@ -4,10 +4,10 @@ import { DeviceFeaturePhone, DeviceFeaturePhoneProps } from ".";
 
 export default {
   component: DeviceFeaturePhone,
-  title: "Components/DeviceFeaturePhone",
+  title: "Components/Device/Feature Phone",
   argTypes: {
     figure: { control: "file" },
-    caption: { control: "text" },
+    children: { control: "text" },
   },
   parameters: {
     layout: "centered",
@@ -16,21 +16,20 @@ export default {
 
 type DeviceFeaturePhoneStoryProps = DeviceFeaturePhoneProps & {
   figure: Array<string>;
-  caption: string;
 };
 
 const Template = ({
-  caption,
+  children,
   figure,
   ...args
 }: DeviceFeaturePhoneStoryProps) => (
   <DeviceFeaturePhone figure={<img src={figure[0]} alt="" />} {...args}>
-    <p>{caption}</p>
+    <p>{children}</p>
   </DeviceFeaturePhone>
 );
 
-export const Render = Template.bind({});
-Render.args = {
+export const FeaturePhone = Template.bind({});
+FeaturePhone.args = {
+  children: faker.lorem.sentence(8),
   figure: ["https://via.placeholder.com/496x390?text=figure"],
-  caption: faker.lorem.sentence(8),
 };

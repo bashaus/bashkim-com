@@ -9,6 +9,7 @@ export const parameters = {
     matchers: {
       color: /color$/i,
       date: /(^date$|Date$)/,
+      boolean: /^(is|has)/,
     },
   },
   layout: 'fullscreen'

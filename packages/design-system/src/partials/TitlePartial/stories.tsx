@@ -7,8 +7,14 @@ export default {
   title: "Partials/TitlePartial",
   argTypes: {
     image: { control: "file" },
-    title: { control: "text" },
-    subtitle: { control: "text" },
+    title: {
+      control: "text",
+      table: { category: "Story helpers" },
+    },
+    subtitle: {
+      control: "text",
+      table: { category: "Story helpers" },
+    },
   },
 };
 
