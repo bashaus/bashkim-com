@@ -1,4 +1,3 @@
-import { DateFormatter, RichTextFormatter } from "@bashkim-com/design-system";
 import {
   AccoladeSliceType,
   LinkResolverContext,
@@ -8,8 +7,9 @@ import {
 import { Link } from "prismic-reactjs";
 import { useContext } from "react";
 
-import IconTrophy from "%public/static/vectors/icons/trophy.svg";
-
+import { ReactComponent as IconTrophy } from "../../assets/vectors/trophy.svg";
+import { DateFormatter } from "../../formatters/DateFormatter";
+import { RichTextFormatter } from "../../formatters/RichTextFormatter";
 import styles from "./styles.module.scss";
 
 export type AccoladeSliceProps = {
@@ -24,8 +24,15 @@ const AwardPlaceName = {
   shortlist: "Shortlist",
 };
 
-export const AccoladeSlice = ({ slice }: AccoladeSliceProps): JSX.Element => {
+export const AccoladeSlice = ({
+  slice,
+}: AccoladeSliceProps): JSX.Element | null => {
   const PrismicLinkResolver = useContext(LinkResolverContext);
+
+  if (!slice.primary) {
+    return null;
+  }
+
   const {
     accolade_slice_type_issuer: issuer,
     accolade_slice_type_description: description,
@@ -37,15 +44,17 @@ export const AccoladeSlice = ({ slice }: AccoladeSliceProps): JSX.Element => {
       <RichTextFormatter className={styles.Details}>
         <PrismicRichText render={issuer} />
         <PrismicRichText render={description} />
-        <p>
-          <small>
-            <DateFormatter date={PrismicDate(date)} />
-          </small>
-        </p>
+        {date && (
+          <p>
+            <small>
+              <DateFormatter date={PrismicDate(date)} />
+            </small>
+          </p>
+        )}
       </RichTextFormatter>
 
       <div className={styles.Awards}>
-        {slice.fields.map((field, i) => {
+        {slice.fields?.map((field, i) => {
           const {
             accolade_slice_type_award_place: awardPlace,
             accolade_slice_type_award_link: awardLink,
@@ -59,7 +68,7 @@ export const AccoladeSlice = ({ slice }: AccoladeSliceProps): JSX.Element => {
               <a href={awardHref} target="_blank" rel="noreferrer">
                 <IconTrophy className={styles.Trophy} />
                 <RichTextFormatter>
-                  <h3>{AwardPlaceName[awardPlace]}</h3>
+                  {awardPlace && <h3>{AwardPlaceName[awardPlace]}</h3>}
                   <PrismicRichText render={awardCategory} />
                 </RichTextFormatter>
               </a>

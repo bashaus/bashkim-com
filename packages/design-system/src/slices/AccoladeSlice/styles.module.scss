@@ -1,5 +1,5 @@
-@import "~@bashkim-com/design-system/src/styleguide/utils/colors";
-@import "~@bashkim-com/design-system/src/styleguide/utils/grid";
+@import "src/styleguide/utils/colors";
+@import "src/styleguide/utils/grid";
 
 .AccoladeSlice {
   @include grid-container(
