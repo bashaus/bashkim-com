@@ -1,11 +1,10 @@
-import { ReactNode } from "react";
 import styles from "./styles.module.scss";
 
 export type BrickProps = {
   /**
-   * The description text, wrapped with `<p>`
+   * The description text, will be wrapped in a `<p>` tag
    */
-  description: ReactNode;
+  description?: string;
 
   /**
    * A URL to the image to use as the icon
@@ -13,9 +12,9 @@ export type BrickProps = {
   icon: string;
 
   /**
-   * The title or heading, wrapped with `<h3>`
+   * The title or heading, will be wrapped in a `<h3>` tag
    */
-  title: ReactNode;
+  title?: string;
 };
 
 export const Brick = ({
@@ -31,7 +30,7 @@ export const Brick = ({
         <img alt="" src={icon} />
       </div>
 
-      <p>{description}</p>
+      {description && <p>{description}</p>}
     </div>
   </article>
 );

@@ -6,9 +6,7 @@ export default {
   component: Brick,
   title: "Components/Brick",
   argTypes: {
-    description: { control: "text" },
     icon: { control: "file" },
-    title: { control: "text" },
   },
   parameters: {
     layout: "centered",
@@ -20,7 +18,7 @@ type BrickStoryProps = BrickProps & {
 };
 
 const Template = ({ icon, ...args }: BrickStoryProps): JSX.Element => (
-  <Brick {...args} icon={icon[0]} />
+  <Brick icon={icon[0]} {...args} />
 );
 
 export const Render = Template.bind({});

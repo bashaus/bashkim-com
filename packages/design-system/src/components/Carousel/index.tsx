@@ -1,35 +1,29 @@
-import { ReactNode } from "react";
-import SlickSlider, { ResponsiveObject } from "react-slick";
+import classNames from "classnames";
+import SlickSlider, { Settings } from "react-slick";
 
 import styles from "./styles.module.scss";
 import dotsStyles from "./styles.dots.module.scss";
 
-export type CarouselProps = {
-  children: ReactNode;
-  responsive?: Array<ResponsiveObject>;
-  slidesToShow?: number;
-  slidestoScroll?: number;
-};
+export type CarouselProps = Settings;
 
 export const Carousel = ({
-  children,
-  responsive,
-  slidesToShow = 1,
-  slidestoScroll = 1,
+  adaptiveHeight = true,
+  dots = true,
+  dotsClass,
+  infinite = false,
+  draggable = true,
+  lazyLoad = "ondemand",
+  ...args
 }: CarouselProps): JSX.Element => (
   <div className={styles.Carousel}>
     <SlickSlider
-      adaptiveHeight
-      dots
-      dotsClass={dotsStyles.CarouselDots}
-      infinite={false}
-      draggable
-      lazyLoad="ondemand"
-      responsive={responsive}
-      slidesToShow={slidesToShow}
-      slidesToScroll={slidestoScroll}
-    >
-      {children}
-    </SlickSlider>
+      adaptiveHeight={adaptiveHeight}
+      dots={dots}
+      dotsClass={classNames(dotsClass, dotsStyles.CarouselDots)}
+      infinite={infinite}
+      draggable={draggable}
+      lazyLoad={lazyLoad}
+      {...args}
+    />
   </div>
 );

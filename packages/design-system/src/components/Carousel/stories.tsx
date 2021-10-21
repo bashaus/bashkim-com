@@ -9,9 +9,7 @@ export default {
     slides: {
       control: "number",
       min: 1,
-      table: {
-        category: "Story helpers",
-      },
+      table: { category: "Story helpers" },
     },
   },
   parameters: {
@@ -28,8 +26,6 @@ const Template = ({ slides, ...args }: CarouselStoryProps) => (
     style={{
       width: "100vw",
       maxWidth: 600,
-      marginLeft: 30,
-      marginRight: 30,
     }}
   >
     <Carousel {...args}>

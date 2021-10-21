@@ -6,8 +6,14 @@ export default {
   component: HeaderTextPartial,
   title: "Partials/HeaderTextPartial",
   argTypes: {
-    title: { control: "text" },
-    subtitle: { control: "text" },
+    title: {
+      control: "text",
+      table: { category: "Story helpers" },
+    },
+    subtitle: {
+      control: "text",
+      table: { category: "Story helpers" },
+    },
   },
 };
 

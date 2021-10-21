@@ -20,9 +20,9 @@ const Template = ({
   ...args
 }: HeaderImagePartialStoryProps): JSX.Element => (
   <HeaderImagePartial
-    {...args}
     imageDesktop={imageDesktop[0]}
     imageMobile={imageMobile[0]}
+    {...args}
   />
 );
 

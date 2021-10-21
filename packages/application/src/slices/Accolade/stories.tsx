@@ -4,7 +4,7 @@ import { AccoladeSlice, AccoladeSliceProps } from ".";
 
 export default {
   component: AccoladeSlice,
-  title: "Prismic/Slices/Accolade",
+  title: "Prismic slices/Accolade",
   argTypes: {
     slice: {
       control: "object",

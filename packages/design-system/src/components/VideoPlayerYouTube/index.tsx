@@ -1,7 +1,14 @@
 import styles from "./styles.module.scss";
 
 export type VideoPlayerYouTubeProps = {
+  /**
+   * The title of the video for accessibility.
+   */
   title?: string;
+
+  /**
+   * The `v` parameter in the URL of the YouTube video.
+   */
   v: string;
 };
 

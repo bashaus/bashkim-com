@@ -5,12 +5,6 @@ import { Group, GroupDesign, GroupProps } from ".";
 export default {
   component: Group,
   title: "Layout/Group",
-  argTypes: {
-    design: {
-      options: Object.values(GroupDesign),
-      control: "select",
-    },
-  },
   parameters: {
     layout: "fullscreen",
   },
