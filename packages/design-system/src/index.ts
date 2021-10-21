@@ -42,6 +42,7 @@ export { SubtitlePartial } from "./partials/SubtitlePartial";
 export { TitlePartial } from "./partials/TitlePartial";
 
 /* Slices */
+export { AccoladeSlice } from "./slices/AccoladeSlice";
 export { CaptionedImageSlice } from "./slices/CaptionedImageSlice";
 export { CaptionedMagazineSlice } from "./slices/CaptionedMagazineSlice";
 export { CaptionedScreenshotsSlice } from "./slices/CaptionedScreenshotsSlice";

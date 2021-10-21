@@ -1,5 +1,6 @@
 import commonjs from "@rollup/plugin-commonjs";
 import nodeResolve from "@rollup/plugin-node-resolve";
+import svgr from "@svgr/rollup";
 import url from "postcss-url";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import postcss from "rollup-plugin-postcss";
@@ -40,6 +41,7 @@ export default {
       use: ["sass"],
     }),
     svg(),
+    svgr(),
     nodeResolve(),
     commonjs(),
     typescript(),
