@@ -39,8 +39,13 @@ jobs:
           key: yarn-lock-{{ checksum "yarn.lock" }}
           paths:
             - node_modules/
-            - packages/*/node_modules/
             - packages/application/.next/cache/
+            - packages/application/node_modules/
+            - packages/config/node_modules/
+            - packages/design-system/node_modules/
+            - packages/prismic/node_modules/
+            - packages/sitemap/node_modules/
+            - packages/webhooks/node_modules/
 
       - persist_to_workspace:
           root: ./
