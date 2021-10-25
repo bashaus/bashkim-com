@@ -1,5 +1,6 @@
 {
   "plugins": ["stylelint-prettier", "stylelint-scss"],
+  "customSyntax": "postcss-scss",
   "rules": {
     "prettier/prettier": true,
     "scss/at-import-no-partial-leading-underscore": true,
