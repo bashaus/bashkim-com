@@ -11,9 +11,6 @@ module.exports = {
     "/build/",
     "/coverage/",
   ],
-  // setupFilesAfterEnv: [
-  //   '<rootDir>/setupTests.js'
-  // ],
   testPathIgnorePatterns: [
     "/node_modules/",
     "/.next/",
@@ -21,7 +18,7 @@ module.exports = {
     "/coverage/",
   ],
   transform: {
-    "^.+\\.(js|jsx|ts|tsx)$": "babel-jest",
+    "^.+\\.(js|jsx|ts|tsx)$": "@swc/jest",
     ".+\\.(css|scss)$": "jest-css-modules-transform",
   },
   transformIgnorePatterns: [

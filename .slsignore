@@ -9,7 +9,7 @@ packages/*/tsconfig.json
 infrastructure/
 
 # Filenames
-**/.babelrc
+**/.swcrc
 
 # Files
 .editorconfig

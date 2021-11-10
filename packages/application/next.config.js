@@ -4,9 +4,9 @@ const webpack = require("webpack");
 const { merge } = require("webpack-merge");
 
 module.exports = {
-  target: "serverless",
   publicRuntimeConfig,
   trailingSlash: true,
+  swcMinify: true,
   webpack: (nextConfig) => {
     return merge(nextConfig, {
       resolve: {
