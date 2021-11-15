@@ -13,7 +13,7 @@ executors:
       - image: "circleci/python:3.6"
 
 orbs:
-  aws-s3: circleci/aws-s3@1.0.11
+  aws-s3: circleci/aws-s3@3.0.0
 
 jobs:
   build-application:
@@ -164,7 +164,6 @@ jobs:
       - aws-s3/sync:
           from: ./packages/application/build
           to: "s3://${DEPLOY_S3_WEBSITE_BUCKET}"
-          overwrite: true
           arguments: |
             --cache-control "max-age=86400"
 
@@ -187,7 +186,6 @@ jobs:
       - aws-s3/sync:
           from: ./packages/design-system/.storybook-static
           to: "s3://${DEPLOY_S3_DESIGN_SYSTEM_BUCKET}/"
-          overwrite: true
           arguments: |
             --cache-control "max-age=86400"
 
