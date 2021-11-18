@@ -48,7 +48,7 @@
   "devDependencies": {
     "@next/eslint-plugin-next": "^12.0.4",
     "@svgr/webpack": "^5.5.0",
-    "@swc/core": "^1.2.108",
+    "@swc/core": "^1.2.110",
     "@swc/jest": "^0.2.5",
     "@types/faker": "^5.5.9",
     "@types/jest": "^27.0.2",
@@ -62,7 +62,7 @@
     "jest-css-modules-transform": "^4.3.0",
     "jest-junit": "^13.0.0",
     "sass-loader": "^12.3.0",
-    "typescript": "^4.4.4",
+    "typescript": "^4.5.2",
     "utility-types": "^3.10.0",
     "webpack-merge": "^5.8.0"
   }
