@@ -15575,10 +15575,10 @@ serve-static@1.14.1:
     parseurl "~1.3.3"
     send "0.17.1"
 
-serverless-ignore@^0.1.6:
-  version "0.1.6"
-  resolved "https://registry.yarnpkg.com/serverless-ignore/-/serverless-ignore-0.1.6.tgz#bb0da6e6275876d41749f210fa2795087ca070ef"
-  integrity sha512-rONeQh6zwAy1H0+pFrWpHvDU5B1R5E1b77JDqGxqqZ/KXK9G01rWUY8P61fHG2rDdDpveEHoa/WdiCwM98m83w==
+serverless-ignore@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/serverless-ignore/-/serverless-ignore-0.2.0.tgz#41a475480b6e51b13101edd291e58a8e57201b7c"
+  integrity sha512-rQPuMSRaflsrIizkVXfSWRbe4nMmd1cKAy203/J5D0JHPOg650NThpL0iJHo3BnjFfojf765NK2MmfbGh52Hiw==
   dependencies:
     ignore "^3.3.8"
 
