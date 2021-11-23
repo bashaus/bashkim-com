@@ -26,7 +26,7 @@
     "@svgr/rollup": "^5.5.0",
     "@svgr/webpack": "^5.5.0",
     "@types/jest": "^27.0.3",
-    "@types/jquery": "^3.5.8",
+    "@types/jquery": "^3.5.9",
     "@types/react": "^17.0.36",
     "@types/react-slick": "^0.23.7",
     "babel-jest": "^27.3.1",
