@@ -46,7 +46,7 @@
     "reset-scss": "^1.0.0",
     "rollup": "^2.60.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
-    "rollup-plugin-postcss": "^4.0.1",
+    "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-svg": "^2.0.0",
     "rollup-plugin-typescript2": "^0.31.0",
     "sass": "^1.43.4",
