@@ -50,7 +50,7 @@
     "postcss-scss": "^4.0.2",
     "prettier": "^2.5.0",
     "serverless": "^2.66.2",
-    "serverless-ignore": "^0.2.0",
+    "serverless-ignore": "^0.2.1",
     "serverless-jetpack": "^0.11.1",
     "sort-package-json": "^1.53.1",
     "stylelint": "^14.1.0",
