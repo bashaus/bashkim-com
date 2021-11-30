@@ -1,37 +1,48 @@
 ---
 plugins:
-  cleanupAttrs: true
-  mergeStyles: true
-  inlineStyles: true
-  removeDoctype: true
-  removeXMLProcInst: true
-  removeComments: true
-  removeMetadata: true
-  removeTitle: true
-  removeDesc: true
-  removeUselessDefs: true
-  removeEditorsNSData: true
-  removeEmptyAttrs: true
-  removeHiddenElems: true
-  removeEmptyText: true
-  removeEmptyContainers: true
-  removeViewBox: false
-  removeDimensions: true
-  cleanupEnableBackground: true
-  minifyStyles: true
-  convertColors: true
-  convertPathData: true
-  convertTransform: true
-  removeUnknownsAndDefaults: true
-  removeNonInheritableGroupAttrs: true
-  removeUselessStrokeAndFill: true
-  removeUnusedNS: true
-  cleanupIDs: true
-  cleanupNumericValues: true
-  moveElemsAttrsToGroup: true
-  moveGroupAttrsToElems: true
-  collapseGroups: true
-  mergePaths: true
-  convertShapeToPath: true
-  convertEllipseToCircle: true
-  sortDefsChildren: true
+  - addAttributesToSVGElement: false
+  - addClassesToSVGElement: false
+  - cleanupAttrs: true
+  - cleanupEnableBackground: true
+  - cleanupIDs: true
+  - cleanupListOfValues: true
+  - cleanupNumericValues:
+      floatPrecision: 2
+  - collapseGroups: true
+  - convertColors: true
+  - convertEllipseToCircle: true
+  - convertPathData: true
+  - convertShapeToPath: true
+  - convertStyleToAttrs: true
+  - convertTransform: true
+  - inlineStyles: true
+  - mergePaths: true
+  - mergeStyles: true
+  - minifyStyles: true
+  - moveElemsAttrsToGroup: true
+  - moveGroupAttrsToElems: true
+  - removeAttrs: true
+  - removeComments: true
+  - removeDesc: true
+  - removeDimensions: true
+  - removeDoctype: true
+  - removeEditorsNSData: true
+  - removeElementsByAttr: true
+  - removeEmptyAttrs: true
+  - removeEmptyContainers: true
+  - removeEmptyText: true
+  - removeHiddenElems: true
+  - removeMetadata: true
+  - removeNonInheritableGroupAttrs: true
+  - removeStyleElement: true
+  - removeTitle: true
+  - removeUnknownsAndDefaults: true
+  - removeUnusedNS: true
+  - removeUselessDefs: true
+  - removeUselessStrokeAndFill: true
+  - removeViewBox: false
+  - removeXMLNS: false
+  - removeXMLProcInst: true
+  - sortAttrs: true
+  - sortDefsChildren: true
+  - transformsWithOnePath: true
