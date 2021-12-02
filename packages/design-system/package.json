@@ -18,7 +18,7 @@
     "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-node-resolve": "^13.0.6",
     "@storybook/addon-a11y": "^6.4.3",
-    "@storybook/addon-essentials": "^6.4.3",
+    "@storybook/addon-essentials": "^6.4.4",
     "@storybook/addons": "^6.4.3",
     "@storybook/builder-webpack5": "^6.4.3",
     "@storybook/manager-webpack5": "^6.4.3",
