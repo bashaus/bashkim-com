@@ -1,7 +1,5 @@
 ---
 plugins:
-  - addAttributesToSVGElement: false
-  - addClassesToSVGElement: false
   - cleanupAttrs: true
   - cleanupEnableBackground: true
   - cleanupIDs: true
@@ -21,20 +19,18 @@ plugins:
   - minifyStyles: true
   - moveElemsAttrsToGroup: true
   - moveGroupAttrsToElems: true
-  - removeAttrs: true
+  - removeAttrs: false
   - removeComments: true
   - removeDesc: true
   - removeDimensions: true
   - removeDoctype: true
   - removeEditorsNSData: true
-  - removeElementsByAttr: true
   - removeEmptyAttrs: true
   - removeEmptyContainers: true
   - removeEmptyText: true
   - removeHiddenElems: true
   - removeMetadata: true
   - removeNonInheritableGroupAttrs: true
-  - removeStyleElement: true
   - removeTitle: true
   - removeUnknownsAndDefaults: true
   - removeUnusedNS: true
