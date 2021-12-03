@@ -22,7 +22,7 @@
     "@storybook/addons": "^6.4.4",
     "@storybook/builder-webpack5": "^6.4.4",
     "@storybook/manager-webpack5": "^6.4.4",
-    "@storybook/react": "^6.4.4",
+    "@storybook/react": "^6.4.5",
     "@svgr/rollup": "^6.1.0",
     "@svgr/webpack": "^5.5.0",
     "@types/jest": "^27.0.3",
