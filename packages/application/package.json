@@ -52,7 +52,7 @@
     "@swc/jest": "^0.2.11",
     "@types/faker": "^5.5.9",
     "@types/jest": "^27.0.3",
-    "@types/jquery": "^3.5.9",
+    "@types/jquery": "^3.5.10",
     "@types/mime": "^2.0.3",
     "@types/node": "^16.11.12",
     "@types/react-slick": "^0.23.7",
