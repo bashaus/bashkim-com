@@ -22,7 +22,7 @@ import { CaseStudyPageQuery } from "%libraries/prismic/queries/CaseStudyPageQuer
 
 type CaseStudyPageProps = {
   caseStudyPage: CaseStudyContentType;
-  caseStudyBody: any;
+  caseStudyBody: CaseStudyContentType;
 };
 
 const CaseStudyPage = ({
