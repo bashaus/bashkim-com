@@ -14,7 +14,7 @@
     "test": "jest ."
   },
   "devDependencies": {
-    "@babel/core": "^7.16.0",
+    "@babel/core": "^7.16.5",
     "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-node-resolve": "^13.0.6",
     "@storybook/addon-a11y": "^6.4.9",
