@@ -49,7 +49,7 @@
     "lint-staged": "^12.1.2",
     "postcss-scss": "^4.0.2",
     "prettier": "^2.5.1",
-    "serverless": "^2.68.0",
+    "serverless": "^2.69.0",
     "serverless-ignore": "^0.2.1",
     "serverless-jetpack": "^0.11.1",
     "sort-package-json": "^1.53.1",
