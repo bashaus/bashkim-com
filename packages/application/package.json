@@ -39,7 +39,7 @@
     "react-slick": "^0.28.1",
     "react-transition-group": "^4.4.2",
     "react-visibility-sensor": "^5.1.1",
-    "sass": "^1.45.1",
+    "sass": "^1.45.2",
     "slick-carousel": "^1.8.1",
     "turn-js": "blasten/turn.js#master",
     "use-persisted-state": "^0.3.3",
