@@ -50,7 +50,7 @@
     "@svgr/webpack": "^6.2.0",
     "@swc/core": "^1.2.130",
     "@swc/jest": "^0.2.17",
-    "@types/faker": "^5.5.9",
+    "@types/faker": "^6.6.9",
     "@types/jest": "^27.4.0",
     "@types/jquery": "^3.5.13",
     "@types/mime": "^2.0.3",
