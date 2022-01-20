@@ -10,7 +10,7 @@ import { SentryBoundary } from "%components/SentryBoundary";
 import { NavigationProvider } from "%contexts/Navigation/provider";
 import { PrismicLinkResolver } from "%libraries/prismic/link-resolver";
 
-const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
+const App = ({ Component, pageProps }: AppProps): JSX.Element => {
   useEffect((): void => {
     document.documentElement.classList.add("isReady");
   }, []);
@@ -36,4 +36,4 @@ const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
   );
 };
 
-export default MyApp;
+export default App;
