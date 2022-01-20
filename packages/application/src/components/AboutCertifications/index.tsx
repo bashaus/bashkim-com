@@ -5,10 +5,8 @@ import {
   SubtitlePartial,
 } from "@bashkim-com/design-system";
 
-// import JavaBackgroundImage from "%assets/images/about/certifications/java/background.jpg";
 import JavaLogoImage from "%assets/images/about/certifications/java/logo.jpg";
 import JavaOcaImage from "%assets/images/about/certifications/java/oca.png";
-// import PhpBackgroundImage from "%assets/images/about/certifications/php/background.jpg";
 import PhpLogoImage from "%assets/images/about/certifications/php/logo.png";
 import PhpZceImage from "%assets/images/about/certifications/php/zce.jpg";
 
@@ -34,9 +32,7 @@ export const AboutCertifications = (): JSX.Element => (
           </p>
         </div>
       </SplitItemPartial>
-      <SplitItemPartial
-      // backgroundImage={JavaBackgroundImage.src}
-      >
+      <SplitItemPartial>
         <img
           alt="Duke - The Java Mascot"
           src={JavaLogoImage.src}
@@ -66,9 +62,7 @@ export const AboutCertifications = (): JSX.Element => (
         </div>
       </SplitItemPartial>
 
-      <SplitItemPartial
-      // backgroundImage={PhpBackgroundImage.src}
-      >
+      <SplitItemPartial>
         <img alt="ElePHPant" className={styles.Logo} src={PhpLogoImage.src} />
       </SplitItemPartial>
     </SplitPartial>
