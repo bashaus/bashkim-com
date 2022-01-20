@@ -33,7 +33,7 @@ export const SitemapTemplate = (sitemap: () => Promise<Array<UrlType>>) => {
     );
 
     const urlset = await sitemap();
-    urlset.map((url: UrlType) => doc.ele(url));
+    urlset.forEach((url: UrlType) => doc.ele(url));
 
     res.setHeader("Content-Type", "application/xml");
     res.send(doc.end({ pretty: true }));
