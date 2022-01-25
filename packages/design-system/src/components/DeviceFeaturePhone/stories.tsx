@@ -1,3 +1,4 @@
+import { Meta, Story } from "@storybook/react";
 import faker from "faker";
 
 import { DeviceFeaturePhone, DeviceFeaturePhoneProps } from ".";
@@ -5,6 +6,10 @@ import { DeviceFeaturePhone, DeviceFeaturePhoneProps } from ".";
 export default {
   component: DeviceFeaturePhone,
   title: "Components/Device/Feature Phone",
+  args: {
+    children: faker.lorem.sentence(8),
+    figure: ["https://via.placeholder.com/496x390?text=figure"],
+  },
   argTypes: {
     figure: { control: "file" },
     children: { control: "text" },
@@ -12,13 +17,13 @@ export default {
   parameters: {
     layout: "centered",
   },
-};
+} as Meta;
 
-type DeviceFeaturePhoneStoryProps = DeviceFeaturePhoneProps & {
+type DeviceFeaturePhoneStoryProps = Omit<DeviceFeaturePhoneProps, "figure"> & {
   figure: Array<string>;
 };
 
-const Template = ({
+const Template: Story<DeviceFeaturePhoneStoryProps> = ({
   children,
   figure,
   ...args
@@ -29,7 +34,3 @@ const Template = ({
 );
 
 export const FeaturePhone = Template.bind({});
-FeaturePhone.args = {
-  children: faker.lorem.sentence(8),
-  figure: ["https://via.placeholder.com/496x390?text=figure"],
-};

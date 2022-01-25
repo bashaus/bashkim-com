@@ -1,10 +1,14 @@
 import { GridVideoSliceFixture } from "@bashkim-com/prismic";
+import { Meta, Story } from "@storybook/react";
 
 import { GridVideoSlice, GridVideoSliceProps } from ".";
 
 export default {
   component: GridVideoSlice,
   title: "Prismic slices/GridVideoSlice",
+  args: {
+    slice: GridVideoSliceFixture,
+  },
   argTypes: {
     slice: {
       control: "object",
@@ -14,13 +18,10 @@ export default {
   parameters: {
     controls: { expanded: false },
   },
-};
+} as Meta;
 
-const Template = ({ ...args }: GridVideoSliceProps) => (
+const Template: Story<GridVideoSliceProps> = (args: GridVideoSliceProps) => (
   <GridVideoSlice {...args} />
 );
 
 export const PrismicFixture = Template.bind({});
-PrismicFixture.args = {
-  slice: GridVideoSliceFixture,
-};

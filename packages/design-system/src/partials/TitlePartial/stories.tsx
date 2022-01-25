@@ -1,3 +1,4 @@
+import { Meta, Story } from "@storybook/react";
 import faker from "faker";
 
 import { TitlePartial, TitlePartialProps } from ".";
@@ -5,6 +6,11 @@ import { TitlePartial, TitlePartialProps } from ".";
 export default {
   component: TitlePartial,
   title: "Partials/TitlePartial",
+  args: {
+    image: ["https://via.placeholder.com/300x300?text=image"],
+    title: "TitlePartial",
+    subtitle: faker.lorem.sentence(8),
+  },
   argTypes: {
     image: { control: "file" },
     title: {
@@ -16,15 +22,15 @@ export default {
       table: { category: "Story helpers" },
     },
   },
-};
+} as Meta;
 
-type TitlePartialStoryProps = TitlePartialProps & {
+type TitlePartialStoryProps = Omit<TitlePartialProps, "image"> & {
   image: Array<string>;
   title: string;
   subtitle: string;
 };
 
-const Template = ({
+const Template: Story<TitlePartialStoryProps> = ({
   image,
   title,
   subtitle,
@@ -37,8 +43,3 @@ const Template = ({
 );
 
 export const Render = Template.bind({});
-Render.args = {
-  image: ["https://via.placeholder.com/300x300?text=image"],
-  title: "TitlePartial",
-  subtitle: faker.lorem.sentence(8),
-};

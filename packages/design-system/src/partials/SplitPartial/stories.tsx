@@ -1,22 +1,29 @@
+import { Meta, Story } from "@storybook/react";
+
 import { SplitItemPartial } from "../SplitItemPartial";
 import { SplitPartial, SplitPartialProps } from ".";
 
 export default {
   component: SplitPartial,
   title: "Partials/SplitPartial",
+  args: {
+    backgroundImage: [
+      "https://via.placeholder.com/992x558?text=Background+image",
+    ],
+  },
   argTypes: {
     backgroundImage: {
       control: "file",
       table: { category: "Story helpers" },
     },
   },
-};
+} as Meta;
 
-type SplitPartialStoryProps = SplitPartialProps & {
+type SplitPartialStoryProps = Omit<SplitPartialProps, "backgroundImage"> & {
   backgroundImage: Array<string>;
 };
 
-const Template = ({
+const Template: Story<SplitPartialStoryProps> = ({
   backgroundImage,
   index = 0,
   ...args
@@ -39,8 +46,3 @@ const Template = ({
 );
 
 export const Render = Template.bind({});
-Render.args = {
-  backgroundImage: [
-    "https://via.placeholder.com/992x558?text=Background+image",
-  ],
-};

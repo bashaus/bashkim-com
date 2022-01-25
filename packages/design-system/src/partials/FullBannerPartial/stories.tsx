@@ -1,3 +1,4 @@
+import { Meta, Story } from "@storybook/react";
 import faker from "faker";
 
 import { FullBannerPartial, FullBannerPartialProps } from ".";
@@ -5,6 +6,16 @@ import { FullBannerPartial, FullBannerPartialProps } from ".";
 export default {
   component: FullBannerPartial,
   title: "Partials/FullBannerPartial",
+  args: {
+    backgroundDesktop: [
+      "https://via.placeholder.com/1920x400?text=backgroundDesktop",
+    ],
+    backgroundMobile: [
+      "https://via.placeholder.com/1000x800?text=backgroundMobile",
+    ],
+    title: "FullBannerPartial",
+    subtitle: faker.lorem.paragraph(),
+  },
   argTypes: {
     backgroundDesktop: { control: "file" },
     backgroundMobile: { control: "file" },
@@ -18,16 +29,19 @@ export default {
       table: { category: "Story helpers" },
     },
   },
-};
+} as Meta;
 
-type FullBannerPartialStoryProps = FullBannerPartialProps & {
+type FullBannerPartialStoryProps = Omit<
+  FullBannerPartialProps,
+  "backgroundDesktop" | "backgroundMobile"
+> & {
   backgroundDesktop: Array<string>;
   backgroundMobile: Array<string>;
   title: string;
   subtitle: string;
 };
 
-const Template = ({
+const Template: Story<FullBannerPartialStoryProps> = ({
   backgroundDesktop,
   backgroundMobile,
   title,
@@ -45,13 +59,3 @@ const Template = ({
 );
 
 export const Render = Template.bind({});
-Render.args = {
-  backgroundDesktop: [
-    "https://via.placeholder.com/1920x400?text=backgroundDesktop",
-  ],
-  backgroundMobile: [
-    "https://via.placeholder.com/1000x800?text=backgroundMobile",
-  ],
-  title: "FullBannerPartial",
-  subtitle: faker.lorem.paragraph(),
-};

@@ -1,10 +1,14 @@
 import { SubtitleSliceFixture } from "@bashkim-com/prismic";
+import { Meta, Story } from "@storybook/react";
 
 import { SubtitleSlice, SubtitleSliceProps } from ".";
 
 export default {
   component: SubtitleSlice,
   title: "Prismic slices/SubtitleSlice",
+  args: {
+    slice: SubtitleSliceFixture,
+  },
   argTypes: {
     slice: {
       control: "object",
@@ -14,13 +18,10 @@ export default {
   parameters: {
     controls: { expanded: false },
   },
-};
+} as Meta;
 
-const Template = ({ ...args }: SubtitleSliceProps) => (
+const Template: Story<SubtitleSliceProps> = (args: SubtitleSliceProps) => (
   <SubtitleSlice {...args} />
 );
 
 export const PrismicFixture = Template.bind({});
-PrismicFixture.args = {
-  slice: SubtitleSliceFixture,
-};

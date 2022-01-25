@@ -1,10 +1,14 @@
 import { AccoladeSliceFixture } from "@bashkim-com/prismic";
+import { Meta, Story } from "@storybook/react";
 
 import { AccoladeSlice, AccoladeSliceProps } from ".";
 
 export default {
   component: AccoladeSlice,
   title: "Prismic slices/AccoladeSlice",
+  args: {
+    slice: AccoladeSliceFixture,
+  },
   argTypes: {
     slice: {
       control: "object",
@@ -14,13 +18,10 @@ export default {
   parameters: {
     controls: { expanded: false },
   },
-};
+} as Meta;
 
-const Template = ({ ...args }: AccoladeSliceProps) => (
+const Template: Story<AccoladeSliceProps> = (args: AccoladeSliceProps) => (
   <AccoladeSlice {...args} />
 );
 
 export const PrismicFixture = Template.bind({});
-PrismicFixture.args = {
-  slice: AccoladeSliceFixture,
-};

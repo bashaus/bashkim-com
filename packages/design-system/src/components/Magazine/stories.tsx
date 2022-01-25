@@ -1,17 +1,25 @@
+import { Meta, Story } from "@storybook/react";
+
 import { Magazine, MagazineProps } from ".";
 
 export default {
   component: Magazine,
   title: "Components/Magazine",
+  args: {
+    pageWidth: 350,
+    pageHeight: 450,
+    spread: 1,
+    pages: 6,
+  },
   argTypes: {
     spread: { min: 1, max: 3 },
   },
   parameters: {
     layout: "centered",
   },
-};
+} as Meta;
 
-const Template = ({ ...args }: MagazineProps) => (
+const Template: Story<MagazineProps> = (args: MagazineProps) => (
   <div style={{ maxWidth: 600, width: "100vw" }}>
     <Magazine {...args}>
       {Array(args.pages)
@@ -33,9 +41,3 @@ const Template = ({ ...args }: MagazineProps) => (
 );
 
 export const Render = Template.bind({});
-Render.args = {
-  pageWidth: 350,
-  pageHeight: 450,
-  spread: 1,
-  pages: 6,
-};

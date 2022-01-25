@@ -1,10 +1,14 @@
 import { CaptionedMagazineSliceFixture } from "@bashkim-com/prismic";
+import { Meta, Story } from "@storybook/react";
 
 import { CaptionedMagazineSlice, CaptionedMagazineSliceProps } from ".";
 
 export default {
   component: CaptionedMagazineSlice,
   title: "Prismic slices/CaptionedMagazineSlice",
+  args: {
+    slice: CaptionedMagazineSliceFixture,
+  },
   argTypes: {
     slice: {
       control: "object",
@@ -14,13 +18,10 @@ export default {
   parameters: {
     controls: { expanded: false },
   },
-};
+} as Meta;
 
-const Template = ({ ...args }: CaptionedMagazineSliceProps) => (
-  <CaptionedMagazineSlice {...args} />
-);
+const Template: Story<CaptionedMagazineSliceProps> = (
+  args: CaptionedMagazineSliceProps
+) => <CaptionedMagazineSlice {...args} />;
 
 export const PrismicFixture = Template.bind({});
-PrismicFixture.args = {
-  slice: CaptionedMagazineSliceFixture,
-};

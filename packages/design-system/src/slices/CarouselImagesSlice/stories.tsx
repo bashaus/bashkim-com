@@ -1,10 +1,14 @@
 import { CarouselImagesSliceFixture } from "@bashkim-com/prismic";
+import { Meta, Story } from "@storybook/react";
 
 import { CarouselImagesSlice, CarouselImagesSliceProps } from ".";
 
 export default {
   component: CarouselImagesSlice,
   title: "Prismic slices/CarouselImagesSlice",
+  args: {
+    slice: CarouselImagesSliceFixture,
+  },
   argTypes: {
     slice: {
       control: "object",
@@ -14,13 +18,10 @@ export default {
   parameters: {
     controls: { expanded: false },
   },
-};
+} as Meta;
 
-const Template = ({ ...args }: CarouselImagesSliceProps) => (
-  <CarouselImagesSlice {...args} />
-);
+const Template: Story<CarouselImagesSliceProps> = (
+  args: CarouselImagesSliceProps
+) => <CarouselImagesSlice {...args} />;
 
 export const PrismicFixture = Template.bind({});
-PrismicFixture.args = {
-  slice: CarouselImagesSliceFixture,
-};

@@ -1,3 +1,4 @@
+import { Meta, Story } from "@storybook/react";
 import faker from "faker";
 
 import { Group, GroupDesign, GroupProps } from ".";
@@ -5,16 +6,19 @@ import { Group, GroupDesign, GroupProps } from ".";
 export default {
   component: Group,
   title: "Layout/Group",
+  args: {
+    design: GroupDesign.DEFAULT,
+  },
   parameters: {
     layout: "fullscreen",
   },
-};
+} as Meta;
 
 type GroupStoryProps = GroupProps & {
   icon: Array<string>;
 };
 
-const Template = (args: GroupStoryProps): JSX.Element => (
+const Template: Story<GroupStoryProps> = (args: GroupStoryProps) => (
   <Group {...args}>
     <p>{faker.lorem.sentences(3)}</p>
   </Group>

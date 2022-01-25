@@ -1,3 +1,4 @@
+import { Meta, Story } from "@storybook/react";
 import faker from "faker";
 
 import { RichTextFormatter, RichTextFormatterProps } from ".";
@@ -5,12 +6,15 @@ import { RichTextFormatter, RichTextFormatterProps } from ".";
 export default {
   component: RichTextFormatter,
   title: "Formatters/RichTextFormatter",
+  args: {},
   parameters: {
     layout: "padded",
   },
-};
+} as Meta;
 
-const Template = (args: RichTextFormatterProps) => (
+const Template: Story<RichTextFormatterProps> = (
+  args: RichTextFormatterProps
+) => (
   <RichTextFormatter {...args}>
     <h1>&lt;RichTextFormatter /&gt;</h1>
     <p>
@@ -41,4 +45,3 @@ const Template = (args: RichTextFormatterProps) => (
 );
 
 export const Render = Template.bind({});
-Render.args = {};

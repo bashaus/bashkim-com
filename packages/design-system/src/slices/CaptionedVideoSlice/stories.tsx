@@ -1,10 +1,14 @@
 import { CaptionedVideoSliceFixture } from "@bashkim-com/prismic";
+import { Meta, Story } from "@storybook/react";
 
 import { CaptionedVideoSlice, CaptionedVideoSliceProps } from ".";
 
 export default {
   component: CaptionedVideoSlice,
   title: "Prismic slices/CaptionedVideoSlice",
+  args: {
+    slice: CaptionedVideoSliceFixture,
+  },
   argTypes: {
     slice: {
       control: "object",
@@ -14,13 +18,10 @@ export default {
   parameters: {
     controls: { expanded: false },
   },
-};
+} as Meta;
 
-const Template = ({ ...args }: CaptionedVideoSliceProps) => (
-  <CaptionedVideoSlice {...args} />
-);
+const Template: Story<CaptionedVideoSliceProps> = (
+  args: CaptionedVideoSliceProps
+) => <CaptionedVideoSlice {...args} />;
 
 export const PrismicFixture = Template.bind({});
-PrismicFixture.args = {
-  slice: CaptionedVideoSliceFixture,
-};

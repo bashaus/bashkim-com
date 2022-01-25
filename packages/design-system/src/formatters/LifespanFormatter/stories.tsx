@@ -1,3 +1,5 @@
+import { Meta, Story } from "@storybook/react";
+
 import { LifespanFormatter, LifespanFormatterProps } from ".";
 
 export default {
@@ -16,9 +18,13 @@ export default {
   parameters: {
     layout: "centered",
   },
-};
+} as Meta;
 
-const Template = ({ startDate, endDate, ...args }: LifespanFormatterProps) => (
+const Template: Story<LifespanFormatterProps> = ({
+  startDate,
+  endDate,
+  ...args
+}: LifespanFormatterProps) => (
   <LifespanFormatter
     startDate={new Date(startDate)}
     endDate={endDate ? new Date(endDate) : undefined}

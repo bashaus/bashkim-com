@@ -1,3 +1,5 @@
+import { Meta, Story } from "@storybook/react";
+
 import { FooterColumn } from "../FooterColumn";
 import { FooterGroup } from "../FooterGroup";
 import { FooterLinks } from "../FooterLinks";
@@ -6,9 +8,10 @@ import { Footer, FooterProps } from ".";
 export default {
   component: Footer,
   title: "Layout/Footer",
-};
+  args: {},
+} as Meta;
 
-const Template = (args: FooterProps) => (
+const Template: Story<FooterProps> = (args: FooterProps) => (
   <Footer {...args}>
     <FooterGroup>
       <FooterColumn label="Column one">
@@ -31,4 +34,3 @@ const Template = (args: FooterProps) => (
 );
 
 export const Render = Template.bind({});
-Render.args = {};

@@ -1,3 +1,4 @@
+import { Meta, Story } from "@storybook/react";
 import faker from "faker";
 
 import { CaptionedPartial, CaptionedPartialProps } from ".";
@@ -5,6 +6,11 @@ import { CaptionedPartial, CaptionedPartialProps } from ".";
 export default {
   component: CaptionedPartial,
   title: "Partials/CaptionedPartial",
+  args: {
+    figure: ["https://via.placeholder.com/1200x630?text=figure"],
+    title: "CaptionedPartial",
+    subtitle: faker.lorem.paragraph(),
+  },
   argTypes: {
     figure: { control: "file" },
     title: {
@@ -18,15 +24,15 @@ export default {
       table: { category: "Story helpers" },
     },
   },
-};
+} as Meta;
 
-type CaptionedPartialStoryProps = CaptionedPartialProps & {
+type CaptionedPartialStoryProps = Omit<CaptionedPartialProps, "figure"> & {
   figure: Array<string>;
   title: string;
   subtitle: string;
 };
 
-const Template = ({
+const Template: Story<CaptionedPartialStoryProps> = ({
   title,
   subtitle,
   figure,
@@ -39,8 +45,3 @@ const Template = ({
 );
 
 export const Render = Template.bind({});
-Render.args = {
-  figure: ["https://via.placeholder.com/1200x630?text=figure"],
-  title: "CaptionedPartial",
-  subtitle: faker.lorem.paragraph(),
-};

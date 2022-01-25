@@ -1,3 +1,4 @@
+import { Meta, Story } from "@storybook/react";
 import faker from "faker";
 
 import { NewspaperPartial, NewspaperPartialProps } from ".";
@@ -5,6 +6,9 @@ import { NewspaperPartial, NewspaperPartialProps } from ".";
 export default {
   component: NewspaperPartial,
   title: "Partials/NewspaperPartial",
+  args: {
+    paragraphs: 10,
+  },
   argTypes: {
     paragraphs: {
       control: "number",
@@ -13,13 +17,16 @@ export default {
       table: { category: "Story helpers" },
     },
   },
-};
+} as Meta;
 
 type NewspaperPartialStoryProps = NewspaperPartialProps & {
   paragraphs: number;
 };
 
-const Template = ({ paragraphs, ...args }: NewspaperPartialStoryProps) => (
+const Template: Story<NewspaperPartialStoryProps> = ({
+  paragraphs,
+  ...args
+}: NewspaperPartialStoryProps) => (
   <NewspaperPartial {...args}>
     {Array(paragraphs)
       .fill("")
@@ -32,6 +39,3 @@ const Template = ({ paragraphs, ...args }: NewspaperPartialStoryProps) => (
 );
 
 export const Render = Template.bind({});
-Render.args = {
-  paragraphs: 10,
-};

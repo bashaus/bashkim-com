@@ -1,3 +1,4 @@
+import { Meta, Story } from "@storybook/react";
 import faker from "faker";
 
 import { Carousel, CarouselProps } from ".";
@@ -5,6 +6,9 @@ import { Carousel, CarouselProps } from ".";
 export default {
   component: Carousel,
   title: "Components/Carousel",
+  args: {
+    slides: 3,
+  },
   argTypes: {
     slides: {
       control: "number",
@@ -15,13 +19,16 @@ export default {
   parameters: {
     layout: "centered",
   },
-};
+} as Meta;
 
 type CarouselStoryProps = CarouselProps & {
   slides: number;
 };
 
-const Template = ({ slides, ...args }: CarouselStoryProps) => (
+const Template: Story<CarouselStoryProps> = ({
+  slides,
+  ...args
+}: CarouselStoryProps) => (
   <div
     style={{
       width: "100vw",
@@ -44,6 +51,3 @@ const Template = ({ slides, ...args }: CarouselStoryProps) => (
 );
 
 export const Render = Template.bind({});
-Render.args = {
-  slides: 3,
-};
