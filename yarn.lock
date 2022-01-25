@@ -10,10 +10,10 @@
     d "1"
     es5-ext "^0.10.47"
 
-"@apollo/client@^3.5.7":
-  version "3.5.7"
-  resolved "https://registry.yarnpkg.com/@apollo/client/-/client-3.5.7.tgz#38051c0a414ebf784319fa5131faa19df24fa9ec"
-  integrity sha512-HSLqTGp3sp/PVIWYLLr5v3fjQSr6Fxg6Z5RQj5Q9ALyseIVudD8GZk1jHplaUblTFMBueXGw3Z6DXObuVAr3tw==
+"@apollo/client@^3.5.8":
+  version "3.5.8"
+  resolved "https://registry.yarnpkg.com/@apollo/client/-/client-3.5.8.tgz#7215b974c5988b6157530eb69369209210349fe0"
+  integrity sha512-MAm05+I1ullr64VLpZwon/ISnkMuNLf6vDqgo9wiMhHYBGT4yOAbAIseRdjCHZwfSx/7AUuBgaTNOssZPIr6FQ==
   dependencies:
     "@graphql-typed-document-node/core" "^3.0.0"
     "@wry/context" "^0.6.0"
@@ -3873,10 +3873,10 @@
     "@types/node" "*"
     form-data "^3.0.0"
 
-"@types/node@*", "@types/node@>=13.7.0", "@types/node@>=6", "@types/node@^17.0.10":
-  version "17.0.10"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.10.tgz#616f16e9d3a2a3d618136b1be244315d95bd7cab"
-  integrity sha512-S/3xB4KzyFxYGCppyDt68yzBU9ysL88lSdIah4D6cptdcltc4NCPCAMc0+PCpg/lLIyC7IPvj2Z52OJWeIUkog==
+"@types/node@*", "@types/node@>=13.7.0", "@types/node@>=6", "@types/node@^17.0.12":
+  version "17.0.12"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.12.tgz#f7aa331b27f08244888c47b7df126184bc2339c5"
+  integrity sha512-4YpbAsnJXWYK/fpTVFlMIcUIho2AYCi4wg5aNPrG1ng7fn/1/RZfCIpRCiBX+12RVa34RluilnvCqD+g3KiSiA==
 
 "@types/node@^14.0.10":
   version "14.17.34"
@@ -5243,10 +5243,10 @@ aws-lambda@^1.0.6:
     js-yaml "^3.14.1"
     watchpack "^2.0.0-beta.10"
 
-aws-sdk@^2.1061.0, aws-sdk@^2.814.0:
-  version "2.1061.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.1061.0.tgz#79c75e6856e5a59e0857d0d066a8ff5ff5e0d752"
-  integrity sha512-T29yV+EPo4Fis9hAArxAXS/u6utKnlBq3DEu85LTSIA8i6e6Xg7e9u7Rveo8DmrlVrf7EGCNThaeF9WERHnwLg==
+aws-sdk@^2.1062.0, aws-sdk@^2.814.0:
+  version "2.1062.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.1062.0.tgz#89b55c9dcfa15135910a217489eb8577b11d9899"
+  integrity sha512-QIU8jwi7Uqyvw2HjsXXXUZv3V/6TinUzLewrdl2EdvonqZCXhwMgnZx2F9I2x62IKH1RqnINwFWdoK+OTgcAjA==
   dependencies:
     buffer "4.9.2"
     events "1.1.1"
@@ -12393,15 +12393,16 @@ natural-compare@^1.4.0:
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=
 
-ncjsm@^4.1.0, ncjsm@^4.2.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/ncjsm/-/ncjsm-4.2.0.tgz#7b2d752c3a42db5f6a2c5ff6934cf66fb1bb5e38"
-  integrity sha512-L2Qij4PTy7Bs4TB24zs7FLIAYJTaR5JPvSig5hIcO059LnMCNgy6MfHHNyg8s/aekPKrTqKX90gBGt3NNGvhdw==
+ncjsm@^4.1.0, ncjsm@^4.2.0, ncjsm@^4.3.0:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/ncjsm/-/ncjsm-4.3.0.tgz#ec2301ad67475f414a50de34fae00ebc31527e38"
+  integrity sha512-oah6YGwb4Ern2alojiMFcjPhE4wvQBw1Ur/kUr2P0ovKdzaF5pCIsGjs0f2y+iZeej0/5Y6OOhQ8j30cTDMEGw==
   dependencies:
     builtin-modules "^3.2.0"
     deferred "^0.7.11"
     es5-ext "^0.10.53"
     es6-set "^0.1.5"
+    ext "^1.6.0"
     find-requires "^1.0.0"
     fs2 "^0.3.9"
     type "^2.5.0"
@@ -15238,10 +15239,10 @@ serverless-jetpack@^0.11.1:
     p-limit "^3.1.0"
     trace-deps "^0.4.0"
 
-serverless@^2.72.1:
-  version "2.72.1"
-  resolved "https://registry.yarnpkg.com/serverless/-/serverless-2.72.1.tgz#60d7cbf61455024c8589b7a1f10bcd24301d4ea9"
-  integrity sha512-SxmxyBgWQvcKvEXdP0fR3Y+nljOQ+nWCPDZXnhic//w+k0kNQ/bHcd3S1VZQqU3m7nZZwMsdC5lxB26EpUFELA==
+serverless@^2.72.2:
+  version "2.72.2"
+  resolved "https://registry.yarnpkg.com/serverless/-/serverless-2.72.2.tgz#bb09965818cfa0683018900717c393a464a1ee5d"
+  integrity sha512-xlxaWyq4b58DIX3prwIikBmXj0z4R+YI9zcDPYgQc78mKJ0qTgCK7BMoy6dlVuHXnfhBkhT3uT/EhFvjKIdk6g==
   dependencies:
     "@serverless/cli" "^1.6.0"
     "@serverless/components" "^3.18.2"
@@ -15251,7 +15252,7 @@ serverless@^2.72.1:
     ajv "^6.12.6"
     ajv-keywords "^3.5.2"
     archiver "^5.3.0"
-    aws-sdk "^2.1061.0"
+    aws-sdk "^2.1062.0"
     bluebird "^3.7.2"
     boxen "^5.1.2"
     cachedir "^2.3.0"
@@ -15281,7 +15282,7 @@ serverless@^2.72.1:
     lodash "^4.17.21"
     memoizee "^0.4.15"
     micromatch "^4.0.4"
-    ncjsm "^4.2.0"
+    ncjsm "^4.3.0"
     node-fetch "^2.6.7"
     open "^7.4.2"
     path2 "^0.1.0"
