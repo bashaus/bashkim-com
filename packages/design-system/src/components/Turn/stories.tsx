@@ -1,9 +1,9 @@
 import { Meta, Story } from "@storybook/react";
 
-import { Turn, TurnProps } from ".";
+import { Turn as TurnComponent, TurnProps } from ".";
 
 export default {
-  component: Turn,
+  component: TurnComponent,
   title: "Components/Turn",
   args: {
     pages: 6,
@@ -15,7 +15,7 @@ export default {
 
 const Template: Story<TurnProps> = (args: TurnProps) => (
   <div style={{ maxWidth: 800, width: "100vw" }}>
-    <Turn {...args} pageWidth={300} pageHeight={450}>
+    <TurnComponent {...args} pageWidth={300} pageHeight={450}>
       {Array(args.pages)
         .fill("")
         .map((_value, index) => (
@@ -26,8 +26,8 @@ const Template: Story<TurnProps> = (args: TurnProps) => (
             />
           </div>
         ))}
-    </Turn>
+    </TurnComponent>
   </div>
 );
 
-export const Render = Template.bind({});
+export const Turn = Template.bind({});

@@ -1,10 +1,13 @@
 import { Meta, Story } from "@storybook/react";
 
-import { LifespanFormatter, LifespanFormatterProps } from ".";
+import {
+  LifespanFormatter as LifespanFormatterComponent,
+  LifespanFormatterProps,
+} from ".";
 
 export default {
-  component: LifespanFormatter,
-  title: "Formatters/LifespanFormatter",
+  component: LifespanFormatterComponent,
+  title: "Formatters/Lifespan Formatter",
   argTypes: {
     startDate: {
       control: "date",
@@ -25,11 +28,11 @@ const Template: Story<LifespanFormatterProps> = ({
   endDate,
   ...args
 }: LifespanFormatterProps) => (
-  <LifespanFormatter
+  <LifespanFormatterComponent
     startDate={new Date(startDate)}
     endDate={endDate ? new Date(endDate) : undefined}
     {...args}
   />
 );
 
-export const Render = Template.bind({});
+export const LifespanFormatter = Template.bind({});

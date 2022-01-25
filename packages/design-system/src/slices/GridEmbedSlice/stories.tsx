@@ -1,11 +1,14 @@
 import { GridEmbedSliceFixture } from "@bashkim-com/prismic";
 import { Meta, Story } from "@storybook/react";
 
-import { GridEmbedSlice, GridEmbedSliceProps } from ".";
+import {
+  GridEmbedSlice as GridEmbedSliceComponent,
+  GridEmbedSliceProps,
+} from ".";
 
 export default {
-  component: GridEmbedSlice,
-  title: "Prismic slices/GridEmbedSlice",
+  component: GridEmbedSliceComponent,
+  title: "Prismic slices/Grid Embed Slice",
   args: {
     slice: GridEmbedSliceFixture,
   },
@@ -21,7 +24,7 @@ export default {
 } as Meta;
 
 const Template: Story<GridEmbedSliceProps> = (args: GridEmbedSliceProps) => (
-  <GridEmbedSlice {...args} />
+  <GridEmbedSliceComponent {...args} />
 );
 
-export const PrismicFixture = Template.bind({});
+export const GridEmbedSlice = Template.bind({});

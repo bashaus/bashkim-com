@@ -1,11 +1,14 @@
 import { Meta, Story } from "@storybook/react";
 import faker from "faker";
 
-import { FullTextPartial, FullTextPartialProps } from ".";
+import {
+  FullTextPartial as FullTextPartialComponent,
+  FullTextPartialProps,
+} from ".";
 
 export default {
-  component: FullTextPartial,
-  title: "Partials/FullTextPartial",
+  component: FullTextPartialComponent,
+  title: "Partials/Full Text Partial",
   args: {
     title: "FullTextPartial",
   },
@@ -25,14 +28,14 @@ const Template: Story<FullTextPartialStoryProps> = ({
   title,
   ...args
 }: FullTextPartialStoryProps) => (
-  <FullTextPartial {...args}>
+  <FullTextPartialComponent {...args}>
     <h3>{title}</h3>
     {Array(6)
       .fill("")
       .map((_value, index) => (
         <p key={index}>{faker.lorem.paragraph()}</p>
       ))}
-  </FullTextPartial>
+  </FullTextPartialComponent>
 );
 
-export const Render = Template.bind({});
+export const FullTextPartial = Template.bind({});

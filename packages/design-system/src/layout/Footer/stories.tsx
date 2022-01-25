@@ -3,16 +3,16 @@ import { Meta, Story } from "@storybook/react";
 import { FooterColumn } from "../FooterColumn";
 import { FooterGroup } from "../FooterGroup";
 import { FooterLinks } from "../FooterLinks";
-import { Footer, FooterProps } from ".";
+import { Footer as FooterComponent, FooterProps } from ".";
 
 export default {
-  component: Footer,
+  component: FooterComponent,
   title: "Layout/Footer",
   args: {},
 } as Meta;
 
 const Template: Story<FooterProps> = (args: FooterProps) => (
-  <Footer {...args}>
+  <FooterComponent {...args}>
     <FooterGroup>
       <FooterColumn label="Column one">
         <FooterLinks>
@@ -30,7 +30,7 @@ const Template: Story<FooterProps> = (args: FooterProps) => (
         </FooterLinks>
       </FooterColumn>
     </FooterGroup>
-  </Footer>
+  </FooterComponent>
 );
 
-export const Render = Template.bind({});
+export const Footer = Template.bind({});

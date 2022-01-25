@@ -1,11 +1,14 @@
 import { CaptionedScreenshotsSliceFixture } from "@bashkim-com/prismic";
 import { Meta, Story } from "@storybook/react";
 
-import { CaptionedScreenshotsSlice, CaptionedScreenshotsSliceProps } from ".";
+import {
+  CaptionedScreenshotsSlice as CaptionedScreenshotsSliceComponent,
+  CaptionedScreenshotsSliceProps,
+} from ".";
 
 export default {
-  component: CaptionedScreenshotsSlice,
-  title: "Prismic slices/CaptionedScreenshotsSlice",
+  component: CaptionedScreenshotsSliceComponent,
+  title: "Prismic slices/Captioned Screenshots Slice",
   args: {
     slice: CaptionedScreenshotsSliceFixture,
   },
@@ -22,6 +25,6 @@ export default {
 
 const Template: Story<CaptionedScreenshotsSliceProps> = (
   args: CaptionedScreenshotsSliceProps
-) => <CaptionedScreenshotsSlice {...args} />;
+) => <CaptionedScreenshotsSliceComponent {...args} />;
 
-export const PrismicFixture = Template.bind({});
+export const CaptionedScreenshotsSlice = Template.bind({});

@@ -1,10 +1,13 @@
 import { Meta, Story } from "@storybook/react";
 
-import { HeaderImagePartial, HeaderImagePartialProps } from ".";
+import {
+  HeaderImagePartial as HeaderImagePartialComponent,
+  HeaderImagePartialProps,
+} from ".";
 
 export default {
-  component: HeaderImagePartial,
-  title: "Partials/HeaderImagePartial",
+  component: HeaderImagePartialComponent,
+  title: "Partials/Header Image Partial",
   args: {
     id: "HeaderImagePartial",
     imageDesktop: ["https://via.placeholder.com/1920x400?text=imageDesktop"],
@@ -29,11 +32,11 @@ const Template: Story<HeaderImagePartialStoryProps> = ({
   imageMobile,
   ...args
 }: HeaderImagePartialStoryProps) => (
-  <HeaderImagePartial
+  <HeaderImagePartialComponent
     imageDesktop={imageDesktop[0]}
     imageMobile={imageMobile[0]}
     {...args}
   />
 );
 
-export const Render = Template.bind({});
+export const HeaderImagePartial = Template.bind({});

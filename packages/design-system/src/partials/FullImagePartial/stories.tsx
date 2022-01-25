@@ -1,10 +1,13 @@
 import { Meta, Story } from "@storybook/react";
 
-import { FullImagePartial, FullImagePartialProps } from ".";
+import {
+  FullImagePartial as FullImagePartialComponent,
+  FullImagePartialProps,
+} from ".";
 
 export default {
-  component: FullImagePartial,
-  title: "Partials/FullImagePartial",
+  component: FullImagePartialComponent,
+  title: "Partials/Full Image Partial",
   args: {
     figure: ["https://via.placeholder.com/1200x630?text=figure"],
   },
@@ -21,9 +24,9 @@ const Template: Story<FullImagePartialStoryProps> = ({
   figure,
   ...args
 }: FullImagePartialStoryProps) => (
-  <FullImagePartial {...args}>
+  <FullImagePartialComponent {...args}>
     <img alt="" src={figure[0]} />
-  </FullImagePartial>
+  </FullImagePartialComponent>
 );
 
-export const Render = Template.bind({});
+export const FullImagePartial = Template.bind({});

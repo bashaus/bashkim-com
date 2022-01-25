@@ -1,11 +1,14 @@
 import { CollaboratorSliceFixture } from "@bashkim-com/prismic";
 import { Meta, Story } from "@storybook/react";
 
-import { CollaboratorSlice, CollaboratorSliceProps } from ".";
+import {
+  CollaboratorSlice as CollaboratorSliceComponent,
+  CollaboratorSliceProps,
+} from ".";
 
 export default {
-  component: CollaboratorSlice,
-  title: "Prismic slices/CollaboratorSlice",
+  component: CollaboratorSliceComponent,
+  title: "Prismic slices/Collaborator Slice",
   args: {
     slice: CollaboratorSliceFixture,
   },
@@ -23,6 +26,6 @@ export default {
 
 const Template: Story<CollaboratorSliceProps> = (
   args: CollaboratorSliceProps
-) => <CollaboratorSlice {...args} />;
+) => <CollaboratorSliceComponent {...args} />;
 
-export const PrismicFixture = Template.bind({});
+export const CollaboratorSlice = Template.bind({});

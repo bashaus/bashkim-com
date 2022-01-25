@@ -1,11 +1,14 @@
 import { ExhibitionSliceFixture } from "@bashkim-com/prismic";
 import { Meta, Story } from "@storybook/react";
 
-import { ExhibitionSlice, ExhibitionSliceProps } from ".";
+import {
+  ExhibitionSlice as ExhibitionSliceComponent,
+  ExhibitionSliceProps,
+} from ".";
 
 export default {
-  component: ExhibitionSlice,
-  title: "Prismic slices/ExhibitionSlice",
+  component: ExhibitionSliceComponent,
+  title: "Prismic slices/Exhibition Slice",
   args: {
     slice: ExhibitionSliceFixture,
   },
@@ -22,7 +25,7 @@ export default {
 } as Meta;
 
 const Template: Story<ExhibitionSliceProps> = (args: ExhibitionSliceProps) => (
-  <ExhibitionSlice {...args} />
+  <ExhibitionSliceComponent {...args} />
 );
 
-export const PrismicFixture = Template.bind({});
+export const ExhibitionSlice = Template.bind({});

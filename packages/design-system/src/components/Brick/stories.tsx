@@ -1,10 +1,10 @@
 import { Meta, Story } from "@storybook/react";
 import faker from "faker";
 
-import { Brick, BrickProps } from ".";
+import { Brick as BrickComponent, BrickProps } from ".";
 
 export default {
-  component: Brick,
+  component: BrickComponent,
   title: "Components/Brick",
   args: {
     icon: ["https://via.placeholder.com/300x300?text=icon"],
@@ -26,6 +26,6 @@ type BrickStoryProps = Omit<BrickProps, "icon"> & {
 const Template: Story<BrickStoryProps> = ({
   icon,
   ...args
-}: BrickStoryProps) => <Brick icon={icon[0]} {...args} />;
+}: BrickStoryProps) => <BrickComponent icon={icon[0]} {...args} />;
 
-export const Render = Template.bind({});
+export const Brick = Template.bind({});

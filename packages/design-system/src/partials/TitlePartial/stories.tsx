@@ -1,11 +1,11 @@
 import { Meta, Story } from "@storybook/react";
 import faker from "faker";
 
-import { TitlePartial, TitlePartialProps } from ".";
+import { TitlePartial as TitlePartialComponent, TitlePartialProps } from ".";
 
 export default {
-  component: TitlePartial,
-  title: "Partials/TitlePartial",
+  component: TitlePartialComponent,
+  title: "Partials/Title Partial",
   args: {
     image: ["https://via.placeholder.com/300x300?text=image"],
     title: "TitlePartial",
@@ -36,10 +36,10 @@ const Template: Story<TitlePartialStoryProps> = ({
   subtitle,
   ...args
 }: TitlePartialStoryProps) => (
-  <TitlePartial image={image[0]} {...args}>
+  <TitlePartialComponent image={image[0]} {...args}>
     <h1>{title}</h1>
     <p>{subtitle}</p>
-  </TitlePartial>
+  </TitlePartialComponent>
 );
 
-export const Render = Template.bind({});
+export const TitlePartial = Template.bind({});

@@ -1,9 +1,9 @@
 import { Meta, Story } from "@storybook/react";
 
-import { Magazine, MagazineProps } from ".";
+import { Magazine as MagazineComponent, MagazineProps } from ".";
 
 export default {
-  component: Magazine,
+  component: MagazineComponent,
   title: "Components/Magazine",
   args: {
     pageWidth: 350,
@@ -21,7 +21,7 @@ export default {
 
 const Template: Story<MagazineProps> = (args: MagazineProps) => (
   <div style={{ maxWidth: 600, width: "100vw" }}>
-    <Magazine {...args}>
+    <MagazineComponent {...args}>
       {Array(args.pages)
         .fill("")
         .map((_value, index) => (
@@ -36,8 +36,8 @@ const Template: Story<MagazineProps> = (args: MagazineProps) => (
             />
           </div>
         ))}
-    </Magazine>
+    </MagazineComponent>
   </div>
 );
 
-export const Render = Template.bind({});
+export const Magazine = Template.bind({});

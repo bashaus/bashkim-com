@@ -1,10 +1,10 @@
 import { Meta, Story } from "@storybook/react";
 import faker from "faker";
 
-import { Carousel, CarouselProps } from ".";
+import { Carousel as CarouselComponent, CarouselProps } from ".";
 
 export default {
-  component: Carousel,
+  component: CarouselComponent,
   title: "Components/Carousel",
   args: {
     slides: 3,
@@ -35,7 +35,7 @@ const Template: Story<CarouselStoryProps> = ({
       maxWidth: 600,
     }}
   >
-    <Carousel {...args}>
+    <CarouselComponent {...args}>
       {Array(slides)
         .fill("")
         .map((_value, index) => (
@@ -46,8 +46,8 @@ const Template: Story<CarouselStoryProps> = ({
             <p>{faker.lorem.paragraph(2)}</p>
           </div>
         ))}
-    </Carousel>
+    </CarouselComponent>
   </div>
 );
 
-export const Render = Template.bind({});
+export const Carousel = Template.bind({});

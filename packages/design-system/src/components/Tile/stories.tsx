@@ -1,10 +1,10 @@
 import { Meta, Story } from "@storybook/react";
 import faker from "faker";
 
-import { Tile, TileProps } from ".";
+import { Tile as TileComponent, TileProps } from ".";
 
 export default {
-  component: Tile,
+  component: TileComponent,
   title: "Components/Tile",
   args: {
     title: "Tile",
@@ -30,6 +30,8 @@ const Template: Story<TileStoryProps> = ({
   icon,
   poster,
   ...args
-}: TileStoryProps) => <Tile {...args} icon={icon[0]} poster={poster[0]} />;
+}: TileStoryProps) => (
+  <TileComponent {...args} icon={icon[0]} poster={poster[0]} />
+);
 
-export const Render = Template.bind({});
+export const Tile = Template.bind({});

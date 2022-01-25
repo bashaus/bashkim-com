@@ -1,11 +1,14 @@
 import { CarouselPhonesSliceFixture } from "@bashkim-com/prismic";
 import { Meta, Story } from "@storybook/react";
 
-import { CarouselPhonesSlice, CarouselPhonesSliceProps } from ".";
+import {
+  CarouselPhonesSlice as CarouselPhonesSliceComponent,
+  CarouselPhonesSliceProps,
+} from ".";
 
 export default {
-  component: CarouselPhonesSlice,
-  title: "Prismic slices/CarouselPhonesSlice",
+  component: CarouselPhonesSliceComponent,
+  title: "Prismic slices/Carousel Phones Slice",
   args: {
     slice: CarouselPhonesSliceFixture,
   },
@@ -22,6 +25,6 @@ export default {
 
 const Template: Story<CarouselPhonesSliceProps> = (
   args: CarouselPhonesSliceProps
-) => <CarouselPhonesSlice {...args} />;
+) => <CarouselPhonesSliceComponent {...args} />;
 
-export const PrismicFixture = Template.bind({});
+export const CarouselPhonesSlice = Template.bind({});

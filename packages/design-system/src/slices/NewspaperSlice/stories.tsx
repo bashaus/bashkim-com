@@ -1,11 +1,14 @@
 import { NewspaperSliceFixture } from "@bashkim-com/prismic";
 import { Meta, Story } from "@storybook/react";
 
-import { NewspaperSlice, NewspaperSliceProps } from ".";
+import {
+  NewspaperSlice as NewspaperSliceComponent,
+  NewspaperSliceProps,
+} from ".";
 
 export default {
-  component: NewspaperSlice,
-  title: "Prismic slices/NewspaperSlice",
+  component: NewspaperSliceComponent,
+  title: "Prismic slices/Newspaper Slice",
   args: {
     slice: NewspaperSliceFixture,
   },
@@ -21,7 +24,7 @@ export default {
 } as Meta;
 
 const Template: Story<NewspaperSliceProps> = (args: NewspaperSliceProps) => (
-  <NewspaperSlice {...args} />
+  <NewspaperSliceComponent {...args} />
 );
 
-export const PrismicFixture = Template.bind({});
+export const NewspaperSlice = Template.bind({});

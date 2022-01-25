@@ -1,11 +1,11 @@
 import { SubtitleSliceFixture } from "@bashkim-com/prismic";
 import { Meta, Story } from "@storybook/react";
 
-import { SubtitleSlice, SubtitleSliceProps } from ".";
+import { SubtitleSlice as SubtitleSliceComponent, SubtitleSliceProps } from ".";
 
 export default {
-  component: SubtitleSlice,
-  title: "Prismic slices/SubtitleSlice",
+  component: SubtitleSliceComponent,
+  title: "Prismic slices/Subtitle Slice",
   args: {
     slice: SubtitleSliceFixture,
   },
@@ -21,7 +21,7 @@ export default {
 } as Meta;
 
 const Template: Story<SubtitleSliceProps> = (args: SubtitleSliceProps) => (
-  <SubtitleSlice {...args} />
+  <SubtitleSliceComponent {...args} />
 );
 
-export const PrismicFixture = Template.bind({});
+export const SubtitleSlice = Template.bind({});

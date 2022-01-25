@@ -1,10 +1,10 @@
 import { Meta, Story } from "@storybook/react";
 import faker from "faker";
 
-import { Group, GroupDesign, GroupProps } from ".";
+import { Group as GroupComponent, GroupDesign, GroupProps } from ".";
 
 export default {
-  component: Group,
+  component: GroupComponent,
   title: "Layout/Group",
   args: {
     design: GroupDesign.DEFAULT,
@@ -19,9 +19,9 @@ type GroupStoryProps = GroupProps & {
 };
 
 const Template: Story<GroupStoryProps> = (args: GroupStoryProps) => (
-  <Group {...args}>
+  <GroupComponent {...args}>
     <p>{faker.lorem.sentences(3)}</p>
-  </Group>
+  </GroupComponent>
 );
 
 export const Default = Template.bind({});

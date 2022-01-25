@@ -1,11 +1,14 @@
 import { CaptionedImageSliceFixture } from "@bashkim-com/prismic";
 import { Meta, Story } from "@storybook/react";
 
-import { CaptionedImageSlice, CaptionedImageSliceProps } from ".";
+import {
+  CaptionedImageSlice as CaptionedImageSliceComponent,
+  CaptionedImageSliceProps,
+} from ".";
 
 export default {
-  component: CaptionedImageSlice,
-  title: "Prismic slices/CaptionedImageSlice",
+  component: CaptionedImageSliceComponent,
+  title: "Prismic slices/Captioned Image Slice",
   args: {
     slice: CaptionedImageSliceFixture,
   },
@@ -22,6 +25,6 @@ export default {
 
 const Template: Story<CaptionedImageSliceProps> = (
   args: CaptionedImageSliceProps
-) => <CaptionedImageSlice {...args} />;
+) => <CaptionedImageSliceComponent {...args} />;
 
-export const PrismicFixture = Template.bind({});
+export const CaptionedImageSlice = Template.bind({});

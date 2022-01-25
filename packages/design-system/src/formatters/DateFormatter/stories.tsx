@@ -1,10 +1,10 @@
 import { Meta, Story } from "@storybook/react";
 
-import { DateFormatter, DateFormatterProps } from ".";
+import { DateFormatter as DateFormatterComponent, DateFormatterProps } from ".";
 
 export default {
-  component: DateFormatter,
-  title: "Formatters/DateFormatter",
+  component: DateFormatterComponent,
+  title: "Formatters/Date Formatter",
   args: {
     date: new Date(),
   },
@@ -21,7 +21,9 @@ export default {
 const Template: Story<DateFormatterProps> = ({
   date,
   ...args
-}: DateFormatterProps) => <DateFormatter date={new Date(date)} {...args} />;
+}: DateFormatterProps) => (
+  <DateFormatterComponent date={new Date(date)} {...args} />
+);
 
 export const Now = Template.bind({});
 

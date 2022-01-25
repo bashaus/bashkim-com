@@ -1,11 +1,14 @@
 import { Meta, Story } from "@storybook/react";
 import faker from "faker";
 
-import { HeaderTextPartial, HeaderTextPartialProps } from ".";
+import {
+  HeaderTextPartial as HeaderTextPartialComponent,
+  HeaderTextPartialProps,
+} from ".";
 
 export default {
-  component: HeaderTextPartial,
-  title: "Partials/HeaderTextPartial",
+  component: HeaderTextPartialComponent,
+  title: "Partials/Header Text Partial",
   args: {
     title: "HeaderTextPartial",
     subtitle: faker.lorem.sentence(8),
@@ -32,10 +35,10 @@ const Template: Story<HeaderTextPartialStoryProps> = ({
   subtitle,
   ...args
 }: HeaderTextPartialStoryProps) => (
-  <HeaderTextPartial {...args}>
+  <HeaderTextPartialComponent {...args}>
     <h1>{title}</h1>
     <p>{subtitle}</p>
-  </HeaderTextPartial>
+  </HeaderTextPartialComponent>
 );
 
-export const Render = Template.bind({});
+export const HeaderTextPartial = Template.bind({});

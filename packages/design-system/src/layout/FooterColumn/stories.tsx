@@ -1,23 +1,23 @@
 import { Meta, Story } from "@storybook/react";
 
 import { FooterLinks } from "../FooterLinks";
-import { FooterColumn, FooterColumnProps } from ".";
+import { FooterColumn as FooterColumnComponent, FooterColumnProps } from ".";
 
 export default {
-  component: FooterColumn,
-  title: "Layout/FooterColumn",
+  component: FooterColumnComponent,
+  title: "Layout/Footer Column",
   args: {
     label: "Label",
   },
 } as Meta;
 
 const Template: Story<FooterColumnProps> = (args: FooterColumnProps) => (
-  <FooterColumn {...args}>
+  <FooterColumnComponent {...args}>
     <FooterLinks>
       <li>Menu item #1</li>
       <li>Menu item #2</li>
     </FooterLinks>
-  </FooterColumn>
+  </FooterColumnComponent>
 );
 
-export const Render = Template.bind({});
+export const FooterColumn = Template.bind({});

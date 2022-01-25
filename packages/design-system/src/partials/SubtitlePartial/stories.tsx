@@ -1,11 +1,14 @@
 import { Meta, Story } from "@storybook/react";
 import faker from "faker";
 
-import { SubtitlePartial, SubtitlePartialProps } from ".";
+import {
+  SubtitlePartial as SubtitlePartialComponent,
+  SubtitlePartialProps,
+} from ".";
 
 export default {
-  components: SubtitlePartial,
-  title: "Partials/SubtitlePartial",
+  components: SubtitlePartialComponent,
+  title: "Partials/Subtitle Partial",
   args: {
     title: "SubtitlePartial",
     subtitle: faker.lorem.sentence(8),
@@ -32,10 +35,10 @@ const Template: Story<SubtitlePartialStoryProps> = ({
   subtitle,
   ...args
 }: SubtitlePartialStoryProps) => (
-  <SubtitlePartial {...args}>
+  <SubtitlePartialComponent {...args}>
     <h2>{title}</h2>
     <p>{subtitle}</p>
-  </SubtitlePartial>
+  </SubtitlePartialComponent>
 );
 
-export const Render = Template.bind({});
+export const SubtitlePartial = Template.bind({});

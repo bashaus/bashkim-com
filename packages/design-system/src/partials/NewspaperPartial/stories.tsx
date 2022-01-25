@@ -1,11 +1,14 @@
 import { Meta, Story } from "@storybook/react";
 import faker from "faker";
 
-import { NewspaperPartial, NewspaperPartialProps } from ".";
+import {
+  NewspaperPartial as NewspaperPartialComponent,
+  NewspaperPartialProps,
+} from ".";
 
 export default {
-  component: NewspaperPartial,
-  title: "Partials/NewspaperPartial",
+  component: NewspaperPartialComponent,
+  title: "Partials/Newspaper Partial",
   args: {
     paragraphs: 10,
   },
@@ -27,7 +30,7 @@ const Template: Story<NewspaperPartialStoryProps> = ({
   paragraphs,
   ...args
 }: NewspaperPartialStoryProps) => (
-  <NewspaperPartial {...args}>
+  <NewspaperPartialComponent {...args}>
     {Array(paragraphs)
       .fill("")
       .map((_value, index) => (
@@ -35,7 +38,7 @@ const Template: Story<NewspaperPartialStoryProps> = ({
           Paragraph {index + 1}: {faker.lorem.paragraph()}
         </div>
       ))}
-  </NewspaperPartial>
+  </NewspaperPartialComponent>
 );
 
-export const Render = Template.bind({});
+export const NewspaperPartial = Template.bind({});

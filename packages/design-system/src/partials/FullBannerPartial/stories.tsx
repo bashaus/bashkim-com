@@ -1,11 +1,14 @@
 import { Meta, Story } from "@storybook/react";
 import faker from "faker";
 
-import { FullBannerPartial, FullBannerPartialProps } from ".";
+import {
+  FullBannerPartial as FullBannerPartialComponent,
+  FullBannerPartialProps,
+} from ".";
 
 export default {
-  component: FullBannerPartial,
-  title: "Partials/FullBannerPartial",
+  component: FullBannerPartialComponent,
+  title: "Partials/Full Banner Partial",
   args: {
     backgroundDesktop: [
       "https://via.placeholder.com/1920x400?text=backgroundDesktop",
@@ -48,14 +51,14 @@ const Template: Story<FullBannerPartialStoryProps> = ({
   subtitle,
   ...args
 }: FullBannerPartialStoryProps) => (
-  <FullBannerPartial
+  <FullBannerPartialComponent
     backgroundDesktop={backgroundDesktop[0]}
     backgroundMobile={backgroundMobile[0]}
     {...args}
   >
     <h3>{title}</h3>
     <p>{subtitle}</p>
-  </FullBannerPartial>
+  </FullBannerPartialComponent>
 );
 
-export const Render = Template.bind({});
+export const FullBannerPartial = Template.bind({});

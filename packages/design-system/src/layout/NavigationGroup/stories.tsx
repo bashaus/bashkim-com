@@ -1,11 +1,14 @@
 import { Meta, Story } from "@storybook/react";
 
 import { NavigationItem } from "../NavigationItem";
-import { NavigationGroup, NavigationGroupProps } from ".";
+import {
+  NavigationGroup as NavigationGroupComponent,
+  NavigationGroupProps,
+} from ".";
 
 export default {
-  component: NavigationGroup,
-  title: "Layout/NavigationGroup",
+  component: NavigationGroupComponent,
+  title: "Layout/Navigation Group",
   args: {
     children: (
       <>
@@ -25,6 +28,6 @@ export default {
 
 const Template: Story<NavigationGroupProps> = ({
   ...args
-}: NavigationGroupProps) => <NavigationGroup {...args} />;
+}: NavigationGroupProps) => <NavigationGroupComponent {...args} />;
 
-export const Render = Template.bind({});
+export const NavigationGroup = Template.bind({});

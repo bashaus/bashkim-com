@@ -1,10 +1,10 @@
 import { Meta, Story } from "@storybook/react";
 
-import { CallToAction, CallToActionProps } from ".";
+import { CallToAction as CallToActionComponent, CallToActionProps } from ".";
 
 export default {
-  component: CallToAction,
-  title: "Components/CallToAction",
+  component: CallToActionComponent,
+  title: "Components/Call To Action",
   args: {
     children: "Call to action",
   },
@@ -20,11 +20,11 @@ const Template: Story<CallToActionProps> = ({
   children,
   ...args
 }: CallToActionProps) => (
-  <CallToAction {...args}>
+  <CallToActionComponent {...args}>
     <a>
       <span>{children}</span>
     </a>
-  </CallToAction>
+  </CallToActionComponent>
 );
 
-export const Render = Template.bind({});
+export const CallToAction = Template.bind({});

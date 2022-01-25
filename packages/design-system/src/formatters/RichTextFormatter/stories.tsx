@@ -1,11 +1,14 @@
 import { Meta, Story } from "@storybook/react";
 import faker from "faker";
 
-import { RichTextFormatter, RichTextFormatterProps } from ".";
+import {
+  RichTextFormatter as RichTextFormatterComponent,
+  RichTextFormatterProps,
+} from ".";
 
 export default {
-  component: RichTextFormatter,
-  title: "Formatters/RichTextFormatter",
+  component: RichTextFormatterComponent,
+  title: "Formatters/Rich Text Formatter",
   args: {},
   parameters: {
     layout: "padded",
@@ -15,7 +18,7 @@ export default {
 const Template: Story<RichTextFormatterProps> = (
   args: RichTextFormatterProps
 ) => (
-  <RichTextFormatter {...args}>
+  <RichTextFormatterComponent {...args}>
     <h1>&lt;RichTextFormatter /&gt;</h1>
     <p>
       The RichTextFormatter component is designed to take semantical HTML and
@@ -41,7 +44,7 @@ const Template: Story<RichTextFormatterProps> = (
       <li>{faker.lorem.words(5)}</li>
       <li>{faker.lorem.words(5)}</li>
     </ol>
-  </RichTextFormatter>
+  </RichTextFormatterComponent>
 );
 
-export const Render = Template.bind({});
+export const RichTextFormatter = Template.bind({});
