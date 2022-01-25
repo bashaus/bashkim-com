@@ -9,7 +9,7 @@
     "test": "echo \"Error: no test specified\" && exit 0"
   },
   "dependencies": {
-    "@apollo/client": "^3.5.7",
+    "@apollo/client": "^3.5.8",
     "@bashkim-com/config": "1.0.0",
     "@bashkim-com/prismic": "1.0.0",
     "@vendia/serverless-express": "^4.5.3",
