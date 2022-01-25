@@ -6,5 +6,13 @@
     "declarationDir": "./build",
     "outDir": "./build",
     "typeRoots": ["./types"]
-  }
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "build/",
+    "node_modules/"
+  ]
 }

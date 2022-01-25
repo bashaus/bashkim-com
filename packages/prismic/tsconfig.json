@@ -7,6 +7,15 @@
     "jsx": "react-jsx",
     "outDir": "./build",
     "rootDir": "./src",
+    "types": ["node"],
     "typeRoots": ["./types"]
-  }
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "build/",
+    "node_modules/"
+  ]
 }

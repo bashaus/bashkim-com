@@ -4,6 +4,15 @@
     "baseUrl": "./src",
     "module": "commonjs",
     "outDir": "./build",
+    "types": ["node"],
     "typeRoots": ["./types"]
-  }
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "build/",
+    "node_modules/"
+  ]
 }

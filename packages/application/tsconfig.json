@@ -20,6 +20,15 @@
     "typeRoots": ["./types"],
     "incremental": true
   },
-  "exclude": ["node_modules", "**/*.spec.ts", "**/*.spec.tsx"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+     "build",
+     "**/*.spec.ts",
+     "**/*.spec.tsx"
+  ],
 }

@@ -3,6 +3,15 @@
   "compilerOptions": {
     "baseUrl": "./src",
     "module": "commonjs",
-    "outDir": "./build"
-  }
+    "outDir": "./build",
+    "types": ["node"]
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "build/",
+    "node_modules/"
+  ]
 }
