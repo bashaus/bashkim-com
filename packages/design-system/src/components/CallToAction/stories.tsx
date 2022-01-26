@@ -1,4 +1,4 @@
-import { Meta, Story } from "@storybook/react";
+import type { Meta, Story } from "@storybook/react";
 
 import { CallToAction as CallToActionComponent, CallToActionProps } from ".";
 

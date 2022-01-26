@@ -1,4 +1,4 @@
-import { Meta, Story } from "@storybook/react";
+import type { Meta, Story } from "@storybook/react";
 import faker from "faker";
 
 import { Carousel as CarouselComponent, CarouselProps } from ".";

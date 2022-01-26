@@ -1,5 +1,5 @@
 import { CaptionedScreenshotsSliceFixture } from "@bashkim-com/prismic";
-import { Meta, Story } from "@storybook/react";
+import type { Meta, Story } from "@storybook/react";
 
 import {
   CaptionedScreenshotsSlice as CaptionedScreenshotsSliceComponent,

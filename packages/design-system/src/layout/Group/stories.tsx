@@ -1,4 +1,4 @@
-import { Meta, Story } from "@storybook/react";
+import type { Meta, Story } from "@storybook/react";
 import faker from "faker";
 
 import { Group as GroupComponent, GroupDesign, GroupProps } from ".";

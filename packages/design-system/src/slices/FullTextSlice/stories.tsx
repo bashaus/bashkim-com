@@ -1,5 +1,5 @@
 import { FullTextSliceFixture } from "@bashkim-com/prismic";
-import { Meta, Story } from "@storybook/react";
+import type { Meta, Story } from "@storybook/react";
 
 import { FullTextSlice as FullTextSliceComponent, FullTextSliceProps } from ".";
 

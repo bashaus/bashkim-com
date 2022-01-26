@@ -1,4 +1,4 @@
-import { Meta, Story } from "@storybook/react";
+import type { Meta, Story } from "@storybook/react";
 
 import { SplitItemPartial } from "../SplitItemPartial";
 import { SplitPartial as SplitPartialComponent, SplitPartialProps } from ".";

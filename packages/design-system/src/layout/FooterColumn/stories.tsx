@@ -1,4 +1,4 @@
-import { Meta, Story } from "@storybook/react";
+import type { Meta, Story } from "@storybook/react";
 
 import { FooterLinks } from "../FooterLinks";
 import { FooterColumn as FooterColumnComponent, FooterColumnProps } from ".";
