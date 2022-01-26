@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "defaults-deep-ts": "^0.2.2",
-    "dotenv": "^14.3.0"
+    "dotenv": "^14.3.2"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^21.0.1",
