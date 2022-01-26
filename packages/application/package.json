@@ -20,7 +20,7 @@
     "@bashkim-com/config": "1.0.0",
     "@bashkim-com/design-system": "1.0.0",
     "@bashkim-com/prismic": "1.0.0",
-    "@primer/octicons-react": "^16.2.0",
+    "@primer/octicons-react": "^16.3.0",
     "@sentry/browser": "^6.17.1",
     "@xstate/react": "^1.6.3",
     "apollo-link-prismic": "^1.0.9",
