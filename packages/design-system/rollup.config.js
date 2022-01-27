@@ -1,4 +1,5 @@
 import commonjs from "@rollup/plugin-commonjs";
+import json from "@rollup/plugin-json";
 import nodeResolve from "@rollup/plugin-node-resolve";
 import svgr from "@svgr/rollup";
 import url from "postcss-url";
@@ -40,6 +41,7 @@ export default {
       ],
       use: ["sass"],
     }),
+    json(),
     svg(),
     svgr(),
     nodeResolve(),

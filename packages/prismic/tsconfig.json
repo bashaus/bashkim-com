@@ -2,17 +2,14 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "baseUrl": "./src",
-    "declaration": true,
-    "declarationDir": "./build",
+    "declaration": false,
     "jsx": "react-jsx",
-    "outDir": "./build",
     "rootDir": "./src",
-    "types": ["node"],
-    "typeRoots": ["./types"]
+    "types": ["node"]
   },
   "include": [
-    "**/*.ts",
-    "**/*.tsx"
+    "src/**/*.ts",
+    "src/**/*.tsx"
   ],
   "exclude": [
     "build/",
