@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "tsc",
+    "build": "tsc --project tsconfig.build.json",
     "clean": "rm -rf build/",
     "dev": "nodemon --config nodemon.json src/dev.ts",
     "test": "echo \"Error: no test specified\" && exit 0"

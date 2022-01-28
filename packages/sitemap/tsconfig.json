@@ -1,16 +1,10 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "baseUrl": "./src",
-    "module": "commonjs",
-    "outDir": "./build",
+    "rootDir": "./src",
     "types": ["node"],
     "typeRoots": ["./types"]
   },
-  "include": [
-    "**/*.ts",
-    "**/*.tsx"
-  ],
   "exclude": [
     "build/",
     "node_modules/"
