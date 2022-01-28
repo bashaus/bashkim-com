@@ -1,5 +1,4 @@
 import type { Meta, Story } from "@storybook/react";
-import faker from "faker";
 
 import {
   NewspaperPartial as NewspaperPartialComponent,
@@ -35,7 +34,10 @@ const Template: Story<NewspaperPartialStoryProps> = ({
       .fill("")
       .map((_value, index) => (
         <div key={index}>
-          Paragraph {index + 1}: {faker.lorem.paragraph()}
+          Paragraph {index + 1}: Pellentesque sit amet luctus diam. Aenean
+          lobortis non arcu sit amet fringilla. Proin sodales vel orci a
+          venenatis. Mauris vulputate, dolor eu consectetur congue, mi leo
+          eleifend lorem, ac lacinia.
         </div>
       ))}
   </NewspaperPartialComponent>

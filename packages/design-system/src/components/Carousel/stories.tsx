@@ -1,5 +1,4 @@
 import type { Meta, Story } from "@storybook/react";
-import faker from "faker";
 
 import { Carousel as CarouselComponent, CarouselProps } from ".";
 
@@ -41,9 +40,24 @@ const Template: Story<CarouselStoryProps> = ({
         .map((_value, index) => (
           <div key={index}>
             <h3>Slide {index + 1}</h3>
-            <p>{faker.lorem.paragraph(2)}</p>
-            <p>{faker.lorem.paragraph(2)}</p>
-            <p>{faker.lorem.paragraph(2)}</p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              ultrices ex ut diam suscipit rhoncus. Cras a ligula porta, dictum
+              turpis et, euismod neque. Phasellus pulvinar est cursus, lobortis
+              odio.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+              mattis urna id ipsum semper dictum. Donec porttitor tempus arcu,
+              eu egestas lectus commodo eget. Ut venenatis, tellus vitae aliquet
+              vestibulum.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+              viverra neque et nulla luctus feugiat. Suspendisse potenti. Sed
+              euismod consectetur purus eu mattis. Sed eleifend erat vehicula
+              magna convallis, quis.
+            </p>
           </div>
         ))}
     </CarouselComponent>

@@ -1,5 +1,4 @@
 import type { Meta, Story } from "@storybook/react";
-import faker from "faker";
 
 import { Brick as BrickComponent, BrickProps } from ".";
 
@@ -9,7 +8,7 @@ export default {
   args: {
     icon: ["https://via.placeholder.com/300x300?text=icon"],
     title: "Brick",
-    description: faker.lorem.sentence(8),
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
   argTypes: {
     icon: { control: "file" },

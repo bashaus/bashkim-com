@@ -1,5 +1,4 @@
 import type { Meta, Story } from "@storybook/react";
-import faker from "faker";
 
 import {
   FullTextPartial as FullTextPartialComponent,
@@ -33,7 +32,11 @@ const Template: Story<FullTextPartialStoryProps> = ({
     {Array(6)
       .fill("")
       .map((_value, index) => (
-        <p key={index}>{faker.lorem.paragraph()}</p>
+        <p key={index}>
+          Aliquam eu dictum justo. Morbi purus orci, auctor ac maximus at,
+          lobortis at leo. Aenean a pulvinar nibh. Phasellus sagittis pulvinar
+          risus, non varius mi luctus vel. Etiam laoreet eget.
+        </p>
       ))}
   </FullTextPartialComponent>
 );

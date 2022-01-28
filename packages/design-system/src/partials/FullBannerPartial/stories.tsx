@@ -1,5 +1,4 @@
 import type { Meta, Story } from "@storybook/react";
-import faker from "faker";
 
 import {
   FullBannerPartial as FullBannerPartialComponent,
@@ -17,7 +16,8 @@ export default {
       "https://via.placeholder.com/1000x800?text=backgroundMobile",
     ],
     title: "FullBannerPartial",
-    subtitle: faker.lorem.paragraph(),
+    subtitle:
+      "Quisque id consectetur purus. Morbi dapibus orci a lacus egestas, nec imperdiet augue aliquet. Cras id tortor augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis tortor luctus.",
   },
   argTypes: {
     backgroundDesktop: { control: "file" },

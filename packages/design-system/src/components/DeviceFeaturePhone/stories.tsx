@@ -1,5 +1,4 @@
 import type { Meta, Story } from "@storybook/react";
-import faker from "faker";
 
 import { DeviceFeaturePhone, DeviceFeaturePhoneProps } from ".";
 
@@ -7,7 +6,7 @@ export default {
   component: DeviceFeaturePhone,
   title: "Components/Device/Feature Phone",
   args: {
-    children: faker.lorem.sentence(8),
+    children: "Aenean malesuada ante id facilisis sollicitudin. Sed cursus.",
     figure: ["https://via.placeholder.com/496x390?text=figure"],
   },
   argTypes: {

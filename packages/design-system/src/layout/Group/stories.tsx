@@ -1,5 +1,4 @@
 import type { Meta, Story } from "@storybook/react";
-import faker from "faker";
 
 import { Group as GroupComponent, GroupDesign, GroupProps } from ".";
 
@@ -20,7 +19,7 @@ type GroupStoryProps = GroupProps & {
 
 const Template: Story<GroupStoryProps> = (args: GroupStoryProps) => (
   <GroupComponent {...args}>
-    <p>{faker.lorem.sentences(3)}</p>
+    <p>Nulla facilisi. Vivamus ac fringilla urna. Praesent in.</p>
   </GroupComponent>
 );
 

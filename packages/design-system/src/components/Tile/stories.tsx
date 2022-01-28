@@ -1,5 +1,4 @@
 import type { Meta, Story } from "@storybook/react";
-import faker from "faker";
 
 import { Tile as TileComponent, TileProps } from ".";
 
@@ -8,7 +7,7 @@ export default {
   title: "Components/Tile",
   args: {
     title: "Tile",
-    description: faker.lorem.sentence(8),
+    description: "Cras sit amet purus commodo, semper dui non.",
     icon: ["https://via.placeholder.com/300x300?text=icon"],
     poster: ["https://via.placeholder.com/640x360?text=poster"],
   },

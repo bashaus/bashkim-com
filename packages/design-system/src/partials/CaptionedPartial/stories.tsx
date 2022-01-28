@@ -1,5 +1,4 @@
 import type { Meta, Story } from "@storybook/react";
-import faker from "faker";
 
 import {
   CaptionedPartial as CaptionedPartialComponent,
@@ -12,7 +11,8 @@ export default {
   args: {
     figure: ["https://via.placeholder.com/1200x630?text=figure"],
     title: "CaptionedPartial",
-    subtitle: faker.lorem.paragraph(),
+    subtitle:
+      "Donec rutrum blandit dignissim. Cras a arcu interdum, rhoncus tellus a, semper nunc. Pellentesque ut quam ut risus condimentum tincidunt a nec dolor. Praesent fermentum ultrices purus eget semper. Nunc.",
   },
   argTypes: {
     figure: { control: "file" },

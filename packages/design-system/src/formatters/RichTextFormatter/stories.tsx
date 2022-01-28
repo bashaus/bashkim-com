@@ -1,5 +1,4 @@
 import type { Meta, Story } from "@storybook/react";
-import faker from "faker";
 
 import {
   RichTextFormatter as RichTextFormatterComponent,
@@ -30,19 +29,24 @@ const Template: Story<RichTextFormatterProps> = (
     <h1>Heading one</h1>
     <h2>Heading two</h2>
     <h3>Heading three</h3>
-    <p>{faker.lorem.paragraph()}</p>
     <p>
-      {faker.lorem.sentences(1)} <strong>{faker.lorem.sentences(1)}</strong>
+      Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+      inceptos himenaeos. Nunc lobortis orci sapien, at fermentum metus commodo
+      et. Mauris vitae massa eget erat fringilla porttitor at.
+    </p>
+    <p>
+      In condimentum laoreet nunc et ornare.{" "}
+      <strong>Suspendisse aliquam ut quam a blandit.</strong>
     </p>
     <ul>
-      <li>{faker.lorem.words(5)}</li>
-      <li>{faker.lorem.words(5)}</li>
-      <li>{faker.lorem.words(5)}</li>
+      <li>Mauris mi elit, tincidunt at.</li>
+      <li>Suspendisse sodales, dui sit amet.</li>
+      <li>Sed vehicula sodales dolor, sit.</li>
     </ul>
     <ol>
-      <li>{faker.lorem.words(5)}</li>
-      <li>{faker.lorem.words(5)}</li>
-      <li>{faker.lorem.words(5)}</li>
+      <li>Ut at risus lacus. In. </li>
+      <li>Proin quis tortor orci. Pellentesque.</li>
+      <li>Proin eget lacus euismod, pulvinar.</li>
     </ol>
   </RichTextFormatterComponent>
 );

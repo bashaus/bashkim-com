@@ -1,5 +1,4 @@
 import type { Meta, Story } from "@storybook/react";
-import faker from "faker";
 
 import {
   SubtitlePartial as SubtitlePartialComponent,
@@ -11,7 +10,7 @@ export default {
   title: "Partials/Subtitle Partial",
   args: {
     title: "SubtitlePartial",
-    subtitle: faker.lorem.sentence(8),
+    subtitle: "Praesent vestibulum porta ex, ut lacinia quam. Vivamus.",
   },
   argTypes: {
     title: {

@@ -1,5 +1,4 @@
 import type { Meta, Story } from "@storybook/react";
-import faker from "faker";
 
 import { TitlePartial as TitlePartialComponent, TitlePartialProps } from ".";
 
@@ -9,7 +8,7 @@ export default {
   args: {
     image: ["https://via.placeholder.com/300x300?text=image"],
     title: "TitlePartial",
-    subtitle: faker.lorem.sentence(8),
+    subtitle: "Nulla venenatis lobortis dignissim. Nullam sit amet nisi.",
   },
   argTypes: {
     image: { control: "file" },
