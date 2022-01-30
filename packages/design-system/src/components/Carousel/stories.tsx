@@ -1,5 +1,6 @@
 import type { Meta, Story } from "@storybook/react";
 
+import { RichTextFormatter } from "../../formatters/RichTextFormatter";
 import { Carousel as CarouselComponent, CarouselProps } from ".";
 
 export default {
@@ -39,25 +40,27 @@ const Template: Story<CarouselStoryProps> = ({
         .fill("")
         .map((_value, index) => (
           <div key={index}>
-            <h3>Slide {index + 1}</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-              ultrices ex ut diam suscipit rhoncus. Cras a ligula porta, dictum
-              turpis et, euismod neque. Phasellus pulvinar est cursus, lobortis
-              odio.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-              mattis urna id ipsum semper dictum. Donec porttitor tempus arcu,
-              eu egestas lectus commodo eget. Ut venenatis, tellus vitae aliquet
-              vestibulum.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-              viverra neque et nulla luctus feugiat. Suspendisse potenti. Sed
-              euismod consectetur purus eu mattis. Sed eleifend erat vehicula
-              magna convallis, quis.
-            </p>
+            <RichTextFormatter>
+              <h3>Slide {index + 1}</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                ultrices ex ut diam suscipit rhoncus. Cras a ligula porta,
+                dictum turpis et, euismod neque. Phasellus pulvinar est cursus,
+                lobortis odio.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+                mattis urna id ipsum semper dictum. Donec porttitor tempus arcu,
+                eu egestas lectus commodo eget. Ut venenatis, tellus vitae
+                aliquet vestibulum.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Phasellus viverra neque et nulla luctus feugiat. Suspendisse
+                potenti. Sed euismod consectetur purus eu mattis. Sed eleifend
+                erat vehicula magna convallis, quis.
+              </p>
+            </RichTextFormatter>
           </div>
         ))}
     </CarouselComponent>

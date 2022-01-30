@@ -1,6 +1,7 @@
 import "%libraries/sentry/init";
 
 import { LinkResolverContext } from "@bashkim-com/prismic";
+import { Normalize } from "@bashkim-com/style-guide";
 import { AppProps } from "next/app";
 import Head from "next/head";
 import { useEffect } from "react";
@@ -17,6 +18,7 @@ const App = ({ Component, pageProps }: AppProps): JSX.Element => {
 
   return (
     <SentryBoundary>
+      <Normalize />
       <LinkResolverContext.Provider value={PrismicLinkResolver}>
         <Head>
           <meta

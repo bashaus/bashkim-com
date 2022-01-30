@@ -45,6 +45,7 @@ jobs:
             - packages/design-system/node_modules/
             - packages/prismic/node_modules/
             - packages/sitemap/node_modules/
+            - packages/style-guide/node_modules/
             - packages/webhooks/node_modules/
 
       - persist_to_workspace:
@@ -120,8 +121,7 @@ jobs:
             mkdir -p test-results/stylelint/
             npx stylelint \
               --custom-formatter 'node_modules/stylelint-junit-formatter' \
-              '**/*.scss' \
-              '**/*.css' \
+              '**/styles.ts' \
             > test-results/stylelint/junit.xml
 
       - store_test_results:

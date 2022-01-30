@@ -11,14 +11,14 @@ import HeaderDesktopImage from "%assets/images/about/header-desktop.jpg";
 import { AboutCertifications } from "%components/AboutCertifications";
 import { AboutEducation } from "%components/AboutEducation";
 import { AboutProfile } from "%components/AboutProfile";
-import { MenuBackButtonHomeImpl } from "%components/MenuBackButtonHomeImpl";
+import { MenuButtonHome } from "%components/MenuButtonHome";
 import { MetaDescription } from "%components/MetaDescription";
 import { MetaKeywords } from "%components/MetaKeywords";
 import { MetaTitle } from "%components/MetaTitle";
 import { Page } from "%components/Page";
 
 const AboutPage = (): JSX.Element => (
-  <Page backButton={MenuBackButtonHomeImpl}>
+  <Page backButton={MenuButtonHome}>
     <MetaTitle content="About" />
     <MetaDescription content="Information on the work history of Bashkim Isai" />
     <MetaKeywords content="bashkim isai, creative technologist, london" />

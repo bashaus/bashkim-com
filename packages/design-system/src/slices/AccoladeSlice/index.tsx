@@ -7,10 +7,9 @@ import {
 import { Link } from "prismic-reactjs";
 import { useContext } from "react";
 
-import { ReactComponent as TrophyVector } from "../../assets/vectors/trophy.svg";
 import { DateFormatter } from "../../formatters/DateFormatter";
 import { RichTextFormatter } from "../../formatters/RichTextFormatter";
-import styles from "./styles.module.scss";
+import * as S from "./styles";
 
 export type AccoladeSliceProps = {
   slice: AccoladeSliceType;
@@ -40,20 +39,22 @@ export const AccoladeSlice = ({
   } = slice.primary;
 
   return (
-    <div className={styles.AccoladeSlice}>
-      <RichTextFormatter className={styles.Details}>
-        <PrismicRichText render={issuer} />
-        <PrismicRichText render={description} />
-        {date && (
-          <p>
-            <small>
-              <DateFormatter date={PrismicDate(date)} />
-            </small>
-          </p>
-        )}
-      </RichTextFormatter>
+    <S.AccoladeSlice>
+      <S.Details>
+        <RichTextFormatter>
+          <PrismicRichText render={issuer} />
+          <PrismicRichText render={description} />
+          {date && (
+            <p>
+              <small>
+                <DateFormatter date={PrismicDate(date)} />
+              </small>
+            </p>
+          )}
+        </RichTextFormatter>
+      </S.Details>
 
-      <div className={styles.Awards}>
+      <S.Awards>
         {slice.fields?.map((field, i) => {
           const {
             accolade_slice_type_award_place: awardPlace,
@@ -64,18 +65,18 @@ export const AccoladeSlice = ({
           const awardHref = Link.url(awardLink, PrismicLinkResolver);
 
           return (
-            <div className={styles.Award} key={i} data-prop-place={awardPlace}>
+            <S.Award key={i} data-prop-place={awardPlace}>
               <a href={awardHref} target="_blank" rel="noreferrer">
-                <TrophyVector className={styles.Trophy} />
+                <S.Trophy />
                 <RichTextFormatter>
                   {awardPlace && <h3>{AwardPlaceName[awardPlace]}</h3>}
                   <PrismicRichText render={awardCategory} />
                 </RichTextFormatter>
               </a>
-            </div>
+            </S.Award>
           );
         })}
-      </div>
-    </div>
+      </S.Awards>
+    </S.AccoladeSlice>
   );
 };

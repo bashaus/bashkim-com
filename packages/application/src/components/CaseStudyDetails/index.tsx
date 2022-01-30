@@ -4,7 +4,7 @@ import {
 } from "@bashkim-com/design-system";
 import { CaseStudyContentType, PrismicDate } from "@bashkim-com/prismic";
 
-import styles from "./styles.module.scss";
+import * as S from "./styles";
 
 export type CaseStudyDetailsProps = {
   caseStudy: CaseStudyContentType;
@@ -31,7 +31,7 @@ export const CaseStudyDetails = ({
   } = caseStudy;
 
   return (
-    <div className={styles.CaseStudyDetails}>
+    <S.CaseStudyDetails>
       {brief && (
         <RichTextFormatter>
           <h3>Brief</h3>
@@ -148,6 +148,6 @@ export const CaseStudyDetails = ({
           </ul>
         </RichTextFormatter>
       )}
-    </div>
+    </S.CaseStudyDetails>
   );
 };

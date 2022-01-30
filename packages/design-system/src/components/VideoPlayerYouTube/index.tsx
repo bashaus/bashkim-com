@@ -1,4 +1,4 @@
-import styles from "./styles.module.scss";
+import * as S from "./styles";
 
 export type VideoPlayerYouTubeProps = {
   /**
@@ -27,8 +27,8 @@ export const VideoPlayerYouTube = ({
   src.searchParams.append("playsinline", "0");
 
   return (
-    <div className={styles.VideoPlayerYouTube}>
+    <S.VideoPlayerYouTube>
       <iframe allowFullScreen src={src.href} title={title} frameBorder={0} />
-    </div>
+    </S.VideoPlayerYouTube>
   );
 };

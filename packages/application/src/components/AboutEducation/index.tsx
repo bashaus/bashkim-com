@@ -10,7 +10,7 @@ import QutLogoImage from "%assets/images/about/education/qut/logo.jpg";
 import UqBackgroundImage from "%assets/images/about/education/uq/background.jpg";
 import UqLogoImage from "%assets/images/about/education/uq/logo.png";
 
-import styles from "./styles.module.scss";
+import * as S from "./styles";
 
 export const AboutEducation = (): JSX.Element => (
   <Group>
@@ -36,7 +36,7 @@ export const AboutEducation = (): JSX.Element => (
 
       <SplitItemPartial backgroundImage={UqBackgroundImage.src}>
         <div>
-          <img alt="" src={UqLogoImage.src} className={styles.Logo} />
+          <S.Logo alt="" src={UqLogoImage.src} />
         </div>
       </SplitItemPartial>
     </SplitPartial>
@@ -86,7 +86,7 @@ export const AboutEducation = (): JSX.Element => (
 
       <SplitItemPartial backgroundImage={QutGardensPointImage.src}>
         <div>
-          <img alt="" src={QutLogoImage.src} className={styles.Logo} />
+          <S.Logo alt="" src={QutLogoImage.src} />
         </div>
       </SplitItemPartial>
     </SplitPartial>

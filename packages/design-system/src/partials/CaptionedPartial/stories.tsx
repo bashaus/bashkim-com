@@ -1,5 +1,6 @@
 import type { Meta, Story } from "@storybook/react";
 
+import { RichTextFormatter } from "../../formatters/RichTextFormatter";
 import {
   CaptionedPartial as CaptionedPartialComponent,
   CaptionedPartialProps,
@@ -42,8 +43,10 @@ const Template: Story<CaptionedPartialStoryProps> = ({
   ...args
 }: CaptionedPartialStoryProps) => (
   <CaptionedPartialComponent figure={<img src={figure[0]} alt="" />} {...args}>
-    <h3>{title}</h3>
-    <p>{subtitle}</p>
+    <RichTextFormatter>
+      <h3>{title}</h3>
+      <p>{subtitle}</p>
+    </RichTextFormatter>
   </CaptionedPartialComponent>
 );
 

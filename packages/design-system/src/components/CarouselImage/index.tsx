@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 
 import { RichTextFormatter } from "../../formatters/RichTextFormatter";
-import styles from "./styles.module.scss";
+import * as S from "./styles";
 
 export type CarouselImageProps = {
   figure?: ReactNode;
@@ -12,12 +12,13 @@ export const CarouselImage = ({
   children,
   figure,
 }: CarouselImageProps): JSX.Element => (
-  <figure className={styles.CarouselImage}>
-    <div className={styles.Figure}>{figure}</div>
+  <S.CarouselImage>
+    <S.Figure>{figure}</S.Figure>
+
     {children && (
       <figcaption>
         <RichTextFormatter>{children}</RichTextFormatter>
       </figcaption>
     )}
-  </figure>
+  </S.CarouselImage>
 );

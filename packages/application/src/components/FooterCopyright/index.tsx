@@ -1,8 +1,7 @@
-import styles from "./styles.module.scss";
+import * as S from "./styles";
 
 export const FooterCopyright = (): JSX.Element => (
-  <p
-    className={styles.FooterCopyright}
+  <S.FooterCopyright
     role="contentinfo"
     aria-label="Copyright, Two-Thousand-and-Eight to Two-Thousand-and-Twenty, Bashkim Isai. All rights reserved."
   >
@@ -17,5 +16,5 @@ export const FooterCopyright = (): JSX.Element => (
       </time>
       , Bashkim&nbsp;Isai. All&nbsp;rights&nbsp;reserved.
     </small>
-  </p>
+  </S.FooterCopyright>
 );

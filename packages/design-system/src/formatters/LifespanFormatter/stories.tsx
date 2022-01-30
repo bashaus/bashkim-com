@@ -8,14 +8,16 @@ import {
 export default {
   component: LifespanFormatterComponent,
   title: "Formatters/Lifespan Formatter",
+  args: {
+    startDate: new Date().toDateString(),
+    endDate: new Date().toDateString(),
+  },
   argTypes: {
     startDate: {
       control: "date",
-      defaultValue: new Date().toDateString(),
     },
     endDate: {
       control: "date",
-      defaultValue: new Date().toDateString(),
     },
   },
   parameters: {

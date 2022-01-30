@@ -1,7 +1,7 @@
 module.exports = {
   "package.json": ["sort-package-json"],
-  "*.{css,scss}": ["stylelint --fix"],
-  "*.{ts,tsx}": ["eslint --fix"],
+  "!(styles).{ts,tsx}": ["eslint --fix"],
+  "styles.ts": ["eslint --fix", "stylelint --fix"],
   "*.{svg,xml}": (filenames) =>
     filenames.map(
       (filename) => `xmllint --format ${filename} --output ${filename}`

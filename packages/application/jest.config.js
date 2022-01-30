@@ -11,20 +11,16 @@ module.exports = {
     "/dist/",
     "/coverage/",
   ],
-  testPathIgnorePatterns: ["/node_modules/", "/.next/", "/dist/", "/coverage/"],
-  transform: {
-    "^.+\\.(js|jsx|ts|tsx)$": "@swc/jest",
-    ".+\\.(css|scss)$": "jest-css-modules-transform",
-  },
-  transformIgnorePatterns: [
-    "/node_modules/",
-    "^.+\\.module\\.(css|sass|scss)$",
-  ],
   moduleNameMapper: {
-    "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy",
+    "^@bashkim-com/(.*)$": "<rootDir>/../$1/lib",
   },
   reporters: [
     "default",
     ["jest-junit", { outputDirectory: "../../test-results/application/" }],
   ],
+  testPathIgnorePatterns: ["/node_modules/", "/.next/", "/dist/", "/coverage/"],
+  transform: {
+    "^.+\\.[jt]sx?$": "@swc/jest",
+  },
+  transformIgnorePatterns: ["/node_modules/"],
 };

@@ -1,13 +1,12 @@
-import classNames from "classnames";
 import { HTMLAttributes } from "react";
 
-import styles from "./styles.module.scss";
+import * as S from "./styles";
 
 export type LogoProps = HTMLAttributes<HTMLDivElement>;
 
-export const Logo = ({ className, ...props }: LogoProps): JSX.Element => (
-  <div className={classNames(className, styles.Logo)} {...props}>
-    <strong>Bashkim Isai</strong>
-    <span>Creative Technologist</span>
-  </div>
+export const Logo = (props: LogoProps): JSX.Element => (
+  <S.Logo {...props}>
+    <S.Name>Bashkim Isai</S.Name>
+    <S.Title>Creative Technologist</S.Title>
+  </S.Logo>
 );

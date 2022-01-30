@@ -1,7 +1,0 @@
-@import "./bounds";
-
-@mixin grid-container($breakpoints: null, $margin: null, $padding: null) {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  @include grid-container-bounds($breakpoints, $margin, $padding);
-}

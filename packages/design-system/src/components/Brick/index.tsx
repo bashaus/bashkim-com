@@ -1,4 +1,4 @@
-import styles from "./styles.module.scss";
+import * as S from "./styles";
 
 export type BrickProps = {
   /**
@@ -22,15 +22,15 @@ export const Brick = ({
   icon,
   title,
 }: BrickProps): JSX.Element => (
-  <article className={styles.Brick}>
-    <div className={styles.Content}>
-      <h3>{title}</h3>
+  <S.Brick>
+    <S.Content>
+      <S.Heading>{title}</S.Heading>
 
-      <div className={styles.Image}>
+      <S.Image>
         <img alt="" src={icon} />
-      </div>
+      </S.Image>
 
-      {description && <p>{description}</p>}
-    </div>
-  </article>
+      {description && <S.Description>{description}</S.Description>}
+    </S.Content>
+  </S.Brick>
 );

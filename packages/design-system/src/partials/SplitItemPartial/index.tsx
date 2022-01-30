@@ -1,8 +1,7 @@
-import classNames from "classnames";
-import { CSSProperties, HTMLAttributes, ReactNode } from "react";
+import { HTMLAttributes, ReactNode } from "react";
 
 import { RichTextFormatter } from "../../formatters/RichTextFormatter";
-import styles from "./style.module.scss";
+import * as S from "./styles";
 
 export type SplitItemPartialProps = HTMLAttributes<HTMLDivElement> & {
   backgroundImage?: string;
@@ -11,25 +10,14 @@ export type SplitItemPartialProps = HTMLAttributes<HTMLDivElement> & {
 
 export const SplitItemPartial = ({
   backgroundImage,
-  className,
   children,
-}: SplitItemPartialProps): JSX.Element => {
-  const style: CSSProperties = {};
-
-  if (backgroundImage) {
-    style.backgroundImage = `url("${backgroundImage}")`;
-  }
-
-  return (
-    <RichTextFormatter
-      style={style}
-      className={classNames(styles.SplitItemPartial, className, {
-        SplitPartial_chevron: !!backgroundImage,
-        [styles.Background]: !!backgroundImage,
-        [styles.Foreground]: !backgroundImage,
-      })}
-    >
-      {children}
-    </RichTextFormatter>
-  );
-};
+  ...props
+}: SplitItemPartialProps): JSX.Element => (
+  <S.SplitItemPartial
+    prop-background-image={backgroundImage}
+    className={backgroundImage ? "SplitPartial_chevron" : undefined}
+    {...props}
+  >
+    <RichTextFormatter>{children}</RichTextFormatter>
+  </S.SplitItemPartial>
+);

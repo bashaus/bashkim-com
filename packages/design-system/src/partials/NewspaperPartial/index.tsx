@@ -1,13 +1,9 @@
-import { ReactNode } from "react";
+import { HTMLAttributes } from "react";
 
-import styles from "./styles.module.scss";
+import * as S from "./styles";
 
-export type NewspaperPartialProps = {
-  children?: ReactNode;
-};
+export type NewspaperPartialProps = HTMLAttributes<HTMLDivElement>;
 
-export const NewspaperPartial = ({
-  children,
-}: NewspaperPartialProps): JSX.Element => (
-  <div className={styles.NewspaperPartial}>{children}</div>
+export const NewspaperPartial = (props: NewspaperPartialProps): JSX.Element => (
+  <S.NewspaperPartial {...props} />
 );

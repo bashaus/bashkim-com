@@ -1,8 +1,7 @@
-import classNames from "classnames";
 import { createRef, PureComponent, ReactNode } from "react";
 
 import $ from "../../libraries/jquery";
-import styles from "./styles.module.scss";
+import * as S from "./styles";
 
 export enum TurnDisplay {
   SINGLE = "single",
@@ -144,17 +143,9 @@ export class Turn extends PureComponent<TurnProps, TurnState> {
     const { isInitialized } = this.state;
 
     return (
-      <div
-        ref={this.containerRef}
-        className={classNames(styles.Turn, {
-          [styles.isInitialized]: isInitialized,
-          [styles.isUninitialized]: !isInitialized,
-        })}
-      >
-        <div ref={this.pagesRef} className={styles.Pages}>
-          {children}
-        </div>
-      </div>
+      <S.Turn state-isInitialized={isInitialized} ref={this.containerRef}>
+        <S.Pages ref={this.pagesRef}>{children}</S.Pages>
+      </S.Turn>
     );
   }
 }

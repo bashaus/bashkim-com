@@ -1,29 +1,30 @@
-import classNames from "classnames";
 import SlickSlider, { Settings } from "react-slick";
 
-import dotsStyles from "./styles.dots.module.scss";
-import styles from "./styles.module.scss";
+import { SlickCarouselGlobalStyles } from "../../libraries/slick/styles";
+import * as S from "./styles";
 
 export type CarouselProps = Settings;
 
 export const Carousel = ({
   adaptiveHeight = true,
   dots = true,
-  dotsClass,
   infinite = false,
   draggable = true,
   lazyLoad = "ondemand",
   ...args
 }: CarouselProps): JSX.Element => (
-  <div className={styles.Carousel}>
+  <S.Carousel>
+    <SlickCarouselGlobalStyles />
     <SlickSlider
       adaptiveHeight={adaptiveHeight}
       dots={dots}
-      dotsClass={classNames(dotsClass, dotsStyles.CarouselDots)}
       infinite={infinite}
       draggable={draggable}
       lazyLoad={lazyLoad}
+      appendDots={(dots) => <S.Dots>{dots}</S.Dots>}
+      prevArrow={<S.ArrowPrev />}
+      nextArrow={<S.ArrowNext />}
       {...args}
     />
-  </div>
+  </S.Carousel>
 );

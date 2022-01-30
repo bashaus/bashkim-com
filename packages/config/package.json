@@ -1,7 +1,7 @@
 {
   "name": "@bashkim-com/config",
   "version": "1.0.0",
-  "private": true,
+  "license": "SEE LICENSE IN LICENSE.md",
   "main": "./dist/index.js",
   "module": "./lib/index.js",
   "typings": "./lib/index.d.ts",

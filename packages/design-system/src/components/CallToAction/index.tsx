@@ -1,16 +1,9 @@
-import { ReactNode } from "react";
+import { HTMLAttributes } from "react";
 
-import styles from "./styles.module.scss";
+import * as S from "./styles";
 
-export type CallToActionProps = {
-  /**
-   * The content of the call to action.
-   * In code, this should be wrapped with:
-   * `<a><span>...</span></a>`
-   */
-  children: ReactNode;
-};
+export type CallToActionProps = HTMLAttributes<HTMLDivElement>;
 
-export const CallToAction = ({ children }: CallToActionProps): JSX.Element => (
-  <div className={styles.CallToAction}>{children}</div>
+export const CallToAction = (props: CallToActionProps): JSX.Element => (
+  <S.CallToAction {...props} />
 );

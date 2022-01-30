@@ -23,15 +23,13 @@ export const ExhibitionSlice = ({
   } = slice.primary;
 
   return (
-    <li>
-      <RichTextFormatter>
-        <PrismicRichText render={name} />
-        <PrismicRichText render={location} />
-        <LifespanFormatter
-          startDate={PrismicDate(openingDate ?? "")}
-          endDate={closingDate ? PrismicDate(closingDate) : undefined}
-        />
-      </RichTextFormatter>
-    </li>
+    <RichTextFormatter>
+      <PrismicRichText render={name} />
+      <PrismicRichText render={location} />
+      <LifespanFormatter
+        startDate={PrismicDate(openingDate ?? "")}
+        endDate={closingDate ? PrismicDate(closingDate) : undefined}
+      />
+    </RichTextFormatter>
   );
 };

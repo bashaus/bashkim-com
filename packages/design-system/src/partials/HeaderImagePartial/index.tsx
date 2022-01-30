@@ -1,4 +1,4 @@
-import styles from "./styles.module.scss";
+import * as S from "./styles";
 
 export type HeaderImagePartialProps = {
   id: string;
@@ -15,7 +15,7 @@ export const HeaderImagePartial = ({
     {imageDesktop && (
       <style type="text/css">
         {`
-          #${id} .${styles.Background} {
+          #${id} ${String(S.Background)} {
             background-image: url(${imageDesktop});
           }
         `}
@@ -26,7 +26,7 @@ export const HeaderImagePartial = ({
       <style type="text/css">
         {`
           @media screen and (max-width: 767px) {
-            #${id} .${styles.Background} {
+            #${id} ${String(S.Background)} {
               background-image: url(${imageMobile});
             }
           }
@@ -34,6 +34,6 @@ export const HeaderImagePartial = ({
       </style>
     )}
 
-    <div aria-hidden="true" className={styles.Background} />
+    <S.Background aria-hidden="true" />
   </header>
 );

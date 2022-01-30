@@ -1,19 +1,16 @@
-import classNames from "classnames";
 import { HTMLAttributes } from "react";
 
-import styles from "./styles.module.scss";
+import * as S from "./styles";
 
 export type NavigationItemProps = HTMLAttributes<HTMLLIElement> & {
   isSelected?: boolean;
 };
 
 export const NavigationItem = ({
-  className,
   isSelected = false,
   ...props
 }: NavigationItemProps): JSX.Element => (
-  <li
-    className={classNames(className, styles.NavigationItem)}
+  <S.NavigationItem
     aria-current={isSelected ? "location" : undefined}
     {...props}
   />

@@ -1,5 +1,6 @@
 import { CaptionedImageSliceType, PrismicRichText } from "@bashkim-com/prismic";
 
+import { RichTextFormatter } from "../../formatters/RichTextFormatter";
 import { CaptionedPartial } from "../../partials/CaptionedPartial";
 
 export type CaptionedImageSliceProps = {
@@ -33,7 +34,9 @@ export const CaptionedImageSlice = ({
         )
       }
     >
-      <PrismicRichText render={caption} />
+      <RichTextFormatter>
+        <PrismicRichText render={caption} />
+      </RichTextFormatter>
     </CaptionedPartial>
   );
 };

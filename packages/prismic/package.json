@@ -1,13 +1,13 @@
 {
   "name": "@bashkim-com/prismic",
   "version": "1.0.0",
-  "private": true,
+  "license": "SEE LICENSE IN LICENSE.md",
   "module": "./lib/index.js",
   "typings": "./lib/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "prismic:schema": "ts-node --project tsconfig.schema.json scripts/schema.ts",
     "clean": "rm -rf dist/ lib/",
+    "prismic:schema": "ts-node --project tsconfig.schema.json scripts/schema.ts",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
   "devDependencies": {
@@ -19,7 +19,7 @@
     "utility-types": "^3.10.0"
   },
   "peerDependencies": {
-    "react": "^17.0.2",
-    "prismic-reactjs": "^1.3.4"
+    "prismic-reactjs": "^1.3.4",
+    "react": "^17.0.2"
   }
 }

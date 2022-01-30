@@ -10,7 +10,7 @@ import type { CaseStudyContentType } from "@bashkim-com/prismic";
 import { CaseStudyDetails } from "%components/CaseStudyDetails";
 import { CaseStudyTechnologies } from "%components/CaseStudyTechnologies";
 
-import styles from "./styles.module.scss";
+import * as S from "./styles";
 
 export type CaseStudyHeaderProps = {
   caseStudy: CaseStudyContentType;
@@ -38,14 +38,14 @@ export const CaseStudyHeader = ({
         <h2>Project details</h2>
       </SubtitlePartial>
 
-      <div className={styles.CaseStudyHeader}>
-        <div className={styles.Details}>
+      <S.CaseStudyHeader>
+        <S.CaseStudyDetails>
           <CaseStudyDetails caseStudy={caseStudy} />
-        </div>
-        <div className={styles.Technologies}>
+        </S.CaseStudyDetails>
+        <S.CaseStudyTechnologies>
           <CaseStudyTechnologies caseStudy={caseStudy} />
-        </div>
-      </div>
+        </S.CaseStudyTechnologies>
+      </S.CaseStudyHeader>
     </Group>
   </>
 );

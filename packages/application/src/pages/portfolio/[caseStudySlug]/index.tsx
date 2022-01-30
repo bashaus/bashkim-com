@@ -6,7 +6,7 @@ import { CaseStudyAccolades } from "%components/CaseStudyAccolades";
 import { CaseStudyCollaborators } from "%components/CaseStudyCollaborators";
 import { CaseStudyExhibitions } from "%components/CaseStudyExhibitions";
 import { CaseStudyHeader } from "%components/CaseStudyHeader";
-import { MenuBackButtonPortfolioImpl } from "%components/MenuBackButtonPortfolioImpl";
+import { MenuButtonPortfolio } from "%components/MenuButtonPortfolio";
 import { MetaCanonical } from "%components/MetaCanonical";
 import { MetaDescription } from "%components/MetaDescription";
 import { MetaImage } from "%components/MetaImage";
@@ -36,7 +36,7 @@ const CaseStudyPage = ({
   } = caseStudyPage;
 
   return (
-    <Page backButton={MenuBackButtonPortfolioImpl}>
+    <Page backButton={MenuButtonPortfolio}>
       <article itemScope itemType="http://schema.org/CreativeWork">
         <MetaCanonical href={`/portfolio/${caseStudyPage._meta.uid}/`} />
         <MetaTitle content={caseStudyPage.meta_title} />

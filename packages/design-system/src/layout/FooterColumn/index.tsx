@@ -1,7 +1,6 @@
-import classNames from "classnames";
 import { ReactNode, useCallback, useState } from "react";
 
-import styles from "./styles.module.scss";
+import * as S from "./styles";
 
 export type FooterColumnProps = {
   children: ReactNode;
@@ -10,7 +9,6 @@ export type FooterColumnProps = {
 };
 
 export const FooterColumn = ({
-  className,
   label,
   children,
 }: FooterColumnProps): JSX.Element => {
@@ -21,21 +19,12 @@ export const FooterColumn = ({
   }, [isVisible]);
 
   return (
-    <div
-      aria-expanded={isVisible}
-      className={classNames(className, styles.FooterColumn)}
-    >
-      <div
-        role="menuitem"
-        tabIndex={0}
-        className={styles.Label}
-        onClick={handleHeaderClick}
-        onKeyPress={handleHeaderClick}
-      >
+    <S.FooterColumn aria-expanded={isVisible}>
+      <S.Label onClick={handleHeaderClick} onKeyPress={handleHeaderClick}>
         {label}
-      </div>
+      </S.Label>
 
-      <div className={styles.Content}>{children}</div>
-    </div>
+      <S.Content>{children}</S.Content>
+    </S.FooterColumn>
   );
 };

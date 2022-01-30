@@ -14,8 +14,12 @@ export default {
 const Template: Story<FooterColumnProps> = (args: FooterColumnProps) => (
   <FooterColumnComponent {...args}>
     <FooterLinks>
-      <li>Menu item #1</li>
-      <li>Menu item #2</li>
+      <li>
+        <a href="#">Menu item #1</a>
+      </li>
+      <li>
+        <a href="#">Menu item #2</a>
+      </li>
     </FooterLinks>
   </FooterColumnComponent>
 );

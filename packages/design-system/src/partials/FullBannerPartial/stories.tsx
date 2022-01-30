@@ -9,6 +9,7 @@ export default {
   component: FullBannerPartialComponent,
   title: "Partials/Full Banner Partial",
   args: {
+    id: "FullBannerPartial",
     backgroundDesktop: [
       "https://via.placeholder.com/1920x400?text=backgroundDesktop",
     ],
@@ -22,7 +23,6 @@ export default {
   argTypes: {
     backgroundDesktop: { control: "file" },
     backgroundMobile: { control: "file" },
-    id: { defaultValue: "FullBannerPartial" },
     title: {
       control: "text",
       table: { category: "Story helpers" },

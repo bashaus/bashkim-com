@@ -4,11 +4,10 @@ import {
   PortfolioCategorySliceType,
   PrismicRichText,
 } from "@bashkim-com/prismic";
-import { DeepPartial } from "utility-types";
 
 import { PortfolioCaseStudyBrick } from "%components/PortfolioCaseStudyBrick";
 
-import styles from "./styles.module.scss";
+import * as S from "./styles";
 
 export type PortfolioCategoryProps = {
   portfolioCategory: PortfolioCategorySliceType;
@@ -27,19 +26,16 @@ export const PortfolioCategory = ({
       />
     </SubtitlePartial>
 
-    <ul className={styles.CaseStudies}>
-      {portfolioCategory.fields.map((portfolioCaseStudy) => {
-        const caseStudy: DeepPartial<CaseStudyContentType> =
-          portfolioCaseStudy.portfolio_category_case_study;
-
-        return (
-          <li key={caseStudy._meta.uid}>
+    <S.CaseStudies>
+      {portfolioCategory.fields.map(
+        ({ portfolio_category_case_study: caseStudy }) => (
+          <S.CaseStudy key={caseStudy._meta.uid}>
             <PortfolioCaseStudyBrick
               caseStudy={caseStudy as CaseStudyContentType}
             />
-          </li>
-        );
-      })}
-    </ul>
+          </S.CaseStudy>
+        )
+      )}
+    </S.CaseStudies>
   </>
 );

@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 
 import { RichTextFormatter } from "../../formatters/RichTextFormatter";
-import styles from "./styles.module.scss";
+import * as S from "./styles";
 
 export type FullTextPartialProps = {
   children?: ReactNode;
@@ -10,7 +10,7 @@ export type FullTextPartialProps = {
 export const FullTextPartial = ({
   children,
 }: FullTextPartialProps): JSX.Element => (
-  <RichTextFormatter className={styles.FullTextPartial}>
-    {children}
-  </RichTextFormatter>
+  <S.FullTextPartial>
+    <RichTextFormatter>{children}</RichTextFormatter>
+  </S.FullTextPartial>
 );

@@ -1,15 +1,13 @@
-import { NavigationGroup, NavigationItem } from "@bashkim-com/design-system";
-
 import GitHubVector from "%assets/vectors/social/github.svg";
 import LinkedInVector from "%assets/vectors/social/linked-in.svg";
 import MediumVector from "%assets/vectors/social/medium.svg";
 import StackOverflowVector from "%assets/vectors/social/stack-overflow.svg";
 
-import styles from "./styles.module.scss";
+import * as S from "./styles";
 
 export const NavigationSocial = (): JSX.Element => (
-  <NavigationGroup className={styles.NavigationSocial}>
-    <NavigationItem className={styles.IconGitHub}>
+  <S.NavigationSocial>
+    <S.IconGitHub>
       <a
         href="https://github.com/bashaus?tab=repositories"
         target="_blank"
@@ -19,8 +17,9 @@ export const NavigationSocial = (): JSX.Element => (
         <GitHubVector />
         <span>GitHub</span>
       </a>
-    </NavigationItem>
-    <NavigationItem className={styles.IconMedium}>
+    </S.IconGitHub>
+
+    <S.IconMedium>
       <a
         href="https://medium.com/@bashaus"
         target="_blank"
@@ -30,8 +29,9 @@ export const NavigationSocial = (): JSX.Element => (
         <MediumVector />
         <span>Medium</span>
       </a>
-    </NavigationItem>
-    <NavigationItem className={styles.IconStackOverflow}>
+    </S.IconMedium>
+
+    <S.IconStackOverflow>
       <a
         href="https://stackoverflow.com/users/600240/bashaus"
         target="_blank"
@@ -41,8 +41,9 @@ export const NavigationSocial = (): JSX.Element => (
         <StackOverflowVector />
         <span>Stack Overflow</span>
       </a>
-    </NavigationItem>
-    <NavigationItem className={styles.IconLinkedIn}>
+    </S.IconStackOverflow>
+
+    <S.IconLinkedIn>
       <a
         href="https://www.linkedin.com/in/bashaus/"
         target="_blank"
@@ -52,6 +53,6 @@ export const NavigationSocial = (): JSX.Element => (
         <LinkedInVector />
         <span>Linked In</span>
       </a>
-    </NavigationItem>
-  </NavigationGroup>
+    </S.IconLinkedIn>
+  </S.NavigationSocial>
 );

@@ -3,7 +3,7 @@ import { memo, useCallback, useContext, useEffect, useRef } from "react";
 import { NavigationActionsTypes } from "%contexts/Navigation/actions";
 import { NavigationContext } from "%contexts/Navigation/context";
 
-import styles from "./styles.module.scss";
+import * as S from "./styles";
 
 export const HeaderIntersection = memo(
   function HeaderIntersection(): JSX.Element {
@@ -46,6 +46,6 @@ export const HeaderIntersection = memo(
       };
     }, [processIntersectionEntries]);
 
-    return <div ref={ref} className={styles.HeaderIntersection} />;
+    return <S.HeaderIntersection ref={ref} />;
   }
 );

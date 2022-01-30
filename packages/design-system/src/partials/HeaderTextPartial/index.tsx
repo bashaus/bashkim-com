@@ -1,29 +1,21 @@
-import classNames from "classnames";
 import { ReactNode } from "react";
 
-import styles from "./styles.module.scss";
+import * as S from "./styles";
 
 export type HeaderTextPartialProps = {
   aside?: ReactNode;
-  backgroundClassName?: string;
   children?: ReactNode;
 };
 
 export const HeaderTextPartial = ({
   aside,
-  backgroundClassName,
   children,
+  ...props
 }: HeaderTextPartialProps): JSX.Element => (
-  <header className={styles.HeaderTextPartial}>
-    <div className={styles.Foreground}>
-      <div className={styles.Content}>{children}</div>
-
-      {aside && <aside className={styles.Aside}>{aside}</aside>}
-    </div>
-
-    <div
-      className={classNames(styles.Background, backgroundClassName)}
-      aria-hidden="true"
-    />
-  </header>
+  <S.HeaderTextPartial {...props}>
+    <S.Foreground>
+      <S.Content>{children}</S.Content>
+      {aside && <S.Aside>{aside}</S.Aside>}
+    </S.Foreground>
+  </S.HeaderTextPartial>
 );

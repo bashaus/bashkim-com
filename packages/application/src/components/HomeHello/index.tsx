@@ -4,64 +4,62 @@ import Link from "next/link";
 import PortfolioVector from "%assets/vectors/icons/portfolio.svg";
 import GitHubVector from "%assets/vectors/social/github.svg";
 
-import styles from "./styles.module.scss";
+import * as S from "./styles";
 
 export const HomeHello = (): JSX.Element => (
-  <div className={styles.HomeHello}>
-    <HeaderTextPartial
-      backgroundClassName={styles.Background}
-      aside={
-        <ul className={styles.Links}>
-          <li>
-            <a
-              href="https://github.com/bashaus?tab=repositories"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <svg className={styles.Icon}>
-                <GitHubVector />
-              </svg>
-              View code
-            </a>
-          </li>
-          <li>
-            <Link href="/portfolio" passHref>
-              <a>
-                <svg className={styles.Icon}>
-                  <PortfolioVector />
-                </svg>
-                View portfolio
-              </a>
-            </Link>
-          </li>
-        </ul>
-      }
-    >
-      <div className={styles.Introduction}>
-        <h1>Hello!</h1>
+  <HeaderTextPartial
+    aside={
+      <S.Links>
+        <S.Link>
+          <a
+            href="https://github.com/bashaus?tab=repositories"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <S.LinkIcon>
+              <GitHubVector />
+            </S.LinkIcon>
+            View code
+          </a>
+        </S.Link>
 
-        <p>
-          <span className={styles.Name}>
-            <span>My name is </span>
-            <Link href="/about">
-              <a>Bash</a>
-            </Link>
-          </span>
+        <S.Link>
+          <Link href="/portfolio" passHref>
+            <a>
+              <S.LinkIcon>
+                <PortfolioVector />
+              </S.LinkIcon>
+              View portfolio
+            </a>
+          </Link>
+        </S.Link>
+      </S.Links>
+    }
+  >
+    <S.Introduction>
+      <S.IntroductionTitle>Hello!</S.IntroductionTitle>
+
+      <p>
+        <S.IntroductionName>
+          <span>My name is </span>
+          <Link href="/about">
+            <a>Bash</a>
+          </Link>
+        </S.IntroductionName>
+        <span> </span>
+        <S.IntroductionSpiel>
+          I&apos;m a London&#8209;based Creative Technologist specialising in
           <span> </span>
-          <span className={styles.Spiel}>
-            I&apos;m a London&#8209;based Creative Technologist specialising in
-            <span> </span>
-            <Link href="/portfolio#tangible-media">
-              <a>tangible&nbsp;media</a>
-            </Link>
-            <span> and </span>
-            <Link href="/portfolio#web-development">
-              <a>web&nbsp;development</a>
-            </Link>
-            .
-          </span>
-        </p>
-      </div>
-    </HeaderTextPartial>
-  </div>
+          <Link href="/portfolio#tangible-media">
+            <a>tangible&nbsp;media</a>
+          </Link>
+          <span> and </span>
+          <Link href="/portfolio#web-development">
+            <a>web&nbsp;development</a>
+          </Link>
+          .
+        </S.IntroductionSpiel>
+      </p>
+    </S.Introduction>
+  </HeaderTextPartial>
 );

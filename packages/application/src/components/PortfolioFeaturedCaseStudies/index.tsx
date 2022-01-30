@@ -5,7 +5,7 @@ import {
 } from "@bashkim-com/prismic";
 import Link from "next/link";
 
-import styles from "./styles.module.scss";
+import * as S from "./styles";
 
 export type PortfolioFeaturedCaseStudiesProps = {
   featured: Array<PortfolioPageContentTypePageTabFeatured>;
@@ -14,38 +14,37 @@ export type PortfolioFeaturedCaseStudiesProps = {
 export const PortfolioFeaturedCaseStudies = ({
   featured,
 }: PortfolioFeaturedCaseStudiesProps): JSX.Element => (
-  <ul className={styles.PortfolioFeaturedCaseStudies}>
-    {featured.map((feature) => {
-      const {
+  <S.PortfolioFeaturedCaseStudies>
+    {featured.map(
+      ({
         featured_title: title,
         featured_description: description,
         featured_case_study: caseStudy,
-      } = feature;
-
-      return (
-        <li className={styles.Item} key={caseStudy._meta.id}>
-          <div className={styles.Details}>
+      }) => (
+        <S.PortfolioFeaturedCaseStudy key={caseStudy._meta.id}>
+          <S.Details>
             <RichTextFormatter>
               <PrismicRichText render={title} />
               <PrismicRichText render={description} />
             </RichTextFormatter>
-          </div>
+          </S.Details>
 
           <Link
             href="/portfolio/[caseStudySlug]"
             as={`/portfolio/${caseStudy._meta.uid}`}
+            passHref
           >
-            <a className={styles.Tile}>
+            <S.Tile>
               <Tile
                 title={caseStudy.meta_title}
                 description={caseStudy.meta_description}
                 icon={caseStudy.image_icon.url}
                 poster={caseStudy.image_poster.url}
               />
-            </a>
+            </S.Tile>
           </Link>
-        </li>
-      );
-    })}
-  </ul>
+        </S.PortfolioFeaturedCaseStudy>
+      )
+    )}
+  </S.PortfolioFeaturedCaseStudies>
 );

@@ -1,5 +1,3 @@
-import "./styleguide/main.scss";
-
 /* Components */
 export { Brick } from "./components/Brick";
 export { CallToAction } from "./components/CallToAction";
@@ -23,7 +21,8 @@ export { Footer } from "./layout/Footer";
 export { FooterColumn } from "./layout/FooterColumn";
 export { FooterGroup } from "./layout/FooterGroup";
 export { FooterLinks } from "./layout/FooterLinks";
-export { Group, GroupDesign } from "./layout/Group";
+export { Group } from "./layout/Group";
+export { GroupDesign } from "./layout/Group/types";
 export { Navigation } from "./layout/Navigation";
 export { NavigationGroup } from "./layout/NavigationGroup";
 export { NavigationItem } from "./layout/NavigationItem";

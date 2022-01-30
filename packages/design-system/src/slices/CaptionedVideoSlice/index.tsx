@@ -1,6 +1,7 @@
 import { CaptionedVideoSliceType, PrismicRichText } from "@bashkim-com/prismic";
 
 import { VideoPlayerYouTube } from "../../components/VideoPlayerYouTube";
+import { RichTextFormatter } from "../../formatters/RichTextFormatter";
 import { CaptionedPartial } from "../../partials/CaptionedPartial";
 
 export type CaptionedVideoSliceProps = {
@@ -32,7 +33,9 @@ export const CaptionedVideoSlice = ({
 
   return (
     <CaptionedPartial figure={<VideoPlayerYouTube v={v} title={video.title} />}>
-      <PrismicRichText render={caption} />
+      <RichTextFormatter>
+        <PrismicRichText render={caption} />
+      </RichTextFormatter>
     </CaptionedPartial>
   );
 };

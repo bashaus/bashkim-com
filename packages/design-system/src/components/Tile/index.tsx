@@ -1,4 +1,4 @@
-import styles from "./styles.module.scss";
+import * as S from "./styles";
 
 export type TileProps = {
   description: string;
@@ -13,22 +13,21 @@ export const Tile = ({
   icon,
   poster,
 }: TileProps): JSX.Element => (
-  <div className={styles.Tile}>
-    <div
-      className={styles.Poster}
+  <S.Tile>
+    <S.Poster
       style={{
         backgroundImage: `url(${poster})`,
       }}
     />
 
-    <div className={styles.Content}>
-      <h3>{title}</h3>
+    <S.Content>
+      <S.Heading>{title}</S.Heading>
 
-      <div className={styles.Icon}>
+      <S.Icon>
         <img alt="" src={icon} />
-      </div>
+      </S.Icon>
 
-      <p>{description}</p>
-    </div>
-  </div>
+      <S.Description>{description}</S.Description>
+    </S.Content>
+  </S.Tile>
 );

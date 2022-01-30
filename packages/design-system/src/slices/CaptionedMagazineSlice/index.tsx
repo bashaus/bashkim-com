@@ -5,8 +5,9 @@ import {
 import { DragEvent, FormEvent, useCallback, useState } from "react";
 
 import { Magazine, MagazineSpreadChangeEvent } from "../../components/Magazine";
+import { RichTextFormatter } from "../../formatters/RichTextFormatter";
 import { CaptionedPartial } from "../../partials/CaptionedPartial";
-import styles from "./styles.module.scss";
+import * as S from "./styles";
 
 export type CaptionedMagazineSliceProps = {
   slice: CaptionedMagazineSliceType;
@@ -105,37 +106,36 @@ export const CaptionedMagazineSlice = ({
         </Magazine>
       }
     >
-      <PrismicRichText render={caption} />
+      <RichTextFormatter>
+        <PrismicRichText render={caption} />
+      </RichTextFormatter>
+
       {magazineIsInitialized && (
-        <div className={styles.Slider}>
-          <button
-            type="button"
-            className={styles.PaginationBack}
+        <S.Slider>
+          <S.PaginationBack
             disabled={isFirstSpread}
             onClick={handlePaginationBack}
           >
             &lsaquo;
-          </button>
+          </S.PaginationBack>
 
-          <span>{`Page ${pageNumbers.join(" - ")} of ${pages}`}</span>
+          <S.PaginationText>
+            Page {pageNumbers.join(" - ")} of {pages}
+          </S.PaginationText>
 
-          <button
-            type="button"
-            className={styles.PaginationNext}
+          <S.PaginationNext
             disabled={isLastSpread}
             onClick={handlePaginationNext}
           >
             &rsaquo;
-          </button>
+          </S.PaginationNext>
 
-          <input
-            type="range"
-            min={1}
+          <S.PaginationRange
             max={spreads}
             value={spread}
             onChange={handleSpreadChange}
           />
-        </div>
+        </S.Slider>
       )}
     </CaptionedPartial>
   );

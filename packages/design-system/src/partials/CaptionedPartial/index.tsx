@@ -1,7 +1,6 @@
 import { ReactNode } from "react";
 
-import { RichTextFormatter } from "../../formatters/RichTextFormatter";
-import styles from "./styles.module.scss";
+import * as S from "./styles";
 
 export type CaptionedPartialProps = {
   children: ReactNode;
@@ -16,10 +15,8 @@ export const CaptionedPartial = ({
   children,
   figure,
 }: CaptionedPartialProps): JSX.Element => (
-  <figure className={styles.CaptionedPartial}>
-    <figcaption className={styles.Caption}>
-      <RichTextFormatter>{children}</RichTextFormatter>
-    </figcaption>
-    <div className={styles.Figure}>{figure}</div>
-  </figure>
+  <S.CaptionedPartial>
+    <S.Caption>{children}</S.Caption>
+    <S.Figure>{figure}</S.Figure>
+  </S.CaptionedPartial>
 );

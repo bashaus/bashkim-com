@@ -4,6 +4,9 @@ const webpack = require("webpack");
 const { merge } = require("webpack-merge");
 
 module.exports = {
+  compiler: {
+    styledComponents: true,
+  },
   publicRuntimeConfig,
   trailingSlash: true,
   swcMinify: true,

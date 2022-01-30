@@ -1,4 +1,6 @@
-require("../src/styleguide/main.scss");
+import { NormalizeDecorator } from "./decorators/NormalizeDecorator";
+
+export const decorators = [NormalizeDecorator];
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -7,7 +9,7 @@ export const parameters = {
     sort: "requiredFirst",
     exclude: /^(className|[a-zA-Z]+ClassName)$/,
     matchers: {
-      color: /color$/i,
+      color: /(^color$|Color$)/i,
       date: /(^date$|Date$)/,
       boolean: /^(is|has)/,
     },

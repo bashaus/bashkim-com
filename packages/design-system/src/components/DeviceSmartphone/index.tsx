@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 
 import { RichTextFormatter } from "../../formatters/RichTextFormatter";
-import styles from "./styles.module.scss";
+import * as S from "./styles";
 
 export type DeviceSmartphoneProps = {
   children: ReactNode;
@@ -15,13 +15,14 @@ export const DeviceSmartphone = ({
   children,
   figure,
 }: DeviceSmartphoneProps): JSX.Element => (
-  <figure className={styles.DeviceSmartphone}>
-    <div className={styles.Wrapper}>
-      <div className={styles.Content}>{figure}</div>
-    </div>
+  <S.DeviceSmartphone>
+    <S.Wrapper>
+      <S.Device />
+      <S.Figure>{figure}</S.Figure>
+    </S.Wrapper>
 
-    <figcaption>
+    <S.Caption>
       <RichTextFormatter>{children}</RichTextFormatter>
-    </figcaption>
-  </figure>
+    </S.Caption>
+  </S.DeviceSmartphone>
 );

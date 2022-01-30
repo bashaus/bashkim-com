@@ -1,10 +1,9 @@
-import classNames from "classnames";
 import { HTMLAttributes } from "react";
 
-import styles from "./styles.module.scss";
+import * as S from "./styles";
 
 export type FooterProps = HTMLAttributes<HTMLDivElement>;
 
-export const Footer = ({ className, ...props }: FooterProps): JSX.Element => (
-  <footer className={classNames(className, styles.Footer)} {...props} />
+export const Footer = (props: FooterProps): JSX.Element => (
+  <S.Footer {...props} />
 );

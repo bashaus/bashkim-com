@@ -33,7 +33,7 @@ export const CollaboratorSlice = ({
   const url = Link.url(website, PrismicLinkResolver);
 
   return (
-    <li>
+    <>
       <strong>
         {url && (
           <a href={url} target="_blank" rel="noreferrer">
@@ -53,6 +53,6 @@ export const CollaboratorSlice = ({
 
       <br />
       {role}
-    </li>
+    </>
   );
 };

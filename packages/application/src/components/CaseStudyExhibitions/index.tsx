@@ -1,7 +1,7 @@
 import { ExhibitionSlice, SubtitlePartial } from "@bashkim-com/design-system";
 import type { ExhibitionSliceType } from "@bashkim-com/prismic";
 
-import styles from "./styles.module.scss";
+import * as S from "./styles";
 
 export type CaseStudyExhibitionsProps = {
   slices: Array<ExhibitionSliceType>;
@@ -20,11 +20,13 @@ export const CaseStudyExhibitions = ({
         <h2>Exhibitions</h2>
       </SubtitlePartial>
 
-      <ol className={styles.CaseStudyExhibitions}>
+      <S.CaseStudyExhibitions>
         {slices.map((slice, i) => (
-          <ExhibitionSlice key={i} slice={slice} />
+          <S.CaseStudyExhibition key={i}>
+            <ExhibitionSlice slice={slice} />
+          </S.CaseStudyExhibition>
         ))}
-      </ol>
+      </S.CaseStudyExhibitions>
     </>
   );
 };

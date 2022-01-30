@@ -5,8 +5,9 @@ import {
 import { DeviceDesktopIcon, DeviceMobileIcon } from "@primer/octicons-react";
 import { ChangeEvent, useCallback, useState } from "react";
 
+import { RichTextFormatter } from "../../formatters/RichTextFormatter";
 import { CaptionedPartial } from "../../partials/CaptionedPartial";
-import styles from "./styles.module.scss";
+import * as S from "./styles";
 
 export type CaptionedScreenshotsSliceProps = {
   initialWidth?: number;
@@ -73,26 +74,25 @@ export const CaptionedScreenshotsSlice = ({
         )
       }
     >
-      <PrismicRichText render={caption} />
+      <RichTextFormatter>
+        <PrismicRichText render={caption} />
+      </RichTextFormatter>
 
-      <div className={styles.Slider}>
-        <span className={styles.IconMobile}>
+      <S.Slider>
+        <S.IconMobile>
           <DeviceMobileIcon size="small" aria-label="Mobile" />
-        </span>
+        </S.IconMobile>
 
-        <span className={styles.IconDesktop}>
+        <S.IconDesktop>
           <DeviceDesktopIcon size="medium" aria-label="Desktop" />
-        </span>
+        </S.IconDesktop>
 
-        <input
-          type="range"
-          min={0}
+        <S.Range
           max={fields.length - 1}
-          step={1}
           value={selectedIndex}
           onChange={handleSizeChange}
         />
-      </div>
+      </S.Slider>
     </CaptionedPartial>
   );
 };

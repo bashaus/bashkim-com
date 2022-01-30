@@ -1,7 +1,7 @@
 import { CSSProperties, useCallback, useState } from "react";
 import VisibilitySensor from "react-visibility-sensor";
 
-import styles from "./styles.module.scss";
+import * as S from "./styles";
 
 export type DeferredAssetProps = {
   children: JSX.Element;
@@ -49,7 +49,7 @@ export const DeferredAsset = ({
 
   return (
     <VisibilitySensor partialVisibility onChange={handleVisibilityChange}>
-      <div className={styles.DeferredAsset} style={style} />
+      <S.DeferredAsset style={style} />
     </VisibilitySensor>
   );
 };

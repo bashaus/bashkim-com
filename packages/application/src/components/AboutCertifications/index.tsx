@@ -10,7 +10,7 @@ import JavaOcaImage from "%assets/images/about/certifications/java/oca.png";
 import PhpLogoImage from "%assets/images/about/certifications/php/logo.png";
 import PhpZceImage from "%assets/images/about/certifications/php/zce.jpg";
 
-import styles from "./styles.module.scss";
+import * as S from "./styles";
 
 export const AboutCertifications = (): JSX.Element => (
   <Group>
@@ -33,11 +33,7 @@ export const AboutCertifications = (): JSX.Element => (
         </div>
       </SplitItemPartial>
       <SplitItemPartial>
-        <img
-          alt="Duke - The Java Mascot"
-          src={JavaLogoImage.src}
-          className={styles.Logo}
-        />
+        <S.Logo alt="Duke - The Java Mascot" src={JavaLogoImage.src} />
       </SplitItemPartial>
     </SplitPartial>
 
@@ -63,7 +59,7 @@ export const AboutCertifications = (): JSX.Element => (
       </SplitItemPartial>
 
       <SplitItemPartial>
-        <img alt="ElePHPant" className={styles.Logo} src={PhpLogoImage.src} />
+        <S.Logo alt="ElePHPant" src={PhpLogoImage.src} />
       </SplitItemPartial>
     </SplitPartial>
   </Group>

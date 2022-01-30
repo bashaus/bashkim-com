@@ -4,7 +4,7 @@ import { Menu } from "%components/Menu";
 import { Navigation } from "%components/Navigation";
 import { NavigationContext } from "%contexts/Navigation/context";
 
-import styles from "./styles.module.scss";
+import * as S from "./styles";
 
 export type HeaderProps = {
   backButton?: ReactNode;
@@ -12,15 +12,15 @@ export type HeaderProps = {
 
 export const Header = ({ backButton }: HeaderProps): JSX.Element => {
   const { state: navigationState } = useContext(NavigationContext);
+
   return (
-    <header
-      className={styles.Header}
+    <S.Header
       data-context-navigation-scroll-at-top={navigationState.scrollAtTop}
     >
-      <div className={styles.Container}>
+      <S.Container>
         <Menu backButton={backButton} />
         <Navigation />
-      </div>
-    </header>
+      </S.Container>
+    </S.Header>
   );
 };

@@ -2,22 +2,24 @@ import { Logo } from "@bashkim-com/design-system";
 import Link from "next/link";
 import { ReactNode } from "react";
 
-import styles from "./styles.module.scss";
+import { MenuButton } from "%components/MenuButton";
+
+import * as S from "./styles";
 
 export type MenuProps = {
   backButton?: ReactNode;
 };
 
 export const Menu = ({ backButton }: MenuProps): JSX.Element => (
-  <div className={styles.Menu}>
-    <div className={styles.Back}>{backButton}</div>
+  <S.Menu>
+    {backButton ?? <MenuButton />}
 
-    <Link href="/">
-      <a className={styles.Logo}>
+    <Link href="/" passHref>
+      <S.Title>
         <Logo />
-      </a>
+      </S.Title>
     </Link>
 
-    <div className={styles.Search}></div>
-  </div>
+    <MenuButton />
+  </S.Menu>
 );

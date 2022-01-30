@@ -1,9 +1,0 @@
-$z-indexes: "Turn" "Header" "Menu";
-
-@function z-index($name) {
-  @return index($z-indexes, $name) * 10;
-}
-
-@mixin z-index($name) {
-  z-index: z-index($name);
-}

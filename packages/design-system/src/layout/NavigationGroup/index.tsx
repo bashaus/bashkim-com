@@ -1,13 +1,9 @@
-import classNames from "classnames";
 import { HTMLAttributes } from "react";
 
-import styles from "./styles.module.scss";
+import * as S from "./styles";
 
 export type NavigationGroupProps = HTMLAttributes<HTMLUListElement>;
 
-export const NavigationGroup = ({
-  className,
-  ...props
-}: NavigationGroupProps): JSX.Element => (
-  <ul className={classNames(className, styles.NavigationGroup)} {...props} />
+export const NavigationGroup = (props: NavigationGroupProps): JSX.Element => (
+  <S.NavigationGroup {...props} />
 );

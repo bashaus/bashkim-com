@@ -1,6 +1,6 @@
 import type { CaseStudyContentType } from "@bashkim-com/prismic";
 
-import styles from "./styles.module.scss";
+import * as S from "./styles";
 
 export type CaseStudyTechnologiesProps = {
   caseStudy: CaseStudyContentType;
@@ -9,10 +9,10 @@ export type CaseStudyTechnologiesProps = {
 export const CaseStudyTechnologies = ({
   caseStudy,
 }: CaseStudyTechnologiesProps): JSX.Element => (
-  <div className={styles.CaseStudyTechnologies}>
-    <h3>Key technologies</h3>
+  <>
+    <S.Heading>Key technologies</S.Heading>
 
-    <ul>
+    <S.Technologies>
       {caseStudy.info_technologies.map((technology) => {
         if (!technology.info_technology) {
           return null;
@@ -22,12 +22,12 @@ export const CaseStudyTechnologies = ({
           technology.info_technology;
 
         return (
-          <li key={name}>
-            <img src={icon.url} alt="" className={styles.TechnologyIcon} />
-            <span className={styles.TechnologyName}>{name}</span>
-          </li>
+          <S.Technology key={name}>
+            <S.TechnologyIcon src={icon.url} alt="" />
+            <S.TechnologyName>{name}</S.TechnologyName>
+          </S.Technology>
         );
       })}
-    </ul>
-  </div>
+    </S.Technologies>
+  </>
 );

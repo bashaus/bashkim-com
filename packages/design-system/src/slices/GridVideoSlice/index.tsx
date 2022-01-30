@@ -1,6 +1,6 @@
 import { GridVideoSliceType, PrismicRichText } from "@bashkim-com/prismic";
 
-import styles from "./styles.module.scss";
+import * as S from "./styles";
 
 export type GridVideoSliceProps = {
   slice: GridVideoSliceType;
@@ -9,10 +9,7 @@ export type GridVideoSliceProps = {
 export const GridVideoSlice = ({
   slice,
 }: GridVideoSliceProps): JSX.Element | null => (
-  <ol
-    className={styles.GridVideoSlice}
-    data-column-count={slice.fields?.length}
-  >
+  <S.Videos data-column-count={slice.fields?.length}>
     {slice.fields?.map((field, i) => {
       const {
         grid_video_slice_type_description: description,
@@ -25,22 +22,22 @@ export const GridVideoSlice = ({
       }
 
       return (
-        <li key={i}>
-          <a href={video.embed_url}>
+        <S.Video key={i}>
+          <a href={video.embed_url} target="_blank" rel="noopener noreferrer">
             <img
               src={poster.url}
               alt={video.title}
               width={poster.dimensions.width}
               height={poster.dimensions.height}
             />
-            <div className={styles.Description}>
+            <S.Description>
               <PrismicRichText render={description} />
-            </div>
+            </S.Description>
           </a>
-        </li>
+        </S.Video>
       );
     })}
-  </ol>
+  </S.Videos>
 );
 
 export default GridVideoSlice;

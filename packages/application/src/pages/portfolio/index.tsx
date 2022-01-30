@@ -10,7 +10,7 @@ import type {
 } from "@bashkim-com/prismic";
 import { GetStaticProps } from "next";
 
-import { MenuBackButtonHomeImpl } from "%components/MenuBackButtonHomeImpl";
+import { MenuButtonHome } from "%components/MenuButtonHome";
 import { MetaDescription } from "%components/MetaDescription";
 import { MetaKeywords } from "%components/MetaKeywords";
 import { MetaTitle } from "%components/MetaTitle";
@@ -35,7 +35,7 @@ const PortfolioPage = ({ portfolioPage }: PortfolioPageProps): JSX.Element => {
   } = portfolioPage;
 
   return (
-    <Page backButton={MenuBackButtonHomeImpl}>
+    <Page backButton={MenuButtonHome}>
       <MetaTitle content={metaTitle} />
       <MetaDescription content={metaDescription} />
       <MetaKeywords content={metaKeywords} />
