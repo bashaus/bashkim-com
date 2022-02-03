@@ -2082,10 +2082,10 @@
     "@types/lodash" "^4.14.123"
     lodash "^4.17.11"
 
-"@serverless/platform-client@^4.3.0":
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/@serverless/platform-client/-/platform-client-4.3.0.tgz#5eda7b7eb8bdd0da93f2ecf2130b4131349806a1"
-  integrity sha512-q2CMqCkKeBaKA/UwfJAZLkdUsbghSbiYPvAX4rl9rsR5APm4KWtjKQP9CTOtVO5JRMWYoysK6jF0d5VJOABRzQ==
+"@serverless/platform-client@^4.3.0", "@serverless/platform-client@^4.3.1":
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/@serverless/platform-client/-/platform-client-4.3.1.tgz#5caa52321f9b4e7a451748a16d3f851f263ea3ef"
+  integrity sha512-VPXeTTgXmWZtZmbzm9eh5FJcOoFgHkcwgfNA59FV3TE2Vcm5JZiXKtXl5AANu9LYcyOtJK7iBJXs8OUSwNbJZw==
   dependencies:
     adm-zip "^0.5.5"
     archiver "^5.3.0"
@@ -10487,13 +10487,6 @@ jsonfile@^2.1.0:
   optionalDependencies:
     graceful-fs "^4.1.6"
 
-jsonfile@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/jsonfile/-/jsonfile-4.0.0.tgz#8771aae0799b64076b76640fca058f9c10e33ecb"
-  integrity sha1-h3Gq4HmbZAdrdmQPygWPnBDjPss=
-  optionalDependencies:
-    graceful-fs "^4.1.6"
-
 jsonfile@^6.0.1:
   version "6.1.0"
   resolved "https://registry.yarnpkg.com/jsonfile/-/jsonfile-6.1.0.tgz#bc55b2634793c679ec6403094eb13698a6ec0aae"
@@ -14146,13 +14139,13 @@ serverless-jetpack@^0.11.1:
     p-limit "^3.1.0"
     trace-deps "^0.4.0"
 
-serverless@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/serverless/-/serverless-3.1.0.tgz#77a7a045837ff0c3338d1844567c34c4120eac86"
-  integrity sha512-Hph8R0UR8W4jLOsLdJ03YjuSlQ8K19qLT0r+MbDSDHYJ7QbpbajTfkU0LUFUxl8Hr9PBksUfAwYXqFnpqXUJbQ==
+serverless@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/serverless/-/serverless-3.1.1.tgz#e8f12fa0bacc23f8e4dc47829e3171b30f927213"
+  integrity sha512-oqbaQEVeYs0eMtz1pgKbbPoP53bahwMF3MaJq/YiB7a6+eSsOzN5OQJQoBt5Avz7DV2PjcppnxD6vf7z4VLSKQ==
   dependencies:
     "@serverless/dashboard-plugin" "^6.0.0"
-    "@serverless/platform-client" "^4.3.0"
+    "@serverless/platform-client" "^4.3.1"
     "@serverless/utils" "^6.0.0"
     ajv "^8.9.0"
     ajv-formats "^2.1.1"
@@ -15769,7 +15762,7 @@ unist-util-visit@2.0.3, unist-util-visit@^2.0.0:
     unist-util-is "^4.0.0"
     unist-util-visit-parents "^3.0.0"
 
-universalify@^0.1.0, universalify@^0.1.2:
+universalify@^0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/universalify/-/universalify-0.1.2.tgz#b646f69be3942dabcecc9d6639c80dc105efaa66"
   integrity sha512-rBJeI5CXAlmy1pV+617WB9J63U6XcazHHF2f2dbJix4XzpUF0RS3Zbj0FGIOCAva5P/d/GBOYaACQ1w+0azUkg==
