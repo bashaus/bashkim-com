@@ -9,8 +9,5 @@ module.exports = {
     "../src/partials/**/stories.tsx",
     "../src/slices/**/stories.tsx",
   ],
-  addons: [
-    "@storybook/addon-a11y",
-    "@storybook/addon-essentials",
-  ],
+  addons: ["@storybook/addon-a11y", "@storybook/addon-essentials"],
 };

@@ -2,8 +2,10 @@ const path = require("path");
 const { merge } = require("webpack-merge");
 
 module.exports = ({ config }) => {
-  const fileLoaderRule = config.module.rules.find(rule => rule.test.test('.svg'));
-  fileLoaderRule.exclude = path.resolve('..')
+  const fileLoaderRule = config.module.rules.find((rule) =>
+    rule.test.test(".svg")
+  );
+  fileLoaderRule.exclude = path.resolve("..");
 
   return merge(config, {
     resolve: {
@@ -17,14 +19,14 @@ module.exports = ({ config }) => {
         {
           test: /\.svg$/,
           issuer: /\.tsx?$/,
-          use: [
-            { loader: "@svgr/webpack" }
-          ],
-        }, {
+          use: [{ loader: "@svgr/webpack" }],
+        },
+        {
           test: /\.svg$/,
           issuer: /\.scss$/,
-          type: 'asset/resource',
-        }, {
+          type: "asset/resource",
+        },
+        {
           test: /\.scss$/,
           use: [
             { loader: "style-loader" },
@@ -39,19 +41,16 @@ module.exports = ({ config }) => {
             },
             { loader: "sass-loader" },
           ],
-        }, {
+        },
+        {
           test: /\.css$/,
-          use: [
-            { loader: "style-loader" },
-            { loader: "css-loader" },
-          ],
-        }, {
+          use: [{ loader: "style-loader" }, { loader: "css-loader" }],
+        },
+        {
           test: /\.tsx?$/,
-          use: [
-            { loader: "ts-loader" }
-          ],
-        }
-      ]
-    }
+          use: [{ loader: "ts-loader" }],
+        },
+      ],
+    },
   });
 };

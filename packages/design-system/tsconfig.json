@@ -7,11 +7,6 @@
     "jsx": "react-jsx",
     "typeRoots": ["./types"]
   },
-  "include": [
-    "./src", "./types"
-  ],
-  "exclude": [
-    "**/*.spec.ts",
-    "**/*.spec.tsx"
-  ],
+  "include": ["./src", "./types"],
+  "exclude": ["**/*.spec.ts", "**/*.spec.tsx"]
 }

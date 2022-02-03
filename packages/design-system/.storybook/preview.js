@@ -4,7 +4,7 @@ export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
     expanded: true,
-    sort: 'requiredFirst',
+    sort: "requiredFirst",
     exclude: /^(className|[a-zA-Z]+ClassName)$/,
     matchers: {
       color: /color$/i,
@@ -12,5 +12,5 @@ export const parameters = {
       boolean: /^(is|has)/,
     },
   },
-  layout: 'fullscreen'
-}
+  layout: "fullscreen",
+};

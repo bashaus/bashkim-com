@@ -10,7 +10,7 @@ plugins:
 package:
   individually: true
   patterns:
-    - "!**/node_modules/aws-sdk/**"  # included on Lambda
+    - "!**/node_modules/aws-sdk/**" # included on Lambda
 
 custom:
   stage: ${opt:stage, env:SLS_STAGE, 'production'}
@@ -42,12 +42,9 @@ provider:
   lambdaHashingVersion: "20201221"
   environment:
     APP_ENV: ${self:custom.stage}
-    APP_WEBHOOKS_CIRCLE_API_KEY:
-      ${self:custom.app.webhooks.circleApiKey}
-    APP_WEBHOOKS_CIRCLE_PROJECT_SLUG:
-      ${self:custom.app.webhooks.circleProjectSlug}
-    APP_WEBHOOKS_PRISMIC_SECRET_KEY:
-      ${self:custom.app.webhooks.prismicSecretKey}
+    APP_WEBHOOKS_CIRCLE_API_KEY: ${self:custom.app.webhooks.circleApiKey}
+    APP_WEBHOOKS_CIRCLE_PROJECT_SLUG: ${self:custom.app.webhooks.circleProjectSlug}
+    APP_WEBHOOKS_PRISMIC_SECRET_KEY: ${self:custom.app.webhooks.prismicSecretKey}
     GIT_COMMIT: ${self:custom.app.website.commitHash}
     NODE_ENV: ${self:custom.stage}
 

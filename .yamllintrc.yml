@@ -1,8 +1,0 @@
----
-extends: default
-ignore: |
-  **/node_modules/**
-
-rules:
-  truthy:
-    check-keys: false

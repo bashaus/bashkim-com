@@ -17,12 +17,10 @@
     KeyPrefixEquals: "blog/2013/01/accessing-apache-from-across-a-network"
   Redirect:
     <<: *RedirectMedium
-    ReplaceKeyWith:
-      "@bashaus/accessing-a-web-server-from-across-your-network-b6f8e6fe90b6"
+    ReplaceKeyWith: "@bashaus/accessing-a-web-server-from-across-your-network-b6f8e6fe90b6"
 
 - Condition:
-    KeyPrefixEquals:
-      "blog/2014/09/launched-facebook-page-for-game-boy-homebrew-developers"
+    KeyPrefixEquals: "blog/2014/09/launched-facebook-page-for-game-boy-homebrew-developers"
   Redirect: &RedirectFacebook
     HttpRedirectCode: "301"
     Protocol: https
@@ -105,8 +103,7 @@
     KeyPrefixEquals: "publicity/2010/10/studio-farrago-at-pecha-kucha-brisbane"
   Redirect:
     <<: *RedirectMedium
-    ReplaceKeyWith:
-      "@bashaus/studio-farrago-at-pecha-kucha-brisbane-ca86cb5f39fa"
+    ReplaceKeyWith: "@bashaus/studio-farrago-at-pecha-kucha-brisbane-ca86cb5f39fa"
 
 - Condition:
     KeyPrefixEquals: "publicity/2010/11/meet-eater-articles"
@@ -121,8 +118,7 @@
     ReplaceKeyWith: "@bashaus/model-engineering-show-2013-9c19a703442f"
 
 - Condition:
-    KeyPrefixEquals:
-      "publicity/2014/01/message-queues-article-published-on-sitepoint"
+    KeyPrefixEquals: "publicity/2014/01/message-queues-article-published-on-sitepoint"
   Redirect: &RedirectSitePoint
     HttpRedirectCode: "301"
     Protocol: https
@@ -130,8 +126,7 @@
     ReplaceKeyWith: "message-queues-comparing-beanstalkd-ironmq-amazon-sqs/"
 
 - Condition:
-    KeyPrefixEquals:
-      "publicity/2015/05/feature-detection-article-published-on-sitepoint"
+    KeyPrefixEquals: "publicity/2015/05/feature-detection-article-published-on-sitepoint"
   Redirect:
     <<: *RedirectSitePoint
     ReplaceKeyWith: "migrating-flexbox-cutting-mustard/"
