@@ -14,7 +14,7 @@
     "test": "jest ."
   },
   "devDependencies": {
-    "@babel/core": "^7.16.12",
+    "@babel/core": "^7.17.0",
     "@bashkim-com/prismic": "1.0.0",
     "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-json": "^4.1.0",
@@ -24,7 +24,7 @@
     "@storybook/addons": "^6.4.17",
     "@storybook/builder-webpack5": "^6.4.17",
     "@storybook/manager-webpack5": "^6.4.17",
-    "@storybook/react": "^6.4.17",
+    "@storybook/react": "^6.4.18",
     "@svgr/rollup": "^6.2.1",
     "@svgr/webpack": "^6.2.1",
     "@types/jest": "^27.4.0",
