@@ -75,7 +75,7 @@ jobs:
           paths:
             - packages/design-system/.storybook-static/
 
-  test-jest:
+  test:
     executor: exec-node
     steps:
       - checkout
@@ -84,14 +84,14 @@ jobs:
           at: ./
 
       - run:
-          name: jest
+          name: test
           command: |
             yarn test
 
       - store_test_results:
           path: test-results/
 
-  test-lint:
+  lint:
     executor: exec-node
     steps:
       - checkout
@@ -126,14 +126,6 @@ jobs:
 
       - store_test_results:
           path: test-results/
-
-  test:
-    executor: exec-node
-    steps:
-      - run:
-          name: test
-          command: |
-            echo "done"
 
   deploy:
     executor: exec-node
@@ -203,18 +195,20 @@ workflows:
           requires:
             - build-application
 
-      - test-jest:
-          requires:
-            - build-application
-
-      - test-lint:
-          requires:
-            - build-application
-
       - test:
           requires:
-            - test-jest
-            - test-lint
+            - build-application
+
+      - lint:
+          requires:
+            - build-application
+
+      - approval:
+          type: approval
+          requires:
+            - build-design-system
+            - test
+            - lint
           filters:
             branches:
               only:
@@ -223,27 +217,14 @@ workflows:
       - deploy:
           context: bashkim-com-prod
           requires:
-            - test
-          filters:
-            branches:
-              only:
-                - master
+            - approval
 
       - synchronize-application:
           context: bashkim-com-prod
           requires:
-            - test
-          filters:
-            branches:
-              only:
-                - master
+            - approval
 
       - synchronize-design-system:
           context: bashkim-com-prod
           requires:
-            - test
-            - build-design-system
-          filters:
-            branches:
-              only:
-                - master
+            - approval
