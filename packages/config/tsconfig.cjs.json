@@ -2,7 +2,7 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "declaration": true,
-    "declarationDir": "./build/types",
-    "emitDeclarationOnly": true,
+    "module": "CommonJS",
+    "outDir": "./dist"
   }
 }

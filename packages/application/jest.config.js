@@ -8,15 +8,10 @@ module.exports = {
   coveragePathIgnorePatterns: [
     "/node_modules/",
     "/.next/",
-    "/build/",
+    "/dist/",
     "/coverage/",
   ],
-  testPathIgnorePatterns: [
-    "/node_modules/",
-    "/.next/",
-    "/build/",
-    "/coverage/",
-  ],
+  testPathIgnorePatterns: ["/node_modules/", "/.next/", "/dist/", "/coverage/"],
   transform: {
     "^.+\\.(js|jsx|ts|tsx)$": "@swc/jest",
     ".+\\.(css|scss)$": "jest-css-modules-transform",

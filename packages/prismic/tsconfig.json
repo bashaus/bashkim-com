@@ -2,17 +2,13 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "baseUrl": "./src",
-    "declaration": false,
+    "declaration": true,
     "jsx": "react-jsx",
+    "module": "ESNext",
+    "outDir": "./lib",
     "rootDir": "./src",
+    "target": "ESNext",
     "types": ["node"]
   },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx"
-  ],
-  "exclude": [
-    "build/",
-    "node_modules/"
-  ]
+  "include": ["./src"],
 }

@@ -1,12 +1,11 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
+    "module": "commonjs",
+    "outDir": "./dist",
     "rootDir": "./src",
     "types": ["node"],
     "typeRoots": ["./types"]
   },
-  "exclude": [
-    "build/",
-    "node_modules/"
-  ]
+  "include": ["./src", "./types"]
 }

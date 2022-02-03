@@ -6,5 +6,6 @@ yarn-error.log
 node_modules/
 test-results/
 
-/packages/*/build/
-/packages/*/node_modules/
+packages/*/dist/
+packages/*/lib/
+packages/*/node_modules/

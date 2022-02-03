@@ -7,7 +7,7 @@ import PeerContentTypeSchema from "../src/content-types/peer/schema";
 import PortfolioPageContentTypeSchema from "../src/content-types/portfolio_page/schema";
 import TechnologyContentTypeSchema from "../src/content-types/technology/schema";
 
-const OUT_DIR = path.resolve(__dirname, "../build/schema");
+const OUT_DIR = path.resolve(__dirname, "../dist");
 
 const OUT_FILES = {
   "case_study.json": CaseStudyContentTypeSchema,

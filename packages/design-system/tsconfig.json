@@ -3,19 +3,14 @@
   "compilerOptions": {
     "baseUrl": "./src",
     "declaration": true,
-    "declarationDir": "./build",
-    "outDir": "./build",
+    "outDir": "./lib",
     "jsx": "react-jsx",
     "typeRoots": ["./types"]
   },
   "include": [
-    "**/*.ts",
-    "**/*.tsx"
+    "./src", "./types"
   ],
   "exclude": [
-    "build/",
-    "dist/",
-    "node_modules/",
     "**/*.spec.ts",
     "**/*.spec.tsx"
   ],

@@ -53,27 +53,27 @@ provider:
 
 functions:
   webhooks:
-    handler: packages/webhooks/build/lambda.handler
+    handler: packages/webhooks/dist/lambda.handler
     jetpack:
       roots:
         - "packages/webhooks"
       preInclude:
-        - "packages/webhooks/build/**"
+        - "packages/webhooks/dist/**"
     events:
       - http:
           method: ANY
           path: /webhooks/{any+}
   sitemap:
-    handler: packages/sitemap/build/lambda.handler
+    handler: packages/sitemap/dist/lambda.handler
     jetpack:
       roots:
         - "packages/config"
         - "packages/prismic"
         - "packages/sitemap"
       preInclude:
-        - "packages/config/build/**"
-        - "packages/prismic/build/**"
-        - "packages/sitemap/build/**"
+        - "packages/config/lib/**"
+        - "packages/prismic/lib/**"
+        - "packages/sitemap/dist/**"
         - "packages/sitemap/public/**"
     events:
       - http:

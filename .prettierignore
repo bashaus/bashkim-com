@@ -1,7 +1,8 @@
 node_modules
 
-packages/*/node_modules
-packages/*/build
+packages/*/dist/
+packages/*/lib/
+packages/*/node_modules/
 
 packages/application/.next
 packages/design-system/.storybook-static
