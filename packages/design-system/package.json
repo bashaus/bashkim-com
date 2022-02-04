@@ -28,7 +28,7 @@
     "@svgr/webpack": "^6.2.1",
     "@types/jest": "^27.4.0",
     "@types/jquery": "^3.5.13",
-    "@types/react": "^17.0.38",
+    "@types/react": "^17.0.39",
     "@types/react-slick": "^0.23.8",
     "babel-jest": "^27.4.6",
     "babel-loader": "^8.2.3",
