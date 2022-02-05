@@ -31,7 +31,6 @@
     "@types/react": "^17.0.39",
     "@types/react-slick": "^0.23.8",
     "babel-jest": "^27.5.0",
-    "babel-loader": "^8.2.3",
     "breakpoint-sass": "^2.7.1",
     "classnames": "^2.3.1",
     "css-loader": "^6.6.0",
@@ -53,10 +52,12 @@
     "sass": "^1.49.7",
     "sass-loader": "^12.4.0",
     "style-loader": "^3.3.1",
+    "ts-loader": "^9.2.6",
     "turn-js": "blasten/turn.js#master",
     "typescript": "^4.5.5",
     "utility-types": "^3.10.0",
-    "webpack": "^5.68.0"
+    "webpack": "^5.68.0",
+    "webpack-merge": "^5.8.0"
   },
   "peerDependencies": {
     "@bashkim-com/prismic": "1.0.0",
