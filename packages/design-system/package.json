@@ -44,7 +44,7 @@
     "react-dom": "^17.0.2",
     "react-slick": "^0.28.1",
     "reset-scss": "^1.0.0",
-    "rollup": "^2.67.0",
+    "rollup": "^2.67.1",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-svg": "^2.0.0",
