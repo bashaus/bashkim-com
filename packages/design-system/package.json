@@ -50,7 +50,7 @@
     "rollup-plugin-svg": "^2.0.0",
     "rollup-plugin-typescript2": "^0.31.2",
     "sass": "^1.49.7",
-    "sass-loader": "^12.4.0",
+    "sass-loader": "^12.5.0",
     "style-loader": "^3.3.1",
     "ts-loader": "^9.2.6",
     "turn-js": "blasten/turn.js#master",
