@@ -21,7 +21,7 @@
     "@bashkim-com/design-system": "1.0.0",
     "@bashkim-com/prismic": "1.0.0",
     "@primer/octicons-react": "^16.3.1",
-    "@sentry/browser": "^6.17.8",
+    "@sentry/browser": "^6.17.9",
     "@xstate/react": "^2.0.0",
     "apollo-link-prismic": "^1.0.9",
     "blurhash": "^1.1.5",
