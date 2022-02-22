@@ -5,7 +5,7 @@ executors:
   exec-node:
     working_directory: ~/repo
     docker:
-      - image: node:14.17.6
+      - image: node:16.14.0
 
   exec-python:
     working_directory: ~/repo
@@ -103,13 +103,13 @@ jobs:
       - run:
           name: prettier
           command: |
-            npx prettier --check --ignore-unknown .
+            yarn prettier --check --ignore-unknown .
 
       - run:
           name: eslint
           command: |
             mkdir -p test-results/eslint/
-            npx eslint \
+            yarn eslint \
               --format junit \
               --ext .js,.ts,.tsx \
               . \
@@ -119,7 +119,7 @@ jobs:
           name: stylelint
           command: |
             mkdir -p test-results/stylelint/
-            npx stylelint \
+            yarn stylelint \
               --custom-formatter 'node_modules/stylelint-junit-formatter' \
               '**/styles.ts' \
             > test-results/stylelint/junit.xml
@@ -138,7 +138,7 @@ jobs:
       - run:
           name: serverless deploy
           command: |
-            npx serverless deploy
+            yarn serverless deploy
 
   synchronize-application:
     executor: exec-python
