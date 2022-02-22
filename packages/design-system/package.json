@@ -33,7 +33,7 @@
     "@types/jquery": "^3.5.13",
     "@types/react": "^17.0.39",
     "@types/react-slick": "^0.23.8",
-    "@types/styled-components": "^5.1.22",
+    "@types/styled-components": "^5.1.23",
     "jest": "^27.5.1",
     "jest-junit": "^13.0.0",
     "jquery": "^3.6.0",
