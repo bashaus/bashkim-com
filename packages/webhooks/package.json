@@ -9,7 +9,7 @@
     "test": "echo \"Error: no test specified\" && exit 0"
   },
   "dependencies": {
-    "@vendia/serverless-express": "^4.5.3",
+    "@vendia/serverless-express": "^4.5.4",
     "express": "^4.17.3",
     "node-fetch": "^3.2.0"
   },
