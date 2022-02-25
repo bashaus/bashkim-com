@@ -30,7 +30,7 @@
     "@svgr/webpack": "^6.2.1",
     "@swc/jest": "^0.2.18",
     "@types/jest": "^27.4.1",
-    "@types/jquery": "^3.5.13",
+    "@types/jquery": "^3.5.14",
     "@types/react": "^17.0.39",
     "@types/react-slick": "^0.23.8",
     "@types/styled-components": "^5.1.23",
