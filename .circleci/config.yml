@@ -78,6 +78,7 @@ jobs:
 
   test:
     executor: exec-node
+    parallelism: 4
     steps:
       - checkout
 
@@ -87,7 +88,21 @@ jobs:
       - run:
           name: test
           command: |
-            yarn test
+            TEST_PACKAGES=$(circleci tests glob "packages/*" | sed "s/^packages\///" | sort | uniq)
+            echo "# ALL PACKAGES"
+            echo "${TEST_PACKAGES}"
+            echo ""
+
+            echo "# RUN PACKAGES"
+            TEST_PACKAGES=$(echo "${TEST_PACKAGES}" | circleci tests split)
+            echo "${TEST_PACKAGES}"
+            echo ""
+
+            for TEST_PACKAGE in $TEST_PACKAGES; do
+              echo "# RUNNING ${TEST_PACKAGE}"
+              yarn workspace "@bashkim-com/${TEST_PACKAGE}" run test
+              echo ""
+            done
 
       - store_test_results:
           path: test-results/
