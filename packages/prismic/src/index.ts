@@ -19,4 +19,7 @@ export * from "./slice-types";
 export * from "./slice-types/fixtures";
 
 /* Contexts */
-export { LinkResolverContext } from "./contexts/LinkResolver/context";
+export {
+  LinkResolverContext,
+  useLinkResolver,
+} from "./contexts/LinkResolver/context";

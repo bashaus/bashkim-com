@@ -1,10 +1,25 @@
-export enum NavigationActionsTypes {
-  SET_SCROLL_AT_TOP = "NavigationActionsTypes.SET_SCROLL_AT_TOP",
+export enum NavigationAction {
+  SET_SCROLL_AT_TOP = "NavigationAction.SET_SCROLL_AT_TOP",
 }
 
-export type NavigationSetScrollAtTopAction = {
-  type: NavigationActionsTypes.SET_SCROLL_AT_TOP;
-  payload: boolean;
+/* NavigationActionSetScrollAtTop */
+
+export type NavigationActionSetScrollAtTopPayloadType = {
+  scrollAtTop: boolean;
 };
 
-export type NavigationActions = NavigationSetScrollAtTopAction;
+export type NavigationActionSetScrollAtTopType = {
+  type: NavigationAction.SET_SCROLL_AT_TOP;
+  payload: NavigationActionSetScrollAtTopPayloadType;
+};
+
+export const NavigationActionSetScrollAtTop = (
+  payload: NavigationActionSetScrollAtTopPayloadType
+): NavigationActionSetScrollAtTopType => ({
+  type: NavigationAction.SET_SCROLL_AT_TOP,
+  payload,
+});
+
+/* */
+
+export type NavigationActionType = NavigationActionSetScrollAtTopType;

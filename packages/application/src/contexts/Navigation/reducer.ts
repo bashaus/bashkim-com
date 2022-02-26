@@ -1,13 +1,20 @@
-import { NavigationActions, NavigationActionsTypes } from "./actions";
+import { NavigationAction, NavigationActionType } from "./actions";
 import { NavigationState } from "./state";
 
 export const NavigationReducer = (
   state: NavigationState,
-  action: NavigationActions
+  action: NavigationActionType
 ): NavigationState => {
-  if (action.type === NavigationActionsTypes.SET_SCROLL_AT_TOP) {
-    return { ...state, scrollAtTop: action.payload };
-  }
+  switch (action.type) {
+    case NavigationAction.SET_SCROLL_AT_TOP: {
+      return {
+        ...state,
+        scrollAtTop: action.payload.scrollAtTop,
+      };
+    }
 
-  return state;
+    default: {
+      return state;
+    }
+  }
 };

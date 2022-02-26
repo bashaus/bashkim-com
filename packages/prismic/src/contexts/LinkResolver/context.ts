@@ -1,11 +1,13 @@
 import type { LinkResolver } from "prismic-reactjs";
-import { createContext } from "react";
+import { createContext, useContext } from "react";
 
 import { LinkResolverNotImplementedError } from "./errors";
 
-const defaultLinkResolver: LinkResolver = (): string => {
+const LinkResolverDefault: LinkResolver = () => {
   throw LinkResolverNotImplementedError;
 };
 
 export const LinkResolverContext =
-  createContext<LinkResolver>(defaultLinkResolver);
+  createContext<LinkResolver>(LinkResolverDefault);
+
+export const useLinkResolver = () => useContext(LinkResolverContext);

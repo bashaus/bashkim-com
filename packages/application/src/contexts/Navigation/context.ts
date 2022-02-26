@@ -1,10 +1,18 @@
-import { createContext } from "react";
+import { createContext, Dispatch, useContext } from "react";
 
-import { INITIAL_STATE, NavigationContextType } from "./state";
+import { NavigationActionType } from "./actions";
+import { NavigationState, NavigationStateInitial } from "./state";
+
+export type NavigationContextType = {
+  navigationState: NavigationState;
+  navigationDispatch: Dispatch<NavigationActionType>;
+};
 
 export const NavigationContext = createContext<NavigationContextType>({
-  state: INITIAL_STATE,
-  dispatch: () => {
+  navigationState: NavigationStateInitial,
+  navigationDispatch: () => {
     /* void */
   },
 });
+
+export const useNavigation = () => useContext(NavigationContext);

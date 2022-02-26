@@ -1,8 +1,8 @@
-import { ReactNode, useContext } from "react";
+import { ReactNode } from "react";
 
 import { Menu } from "%components/Menu";
 import { Navigation } from "%components/Navigation";
-import { NavigationContext } from "%contexts/Navigation/context";
+import { useNavigation } from "%contexts/Navigation/context";
 
 import * as S from "./styles";
 
@@ -11,7 +11,7 @@ export type HeaderProps = {
 };
 
 export const Header = ({ backButton }: HeaderProps) => {
-  const { state: navigationState } = useContext(NavigationContext);
+  const { navigationState } = useNavigation();
 
   return (
     <S.Header

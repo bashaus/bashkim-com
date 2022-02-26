@@ -1,21 +1,22 @@
-import { memo, useCallback, useContext, useEffect, useRef } from "react";
+import { memo, useCallback, useEffect, useRef } from "react";
 
-import { NavigationActionsTypes } from "%contexts/Navigation/actions";
-import { NavigationContext } from "%contexts/Navigation/context";
+import { NavigationActionSetScrollAtTop } from "%contexts/Navigation/actions";
+import { useNavigation } from "%contexts/Navigation/context";
 
 import * as S from "./styles";
 
 export const HeaderIntersection = memo(function HeaderIntersection() {
-  const { dispatch: navigationDispatch } = useContext(NavigationContext);
+  const { navigationDispatch } = useNavigation();
   const ref = useRef<HTMLDivElement>(null);
 
   const processIntersectionEntries = useCallback(
     (entries: Array<IntersectionObserverEntry>): void => {
       entries.forEach((entry) =>
-        navigationDispatch({
-          type: NavigationActionsTypes.SET_SCROLL_AT_TOP,
-          payload: entry.isIntersecting,
-        })
+        navigationDispatch(
+          NavigationActionSetScrollAtTop({
+            scrollAtTop: entry.isIntersecting,
+          })
+        )
       );
     },
     [navigationDispatch]

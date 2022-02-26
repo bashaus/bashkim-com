@@ -1,11 +1,10 @@
 import {
   AccoladeSliceType,
-  LinkResolverContext,
   PrismicDate,
   PrismicRichText,
+  useLinkResolver,
 } from "@bashkim-com/prismic";
 import { Link } from "prismic-reactjs";
-import { useContext } from "react";
 
 import { DateFormatter } from "../../formatters/DateFormatter";
 import { RichTextFormatter } from "../../formatters/RichTextFormatter";
@@ -24,7 +23,7 @@ const AwardPlaceName = {
 };
 
 export const AccoladeSlice = ({ slice }: AccoladeSliceProps) => {
-  const PrismicLinkResolver = useContext(LinkResolverContext);
+  const PrismicLinkResolver = useLinkResolver();
 
   if (!slice.primary) {
     return null;

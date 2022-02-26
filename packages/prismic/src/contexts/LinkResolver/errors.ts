@@ -1,3 +1,4 @@
-export const LinkResolverNotImplementedError = new Error(
-  "Prismic link resolver not implemented"
-);
+export class LinkResolverNotImplementedError extends Error {
+  name = "LinkResolverNotImplementedError";
+  message = "Prismic link resolver not implemented";
+}
