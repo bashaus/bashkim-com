@@ -13,7 +13,7 @@ export type PortfolioFeaturedCaseStudiesProps = {
 
 export const PortfolioFeaturedCaseStudies = ({
   featured,
-}: PortfolioFeaturedCaseStudiesProps): JSX.Element => (
+}: PortfolioFeaturedCaseStudiesProps) => (
   <S.PortfolioFeaturedCaseStudies>
     {featured.map(
       ({

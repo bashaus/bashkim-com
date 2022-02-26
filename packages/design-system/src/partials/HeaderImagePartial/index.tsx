@@ -10,7 +10,7 @@ export const HeaderImagePartial = ({
   id,
   imageDesktop,
   imageMobile,
-}: HeaderImagePartialProps): JSX.Element => (
+}: HeaderImagePartialProps) => (
   <header id={id}>
     {imageDesktop && (
       <style type="text/css">

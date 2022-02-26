@@ -4,9 +4,7 @@ export type MetaKeywordsProps = {
   content?: string;
 };
 
-export const MetaKeywords = ({
-  content,
-}: MetaKeywordsProps): JSX.Element | null => {
+export const MetaKeywords = ({ content }: MetaKeywordsProps) => {
   if (!content) {
     return null;
   }

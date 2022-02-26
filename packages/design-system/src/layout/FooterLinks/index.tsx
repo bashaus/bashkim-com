@@ -4,6 +4,6 @@ import * as S from "./styles";
 
 export type FooterLinksProps = HTMLAttributes<HTMLUListElement>;
 
-export const FooterLinks = (props: FooterLinksProps): JSX.Element => (
+export const FooterLinks = (props: FooterLinksProps) => (
   <S.FooterLinks {...props} />
 );

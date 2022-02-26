@@ -1,7 +1,7 @@
 import getConfig from "next/config";
 import Script from "next/script";
 
-export const GoogleAnalytics = (): JSX.Element => {
+export const GoogleAnalytics = () => {
   const { publicRuntimeConfig: config } = getConfig();
 
   if (!config.googleAnalytics.enabled) {

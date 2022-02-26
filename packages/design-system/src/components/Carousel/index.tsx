@@ -12,7 +12,7 @@ export const Carousel = ({
   draggable = true,
   lazyLoad = "ondemand",
   ...args
-}: CarouselProps): JSX.Element => (
+}: CarouselProps) => (
   <S.Carousel>
     <SlickCarouselGlobalStyles />
     <SlickSlider

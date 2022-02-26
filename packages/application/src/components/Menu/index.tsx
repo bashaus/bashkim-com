@@ -10,7 +10,7 @@ export type MenuProps = {
   backButton?: ReactNode;
 };
 
-export const Menu = ({ backButton }: MenuProps): JSX.Element => (
+export const Menu = ({ backButton }: MenuProps) => (
   <S.Menu>
     {backButton ?? <MenuButton />}
 

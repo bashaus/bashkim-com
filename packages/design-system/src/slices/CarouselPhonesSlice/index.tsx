@@ -30,9 +30,7 @@ export type CarouselPhonesSliceProps = {
   slice: CarouselPhonesSliceType;
 };
 
-export const CarouselPhonesSlice = ({
-  slice,
-}: CarouselPhonesSliceProps): JSX.Element => (
+export const CarouselPhonesSlice = ({ slice }: CarouselPhonesSliceProps) => (
   <FullImagePartial>
     <Carousel slidesToShow={3} responsive={CAROUSEL_RESPONSIVE}>
       {slice.fields?.map((field, i) => {

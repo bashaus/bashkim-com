@@ -6,9 +6,7 @@ export type SubtitleSliceProps = {
   slice: SubtitleSliceType;
 };
 
-export const SubtitleSlice = ({
-  slice,
-}: SubtitleSliceProps): JSX.Element | null => {
+export const SubtitleSlice = ({ slice }: SubtitleSliceProps) => {
   if (!slice.primary) {
     return null;
   }

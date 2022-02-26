@@ -7,9 +7,7 @@ export type FullTextPartialProps = {
   children?: ReactNode;
 };
 
-export const FullTextPartial = ({
-  children,
-}: FullTextPartialProps): JSX.Element => (
+export const FullTextPartial = ({ children }: FullTextPartialProps) => (
   <S.FullTextPartial>
     <RichTextFormatter>{children}</RichTextFormatter>
   </S.FullTextPartial>

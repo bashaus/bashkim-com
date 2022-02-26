@@ -7,9 +7,7 @@ export type CaptionedImageSliceProps = {
   slice: CaptionedImageSliceType;
 };
 
-export const CaptionedImageSlice = ({
-  slice,
-}: CaptionedImageSliceProps): JSX.Element | null => {
+export const CaptionedImageSlice = ({ slice }: CaptionedImageSliceProps) => {
   if (!slice.primary) {
     return null;
   }

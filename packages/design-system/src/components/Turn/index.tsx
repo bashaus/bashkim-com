@@ -138,7 +138,7 @@ export class Turn extends PureComponent<TurnProps, TurnState> {
     }
   };
 
-  render(): JSX.Element {
+  render() {
     const { children } = this.props;
     const { isInitialized } = this.state;
 

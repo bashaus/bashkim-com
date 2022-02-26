@@ -12,7 +12,7 @@ import UqLogoImage from "%assets/images/about/education/uq/logo.png";
 
 import * as S from "./styles";
 
-export const AboutEducation = (): JSX.Element => (
+export const AboutEducation = () => (
   <Group>
     <SubtitlePartial>
       <h2>Education</h2>

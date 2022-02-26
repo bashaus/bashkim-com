@@ -11,7 +11,7 @@ import { SentryBoundary } from "%components/SentryBoundary";
 import { NavigationProvider } from "%contexts/Navigation/provider";
 import { PrismicLinkResolver } from "%libraries/prismic/link-resolver";
 
-const App = ({ Component, pageProps }: AppProps): JSX.Element => {
+const App = ({ Component, pageProps }: AppProps) => {
   useEffect((): void => {
     document.documentElement.classList.add("isReady");
   }, []);

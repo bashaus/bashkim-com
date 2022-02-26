@@ -6,9 +6,7 @@ export type FullTextSliceProps = {
   slice: FullTextSliceType;
 };
 
-export const FullTextSlice = ({
-  slice,
-}: FullTextSliceProps): JSX.Element | null => {
+export const FullTextSlice = ({ slice }: FullTextSliceProps) => {
   if (!slice.primary) {
     return null;
   }

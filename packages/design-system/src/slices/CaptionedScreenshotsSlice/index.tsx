@@ -17,7 +17,7 @@ export type CaptionedScreenshotsSliceProps = {
 export const CaptionedScreenshotsSlice = ({
   slice,
   initialWidth = 1024,
-}: CaptionedScreenshotsSliceProps): JSX.Element | null => {
+}: CaptionedScreenshotsSliceProps) => {
   const fields = [...(slice.fields ?? [])];
 
   // Sort the elements by the width of the image

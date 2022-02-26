@@ -14,7 +14,7 @@ export type CaptionedPartialProps = {
 export const CaptionedPartial = ({
   children,
   figure,
-}: CaptionedPartialProps): JSX.Element => (
+}: CaptionedPartialProps) => (
   <S.CaptionedPartial>
     <S.Caption>{children}</S.Caption>
     <S.Figure>{figure}</S.Figure>

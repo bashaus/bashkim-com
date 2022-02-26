@@ -22,7 +22,7 @@ type HomePageProps = {
   homePage: HomePageContentType;
 };
 
-const HomePage = ({ homePage }: HomePageProps): JSX.Element => {
+const HomePage = ({ homePage }: HomePageProps) => {
   const {
     featured_case_studies: featuredCaseStudies,
     meta_title: metaTitle,

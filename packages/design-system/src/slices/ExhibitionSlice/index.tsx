@@ -11,9 +11,7 @@ export type ExhibitionSliceProps = {
   slice: ExhibitionSliceType;
 };
 
-export const ExhibitionSlice = ({
-  slice,
-}: ExhibitionSliceProps): JSX.Element => {
+export const ExhibitionSlice = ({ slice }: ExhibitionSliceProps) => {
   const {
     exhibition_slice_type_name: name,
     // exhibition_slice_type_link: link,

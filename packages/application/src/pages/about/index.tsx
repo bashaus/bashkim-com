@@ -17,7 +17,7 @@ import { MetaKeywords } from "%components/MetaKeywords";
 import { MetaTitle } from "%components/MetaTitle";
 import { Page } from "%components/Page";
 
-const AboutPage = (): JSX.Element => (
+const AboutPage = () => (
   <Page backButton={MenuButtonHome}>
     <MetaTitle content="About" />
     <MetaDescription content="Information on the work history of Bashkim Isai" />

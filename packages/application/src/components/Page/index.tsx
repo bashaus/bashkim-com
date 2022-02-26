@@ -9,7 +9,7 @@ export type PageProps = {
   children?: ReactNode;
 };
 
-export const Page = ({ backButton, children }: PageProps): JSX.Element => (
+export const Page = ({ backButton, children }: PageProps) => (
   <>
     <HeaderIntersection />
     <Header backButton={backButton} />

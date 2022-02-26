@@ -8,7 +8,7 @@ export type LifespanFormatterProps = {
 export const LifespanFormatter = ({
   startDate,
   endDate,
-}: LifespanFormatterProps): JSX.Element => {
+}: LifespanFormatterProps) => {
   const formattedStartDate = <DateFormatter date={startDate} />;
 
   // If there is no decommissioned date, this is an on-going project

@@ -4,10 +4,7 @@ import * as S from "./styles";
 
 export type NavigationProps = HTMLAttributes<HTMLDivElement>;
 
-export const Navigation = ({
-  children,
-  ...props
-}: NavigationProps): JSX.Element => (
+export const Navigation = ({ children, ...props }: NavigationProps) => (
   <S.Navigation {...props}>
     <S.Content>{children}</S.Content>
   </S.Navigation>

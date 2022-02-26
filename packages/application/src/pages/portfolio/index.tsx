@@ -25,7 +25,7 @@ type PortfolioPageProps = {
   portfolioPage: PortfolioPageContentType;
 };
 
-const PortfolioPage = ({ portfolioPage }: PortfolioPageProps): JSX.Element => {
+const PortfolioPage = ({ portfolioPage }: PortfolioPageProps) => {
   const {
     meta_title: metaTitle,
     meta_description: metaDescription,

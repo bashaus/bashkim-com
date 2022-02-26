@@ -8,7 +8,7 @@ import Link from "next/link";
 
 import { FooterCopyright } from "%components/FooterCopyright";
 
-export const Footer = (): JSX.Element => (
+export const Footer = () => (
   <DSFooter>
     <FooterGroup>
       <FooterColumn label="Articles">

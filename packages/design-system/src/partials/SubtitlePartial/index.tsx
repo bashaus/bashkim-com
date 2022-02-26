@@ -8,7 +8,7 @@ export type SubtitlePartialProps = HTMLAttributes<HTMLDivElement>;
 export const SubtitlePartial = ({
   children,
   ...props
-}: SubtitlePartialProps): JSX.Element => (
+}: SubtitlePartialProps) => (
   <S.SubtitlePartial {...props}>
     <RichTextFormatter>{children}</RichTextFormatter>
   </S.SubtitlePartial>

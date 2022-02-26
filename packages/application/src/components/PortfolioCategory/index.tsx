@@ -15,7 +15,7 @@ export type PortfolioCategoryProps = {
 
 export const PortfolioCategory = ({
   portfolioCategory,
-}: PortfolioCategoryProps): JSX.Element => (
+}: PortfolioCategoryProps) => (
   <>
     <SubtitlePartial id={portfolioCategory.primary.portfolio_category_slug}>
       <PrismicRichText

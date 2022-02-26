@@ -6,7 +6,7 @@ import GitHubVector from "%assets/vectors/social/github.svg";
 
 import * as S from "./styles";
 
-export const HomeHello = (): JSX.Element => (
+export const HomeHello = () => (
   <HeaderTextPartial
     aside={
       <S.Links>

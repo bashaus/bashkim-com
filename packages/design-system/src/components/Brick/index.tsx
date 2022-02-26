@@ -17,11 +17,7 @@ export type BrickProps = {
   title?: string;
 };
 
-export const Brick = ({
-  description,
-  icon,
-  title,
-}: BrickProps): JSX.Element => (
+export const Brick = ({ description, icon, title }: BrickProps) => (
   <S.Brick>
     <S.Content>
       <S.Heading>{title}</S.Heading>

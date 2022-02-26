@@ -11,7 +11,7 @@ export const HeaderTextPartial = ({
   aside,
   children,
   ...props
-}: HeaderTextPartialProps): JSX.Element => (
+}: HeaderTextPartialProps) => (
   <S.HeaderTextPartial {...props}>
     <S.Foreground>
       <S.Content>{children}</S.Content>

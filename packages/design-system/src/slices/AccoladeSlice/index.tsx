@@ -23,9 +23,7 @@ const AwardPlaceName = {
   shortlist: "Shortlist",
 };
 
-export const AccoladeSlice = ({
-  slice,
-}: AccoladeSliceProps): JSX.Element | null => {
+export const AccoladeSlice = ({ slice }: AccoladeSliceProps) => {
   const PrismicLinkResolver = useContext(LinkResolverContext);
 
   if (!slice.primary) {

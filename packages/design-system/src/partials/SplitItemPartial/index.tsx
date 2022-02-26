@@ -12,7 +12,7 @@ export const SplitItemPartial = ({
   backgroundImage,
   children,
   ...props
-}: SplitItemPartialProps): JSX.Element => (
+}: SplitItemPartialProps) => (
   <S.SplitItemPartial
     prop-background-image={backgroundImage}
     className={backgroundImage ? "SplitPartial_chevron" : undefined}

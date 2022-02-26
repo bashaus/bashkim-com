@@ -31,7 +31,7 @@ export type SliceProps = {
   slice: PrismicSliceType;
 };
 
-export const Slice = (props: SliceProps): JSX.Element => {
+export const Slice = (props: SliceProps) => {
   const { slice } = props;
   const SliceTypeComponent = SliceTypeComponentMap[slice.type];
   return <SliceTypeComponent {...props} />;

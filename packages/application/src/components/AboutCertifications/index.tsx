@@ -12,7 +12,7 @@ import PhpZceImage from "%assets/images/about/certifications/php/zce.jpg";
 
 import * as S from "./styles";
 
-export const AboutCertifications = (): JSX.Element => (
+export const AboutCertifications = () => (
   <Group>
     <SubtitlePartial>
       <h2>Certifications</h2>

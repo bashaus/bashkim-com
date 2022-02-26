@@ -8,10 +8,7 @@ export type CarouselImageProps = {
   children?: ReactNode;
 };
 
-export const CarouselImage = ({
-  children,
-  figure,
-}: CarouselImageProps): JSX.Element => (
+export const CarouselImage = ({ children, figure }: CarouselImageProps) => (
   <S.CarouselImage>
     <S.Figure>{figure}</S.Figure>
 

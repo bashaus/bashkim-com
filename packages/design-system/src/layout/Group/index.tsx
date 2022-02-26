@@ -12,4 +12,4 @@ export type GroupProps = HTMLAttributes<HTMLDivElement> & {
 export const Group = ({
   design = GroupDesign.DEFAULT,
   ...props
-}: GroupProps): JSX.Element => <S.Group props-design={design} {...props} />;
+}: GroupProps) => <S.Group props-design={design} {...props} />;

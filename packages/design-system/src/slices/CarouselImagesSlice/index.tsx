@@ -8,9 +8,7 @@ export type CarouselImagesSliceProps = {
   slice: CarouselImagesSliceType;
 };
 
-export const CarouselImagesSlice = ({
-  slice,
-}: CarouselImagesSliceProps): JSX.Element => (
+export const CarouselImagesSlice = ({ slice }: CarouselImagesSliceProps) => (
   <FullImagePartial>
     <Carousel>
       {slice.fields?.map((field) => {

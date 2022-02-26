@@ -28,7 +28,7 @@ type CaseStudyPageProps = {
 const CaseStudyPage = ({
   caseStudyPage,
   caseStudyBody,
-}: CaseStudyPageProps): JSX.Element => {
+}: CaseStudyPageProps) => {
   const {
     accolades: accoladeSlices,
     collaborators: collaboratorSlices,

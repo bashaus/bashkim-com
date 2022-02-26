@@ -4,7 +4,7 @@ import { MetaDescription } from "%components/MetaDescription";
 import { MetaTitle } from "%components/MetaTitle";
 import { Page } from "%components/Page";
 
-const CookiesPage = (): JSX.Element => (
+const CookiesPage = () => (
   <Page backButton={MenuButtonHome}>
     <MetaTitle content="Cookie policy" />
     <MetaDescription content="How your personal information is used on this website" />

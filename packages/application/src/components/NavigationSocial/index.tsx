@@ -5,7 +5,7 @@ import StackOverflowVector from "%assets/vectors/social/stack-overflow.svg";
 
 import * as S from "./styles";
 
-export const NavigationSocial = (): JSX.Element => (
+export const NavigationSocial = () => (
   <S.NavigationSocial>
     <S.IconGitHub>
       <a

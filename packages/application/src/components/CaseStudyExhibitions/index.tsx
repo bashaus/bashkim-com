@@ -9,7 +9,7 @@ export type CaseStudyExhibitionsProps = {
 
 export const CaseStudyExhibitions = ({
   slices = [],
-}: CaseStudyExhibitionsProps): JSX.Element | null => {
+}: CaseStudyExhibitionsProps) => {
   if (!slices.length) {
     return null;
   }

@@ -3,7 +3,7 @@ import { HeaderTextPartial } from "@bashkim-com/design-system";
 import { MenuButtonHome } from "%components/MenuButtonHome";
 import { Page } from "%components/Page";
 
-const ErrorNotFoundPage = (): JSX.Element => (
+const ErrorNotFoundPage = () => (
   <Page backButton={MenuButtonHome}>
     <HeaderTextPartial>
       <h1>Page not found</h1>

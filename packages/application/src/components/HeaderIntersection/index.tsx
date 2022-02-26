@@ -5,47 +5,45 @@ import { NavigationContext } from "%contexts/Navigation/context";
 
 import * as S from "./styles";
 
-export const HeaderIntersection = memo(
-  function HeaderIntersection(): JSX.Element {
-    const { dispatch: navigationDispatch } = useContext(NavigationContext);
-    const ref = useRef<HTMLDivElement>(null);
+export const HeaderIntersection = memo(function HeaderIntersection() {
+  const { dispatch: navigationDispatch } = useContext(NavigationContext);
+  const ref = useRef<HTMLDivElement>(null);
 
-    const processIntersectionEntries = useCallback(
-      (entries: Array<IntersectionObserverEntry>): void => {
-        entries.forEach((entry) =>
-          navigationDispatch({
-            type: NavigationActionsTypes.SET_SCROLL_AT_TOP,
-            payload: entry.isIntersecting,
-          })
-        );
-      },
-      [navigationDispatch]
+  const processIntersectionEntries = useCallback(
+    (entries: Array<IntersectionObserverEntry>): void => {
+      entries.forEach((entry) =>
+        navigationDispatch({
+          type: NavigationActionsTypes.SET_SCROLL_AT_TOP,
+          payload: entry.isIntersecting,
+        })
+      );
+    },
+    [navigationDispatch]
+  );
+
+  useEffect(() => {
+    if (typeof IntersectionObserver === typeof undefined) {
+      return (): void => {
+        /* IntersectionObserver not supported */
+      };
+    }
+
+    const interactionObserver = new IntersectionObserver(
+      processIntersectionEntries
     );
 
-    useEffect(() => {
-      if (typeof IntersectionObserver === typeof undefined) {
-        return (): void => {
-          /* IntersectionObserver not supported */
-        };
-      }
+    const { current } = ref;
 
-      const interactionObserver = new IntersectionObserver(
-        processIntersectionEntries
-      );
+    if (current) {
+      interactionObserver.observe(current);
+    }
 
-      const { current } = ref;
-
+    return (): void => {
       if (current) {
-        interactionObserver.observe(current);
+        interactionObserver.unobserve(current);
       }
+    };
+  }, [processIntersectionEntries]);
 
-      return (): void => {
-        if (current) {
-          interactionObserver.unobserve(current);
-        }
-      };
-    }, [processIntersectionEntries]);
-
-    return <S.HeaderIntersection ref={ref} />;
-  }
-);
+  return <S.HeaderIntersection ref={ref} />;
+});

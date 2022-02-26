@@ -8,7 +8,7 @@ export type PortfolioCaseStudyBrickProps = {
 
 export const PortfolioCaseStudyBrick = ({
   caseStudy,
-}: PortfolioCaseStudyBrickProps): JSX.Element => (
+}: PortfolioCaseStudyBrickProps) => (
   <Link
     href="/portfolio/[caseStudySlug]"
     as={`/portfolio/${caseStudy._meta.uid}`}

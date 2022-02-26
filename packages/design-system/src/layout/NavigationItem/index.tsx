@@ -9,7 +9,7 @@ export type NavigationItemProps = HTMLAttributes<HTMLLIElement> & {
 export const NavigationItem = ({
   isSelected = false,
   ...props
-}: NavigationItemProps): JSX.Element => (
+}: NavigationItemProps) => (
   <S.NavigationItem
     aria-current={isSelected ? "location" : undefined}
     {...props}

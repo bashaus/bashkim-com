@@ -15,7 +15,7 @@ export type CaptionedMagazineSliceProps = {
 
 export const CaptionedMagazineSlice = ({
   slice,
-}: CaptionedMagazineSliceProps): JSX.Element | null => {
+}: CaptionedMagazineSliceProps) => {
   /* infinite state */
   const [magazineIsInitialized, setMagazineIsInitialized] =
     useState<boolean>(false);

@@ -6,9 +6,7 @@ export type GridVideoSliceProps = {
   slice: GridVideoSliceType;
 };
 
-export const GridVideoSlice = ({
-  slice,
-}: GridVideoSliceProps): JSX.Element | null => (
+export const GridVideoSlice = ({ slice }: GridVideoSliceProps) => (
   <S.Videos data-column-count={slice.fields?.length}>
     {slice.fields?.map((field, i) => {
       const {

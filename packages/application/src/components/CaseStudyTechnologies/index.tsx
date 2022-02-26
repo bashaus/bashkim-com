@@ -8,7 +8,7 @@ export type CaseStudyTechnologiesProps = {
 
 export const CaseStudyTechnologies = ({
   caseStudy,
-}: CaseStudyTechnologiesProps): JSX.Element => (
+}: CaseStudyTechnologiesProps) => (
   <>
     <S.Heading>Key technologies</S.Heading>
 

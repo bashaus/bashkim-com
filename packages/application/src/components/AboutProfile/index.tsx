@@ -12,7 +12,7 @@ import WithinBudgetVector from "%assets/vectors/principles/within-budget.svg";
 
 import * as S from "./styles";
 
-export const AboutProfile = (): JSX.Element => (
+export const AboutProfile = () => (
   <Group>
     <TitlePartial image={PhotoImage.src}>
       <h1>About Bash</h1>

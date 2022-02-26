@@ -12,7 +12,7 @@ export type CaseStudyCollaboratorsProps = {
 export const CaseStudyCollaborators = ({
   slices = [],
   myRole,
-}: CaseStudyCollaboratorsProps): JSX.Element | null => {
+}: CaseStudyCollaboratorsProps) => {
   if (!slices.length) {
     return null;
   }

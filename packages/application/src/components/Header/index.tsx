@@ -10,7 +10,7 @@ export type HeaderProps = {
   backButton?: ReactNode;
 };
 
-export const Header = ({ backButton }: HeaderProps): JSX.Element => {
+export const Header = ({ backButton }: HeaderProps) => {
   const { state: navigationState } = useContext(NavigationContext);
 
   return (

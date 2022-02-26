@@ -4,6 +4,6 @@ import * as S from "./styles";
 
 export type FooterGroupProps = HTMLAttributes<HTMLDivElement>;
 
-export const FooterGroup = (props: FooterGroupProps): JSX.Element => (
+export const FooterGroup = (props: FooterGroupProps) => (
   <S.FooterGroup {...props} />
 );

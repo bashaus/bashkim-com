@@ -1,6 +1,6 @@
 import * as S from "./styles";
 
-export const FooterCopyright = (): JSX.Element => (
+export const FooterCopyright = () => (
   <S.FooterCopyright
     role="contentinfo"
     aria-label="Copyright, Two-Thousand-and-Eight to Two-Thousand-and-Twenty, Bashkim Isai. All rights reserved."

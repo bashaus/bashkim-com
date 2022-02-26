@@ -4,9 +4,7 @@ export type MetaDescriptionProps = {
   content?: string;
 };
 
-export const MetaDescription = ({
-  content,
-}: MetaDescriptionProps): JSX.Element | null => {
+export const MetaDescription = ({ content }: MetaDescriptionProps) => {
   if (!content) {
     return null;
   }

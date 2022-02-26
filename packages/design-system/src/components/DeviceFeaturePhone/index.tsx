@@ -21,7 +21,7 @@ export type DeviceFeaturePhoneProps = {
 export const DeviceFeaturePhone = ({
   children,
   figure,
-}: DeviceFeaturePhoneProps): JSX.Element => (
+}: DeviceFeaturePhoneProps) => (
   <S.DeviceFeaturePhone>
     <S.Wrapper>
       <S.Device />

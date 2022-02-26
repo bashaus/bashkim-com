@@ -7,9 +7,7 @@ export type HomeFeaturedProps = {
   caseStudies: HomePageContentType["featured_case_studies"];
 };
 
-export const HomeFeatured = ({
-  caseStudies,
-}: HomeFeaturedProps): JSX.Element => {
+export const HomeFeatured = ({ caseStudies }: HomeFeaturedProps) => {
   const PrismicLinkResolver = useContext(LinkResolverContext);
 
   return (

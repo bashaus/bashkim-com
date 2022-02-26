@@ -8,9 +8,7 @@ export type CaptionedVideoSliceProps = {
   slice: CaptionedVideoSliceType;
 };
 
-export const CaptionedVideoSlice = ({
-  slice,
-}: CaptionedVideoSliceProps): JSX.Element | null => {
+export const CaptionedVideoSlice = ({ slice }: CaptionedVideoSliceProps) => {
   if (!slice.primary) {
     return null;
   }

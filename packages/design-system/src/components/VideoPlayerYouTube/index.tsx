@@ -12,10 +12,7 @@ export type VideoPlayerYouTubeProps = {
   v: string;
 };
 
-export const VideoPlayerYouTube = ({
-  title,
-  v,
-}: VideoPlayerYouTubeProps): JSX.Element => {
+export const VideoPlayerYouTube = ({ title, v }: VideoPlayerYouTubeProps) => {
   const src = new URL(`https://www.youtube-nocookie.com/embed/${v}`);
   src.searchParams.append("rel", "0");
   src.searchParams.append("hd", "1");

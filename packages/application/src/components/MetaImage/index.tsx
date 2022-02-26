@@ -7,11 +7,7 @@ export type MetaImageProps = {
   url?: string;
 };
 
-export const MetaImage = ({
-  url,
-  width,
-  height,
-}: MetaImageProps): JSX.Element | null => {
+export const MetaImage = ({ url, width, height }: MetaImageProps) => {
   if (!url) {
     return null;
   }

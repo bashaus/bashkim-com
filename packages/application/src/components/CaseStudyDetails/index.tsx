@@ -10,9 +10,7 @@ export type CaseStudyDetailsProps = {
   caseStudy: CaseStudyContentType;
 };
 
-export const CaseStudyDetails = ({
-  caseStudy,
-}: CaseStudyDetailsProps): JSX.Element => {
+export const CaseStudyDetails = ({ caseStudy }: CaseStudyDetailsProps) => {
   const {
     info_brief: brief,
     info_strategy: strategy,

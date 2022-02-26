@@ -16,9 +16,7 @@ export type CaseStudyHeaderProps = {
   caseStudy: CaseStudyContentType;
 };
 
-export const CaseStudyHeader = ({
-  caseStudy,
-}: CaseStudyHeaderProps): JSX.Element => (
+export const CaseStudyHeader = ({ caseStudy }: CaseStudyHeaderProps) => (
   <>
     <HeaderImagePartial
       id="CaseStudyPage-Header"

@@ -8,10 +8,7 @@ export type FooterColumnProps = {
   label: string;
 };
 
-export const FooterColumn = ({
-  label,
-  children,
-}: FooterColumnProps): JSX.Element => {
+export const FooterColumn = ({ label, children }: FooterColumnProps) => {
   const [isVisible, setIsVisible] = useState(false);
 
   const handleHeaderClick = useCallback((): void => {

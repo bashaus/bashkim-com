@@ -9,9 +9,7 @@ export type CollaboratorSliceProps = {
   slice: CollaboratorSliceType;
 };
 
-export const CollaboratorSlice = ({
-  slice,
-}: CollaboratorSliceProps): JSX.Element | null => {
+export const CollaboratorSlice = ({ slice }: CollaboratorSliceProps) => {
   const PrismicLinkResolver = useContext(LinkResolverContext);
 
   if (!slice.primary) {

@@ -5,9 +5,7 @@ export type MetaCanonicalProps = {
   href?: string;
 };
 
-export const MetaCanonical = ({
-  href,
-}: MetaCanonicalProps): JSX.Element | null => {
+export const MetaCanonical = ({ href }: MetaCanonicalProps) => {
   const { publicRuntimeConfig: config } = getConfig();
 
   if (!href) {

@@ -7,12 +7,7 @@ export type TileProps = {
   title: string;
 };
 
-export const Tile = ({
-  description,
-  title,
-  icon,
-  poster,
-}: TileProps): JSX.Element => (
+export const Tile = ({ description, title, icon, poster }: TileProps) => (
   <S.Tile>
     <S.Poster
       style={{

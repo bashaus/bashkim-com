@@ -5,10 +5,7 @@ export type MetaTitleProps = {
   standalone?: boolean;
 };
 
-export const MetaTitle = ({
-  content,
-  standalone = false,
-}: MetaTitleProps): JSX.Element => {
+export const MetaTitle = ({ content, standalone = false }: MetaTitleProps) => {
   const titleText = standalone
     ? content
     : `${content} | Bashkim Isai - Creative Technologist`;

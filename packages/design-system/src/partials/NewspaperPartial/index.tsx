@@ -4,6 +4,6 @@ import * as S from "./styles";
 
 export type NewspaperPartialProps = HTMLAttributes<HTMLDivElement>;
 
-export const NewspaperPartial = (props: NewspaperPartialProps): JSX.Element => (
+export const NewspaperPartial = (props: NewspaperPartialProps) => (
   <S.NewspaperPartial {...props} />
 );

@@ -7,10 +7,7 @@ export type TitlePartialProps = {
   image?: string;
 };
 
-export const TitlePartial = ({
-  children,
-  image,
-}: TitlePartialProps): JSX.Element => (
+export const TitlePartial = ({ children, image }: TitlePartialProps) => (
   <S.TitlePartial>
     <S.Content>{children}</S.Content>
     {image && <S.Image src={image} alt="" />}

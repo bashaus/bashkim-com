@@ -4,7 +4,7 @@ import VisibilitySensor from "react-visibility-sensor";
 import * as S from "./styles";
 
 export type DeferredAssetProps = {
-  children: JSX.Element;
+  children: React.ReactNode;
   width?: number;
   height?: number;
   ratio?: number;
@@ -15,7 +15,7 @@ export const DeferredAsset = ({
   width,
   height,
   ratio,
-}: DeferredAssetProps): JSX.Element => {
+}: DeferredAssetProps) => {
   const [isVisible, setIsVisible] = useState(false);
 
   const handleVisibilityChange = useCallback(

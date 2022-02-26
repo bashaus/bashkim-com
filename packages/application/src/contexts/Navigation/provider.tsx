@@ -8,9 +8,7 @@ export type NavigationProviderProps = {
   children: ReactNode;
 };
 
-export const NavigationProvider = ({
-  children,
-}: NavigationProviderProps): JSX.Element => {
+export const NavigationProvider = ({ children }: NavigationProviderProps) => {
   const [state, dispatch] = useReducer(NavigationReducer, INITIAL_STATE);
 
   return (

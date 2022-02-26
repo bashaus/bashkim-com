@@ -7,7 +7,7 @@ export type CaseStudyAccoladesProps = {
 
 export const CaseStudyAccolades = ({
   slices = [],
-}: CaseStudyAccoladesProps): JSX.Element | null => {
+}: CaseStudyAccoladesProps) => {
   if (!slices.length) {
     return null;
   }

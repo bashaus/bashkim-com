@@ -15,7 +15,7 @@ export const FullBannerPartial = ({
   backgroundMobile,
   children,
   id,
-}: FullBannerPartialProps): JSX.Element => (
+}: FullBannerPartialProps) => (
   <S.FullBannerPartial id={id}>
     <S.Container>
       <S.Content>

@@ -45,7 +45,7 @@ export const Magazine = ({
   pages,
   pageWidth,
   pageHeight,
-}: MagazineProps): JSX.Element => {
+}: MagazineProps) => {
   /* infinite state */
   const [isInitialized, setIsInitialized] = useState<boolean>(false);
   const [display, setDisplay] = useState<TurnDisplay>(TurnDisplay.SINGLE);
