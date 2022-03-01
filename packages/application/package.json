@@ -22,7 +22,7 @@
     "@bashkim-com/style-guide": "1.0.0",
     "@primer/octicons-react": "^16.3.1",
     "@sentry/browser": "^6.18.1",
-    "@xstate/react": "^2.0.0",
+    "@xstate/react": "^2.0.1",
     "apollo-link-prismic": "^1.1.0",
     "blurhash": "^1.1.5",
     "graphql": "^16.3.0",
