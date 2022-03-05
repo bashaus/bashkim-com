@@ -8,6 +8,7 @@ import { SitemapTemplate } from "./templates/sitemap";
 import { SitemapIndexTemplate } from "./templates/sitemapindex";
 
 export const app = express();
+app.disable("x-powered-by");
 
 // sitemap indexes
 app.get("/sitemap.xml", SitemapIndexTemplate(SitemapIndex));

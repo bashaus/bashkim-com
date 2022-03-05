@@ -13,6 +13,7 @@ export type PrismicResponseBody = {
 };
 
 export const app = express();
+app.disable("x-powered-by");
 
 app.post(
   "/",
