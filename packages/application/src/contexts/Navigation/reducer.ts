@@ -5,16 +5,12 @@ export const NavigationReducer = (
   state: NavigationState,
   action: NavigationActionType
 ): NavigationState => {
-  switch (action.type) {
-    case NavigationAction.SET_SCROLL_AT_TOP: {
-      return {
-        ...state,
-        scrollAtTop: action.payload.scrollAtTop,
-      };
-    }
-
-    default: {
-      return state;
-    }
+  if (action.type === NavigationAction.SET_SCROLL_AT_TOP) {
+    return {
+      ...state,
+      scrollAtTop: action.payload.scrollAtTop,
+    };
   }
+
+  return state;
 };

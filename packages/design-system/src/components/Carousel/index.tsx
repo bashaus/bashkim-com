@@ -21,7 +21,7 @@ export const Carousel = ({
       infinite={infinite}
       draggable={draggable}
       lazyLoad={lazyLoad}
-      appendDots={(dots) => <S.Dots>{dots}</S.Dots>}
+      appendDots={(children) => <S.Dots>{children}</S.Dots>}
       prevArrow={<S.ArrowPrev />}
       nextArrow={<S.ArrowNext />}
       {...args}
