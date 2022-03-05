@@ -59,6 +59,7 @@ export const Principle = styled.li`
       margin-left: auto;
       margin-right: auto;
       margin-bottom: 20px;
+      fill: currentColor;
     }
 
     h3 {
