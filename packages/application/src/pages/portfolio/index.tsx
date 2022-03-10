@@ -1,7 +1,7 @@
 import {
   Group,
   GroupDesign,
-  HeaderTextPartial,
+  PageHeaderPartial,
   SubtitlePartial,
 } from "@bashkim-com/design-system";
 import type {
@@ -10,6 +10,7 @@ import type {
 } from "@bashkim-com/prismic";
 import { GetStaticProps } from "next";
 
+import backgroundImage from "%assets/images/portfolio/background-image.jpg";
 import { MenuButtonHome } from "%components/MenuButtonHome";
 import { MetaDescription } from "%components/MetaDescription";
 import { MetaKeywords } from "%components/MetaKeywords";
@@ -40,10 +41,14 @@ const PortfolioPage = ({ portfolioPage }: PortfolioPageProps) => {
       <MetaDescription content={metaDescription} />
       <MetaKeywords content={metaKeywords} />
 
-      <HeaderTextPartial>
+      <PageHeaderPartial
+        id="PortfolioPage-Header"
+        imageDesktop={backgroundImage.src}
+        imageMobile={backgroundImage.src}
+      >
         <h1>{metaTitle}</h1>
         <p>{metaDescription}</p>
-      </HeaderTextPartial>
+      </PageHeaderPartial>
 
       <Group design={GroupDesign.ALTERNATE}>
         <SubtitlePartial>

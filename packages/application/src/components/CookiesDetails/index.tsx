@@ -1,7 +1,7 @@
 import {
   FullTextPartial,
   Group,
-  HeaderImagePartial,
+  PageHeaderPartial,
 } from "@bashkim-com/design-system";
 
 import HeaderDesktopImage from "%assets/images/cookies/header-desktop.jpg";
@@ -11,8 +11,8 @@ import * as S from "./styles";
 
 export const CookiesDetails = () => (
   <>
-    <HeaderImagePartial
-      id="CookiesDetails-Header"
+    <PageHeaderPartial
+      id="CookiesPage-Header"
       imageDesktop={HeaderDesktopImage.src}
       imageMobile={HeaderMobileImage.src}
     />

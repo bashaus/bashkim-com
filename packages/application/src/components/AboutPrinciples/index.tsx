@@ -1,6 +1,5 @@
-import { Group, TitlePartial } from "@bashkim-com/design-system";
+import { Group, SubtitlePartial } from "@bashkim-com/design-system";
 
-import PhotoImage from "%assets/images/about/profile/photo@4x.jpg";
 import EthicallyVector from "%assets/vectors/principles/ethically.svg";
 import MaintainableVector from "%assets/vectors/principles/maintainable.svg";
 import OnTimeVector from "%assets/vectors/principles/on-time.svg";
@@ -12,15 +11,11 @@ import WithinBudgetVector from "%assets/vectors/principles/within-budget.svg";
 
 import * as S from "./styles";
 
-export const AboutProfile = () => (
+export const AboutPrinciples = () => (
   <Group>
-    <TitlePartial image={PhotoImage.src}>
-      <h1>About Bash</h1>
-      <p>
-        My core principles for successfully delivering creative software
-        applications
-      </p>
-    </TitlePartial>
+    <SubtitlePartial>
+      <h2>Core principles</h2>
+    </SubtitlePartial>
 
     <S.Principles>
       <S.Principle>

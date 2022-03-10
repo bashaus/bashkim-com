@@ -1,16 +1,15 @@
 import {
   CallToAction,
   Group,
-  HeaderImagePartial,
   SplitItemPartial,
   SplitPartial,
   SubtitlePartial,
 } from "@bashkim-com/design-system";
 
-import HeaderDesktopImage from "%assets/images/about/header-desktop.jpg";
 import { AboutCertifications } from "%components/AboutCertifications";
 import { AboutEducation } from "%components/AboutEducation";
-import { AboutProfile } from "%components/AboutProfile";
+import { AboutPageHeader } from "%components/AboutPageHeader";
+import { AboutPrinciples } from "%components/AboutPrinciples";
 import { MenuButtonHome } from "%components/MenuButtonHome";
 import { MetaDescription } from "%components/MetaDescription";
 import { MetaKeywords } from "%components/MetaKeywords";
@@ -23,12 +22,8 @@ const AboutPage = () => (
     <MetaDescription content="Information on the work history of Bashkim Isai" />
     <MetaKeywords content="bashkim isai, creative technologist, london" />
 
-    <HeaderImagePartial
-      id="AboutPage-Header"
-      imageDesktop={HeaderDesktopImage.src}
-    />
-
-    <AboutProfile />
+    <AboutPageHeader />
+    <AboutPrinciples />
     <AboutEducation />
     <AboutCertifications />
 

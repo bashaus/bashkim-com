@@ -1,15 +1,9 @@
-import {
-  CallToAction,
-  Group,
-  SplitItemPartial,
-  SplitPartial,
-} from "@bashkim-com/design-system";
 import type { HomePageContentType } from "@bashkim-com/prismic";
 import { GetStaticProps } from "next";
 import Head from "next/head";
-import Link from "next/link";
 
 import { HomeFeatured } from "%components/HomeFeatured";
+import { HomeFooter } from "%components/HomeFooter";
 import { HomeHello } from "%components/HomeHello";
 import { MetaDescription } from "%components/MetaDescription";
 import { MetaKeywords } from "%components/MetaKeywords";
@@ -64,36 +58,7 @@ const HomePage = ({ homePage }: HomePageProps) => {
 
       <HomeHello />
       <HomeFeatured caseStudies={featuredCaseStudies} />
-
-      <Group>
-        <SplitPartial>
-          <SplitItemPartial>
-            <div>
-              <p>Looking for more case&nbsp;studies?</p>
-              <CallToAction>
-                <Link href="/portfolio">
-                  <a>
-                    <span>Browse portfolio</span>
-                  </a>
-                </Link>
-              </CallToAction>
-            </div>
-          </SplitItemPartial>
-
-          <SplitItemPartial>
-            <div>
-              <p>Want more details about my practice?</p>
-              <CallToAction>
-                <Link href="/about">
-                  <a>
-                    <span>About me</span>
-                  </a>
-                </Link>
-              </CallToAction>
-            </div>
-          </SplitItemPartial>
-        </SplitPartial>
-      </Group>
+      <HomeFooter />
     </Page>
   );
 };

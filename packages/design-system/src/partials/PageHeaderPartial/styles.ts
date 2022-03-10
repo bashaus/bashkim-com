@@ -4,16 +4,20 @@ import {
   ColorWhite,
   GridCell,
   GridContainer,
+  Heading1,
   MediaQueryMobile,
   MediaQueryNotMobile,
 } from "@bashkim-com/style-guide";
 import styled from "styled-components";
 
-export const HeaderTextPartial = styled.header`
+export const PageHeaderPartial = styled.header`
   ${ChevronDown()}
 
   position: relative;
   background-color: ${ColorGreyscale100};
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 
   @media ${MediaQueryNotMobile} {
     padding-top: 61px;
@@ -53,6 +57,7 @@ export const Content = styled.div`
   position: relative;
 
   h1 {
+    ${Heading1}
     font-weight: bold;
   }
 

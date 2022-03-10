@@ -1,13 +1,16 @@
-import { HeaderTextPartial } from "@bashkim-com/design-system";
+import { PageHeaderPartial } from "@bashkim-com/design-system";
 import Link from "next/link";
 
+import BackgroundImage from "%assets/images/home/background-image.jpg";
 import PortfolioVector from "%assets/vectors/icons/portfolio.svg";
 import GitHubVector from "%assets/vectors/social/github.svg";
 
 import * as S from "./styles";
 
 export const HomeHello = () => (
-  <HeaderTextPartial
+  <PageHeaderPartial
+    id="HomePage-Hello"
+    imageDesktop={BackgroundImage.src}
     aside={
       <S.Links>
         <S.Link>
@@ -37,7 +40,7 @@ export const HomeHello = () => (
     }
   >
     <S.Introduction>
-      <S.IntroductionTitle>Hello!</S.IntroductionTitle>
+      <S.IntroductionTitle>Hello.</S.IntroductionTitle>
 
       <p>
         <S.IntroductionName>
@@ -61,5 +64,5 @@ export const HomeHello = () => (
         </S.IntroductionSpiel>
       </p>
     </S.Introduction>
-  </HeaderTextPartial>
+  </PageHeaderPartial>
 );

@@ -26,7 +26,7 @@ export const HomeFeatured = ({ caseStudies }: HomeFeaturedProps) => {
               backgroundMobile={backgroundMobile && backgroundMobile.url}
               id={`HomePage-FullBannerPartial-${caseStudy._meta.id}`}
             >
-              <h3>{caseStudy.meta_title}</h3>
+              <h2>{caseStudy.meta_title}</h2>
               <p>{caseStudy.meta_description}</p>
               <CallToAction>
                 <Link

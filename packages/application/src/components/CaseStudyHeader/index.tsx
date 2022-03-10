@@ -1,7 +1,7 @@
 import {
   Group,
   GroupDesign,
-  HeaderImagePartial,
+  PageHeaderPartial,
   SubtitlePartial,
   TitlePartial,
 } from "@bashkim-com/design-system";
@@ -18,7 +18,7 @@ export type CaseStudyHeaderProps = {
 
 export const CaseStudyHeader = ({ caseStudy }: CaseStudyHeaderProps) => (
   <>
-    <HeaderImagePartial
+    <PageHeaderPartial
       id="CaseStudyPage-Header"
       imageDesktop={caseStudy.image_header_desktop?.url}
       imageMobile={caseStudy.image_header_mobile?.url}
