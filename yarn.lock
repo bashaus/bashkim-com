@@ -2019,10 +2019,10 @@
   resolved "https://registry.yarnpkg.com/@primer/octicons-react/-/octicons-react-17.0.0.tgz#c16ac8671edee682a513b1afa8a004c7c5b1d767"
   integrity sha512-/9VLaNVNWwmTFgFlaxO3r+4GbqiG05ytkDLbKxBAdBiOJLadUPo6P0k+/zJdp8No/S2bBNvEtZNNk5zQj87H4w==
 
-"@prismicio/client@^6.3.0":
-  version "6.3.0"
-  resolved "https://registry.yarnpkg.com/@prismicio/client/-/client-6.3.0.tgz#a1f3a861d1950e8a7a59f01ad207d9bbc1744e59"
-  integrity sha512-FeKbmuXNCNU1tw+yvc87PfYF8wSY0rfe0Ou2VCo0PFdMlHzRMu8CXkITNswv3cDakeu8xU0Z7IOfTiF4WE5nLQ==
+"@prismicio/client@^6.4.1":
+  version "6.4.1"
+  resolved "https://registry.yarnpkg.com/@prismicio/client/-/client-6.4.1.tgz#91d0dc48b4eae07bcf031f00c4a290c38d25120e"
+  integrity sha512-yP3aTETsybx7DOMeOTDYMJgZyGBBwu5HpDqcPtZ4QUhKWjy749ZNVUMfXayU90609UhzEvKSkGtu13u0wcpbDw==
   dependencies:
     "@prismicio/helpers" "^2.1.1"
     "@prismicio/types" "^0.1.24"
@@ -4588,12 +4588,12 @@ anymatch@^3.0.0, anymatch@^3.0.3, anymatch@~3.1.2:
     normalize-path "^3.0.0"
     picomatch "^2.0.4"
 
-apollo-link-prismic@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/apollo-link-prismic/-/apollo-link-prismic-1.1.0.tgz#ce2fa1cd1a76c614c3a1dad724cc02e2fe46ad6d"
-  integrity sha512-RlcbkJoS5h37QcCsvyOv82Aiw8Eytl+xwQfxD7W0gEkrfzqGmnUxRVRIIXf6KkniXZeJhgfn4QN5NKrtm3pGeQ==
+apollo-link-prismic@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/apollo-link-prismic/-/apollo-link-prismic-1.1.1.tgz#4dc18760e17b9a14649f67f652eca6dfe1c2b87d"
+  integrity sha512-rD6NrvRdg3XLEwvSqlgLHmDpdZYjr1F3ylFlOqPu0Ic7Kc48S7OJM8e2Si9DY00ccyUSe7sb9dtUYvqa38dsjQ==
   dependencies:
-    "@prismicio/client" "^6.3.0"
+    "@prismicio/client" "^6.4.1"
 
 app-root-dir@^1.0.2:
   version "1.0.2"
