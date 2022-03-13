@@ -1,10 +1,10 @@
-import { CSSProperties, useCallback, useState } from "react";
+import { CSSProperties, ReactNode, useCallback, useState } from "react";
 import VisibilitySensor from "react-visibility-sensor";
 
 import * as S from "./styles";
 
 export type DeferredAssetProps = {
-  children: React.ReactNode;
+  children: ReactNode;
   width?: number;
   height?: number;
   ratio?: number;

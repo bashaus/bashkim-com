@@ -1,4 +1,4 @@
-import { GridCellPadding, GridSides } from "@bashkim-com/style-guide";
+import { GridCellPadding, GridSide } from "@bashkim-com/style-guide";
 import styled from "styled-components";
 
 import Background from "../../assets/vectors/devices/smartphone.svg";
@@ -44,7 +44,7 @@ export const Figure = styled.div`
 
 export const Caption = styled.figcaption`
   ${GridCellPadding({
-    sides: [GridSides.TOP, GridSides.LEFT, GridSides.RIGHT, GridSides.BOTTOM],
+    sides: [GridSide.TOP, GridSide.LEFT, GridSide.RIGHT, GridSide.BOTTOM],
   })}
 
   text-align: center;

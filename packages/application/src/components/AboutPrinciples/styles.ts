@@ -8,7 +8,7 @@ import {
 import styled from "styled-components";
 
 export const Principles = styled.ul`
-  ${GridContainer()};
+  ${GridContainer()}
 `;
 
 export const Principle = styled.li`

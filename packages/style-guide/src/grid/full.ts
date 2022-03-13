@@ -7,18 +7,18 @@ import {
   GridContainerPadding,
 } from "./container";
 import { GridDesign } from "./design";
-import { GridSides } from "./sides";
+import { GridSide } from "./side";
 
 export type GridFullOptions = {
   breakpoints?: Array<MediaBreakpointType>;
-  margin?: Array<GridSides>;
-  padding?: Array<GridSides>;
+  margin?: Array<GridSide>;
+  padding?: Array<GridSide>;
 };
 
 export const GridFull = ({
   breakpoints = MediaBreakpoints,
-  margin = [GridSides.LEFT, GridSides.RIGHT],
-  padding = [GridSides.TOP, GridSides.BOTTOM],
+  margin = [GridSide.LEFT, GridSide.RIGHT],
+  padding = [GridSide.TOP, GridSide.BOTTOM],
 }: GridFullOptions = {}) => css`
   ${GridContainerMaxWidth({ breakpoints })}
   ${GridContainerMargin({ breakpoints, sides: margin })}
@@ -31,34 +31,34 @@ export const GridFull = ({
 
 export type GridFullPaddingOptions = {
   breakpoints?: Array<MediaBreakpointType>;
-  sides?: Array<GridSides>;
+  sides?: Array<GridSide>;
 };
 
 export const GridFullPadding = ({
   breakpoints = MediaBreakpoints,
-  sides = [GridSides.TOP, GridSides.LEFT, GridSides.RIGHT, GridSides.BOTTOM],
+  sides = [GridSide.TOP, GridSide.LEFT, GridSide.RIGHT, GridSide.BOTTOM],
 }: GridFullPaddingOptions = {}) => css`
   ${breakpoints.map((breakpoint) => {
     const BreakpointDesign = GridDesign[breakpoint];
 
     return css`
       @media ${BreakpointDesign.query} {
-        ${sides.includes(GridSides.TOP) &&
+        ${sides.includes(GridSide.TOP) &&
         css`
           padding-top: ${BreakpointDesign.margin};
         `}
 
-        ${sides.includes(GridSides.LEFT) &&
+        ${sides.includes(GridSide.LEFT) &&
         css`
           padding-left: ${BreakpointDesign.margin};
         `}
 
-        ${sides.includes(GridSides.RIGHT) &&
+        ${sides.includes(GridSide.RIGHT) &&
         css`
           padding-right: ${BreakpointDesign.margin};
         `}
 
-        ${sides.includes(GridSides.BOTTOM) &&
+        ${sides.includes(GridSide.BOTTOM) &&
         css`
           padding-bottom: ${BreakpointDesign.margin};
         `}

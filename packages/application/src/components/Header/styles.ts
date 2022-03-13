@@ -1,8 +1,11 @@
 import {
-  ColorGreyscale20,
-  ColorGreyscale100,
   ColorWhite,
+  DesignHeaderBackgroundColor,
+  DesignHeaderBorderColor,
+  DesignHeaderForegroundColor,
+  DesignHeaderShadow,
   GridContainerBounds,
+  MediaQueryMobile,
   MediaQueryNotMobile,
 } from "@bashkim-com/style-guide";
 import styled from "styled-components";
@@ -12,9 +15,10 @@ import { zIndex } from "%styleguide/utils/z-index";
 export const Header = styled.header`
   position: relative;
   z-index: ${zIndex("Header")};
-  border-bottom: solid 1px ${ColorGreyscale20};
-  background-color: ${ColorWhite};
-  box-shadow: 0 10px 20px -15px rgba(30, 30, 30, 0.75);
+  border-bottom: solid 1px ${DesignHeaderBorderColor};
+  background-color: ${DesignHeaderBackgroundColor};
+  color: ${DesignHeaderForegroundColor};
+  box-shadow: ${DesignHeaderShadow};
 
   @media ${MediaQueryNotMobile} {
     position: fixed;
@@ -27,6 +31,7 @@ export const Header = styled.header`
     &::before {
       content: "";
       position: absolute;
+      pointer-events: none;
       top: -5px;
       left: -5px;
       bottom: -5px;
@@ -39,11 +44,7 @@ export const Header = styled.header`
     &[data-context-navigation-scroll-at-top="true"] {
       background-color: transparent;
       border-bottom-color: transparent;
-      color: ${ColorWhite};
-    }
-
-    &:not([data-context-navigation-scroll-at-top="true"]) {
-      color: ${ColorGreyscale100};
+      color: ${ColorWhite} !important;
     }
 
     &[data-context-navigation-scroll-at-top="true"]::before {
@@ -73,4 +74,10 @@ export const Container = styled.div`
     ],
     margin: [],
   })}
+`;
+
+export const MobileHidden = styled.div`
+  @media ${MediaQueryMobile} {
+    display: none;
+  }
 `;

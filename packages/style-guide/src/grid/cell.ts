@@ -2,11 +2,11 @@ import { css } from "styled-components";
 
 import { MediaBreakpoints, MediaBreakpointType } from "../media";
 import { GridDesign } from "./design";
-import { GridSides } from "./sides";
+import { GridSide } from "./side";
 
 export type GridCellPaddingOptions = {
   breakpoints?: Array<MediaBreakpointType>;
-  sides: Array<GridSides>;
+  sides: Array<GridSide>;
 };
 
 /**
@@ -14,28 +14,28 @@ export type GridCellPaddingOptions = {
  */
 export const GridCellPadding = ({
   breakpoints = MediaBreakpoints,
-  sides = [GridSides.TOP, GridSides.LEFT, GridSides.RIGHT, GridSides.BOTTOM],
+  sides = [GridSide.TOP, GridSide.LEFT, GridSide.RIGHT, GridSide.BOTTOM],
 }: GridCellPaddingOptions) => css`
   ${breakpoints.map((breakpoint) => {
     const breakpointDesign = GridDesign[breakpoint];
     return css`
       @media ${breakpointDesign.query} {
-        ${sides.includes(GridSides.TOP) &&
+        ${sides.includes(GridSide.TOP) &&
         css`
           padding-top: calc(${breakpointDesign.gutter} / 2);
         `}
 
-        ${sides.includes(GridSides.LEFT) &&
+        ${sides.includes(GridSide.LEFT) &&
         css`
           padding-left: calc(${breakpointDesign.gutter} / 2);
         `}
 
-        ${sides.includes(GridSides.RIGHT) &&
+        ${sides.includes(GridSide.RIGHT) &&
         css`
           padding-right: calc(${breakpointDesign.gutter} / 2);
         `}
 
-        ${sides.includes(GridSides.BOTTOM) &&
+        ${sides.includes(GridSide.BOTTOM) &&
         css`
           padding-bottom: calc(${breakpointDesign.gutter} / 2);
         `}

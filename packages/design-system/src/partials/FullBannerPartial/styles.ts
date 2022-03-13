@@ -11,6 +11,7 @@ import styled from "styled-components";
 export const FullBannerPartial = styled.div`
   width: 100%;
   background-color: ${ColorGreyscale100};
+  background-repeat: no-repeat;
   color: ${ColorWhite};
 
   @media ${MediaQueryMobile} {

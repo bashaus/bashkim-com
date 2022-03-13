@@ -2,7 +2,7 @@ import {
   ColorGreyscale10,
   ColorWhite,
   GridCellPadding,
-  GridSides,
+  GridSide,
   MediaQueryMobile,
   MediaQueryNotMobile,
 } from "@bashkim-com/style-guide";
@@ -22,7 +22,7 @@ export const SplitItemPartial = styled.div<SplitItemPartialProps>`
 
   div {
     ${GridCellPadding({
-      sides: [GridSides.LEFT, GridSides.RIGHT],
+      sides: [GridSide.LEFT, GridSide.RIGHT],
     })}
 
     max-width: 320px;

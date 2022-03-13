@@ -1,4 +1,5 @@
 import type { Meta, Story } from "@storybook/react";
+import { ReactNode } from "react";
 
 import { DeviceSmartphone, DeviceSmartphoneProps } from ".";
 
@@ -20,7 +21,7 @@ export default {
 
 type DeviceSmartphoneStoryProps = Omit<DeviceSmartphoneProps, "figure"> & {
   figure: Array<string>;
-  children: React.ReactNode;
+  children: ReactNode;
 };
 
 const Template: Story<DeviceSmartphoneStoryProps> = ({

@@ -2,7 +2,7 @@ import { ReactNode, useReducer } from "react";
 
 import { NavigationContext } from "./context";
 import { NavigationReducer } from "./reducer";
-import { NavigationStateInitial } from "./state";
+import { navigationStateInitial } from "./state";
 
 export type NavigationProviderProps = {
   children: ReactNode;
@@ -11,7 +11,7 @@ export type NavigationProviderProps = {
 export const NavigationProvider = ({ children }: NavigationProviderProps) => {
   const [navigationState, navigationDispatch] = useReducer(
     NavigationReducer,
-    NavigationStateInitial
+    navigationStateInitial
   );
 
   return (

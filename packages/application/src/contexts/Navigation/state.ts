@@ -2,6 +2,6 @@ export type NavigationState = {
   scrollAtTop: boolean;
 };
 
-export const NavigationStateInitial: NavigationState = {
+export const navigationStateInitial: NavigationState = {
   scrollAtTop: true,
 };

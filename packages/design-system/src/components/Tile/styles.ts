@@ -1,14 +1,16 @@
 import {
-  ColorGreyscale100,
-  ColorWhite,
+  DesignBoxBackgroundColor,
+  DesignBoxForegroundColor,
+  DesignBoxShadow,
+  DesignBoxShadowAccent,
   Heading3,
 } from "@bashkim-com/style-guide";
 import styled from "styled-components";
 
 export const Tile = styled.div`
-  color: ${ColorGreyscale100};
-  background-color: ${ColorWhite};
-  box-shadow: 0 0 14px 1px rgba(204, 204, 204, 0.5);
+  background-color: ${DesignBoxBackgroundColor};
+  color: ${DesignBoxForegroundColor};
+  box-shadow: ${DesignBoxShadow};
   transition: all 0.3s ease-in-out;
   flex-grow: 1;
   flex-shrink: 0;
@@ -17,7 +19,7 @@ export const Tile = styled.div`
   max-width: 350px;
 
   a:hover & {
-    box-shadow: 0 0 20px 3px rgba(204, 204, 204, 0.7);
+    box-shadow: ${DesignBoxShadowAccent};
   }
 `;
 
@@ -46,8 +48,8 @@ export const Icon = styled.div`
   height: 158px;
   order: 2;
   border-radius: 50%;
-  border: solid 4px ${ColorWhite};
-  background-color: ${ColorWhite};
+  border: solid 4px ${DesignBoxBackgroundColor};
+  background-color: ${DesignBoxBackgroundColor};
   overflow: hidden;
 
   img {

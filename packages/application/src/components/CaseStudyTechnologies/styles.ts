@@ -7,7 +7,7 @@ export const Heading = styled.h3`
 `;
 
 export const Technologies = styled.ul`
-  ${GridContainer({ columns: 2 })};
+  ${GridContainer({ columns: 2 })}
 `;
 
 export const Technology = styled.li`

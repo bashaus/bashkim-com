@@ -1,8 +1,7 @@
 import {
-  ColorGreyscale100,
-  ColorGreyscale150,
+  DesignPageForegroundColorAccent,
   GridCellPadding,
-  GridSides,
+  GridSide,
 } from "@bashkim-com/style-guide";
 import styled from "styled-components";
 
@@ -10,6 +9,10 @@ export const Brick = styled.article`
   display: block;
   height: 100%;
   max-width: 450px;
+
+  &:hover {
+    color: ${DesignPageForegroundColorAccent};
+  }
 `;
 
 export const Content = styled.div`
@@ -18,16 +21,11 @@ export const Content = styled.div`
   flex-wrap: wrap;
   flex-direction: column;
   margin-left: 80px;
-  color: ${ColorGreyscale100};
   cursor: pointer;
   padding: 10px;
   height: 100%;
   transition: color 0.3s ease-in-out;
   text-decoration: none;
-
-  ${Brick}:hover & {
-    color: ${ColorGreyscale150};
-  }
 `;
 
 export const Image = styled.div`
@@ -52,6 +50,6 @@ export const Heading = styled.h3`
 
 export const Description = styled.p`
   ${GridCellPadding({
-    sides: [GridSides.TOP],
+    sides: [GridSide.TOP],
   })}
 `;

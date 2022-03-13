@@ -1,8 +1,8 @@
-import { GridContainerBounds, GridSides } from "@bashkim-com/style-guide";
+import { GridContainerBounds, GridSide } from "@bashkim-com/style-guide";
 import styled from "styled-components";
 
 export const SubtitlePartial = styled.div`
   ${GridContainerBounds({
-    padding: [GridSides.TOP, GridSides.LEFT, GridSides.RIGHT, GridSides.BOTTOM],
+    padding: [GridSide.TOP, GridSide.LEFT, GridSide.RIGHT, GridSide.BOTTOM],
   })}
 `;

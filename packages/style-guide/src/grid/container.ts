@@ -2,7 +2,7 @@ import { css } from "styled-components";
 
 import { MediaBreakpoints, MediaBreakpointType } from "../media";
 import { GridDesign } from "./design";
-import { GridSides } from "./sides";
+import { GridSide } from "./side";
 
 /* */
 
@@ -72,34 +72,34 @@ export const GridContainerGutter = ({
 
 export type GridContainerMarginOptions = {
   breakpoints?: Array<MediaBreakpointType>;
-  sides?: Array<GridSides>;
+  sides?: Array<GridSide>;
 };
 
 export const GridContainerMargin = ({
   breakpoints = MediaBreakpoints,
-  sides = [GridSides.TOP, GridSides.BOTTOM],
+  sides = [GridSide.TOP, GridSide.BOTTOM],
 }: GridContainerMarginOptions = {}) => css`
   ${breakpoints.map((breakpoint) => {
     const breakpointDesign = GridDesign[breakpoint];
     if (breakpointDesign.margin) {
       return css`
         @media ${breakpointDesign.query} {
-          ${sides.includes(GridSides.TOP) &&
+          ${sides.includes(GridSide.TOP) &&
           css`
             margin-top: ${breakpointDesign.margin};
           `}
 
-          ${sides.includes(GridSides.LEFT) &&
+          ${sides.includes(GridSide.LEFT) &&
           css`
             margin-left: ${breakpointDesign.margin};
           `}
 
-          ${sides.includes(GridSides.RIGHT) &&
+          ${sides.includes(GridSide.RIGHT) &&
           css`
             margin-right: ${breakpointDesign.margin};
           `}
 
-          ${sides.includes(GridSides.BOTTOM) &&
+          ${sides.includes(GridSide.BOTTOM) &&
           css`
             margin-bottom: ${breakpointDesign.margin};
           `}
@@ -113,34 +113,34 @@ export const GridContainerMargin = ({
 
 export type GridContainerPaddingOptions = {
   breakpoints?: Array<MediaBreakpointType>;
-  sides?: Array<GridSides>;
+  sides?: Array<GridSide>;
 };
 
 export const GridContainerPadding = ({
   breakpoints = MediaBreakpoints,
-  sides = [GridSides.LEFT, GridSides.RIGHT],
+  sides = [GridSide.LEFT, GridSide.RIGHT],
 }: GridContainerPaddingOptions = {}) => css`
   ${breakpoints.map((breakpoint) => {
     const breakpointDesign = GridDesign[breakpoint];
     if (breakpointDesign.gutter) {
       return css`
         @media ${breakpointDesign.query} {
-          ${sides.includes(GridSides.TOP) &&
+          ${sides.includes(GridSide.TOP) &&
           css`
             padding-top: ${breakpointDesign.margin};
           `}
 
-          ${sides.includes(GridSides.LEFT) &&
+          ${sides.includes(GridSide.LEFT) &&
           css`
             padding-left: ${breakpointDesign.margin};
           `}
 
-          ${sides.includes(GridSides.RIGHT) &&
+          ${sides.includes(GridSide.RIGHT) &&
           css`
             padding-right: ${breakpointDesign.margin};
           `}
 
-          ${sides.includes(GridSides.BOTTOM) &&
+          ${sides.includes(GridSide.BOTTOM) &&
           css`
             padding-bottom: ${breakpointDesign.margin};
           `}
@@ -154,8 +154,8 @@ export const GridContainerPadding = ({
 
 export type GridContainerBoundsOptions = {
   breakpoints?: Array<MediaBreakpointType>;
-  margin?: Array<GridSides>;
-  padding?: Array<GridSides>;
+  margin?: Array<GridSide>;
+  padding?: Array<GridSide>;
 };
 
 export const GridContainerBounds = ({
@@ -175,8 +175,8 @@ export const GridContainerBounds = ({
 export type GridContainerOptions = {
   columns?: number;
   breakpoints?: Array<MediaBreakpointType>;
-  margin?: Array<GridSides>;
-  padding?: Array<GridSides>;
+  margin?: Array<GridSide>;
+  padding?: Array<GridSide>;
 };
 
 export const GridContainer = ({

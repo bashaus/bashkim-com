@@ -38,3 +38,33 @@ export const ColorAccoladeGold = "#D6AF36";
 export const ColorAccoladeSilver = "#A7A7AD";
 export const ColorAccoladeBronze = "#824A02";
 export const ColorAccoladeHonour = "#CC0000";
+
+/* */
+
+export const ColorShadeBackground = "var(--color-shade-background)";
+export const ColorShadeForeground = "var(--color-shade-foreground)";
+
+/* */
+
+export const DesignBoxBackgroundColor = "var(--design--box--background-color)";
+export const DesignBoxForegroundColor = "var(--design--box--foreground-color)";
+export const DesignBoxShadow = "var(--design--box--shadow)";
+export const DesignBoxShadowAccent = "var(--design--box--shadow--accent)";
+export const DesignBoxScreen = "var(--design--box--screen)";
+export const DesignBoxBorderColor = "var(--design--box--border-color)";
+
+export const DesignPageBackgroundColor =
+  "var(--design--page--background-color)";
+export const DesignPageBackgroundColorAccent =
+  "var(--design--page--background-color--accent)";
+export const DesignPageForegroundColor =
+  "var(--design--page--foreground-color)";
+export const DesignPageForegroundColorAccent =
+  "var(--design--page--foreground-color--accent)";
+
+export const DesignHeaderBackgroundColor =
+  "var(--design--header--background-color)";
+export const DesignHeaderForegroundColor =
+  "var(--design--header--foreground-color)";
+export const DesignHeaderShadow = "var(--design--header--shadow)";
+export const DesignHeaderBorderColor = "var(--design--header--border-color)";

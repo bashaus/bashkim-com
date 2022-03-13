@@ -1,5 +1,5 @@
 import {
-  ColorGreyscale20,
+  DesignBoxBorderColor,
   GridCell,
   GridContainer,
   MediaQueryNotMobile,
@@ -36,6 +36,6 @@ export const CaseStudyTechnologies = styled.div`
   })}
 
   @media ${MediaQueryNotMobile} {
-    border-left: solid 1px ${ColorGreyscale20};
+    border-left: solid 1px ${DesignBoxBorderColor};
   }
 `;

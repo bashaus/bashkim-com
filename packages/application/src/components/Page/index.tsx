@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 
 import { Footer } from "%components/Footer";
+import { GridLines } from "%components/GridLines";
 import { Header } from "%components/Header";
 import { HeaderIntersection } from "%components/HeaderIntersection";
 
@@ -17,5 +18,6 @@ export const Page = ({ backButton, children }: PageProps) => (
       {children}
     </main>
     <Footer />
+    <GridLines />
   </>
 );

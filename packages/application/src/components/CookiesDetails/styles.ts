@@ -1,6 +1,6 @@
 import {
   GridCellPadding,
-  GridSides,
+  GridSide,
   MediaQueryMobile,
   MediaQueryNotMobile,
 } from "@bashkim-com/style-guide";
@@ -22,8 +22,8 @@ export const CookiesTable = styled.table`
     tr {
       display: block;
       ${GridCellPadding({
-        sides: [GridSides.TOP, GridSides.BOTTOM],
-      })};
+        sides: [GridSide.TOP, GridSide.BOTTOM],
+      })}
     }
 
     tbody th,
@@ -62,14 +62,14 @@ export const CookiesTable = styled.table`
 
     thead th {
       ${GridCellPadding({
-        sides: [GridSides.LEFT, GridSides.RIGHT],
+        sides: [GridSide.LEFT, GridSide.RIGHT],
       })}
     }
 
     tbody th,
     tbody td {
       ${GridCellPadding({
-        sides: [GridSides.TOP, GridSides.LEFT, GridSides.RIGHT],
+        sides: [GridSide.TOP, GridSide.LEFT, GridSide.RIGHT],
       })}
     }
 

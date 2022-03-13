@@ -1,4 +1,7 @@
-import { MediaQueryMobile } from "@bashkim-com/style-guide";
+import {
+  MediaQueryMobile,
+  MediaQueryNotMobile,
+} from "@bashkim-com/style-guide";
 import styled from "styled-components";
 
 export const Menu = styled.div`
@@ -11,12 +14,17 @@ export const Menu = styled.div`
 `;
 
 export const Title = styled.a`
-  display: block;
   flex-grow: 1;
   flex-shrink: 0;
   flex-basis: auto;
 
   @media ${MediaQueryMobile} {
     text-align: center;
+  }
+`;
+
+export const MobileOnly = styled.div`
+  @media ${MediaQueryNotMobile} {
+    display: none;
   }
 `;

@@ -1,4 +1,5 @@
 import {
+  DesignPageBackgroundColor,
   MediaQueryMobile,
   MediaQueryNotMobile,
 } from "@bashkim-com/style-guide";
@@ -9,7 +10,11 @@ export const Navigation = styled.div`
 
   @media ${MediaQueryMobile} {
     &::after {
-      background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0, #fff 85%);
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0,
+        ${DesignPageBackgroundColor} 85%
+      );
       content: "";
       display: block;
       pointer-events: none;

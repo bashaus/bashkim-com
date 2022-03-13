@@ -6,7 +6,7 @@ import {
   GridCell,
   GridCellPadding,
   GridContainer,
-  GridSides,
+  GridSide,
 } from "@bashkim-com/style-guide";
 import styled from "styled-components";
 
@@ -15,7 +15,7 @@ import TrophyVector from "../../assets/vectors/trophy.svg";
 export const AccoladeSlice = styled.div`
   ${GridContainer({
     margin: [],
-    padding: [GridSides.TOP, GridSides.LEFT, GridSides.RIGHT, GridSides.BOTTOM],
+    padding: [GridSide.TOP, GridSide.LEFT, GridSide.RIGHT, GridSide.BOTTOM],
   })}
 `;
 
@@ -65,7 +65,7 @@ export const Award = styled.div`
   })}
 
   ${GridCellPadding({
-    sides: [GridSides.TOP, GridSides.BOTTOM],
+    sides: [GridSide.TOP, GridSide.BOTTOM],
   })}
 
   a {

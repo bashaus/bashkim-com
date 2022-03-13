@@ -20,7 +20,6 @@ export const FooterColumn = styled.div`
 
 export const Label = styled.div.attrs({
   role: "menuitem",
-  tabIndex: 0,
 })`
   ${GridFullPadding({
     breakpoints: ["MobilePortrait", "MobileLandscape", "TabletPortrait"],

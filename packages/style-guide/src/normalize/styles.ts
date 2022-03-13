@@ -1,13 +1,16 @@
 import { createGlobalStyle } from "styled-components";
 
+import Appearance from "../appearance";
 import {
   ColorGreyscale10,
   ColorGreyscale20,
-  ColorGreyscale100,
+  DesignPageBackgroundColor,
+  DesignPageForegroundColor,
 } from "../design/color";
 import { FontFamilyCopy, FontFamilyMonospace } from "../design/font";
 
 export const Normalize = createGlobalStyle`
+  ${Appearance}
   /* Document */
 
   *,
@@ -25,7 +28,8 @@ export const Normalize = createGlobalStyle`
     font-size: 18px;
     line-height: 150%;
     font-family: ${FontFamilyCopy};
-    color: ${ColorGreyscale100};
+    background-color: ${DesignPageBackgroundColor};
+    color: ${DesignPageForegroundColor};
   }
 
   /* Forms */

@@ -1,8 +1,8 @@
-import { Logo } from "@bashkim-com/design-system";
+import { Logo, MenuButton } from "@bashkim-com/design-system";
 import Link from "next/link";
 import { ReactNode } from "react";
 
-import { MenuButton } from "%components/MenuButton";
+import { MenuButtonSettings } from "%components/MenuButtonSettings";
 
 import * as S from "./styles";
 
@@ -12,7 +12,7 @@ export type MenuProps = {
 
 export const Menu = ({ backButton }: MenuProps) => (
   <S.Menu>
-    {backButton ?? <MenuButton />}
+    <S.MobileOnly>{backButton ?? <MenuButton />}</S.MobileOnly>
 
     <Link href="/" passHref>
       <S.Title>
@@ -20,6 +20,8 @@ export const Menu = ({ backButton }: MenuProps) => (
       </S.Title>
     </Link>
 
-    <MenuButton />
+    <S.MobileOnly>
+      <MenuButtonSettings />
+    </S.MobileOnly>
   </S.Menu>
 );

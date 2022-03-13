@@ -1,26 +1,27 @@
 import {
-  ColorGreyscale5,
+  ColorShadeBackground,
+  ColorShadeForeground,
+  DesignPageBackgroundColor,
+  DesignPageForegroundColor,
   GridContainerPadding,
-  GridSides,
+  GridSide,
 } from "@bashkim-com/style-guide";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 import { GroupDesign } from "./types";
 
-type GroupProps = {
-  "props-design": GroupDesign;
-};
-
-export const Group = styled.section<GroupProps>`
+export const Group = styled.section`
   ${GridContainerPadding({
-    sides: [GridSides.TOP, GridSides.BOTTOM],
+    sides: [GridSide.TOP, GridSide.BOTTOM],
   })}
 
-  ${({ "props-design": design }) => {
-    if (design === GroupDesign.ALTERNATE) {
-      return css`
-        background-color: ${ColorGreyscale5};
-      `;
-    }
-  }}
+  &[data-props-design="${GroupDesign.DEFAULT}"] {
+    background-color: ${DesignPageBackgroundColor};
+    color: ${DesignPageForegroundColor};
+  }
+
+  &[data-props-design="${GroupDesign.ALTERNATE}"] {
+    background-color: ${ColorShadeBackground};
+    color: ${ColorShadeForeground};
+  }
 `;

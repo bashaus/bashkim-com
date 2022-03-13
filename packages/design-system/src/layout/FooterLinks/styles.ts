@@ -1,5 +1,4 @@
 import {
-  ColorGreyscale100,
   MediaQueryScreenLarge,
   MediaQueryScreenSmall,
 } from "@bashkim-com/style-guide";
@@ -9,7 +8,6 @@ export const FooterLinks = styled.ul`
   a {
     display: block;
     text-transform: uppercase;
-    color: ${ColorGreyscale100};
     font-size: 1em;
   }
 

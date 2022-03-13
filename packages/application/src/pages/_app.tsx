@@ -9,6 +9,7 @@ import { useEffect } from "react";
 import { GoogleAnalytics } from "%components/GoogleAnalytics";
 import { SentryBoundary } from "%components/SentryBoundary";
 import { NavigationProvider } from "%contexts/Navigation/provider";
+import { SettingsProvider } from "%contexts/Settings/provider";
 import { PrismicLinkResolver } from "%libraries/prismic/link-resolver";
 
 const App = ({ Component, pageProps }: AppProps) => {
@@ -28,9 +29,11 @@ const App = ({ Component, pageProps }: AppProps) => {
           />
         </Head>
 
-        <NavigationProvider>
-          <Component {...pageProps} />
-        </NavigationProvider>
+        <SettingsProvider>
+          <NavigationProvider>
+            <Component {...pageProps} />
+          </NavigationProvider>
+        </SettingsProvider>
 
         <GoogleAnalytics />
       </LinkResolverContext.Provider>
