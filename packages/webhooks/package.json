@@ -11,7 +11,7 @@
   "dependencies": {
     "@vendia/serverless-express": "^4.5.4",
     "express": "^4.17.3",
-    "node-fetch": "^3.2.2"
+    "node-fetch": "^3.2.3"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.93",
