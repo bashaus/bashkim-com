@@ -28,7 +28,7 @@
     "@storybook/react": "^6.4.19",
     "@svgr/rollup": "^6.2.1",
     "@svgr/webpack": "^6.2.1",
-    "@swc/core": "^1.2.157",
+    "@swc/core": "^1.2.159",
     "@swc/jest": "^0.2.20",
     "@types/jest": "^27.4.1",
     "@types/jquery": "^3.5.14",
