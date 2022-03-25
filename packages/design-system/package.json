@@ -44,7 +44,7 @@
     "rollup": "^2.70.1",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-typescript2": "^0.31.2",
-    "styled-components": "^5.3.3",
+    "styled-components": "^5.3.5",
     "ts-loader": "^9.2.8",
     "turn-js": "blasten/turn.js#master",
     "typescript": "^4.6.2",
