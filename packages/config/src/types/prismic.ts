@@ -1,6 +1,6 @@
 export type PrismicConfig = {
   /**
-   * The URL endpoint as provided by Prismic
+   * The prismic repository name
    */
-  uri: string;
+  repositoryName: string;
 };
