@@ -41,7 +41,7 @@
     "xstate": "^4.30.6"
   },
   "devDependencies": {
-    "@next/eslint-plugin-next": "^12.1.0",
+    "@next/eslint-plugin-next": "^12.1.1",
     "@svgr/webpack": "^6.2.1",
     "@swc/core": "^1.2.160",
     "@swc/jest": "^0.2.20",
