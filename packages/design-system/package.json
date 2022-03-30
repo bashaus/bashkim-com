@@ -38,8 +38,8 @@
     "jest": "^27.5.1",
     "jest-junit": "^13.0.0",
     "jquery": "^3.6.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
     "react-slick": "^0.28.1",
     "rollup": "^2.70.1",
     "rollup-plugin-peer-deps-external": "^2.2.4",
@@ -56,7 +56,7 @@
     "@bashkim-com/prismic": "1.0.0",
     "@bashkim-com/style-guide": "1.0.0",
     "jquery": "^3.6.0",
-    "react": "^17.0.2",
+    "react": "^18.0.0",
     "react-slick": "^0.28.1",
     "turn-js": "blasten/turn.js#master"
   }

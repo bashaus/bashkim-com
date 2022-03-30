@@ -13,13 +13,13 @@
   "devDependencies": {
     "@types/node": "^17.0.23",
     "prismic-reactjs": "^1.3.4",
-    "react": "^17.0.2",
+    "react": "^18.0.0",
     "ts-node": "^10.7.0",
     "typescript": "^4.6.3",
     "utility-types": "^3.10.0"
   },
   "peerDependencies": {
     "prismic-reactjs": "^1.3.4",
-    "react": "^17.0.2"
+    "react": "^18.0.0"
   }
 }
