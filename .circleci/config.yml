@@ -227,7 +227,7 @@ workflows:
           filters:
             branches:
               only:
-                - master
+                - main
 
       - deploy:
           context: bashkim-com-prod

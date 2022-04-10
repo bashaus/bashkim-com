@@ -13,7 +13,7 @@ export class CircleCiProjectSlugUndefinedError extends Error {
 export class CircleCiTriggerPipelineError extends Error {}
 
 export const triggerCircleCiPipeline = async (
-  branch = "master"
+  branch = "main"
 ): Promise<boolean> => {
   const { APP_WEBHOOKS_CIRCLE_API_KEY, APP_WEBHOOKS_CIRCLE_PROJECT_SLUG } =
     process.env;
