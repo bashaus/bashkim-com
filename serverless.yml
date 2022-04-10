@@ -17,8 +17,11 @@ custom:
   region: ${opt:region, env:AWS_DEFAULT_REGION, 'eu-west-1'}
 
   app:
-    website:
-      commitHash: ${env:CIRCLE_SHA1, ''}
+    git:
+      commit: ${env:CIRCLE_SHA1, ''}
+
+    sentry:
+      dsn: ${env:SENTRY_DSN, ''}
 
     webhooks:
       circleApiKey: ${env:APP_WEBHOOKS_CIRCLE_API_KEY, ''}
@@ -42,24 +45,11 @@ provider:
   lambdaHashingVersion: "20201221"
   environment:
     APP_ENV: ${self:custom.stage}
-    APP_WEBHOOKS_CIRCLE_API_KEY: ${self:custom.app.webhooks.circleApiKey}
-    APP_WEBHOOKS_CIRCLE_PROJECT_SLUG: ${self:custom.app.webhooks.circleProjectSlug}
-    APP_WEBHOOKS_PRISMIC_SECRET_KEY: ${self:custom.app.webhooks.prismicSecretKey}
-    GIT_COMMIT: ${self:custom.app.website.commitHash}
+    GIT_COMMIT: ${self:custom.app.git.commit}
     NODE_ENV: ${self:custom.stage}
+    SENTRY_DSN: ${self:custom.app.sentry.dsn}
 
 functions:
-  webhooks:
-    handler: packages/webhooks/dist/lambda.handler
-    jetpack:
-      roots:
-        - "packages/webhooks"
-      preInclude:
-        - "packages/webhooks/dist/**"
-    events:
-      - http:
-          method: ANY
-          path: /webhooks/{any+}
   sitemap:
     handler: packages/sitemap/dist/lambda.handler
     jetpack:
@@ -82,6 +72,21 @@ functions:
       - http:
           method: GET
           path: /sitemap/{any+}
+  webhooks:
+    handler: packages/webhooks/dist/lambda.handler
+    environment:
+      APP_WEBHOOKS_CIRCLE_API_KEY: ${self:custom.app.webhooks.circleApiKey}
+      APP_WEBHOOKS_CIRCLE_PROJECT_SLUG: ${self:custom.app.webhooks.circleProjectSlug}
+      APP_WEBHOOKS_PRISMIC_SECRET_KEY: ${self:custom.app.webhooks.prismicSecretKey}
+    jetpack:
+      roots:
+        - "packages/webhooks"
+      preInclude:
+        - "packages/webhooks/dist/**"
+    events:
+      - http:
+          method: ANY
+          path: /webhooks/{any+}
 
 resources:
   Description: bashkim-com
