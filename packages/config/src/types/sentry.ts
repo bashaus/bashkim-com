@@ -10,14 +10,9 @@ export type SentryConfig = {
   dsn: string;
 
   /**
-   * The name of the project in Sentry (used for releases)
-   */
-  project: string;
-
-  /**
    * Identifier for the current release
    */
-  commit?: string;
+  release?: string;
 
   /**
    * The name of the environment to report to Sentry

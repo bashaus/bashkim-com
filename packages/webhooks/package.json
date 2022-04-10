@@ -9,6 +9,8 @@
     "test": "echo \"Error: no test specified\" && exit 0"
   },
   "dependencies": {
+    "@bashkim-com/config": "^1.0.0",
+    "@sentry/serverless": "^6.19.6",
     "@vendia/serverless-express": "^4.5.4",
     "express": "^4.17.3",
     "node-fetch": "^3.2.3"
