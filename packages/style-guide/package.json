@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "license": "SEE LICENSE IN LICENSE.md",
   "module": "./lib/index.js",
-  "typings": "./lib/index.d.ts",
+  "types": "./lib/index.d.ts",
   "scripts": {
     "build": "tsc",
     "clean": "rm -rf lib/",
