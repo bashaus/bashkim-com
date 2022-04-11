@@ -41,7 +41,7 @@
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.5",
     "turn-js": "blasten/turn.js#master",
-    "xstate": "^4.30.6"
+    "xstate": "^4.31.0"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^12.1.4",
