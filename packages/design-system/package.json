@@ -32,7 +32,7 @@
     "@swc/jest": "^0.2.20",
     "@types/jest": "^27.4.1",
     "@types/jquery": "^3.5.14",
-    "@types/react": "^17.0.43",
+    "@types/react": "^18.0.2",
     "@types/react-modal": "^3.13.1",
     "@types/react-slick": "^0.23.8",
     "@types/styled-components": "^5.1.25",
