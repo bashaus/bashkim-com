@@ -26,7 +26,7 @@
     "apollo-link-prismic": "^1.1.1",
     "blurhash": "^1.1.5",
     "graphql": "^16.3.0",
-    "gsap": "^3.10.2",
+    "gsap": "^3.10.3",
     "jquery": "^3.6.0",
     "js-cookie": "^3.0.1",
     "mime": "^3.0.0",
