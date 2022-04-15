@@ -44,7 +44,7 @@
     "react-dom": "^18.0.0",
     "react-modal": "^3.14.4",
     "react-slick": "^0.28.1",
-    "rollup": "^2.70.1",
+    "rollup": "^2.70.2",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-typescript2": "^0.31.2",
     "styled-components": "^5.3.5",
