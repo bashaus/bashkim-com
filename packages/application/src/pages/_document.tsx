@@ -1,7 +1,11 @@
 import NextDocument, { Head, Html, Main, NextScript } from "next/document";
 import { ServerStyleSheet } from "styled-components";
 
-class Document extends NextDocument {
+export type DocumentProps = {
+  styledComponents: React.ReactNode;
+};
+
+class Document extends NextDocument<DocumentProps> {
   static async getInitialProps(ctx) {
     const sheet = new ServerStyleSheet();
     const originalRenderPage = ctx.renderPage;
@@ -16,12 +20,7 @@ class Document extends NextDocument {
       const initialProps = await NextDocument.getInitialProps(ctx);
       return {
         ...initialProps,
-        styles: (
-          <>
-            {initialProps.styles}
-            {sheet.getStyleElement()}
-          </>
-        ),
+        styledComponents: sheet.getStyleElement(),
       };
     } finally {
       sheet.seal();
@@ -78,6 +77,8 @@ class Document extends NextDocument {
             <meta property="og:url" content={ destinationPath } />
             <meta name="twitter:url" content={ destinationPath } />
           */}
+
+          {this.props.styledComponents}
         </Head>
         <body>
           <Main />
