@@ -5,7 +5,7 @@ export type GoogleAnalyticsConfig = {
   enabled: boolean;
 
   /**
-   * The UA for the Google Analytics property
+   * The measturement ID for the Google Analytics property
    */
-  ua: string;
+  measurementId: string;
 };

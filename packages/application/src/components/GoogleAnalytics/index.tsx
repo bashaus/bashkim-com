@@ -11,14 +11,16 @@ export const GoogleAnalytics = () => {
   return (
     <>
       <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${config.googleAnalytics.ua}`}
+        async
+        id="GoogleAnalytics.src"
+        src={`https://www.googletagmanager.com/gtag/js?id=${config.googleAnalytics.measurementId}`}
       />
-      <Script id="GoogleAnalytics.dataLayer">
+      <Script id="GoogleAnalytics.config">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', '${config.googleAnalytics.ua}');
+          gtag('config', '${config.googleAnalytics.measurementId}');
         `}
       </Script>
     </>
