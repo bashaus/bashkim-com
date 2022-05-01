@@ -25,7 +25,7 @@
     "@xstate/react": "^3.0.0",
     "apollo-link-prismic": "^1.1.1",
     "blurhash": "^1.1.5",
-    "graphql": "^16.3.0",
+    "graphql": "^16.4.0",
     "gsap": "^3.10.4",
     "jquery": "^3.6.0",
     "js-cookie": "^3.0.1",
