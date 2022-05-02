@@ -48,9 +48,9 @@ export const Modal = ({ isOpen, style = {}, ...props }: ModalProps) => {
           padding: undefined,
         },
       }}
-      overlayElement={(props, contentElement) => (
+      overlayElement={(overlayProps, contentElement) => (
         <ModalOverlay
-          {...props}
+          {...overlayProps}
           isOpen={isOpen}
           onShowStart={handleOverlayShowStart}
           onHideComplete={handleOverlayHideComplete}
@@ -58,9 +58,9 @@ export const Modal = ({ isOpen, style = {}, ...props }: ModalProps) => {
           {contentElement}
         </ModalOverlay>
       )}
-      contentElement={(props, children) => (
+      contentElement={(contentProps, children) => (
         <ModalContent
-          {...props}
+          {...contentProps}
           isOpen={isOpen}
           onShowStart={handleContentShowStart}
           onHideComplete={handleContentHideComplete}
