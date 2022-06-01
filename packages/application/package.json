@@ -15,7 +15,7 @@
     "test": "jest ."
   },
   "dependencies": {
-    "@apollo/client": "^3.6.1",
+    "@apollo/client": "^3.6.6",
     "@bashkim-com/config": "1.0.0",
     "@bashkim-com/design-system": "1.0.0",
     "@bashkim-com/prismic": "1.0.0",
