@@ -2030,10 +2030,10 @@
   resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.11.0.tgz#6734f8ebc106a0860dff7f92bf90df193f0935d7"
   integrity sha512-zrsUxjLOKAzdewIDRWy9nsV1GQsKBCWaGwsZQlCgr6/q+vjyZhFgqedLfFBuI9anTPEUT4APq9Mu0SZBTzIcGQ==
 
-"@primer/octicons-react@^17.0.0":
-  version "17.0.0"
-  resolved "https://registry.yarnpkg.com/@primer/octicons-react/-/octicons-react-17.0.0.tgz#c16ac8671edee682a513b1afa8a004c7c5b1d767"
-  integrity sha512-/9VLaNVNWwmTFgFlaxO3r+4GbqiG05ytkDLbKxBAdBiOJLadUPo6P0k+/zJdp8No/S2bBNvEtZNNk5zQj87H4w==
+"@primer/octicons-react@^17.3.0":
+  version "17.3.0"
+  resolved "https://registry.yarnpkg.com/@primer/octicons-react/-/octicons-react-17.3.0.tgz#a9b868db9520e48114fd402e56600e99bcb7e8b7"
+  integrity sha512-72K4SeDj3WmehiQqVeOS+icvcO5+JHXK12ee3AqbZGqNqgCKdU4zJRKeC7EGMV4lQhoJXbj8OEdppBLa3qFDhw==
 
 "@prismicio/client@^6.4.1":
   version "6.4.1"
