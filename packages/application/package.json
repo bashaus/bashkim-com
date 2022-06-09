@@ -47,7 +47,7 @@
     "@next/eslint-plugin-next": "^12.1.6",
     "@svgr/webpack": "^6.2.1",
     "@swc/core": "^1.2.197",
-    "@swc/jest": "^0.2.20",
+    "@swc/jest": "^0.2.21",
     "@types/jest": "^28.1.1",
     "@types/jquery": "^3.5.14",
     "@types/mime": "^2.0.3",

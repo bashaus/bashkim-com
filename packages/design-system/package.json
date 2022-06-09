@@ -29,7 +29,7 @@
     "@svgr/rollup": "^6.2.1",
     "@svgr/webpack": "^6.2.1",
     "@swc/core": "^1.2.197",
-    "@swc/jest": "^0.2.20",
+    "@swc/jest": "^0.2.21",
     "@types/jest": "^28.1.1",
     "@types/jquery": "^3.5.14",
     "@types/react": "^18.0.12",
