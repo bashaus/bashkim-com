@@ -57,7 +57,7 @@
     "stylelint-junit-formatter": "^0.2.2",
     "stylelint-prettier": "^2.0.0",
     "stylelint-processor-styled-components": "^1.10.0",
-    "typescript": "^4.6.4",
+    "typescript": "^4.7.3",
     "webpack": "^5.73.0"
   }
 }
