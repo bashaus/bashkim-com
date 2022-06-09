@@ -52,7 +52,7 @@
     "turn-js": "blasten/turn.js#master",
     "typescript": "^4.6.4",
     "utility-types": "^3.10.0",
-    "webpack": "^5.72.0",
+    "webpack": "^5.73.0",
     "webpack-merge": "^5.8.0"
   },
   "peerDependencies": {
