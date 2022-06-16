@@ -19,7 +19,7 @@
     "graphql": "^16.5.0",
     "node-fetch": "^3.2.6",
     "prismic-reactjs": "^1.3.4",
-    "react": "^18.1.0",
+    "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "xmlbuilder": "^15.1.1"
   },
