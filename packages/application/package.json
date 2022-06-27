@@ -55,7 +55,7 @@
     "@types/react-modal": "^3.13.1",
     "@types/react-slick": "^0.23.8",
     "jest": "^28.1.1",
-    "jest-junit": "^13.2.0",
+    "jest-junit": "^14.0.0",
     "typescript": "^4.7.4",
     "utility-types": "^3.10.0",
     "webpack-merge": "^5.8.0"
