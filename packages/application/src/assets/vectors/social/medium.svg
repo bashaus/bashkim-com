@@ -1,6 +1,5 @@
-<?xml version="1.0"?>
-<svg xmlns="https://www.w3.org/2000/svg" version="1.1" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
-  <circle cx="32.65901" cy="50" r="22.52074"/>
-  <ellipse ry="21.39471" rx="11.26037" cy="50.04504" cx="68.51205"/>
-  <ellipse cx="85.89807" cy="50.09008" rx="3.96366" ry="19.09759"/>
+<svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve">
+  <circle cx="32.659" cy="50" r="22.521"/>
+  <ellipse ry="21.395" rx="11.26" cy="50.045" cx="68.512"/>
+  <ellipse cx="85.898" cy="50.09" rx="3.964" ry="19.098"/>
 </svg>
