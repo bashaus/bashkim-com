@@ -9,7 +9,7 @@ import { MetaDescription } from "%components/MetaDescription";
 import { MetaKeywords } from "%components/MetaKeywords";
 import { MetaTitle } from "%components/MetaTitle";
 import { Page } from "%components/Page";
-import { PrismicClient } from "%libraries/prismic/client";
+import { prismicClient } from "%libraries/prismic/client";
 import { HomePageQuery } from "%libraries/prismic/queries/HomePageQuery";
 
 type HomePageProps = {
@@ -64,7 +64,7 @@ const HomePage = ({ homePage }: HomePageProps) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const result = await PrismicClient.query({
+  const result = await prismicClient.query({
     query: HomePageQuery,
   });
 

@@ -15,7 +15,7 @@ import { MetaTitle } from "%components/MetaTitle";
 import { Page } from "%components/Page";
 import { Slice } from "%components/Slice";
 import { NotFoundError } from "%libraries/next/errors/NotFoundError";
-import { PrismicClient } from "%libraries/prismic/client";
+import { prismicClient } from "%libraries/prismic/client";
 import { CaseStudiesQuery } from "%libraries/prismic/queries/CaseStudiesQuery";
 import { CaseStudyBodyQuery } from "%libraries/prismic/queries/CaseStudyBodyQuery";
 import { CaseStudyPageQuery } from "%libraries/prismic/queries/CaseStudyPageQuery";
@@ -85,7 +85,7 @@ const CaseStudyPage = ({
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const caseStudiesResult = await PrismicClient.query({
+  const caseStudiesResult = await prismicClient.query({
     query: CaseStudiesQuery,
   });
 
@@ -102,14 +102,14 @@ export const getStaticProps: GetStaticProps = async (
 ) => {
   const { caseStudySlug } = context.params;
 
-  const caseStudyPagePromise = PrismicClient.query({
+  const caseStudyPagePromise = prismicClient.query({
     query: CaseStudyPageQuery,
     variables: {
       caseStudySlug,
     },
   });
 
-  const caseStudyBodyPromise = PrismicClient.query({
+  const caseStudyBodyPromise = prismicClient.query({
     query: CaseStudyBodyQuery,
     variables: {
       caseStudySlug,

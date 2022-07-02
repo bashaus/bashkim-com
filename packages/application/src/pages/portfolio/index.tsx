@@ -18,7 +18,7 @@ import { MetaTitle } from "%components/MetaTitle";
 import { Page } from "%components/Page";
 import { PortfolioCategory } from "%components/PortfolioCategory";
 import { PortfolioFeaturedCaseStudies } from "%components/PortfolioFeaturedCaseStudies";
-import { PrismicClient } from "%libraries/prismic/client";
+import { prismicClient } from "%libraries/prismic/client";
 import { PortfolioPageQuery } from "%libraries/prismic/queries/PortfolioPageQuery";
 
 type PortfolioPageProps = {
@@ -67,7 +67,7 @@ const PortfolioPage = ({ portfolioPage }: PortfolioPageProps) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const result = await PrismicClient.query({
+  const result = await prismicClient.query({
     query: PortfolioPageQuery,
   });
 
