@@ -46,7 +46,7 @@
   "devDependencies": {
     "@next/eslint-plugin-next": "^12.2.0",
     "@svgr/webpack": "^6.2.1",
-    "@swc/core": "^1.2.207",
+    "@swc/core": "^1.2.208",
     "@swc/jest": "^0.2.21",
     "@types/jest": "^28.1.4",
     "@types/jquery": "^3.5.14",
