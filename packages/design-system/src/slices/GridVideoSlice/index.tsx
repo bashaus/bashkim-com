@@ -1,5 +1,6 @@
 import { GridVideoSliceType, PrismicRichText } from "@bashkim-com/prismic";
 
+import { VideoPoster } from "../../components/VideoPoster";
 import * as S from "./styles";
 
 export type GridVideoSliceProps = {
@@ -15,23 +16,21 @@ export const GridVideoSlice = ({ slice }: GridVideoSliceProps) => (
         grid_video_slice_type_video: video,
       } = field;
 
-      if (!video || !poster) {
+      if (!video?.embed_url || !poster?.url) {
         return null;
       }
 
       return (
         <S.Video key={i}>
-          <a href={video.embed_url} target="_blank" rel="noopener noreferrer">
-            <img
-              src={poster.url}
-              alt={video.title}
-              width={poster.dimensions.width}
-              height={poster.dimensions.height}
-            />
-            <S.Description>
-              <PrismicRichText render={description} />
-            </S.Description>
-          </a>
+          <VideoPoster
+            title={video.title}
+            imageUrl={poster.url}
+            videoUrl={video.embed_url}
+          />
+
+          <S.Description>
+            <PrismicRichText render={description} />
+          </S.Description>
         </S.Video>
       );
     })}

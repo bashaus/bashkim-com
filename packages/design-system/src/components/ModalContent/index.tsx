@@ -12,7 +12,6 @@ export type ModalContentProps = ComponentPropsWithRef<"div"> & {
 };
 
 export const ModalContent = ({
-  children,
   isOpen,
   onHideComplete,
   onHideStart,
@@ -22,7 +21,7 @@ export const ModalContent = ({
 }: ModalContentProps) => {
   const divRef = useRef<HTMLDivElement>(null);
 
-  // wait until DOM has been rendered
+  // Wait until DOM has been rendered
   useEffect(() => {
     if (isOpen) {
       gsap
@@ -55,7 +54,7 @@ export const ModalContent = ({
 
   return (
     <S.AnimationContainer ref={divRef} style={{ visibility: "hidden" }}>
-      <S.ModalContent {...props}>{children}</S.ModalContent>
+      <S.ModalContent {...props} />
     </S.AnimationContainer>
   );
 };

@@ -128,17 +128,10 @@ export const CookiesDetails = () => (
           This website utilises the embedded player from YouTube to present
           videos of work and associated artefacts.
         </p>
-
-        <p>
-          Requests made from this website specifically require YouTube to avoid
-          using any session-based cookies which could identify you, and instead
-          will only set functional cookies when required.
-        </p>
-
         <hr />
 
         <p>
-          <small>Last updated 22 September 2021</small>
+          <small>Last updated 18 July 2022</small>
         </p>
       </FullTextPartial>
     </Group>

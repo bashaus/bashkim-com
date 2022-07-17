@@ -1,12 +1,12 @@
 import type { Meta, Story } from "@storybook/react";
 
+import { ModalFrame } from "../ModalFrame";
 import { Modal as ModalComponent, ModalProps } from ".";
 
 export default {
   component: ModalComponent,
   title: "Components/Modal",
   args: {
-    children: <div style={{ padding: "15px 20px" }}>Modal</div>,
     isOpen: true,
   },
   argTypes: {
@@ -17,7 +17,9 @@ export default {
 } as Meta;
 
 const Template: Story<ModalProps> = (args: ModalProps) => (
-  <ModalComponent {...args} />
+  <ModalComponent {...args}>
+    <ModalFrame style={{ width: "80vw", height: "60vh" }} />
+  </ModalComponent>
 );
 
 export const Modal = Template.bind({});

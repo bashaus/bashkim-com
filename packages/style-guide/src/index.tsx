@@ -7,4 +7,5 @@ export * from "./grid";
 export * from "./media";
 export * from "./normalize";
 export * from "./utils/clearfix";
+export * from "./utils/layer";
 export * from "./utils/ratio";

@@ -1,3 +1,4 @@
+import { Layer, zIndex } from "@bashkim-com/style-guide";
 import { useCallback, useState } from "react";
 import ReactModal, { Props as ReactModalProps } from "react-modal";
 
@@ -37,6 +38,7 @@ export const Modal = ({ isOpen, style = {}, ...props }: ModalProps) => {
           ...style.overlay,
           /* Override ReactModal defaults */
           backgroundColor: "transparent",
+          zIndex: zIndex(Layer.MODAL),
         },
         content: {
           ...style.content,

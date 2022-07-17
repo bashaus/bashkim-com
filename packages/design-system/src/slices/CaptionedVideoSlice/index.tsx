@@ -1,6 +1,6 @@
 import { CaptionedVideoSliceType, PrismicRichText } from "@bashkim-com/prismic";
 
-import { VideoPlayerYouTube } from "../../components/VideoPlayerYouTube";
+import { VideoPlayer } from "../../components/VideoPlayer";
 import { RichTextFormatter } from "../../formatters/RichTextFormatter";
 import { CaptionedPartial } from "../../partials/CaptionedPartial";
 
@@ -18,19 +18,14 @@ export const CaptionedVideoSlice = ({ slice }: CaptionedVideoSliceProps) => {
     captioned_video_slice_type_video: video,
   } = slice.primary;
 
-  if (!video || !video.embed_url) {
-    return null;
-  }
-
-  const url = new URL(video.embed_url);
-  const v = url.searchParams.get("v");
-
-  if (!v) {
+  if (!video?.embed_url) {
     return null;
   }
 
   return (
-    <CaptionedPartial figure={<VideoPlayerYouTube v={v} title={video.title} />}>
+    <CaptionedPartial
+      figure={<VideoPlayer url={video.embed_url} title={video.title} />}
+    >
       <RichTextFormatter>
         <PrismicRichText render={caption} />
       </RichTextFormatter>

@@ -5,16 +5,16 @@ import {
   DesignHeaderForegroundColor,
   DesignHeaderShadow,
   GridContainerBounds,
+  Layer,
   MediaQueryMobile,
   MediaQueryNotMobile,
+  zIndex,
 } from "@bashkim-com/style-guide";
 import styled from "styled-components";
 
-import { zIndex } from "%styleguide/utils/z-index";
-
 export const Header = styled.header`
   position: relative;
-  z-index: ${zIndex("Header")};
+  z-index: ${zIndex(Layer.HEADER)};
   border-bottom: solid 1px ${DesignHeaderBorderColor};
   background-color: ${DesignHeaderBackgroundColor};
   color: ${DesignHeaderForegroundColor};

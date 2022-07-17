@@ -1,7 +1,11 @@
-import { GridCell, GridContainer, GridSide } from "@bashkim-com/style-guide";
+import {
+  GridCell,
+  GridContainer,
+  GridSide,
+  Layer,
+  zIndex,
+} from "@bashkim-com/style-guide";
 import styled from "styled-components";
-
-import { zIndex } from "%styleguide/utils/z-index";
 
 export const GridLines = styled.div`
   pointer-events: none;
@@ -10,7 +14,7 @@ export const GridLines = styled.div`
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: ${zIndex("GridLines")};
+  z-index: ${zIndex(Layer.GRID_LINES)};
 `;
 
 export const Container = styled.div`

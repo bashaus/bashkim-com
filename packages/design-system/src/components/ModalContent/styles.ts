@@ -1,9 +1,3 @@
-import {
-  DesignBoxBackgroundColor,
-  DesignBoxBorderColor,
-  DesignBoxForegroundColor,
-  DesignBoxShadow,
-} from "@bashkim-com/style-guide";
 import styled from "styled-components";
 
 export const AnimationContainer = styled.div`
@@ -17,8 +11,4 @@ export const ModalContent = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: ${DesignBoxBackgroundColor};
-  color: ${DesignBoxForegroundColor};
-  box-shadow: ${DesignBoxShadow};
-  border: solid 1px ${DesignBoxBorderColor};
 `;

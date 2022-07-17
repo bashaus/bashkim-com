@@ -9,10 +9,12 @@ export { Logo } from "./components/Logo";
 export { Magazine, MagazineSpreadChangeEvent } from "./components/Magazine";
 export { MenuButton } from "./components/MenuButton";
 export { Modal } from "./components/Modal";
+export { ModalFrame } from "./components/ModalFrame";
 export { Switch } from "./components/Switch";
 export { Tile } from "./components/Tile";
 export { Turn, TurnDisplay } from "./components/Turn";
-export { VideoPlayerYouTube } from "./components/VideoPlayerYouTube";
+export { VideoModal } from "./components/VideoModal";
+export { VideoPlayer } from "./components/VideoPlayer";
 
 /* Formatters */
 export { DateFormatter } from "./formatters/DateFormatter";

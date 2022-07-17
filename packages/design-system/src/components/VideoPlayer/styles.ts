@@ -5,10 +5,11 @@ import {
 } from "@bashkim-com/style-guide";
 import styled from "styled-components";
 
-export const VideoPlayerYouTube = styled.div`
+export const VideoPlayer = styled.div`
   ${RatioWidescreen};
 
   background-color: ${ColorGreyscale100};
   color: ${ColorWhite};
+
   width: 100%;
 `;

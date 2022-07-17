@@ -11,8 +11,7 @@
       "%components/*": ["./components/*"],
       "%contexts/*": ["./contexts/*"],
       "%libraries/*": ["./libraries/*"],
-      "%machines/*": ["./machines/*"],
-      "%styleguide/*": ["./styleguide/*"]
+      "%machines/*": ["./machines/*"]
     },
     "skipLibCheck": true,
     "strict": false,

@@ -1,5 +1,4 @@
 const { config: publicRuntimeConfig } = require("@bashkim-com/config");
-const path = require("path");
 const webpack = require("webpack");
 const { merge } = require("webpack-merge");
 
@@ -13,9 +12,6 @@ module.exports = {
   webpack: (nextConfig) => {
     return merge(nextConfig, {
       resolve: {
-        alias: {
-          "%styleguide": path.resolve(__dirname, "styleguide"),
-        },
         fallback: {
           fs: false,
         },
