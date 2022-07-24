@@ -9,7 +9,7 @@ export default {
   component: FullImagePartialComponent,
   title: "Partials/Full Image Partial",
   args: {
-    figure: ["https://via.placeholder.com/1200x630?text=figure"],
+    figure: ["https://via.placeholder.com/1200x630.png?text=figure"],
   },
   argTypes: {
     figure: { control: "file" },

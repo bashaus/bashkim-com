@@ -21,7 +21,9 @@ const Template: Story<TurnProps> = (args: TurnProps) => (
         .map((_value, index) => (
           <div key={index}>
             <img
-              src={`https://via.placeholder.com/300x450?text=Page+${index + 1}`}
+              src={`https://via.placeholder.com/300x450.png?text=Page+${
+                index + 1
+              }`}
               alt={`Page ${index + 1}`}
             />
           </div>

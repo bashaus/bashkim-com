@@ -10,7 +10,7 @@ export default {
   component: CaptionedPartialComponent,
   title: "Partials/Captioned Partial",
   args: {
-    figure: ["https://via.placeholder.com/1200x630?text=figure"],
+    figure: ["https://via.placeholder.com/1200x630.png?text=figure"],
     title: "CaptionedPartial",
     subtitle:
       "Donec rutrum blandit dignissim. Cras a arcu interdum, rhoncus tellus a, semper nunc. Pellentesque ut quam ut risus condimentum tincidunt a nec dolor. Praesent fermentum ultrices purus eget semper. Nunc.",

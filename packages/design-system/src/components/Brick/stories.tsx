@@ -6,7 +6,7 @@ export default {
   component: BrickComponent,
   title: "Components/Brick",
   args: {
-    icon: ["https://via.placeholder.com/300x300?text=icon"],
+    icon: ["https://via.placeholder.com/300x300.png?text=icon"],
     title: "Brick",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },

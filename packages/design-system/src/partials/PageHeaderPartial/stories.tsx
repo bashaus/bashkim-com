@@ -10,8 +10,10 @@ export default {
   title: "Partials/Page Header Partial",
   args: {
     id: "PageHeaderPartial",
-    imageDesktop: ["https://via.placeholder.com/1920x400?text=imageDesktop"],
-    imageMobile: ["https://via.placeholder.com/1000x8000?text=imageMobile"],
+    imageDesktop: [
+      "https://via.placeholder.com/1920x400.png?text=imageDesktop",
+    ],
+    imageMobile: ["https://via.placeholder.com/1000x8000.png?text=imageMobile"],
   },
   argTypes: {
     imageDesktop: { control: "file" },

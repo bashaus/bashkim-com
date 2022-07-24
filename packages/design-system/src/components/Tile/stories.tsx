@@ -8,8 +8,8 @@ export default {
   args: {
     title: "Tile",
     description: "Cras sit amet purus commodo, semper dui non.",
-    icon: ["https://via.placeholder.com/300x300?text=icon"],
-    poster: ["https://via.placeholder.com/640x360?text=poster"],
+    icon: ["https://via.placeholder.com/300x300.png?text=icon"],
+    poster: ["https://via.placeholder.com/640x360.png?text=poster"],
   },
   argTypes: {
     icon: { control: "file" },

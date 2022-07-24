@@ -6,7 +6,7 @@ export default {
   component: TitlePartialComponent,
   title: "Partials/Title Partial",
   args: {
-    image: ["https://via.placeholder.com/300x300?text=image"],
+    image: ["https://via.placeholder.com/300x300.png?text=image"],
     title: "TitlePartial",
     subtitle: "Nulla venenatis lobortis dignissim. Nullam sit amet nisi.",
   },

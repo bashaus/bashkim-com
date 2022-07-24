@@ -11,10 +11,10 @@ export default {
   args: {
     id: "FullBannerPartial",
     backgroundDesktop: [
-      "https://via.placeholder.com/1920x400?text=backgroundDesktop",
+      "https://via.placeholder.com/1920x400.png?text=backgroundDesktop",
     ],
     backgroundMobile: [
-      "https://via.placeholder.com/1000x800?text=backgroundMobile",
+      "https://via.placeholder.com/1000x800.png?text=backgroundMobile",
     ],
     title: "FullBannerPartial",
     subtitle:

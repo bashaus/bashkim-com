@@ -7,7 +7,7 @@ export default {
   component: DeviceSmartphone,
   title: "Components/Device/Smartphone",
   args: {
-    figure: ["https://via.placeholder.com/640x1130?text=figure"],
+    figure: ["https://via.placeholder.com/640x1130.png?text=figure"],
     children: "Class aptent taciti sociosqu ad litora torquent per.",
   },
   argTypes: {

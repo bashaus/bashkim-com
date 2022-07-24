@@ -8,7 +8,7 @@ export default {
   title: "Partials/Split Partial",
   args: {
     backgroundImage: [
-      "https://via.placeholder.com/992x558?text=Background+image",
+      "https://via.placeholder.com/992x558.png?text=Background+image",
     ],
   },
   argTypes: {

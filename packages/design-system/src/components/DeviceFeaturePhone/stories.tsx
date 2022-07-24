@@ -7,7 +7,7 @@ export default {
   title: "Components/Device/Feature Phone",
   args: {
     children: "Aenean malesuada ante id facilisis sollicitudin. Sed cursus.",
-    figure: ["https://via.placeholder.com/496x390?text=figure"],
+    figure: ["https://via.placeholder.com/496x390.png?text=figure"],
   },
   argTypes: {
     figure: { control: "file" },
