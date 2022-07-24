@@ -1,8 +1,8 @@
-import { HTMLAttributes } from "react";
+import { ComponentPropsWithRef } from "react";
 
 import * as S from "./styles";
 
-export type NavigationProps = HTMLAttributes<HTMLDivElement>;
+export type NavigationProps = ComponentPropsWithRef<"div">;
 
 export const Navigation = ({ children, ...props }: NavigationProps) => (
   <S.Navigation {...props}>

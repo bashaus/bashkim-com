@@ -1,8 +1,8 @@
-import { HTMLAttributes } from "react";
+import { ComponentPropsWithRef } from "react";
 
 import * as S from "./styles";
 
-export type NavigationItemProps = HTMLAttributes<HTMLLIElement> & {
+export type NavigationItemProps = ComponentPropsWithRef<"li"> & {
   isSelected?: boolean;
 };
 

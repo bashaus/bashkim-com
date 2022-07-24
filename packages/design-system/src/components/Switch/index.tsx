@@ -1,8 +1,8 @@
-import { InputHTMLAttributes, ReactNode } from "react";
+import { ComponentPropsWithRef, ReactNode } from "react";
 
 import * as S from "./styles";
 
-export type SwitchProps = InputHTMLAttributes<HTMLInputElement> & {
+export type SwitchProps = ComponentPropsWithRef<"input"> & {
   iconOff?: ReactNode;
   iconOn?: ReactNode;
 };

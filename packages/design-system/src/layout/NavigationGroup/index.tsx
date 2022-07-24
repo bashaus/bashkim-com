@@ -1,8 +1,8 @@
-import { HTMLAttributes } from "react";
+import { ComponentPropsWithRef } from "react";
 
 import * as S from "./styles";
 
-export type NavigationGroupProps = HTMLAttributes<HTMLUListElement>;
+export type NavigationGroupProps = ComponentPropsWithRef<"ul">;
 
 export const NavigationGroup = (props: NavigationGroupProps) => (
   <S.NavigationGroup {...props} />

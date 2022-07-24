@@ -1,6 +1,6 @@
 import { MenuButton, Modal } from "@bashkim-com/design-system";
 import { CheckIcon } from "@primer/octicons-react";
-import { HTMLAttributes } from "react";
+import { ComponentPropsWithRef } from "react";
 
 import { SiteSettingsAppearance } from "%components/SiteSettingsAppearance";
 import { SiteSettingsGridLines } from "%components/SiteSettingsGridLines";
@@ -10,7 +10,7 @@ import * as S from "./styles";
 
 export type SiteSettingsProps = {
   isVisible: boolean;
-  onClose: HTMLAttributes<HTMLButtonElement>["onClick"];
+  onClose: ComponentPropsWithRef<"button">["onClick"];
 };
 
 export const SiteSettings = ({ isVisible, onClose }: SiteSettingsProps) => (

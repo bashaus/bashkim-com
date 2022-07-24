@@ -1,7 +1,7 @@
-import { HTMLAttributes } from "react";
+import { ComponentPropsWithRef } from "react";
 
 import * as S from "./styles";
 
-export type FooterProps = HTMLAttributes<HTMLDivElement>;
+export type FooterProps = ComponentPropsWithRef<"div">;
 
 export const Footer = (props: FooterProps) => <S.Footer {...props} />;

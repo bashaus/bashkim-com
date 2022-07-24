@@ -1,9 +1,9 @@
-import { HTMLAttributes } from "react";
+import { ComponentPropsWithRef } from "react";
 
 import { RichTextFormatter } from "../../formatters/RichTextFormatter";
 import * as S from "./styles";
 
-export type SubtitlePartialProps = HTMLAttributes<HTMLDivElement>;
+export type SubtitlePartialProps = ComponentPropsWithRef<"div">;
 
 export const SubtitlePartial = ({
   children,

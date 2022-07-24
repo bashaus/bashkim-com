@@ -1,9 +1,9 @@
-import { HTMLAttributes, ReactNode } from "react";
+import { ComponentPropsWithRef, ReactNode } from "react";
 
 import { RichTextFormatter } from "../../formatters/RichTextFormatter";
 import * as S from "./styles";
 
-export type SplitItemPartialProps = HTMLAttributes<HTMLDivElement> & {
+export type SplitItemPartialProps = ComponentPropsWithRef<"div"> & {
   backgroundImage?: string;
   children?: ReactNode;
 };

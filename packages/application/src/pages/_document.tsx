@@ -1,8 +1,9 @@
 import NextDocument, { Head, Html, Main, NextScript } from "next/document";
+import { ReactNode } from "react";
 import { ServerStyleSheet } from "styled-components";
 
 export type DocumentProps = {
-  styledComponents: React.ReactNode;
+  styledComponents: ReactNode;
 };
 
 class Document extends NextDocument<DocumentProps> {

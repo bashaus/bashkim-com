@@ -1,11 +1,11 @@
-import { HTMLAttributes } from "react";
+import { ComponentPropsWithRef } from "react";
 
 import * as S from "./styles";
 import { GroupDesign } from "./types";
 
 export { GroupDesign };
 
-export type GroupProps = HTMLAttributes<HTMLDivElement> & {
+export type GroupProps = ComponentPropsWithRef<"div"> & {
   design?: GroupDesign;
 };
 

@@ -1,8 +1,8 @@
-import { HTMLAttributes } from "react";
+import { ComponentPropsWithRef } from "react";
 
 import * as S from "./styles";
 
-export type NewspaperPartialProps = HTMLAttributes<HTMLDivElement>;
+export type NewspaperPartialProps = ComponentPropsWithRef<"div">;
 
 export const NewspaperPartial = (props: NewspaperPartialProps) => (
   <S.NewspaperPartial {...props} />

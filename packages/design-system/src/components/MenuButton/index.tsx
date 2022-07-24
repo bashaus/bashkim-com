@@ -1,8 +1,8 @@
-import { ButtonHTMLAttributes } from "react";
+import { ComponentPropsWithRef } from "react";
 
 import * as S from "./styles";
 
-export type MenuButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
+export type MenuButtonProps = ComponentPropsWithRef<"button">;
 
 export const MenuButton = ({
   type = "button",
