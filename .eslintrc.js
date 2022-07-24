@@ -1,5 +1,6 @@
 module.exports = {
   extends: [
+    "eslint:recommended",
     "plugin:promise/recommended",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
@@ -12,6 +13,7 @@ module.exports = {
     sourceType: "module",
   },
   env: {
+    node: true,
     es6: true,
   },
   plugins: [
