@@ -1,8 +1,8 @@
-import { ComponentPropsWithRef } from "react";
+import { ComponentPropsWithoutRef } from "react";
 
 import * as S from "./styles";
 
-export type LogoProps = ComponentPropsWithRef<"div">;
+export type LogoProps = ComponentPropsWithoutRef<"div">;
 
 export const Logo = (props: LogoProps) => (
   <S.Logo {...props}>

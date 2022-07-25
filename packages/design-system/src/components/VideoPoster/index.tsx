@@ -1,9 +1,9 @@
-import { ComponentPropsWithRef, useCallback, useState } from "react";
+import { ComponentPropsWithoutRef, useCallback, useState } from "react";
 
 import { VideoModal } from "../VideoModal";
 import * as S from "./styles";
 
-export type VideoPosterProps = ComponentPropsWithRef<"div"> & {
+export type VideoPosterProps = ComponentPropsWithoutRef<"div"> & {
   /**
    * The title of the video, for accessibility
    */

@@ -1,8 +1,8 @@
-import { ComponentPropsWithRef } from "react";
+import { ComponentPropsWithoutRef } from "react";
 
 import * as S from "./styles";
 
-export type SplitPartialProps = ComponentPropsWithRef<"div"> & {
+export type SplitPartialProps = ComponentPropsWithoutRef<"div"> & {
   index?: number;
 };
 

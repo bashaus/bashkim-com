@@ -1,8 +1,8 @@
-import { ComponentPropsWithRef, ReactNode } from "react";
+import { ComponentPropsWithoutRef, ReactNode } from "react";
 
 import * as S from "./styles";
 
-export type SwitchProps = ComponentPropsWithRef<"input"> & {
+export type SwitchProps = ComponentPropsWithoutRef<"input"> & {
   iconOff?: ReactNode;
   iconOn?: ReactNode;
 };

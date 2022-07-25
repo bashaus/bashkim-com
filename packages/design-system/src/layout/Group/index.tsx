@@ -1,11 +1,11 @@
-import { ComponentPropsWithRef } from "react";
+import { ComponentPropsWithoutRef } from "react";
 
 import * as S from "./styles";
 import { GroupDesign } from "./types";
 
 export { GroupDesign };
 
-export type GroupProps = ComponentPropsWithRef<"div"> & {
+export type GroupProps = ComponentPropsWithoutRef<"div"> & {
   design?: GroupDesign;
 };
 

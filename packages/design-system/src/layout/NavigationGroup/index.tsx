@@ -1,8 +1,8 @@
-import { ComponentPropsWithRef } from "react";
+import { ComponentPropsWithoutRef } from "react";
 
 import * as S from "./styles";
 
-export type NavigationGroupProps = ComponentPropsWithRef<"ul">;
+export type NavigationGroupProps = ComponentPropsWithoutRef<"ul">;
 
 export const NavigationGroup = (props: NavigationGroupProps) => (
   <S.NavigationGroup {...props} />

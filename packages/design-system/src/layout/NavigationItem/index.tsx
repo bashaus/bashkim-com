@@ -1,8 +1,8 @@
-import { ComponentPropsWithRef } from "react";
+import { ComponentPropsWithoutRef } from "react";
 
 import * as S from "./styles";
 
-export type NavigationItemProps = ComponentPropsWithRef<"li"> & {
+export type NavigationItemProps = ComponentPropsWithoutRef<"li"> & {
   isSelected?: boolean;
 };
 

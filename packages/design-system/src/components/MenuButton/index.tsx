@@ -1,8 +1,8 @@
-import { ComponentPropsWithRef } from "react";
+import { ComponentPropsWithoutRef } from "react";
 
 import * as S from "./styles";
 
-export type MenuButtonProps = ComponentPropsWithRef<"button">;
+export type MenuButtonProps = ComponentPropsWithoutRef<"button">;
 
 export const MenuButton = ({
   type = "button",

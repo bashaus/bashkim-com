@@ -1,9 +1,9 @@
 import { gsap } from "gsap";
-import { ComponentPropsWithRef, useEffect, useRef } from "react";
+import { ComponentPropsWithoutRef, useEffect, useRef } from "react";
 
 import * as S from "./styles";
 
-export type ModalContentProps = ComponentPropsWithRef<"div"> & {
+export type ModalContentProps = ComponentPropsWithoutRef<"div"> & {
   isOpen: boolean;
   onHideComplete?(): void;
   onHideStart?(): void;

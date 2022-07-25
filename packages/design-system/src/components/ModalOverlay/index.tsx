@@ -1,9 +1,9 @@
 import { gsap } from "gsap";
-import { ComponentPropsWithRef, useEffect, useRef } from "react";
+import { ComponentPropsWithoutRef, useEffect, useRef } from "react";
 
 import * as S from "./styles";
 
-export type ModalOverlayProps = ComponentPropsWithRef<"div"> & {
+export type ModalOverlayProps = ComponentPropsWithoutRef<"div"> & {
   isOpen: boolean;
   onHideComplete?(): void;
   onHideStart?(): void;
