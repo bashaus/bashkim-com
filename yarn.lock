@@ -4026,10 +4026,10 @@
     "@typescript-eslint/types" "5.30.7"
     eslint-visitor-keys "^3.3.0"
 
-"@vendia/serverless-express@^4.9.0":
-  version "4.9.0"
-  resolved "https://registry.yarnpkg.com/@vendia/serverless-express/-/serverless-express-4.9.0.tgz#01cb6d28958e72f64f40f2cafc1a8f070f95b8bd"
-  integrity sha512-LCnWXa9FHm8p1hdmqC/t/1KoiYF3mm+/CicaeKMq0fJZIke111Mc9In+CrsRjCn59enagN6KwG3weXEgkHkq9g==
+"@vendia/serverless-express@^4.10.0":
+  version "4.10.0"
+  resolved "https://registry.yarnpkg.com/@vendia/serverless-express/-/serverless-express-4.10.0.tgz#54c64df2d2a46c4ce7ebe088958eb8dcdfbeab0f"
+  integrity sha512-wmusn3ZwUFvePjvaCfLRhPFflfUQwBzAlJFQY88vDH5Fy/Xt+w75DN7Hot1+GpiZ98m12D5OM2d+HbzIQAF7Pg==
 
 "@webassemblyjs/ast@1.11.1":
   version "1.11.1"
