@@ -3,6 +3,9 @@ const webpack = require("webpack");
 const { merge } = require("webpack-merge");
 
 module.exports = {
+  typescript: {
+    tsconfigPath: "./tsconfig.build.json",
+  },
   compiler: {
     styledComponents: true,
   },

@@ -18,6 +18,5 @@
     "typeRoots": ["./types"],
     "incremental": true
   },
-  "include": ["next-env.d.ts", "./src"],
-  "exclude": ["**/*.spec.ts", "**/*.spec.tsx"]
+  "include": ["next-env.d.ts", "./src"]
 }
