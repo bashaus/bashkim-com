@@ -1,6 +1,6 @@
-import { createGlobalStyle } from "styled-components";
+import { css } from "styled-components";
 
-export const SlickCarouselGlobalStyles = createGlobalStyle`
+export const slickCarouselStyles = css`
   .slick-slider {
     position: relative;
     display: block;

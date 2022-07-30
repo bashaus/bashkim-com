@@ -1,6 +1,5 @@
 import SlickSlider, { Settings } from "react-slick";
 
-import { SlickCarouselGlobalStyles } from "../../libraries/slick/styles";
 import * as S from "./styles";
 
 export type CarouselProps = Settings;
@@ -14,7 +13,6 @@ export const Carousel = ({
   ...args
 }: CarouselProps) => (
   <S.Carousel>
-    <SlickCarouselGlobalStyles />
     <SlickSlider
       adaptiveHeight={adaptiveHeight}
       dots={dots}

@@ -1,4 +1,6 @@
 import styled from "styled-components";
+
+import { slickCarouselStyles } from "../../libraries/slick/styles";
 export * from "./styles.arrow";
 export * from "./styles.dots";
 
@@ -12,4 +14,6 @@ export const Carousel = styled.div`
 
   /* -webkit */
   -webkit-tap-highlight-color: transparent;
+
+  ${slickCarouselStyles};
 `;
