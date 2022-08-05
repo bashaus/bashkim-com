@@ -17,7 +17,7 @@
     "@bashkim-com/prismic": "1.0.0",
     "@bashkim-com/style-guide": "1.0.0",
     "@primer/octicons-react": "^17.4.0",
-    "@rollup/plugin-commonjs": "^22.0.1",
+    "@rollup/plugin-commonjs": "^22.0.2",
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^13.3.0",
     "@storybook/addon-a11y": "^6.5.9",
