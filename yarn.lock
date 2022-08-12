@@ -2362,6 +2362,16 @@
     "@sentry/utils" "7.10.0"
     tslib "^1.9.3"
 
+"@sentry/core@7.10.0":
+  version "7.10.0"
+  resolved "https://registry.yarnpkg.com/@sentry/core/-/core-7.10.0.tgz#ebe1f7158954d3d29ba319bdfe745a06d3a43d08"
+  integrity sha512-uq6oUXPH+6cjsEL5/j/xSW91mVrJo7knTqax7E5MDiA5j98BPK4budGiBiPO7GEB856QhA7N+pOO0lccii5QYQ==
+  dependencies:
+    "@sentry/hub" "7.10.0"
+    "@sentry/types" "7.10.0"
+    "@sentry/utils" "7.10.0"
+    tslib "^1.9.3"
+
 "@sentry/core@7.8.1":
   version "7.8.1"
   resolved "https://registry.yarnpkg.com/@sentry/core/-/core-7.8.1.tgz#d11ba7c97766d1e47edf697dbfd47fe4041477d9"
@@ -2390,41 +2400,41 @@
     "@sentry/utils" "7.8.1"
     tslib "^1.9.3"
 
-"@sentry/node@7.8.1":
-  version "7.8.1"
-  resolved "https://registry.yarnpkg.com/@sentry/node/-/node-7.8.1.tgz#9dca7afee2d9ad38fd9756e13439ce09d2f01934"
-  integrity sha512-gQHeIip7QudeK1YWrLyZPc7nfirhbVDJ3gfCfL9mLT724Sk8gKd1kcpU1niI+wwIwY7SOpJqX4Oh/F0lRKjzDQ==
+"@sentry/node@7.10.0":
+  version "7.10.0"
+  resolved "https://registry.yarnpkg.com/@sentry/node/-/node-7.10.0.tgz#977141ff554c26a43739575d1fee9d3819fba998"
+  integrity sha512-L/DSEJ7Biy8ovvlCyfu5MpCYG108FIGVbJ1h0NBGr5+uLxTNg2WJWojJoiQNiRcWl4s0dcIXrRdi0HR2Sx+DUw==
   dependencies:
-    "@sentry/core" "7.8.1"
-    "@sentry/hub" "7.8.1"
-    "@sentry/types" "7.8.1"
-    "@sentry/utils" "7.8.1"
+    "@sentry/core" "7.10.0"
+    "@sentry/hub" "7.10.0"
+    "@sentry/types" "7.10.0"
+    "@sentry/utils" "7.10.0"
     cookie "^0.4.1"
     https-proxy-agent "^5.0.0"
     lru_map "^0.3.3"
     tslib "^1.9.3"
 
-"@sentry/serverless@^7.8.1":
-  version "7.8.1"
-  resolved "https://registry.yarnpkg.com/@sentry/serverless/-/serverless-7.8.1.tgz#5eda1d3a1cea0b760f825b6c42c921df7e666286"
-  integrity sha512-pR1dozOs1/7vflo/Xr1Ra1cmq60ig9PpbHP5tN2/raF+Xu10oIkLAdD2JUSXn9YUi9Kn0eWjSHF/OL71fbMYOg==
+"@sentry/serverless@^7.10.0":
+  version "7.10.0"
+  resolved "https://registry.yarnpkg.com/@sentry/serverless/-/serverless-7.10.0.tgz#ba9512b397a70e6fc4b78f5dbeb752a023636c75"
+  integrity sha512-WDNnuYTNYNyGQ9mHniT2twHd27QpuXFrKwFZiox6YMiMD1g2yhwqHrvozzvkIPK7R1mG3Gj8tgUsYQ2WZ+5XJA==
   dependencies:
-    "@sentry/node" "7.8.1"
-    "@sentry/tracing" "7.8.1"
-    "@sentry/types" "7.8.1"
-    "@sentry/utils" "7.8.1"
+    "@sentry/node" "7.10.0"
+    "@sentry/tracing" "7.10.0"
+    "@sentry/types" "7.10.0"
+    "@sentry/utils" "7.10.0"
     "@types/aws-lambda" "^8.10.62"
     "@types/express" "^4.17.2"
     tslib "^1.9.3"
 
-"@sentry/tracing@7.8.1":
-  version "7.8.1"
-  resolved "https://registry.yarnpkg.com/@sentry/tracing/-/tracing-7.8.1.tgz#6368e7e90a43389cd583e77de7e28d5ca6f88bf9"
-  integrity sha512-orNVCsMtQUKhvh7GmyJzjOhU6oT7lC7TRT7tTRlyXQVrUmfJZsthmBtyfrTC7QWJ9vXQ0mB4jab8kMT3xE4ltg==
+"@sentry/tracing@7.10.0":
+  version "7.10.0"
+  resolved "https://registry.yarnpkg.com/@sentry/tracing/-/tracing-7.10.0.tgz#084019c6ab841dff1722ed5eb397ee80fb36af51"
+  integrity sha512-ojuBYS1bL/IGWKt/ItY4HmC8NElJrYtTUvm73VbhylhIO4zcn5ICHmgMFj1lqL9gQ1nCnAlifKiWIjL9qUatTA==
   dependencies:
-    "@sentry/hub" "7.8.1"
-    "@sentry/types" "7.8.1"
-    "@sentry/utils" "7.8.1"
+    "@sentry/hub" "7.10.0"
+    "@sentry/types" "7.10.0"
+    "@sentry/utils" "7.10.0"
     tslib "^1.9.3"
 
 "@sentry/types@7.10.0":
