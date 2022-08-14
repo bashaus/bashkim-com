@@ -3,7 +3,7 @@ import * as S from "./styles";
 export const FooterCopyright = () => (
   <S.FooterCopyright
     role="contentinfo"
-    aria-label="Copyright, Two-Thousand-and-Eight to Two-Thousand-and-Twenty, Bashkim Isai. All rights reserved."
+    aria-label="Copyright, Two-Thousand-and-Eight to Two-Thousand-and-Twenty-Two, Bashkim Isai. All rights reserved."
   >
     <small aria-hidden="true">
       Copyright &copy;{" "}
@@ -11,8 +11,8 @@ export const FooterCopyright = () => (
         MMVIII
       </time>
       &#x2011;
-      <time dateTime="2021" title="2021">
-        MMXXI
+      <time dateTime="2022" title="2022">
+        MMXXII
       </time>
       , Bashkim&nbsp;Isai. All&nbsp;rights&nbsp;reserved.
     </small>
