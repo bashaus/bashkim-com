@@ -17,10 +17,10 @@ export const SitemapIndexTemplate = (
     const doc = xmlCreate(
       {
         sitemapindex: {
-          "@xmlns": "https://www.sitemaps.org/schemas/sitemap/0.9/",
+          "@xmlns": "https://www.sitemaps.org/schemas/sitemap/0.9",
           "@xmlns:xsi": "https://www.w3.org/2001/XMLSchema-instance",
           "@xsi:schemalocation": [
-            "https://www.sitemaps.org/schemas/sitemap/0.9/",
+            "https://www.sitemaps.org/schemas/sitemap/0.9",
             "https://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd",
           ].join(" "),
         },
