@@ -49,7 +49,7 @@
     "@svgr/webpack": "^6.3.1",
     "@swc/core": "^1.2.245",
     "@swc/jest": "^0.2.22",
-    "@types/jest": "^28.1.8",
+    "@types/jest": "^29.0.0",
     "@types/jquery": "^3.5.14",
     "@types/mime": "^3.0.1",
     "@types/node": "^18.7.13",
