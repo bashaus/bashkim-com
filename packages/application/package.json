@@ -24,7 +24,7 @@
     "@sentry/browser": "^7.12.1",
     "@xstate/react": "^3.0.1",
     "apollo-link-prismic": "^1.1.1",
-    "blurhash": "^1.1.5",
+    "blurhash": "^2.0.0",
     "graphql": "^16.6.0",
     "gsap": "^3.11.1",
     "jquery": "^3.6.1",
