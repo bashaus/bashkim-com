@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.106",
-    "@types/node": "^18.7.18",
+    "@types/node": "^18.8.0",
     "aws-lambda": "^1.0.6",
     "nodemon": "^2.0.20",
     "ts-node": "^10.9.1",
