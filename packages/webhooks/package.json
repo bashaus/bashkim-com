@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@bashkim-com/config": "^1.0.0",
-    "@sentry/serverless": "^7.13.0",
+    "@sentry/serverless": "^7.14.1",
     "@vendia/serverless-express": "^4.10.1",
     "express": "^4.18.1",
     "node-fetch": "^2.6.7"
