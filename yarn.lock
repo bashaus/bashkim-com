@@ -80,7 +80,7 @@
     semver "^5.4.1"
     source-map "^0.5.0"
 
-"@babel/core@^7.1.0", "@babel/core@^7.11.6", "@babel/core@^7.12.10", "@babel/core@^7.12.3", "@babel/core@^7.18.5", "@babel/core@^7.19.6", "@babel/core@^7.7.5":
+"@babel/core@^7.1.0", "@babel/core@^7.11.6", "@babel/core@^7.12.10", "@babel/core@^7.12.3", "@babel/core@^7.19.6", "@babel/core@^7.7.5":
   version "7.19.6"
   resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.19.6.tgz#7122ae4f5c5a37c0946c066149abd8e75f81540f"
   integrity sha512-D2Ue4KHpc6Ys2+AxpIx1BZ8+UegLLLE2p3KJEuJRKmokHOtl49jQ5ny1773KsGLZs8MQvBidAF6yWUJxRqtKtg==
@@ -1250,7 +1250,7 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.18.6"
 
-"@babel/plugin-transform-react-constant-elements@^7.17.12", "@babel/plugin-transform-react-constant-elements@^7.18.12":
+"@babel/plugin-transform-react-constant-elements@^7.18.12":
   version "7.18.12"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-react-constant-elements/-/plugin-transform-react-constant-elements-7.18.12.tgz#edf3bec47eb98f14e84fa0af137fcc6aad8e0443"
   integrity sha512-Q99U9/ttiu+LMnRU8psd23HhvwXmKWDQIpocm0JKaICcZHnw+mdQbHm6xnSy7dOl8I5PELakYtNBubNQlBXbZw==
@@ -1391,7 +1391,7 @@
     "@babel/helper-create-regexp-features-plugin" "^7.18.6"
     "@babel/helper-plugin-utils" "^7.18.6"
 
-"@babel/preset-env@^7.12.11", "@babel/preset-env@^7.18.2", "@babel/preset-env@^7.19.4":
+"@babel/preset-env@^7.12.11", "@babel/preset-env@^7.19.4":
   version "7.19.4"
   resolved "https://registry.yarnpkg.com/@babel/preset-env/-/preset-env-7.19.4.tgz#4c91ce2e1f994f717efb4237891c3ad2d808c94b"
   integrity sha512-5QVOTXUdqTCjQuh2GGtdd7YEhoRXBMVGROAtsBeLGIbIz3obCBIfRMT1I3ZKkMgNzwkyCkftDXSSkHxnfVf4qg==
@@ -1492,7 +1492,7 @@
     "@babel/types" "^7.4.4"
     esutils "^2.0.2"
 
-"@babel/preset-react@^7.12.10", "@babel/preset-react@^7.17.12", "@babel/preset-react@^7.18.6":
+"@babel/preset-react@^7.12.10", "@babel/preset-react@^7.18.6":
   version "7.18.6"
   resolved "https://registry.yarnpkg.com/@babel/preset-react/-/preset-react-7.18.6.tgz#979f76d6277048dc19094c217b507f3ad517dd2d"
   integrity sha512-zXr6atUmyYdiWRVLOZahakYmOBHtWc2WGCkP8PYTgZi0iJXDY2CN180TdrIW4OGOAdLc7TifzDIvtx6izaRIzg==
@@ -1504,7 +1504,7 @@
     "@babel/plugin-transform-react-jsx-development" "^7.18.6"
     "@babel/plugin-transform-react-pure-annotations" "^7.18.6"
 
-"@babel/preset-typescript@^7.12.7", "@babel/preset-typescript@^7.17.12", "@babel/preset-typescript@^7.18.6":
+"@babel/preset-typescript@^7.12.7", "@babel/preset-typescript@^7.18.6":
   version "7.18.6"
   resolved "https://registry.yarnpkg.com/@babel/preset-typescript/-/preset-typescript-7.18.6.tgz#ce64be3e63eddc44240c6358daefac17b3186399"
   integrity sha512-s9ik86kXBAnD760aybBucdpnLsAt0jK1xqJn2juOn9lkOvSHV60os5hxoVJsPzMQxvnUJFAlkont2DvvaYEBtQ==
@@ -3898,7 +3898,7 @@
     "@svgr/babel-plugin-transform-react-native-svg" "^6.5.1"
     "@svgr/babel-plugin-transform-svg-component" "^6.5.1"
 
-"@svgr/core@^6.3.1", "@svgr/core@^6.5.1":
+"@svgr/core@^6.5.1":
   version "6.5.1"
   resolved "https://registry.yarnpkg.com/@svgr/core/-/core-6.5.1.tgz#d3e8aa9dbe3fbd747f9ee4282c1c77a27410488a"
   integrity sha512-/xdLSWxK5QkqG524ONSjvg3V/FkNyCv538OIBdQqPNaAta3AsXj/Bd2FbvR87yMbXO2hFSWiAe/Q6IkVPDw+mw==
@@ -3917,7 +3917,7 @@
     "@babel/types" "^7.20.0"
     entities "^4.4.0"
 
-"@svgr/plugin-jsx@^6.3.1", "@svgr/plugin-jsx@^6.5.1":
+"@svgr/plugin-jsx@^6.5.1":
   version "6.5.1"
   resolved "https://registry.yarnpkg.com/@svgr/plugin-jsx/-/plugin-jsx-6.5.1.tgz#0e30d1878e771ca753c94e69581c7971542a7072"
   integrity sha512-+UdQxI3jgtSjCykNSlEMuy1jSRQlGC7pqBCPvkG/2dATdWo082zHTTK3uhnAju2/6XpE6B5mZ3z4Z8Ns01S8Gw==
@@ -3927,7 +3927,7 @@
     "@svgr/hast-util-to-babel-ast" "^6.5.1"
     svg-parser "^2.0.4"
 
-"@svgr/plugin-svgo@^6.3.1", "@svgr/plugin-svgo@^6.5.1":
+"@svgr/plugin-svgo@^6.5.1":
   version "6.5.1"
   resolved "https://registry.yarnpkg.com/@svgr/plugin-svgo/-/plugin-svgo-6.5.1.tgz#0f91910e988fc0b842f88e0960c2862e022abe84"
   integrity sha512-omvZKf8ixP9z6GWgwbtmP9qQMPX4ODXi+wzbVZgomNFsUIlHA1sf4fThdwTWSsZGgvGAG6yE+b/F5gWUkcZ/iQ==
@@ -3936,20 +3936,20 @@
     deepmerge "^4.2.2"
     svgo "^2.8.0"
 
-"@svgr/rollup@^6.3.1":
-  version "6.3.1"
-  resolved "https://registry.yarnpkg.com/@svgr/rollup/-/rollup-6.3.1.tgz#cf59c39f1f145383dfdeea7068ec18149360668e"
-  integrity sha512-TXcRT7pwsNU30bXxgooGAZQIXmPy7fxUnN/v5cuCpLiondRtKiV321kh/S/qhcQ6gSs6DvJmNDpbiqPZF66usw==
+"@svgr/rollup@^6.5.1":
+  version "6.5.1"
+  resolved "https://registry.yarnpkg.com/@svgr/rollup/-/rollup-6.5.1.tgz#9fe0e322c6cc3c6324469f049cb4b031efcf4a42"
+  integrity sha512-GeUfq0grJfpcn2jRWRaZ4npn27nnWK21vUj6MqDqknuJnEqGADcZZjO9wrUAaPLr3InAnQi0Z7nwiNUdzkaj6A==
   dependencies:
-    "@babel/core" "^7.18.5"
-    "@babel/plugin-transform-react-constant-elements" "^7.17.12"
-    "@babel/preset-env" "^7.18.2"
-    "@babel/preset-react" "^7.17.12"
-    "@babel/preset-typescript" "^7.17.12"
+    "@babel/core" "^7.19.6"
+    "@babel/plugin-transform-react-constant-elements" "^7.18.12"
+    "@babel/preset-env" "^7.19.4"
+    "@babel/preset-react" "^7.18.6"
+    "@babel/preset-typescript" "^7.18.6"
     "@rollup/pluginutils" "^4.2.1"
-    "@svgr/core" "^6.3.1"
-    "@svgr/plugin-jsx" "^6.3.1"
-    "@svgr/plugin-svgo" "^6.3.1"
+    "@svgr/core" "^6.5.1"
+    "@svgr/plugin-jsx" "^6.5.1"
+    "@svgr/plugin-svgo" "^6.5.1"
 
 "@svgr/webpack@^6.5.1":
   version "6.5.1"
