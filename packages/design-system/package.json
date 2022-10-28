@@ -47,7 +47,7 @@
     "react-slick": "^0.29.0",
     "rollup": "^2.79.1",
     "rollup-plugin-peer-deps-external": "^2.2.4",
-    "rollup-plugin-typescript2": "^0.34.0",
+    "rollup-plugin-typescript2": "^0.34.1",
     "storybook-addon-swc": "^1.1.9",
     "styled-components": "^5.3.6",
     "ts-loader": "^9.4.1",
