@@ -16,7 +16,7 @@
   "devDependencies": {
     "@bashkim-com/prismic": "1.0.0",
     "@bashkim-com/style-guide": "1.0.0",
-    "@primer/octicons-react": "^17.5.0",
+    "@primer/octicons-react": "^17.8.0",
     "@rollup/plugin-commonjs": "^22.0.2",
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^14.1.0",
@@ -60,7 +60,7 @@
   "peerDependencies": {
     "@bashkim-com/prismic": "1.0.0",
     "@bashkim-com/style-guide": "1.0.0",
-    "@primer/octicons-react": "^17.5.0",
+    "@primer/octicons-react": "^17.8.0",
     "gsap": "^3.11.2",
     "jquery": "^3.6.1",
     "react": "^18.2.0",
