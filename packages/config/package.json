@@ -11,7 +11,7 @@
     "test": "echo \"Error: no test specified\" && exit 0"
   },
   "dependencies": {
-    "defaults-deep-ts": "^0.2.2",
+    "defaults-deep-ts": "^0.2.3",
     "dotenv": "^16.0.3"
   },
   "devDependencies": {
