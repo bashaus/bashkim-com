@@ -1,9 +1,9 @@
-import type { CaseStudyContentType } from "@bashkim-com/prismic";
+import type { Case_Study, Technology } from "@bashkim-com/prismic-types";
 
 import * as S from "./styles";
 
 export type CaseStudyTechnologiesProps = {
-  caseStudy: CaseStudyContentType;
+  caseStudy: Case_Study;
 };
 
 export const CaseStudyTechnologies = ({
@@ -13,13 +13,14 @@ export const CaseStudyTechnologies = ({
     <S.Heading>Key technologies</S.Heading>
 
     <S.Technologies>
-      {caseStudy.info_technologies.map((technology) => {
-        if (!technology.info_technology) {
+      {caseStudy.info_technologies.map((info_technology) => {
+        if (!info_technology.info_technology) {
           return null;
         }
 
-        const { technology_name: name, technology_icon: icon } =
-          technology.info_technology;
+        const technology = info_technology.info_technology as Technology;
+        const name = technology.technology_name;
+        const icon = technology.technology_icon;
 
         return (
           <S.Technology key={name}>

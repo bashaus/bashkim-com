@@ -1,10 +1,11 @@
-import { NewspaperSliceType, PrismicRichText } from "@bashkim-com/prismic";
+import { PrismicRichText } from "@bashkim-com/prismic-helpers";
+import type { Case_StudyBodyNewspaperslicetype } from "@bashkim-com/prismic-types";
 
 import { RichTextFormatter } from "../../formatters/RichTextFormatter";
 import { NewspaperPartial } from "../../partials/NewspaperPartial";
 
 export type NewspaperSliceProps = {
-  slice: NewspaperSliceType;
+  slice: Case_StudyBodyNewspaperslicetype;
 };
 
 export const NewspaperSlice = ({ slice }: NewspaperSliceProps) => (

@@ -1,4 +1,4 @@
-import { AccoladeSliceFixture } from "@bashkim-com/prismic";
+import { AccoladeSliceFixture } from "@bashkim-com/prismic-fixtures";
 import type { Meta, Story } from "@storybook/react";
 
 import { AccoladeSlice as AccoladeSliceComponent, AccoladeSliceProps } from ".";

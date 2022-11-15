@@ -9,10 +9,13 @@
     "url": "https://www.bashkim.com/"
   },
   "workspaces": [
+    "packages/prismic-schema",
     "packages/style-guide",
-    "packages/prismic",
-    "packages/design-system",
     "packages/config",
+    "packages/prismic-helpers",
+    "packages/prismic-types",
+    "packages/prismic-fixtures",
+    "packages/design-system",
     "packages/application",
     "packages/sitemap",
     "packages/webhooks"

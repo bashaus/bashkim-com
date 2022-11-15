@@ -1,9 +1,13 @@
 import { CallToAction, FullBannerPartial } from "@bashkim-com/design-system";
-import { HomePageContentType, useLinkResolver } from "@bashkim-com/prismic";
+import { useLinkResolver } from "@bashkim-com/prismic-helpers";
+import type {
+  Case_Study,
+  Home_PageFeatured_Case_Studies,
+} from "@bashkim-com/prismic-types";
 import Link from "next/link";
 
 export type HomeFeaturedProps = {
-  caseStudies: HomePageContentType["featured_case_studies"];
+  caseStudies: Array<Home_PageFeatured_Case_Studies>;
 };
 
 export const HomeFeatured = ({ caseStudies }: HomeFeaturedProps) => {
@@ -12,7 +16,7 @@ export const HomeFeatured = ({ caseStudies }: HomeFeaturedProps) => {
   return (
     <ul>
       {caseStudies.map((featuredCaseStudy) => {
-        const caseStudy = featuredCaseStudy.featured_case_study;
+        const caseStudy = featuredCaseStudy.featured_case_study as Case_Study;
 
         const {
           image_header_desktop: backgroundDesktop,

@@ -1,8 +1,12 @@
-import { CollaboratorSliceType, useLinkResolver } from "@bashkim-com/prismic";
+import { useLinkResolver } from "@bashkim-com/prismic-helpers";
+import type {
+  Case_StudyCollaboratorsCollaboratorslicetype,
+  Peer,
+} from "@bashkim-com/prismic-types";
 import { Link } from "prismic-reactjs";
 
 export type CollaboratorSliceProps = {
-  slice: CollaboratorSliceType;
+  slice: Case_StudyCollaboratorsCollaboratorslicetype;
 };
 
 export const CollaboratorSlice = ({ slice }: CollaboratorSliceProps) => {
@@ -12,11 +16,9 @@ export const CollaboratorSlice = ({ slice }: CollaboratorSliceProps) => {
     return null;
   }
 
-  const {
-    collaborator_slice_type_company: company,
-    collaborator_slice_type_role: role,
-    collaborator_slice_type_peer: peer,
-  } = slice.primary;
+  const company = slice.primary.collaborator_slice_type_company;
+  const role = slice.primary.collaborator_slice_type_role;
+  const peer = slice.primary.collaborator_slice_type_peer as Peer;
 
   if (!peer) {
     return null;

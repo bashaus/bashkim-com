@@ -55,7 +55,7 @@ functions:
     jetpack:
       roots:
         - "packages/config"
-        - "packages/prismic"
+        - "packages/prismic-helpers"
         - "packages/sitemap"
       preInclude:
         - "packages/config/lib/**"

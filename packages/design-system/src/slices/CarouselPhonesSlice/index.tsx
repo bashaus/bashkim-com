@@ -1,4 +1,5 @@
-import { CarouselPhonesSliceType, PrismicRichText } from "@bashkim-com/prismic";
+import { PrismicRichText } from "@bashkim-com/prismic-helpers";
+import type { Case_StudyBodyCarouselphonesslicetype } from "@bashkim-com/prismic-types";
 
 import { Carousel } from "../../components/Carousel";
 import { CarouselImage } from "../../components/CarouselImage";
@@ -21,13 +22,16 @@ const CAROUSEL_RESPONSIVE = [
   },
 ];
 
-const DeviceTypeComponents = {
+const DeviceTypeComponents: Record<
+  string,
+  typeof DeviceSmartphone | typeof DeviceFeaturePhone
+> = {
   SMARTPHONE: DeviceSmartphone,
   FEATURE_PHONE: DeviceFeaturePhone,
 };
 
 export type CarouselPhonesSliceProps = {
-  slice: CarouselPhonesSliceType;
+  slice: Case_StudyBodyCarouselphonesslicetype;
 };
 
 export const CarouselPhonesSlice = ({ slice }: CarouselPhonesSliceProps) => (

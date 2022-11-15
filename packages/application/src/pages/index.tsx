@@ -1,4 +1,4 @@
-import type { HomePageContentType } from "@bashkim-com/prismic";
+import type { Home_Page } from "@bashkim-com/prismic-types";
 import { GetStaticProps } from "next";
 import Head from "next/head";
 
@@ -13,7 +13,7 @@ import { prismicClient } from "%libraries/prismic/client";
 import { HomePageQuery } from "%libraries/prismic/queries/HomePageQuery";
 
 type HomePageProps = {
-  homePage: HomePageContentType;
+  homePage: Home_Page;
 };
 
 const HomePage = ({ homePage }: HomePageProps) => {

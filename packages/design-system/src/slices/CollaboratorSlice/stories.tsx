@@ -1,4 +1,4 @@
-import { CollaboratorSliceFixture } from "@bashkim-com/prismic";
+import { CollaboratorSliceFixture } from "@bashkim-com/prismic-fixtures";
 import type { Meta, Story } from "@storybook/react";
 
 import {

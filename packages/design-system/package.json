@@ -14,7 +14,9 @@
     "test": "jest ."
   },
   "devDependencies": {
-    "@bashkim-com/prismic": "1.0.0",
+    "@bashkim-com/prismic-fixtures": "1.0.0",
+    "@bashkim-com/prismic-helpers": "1.0.0",
+    "@bashkim-com/prismic-types": "1.0.0",
     "@bashkim-com/style-guide": "1.0.0",
     "@primer/octicons-react": "^17.9.0",
     "@rollup/plugin-commonjs": "^23.0.2",
@@ -53,12 +55,12 @@
     "ts-loader": "^9.4.1",
     "turn-js": "blasten/turn.js#master",
     "typescript": "^4.9.3",
-    "utility-types": "^3.10.0",
     "webpack": "^5.75.0",
     "webpack-merge": "^5.8.0"
   },
   "peerDependencies": {
-    "@bashkim-com/prismic": "1.0.0",
+    "@bashkim-com/prismic-fixtures": "1.0.0",
+    "@bashkim-com/prismic-helpers": "1.0.0",
     "@bashkim-com/style-guide": "1.0.0",
     "@primer/octicons-react": "^17.9.0",
     "gsap": "^3.11.3",

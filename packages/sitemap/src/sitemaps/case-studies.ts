@@ -1,5 +1,5 @@
 import { config } from "@bashkim-com/config";
-import { CaseStudyContentType } from "@bashkim-com/prismic";
+import type { Case_Study } from "@bashkim-com/prismic-types";
 import { Date as PrismicDate } from "prismic-reactjs";
 
 import { prismicClient } from "../libraries/prismic/client";
@@ -25,7 +25,7 @@ export const CaseStudiesSitemap = async (): Promise<Array<UrlType>> => {
   });
 
   result.data.caseStudies.edges.forEach(
-    ({ node: caseStudy }: { node: CaseStudyContentType }) => {
+    ({ node: caseStudy }: { node: Case_Study }) => {
       urlset.push({
         url: {
           loc: `${config.sitemap.baseHref}/portfolio/${caseStudy._meta.uid}/`,

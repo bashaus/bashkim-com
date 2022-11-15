@@ -1,0 +1,19 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "module": "CommonJS",
+    "noEmit": true,
+    "baseUrl": "./src",
+    "declaration": true,
+    "jsx": "react-jsx",
+    "outDir": "./lib",
+    "rootDir": "./src",
+    "target": "ESNext",
+    "types": [
+      "node"
+    ]
+  },
+  "include": [
+    "./src"
+  ]
+}

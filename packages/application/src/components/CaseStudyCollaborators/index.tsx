@@ -1,12 +1,12 @@
 import { CollaboratorSlice, SubtitlePartial } from "@bashkim-com/design-system";
-import type { CollaboratorSliceType } from "@bashkim-com/prismic";
+import type { Case_StudyCollaboratorsCollaboratorslicetype } from "@bashkim-com/prismic-types";
 import Link from "next/link";
 
 import * as S from "./styles";
 
 export type CaseStudyCollaboratorsProps = {
   myRole?: string;
-  slices: Array<CollaboratorSliceType>;
+  slices: Array<Case_StudyCollaboratorsCollaboratorslicetype>;
 };
 
 export const CaseStudyCollaborators = ({

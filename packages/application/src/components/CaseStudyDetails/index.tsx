@@ -2,12 +2,13 @@ import {
   LifespanFormatter,
   RichTextFormatter,
 } from "@bashkim-com/design-system";
-import { CaseStudyContentType, PrismicDate } from "@bashkim-com/prismic";
+import { PrismicDate } from "@bashkim-com/prismic-helpers";
+import type { Case_Study } from "@bashkim-com/prismic-types";
 
 import * as S from "./styles";
 
 export type CaseStudyDetailsProps = {
-  caseStudy: CaseStudyContentType;
+  caseStudy: Case_Study;
 };
 
 export const CaseStudyDetails = ({ caseStudy }: CaseStudyDetailsProps) => {

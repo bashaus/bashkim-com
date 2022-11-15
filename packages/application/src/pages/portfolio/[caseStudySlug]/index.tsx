@@ -1,5 +1,5 @@
 import { Group, GroupDesign } from "@bashkim-com/design-system";
-import type { CaseStudyContentType } from "@bashkim-com/prismic";
+import type { Case_Study } from "@bashkim-com/prismic-types";
 import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from "next";
 
 import { CaseStudyAccolades } from "%components/CaseStudyAccolades";
@@ -21,8 +21,8 @@ import { CaseStudyBodyQuery } from "%libraries/prismic/queries/CaseStudyBodyQuer
 import { CaseStudyPageQuery } from "%libraries/prismic/queries/CaseStudyPageQuery";
 
 type CaseStudyPageProps = {
-  caseStudyPage: CaseStudyContentType;
-  caseStudyBody: CaseStudyContentType;
+  caseStudyPage: Case_Study;
+  caseStudyBody: Case_Study;
 };
 
 const CaseStudyPage = ({

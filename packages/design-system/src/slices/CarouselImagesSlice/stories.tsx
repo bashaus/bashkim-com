@@ -1,4 +1,4 @@
-import { CarouselImagesSliceFixture } from "@bashkim-com/prismic";
+import { CarouselImagesSliceFixture } from "@bashkim-com/prismic-fixtures";
 import type { Meta, Story } from "@storybook/react";
 
 import {

@@ -1,10 +1,11 @@
-import { GridVideoSliceType, PrismicRichText } from "@bashkim-com/prismic";
+import { PrismicRichText } from "@bashkim-com/prismic-helpers";
+import type { Case_StudyBodyGridvideoslicetype } from "@bashkim-com/prismic-types";
 
 import { VideoPoster } from "../../components/VideoPoster";
 import * as S from "./styles";
 
 export type GridVideoSliceProps = {
-  slice: GridVideoSliceType;
+  slice: Case_StudyBodyGridvideoslicetype;
 };
 
 export const GridVideoSlice = ({ slice }: GridVideoSliceProps) => (

@@ -1,6 +1,6 @@
 import "%libraries/sentry/init";
 
-import { LinkResolverContext } from "@bashkim-com/prismic";
+import { LinkResolverContext } from "@bashkim-com/prismic-helpers";
 import { Normalize } from "@bashkim-com/style-guide";
 import { AppProps } from "next/app";
 import Head from "next/head";

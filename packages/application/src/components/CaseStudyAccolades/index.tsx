@@ -1,8 +1,8 @@
 import { AccoladeSlice, SubtitlePartial } from "@bashkim-com/design-system";
-import type { AccoladeSliceType } from "@bashkim-com/prismic";
+import type { Case_StudyAccoladesAccoladeslicetype } from "@bashkim-com/prismic-types";
 
 export type CaseStudyAccoladesProps = {
-  slices: Array<AccoladeSliceType>;
+  slices: Array<Case_StudyAccoladesAccoladeslicetype>;
 };
 
 export const CaseStudyAccolades = ({

@@ -1,9 +1,9 @@
 import { Brick } from "@bashkim-com/design-system";
-import type { CaseStudyContentType } from "@bashkim-com/prismic";
+import type { Case_Study } from "@bashkim-com/prismic-types";
 import Link from "next/link";
 
 export type PortfolioCaseStudyBrickProps = {
-  caseStudy: CaseStudyContentType;
+  caseStudy: Case_Study;
 };
 
 export const PortfolioCaseStudyBrick = ({

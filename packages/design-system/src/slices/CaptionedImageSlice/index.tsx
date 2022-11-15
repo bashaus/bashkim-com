@@ -1,10 +1,11 @@
-import { CaptionedImageSliceType, PrismicRichText } from "@bashkim-com/prismic";
+import { PrismicRichText } from "@bashkim-com/prismic-helpers";
+import type { Case_StudyBodyCaptionedimageslicetype } from "@bashkim-com/prismic-types";
 
 import { RichTextFormatter } from "../../formatters/RichTextFormatter";
 import { CaptionedPartial } from "../../partials/CaptionedPartial";
 
 export type CaptionedImageSliceProps = {
-  slice: CaptionedImageSliceType;
+  slice: Case_StudyBodyCaptionedimageslicetype;
 };
 
 export const CaptionedImageSlice = ({ slice }: CaptionedImageSliceProps) => {

@@ -11,7 +11,7 @@ import {
   NewspaperSlice,
   SubtitleSlice,
 } from "@bashkim-com/design-system";
-import type { PrismicSliceType } from "@bashkim-com/prismic";
+import { Case_StudyBody } from "@bashkim-com/prismic-types";
 
 const SliceTypeComponentMap = {
   CaptionedImageSliceType: CaptionedImageSlice,
@@ -28,7 +28,7 @@ const SliceTypeComponentMap = {
 };
 
 export type SliceProps = {
-  slice: PrismicSliceType;
+  slice: Case_StudyBody;
 };
 
 export const Slice = (props: SliceProps) => {

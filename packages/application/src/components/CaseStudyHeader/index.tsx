@@ -5,7 +5,7 @@ import {
   SubtitlePartial,
   TitlePartial,
 } from "@bashkim-com/design-system";
-import type { CaseStudyContentType } from "@bashkim-com/prismic";
+import type { Case_Study } from "@bashkim-com/prismic-types";
 
 import { CaseStudyDetails } from "%components/CaseStudyDetails";
 import { CaseStudyTechnologies } from "%components/CaseStudyTechnologies";
@@ -13,7 +13,7 @@ import { CaseStudyTechnologies } from "%components/CaseStudyTechnologies";
 import * as S from "./styles";
 
 export type CaseStudyHeaderProps = {
-  caseStudy: CaseStudyContentType;
+  caseStudy: Case_Study;
 };
 
 export const CaseStudyHeader = ({ caseStudy }: CaseStudyHeaderProps) => (

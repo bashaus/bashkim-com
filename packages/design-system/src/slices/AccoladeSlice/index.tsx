@@ -1,9 +1,9 @@
 import {
-  AccoladeSliceType,
   PrismicDate,
   PrismicRichText,
   useLinkResolver,
-} from "@bashkim-com/prismic";
+} from "@bashkim-com/prismic-helpers";
+import type { Case_StudyAccoladesAccoladeslicetype } from "@bashkim-com/prismic-types";
 import { Link } from "prismic-reactjs";
 
 import { DateFormatter } from "../../formatters/DateFormatter";
@@ -11,10 +11,10 @@ import { RichTextFormatter } from "../../formatters/RichTextFormatter";
 import * as S from "./styles";
 
 export type AccoladeSliceProps = {
-  slice: AccoladeSliceType;
+  slice: Case_StudyAccoladesAccoladeslicetype;
 };
 
-const AwardPlaceName = {
+const AwardPlaceName: Record<string, string> = {
   gold: "Gold",
   silver: "Silver",
   bronze: "Bronze",

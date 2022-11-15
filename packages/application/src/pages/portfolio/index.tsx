@@ -4,10 +4,7 @@ import {
   PageHeaderPartial,
   SubtitlePartial,
 } from "@bashkim-com/design-system";
-import type {
-  CaseStudyContentType,
-  PortfolioPageContentType,
-} from "@bashkim-com/prismic";
+import type { Case_Study, Portfolio_Page } from "@bashkim-com/prismic-types";
 import { GetStaticProps } from "next";
 
 import backgroundImage from "%assets/images/portfolio/background-image.jpg";
@@ -22,8 +19,8 @@ import { prismicClient } from "%libraries/prismic/client";
 import { PortfolioPageQuery } from "%libraries/prismic/queries/PortfolioPageQuery";
 
 type PortfolioPageProps = {
-  caseStudies: Array<CaseStudyContentType>;
-  portfolioPage: PortfolioPageContentType;
+  caseStudies: Array<Case_Study>;
+  portfolioPage: Portfolio_Page;
 };
 
 const PortfolioPage = ({ portfolioPage }: PortfolioPageProps) => {

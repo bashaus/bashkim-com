@@ -1,9 +1,10 @@
-import { FullTextSliceType, PrismicRichText } from "@bashkim-com/prismic";
+import { PrismicRichText } from "@bashkim-com/prismic-helpers";
+import type { Case_StudyBodyFulltextslicetype } from "@bashkim-com/prismic-types";
 
 import { FullTextPartial } from "../../partials/FullTextPartial";
 
 export type FullTextSliceProps = {
-  slice: FullTextSliceType;
+  slice: Case_StudyBodyFulltextslicetype;
 };
 
 export const FullTextSlice = ({ slice }: FullTextSliceProps) => {

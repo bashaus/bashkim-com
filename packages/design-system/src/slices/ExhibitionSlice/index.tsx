@@ -1,17 +1,18 @@
-import {
-  ExhibitionSliceType,
-  PrismicDate,
-  PrismicRichText,
-} from "@bashkim-com/prismic";
+import { PrismicDate, PrismicRichText } from "@bashkim-com/prismic-helpers";
+import type { Case_StudyExhibitionsExhibitionslicetype } from "@bashkim-com/prismic-types";
 
 import { LifespanFormatter } from "../../formatters/LifespanFormatter";
 import { RichTextFormatter } from "../../formatters/RichTextFormatter";
 
 export type ExhibitionSliceProps = {
-  slice: ExhibitionSliceType;
+  slice: Case_StudyExhibitionsExhibitionslicetype;
 };
 
 export const ExhibitionSlice = ({ slice }: ExhibitionSliceProps) => {
+  if (!slice.primary) {
+    return null;
+  }
+
   const {
     exhibition_slice_type_name: name,
     // exhibition_slice_type_link: link,

@@ -1,4 +1,4 @@
-import { ExhibitionSliceFixture } from "@bashkim-com/prismic";
+import { ExhibitionSliceFixture } from "@bashkim-com/prismic-fixtures";
 import type { Meta, Story } from "@storybook/react";
 
 import {

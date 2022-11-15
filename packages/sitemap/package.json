@@ -11,7 +11,7 @@
   "dependencies": {
     "@apollo/client": "^3.7.1",
     "@bashkim-com/config": "1.0.0",
-    "@bashkim-com/prismic": "1.0.0",
+    "@bashkim-com/prismic-helpers": "1.0.0",
     "@sentry/serverless": "^7.19.0",
     "@vendia/serverless-express": "^4.10.1",
     "apollo-link-prismic": "^1.1.1",

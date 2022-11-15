@@ -1,4 +1,4 @@
-import { CaptionedMagazineSliceFixture } from "@bashkim-com/prismic";
+import { CaptionedMagazineSliceFixture } from "@bashkim-com/prismic-fixtures";
 import type { Meta, Story } from "@storybook/react";
 
 import {

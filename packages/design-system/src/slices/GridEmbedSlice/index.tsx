@@ -1,9 +1,9 @@
-import type { GridEmbedSliceType } from "@bashkim-com/prismic";
+import type { Case_StudyBodyGridembedslicetype } from "@bashkim-com/prismic-types";
 
 import * as S from "./styles";
 
 export type GridEmbedSliceProps = {
-  slice: GridEmbedSliceType;
+  slice: Case_StudyBodyGridembedslicetype;
 };
 
 export const GridEmbedSlice = ({ slice }: GridEmbedSliceProps) => (
