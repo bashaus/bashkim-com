@@ -23,6 +23,7 @@
     "lint:scripts": "eslint --ext .js,.ts,.tsx .",
     "lint:styles": "stylelint '**/styles.ts'",
     "lint:vectors": "svgo $(find packages/*/src -name '*.svg')",
+    "prepare": "husky install",
     "test": "yarn workspaces run test"
   },
   "dependencies": {
