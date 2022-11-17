@@ -8,11 +8,7 @@
     "outDir": "./lib",
     "rootDir": "./src",
     "target": "ESNext",
-    "types": [
-      "node"
-    ]
+    "types": ["node"]
   },
-  "include": [
-    "./src"
-  ]
+  "include": ["./src"]
 }
