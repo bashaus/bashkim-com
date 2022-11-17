@@ -1,4 +1,6 @@
 import type { Home_Page } from "@bashkim-com/prismic-types";
+import { GraphQLFileLoader } from "@graphql-tools/graphql-file-loader";
+import { loadDocuments } from "@graphql-tools/load";
 import { GetStaticProps } from "next";
 import Head from "next/head";
 
@@ -10,7 +12,6 @@ import { MetaKeywords } from "%components/MetaKeywords";
 import { MetaTitle } from "%components/MetaTitle";
 import { Page } from "%components/Page";
 import { prismicClient } from "%libraries/prismic/client";
-import { HomePageQuery } from "%libraries/prismic/queries/HomePageQuery";
 
 type HomePageProps = {
   homePage: Home_Page;
@@ -64,8 +65,16 @@ const HomePage = ({ homePage }: HomePageProps) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
+  const promiseDocuments = loadDocuments(
+    ["src/data/queries/HomePageQuery.gql"],
+    {
+      loaders: [new GraphQLFileLoader()],
+    }
+  );
+
+  const [HomePageQuery] = await promiseDocuments;
   const result = await prismicClient.query({
-    query: HomePageQuery,
+    query: HomePageQuery.document,
   });
 
   return {

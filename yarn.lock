@@ -2277,7 +2277,7 @@
     "@whatwg-node/fetch" "^0.5.0"
     tslib "^2.4.0"
 
-"@graphql-tools/graphql-file-loader@^7.3.7", "@graphql-tools/graphql-file-loader@^7.5.0":
+"@graphql-tools/graphql-file-loader@^7.3.7", "@graphql-tools/graphql-file-loader@^7.5.0", "@graphql-tools/graphql-file-loader@^7.5.11":
   version "7.5.11"
   resolved "https://registry.yarnpkg.com/@graphql-tools/graphql-file-loader/-/graphql-file-loader-7.5.11.tgz#19c44ea9021d3220c7ed1cef6cfa0afbb40fd9a4"
   integrity sha512-E4/YYLlM/T/VDYJ3MfQzJSkCpnHck+xMv2R6QTjO3khUeTCWJY4qsLDPFjAWE0+Mbe9NanXi/yL8Bz0yS/usDw==
@@ -2328,7 +2328,7 @@
     p-limit "3.1.0"
     tslib "^2.4.0"
 
-"@graphql-tools/load@^7.5.5":
+"@graphql-tools/load@^7.5.5", "@graphql-tools/load@^7.8.6":
   version "7.8.6"
   resolved "https://registry.yarnpkg.com/@graphql-tools/load/-/load-7.8.6.tgz#f0c5d7852337f8c7e4b88a9a7d63255d29d98395"
   integrity sha512-yFDM5hVhV0eOom3SGyc+mjL8FvEb+0PZTZ/OSc4zrs3m/ABiQFHm2ilhzNS+OsMCpOsfGl2kXguEdt86QPp60Q==

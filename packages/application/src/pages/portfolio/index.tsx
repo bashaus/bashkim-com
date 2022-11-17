@@ -5,6 +5,8 @@ import {
   SubtitlePartial,
 } from "@bashkim-com/design-system";
 import type { Case_Study, Portfolio_Page } from "@bashkim-com/prismic-types";
+import { GraphQLFileLoader } from "@graphql-tools/graphql-file-loader";
+import { loadDocuments } from "@graphql-tools/load";
 import { GetStaticProps } from "next";
 
 import backgroundImage from "%assets/images/portfolio/background-image.jpg";
@@ -16,7 +18,6 @@ import { Page } from "%components/Page";
 import { PortfolioCategory } from "%components/PortfolioCategory";
 import { PortfolioFeaturedCaseStudies } from "%components/PortfolioFeaturedCaseStudies";
 import { prismicClient } from "%libraries/prismic/client";
-import { PortfolioPageQuery } from "%libraries/prismic/queries/PortfolioPageQuery";
 
 type PortfolioPageProps = {
   caseStudies: Array<Case_Study>;
@@ -64,8 +65,16 @@ const PortfolioPage = ({ portfolioPage }: PortfolioPageProps) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
+  const promiseDocuments = loadDocuments(
+    ["src/data/queries/PortfolioPageQuery.gql"],
+    {
+      loaders: [new GraphQLFileLoader()],
+    }
+  );
+
+  const [PortfolioPageQuery] = await promiseDocuments;
   const result = await prismicClient.query({
-    query: PortfolioPageQuery,
+    query: PortfolioPageQuery.document,
   });
 
   return {

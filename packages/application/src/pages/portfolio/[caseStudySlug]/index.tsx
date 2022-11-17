@@ -1,5 +1,7 @@
 import { Group, GroupDesign } from "@bashkim-com/design-system";
 import type { Case_Study } from "@bashkim-com/prismic-types";
+import { GraphQLFileLoader } from "@graphql-tools/graphql-file-loader";
+import { loadDocuments } from "@graphql-tools/load";
 import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from "next";
 
 import { CaseStudyAccolades } from "%components/CaseStudyAccolades";
@@ -16,9 +18,6 @@ import { Page } from "%components/Page";
 import { Slice } from "%components/Slice";
 import { NotFoundError } from "%libraries/next/errors/NotFoundError";
 import { prismicClient } from "%libraries/prismic/client";
-import { CaseStudiesQuery } from "%libraries/prismic/queries/CaseStudiesQuery";
-import { CaseStudyBodyQuery } from "%libraries/prismic/queries/CaseStudyBodyQuery";
-import { CaseStudyPageQuery } from "%libraries/prismic/queries/CaseStudyPageQuery";
 
 type CaseStudyPageProps = {
   caseStudyPage: Case_Study;
@@ -85,8 +84,16 @@ const CaseStudyPage = ({
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
+  const promiseDocuments = loadDocuments(
+    ["src/data/queries/CaseStudiesQuery.gql"],
+    {
+      loaders: [new GraphQLFileLoader()],
+    }
+  );
+
+  const [CaseStudiesQuery] = await promiseDocuments;
   const caseStudiesResult = await prismicClient.query({
-    query: CaseStudiesQuery,
+    query: CaseStudiesQuery.document,
   });
 
   return {
@@ -102,15 +109,27 @@ export const getStaticProps: GetStaticProps = async (
 ) => {
   const { caseStudySlug } = context.params;
 
+  const promiseDocuments = loadDocuments(
+    [
+      "src/data/queries/CaseStudyBodyQuery.gql",
+      "src/data/queries/CaseStudyPageQuery.gql",
+    ],
+    {
+      loaders: [new GraphQLFileLoader()],
+    }
+  );
+
+  const [CaseStudyBodyQuery, CaseStudyPageQuery] = await promiseDocuments;
+
   const caseStudyPagePromise = prismicClient.query({
-    query: CaseStudyPageQuery,
+    query: CaseStudyPageQuery.document,
     variables: {
       caseStudySlug,
     },
   });
 
   const caseStudyBodyPromise = prismicClient.query({
-    query: CaseStudyBodyQuery,
+    query: CaseStudyBodyQuery.document,
     variables: {
       caseStudySlug,
     },
