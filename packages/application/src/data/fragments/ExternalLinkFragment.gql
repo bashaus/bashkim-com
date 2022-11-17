@@ -1,0 +1,4 @@
+fragment ExternalLinkFragment on _ExternalLink {
+  url
+  target
+}

@@ -1,3 +1,5 @@
+# import "../fragments/ExternalLinkFragment.gql"
+
 query CaseStudyPage($caseStudySlug: String) {
   caseStudyPage: allCase_studys(uid: $caseStudySlug) {
     edges {
@@ -93,9 +95,4 @@ query CaseStudyPage($caseStudySlug: String) {
       }
     }
   }
-}
-
-fragment ExternalLinkFragment on _ExternalLink {
-  url
-  target
 }
