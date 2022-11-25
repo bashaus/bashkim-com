@@ -1,0 +1,14 @@
+fragment AccoladeSliceType on Case_studyAccoladesAccoladeslicetype {
+  primary {
+    accolade_slice_type_issuer
+    accolade_slice_type_description
+    accolade_slice_type_date
+  }
+  fields {
+    accolade_slice_type_award_place
+    accolade_slice_type_award_link {
+      ...ExternalLinkFragment
+    }
+    accolade_slice_type_award_category
+  }
+}

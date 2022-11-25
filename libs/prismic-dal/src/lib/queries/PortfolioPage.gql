@@ -1,0 +1,34 @@
+# import "../slice-types/PortfolioCategorySliceType.gql"
+
+query PortfolioPage {
+  portfolioPage: allPortfolio_pages {
+    edges {
+      node {
+        meta_title
+        meta_description
+        meta_keywords
+        featured {
+          featured_title
+          featured_description
+          featured_case_study {
+            ... on Case_study {
+              _meta {
+                id
+                uid
+              }
+
+              image_icon
+              image_poster
+              meta_title
+              meta_description
+            }
+          }
+        }
+
+        portfolio_categories {
+          ...PortfolioCategorySliceType
+        }
+      }
+    }
+  }
+}

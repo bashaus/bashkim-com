@@ -1,12 +1,16 @@
 {
   "recommendations": [
+    "circleci.circleci",
     "dbaeumer.vscode-eslint",
     "editorconfig.editorconfig",
+    "esbenp.prettier-vscode",
+    "firsttris.vscode-jest-runner",
     "graphql.vscode-graphql",
     "hashicorp.terraform",
     "jock.svg",
     "mhutchie.git-graph",
     "mikestead.dotenv",
+    "nrwl.angular-console",
     "styled-components.vscode-styled-components",
     "stylelint.vscode-stylelint",
     "wix.vscode-import-cost"

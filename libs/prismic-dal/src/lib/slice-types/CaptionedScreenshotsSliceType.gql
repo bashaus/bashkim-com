@@ -1,0 +1,9 @@
+fragment CaptionedScreenshotsSliceType on Case_studyBodyCaptionedscreenshotsslicetype {
+  type
+  primary {
+    captioned_screenshots_slice_type_caption
+  }
+  fields {
+    captioned_screenshots_slice_type_images
+  }
+}

@@ -13,10 +13,10 @@ executors:
       - image: "circleci/python:3.6"
 
 orbs:
-  aws-s3: circleci/aws-s3@3.0.0
+  aws-bucket: circleci/aws-s3@3.1.1
 
 jobs:
-  build-application:
+  dependencies:
     executor: exec-node
     steps:
       - checkout
@@ -31,33 +31,22 @@ jobs:
             yarn install --frozen-lockfile
 
       - run:
-          name: "yarn build"
+          name: "nx prismic-dal generate"
           command: |
-            yarn build
+            yarn nx run prismic-dal:generate:production
 
       - save_cache:
           key: yarn-lock-{{ checksum "yarn.lock" }}
           paths:
             - node_modules/
-            - packages/application/.next/cache/
-            - packages/application/node_modules/
-            - packages/config/node_modules/
-            - packages/design-system/node_modules/
-            - packages/prismic/node_modules/
-            - packages/sitemap/node_modules/
-            - packages/style-guide/node_modules/
-            - packages/webhooks/node_modules/
 
       - persist_to_workspace:
           root: ./
           paths:
             - node_modules/
-            - packages/*/node_modules/
-            - packages/application/.next/
-            - packages/*/dist/
-            - packages/*/lib/
+            - libs/prismic-dal/src/generated/
 
-  build-design-system:
+  build-serverless:
     executor: exec-node
     steps:
       - checkout
@@ -66,19 +55,69 @@ jobs:
           at: ./
 
       - run:
-          name: "storybook build"
-          working_directory: packages/design-system
+          name: "nx build sitemap"
           command: |
-            yarn storybook:build
+            yarn nx run sitemap:build:production
+
+      - run:
+          name: "nx build prismic-webhooks"
+          command: |
+            yarn nx run prismic-webhooks:build:production
 
       - persist_to_workspace:
           root: ./
           paths:
-            - packages/design-system/.storybook-static/
+            - dist/apps/prismic-webhooks/
+            - dist/apps/sitemap/
+
+  build-website:
+    executor: exec-node
+    steps:
+      - checkout
+
+      - attach_workspace:
+          at: ./
+
+      - run:
+          name: "nx website build"
+          command: |
+            yarn nx run website:build:production
+
+      - run:
+          name: "nx website export"
+          command: |
+            yarn nx run website:export:production
+
+      - store_artifacts:
+          path: dist/apps/website/exported/
+          destination: website
+
+      - persist_to_workspace:
+          root: ./
+          paths:
+            - apps/website/.next/
+            - dist/apps/website/
+
+  # build-design-system:
+  #   executor: exec-node
+  #   steps:
+  #     - checkout
+
+  #     - attach_workspace:
+  #         at: ./
+
+  #     - run:
+  #         name: "nx design-system build-storybook"
+  #         command: |
+  #           yarn nx run design-system:build-storybook:production
+
+  #     - persist_to_workspace:
+  #         root: ./
+  #         paths:
+  #           - dist/storybook/design-system/
 
   test:
     executor: exec-node
-    parallelism: 4
     steps:
       - checkout
 
@@ -88,21 +127,7 @@ jobs:
       - run:
           name: test
           command: |
-            TEST_PACKAGES=$(circleci tests glob "packages/*" | sed "s/^packages\///" | sort | uniq)
-            echo "# ALL PACKAGES"
-            echo "${TEST_PACKAGES}"
-            echo ""
-
-            echo "# RUN PACKAGES"
-            TEST_PACKAGES=$(echo "${TEST_PACKAGES}" | circleci tests split)
-            echo "${TEST_PACKAGES}"
-            echo ""
-
-            for TEST_PACKAGE in $TEST_PACKAGES; do
-              echo "# RUNNING ${TEST_PACKAGE}"
-              yarn workspace "@bashkim-com/${TEST_PACKAGE}" run test
-              echo ""
-            done
+            yarn test --ci
 
       - store_test_results:
           path: test-results/
@@ -118,37 +143,30 @@ jobs:
       - run:
           name: prettier
           command: |
-            yarn prettier --check --ignore-unknown .
+            yarn prettier --check .
 
       - run:
           name: eslint
           command: |
             mkdir -p test-results/eslint/
-            yarn eslint \
-              --format junit \
-              --ext .js,.ts,.tsx \
-              . \
-            > test-results/eslint/junit.xml
+            yarn lint:scripts
 
       - run:
           name: stylelint
           command: |
             mkdir -p test-results/stylelint/
-            yarn stylelint \
-              --custom-formatter 'node_modules/stylelint-junit-formatter' \
-              '**/styles.ts' \
-            > test-results/stylelint/junit.xml
+            yarn lint:styles
 
       - run:
           name: vectors
           command: |
-            npm run lint:vectors
+            yarn lint:vectors
             git diff --exit-code "*.svg"
 
       - store_test_results:
           path: test-results/
 
-  deploy:
+  deploy-serverless:
     executor: exec-node
     steps:
       - checkout
@@ -161,7 +179,7 @@ jobs:
           command: |
             yarn serverless deploy
 
-  synchronize-application:
+  deploy-website:
     executor: exec-python
     steps:
       - checkout
@@ -169,65 +187,73 @@ jobs:
       - attach_workspace:
           at: ./
 
-      - aws-s3/sync:
-          from: ./packages/application/dist
+      - aws-bucket/sync:
+          from: ./dist/apps/website/exported
           to: "s3://${DEPLOY_S3_WEBSITE_BUCKET}"
           arguments: |
             --cache-control "max-age=86400"
 
       - run:
-          name: invalidate website cloudfront
+          name: "cloudfront invalidate: website"
           command: |
             aws cloudfront create-invalidation \
               --distribution-id \
                 "${DEPLOY_CLOUDFRONT_WEBSITE_DISTRIBUTION}" \
               --paths "/*"
 
-  synchronize-design-system:
-    executor: exec-python
-    steps:
-      - checkout
+  # deploy-design-system:
+  #   executor: exec-python
+  #   steps:
+  #     - checkout
 
-      - attach_workspace:
-          at: ./
+  #     - attach_workspace:
+  #         at: ./
 
-      - aws-s3/sync:
-          from: ./packages/design-system/.storybook-static
-          to: "s3://${DEPLOY_S3_DESIGN_SYSTEM_BUCKET}/"
-          arguments: |
-            --cache-control "max-age=86400"
+  #     - aws-bucket/sync:
+  #         from: ./dist/storybook/design-system
+  #         to: "s3://${DEPLOY_S3_DESIGN_SYSTEM_BUCKET}/"
+  #         arguments: |
+  #           --cache-control "max-age=86400"
 
-      - run:
-          name: invalidate design system cloudfront
-          command: |
-            aws cloudfront create-invalidation \
-              --distribution-id \
-                "${DEPLOY_CLOUDFRONT_DESIGN_SYSTEM_DISTRIBUTION}" \
-              --paths "/*"
+  #     - run:
+  #         name: "invalidate cloudfront: design system"
+  #         command: |
+  #           aws cloudfront create-invalidation \
+  #             --distribution-id \
+  #               "${DEPLOY_CLOUDFRONT_DESIGN_SYSTEM_DISTRIBUTION}" \
+  #             --paths "/*"
 
 workflows:
-  version: 2
-
   publish:
     jobs:
-      - build-application
+      - dependencies
 
-      - build-design-system:
+      # - build-design-system:
+      #     requires:
+      #       - dependencies
+
+      - build-serverless:
           requires:
-            - build-application
+            - dependencies
+
+      - build-website:
+          requires:
+            - dependencies
 
       - test:
           requires:
-            - build-application
+            - dependencies
 
       - lint:
           requires:
-            - build-application
+            - dependencies
 
       - approval:
           type: approval
           requires:
-            - build-design-system
+            # - build-design-system
+            - build-serverless
+            - build-website
             - test
             - lint
           filters:
@@ -235,17 +261,17 @@ workflows:
               only:
                 - main
 
-      - deploy:
+      - deploy-serverless:
           context: bashkim-com-prod
           requires:
             - approval
 
-      - synchronize-application:
+      - deploy-website:
           context: bashkim-com-prod
           requires:
             - approval
 
-      - synchronize-design-system:
-          context: bashkim-com-prod
-          requires:
-            - approval
+      # - deploy-design-system:
+      #     context: bashkim-com-prod
+      #     requires:
+      #       - approval

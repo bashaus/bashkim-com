@@ -1,0 +1,6 @@
+fragment FullTextSliceType on Case_studyBodyFulltextslicetype {
+  type
+  primary {
+    full_text_slice_type_body
+  }
+}

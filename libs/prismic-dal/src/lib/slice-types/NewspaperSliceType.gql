@@ -1,0 +1,6 @@
+fragment NewspaperSliceType on Case_studyBodyNewspaperslicetype {
+  type
+  fields {
+    newspaper_slice_type_group
+  }
+}

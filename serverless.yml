@@ -4,7 +4,6 @@ service: bashkim-com
 variablesResolutionMode: "20210326"
 
 plugins:
-  - serverless-ignore
   - serverless-jetpack
 
 package:
@@ -23,17 +22,14 @@ custom:
     sentry:
       dsn: ${env:SENTRY_DSN, ''}
 
-    webhooks:
+    prismic-webhooks:
       circleApiKey: ${env:APP_WEBHOOKS_CIRCLE_API_KEY, ''}
       circleProjectSlug: ${env:APP_WEBHOOKS_CIRCLE_PROJECT_SLUG, ''}
       prismicSecretKey: ${env:APP_WEBHOOKS_PRISMIC_SECRET_KEY, ''}
 
   jetpack:
     preInclude:
-      - "!packages/**"
-
-  ignore:
-    file: .slsignore
+      - "!**/*"
 
 provider:
   name: aws
@@ -50,18 +46,13 @@ provider:
     SENTRY_DSN: ${self:custom.app.sentry.dsn}
 
 functions:
-  sitemap:
-    handler: packages/sitemap/dist/lambda.handler
+  Sitemap:
+    handler: dist/apps/sitemap/main.handler
     jetpack:
       roots:
-        - "packages/config"
-        - "packages/prismic-helpers"
-        - "packages/sitemap"
+        - "dist/apps/sitemap"
       preInclude:
-        - "packages/config/lib/**"
-        - "packages/prismic/lib/**"
-        - "packages/sitemap/dist/**"
-        - "packages/sitemap/public/**"
+        - "dist/apps/sitemap/**"
     events:
       - http:
           method: GET
@@ -72,17 +63,17 @@ functions:
       - http:
           method: GET
           path: /sitemap/{any+}
-  webhooks:
-    handler: packages/webhooks/dist/lambda.handler
+  PrismicWebhooks:
+    handler: dist/apps/prismic-webhooks/main.handler
     environment:
-      APP_WEBHOOKS_CIRCLE_API_KEY: ${self:custom.app.webhooks.circleApiKey}
-      APP_WEBHOOKS_CIRCLE_PROJECT_SLUG: ${self:custom.app.webhooks.circleProjectSlug}
-      APP_WEBHOOKS_PRISMIC_SECRET_KEY: ${self:custom.app.webhooks.prismicSecretKey}
+      APP_WEBHOOKS_CIRCLE_API_KEY: ${self:custom.app.prismic-webhooks.circleApiKey}
+      APP_WEBHOOKS_CIRCLE_PROJECT_SLUG: ${self:custom.app.prismic-webhooks.circleProjectSlug}
+      APP_WEBHOOKS_PRISMIC_SECRET_KEY: ${self:custom.app.prismic-webhooks.prismicSecretKey}
     jetpack:
       roots:
-        - "packages/webhooks"
+        - "dist/apps/prismic-webhooks"
       preInclude:
-        - "packages/webhooks/dist/**"
+        - "dist/apps/prismic-webhooks/**"
     events:
       - http:
           method: ANY
@@ -91,7 +82,7 @@ functions:
 resources:
   Description: bashkim-com
   extensions:
-    WebhooksLogGroup:
+    PrismicWebhooksLogGroup:
       Properties:
         RetentionInDays: "3"
     SitemapLogGroup:

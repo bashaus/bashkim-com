@@ -1,9 +1,7 @@
-node_modules
+# Specific folders
+/coverage
+/dist
 
-packages/*/dist/
-packages/*/lib/
-packages/*/node_modules/
-
-packages/application/.next
-packages/design-system/.storybook-static
-packages/application/libraries/turn
+# Folder names
+.next/
+generated/
