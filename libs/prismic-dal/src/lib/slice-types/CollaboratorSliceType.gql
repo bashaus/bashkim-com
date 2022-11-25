@@ -1,0 +1,14 @@
+fragment CollaboratorSliceType on Case_studyCollaboratorsCollaboratorslicetype {
+  primary {
+    collaborator_slice_type_peer {
+      ... on Peer {
+        peer_name
+        peer_website {
+          ...ExternalLinkFragment
+        }
+      }
+    }
+    collaborator_slice_type_role
+    collaborator_slice_type_company
+  }
+}

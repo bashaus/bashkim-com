@@ -1,0 +1,6 @@
+fragment GridEmbedSliceType on Case_studyBodyGridembedslicetype {
+  type
+  fields {
+    grid_embed_slice_type_embed
+  }
+}

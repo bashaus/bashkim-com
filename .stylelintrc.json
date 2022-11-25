@@ -1,7 +1,6 @@
 {
-  "extends": ["stylelint-config-styled-components"],
-  "processors": ["stylelint-processor-styled-components"],
-  "plugins": ["stylelint-prettier"],
+  "plugins": ["stylelint-prettier", "stylelint-scss"],
+  "customSyntax": "postcss-scss",
   "rules": {
     "prettier/prettier": true
   }

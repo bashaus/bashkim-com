@@ -1,0 +1,9 @@
+fragment CaptionedMagazineSliceType on Case_studyBodyCaptionedmagazineslicetype {
+  type
+  primary {
+    captioned_magazine_slice_type_caption
+  }
+  fields {
+    captioned_magazine_slice_type_images
+  }
+}

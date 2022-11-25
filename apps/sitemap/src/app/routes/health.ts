@@ -1,0 +1,15 @@
+import { Response } from "ts-json-api";
+import { Router } from "express";
+
+export const router = Router();
+
+router.get("/", async (_req, res) => {
+  const response: Response = {
+    jsonapi: {
+      version: "1.1",
+    },
+  };
+
+  res.status(200);
+  res.json(response);
+});

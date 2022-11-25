@@ -1,0 +1,26 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@bashkim-com/design-system": ["libs/design-system/src/index.ts"],
+      "@bashkim-com/prismic-dal": ["libs/prismic-dal/src/index.ts"],
+      "@bashkim-com/prismic-fixtures": ["libs/prismic-fixtures/src/index.ts"],
+      "@bashkim-com/prismic-helpers": ["libs/prismic-helpers/src/index.ts"],
+      "@bashkim-com/style-guide": ["libs/style-guide/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

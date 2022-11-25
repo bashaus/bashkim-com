@@ -1,0 +1,7 @@
+fragment CaptionedVideoSliceType on Case_studyBodyCaptionedvideoslicetype {
+  type
+  primary {
+    captioned_video_slice_type_caption
+    captioned_video_slice_type_video
+  }
+}

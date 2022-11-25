@@ -1,0 +1,13 @@
+# import "../fragments/ExternalLinkFragment.gql"
+
+fragment ExhibitionSliceType on Case_studyExhibitionsExhibitionslicetype {
+  primary {
+    exhibition_slice_type_name
+    exhibition_slice_type_link {
+      ...ExternalLinkFragment
+    }
+    exhibition_slice_type_opening_date
+    exhibition_slice_type_closing_date
+    exhibition_slice_type_location
+  }
+}

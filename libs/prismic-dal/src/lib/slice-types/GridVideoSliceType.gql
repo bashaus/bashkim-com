@@ -1,0 +1,8 @@
+fragment GridVideoSliceType on Case_studyBodyGridvideoslicetype {
+  type
+  fields {
+    grid_video_slice_type_poster
+    grid_video_slice_type_description
+    grid_video_slice_type_video
+  }
+}
