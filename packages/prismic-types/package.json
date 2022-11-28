@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "@bashkim-com/config": "1.0.0",
-    "@graphql-codegen/cli": "^2.14.0",
+    "@graphql-codegen/cli": "^2.14.1",
     "@graphql-codegen/typescript": "^2.8.2",
     "codegen-prismic-fetch": "^1.0.5",
     "graphql": "^16.6.0",
