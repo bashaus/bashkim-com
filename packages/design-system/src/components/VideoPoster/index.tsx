@@ -39,7 +39,6 @@ export const VideoPoster = ({
   return (
     <S.Poster {...restProps}>
       <S.PosterImage src={imageUrl} alt={title} onClick={handleModalOpen} />
-      {/* <S.PosterPlayIcon /> */}
 
       <VideoModal
         isOpen={isOpen}

@@ -1,5 +1,5 @@
 ---
-name: Static analysis
+name: CodeQL
 
 on:
   push:
@@ -8,7 +8,8 @@ on:
   pull_request:
     branches:
       - main
-      - "!dependabot/**"
+    branches-ignore:
+      - "dependabot/**"
 
 jobs:
   analyze:

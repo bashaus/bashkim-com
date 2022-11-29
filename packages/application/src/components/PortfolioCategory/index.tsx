@@ -32,7 +32,7 @@ export const PortfolioCategory = ({
 
         return (
           <S.CaseStudy key={caseStudy._meta.uid}>
-            <PortfolioCaseStudyBrick caseStudy={caseStudy as Case_Study} />
+            <PortfolioCaseStudyBrick caseStudy={caseStudy} />
           </S.CaseStudy>
         );
       })}
