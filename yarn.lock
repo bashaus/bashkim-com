@@ -16123,10 +16123,10 @@ styled-jsx@5.0.7:
   resolved "https://registry.yarnpkg.com/styled-jsx/-/styled-jsx-5.0.7.tgz#be44afc53771b983769ac654d355ca8d019dff48"
   integrity sha512-b3sUzamS086YLRuvnaDigdAewz1/EFYlHpYBP5mZovKEdQQOIIYq8lApylub3HHZ6xFjV051kkGU7cudJmrXEA==
 
-styled-reset@^4.4.2:
-  version "4.4.2"
-  resolved "https://registry.yarnpkg.com/styled-reset/-/styled-reset-4.4.2.tgz#4da1becb2f6d22a2b22c7ee7ca09b739fe6a685f"
-  integrity sha512-VzVhEZHpO/CD/F5ZllqTAY+GTaKlNDZt5mTrtPf/kXZSe85+wMkhRIiPARgvCP9/HQMk+ZGaEWk1IkdP2SYAUQ==
+styled-reset@^4.4.3:
+  version "4.4.3"
+  resolved "https://registry.yarnpkg.com/styled-reset/-/styled-reset-4.4.3.tgz#a58a308bae0f247e53212d1f2f01e36e4baafbb2"
+  integrity sha512-iGfw1PS0v81nFeK57QeWExRqeuwQnsU6kdmiPrZjIs49KSrNOn44ivApLgeErK6YGuEFYPLoBu+WolmUQeHKBg==
 
 stylelint-config-styled-components@^0.1.1:
   version "0.1.1"
