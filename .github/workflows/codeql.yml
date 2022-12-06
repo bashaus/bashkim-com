@@ -6,13 +6,14 @@ on:
     branches:
       - main
   pull_request:
-    branches-ignore:
-      - dependabot/**
+    branches:
+      - main
 
 jobs:
   analyze:
     name: Analyze
     runs-on: ubuntu-latest
+    if: ${{ github.actor != 'dependabot[bot]' }}
     permissions:
       actions: read
       contents: read
