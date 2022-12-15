@@ -23,8 +23,12 @@ const config: StorybookConfig = {
   addons: [...(rootMain.addons || []), "@nrwl/react/plugins/storybook"],
 
   webpackFinal: async (config, options) => {
+    const packageWebpackConfig = {};
+
     if (rootMain.webpackFinal) {
-      config = merge(await rootMain.webpackFinal(config, options), {});
+      const rootWebpackConfig = await rootMain.webpackFinal(config, options);
+
+      config = merge(rootWebpackConfig, packageWebpackConfig);
     }
 
     return config;

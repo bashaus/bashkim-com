@@ -98,23 +98,23 @@ jobs:
             - apps/website/.next/
             - dist/apps/website/
 
-  # build-design-system:
-  #   executor: exec-node
-  #   steps:
-  #     - checkout
+  build-design-system:
+    executor: exec-node
+    steps:
+      - checkout
 
-  #     - attach_workspace:
-  #         at: ./
+      - attach_workspace:
+          at: ./
 
-  #     - run:
-  #         name: "nx design-system build-storybook"
-  #         command: |
-  #           yarn nx run design-system:build-storybook:production
+      - run:
+          name: "nx design-system build-storybook"
+          command: |
+            yarn nx run design-system:build-storybook:production
 
-  #     - persist_to_workspace:
-  #         root: ./
-  #         paths:
-  #           - dist/storybook/design-system/
+      - persist_to_workspace:
+          root: ./
+          paths:
+            - dist/storybook/design-system/
 
   test:
     executor: exec-node
@@ -201,36 +201,36 @@ jobs:
                 "${DEPLOY_CLOUDFRONT_WEBSITE_DISTRIBUTION}" \
               --paths "/*"
 
-  # deploy-design-system:
-  #   executor: exec-python
-  #   steps:
-  #     - checkout
+  deploy-design-system:
+    executor: exec-python
+    steps:
+      - checkout
 
-  #     - attach_workspace:
-  #         at: ./
+      - attach_workspace:
+          at: ./
 
-  #     - aws-bucket/sync:
-  #         from: ./dist/storybook/design-system
-  #         to: "s3://${DEPLOY_S3_DESIGN_SYSTEM_BUCKET}/"
-  #         arguments: |
-  #           --cache-control "max-age=86400"
+      - aws-bucket/sync:
+          from: ./dist/storybook/design-system
+          to: "s3://${DEPLOY_S3_DESIGN_SYSTEM_BUCKET}/"
+          arguments: |
+            --cache-control "max-age=86400"
 
-  #     - run:
-  #         name: "invalidate cloudfront: design system"
-  #         command: |
-  #           aws cloudfront create-invalidation \
-  #             --distribution-id \
-  #               "${DEPLOY_CLOUDFRONT_DESIGN_SYSTEM_DISTRIBUTION}" \
-  #             --paths "/*"
+      - run:
+          name: "invalidate cloudfront: design system"
+          command: |
+            aws cloudfront create-invalidation \
+              --distribution-id \
+                "${DEPLOY_CLOUDFRONT_DESIGN_SYSTEM_DISTRIBUTION}" \
+              --paths "/*"
 
 workflows:
   publish:
     jobs:
       - dependencies
 
-      # - build-design-system:
-      #     requires:
-      #       - dependencies
+      - build-design-system:
+          requires:
+            - dependencies
 
       - build-serverless:
           requires:
@@ -251,7 +251,7 @@ workflows:
       - approval:
           type: approval
           requires:
-            # - build-design-system
+            - build-design-system
             - build-serverless
             - build-website
             - test
@@ -271,7 +271,7 @@ workflows:
           requires:
             - approval
 
-      # - deploy-design-system:
-      #     context: bashkim-com-prod
-      #     requires:
-      #       - approval
+      - deploy-design-system:
+          context: bashkim-com-prod
+          requires:
+            - approval
