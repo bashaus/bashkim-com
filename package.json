@@ -95,7 +95,7 @@
     "@typescript-eslint/parser": "^5.46.1",
     "aws-lambda": "^1.0.6",
     "babel-jest": "28.1.1",
-    "babel-loader": "8.1.0",
+    "babel-loader": "9.1.0",
     "codegen-prismic-fetch": "^1.0.5",
     "css-loader": "^6.4.0",
     "cypress": "^11.0.0",
