@@ -1,7 +1,7 @@
 # import "../slice-types/PortfolioCategorySliceType.gql"
 
 query PortfolioPage {
-  portfolioPage: allPortfolio_pages {
+  portfolioPage: allPortfolio_pages(first: 1) {
     edges {
       node {
         meta_title

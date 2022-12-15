@@ -1,18 +1,45 @@
-import { UrlType } from "../templates/sitemap";
+import {
+  SitemapPagesDocument,
+  SitemapPagesQuery,
+} from "@bashkim-com/prismic-dal";
+import { PrismicDate } from "@bashkim-com/prismic-helpers";
 
-export const PagesSitemap = async (): Promise<Array<UrlType>> => {
+import { prismicClient } from "../libraries/prismic/client";
+import type { UrlType } from "../templates/sitemap";
+
+export const PagesSitemap = async () => {
   const urlset: Array<UrlType> = [];
   const now = new Date().toISOString();
   const baseHref = process.env.APP_SITEMAP_BASE_HREF;
 
+  const pageQuery = prismicClient.query<SitemapPagesQuery>({
+    query: SitemapPagesDocument,
+  });
+
+  const [pagesResult] = await Promise.all([pageQuery]);
+
+  const { node: homePage } = pagesResult.data.homePage.edges[0];
+  const { node: portfolioPage } = pagesResult.data.portfolioPage.edges[0];
+
   urlset.push({
     url: {
       loc: `${baseHref}/`,
-      lastmod: now,
-      changefreq: "monthly",
-      priority: "1.0",
+      lastmod: PrismicDate(homePage._meta.lastPublicationDate).toISOString(),
+      changefreq: homePage.sitemap_changefreq,
+      priority: homePage.sitemap_priority,
     },
-  } as UrlType);
+  });
+
+  urlset.push({
+    url: {
+      loc: `${baseHref}/portfolio/`,
+      lastmod: PrismicDate(
+        portfolioPage._meta.lastPublicationDate
+      ).toISOString(),
+      changefreq: portfolioPage.sitemap_changefreq,
+      priority: portfolioPage.sitemap_priority,
+    },
+  });
 
   urlset.push({
     url: {
@@ -21,16 +48,16 @@ export const PagesSitemap = async (): Promise<Array<UrlType>> => {
       changefreq: "monthly",
       priority: "1.0",
     },
-  } as UrlType);
+  });
 
   urlset.push({
     url: {
       loc: `${baseHref}/cookies/`,
       lastmod: now,
       changefreq: "monthly",
-      priority: "1.0",
+      priority: "0.1",
     },
-  } as UrlType);
+  });
 
   return urlset;
 };

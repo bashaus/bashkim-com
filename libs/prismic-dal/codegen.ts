@@ -22,6 +22,9 @@ const codegenConfig: CodegenConfig = {
       },
     },
   },
+  hooks: {
+    afterAllFileWrite: ["npx prettier --write"],
+  },
 };
 
 export default codegenConfig;

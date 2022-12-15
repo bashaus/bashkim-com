@@ -1,0 +1,27 @@
+query SitemapPages {
+  homePage: allHome_pages(first: 1) {
+    edges {
+      node {
+        _meta {
+          uid
+          lastPublicationDate
+        }
+        sitemap_changefreq
+        sitemap_priority
+      }
+    }
+  }
+
+  portfolioPage: allPortfolio_pages(first: 1) {
+    edges {
+      node {
+        _meta {
+          uid
+          lastPublicationDate
+        }
+        sitemap_changefreq
+        sitemap_priority
+      }
+    }
+  }
+}
