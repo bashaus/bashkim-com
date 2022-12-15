@@ -3,14 +3,12 @@ version: 2.1
 
 executors:
   exec-node:
-    working_directory: ~/repo
     docker:
-      - image: node:18.12.0
+      - image: cimg/node:18.12.0
 
   exec-python:
-    working_directory: ~/repo
     docker:
-      - image: "circleci/python:3.6"
+      - image: cimg/python:3.11.1
 
 orbs:
   aws-bucket: circleci/aws-s3@3.0.0
@@ -21,9 +19,9 @@ jobs:
     steps:
       - checkout
 
-      - restore_cache:
-          keys:
-            - yarn-lock-{{ checksum "yarn.lock" }}
+      # - restore_cache:
+      #     keys:
+      #       - yarn-lock-{{ checksum "yarn.lock" }}
 
       - run:
           name: yarn install
@@ -88,15 +86,21 @@ jobs:
           command: |
             yarn nx run website:export:production
 
-      - store_artifacts:
-          path: dist/apps/website/exported/
-          destination: website
-
       - persist_to_workspace:
           root: ./
           paths:
             - apps/website/.next/
             - dist/apps/website/
+
+      - run:
+          name: "zip website"
+          working_directory: ./dist/apps
+          command: |
+            zip -r website.zip website/exported
+
+      - store_artifacts:
+          path: dist/apps/website.zip
+          destination: website.zip
 
   build-design-system:
     executor: exec-node
@@ -115,6 +119,16 @@ jobs:
           root: ./
           paths:
             - dist/storybook/design-system/
+
+      - run:
+          name: "zip design-system"
+          working_directory: ./dist/storybook
+          command: |
+            zip -r design-system.zip design-system
+
+      - store_artifacts:
+          path: dist/storybook/design-system.zip
+          destination: design-system.zip
 
   test:
     executor: exec-node
