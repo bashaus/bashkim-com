@@ -15,7 +15,7 @@ export const MetaImage = ({ url, width, height }: MetaImageProps) => {
     <Head>
       <meta key="MetaImage.twitter" name="twitter:image" content={url} />
       <meta key="MetaImage.opengraph" property="og:image" content={url} />
-      {width && height && (
+      {!!width && !!height && (
         <>
           <meta
             key="MetaImage.opengraph.width"
