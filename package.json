@@ -24,7 +24,7 @@
     "@apollo/client": "^3.7.1",
     "@nrwl/next": "15.2.1",
     "@primer/octicons-react": "^17.9.0",
-    "@sentry/browser": "^7.23.0",
+    "@sentry/browser": "^7.26.0",
     "@sentry/serverless": "^7.21.1",
     "@sentry/tracing": "^7.24.2",
     "@vendia/serverless-express": "^4.10.1",
