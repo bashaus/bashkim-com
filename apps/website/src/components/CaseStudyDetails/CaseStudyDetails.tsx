@@ -2,8 +2,8 @@ import {
   LifespanFormatter,
   RichTextFormatter,
 } from "@bashkim-com/design-system";
-import { PrismicDate } from "@bashkim-com/prismic-helpers";
 import type { Case_Study } from "@bashkim-com/prismic-dal";
+import { PrismicDate } from "@bashkim-com/prismic-helpers";
 
 import * as S from "./CaseStudyDetails.styles";
 

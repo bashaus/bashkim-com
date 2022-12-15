@@ -1,5 +1,5 @@
-import { PrismicRichText } from "@bashkim-com/prismic-helpers";
 import type { Case_StudyBodyCaptionedvideoslicetype } from "@bashkim-com/prismic-dal";
+import { PrismicRichText } from "@bashkim-com/prismic-helpers";
 
 import { VideoPlayer } from "../../components/VideoPlayer/VideoPlayer";
 import { RichTextFormatter } from "../../formatters/RichTextFormatter/RichTextFormatter";

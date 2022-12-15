@@ -1,5 +1,5 @@
-import { PrismicRichText } from "@bashkim-com/prismic-helpers";
 import type { Case_StudyBodyFulltextslicetype } from "@bashkim-com/prismic-dal";
+import { PrismicRichText } from "@bashkim-com/prismic-helpers";
 
 import { FullTextPartial } from "../../partials/FullTextPartial/FullTextPartial";
 

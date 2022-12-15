@@ -4,7 +4,6 @@ import { ComponentPropsWithoutRef } from "react";
 
 import { SiteSettingsAppearance } from "../SiteSettingsAppearance/SiteSettingsAppearance";
 import { SiteSettingsGridLines } from "../SiteSettingsGridLines/SiteSettingsGridLines";
-
 import * as S from "./SiteSettings.styles";
 
 export type SiteSettingsProps = {

@@ -9,7 +9,6 @@ import JavaLogoImage from "../../assets/images/about/certifications/java/logo.jp
 import JavaOcaImage from "../../assets/images/about/certifications/java/oca.png";
 import PhpLogoImage from "../../assets/images/about/certifications/php/logo.png";
 import PhpZceImage from "../../assets/images/about/certifications/php/zce.jpg";
-
 import * as S from "./AboutCertifications.styles";
 
 export const AboutCertifications = () => (

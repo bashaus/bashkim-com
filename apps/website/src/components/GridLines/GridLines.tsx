@@ -1,5 +1,4 @@
 import { useSettings } from "../../contexts/Settings/Settings.context";
-
 import * as S from "./GridLines.styles";
 
 export const GridLines = () => {

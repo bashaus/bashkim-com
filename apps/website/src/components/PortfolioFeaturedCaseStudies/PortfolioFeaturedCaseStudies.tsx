@@ -1,9 +1,9 @@
 import { RichTextFormatter, Tile } from "@bashkim-com/design-system";
-import { PrismicRichText } from "@bashkim-com/prismic-helpers";
 import type {
   Case_Study,
   Portfolio_PageFeatured,
 } from "@bashkim-com/prismic-dal";
+import { PrismicRichText } from "@bashkim-com/prismic-helpers";
 import Link from "next/link";
 
 import * as S from "./PortfolioFeaturedCaseStudies.styles";

@@ -9,10 +9,6 @@ export const normalizePage = (display: TurnDisplay, page: number): number => {
     case TurnDisplay.DOUBLE: {
       return Math.max(1, page - (page % 2));
     }
-
-    default: {
-      throw new Error("Unknown display");
-    }
   }
 };
 
@@ -28,10 +24,6 @@ export const convertSpreadToPage = (
     case TurnDisplay.DOUBLE: {
       return Math.max(1, (spread - 1) * 2);
     }
-
-    default: {
-      throw new Error("Unknown display");
-    }
   }
 };
 
@@ -46,10 +38,6 @@ export const convertPageToSpread = (
 
     case TurnDisplay.DOUBLE: {
       return Math.floor(page / 2) + 1;
-    }
-
-    default: {
-      throw new Error("Unknown display");
     }
   }
 };
@@ -72,10 +60,6 @@ export const convertSpreadToPageNumbers = (
       }
 
       return [page, page + 1];
-    }
-
-    default: {
-      throw new Error("Unknown display");
     }
   }
 };

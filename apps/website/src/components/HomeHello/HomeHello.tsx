@@ -4,7 +4,6 @@ import Link from "next/link";
 import BackgroundImage from "../../assets/images/home/background-image.jpg";
 import { ReactComponent as PortfolioVector } from "../../assets/vectors/icons/portfolio.svg";
 import { ReactComponent as GitHubVector } from "../../assets/vectors/social/github.svg";
-
 import * as S from "./HomeHello.styles";
 
 export const HomeHello = () => (

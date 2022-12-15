@@ -1,5 +1,5 @@
-import { Response } from "ts-json-api";
 import { Router } from "express";
+import { Response } from "ts-json-api";
 
 export const router = Router();
 

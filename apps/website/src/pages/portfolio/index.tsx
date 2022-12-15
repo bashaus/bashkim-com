@@ -6,9 +6,9 @@ import {
 } from "@bashkim-com/design-system";
 import {
   Case_Study,
+  Portfolio_Page,
   PortfolioPageDocument,
   PortfolioPageQuery,
-  Portfolio_Page,
 } from "@bashkim-com/prismic-dal";
 import { GetStaticProps } from "next";
 

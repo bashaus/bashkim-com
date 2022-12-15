@@ -1,8 +1,8 @@
-import { useLinkResolver } from "@bashkim-com/prismic-helpers";
 import type {
   Case_StudyCollaboratorsCollaboratorslicetype,
   Peer,
 } from "@bashkim-com/prismic-dal";
+import { useLinkResolver } from "@bashkim-com/prismic-helpers";
 import { Link } from "prismic-reactjs";
 
 export type CollaboratorSliceProps = {

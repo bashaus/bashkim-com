@@ -2,7 +2,6 @@ import { memo, useCallback, useEffect, useRef } from "react";
 
 import { NavigationActionSetScrollAtTop } from "../../contexts/Navigation/Navigation.actions";
 import { useNavigation } from "../../contexts/Navigation/Navigation.context";
-
 import styles from "./HeaderIntersection.module.scss";
 
 export const HeaderIntersection = memo(function HeaderIntersection() {

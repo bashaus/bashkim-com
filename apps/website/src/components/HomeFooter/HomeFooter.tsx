@@ -7,7 +7,6 @@ import Link from "next/link";
 
 import PortfolioBackground from "../../assets/images/home/portfolio-background.jpg";
 import PracticeBackground from "../../assets/images/home/practice-background.jpg";
-
 import * as S from "./HomeFooter.styles";
 
 export const HomeFooter = () => (

@@ -1,5 +1,5 @@
-import { PrismicDate, PrismicRichText } from "@bashkim-com/prismic-helpers";
 import type { Case_StudyExhibitionsExhibitionslicetype } from "@bashkim-com/prismic-dal";
+import { PrismicDate, PrismicRichText } from "@bashkim-com/prismic-helpers";
 
 import { LifespanFormatter } from "../../formatters/LifespanFormatter/LifespanFormatter";
 import { RichTextFormatter } from "../../formatters/RichTextFormatter/RichTextFormatter";

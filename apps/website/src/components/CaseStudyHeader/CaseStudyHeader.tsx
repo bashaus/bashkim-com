@@ -9,7 +9,6 @@ import type { Case_Study } from "@bashkim-com/prismic-dal";
 
 import { CaseStudyDetails } from "../CaseStudyDetails/CaseStudyDetails";
 import { CaseStudyTechnologies } from "../CaseStudyTechnologies/CaseStudyTechnologies";
-
 import * as S from "./CaseStudyHeader.styles";
 
 export type CaseStudyHeaderProps = {

@@ -1,5 +1,5 @@
-import { PrismicRichText } from "@bashkim-com/prismic-helpers";
 import type { Case_StudyBodySubtitleslicetype } from "@bashkim-com/prismic-dal";
+import { PrismicRichText } from "@bashkim-com/prismic-helpers";
 
 import { SubtitlePartial } from "../../partials/SubtitlePartial/SubtitlePartial";
 

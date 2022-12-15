@@ -3,7 +3,6 @@ import Link from "next/link";
 import { ReactNode } from "react";
 
 import { MenuButtonSettings } from "../MenuButtonSettings/MenuButtonSettings";
-
 import * as S from "./Menu.styles";
 
 export type MenuProps = {

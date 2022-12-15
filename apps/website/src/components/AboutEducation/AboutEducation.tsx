@@ -9,7 +9,6 @@ import QutGardensPointImage from "../../assets/images/about/education/qut/garden
 import QutLogoImage from "../../assets/images/about/education/qut/logo.jpg";
 import UqBackgroundImage from "../../assets/images/about/education/uq/background.jpg";
 import UqLogoImage from "../../assets/images/about/education/uq/logo.png";
-
 import * as S from "./AboutEducation.styles";
 
 export const AboutEducation = () => (

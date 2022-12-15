@@ -6,7 +6,6 @@ import {
 
 import HeaderDesktopImage from "../../assets/images/cookies/header-desktop.jpg";
 import HeaderMobileImage from "../../assets/images/cookies/header-mobile.jpg";
-
 import * as S from "./CookiesDetails.styles";
 
 export const CookiesDetails = () => (

@@ -1,12 +1,12 @@
 import { Group, GroupDesign } from "@bashkim-com/design-system";
 import {
+  Case_Study,
   CaseStudiesDocument,
   CaseStudiesQuery,
   CaseStudyBodyDocument,
   CaseStudyBodyQuery,
   CaseStudyPageDocument,
   CaseStudyPageQuery,
-  Case_Study,
 } from "@bashkim-com/prismic-dal";
 import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from "next";
 

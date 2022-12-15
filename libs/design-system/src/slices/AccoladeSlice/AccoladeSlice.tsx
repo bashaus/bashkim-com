@@ -1,9 +1,9 @@
+import type { Case_StudyAccoladesAccoladeslicetype } from "@bashkim-com/prismic-dal";
 import {
   PrismicDate,
   PrismicRichText,
   useLinkResolver,
 } from "@bashkim-com/prismic-helpers";
-import type { Case_StudyAccoladesAccoladeslicetype } from "@bashkim-com/prismic-dal";
 import { Link } from "prismic-reactjs";
 
 import { DateFormatter } from "../../formatters/DateFormatter/DateFormatter";

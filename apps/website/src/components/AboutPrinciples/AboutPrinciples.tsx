@@ -8,7 +8,6 @@ import { ReactComponent as SecurelyVector } from "../../assets/vectors/principle
 import { ReactComponent as ToSatisfactionVector } from "../../assets/vectors/principles/to-satisfaction.svg";
 import { ReactComponent as ToSpecificationVector } from "../../assets/vectors/principles/to-specification.svg";
 import { ReactComponent as WithinBudgetVector } from "../../assets/vectors/principles/within-budget.svg";
-
 import * as S from "./AboutPrinciples.styles";
 
 export const AboutPrinciples = () => (

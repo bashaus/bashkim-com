@@ -3,7 +3,6 @@ import { useCallback } from "react";
 
 import { SettingsActionToggleGridLines } from "../../contexts/Settings/Settings.actions";
 import { useSettings } from "../../contexts/Settings/Settings.context";
-
 import * as S from "./SiteSettingsGridLines.styles";
 
 export const SiteSettingsGridLines = () => {

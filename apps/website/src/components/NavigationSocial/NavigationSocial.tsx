@@ -2,7 +2,6 @@ import { ReactComponent as GitHubVector } from "../../assets/vectors/social/gith
 import { ReactComponent as LinkedInVector } from "../../assets/vectors/social/linked-in.svg";
 import { ReactComponent as MediumVector } from "../../assets/vectors/social/medium.svg";
 import { ReactComponent as StackOverflowVector } from "../../assets/vectors/social/stack-overflow.svg";
-
 import * as S from "./NavigationSocial.styles";
 
 export const NavigationSocial = () => (

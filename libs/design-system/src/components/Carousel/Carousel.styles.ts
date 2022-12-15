@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 import { slickCarouselStyles } from "../../libraries/slick/styles";
+
 export * from "./Carousel.arrow.styles";
 export * from "./Carousel.dots.styles";
 

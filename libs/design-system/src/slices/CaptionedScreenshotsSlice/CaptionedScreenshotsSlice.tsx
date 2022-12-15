@@ -1,5 +1,5 @@
-import { PrismicRichText } from "@bashkim-com/prismic-helpers";
 import type { Case_StudyBodyCaptionedscreenshotsslicetype } from "@bashkim-com/prismic-dal";
+import { PrismicRichText } from "@bashkim-com/prismic-helpers";
 import { DeviceDesktopIcon, DeviceMobileIcon } from "@primer/octicons-react";
 import { ChangeEvent, useCallback, useState } from "react";
 

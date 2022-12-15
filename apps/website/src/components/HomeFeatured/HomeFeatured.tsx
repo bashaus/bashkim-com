@@ -1,9 +1,9 @@
 import { CallToAction, FullBannerPartial } from "@bashkim-com/design-system";
-import { useLinkResolver } from "@bashkim-com/prismic-helpers";
 import type {
   Case_Study,
   Home_PageFeatured_Case_Studies,
 } from "@bashkim-com/prismic-dal";
+import { useLinkResolver } from "@bashkim-com/prismic-helpers";
 import Link from "next/link";
 
 export type HomeFeaturedProps = {

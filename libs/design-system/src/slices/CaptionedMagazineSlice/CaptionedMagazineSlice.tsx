@@ -1,5 +1,5 @@
-import { PrismicRichText } from "@bashkim-com/prismic-helpers";
 import type { Case_StudyBodyCaptionedmagazineslicetype } from "@bashkim-com/prismic-dal";
+import { PrismicRichText } from "@bashkim-com/prismic-helpers";
 import { DragEvent, FormEvent, useCallback, useState } from "react";
 
 import { Magazine } from "../../components/Magazine/Magazine";

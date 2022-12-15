@@ -1,5 +1,5 @@
-import { PrismicRichText } from "@bashkim-com/prismic-helpers";
 import type { Case_StudyBodyNewspaperslicetype } from "@bashkim-com/prismic-dal";
+import { PrismicRichText } from "@bashkim-com/prismic-helpers";
 
 import { RichTextFormatter } from "../../formatters/RichTextFormatter/RichTextFormatter";
 import { NewspaperPartial } from "../../partials/NewspaperPartial/NewspaperPartial";

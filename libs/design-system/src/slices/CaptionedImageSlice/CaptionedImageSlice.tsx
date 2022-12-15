@@ -1,5 +1,5 @@
-import { PrismicRichText } from "@bashkim-com/prismic-helpers";
 import type { Case_StudyBodyCaptionedimageslicetype } from "@bashkim-com/prismic-dal";
+import { PrismicRichText } from "@bashkim-com/prismic-helpers";
 
 import { RichTextFormatter } from "../../formatters/RichTextFormatter/RichTextFormatter";
 import { CaptionedPartial } from "../../partials/CaptionedPartial/CaptionedPartial";

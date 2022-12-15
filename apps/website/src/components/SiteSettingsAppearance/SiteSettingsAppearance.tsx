@@ -4,7 +4,6 @@ import { useCallback } from "react";
 import { SettingsActionToggleAppearance } from "../../contexts/Settings/Settings.actions";
 import { useSettings } from "../../contexts/Settings/Settings.context";
 import { Appearance } from "../../contexts/Settings/Settings.types";
-
 import * as S from "./SiteSettingsAppearance.styles";
 
 export const SiteSettingsAppearance = () => {

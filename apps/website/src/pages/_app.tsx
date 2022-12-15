@@ -2,17 +2,14 @@ import "../libraries/sentry/init";
 
 import { LinkResolverContext } from "@bashkim-com/prismic-helpers";
 import { Normalize } from "@bashkim-com/style-guide";
-
-import { useEffect } from "react";
 import { AppProps } from "next/app";
 import Head from "next/head";
+import { useEffect } from "react";
 
 import { GoogleAnalytics } from "../components/GoogleAnalytics/GoogleAnalytics";
 import { SentryBoundary } from "../components/SentryBoundary/SentryBoundary";
-
 import { NavigationProvider } from "../contexts/Navigation/Navigation.provider";
 import { SettingsProvider } from "../contexts/Settings/Settings.provider";
-
 import { PrismicLinkResolver } from "../libraries/prismic/PrismicLinkResolver";
 
 function MyApplication({ Component, pageProps }: AppProps) {

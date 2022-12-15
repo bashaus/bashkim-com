@@ -1,10 +1,9 @@
 import { ReactNode } from "react";
 
+import { useNavigation } from "../../contexts/Navigation/Navigation.context";
 import { Menu } from "../Menu/Menu";
 import { MenuButtonSettings } from "../MenuButtonSettings/MenuButtonSettings";
 import { Navigation } from "../Navigation/Navigation";
-import { useNavigation } from "../../contexts/Navigation/Navigation.context";
-
 import * as S from "./Header.styles";
 
 export type HeaderProps = {

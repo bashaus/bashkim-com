@@ -1,12 +1,11 @@
 import { SubtitlePartial } from "@bashkim-com/design-system";
-import { PrismicRichText } from "@bashkim-com/prismic-helpers";
 import type {
   Case_Study,
   Portfolio_PagePortfolio_CategoriesPortfoliocategoryslicetype,
 } from "@bashkim-com/prismic-dal";
+import { PrismicRichText } from "@bashkim-com/prismic-helpers";
 
 import { PortfolioCaseStudyBrick } from "../PortfolioCaseStudyBrick/PortfolioCaseStudyBrick";
-
 import * as S from "./PortfolioCategory.styles";
 
 export type PortfolioCategoryProps = {

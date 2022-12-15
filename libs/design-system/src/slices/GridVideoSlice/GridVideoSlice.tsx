@@ -1,5 +1,5 @@
-import { PrismicRichText } from "@bashkim-com/prismic-helpers";
 import type { Case_StudyBodyGridvideoslicetype } from "@bashkim-com/prismic-dal";
+import { PrismicRichText } from "@bashkim-com/prismic-helpers";
 
 import { VideoPoster } from "../../components/VideoPoster/VideoPoster";
 import * as S from "./GridVideoSlice.styles";
