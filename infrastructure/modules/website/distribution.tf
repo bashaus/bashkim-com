@@ -10,13 +10,13 @@ resource "aws_cloudfront_distribution" "distribution" {
     connection_attempts = 3
     connection_timeout  = 10
     origin_id           = "WebsiteBucketOrigin"
+    domain_name         = "${aws_s3_bucket_website_configuration.bucket_website_configuration.website_endpoint}"
 
-    domain_name         = "${aws_s3_bucket.bucket.website_endpoint}"
     custom_origin_config {
       http_port               = 80
       https_port              = 443
       origin_protocol_policy  = "http-only"
-      origin_ssl_protocols      = ["TLSv1.2"]
+      origin_ssl_protocols    = ["TLSv1.2"]
     }
   }
 
@@ -28,10 +28,10 @@ resource "aws_cloudfront_distribution" "distribution" {
     connection_timeout  = 10
 
     custom_origin_config {
-      origin_keepalive_timeout  = 60
-      origin_read_timeout       = 15
       http_port                 = 80
       https_port                = 443
+      origin_keepalive_timeout  = 60
+      origin_read_timeout       = 15
       origin_protocol_policy    = "https-only"
       origin_ssl_protocols      = ["TLSv1.2"]
     }
