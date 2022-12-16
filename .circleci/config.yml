@@ -19,9 +19,9 @@ jobs:
     steps:
       - checkout
 
-      # - restore_cache:
-      #     keys:
-      #       - yarn-lock-{{ checksum "yarn.lock" }}
+      - restore_cache:
+          keys:
+            - yarn-lock-{{ checksum "yarn.lock" }}
 
       - run:
           name: yarn install
@@ -76,6 +76,10 @@ jobs:
       - attach_workspace:
           at: ./
 
+      - restore_cache:
+          keys:
+            - website-nextjs-{{ checksum "yarn.lock" }}
+
       - run:
           name: "nx website build"
           command: |
@@ -85,6 +89,11 @@ jobs:
           name: "nx website export"
           command: |
             yarn nx run website:export:production
+
+      - save_cache:
+          key: website-nextjs-{{ checksum "yarn.lock" }}
+          paths:
+            - apps/website/.next/
 
       - persist_to_workspace:
           root: ./
