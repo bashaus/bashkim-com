@@ -6,7 +6,8 @@ import { app } from "./app";
 Sentry.AWSLambda.init({
   dsn: process.env.SENTRY_DSN,
   enabled: !!process.env.SENTRY_ENABLED,
-  release: process.env.GIT_COMMIT,
+  environment: process.env.SENTRY_ENVIRONMENT,
+  release: process.env.SENTRY_RELEASE,
   tracesSampleRate: 1.0,
 });
 

@@ -45,10 +45,11 @@ provider:
   lambdaHashingVersion: "20201221"
   environment:
     APP_ENV: ${self:custom.stage}
-    GIT_COMMIT: ${self:custom.app.git.commit}
     NODE_ENV: ${self:custom.stage}
     SENTRY_DSN: ${self:custom.app.sentry.dsn}
+    SENTRY_ENABLED: 1
     SENTRY_ENVIRONMENT: ${self:custom.app.sentry.environment}
+    SENTRY_RELEASE: ${self:custom.app.git.commit}
 
 functions:
   Sitemap:
