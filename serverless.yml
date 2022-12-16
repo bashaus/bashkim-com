@@ -12,7 +12,7 @@ package:
     - "!**/node_modules/aws-sdk/**" # included on Lambda
 
 custom:
-  stage: ${opt:stage, env:SLS_STAGE, 'production'}
+  stage: ${opt:stage, env:APP_ENV, 'production'}
   region: ${opt:region, env:AWS_DEFAULT_REGION, 'eu-west-1'}
 
   app:
@@ -21,6 +21,10 @@ custom:
 
     sentry:
       dsn: ${env:SENTRY_DSN, ''}
+      environment: ${env:SENTRY_ENVIRONMENT, ''}
+
+    sitemap:
+      baseHref: ${env:APP_SITEMAP_BASE_HREF, ''}
 
     prismic-webhooks:
       circleApiKey: ${env:APP_WEBHOOKS_CIRCLE_API_KEY, ''}
@@ -44,10 +48,13 @@ provider:
     GIT_COMMIT: ${self:custom.app.git.commit}
     NODE_ENV: ${self:custom.stage}
     SENTRY_DSN: ${self:custom.app.sentry.dsn}
+    SENTRY_ENVIRONMENT: ${self:custom.app.sentry.environment}
 
 functions:
   Sitemap:
     handler: dist/apps/sitemap/main.handler
+    environment:
+      APP_SITEMAP_BASE_HREF: ${self:custom.app.sitemap.baseHref}
     jetpack:
       roots:
         - "dist/apps/sitemap"
