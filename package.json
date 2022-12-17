@@ -101,7 +101,7 @@
     "codegen-prismic-fetch": "^1.0.5",
     "css-loader": "^6.7.3",
     "cypress": "^12.1.0",
-    "eslint": "^8.29.0",
+    "eslint": "^8.30.0",
     "eslint-config-next": "13.0.7",
     "eslint-config-prettier": "^8.5.0",
     "eslint-import-resolver-typescript": "^3.5.2",
