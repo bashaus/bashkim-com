@@ -20,15 +20,15 @@ provider "aws" {
   region = "eu-west-1"
 }
 
-module "design-system" {
-  source          = "./modules/design-system"
+module "app-design-system" {
+  source          = "./modules/apps/design-system"
   stack_name      = terraform.workspace
   certificate_arn = "arn:aws:acm:us-east-1:409535992503:certificate/931d3c5c-33c6-410e-a01f-f45176fb0b99"
   domain_name     = "design-system.bashkim.com"
 }
 
-module "website" {
-  source                = "./modules/website"
+module "app-website" {
+  source                = "./modules/apps/website"
   stack_name            = terraform.workspace
   certificate_arn       = "arn:aws:acm:us-east-1:409535992503:certificate/931d3c5c-33c6-410e-a01f-f45176fb0b99"
   domain_name           = "www.bashkim.com"

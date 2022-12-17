@@ -1,4 +1,4 @@
-data "aws_iam_policy_document" "bucket_policy" {
+data "aws_iam_policy_document" "bucket" {
   statement {
     actions   = ["s3:GetObject"]
     effect    = "Allow"
@@ -11,7 +11,7 @@ data "aws_iam_policy_document" "bucket_policy" {
   }
 }
 
-resource "aws_s3_bucket_policy" "bucket_policy" {
+resource "aws_s3_bucket_policy" "bucket" {
   bucket = aws_s3_bucket.bucket.id
-  policy = data.aws_iam_policy_document.bucket_policy.json
+  policy = data.aws_iam_policy_document.bucket.json
 }
