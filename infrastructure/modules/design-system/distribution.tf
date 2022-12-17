@@ -18,11 +18,11 @@ resource "aws_cloudfront_distribution" "distribution" {
   }
 
   default_cache_behavior {
-    allowed_methods         = ["GET", "HEAD", "OPTIONS"]
-    cached_methods          = ["GET", "HEAD"]
-    compress                = true
-    target_origin_id        = "DesignSystemBucket"
-    viewer_protocol_policy  = "redirect-to-https"
+    allowed_methods        = ["GET", "HEAD", "OPTIONS"]
+    cached_methods         = ["GET", "HEAD"]
+    compress               = true
+    target_origin_id       = "DesignSystemBucket"
+    viewer_protocol_policy = "redirect-to-https"
 
     forwarded_values {
       query_string = false
@@ -41,8 +41,8 @@ resource "aws_cloudfront_distribution" "distribution" {
 
   viewer_certificate {
     cloudfront_default_certificate = false
-    acm_certificate_arn = var.certificate_arn
-    minimum_protocol_version = "TLSv1.2_2021"
-    ssl_support_method = "sni-only"
+    acm_certificate_arn            = var.certificate_arn
+    minimum_protocol_version       = "TLSv1.2_2021"
+    ssl_support_method             = "sni-only"
   }
 }
