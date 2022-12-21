@@ -45,5 +45,9 @@ module.exports = {
         "sonarjs/no-duplicate-string": 0,
       },
     },
+    {
+      files: ["*.stories.{js,jsx,ts,tsx}"],
+      extends: ["plugin:storybook/recommended"],
+    },
   ],
 };
