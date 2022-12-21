@@ -3756,7 +3756,7 @@
     "@types/express" "^4.17.14"
     tslib "^1.9.3"
 
-"@sentry/tracing@7.27.0", "@sentry/tracing@^7.27.0":
+"@sentry/tracing@7.27.0":
   version "7.27.0"
   resolved "https://registry.yarnpkg.com/@sentry/tracing/-/tracing-7.27.0.tgz#455a032c6ccf9bc8e27905dc8e624e6e2f45737b"
   integrity sha512-lxAiGAajbZgZkaViwYuxavbu/c8JUp56XOYzSAi7Km9jGnTFLNF4JCoyG0INy7lXipFJiWSd0Xq3aej0Lb+Cvg==
@@ -3764,6 +3764,16 @@
     "@sentry/core" "7.27.0"
     "@sentry/types" "7.27.0"
     "@sentry/utils" "7.27.0"
+    tslib "^1.9.3"
+
+"@sentry/tracing@^7.28.0":
+  version "7.28.0"
+  resolved "https://registry.yarnpkg.com/@sentry/tracing/-/tracing-7.28.0.tgz#341fc98e86639336cd260e932b8130496b3fa4d6"
+  integrity sha512-TH+f9AGqinX0B4EkP26ecF0ERm1KleTFHYEfpPEdbn92HFJua+Wvcm3uy6cwQ3njswi29sQHJv9bWQqp//mA+g==
+  dependencies:
+    "@sentry/core" "7.28.0"
+    "@sentry/types" "7.28.0"
+    "@sentry/utils" "7.28.0"
     tslib "^1.9.3"
 
 "@sentry/types@7.27.0":
