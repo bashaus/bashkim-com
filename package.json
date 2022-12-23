@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@apollo/client": "^3.7.3",
-    "@nrwl/next": "15.3.3",
+    "@nrwl/next": "15.4.0",
     "@primer/octicons-react": "^17.10.0",
     "@sentry/browser": "^7.28.1",
     "@sentry/serverless": "^7.28.1",
