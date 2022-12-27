@@ -93,7 +93,7 @@
     "@types/react-modal": "^3.13.1",
     "@types/react-slick": "^0.23.10",
     "@types/styled-components": "^5.1.26",
-    "@typescript-eslint/eslint-plugin": "^5.47.0",
+    "@typescript-eslint/eslint-plugin": "^5.47.1",
     "@typescript-eslint/parser": "^5.47.1",
     "aws-lambda": "^1.0.6",
     "babel-jest": "29.3.1",
