@@ -1,4 +1,4 @@
-resource "aws_route53_record" "root_txt" {
+resource "aws_route53_record" "txt" {
   zone_id = aws_route53_zone.zone.id
   name    = "${var.domain_name}."
   type    = "TXT"
