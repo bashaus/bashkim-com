@@ -1,7 +1,7 @@
 import { ComponentPropsWithoutRef, useCallback, useState } from "react";
 
 import { VideoModal } from "../VideoModal/VideoModal";
-import * as S from "./VideoPoster.styles";
+import styles from "./VideoPoster.module.scss";
 
 export type VideoPosterProps = ComponentPropsWithoutRef<"div"> & {
   /**
@@ -15,6 +15,16 @@ export type VideoPosterProps = ComponentPropsWithoutRef<"div"> & {
   imageUrl: string;
 
   /**
+   * Dimensions: width
+   */
+  width?: number;
+
+  /**
+   * Dimensions: height
+   */
+  height?: number;
+
+  /**
    * The URL of the video to display in a modal
    */
   videoUrl: string;
@@ -23,6 +33,8 @@ export type VideoPosterProps = ComponentPropsWithoutRef<"div"> & {
 export const VideoPoster = ({
   title,
   imageUrl,
+  width,
+  height,
   videoUrl,
   ...restProps
 }: VideoPosterProps) => {
@@ -37,14 +49,21 @@ export const VideoPoster = ({
   }, []);
 
   return (
-    <S.Poster {...restProps}>
-      <S.PosterImage src={imageUrl} alt={title} onClick={handleModalOpen} />
+    <div {...restProps}>
+      <img
+        className={styles["PosterImage"]}
+        src={imageUrl}
+        alt={title}
+        width={width && height ? width : undefined}
+        height={width && height ? height : undefined}
+        onClick={handleModalOpen}
+      />
 
       <VideoModal
         isOpen={isOpen}
         onRequestClose={handleModalClose}
         url={videoUrl}
       />
-    </S.Poster>
+    </div>
   );
 };

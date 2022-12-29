@@ -1,17 +1,23 @@
+import classNames from "classnames";
 import { ComponentPropsWithoutRef } from "react";
 
-import * as S from "./MenuButton.styles";
+import styles from "./MenuButton.module.scss";
 
 export type MenuButtonProps = ComponentPropsWithoutRef<"button">;
 
 export const MenuButton = ({
+  className,
   type = "button",
   onClick,
   ...props
 }: MenuButtonProps) => (
-  <S.MenuButton
+  <button
+    className={classNames(
+      className,
+      styles["MenuButton"],
+      onClick ? styles["clickable"] : undefined
+    )}
     type={type}
-    data-props-onclick={!!onClick}
     onClick={onClick}
     {...props}
   />

@@ -6,7 +6,7 @@ import { Magazine } from "../../components/Magazine/Magazine";
 import { MagazineSpreadChangeEvent } from "../../components/Magazine/Magazine.types";
 import { RichTextFormatter } from "../../formatters/RichTextFormatter/RichTextFormatter";
 import { CaptionedPartial } from "../../partials/CaptionedPartial/CaptionedPartial";
-import * as S from "./CaptionedMagazineSlice.styles";
+import styles from "./CaptionedMagazineSlice.module.scss";
 
 export type CaptionedMagazineSliceProps = {
   slice: Case_StudyBodyCaptionedmagazineslicetype;
@@ -110,31 +110,39 @@ export const CaptionedMagazineSlice = ({
       </RichTextFormatter>
 
       {magazineIsInitialized && (
-        <S.Slider>
-          <S.PaginationBack
+        <div className={styles["Slider"]}>
+          <button
+            type="button"
+            className={styles["PaginationBack"]}
             disabled={isFirstSpread}
             onClick={handlePaginationBack}
           >
             &lsaquo;
-          </S.PaginationBack>
+          </button>
 
-          <S.PaginationText>
+          <span className={styles["PaginationText"]}>
             Page {pageNumbers.join(" - ")} of {pages}
-          </S.PaginationText>
+          </span>
 
-          <S.PaginationNext
+          <button
+            type="button"
+            className={styles["PaginationNext"]}
             disabled={isLastSpread}
             onClick={handlePaginationNext}
           >
             &rsaquo;
-          </S.PaginationNext>
+          </button>
 
-          <S.PaginationRange
+          <input
+            type="range"
+            className={styles["PaginationRange"]}
+            min={1}
             max={spreads}
+            step={1}
             value={spread}
             onChange={handleSpreadChange}
           />
-        </S.Slider>
+        </div>
       )}
     </CaptionedPartial>
   );

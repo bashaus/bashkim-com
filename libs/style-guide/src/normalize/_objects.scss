@@ -1,0 +1,11 @@
+@import "~@bashkim-com/style-guide/colors.scss";
+
+figure,
+iframe,
+object {
+  display: block;
+}
+
+hr {
+  border-top: solid 1px $color-greyscale-10;
+}

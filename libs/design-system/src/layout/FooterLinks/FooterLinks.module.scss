@@ -1,0 +1,40 @@
+@import "~@bashkim-com/style-guide/media.scss";
+
+.FooterLinks {
+  a {
+    display: block;
+    text-transform: uppercase;
+    font-size: 1em;
+  }
+
+  @media #{$media-query-screen-small} {
+    a {
+      display: block;
+      position: relative;
+      line-height: 3em;
+      font-size: 1em;
+    }
+
+    a::before {
+      content: "\2022";
+      display: inline-block;
+      width: 1em;
+      font-weight: bold;
+      font-size: 20px;
+    }
+  }
+
+  @media #{$media-query-screen-large} {
+    li {
+      height: 2em;
+    }
+
+    a {
+      font-size: 1em;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+}

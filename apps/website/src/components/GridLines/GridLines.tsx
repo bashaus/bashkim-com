@@ -1,5 +1,5 @@
 import { useSettings } from "../../contexts/Settings/Settings.context";
-import * as S from "./GridLines.styles";
+import styles from "./GridLines.module.scss";
 
 export const GridLines = () => {
   const { settingsState } = useSettings();
@@ -10,14 +10,14 @@ export const GridLines = () => {
   }
 
   return (
-    <S.GridLines>
-      <S.Container>
+    <div className={styles["GridLines"]}>
+      <div className={styles["Container"]}>
         {Array(12)
           .fill(" ")
           .map((_value, index) => (
-            <S.Cell key={index} />
+            <div className={styles["Cell"]} key={index} />
           ))}
-      </S.Container>
-    </S.GridLines>
+      </div>
+    </div>
   );
 };

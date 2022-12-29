@@ -2,7 +2,7 @@ import { CollaboratorSlice, SubtitlePartial } from "@bashkim-com/design-system";
 import type { Case_StudyCollaboratorsCollaboratorslicetype } from "@bashkim-com/prismic-dal";
 import Link from "next/link";
 
-import * as S from "./CaseStudyCollaborators.styles";
+import styles from "./CaseStudyCollaborators.module.scss";
 
 export type CaseStudyCollaboratorsProps = {
   myRole?: string;
@@ -23,21 +23,21 @@ export const CaseStudyCollaborators = ({
         <h2>Collaborators</h2>
       </SubtitlePartial>
 
-      <S.CaseStudyCollaborators>
-        <S.CaseStudyCollaborator>
+      <ul className={styles["CaseStudyCollaborators"]}>
+        <li className={styles["CaseStudyCollaborator"]}>
           <strong>
             <Link href="/">Bashkim Isai</Link>
           </strong>
           <br />
           {myRole}
-        </S.CaseStudyCollaborator>
+        </li>
 
         {slices.map((slice, i) => (
-          <S.CaseStudyCollaborator key={i}>
+          <li className={styles["CaseStudyCollaborator"]} key={i}>
             <CollaboratorSlice slice={slice} />
-          </S.CaseStudyCollaborator>
+          </li>
         ))}
-      </S.CaseStudyCollaborators>
+      </ul>
     </>
   );
 };

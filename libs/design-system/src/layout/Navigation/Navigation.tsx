@@ -1,11 +1,11 @@
 import { ComponentPropsWithoutRef } from "react";
 
-import * as S from "./Navigation.styles";
+import styles from "./Navigation.module.scss";
 
 export type NavigationProps = ComponentPropsWithoutRef<"div">;
 
 export const Navigation = ({ children, ...props }: NavigationProps) => (
-  <S.Navigation {...props}>
-    <S.Content>{children}</S.Content>
-  </S.Navigation>
+  <div className={styles["Navigation"]} {...props}>
+    <div className={styles["Content"]}>{children}</div>
+  </div>
 );

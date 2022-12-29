@@ -2,14 +2,15 @@ import type { Case_StudyBodyGridvideoslicetype } from "@bashkim-com/prismic-dal"
 import { PrismicRichText } from "@bashkim-com/prismic-helpers";
 
 import { VideoPoster } from "../../components/VideoPoster/VideoPoster";
-import * as S from "./GridVideoSlice.styles";
+import { RichTextFormatter } from "../../formatters/RichTextFormatter/RichTextFormatter";
+import styles from "./GridVideoSlice.module.scss";
 
 export type GridVideoSliceProps = {
   slice: Case_StudyBodyGridvideoslicetype;
 };
 
 export const GridVideoSlice = ({ slice }: GridVideoSliceProps) => (
-  <S.Videos data-column-count={slice.fields?.length}>
+  <ol className={styles["Videos"]} data-column-count={slice.fields?.length}>
     {slice.fields?.map((field, i) => {
       const {
         grid_video_slice_type_description: description,
@@ -22,20 +23,22 @@ export const GridVideoSlice = ({ slice }: GridVideoSliceProps) => (
       }
 
       return (
-        <S.Video key={i}>
+        <li className={styles["Video"]} key={i}>
           <VideoPoster
             title={video.title}
             imageUrl={poster.url}
+            width={poster.dimensions.width}
+            height={poster.dimensions.height}
             videoUrl={video.embed_url}
           />
 
-          <S.Description>
+          <RichTextFormatter className={styles["Description"]}>
             <PrismicRichText render={description} />
-          </S.Description>
-        </S.Video>
+          </RichTextFormatter>
+        </li>
       );
     })}
-  </S.Videos>
+  </ol>
 );
 
 export default GridVideoSlice;

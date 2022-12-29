@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 
 import { RichTextFormatter } from "../../formatters/RichTextFormatter/RichTextFormatter";
-import * as S from "./FullBannerPartial.styles";
+import styles from "./FullBannerPartial.module.scss";
 
 export type FullBannerPartialProps = {
   backgroundDesktop?: string;
@@ -16,12 +16,12 @@ export const FullBannerPartial = ({
   children,
   id,
 }: FullBannerPartialProps) => (
-  <S.FullBannerPartial id={id}>
-    <S.Container>
-      <S.Content>
+  <div className={styles["FullBannerPartial"]} id={id}>
+    <div className={styles["Container"]}>
+      <div className={styles["Content"]}>
         <RichTextFormatter>{children}</RichTextFormatter>
-      </S.Content>
-    </S.Container>
+      </div>
+    </div>
 
     {backgroundDesktop && (
       <style type="text/css">
@@ -44,5 +44,5 @@ export const FullBannerPartial = ({
         `}
       </style>
     )}
-  </S.FullBannerPartial>
+  </div>
 );

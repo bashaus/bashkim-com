@@ -1,11 +1,24 @@
+import classNames from "classnames";
 import { ComponentPropsWithoutRef } from "react";
 
-import * as S from "./SplitPartial.styles";
+import styles from "./SplitPartial.module.scss";
 
 export type SplitPartialProps = ComponentPropsWithoutRef<"div"> & {
   index?: number;
 };
 
-export const SplitPartial = ({ index = 0, ...props }: SplitPartialProps) => (
-  <S.SplitPartial props-index={index} {...props} />
+export const SplitPartial = ({
+  className,
+  index = 0,
+  ...props
+}: SplitPartialProps) => (
+  <div
+    className={classNames(
+      className,
+      styles["SplitPartial"],
+      index % 2 === 1 && styles["isOdd"],
+      index % 2 === 0 && styles["isEven"]
+    )}
+    {...props}
+  />
 );

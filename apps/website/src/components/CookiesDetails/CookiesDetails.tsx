@@ -6,7 +6,7 @@ import {
 
 import HeaderDesktopImage from "../../assets/images/cookies/header-desktop.jpg";
 import HeaderMobileImage from "../../assets/images/cookies/header-mobile.jpg";
-import * as S from "./CookiesDetails.styles";
+import styles from "./CookiesDetails.module.scss";
 
 export const CookiesDetails = () => (
   <>
@@ -69,7 +69,7 @@ export const CookiesDetails = () => (
 
         <p>Google Analytics sets the following cookies:</p>
 
-        <S.CookiesTable>
+        <table className={styles["CookiesTable"]}>
           <thead>
             <tr>
               <th>Name</th>
@@ -102,7 +102,7 @@ export const CookiesDetails = () => (
               <td>10 minutes</td>
             </tr>
           </tbody>
-        </S.CookiesTable>
+        </table>
 
         <p>
           The implementation of Google Analytics has been requested to anonymise

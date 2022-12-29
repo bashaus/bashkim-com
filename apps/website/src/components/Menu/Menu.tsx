@@ -3,24 +3,24 @@ import Link from "next/link";
 import { ReactNode } from "react";
 
 import { MenuButtonSettings } from "../MenuButtonSettings/MenuButtonSettings";
-import * as S from "./Menu.styles";
+import styles from "./Menu.module.scss";
 
 export type MenuProps = {
   backButton?: ReactNode;
 };
 
 export const Menu = ({ backButton }: MenuProps) => (
-  <S.Menu>
-    <S.MobileOnly>{backButton ?? <MenuButton />}</S.MobileOnly>
+  <div className={styles["Menu"]}>
+    <div className={styles["MobileOnly"]}>{backButton ?? <MenuButton />}</div>
 
-    <S.Title>
+    <div className={styles["Title"]}>
       <Link href="/">
         <Logo />
       </Link>
-    </S.Title>
+    </div>
 
-    <S.MobileOnly>
+    <div className={styles["MobileOnly"]}>
       <MenuButtonSettings />
-    </S.MobileOnly>
-  </S.Menu>
+    </div>
+  </div>
 );

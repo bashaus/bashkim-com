@@ -1,9 +1,9 @@
 import { ComponentPropsWithoutRef } from "react";
 
-import * as S from "./FooterLinks.styles";
+import styles from "./FooterLinks.module.scss";
 
 export type FooterLinksProps = ComponentPropsWithoutRef<"ul">;
 
 export const FooterLinks = (props: FooterLinksProps) => (
-  <S.FooterLinks {...props} />
+  <ul className={styles["FooterLinks"]} {...props} />
 );

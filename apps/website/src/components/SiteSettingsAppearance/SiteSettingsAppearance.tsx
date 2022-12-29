@@ -1,10 +1,11 @@
 import { Switch } from "@bashkim-com/design-system";
+import { MoonIcon, SunIcon } from "@primer/octicons-react";
 import { useCallback } from "react";
 
 import { SettingsActionToggleAppearance } from "../../contexts/Settings/Settings.actions";
 import { useSettings } from "../../contexts/Settings/Settings.context";
 import { Appearance } from "../../contexts/Settings/Settings.types";
-import * as S from "./SiteSettingsAppearance.styles";
+import styles from "./SiteSettingsAppearance.module.scss";
 
 export const SiteSettingsAppearance = () => {
   const { settingsState, settingsDispatch } = useSettings();
@@ -17,8 +18,8 @@ export const SiteSettingsAppearance = () => {
   return (
     <Switch
       onChange={handleChange}
-      iconOff={<S.IconOff />}
-      iconOn={<S.IconOn />}
+      iconOff={<MoonIcon className={styles["IconOff"]} />}
+      iconOn={<SunIcon className={styles["IconOn"]} />}
       checked={appearance === Appearance.LIGHT}
     />
   );

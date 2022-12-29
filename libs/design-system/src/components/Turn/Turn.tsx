@@ -1,7 +1,8 @@
+import classNames from "classnames";
 import JQuery from "jquery";
 import { createRef, PureComponent, ReactNode } from "react";
 
-import * as S from "./Turn.styles";
+import styles from "./Turn.module.scss";
 import { TurnDisplay } from "./Turn.types";
 
 export type TurnProps = {
@@ -139,9 +140,17 @@ export class Turn extends PureComponent<TurnProps, TurnState> {
     const { isInitialized } = this.state;
 
     return (
-      <S.Turn state-isInitialized={isInitialized} ref={this.containerRef}>
-        <S.Pages ref={this.pagesRef}>{children}</S.Pages>
-      </S.Turn>
+      <div
+        className={classNames(
+          styles["Turn"],
+          isInitialized ? styles["isInitialized"] : undefined
+        )}
+        ref={this.containerRef}
+      >
+        <div className={styles["Pages"]} ref={this.pagesRef}>
+          {children}
+        </div>
+      </div>
     );
   }
 }

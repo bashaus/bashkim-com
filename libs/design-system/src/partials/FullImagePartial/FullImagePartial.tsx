@@ -1,9 +1,16 @@
+import classNames from "classnames";
 import { ComponentPropsWithoutRef } from "react";
 
-import * as S from "./FullImagePartial.styles";
+import styles from "./FullImagePartial.module.scss";
 
 export type FullImagePartialProps = ComponentPropsWithoutRef<"div">;
 
-export const FullImagePartial = (props: FullImagePartialProps) => (
-  <S.FullImagePartial {...props} />
+export const FullImagePartial = ({
+  className,
+  ...props
+}: FullImagePartialProps) => (
+  <div
+    className={classNames(className, styles["FullImagePartial"])}
+    {...props}
+  />
 );

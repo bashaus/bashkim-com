@@ -9,7 +9,7 @@ import type { Case_Study } from "@bashkim-com/prismic-dal";
 
 import { CaseStudyDetails } from "../CaseStudyDetails/CaseStudyDetails";
 import { CaseStudyTechnologies } from "../CaseStudyTechnologies/CaseStudyTechnologies";
-import * as S from "./CaseStudyHeader.styles";
+import styles from "./CaseStudyHeader.module.scss";
 
 export type CaseStudyHeaderProps = {
   caseStudy: Case_Study;
@@ -35,14 +35,15 @@ export const CaseStudyHeader = ({ caseStudy }: CaseStudyHeaderProps) => (
         <h2>Project details</h2>
       </SubtitlePartial>
 
-      <S.CaseStudyHeader>
-        <S.CaseStudyDetails>
+      <div className={styles["CaseStudyHeader"]}>
+        <div className={styles["CaseStudyDetails"]}>
           <CaseStudyDetails caseStudy={caseStudy} />
-        </S.CaseStudyDetails>
-        <S.CaseStudyTechnologies>
+        </div>
+
+        <div className={styles["CaseStudyTechnologies"]}>
           <CaseStudyTechnologies caseStudy={caseStudy} />
-        </S.CaseStudyTechnologies>
-      </S.CaseStudyHeader>
+        </div>
+      </div>
     </Group>
   </>
 );

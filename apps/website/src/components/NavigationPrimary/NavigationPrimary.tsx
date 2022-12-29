@@ -1,25 +1,31 @@
-import { NavigationGroup } from "@bashkim-com/design-system";
+import { NavigationGroup, NavigationItem } from "@bashkim-com/design-system";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-import * as S from "./NavigationPrimary.styles";
+import styles from "./NavigationPrimary.module.scss";
 
 export const NavigationPrimary = () => {
   const { asPath } = useRouter();
 
   return (
     <NavigationGroup>
-      <S.PortfolioNavigationItem isSelected={asPath.startsWith("/portfolio")}>
+      <NavigationItem
+        className={styles["PortfolioNavigationItem"]}
+        isSelected={asPath.startsWith("/portfolio")}
+      >
         <Link href="/portfolio">
           <span>Portfolio</span>
         </Link>
-      </S.PortfolioNavigationItem>
+      </NavigationItem>
 
-      <S.AboutNavigationItem isSelected={asPath.startsWith("/about")}>
+      <NavigationItem
+        className={styles["AboutNavigationItem"]}
+        isSelected={asPath.startsWith("/about")}
+      >
         <Link href="/about">
           <span>About</span>
         </Link>
-      </S.AboutNavigationItem>
+      </NavigationItem>
     </NavigationGroup>
   );
 };

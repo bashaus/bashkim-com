@@ -1,0 +1,32 @@
+@import "~@bashkim-com/style-guide/utils.scss";
+@import "~@bashkim-com/style-guide/media.scss";
+
+.SplitPartial {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  &.isOdd {
+    flex-direction: row-reverse;
+  }
+
+  @media #{$media-query-mobile} {
+    .SplitPartial_chevron {
+      @include ChevronDown;
+    }
+  }
+
+  @media #{$media-query-not-mobile} {
+    &.isOdd {
+      :global(.SplitPartial_chevron) {
+        @include ChevronLeft;
+      }
+    }
+
+    &.isEven {
+      :global(.SplitPartial_chevron) {
+        @include ChevronRight;
+      }
+    }
+  }
+}

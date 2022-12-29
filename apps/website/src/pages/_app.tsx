@@ -1,7 +1,7 @@
 import "../libraries/sentry/init";
+import "@bashkim-com/style-guide";
 
 import { LinkResolverContext } from "@bashkim-com/prismic-helpers";
-import { Normalize } from "@bashkim-com/style-guide";
 import { AppProps } from "next/app";
 import Head from "next/head";
 import { useEffect } from "react";
@@ -26,8 +26,6 @@ function MyApplication({ Component, pageProps }: AppProps) {
           content="width=device-width, initial-scale=1, viewport-fit=cover"
         />
       </Head>
-
-      <Normalize key="Normalize" />
 
       <LinkResolverContext.Provider value={PrismicLinkResolver}>
         <SettingsProvider>

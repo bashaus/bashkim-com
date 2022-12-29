@@ -1,0 +1,38 @@
+@import "~@bashkim-com/style-guide/fonts.scss";
+
+label {
+  cursor: pointer;
+  display: inline-block;
+}
+
+input,
+select,
+button,
+textarea {
+  font-family: $font-family-copy;
+  font-size: 100%;
+  color: currentColor;
+}
+
+input,
+textarea {
+  cursor: text;
+}
+
+select,
+button,
+input[type="checkbox"],
+input[type="radio"] {
+  cursor: pointer;
+}
+
+input[type="range"] {
+  cursor: ew-resize;
+}
+
+input:disabled,
+select:disabled,
+button:disabled,
+textarea:disabled {
+  cursor: not-allowed;
+}

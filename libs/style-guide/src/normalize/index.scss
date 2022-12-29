@@ -1,0 +1,13 @@
+@import "https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&amp;family=Roboto:wght@400;700&amp;display=swap";
+
+@import "~reset-css";
+
+@import "./document";
+@import "./forms";
+@import "./images";
+@import "./objects";
+@import "./text";
+
+@import "../appearance/index.scss";
+
+@import "../libraries/slick/styles.scss";

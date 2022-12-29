@@ -1,0 +1,11 @@
+@import "~@bashkim-com/style-guide/colors.scss";
+@import "~@bashkim-com/style-guide/utils.scss";
+
+.VideoPlayer {
+  @extend %ratio-widescreen;
+
+  background-color: $color-greyscale-100;
+  color: $color-white;
+
+  width: 100%;
+}

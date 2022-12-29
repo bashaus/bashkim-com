@@ -1,6 +1,6 @@
 import type { Case_Study, Technology } from "@bashkim-com/prismic-dal";
 
-import * as S from "./CaseStudyTechnologies.styles";
+import styles from "./CaseStudyTechnologies.module.scss";
 
 export type CaseStudyTechnologiesProps = {
   caseStudy: Case_Study;
@@ -10,9 +10,9 @@ export const CaseStudyTechnologies = ({
   caseStudy,
 }: CaseStudyTechnologiesProps) => (
   <>
-    <S.Heading>Key technologies</S.Heading>
+    <h3 className={styles.Heading}>Key technologies</h3>
 
-    <S.Technologies>
+    <ul className={styles["Technologies"]}>
       {caseStudy.info_technologies.map((info_technology) => {
         if (!info_technology.info_technology) {
           return null;
@@ -23,12 +23,12 @@ export const CaseStudyTechnologies = ({
         const icon = technology.technology_icon;
 
         return (
-          <S.Technology key={name}>
-            <S.TechnologyIcon src={icon.url} alt="" />
-            <S.TechnologyName>{name}</S.TechnologyName>
-          </S.Technology>
+          <li className={styles["Technology"]} key={name}>
+            <img className={styles["TechnologyIcon"]} src={icon.url} alt="" />
+            <span className={styles["TechnologyName"]}>{name}</span>
+          </li>
         );
       })}
-    </S.Technologies>
+    </ul>
   </>
 );

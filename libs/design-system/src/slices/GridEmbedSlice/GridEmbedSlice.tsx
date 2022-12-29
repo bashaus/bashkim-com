@@ -1,24 +1,24 @@
 import type { Case_StudyBodyGridembedslicetype } from "@bashkim-com/prismic-dal";
 
-import * as S from "./GridEmbedSlice.styles";
+import styles from "./GridEmbedSlice.module.scss";
 
 export type GridEmbedSliceProps = {
   slice: Case_StudyBodyGridembedslicetype;
 };
 
 export const GridEmbedSlice = ({ slice }: GridEmbedSliceProps) => (
-  <S.Embeds>
+  <div className={styles["Embeds"]}>
     {slice.fields?.map((field, i) => {
       const { grid_embed_slice_type_embed: embed } = field;
 
       return (
-        <S.Embed key={i}>
+        <div className={styles["Embed"]} key={i}>
           {/* eslint-disable-next-line react/no-danger */}
           <span dangerouslySetInnerHTML={{ __html: embed?.html ?? "" }} />
-        </S.Embed>
+        </div>
       );
     })}
-  </S.Embeds>
+  </div>
 );
 
 export default GridEmbedSlice;

@@ -1,0 +1,21 @@
+@import "~@bashkim-com/style-guide/colors.scss";
+@import "~@bashkim-com/style-guide/fonts.scss";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-size: 18px;
+  line-height: 150%;
+  font-family: $font-family-copy;
+  background-color: $design-page-background-color;
+  color: $design-page-foreground-color;
+}

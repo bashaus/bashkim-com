@@ -1,0 +1,26 @@
+@import "~@bashkim-com/style-guide/colors.scss";
+@import "~@bashkim-com/style-guide/fonts.scss";
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+code.inline,
+samp {
+  display: inline-block;
+  border: solid 1px $color-greyscale-20;
+  background-color: $color-greyscale-10;
+  padding: 0 5px;
+  margin: 0 2px;
+  border-radius: 3px;
+  font-family: $font-family-monospace;
+}
+
+small {
+  font-size: 80%;
+}
+
+em {
+  font-style: italic;
+}

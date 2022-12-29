@@ -1,28 +1,35 @@
+import classNames from "classnames";
 import SlickSlider, { Settings } from "react-slick";
 
-import * as S from "./Carousel.styles";
+import { CarouselArrow } from "../CarouselArrow/CarouselArrow";
+import { CarouselArrowDirection } from "../CarouselArrow/CarouselArrow.type";
+import { CarouselDots } from "../CarouselDots/CarouselDots";
+import styles from "./Carousel.module.scss";
 
-export type CarouselProps = Settings;
+export type CarouselProps = Settings & {
+  className?: string;
+};
 
 export const Carousel = ({
   adaptiveHeight = true,
+  className,
   dots = true,
   infinite = false,
   draggable = true,
   lazyLoad = "ondemand",
-  ...args
+  ...restProps
 }: CarouselProps) => (
-  <S.Carousel>
+  <div className={classNames(className, styles["Carousel"])}>
     <SlickSlider
       adaptiveHeight={adaptiveHeight}
       dots={dots}
       infinite={infinite}
       draggable={draggable}
       lazyLoad={lazyLoad}
-      appendDots={(children) => <S.Dots>{children}</S.Dots>}
-      prevArrow={<S.ArrowPrev />}
-      nextArrow={<S.ArrowNext />}
-      {...args}
+      appendDots={CarouselDots}
+      prevArrow={<CarouselArrow direction={CarouselArrowDirection.PREV} />}
+      nextArrow={<CarouselArrow direction={CarouselArrowDirection.NEXT} />}
+      {...restProps}
     />
-  </S.Carousel>
+  </div>
 );

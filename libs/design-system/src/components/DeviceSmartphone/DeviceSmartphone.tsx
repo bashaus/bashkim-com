@@ -1,7 +1,8 @@
 import { ReactNode } from "react";
 
+import { ReactComponent as DeviceVector } from "../../assets/vectors/devices/smartphone.svg";
 import { RichTextFormatter } from "../../formatters/RichTextFormatter/RichTextFormatter";
-import * as S from "./DeviceSmartphone.styles";
+import styles from "./DeviceSmartphone.module.scss";
 
 export type DeviceSmartphoneProps = {
   children: ReactNode;
@@ -15,14 +16,14 @@ export const DeviceSmartphone = ({
   children,
   figure,
 }: DeviceSmartphoneProps) => (
-  <S.DeviceSmartphone>
-    <S.Wrapper>
-      <S.Device />
-      <S.Figure>{figure}</S.Figure>
-    </S.Wrapper>
+  <figure className={styles["DeviceSmartphone"]}>
+    <div className={styles["Wrapper"]}>
+      <DeviceVector className={styles["Device"]} />
+      <div className={styles["Figure"]}>{figure}</div>
+    </div>
 
-    <S.Caption>
+    <figcaption className={styles["Caption"]}>
       <RichTextFormatter>{children}</RichTextFormatter>
-    </S.Caption>
-  </S.DeviceSmartphone>
+    </figcaption>
+  </figure>
 );

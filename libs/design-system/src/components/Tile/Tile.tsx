@@ -1,4 +1,4 @@
-import * as S from "./Tile.styles";
+import styles from "./Tile.module.scss";
 
 export type TileProps = {
   description: string;
@@ -8,21 +8,20 @@ export type TileProps = {
 };
 
 export const Tile = ({ description, title, icon, poster }: TileProps) => (
-  <S.Tile>
-    <S.Poster
-      style={{
-        backgroundImage: `url(${poster})`,
-      }}
+  <div className={styles["Tile"]}>
+    <div
+      className={styles["Poster"]}
+      style={{ backgroundImage: `url(${poster})` }}
     />
 
-    <S.Content>
-      <S.Heading>{title}</S.Heading>
+    <div className={styles["Content"]}>
+      <h3 className={styles["Heading"]}>{title}</h3>
 
-      <S.Icon>
+      <div className={styles["Icon"]}>
         <img alt="" src={icon} />
-      </S.Icon>
+      </div>
 
-      <S.Description>{description}</S.Description>
-    </S.Content>
-  </S.Tile>
+      <p className={styles["Description"]}>{description}</p>
+    </div>
+  </div>
 );

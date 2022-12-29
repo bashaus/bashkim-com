@@ -1,0 +1,40 @@
+@import "~@bashkim-com/style-guide/grid.scss";
+@import "~@bashkim-com/style-guide/headings.scss";
+
+.Heading {
+  @extend %heading-3;
+  text-align: center;
+}
+
+.Technologies {
+  @include grid-container($columns: 2);
+}
+
+.Technology {
+  @include grid-cell(
+    $columns: (
+      mobile-portrait: 1,
+      mobile-landscape: 1,
+      tablet-portrait: 2,
+      tablet-landscape: 1,
+      desktop-narrow: 1,
+      desktop-wide: 1,
+    )
+  );
+}
+
+.TechnologyIcon {
+  vertical-align: middle;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 60px;
+  height: auto;
+}
+
+.TechnologyName {
+  display: block;
+  text-align: center;
+  font-size: small;
+  font-weight: bold;
+  text-transform: uppercase;
+}

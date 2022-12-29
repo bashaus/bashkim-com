@@ -1,15 +1,17 @@
+import classNames from "classnames";
 import { ComponentPropsWithoutRef } from "react";
 
 import { RichTextFormatter } from "../../formatters/RichTextFormatter/RichTextFormatter";
-import * as S from "./SubtitlePartial.styles";
+import styles from "./SubtitlePartial.module.scss";
 
 export type SubtitlePartialProps = ComponentPropsWithoutRef<"div">;
 
 export const SubtitlePartial = ({
   children,
+  className,
   ...props
 }: SubtitlePartialProps) => (
-  <S.SubtitlePartial {...props}>
+  <div className={classNames(className, styles["SubtitlePartial"])} {...props}>
     <RichTextFormatter>{children}</RichTextFormatter>
-  </S.SubtitlePartial>
+  </div>
 );

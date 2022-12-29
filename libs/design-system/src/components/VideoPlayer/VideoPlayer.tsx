@@ -1,7 +1,7 @@
 import { useCallback, useRef, useState } from "react";
 import ReactPlayer, { ReactPlayerProps } from "react-player/lazy";
 
-import * as S from "./VideoPlayer.styles";
+import styles from "./VideoPlayer.module.scss";
 
 export type VideoPlayerProps = {
   /**
@@ -42,7 +42,7 @@ export const VideoPlayer = ({ url }: VideoPlayerProps) => {
   );
 
   return (
-    <S.VideoPlayer>
+    <div className={styles["VideoPlayer"]}>
       <ReactPlayer
         config={{
           youtube: {
@@ -69,6 +69,6 @@ export const VideoPlayer = ({ url }: VideoPlayerProps) => {
         onPause={handlePlayerPause}
         onDuration={handlePlayerDuration}
       />
-    </S.VideoPlayer>
+    </div>
   );
 };

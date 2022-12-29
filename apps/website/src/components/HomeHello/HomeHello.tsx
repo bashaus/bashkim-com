@@ -4,55 +4,55 @@ import Link from "next/link";
 import BackgroundImage from "../../assets/images/home/background-image.jpg";
 import { ReactComponent as PortfolioVector } from "../../assets/vectors/icons/portfolio.svg";
 import { ReactComponent as GitHubVector } from "../../assets/vectors/social/github.svg";
-import * as S from "./HomeHello.styles";
+import styles from "./HomeHello.module.scss";
 
 export const HomeHello = () => (
   <PageHeaderPartial
     id="HomePage-Hello"
     imageDesktop={BackgroundImage.src}
     aside={
-      <S.Links>
-        <S.Link>
+      <ul className={styles["Links"]}>
+        <li className={styles["Link"]}>
           <a
             href="https://github.com/bashaus?tab=repositories"
             target="_blank"
             rel="noreferrer"
           >
-            <S.LinkIcon>
+            <svg className={styles["LinkIcon"]}>
               <GitHubVector />
-            </S.LinkIcon>
+            </svg>
             View code
           </a>
-        </S.Link>
+        </li>
 
-        <S.Link>
+        <li className={styles["Link"]}>
           <Link href="/portfolio" passHref>
-            <S.LinkIcon>
+            <svg className={styles["LinkIcon"]}>
               <PortfolioVector />
-            </S.LinkIcon>
+            </svg>
             View portfolio
           </Link>
-        </S.Link>
-      </S.Links>
+        </li>
+      </ul>
     }
   >
-    <S.Introduction>
-      <S.IntroductionTitle>Hello.</S.IntroductionTitle>
+    <div className={styles["Introduction"]}>
+      <h1>Hello.</h1>
 
       <p>
-        <S.IntroductionName>
+        <span className={styles["IntroductionName"]}>
           <span>My name is </span>
           <Link href="/about">Bash</Link>
-        </S.IntroductionName>
+        </span>
         <span> </span>
-        <S.IntroductionSpiel>
+        <span className={styles["IntroductionSpiel"]}>
           I&apos;m a London&#8209;based Creative Technologist specialising in
           <span> </span>
           <Link href="/portfolio#tangible-media">tangible&nbsp;media</Link>
           <span> and </span>
           <Link href="/portfolio#web-development">web&nbsp;development</Link>.
-        </S.IntroductionSpiel>
+        </span>
       </p>
-    </S.Introduction>
+    </div>
   </PageHeaderPartial>
 );

@@ -7,19 +7,19 @@ import Link from "next/link";
 
 import PortfolioBackground from "../../assets/images/home/portfolio-background.jpg";
 import PracticeBackground from "../../assets/images/home/practice-background.jpg";
-import * as S from "./HomeFooter.styles";
+import styles from "./HomeFooter.module.scss";
 
 export const HomeFooter = () => (
   <SplitPartial>
     <SplitItemPartial backgroundImage={PortfolioBackground.src}>
-      <S.PortfolioSplitItemPartial>
+      <div className={styles["PortfolioSplitItemPartial"]}>
         <h3>Looking for more case&nbsp;studies?</h3>
         <CallToAction>
           <Link href="/portfolio">
             <span>Browse portfolio</span>
           </Link>
         </CallToAction>
-      </S.PortfolioSplitItemPartial>
+      </div>
     </SplitItemPartial>
 
     <SplitItemPartial backgroundImage={PracticeBackground.src}>

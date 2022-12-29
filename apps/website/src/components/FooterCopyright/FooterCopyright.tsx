@@ -1,7 +1,8 @@
-import * as S from "./FooterCopyright.styles";
+import styles from "./FooterCopyright.module.scss";
 
 export const FooterCopyright = () => (
-  <S.FooterCopyright
+  <p
+    className={styles["FooterCopyright"]}
     role="contentinfo"
     aria-label="Copyright, Two-Thousand-and-Eight to Two-Thousand-and-Twenty-Two, Bashkim Isai. All rights reserved."
   >
@@ -16,5 +17,5 @@ export const FooterCopyright = () => (
       </time>
       , Bashkim&nbsp;Isai. All&nbsp;rights&nbsp;reserved.
     </small>
-  </S.FooterCopyright>
+  </p>
 );

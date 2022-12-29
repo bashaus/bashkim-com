@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-import * as S from "./CaptionedPartial.styles";
+import styles from "./CaptionedPartial.module.scss";
 
 export type CaptionedPartialProps = {
   children: ReactNode;
@@ -15,8 +15,8 @@ export const CaptionedPartial = ({
   children,
   figure,
 }: CaptionedPartialProps) => (
-  <S.CaptionedPartial>
-    <S.Caption>{children}</S.Caption>
-    <S.Figure>{figure}</S.Figure>
-  </S.CaptionedPartial>
+  <figure className={styles["CaptionedPartial"]}>
+    <figcaption className={styles["Caption"]}>{children}</figcaption>
+    <div className={styles["Figure"]}>{figure}</div>
+  </figure>
 );

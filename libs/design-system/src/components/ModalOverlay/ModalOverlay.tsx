@@ -1,7 +1,8 @@
+import classNames from "classnames";
 import { gsap } from "gsap";
 import { ComponentPropsWithoutRef, useEffect, useRef } from "react";
 
-import * as S from "./ModalOverlay.styles";
+import styles from "./ModalOverlay.module.scss";
 
 export type ModalOverlayProps = ComponentPropsWithoutRef<"div"> & {
   isOpen: boolean;
@@ -13,6 +14,7 @@ export type ModalOverlayProps = ComponentPropsWithoutRef<"div"> & {
 
 export const ModalOverlay = ({
   children,
+  className,
   isOpen,
   onHideComplete,
   onHideStart,
@@ -72,10 +74,19 @@ export const ModalOverlay = ({
   }, [isOpen, onHideComplete, onHideStart, onShowComplete, onShowStart]);
 
   return (
-    <div {...props}>
-      <S.SvgContainer>
-        <S.SvgPath ref={svgRef} />
-      </S.SvgContainer>
+    <div className={classNames(className, styles["ModalOverlay"])} {...props}>
+      <svg
+        className={styles["SvgContainer"]}
+        viewBox="0 0 100 100"
+        preserveAspectRatio="none"
+      >
+        <path
+          ref={svgRef}
+          vectorEffect="non-scaling-stroke"
+          d="M 0 100 V 100 Q 50 100 100 100 V 100 z"
+          fill="rgba(0, 0, 0, .8)"
+        />
+      </svg>
       {children}
     </div>
   );

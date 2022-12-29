@@ -1,0 +1,18 @@
+@import "~@bashkim-com/style-guide/colors.scss";
+@import "~@bashkim-com/style-guide/media.scss";
+
+.PortfolioNavigationItem {
+  @media #{$media-query-not-mobile} {
+    a:hover {
+      color: $color-primary-100;
+    }
+  }
+}
+
+.AboutNavigationItem {
+  @media #{$media-query-not-mobile} {
+    a:hover {
+      color: $color-secondary-100;
+    }
+  }
+}

@@ -1,16 +1,19 @@
+import classNames from "classnames";
 import { ComponentPropsWithoutRef } from "react";
 
-import * as S from "./NavigationItem.styles";
+import styles from "./NavigationItem.module.scss";
 
 export type NavigationItemProps = ComponentPropsWithoutRef<"li"> & {
   isSelected?: boolean;
 };
 
 export const NavigationItem = ({
+  className,
   isSelected = false,
   ...props
 }: NavigationItemProps) => (
-  <S.NavigationItem
+  <li
+    className={classNames(className, styles["NavigationItem"])}
     aria-current={isSelected ? "location" : undefined}
     {...props}
   />

@@ -3,6 +3,13 @@
   "label": null,
   "fields": [
     {
+      "grid_video_slice_type_description": [
+        {
+          "type": "paragraph",
+          "text": "Dolor sit amet, consectetur adipiscing elit. Suspendisse.",
+          "spans": []
+        }
+      ],
       "grid_video_slice_type_poster": {
         "dimensions": {
           "width": 400,
@@ -30,6 +37,13 @@
       }
     },
     {
+      "grid_video_slice_type_description": [
+        {
+          "type": "paragraph",
+          "text": "Dolor sit amet, consectetur adipiscing elit. Suspendisse.",
+          "spans": []
+        }
+      ],
       "grid_video_slice_type_poster": {
         "dimensions": {
           "width": 400,
@@ -57,6 +71,13 @@
       }
     },
     {
+      "grid_video_slice_type_description": [
+        {
+          "type": "paragraph",
+          "text": "Dolor sit amet, consectetur adipiscing elit. Suspendisse.",
+          "spans": []
+        }
+      ],
       "grid_video_slice_type_poster": {
         "dimensions": {
           "width": 400,
@@ -84,6 +105,13 @@
       }
     },
     {
+      "grid_video_slice_type_description": [
+        {
+          "type": "paragraph",
+          "text": "Dolor sit amet, consectetur adipiscing elit. Suspendisse.",
+          "spans": []
+        }
+      ],
       "grid_video_slice_type_poster": {
         "dimensions": {
           "width": 400,

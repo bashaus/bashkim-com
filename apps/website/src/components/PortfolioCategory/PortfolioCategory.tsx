@@ -6,7 +6,7 @@ import type {
 import { PrismicRichText } from "@bashkim-com/prismic-helpers";
 
 import { PortfolioCaseStudyBrick } from "../PortfolioCaseStudyBrick/PortfolioCaseStudyBrick";
-import * as S from "./PortfolioCategory.styles";
+import styles from "./PortfolioCategory.module.scss";
 
 export type PortfolioCategoryProps = {
   portfolioCategory: Portfolio_PagePortfolio_CategoriesPortfoliocategoryslicetype;
@@ -25,16 +25,16 @@ export const PortfolioCategory = ({
       />
     </SubtitlePartial>
 
-    <S.CaseStudies>
+    <ul className={styles["CaseStudies"]}>
       {portfolioCategory.fields.map(({ portfolio_category_case_study }) => {
         const caseStudy = portfolio_category_case_study as Case_Study;
 
         return (
-          <S.CaseStudy key={caseStudy._meta.uid}>
+          <li className={styles["CaseStudy"]} key={caseStudy._meta.uid}>
             <PortfolioCaseStudyBrick caseStudy={caseStudy} />
-          </S.CaseStudy>
+          </li>
         );
       })}
-    </S.CaseStudies>
+    </ul>
   </>
 );

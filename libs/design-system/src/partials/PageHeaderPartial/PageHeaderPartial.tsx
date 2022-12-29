@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-import * as S from "./PageHeaderPartial.styles";
+import styles from "./PageHeaderPartial.module.scss";
 
 export type PageHeaderPartialProps = {
   aside?: ReactNode;
@@ -17,7 +17,7 @@ export const PageHeaderPartial = ({
   imageDesktop,
   imageMobile,
 }: PageHeaderPartialProps) => (
-  <S.PageHeaderPartial id={id}>
+  <header className={styles["PageHeaderPartial"]} id={id}>
     {id && imageDesktop && (
       <style type="text/css">
         {`
@@ -40,9 +40,9 @@ export const PageHeaderPartial = ({
       </style>
     )}
 
-    <S.Foreground>
-      <S.Content>{children}</S.Content>
-      {aside && <S.Aside>{aside}</S.Aside>}
-    </S.Foreground>
-  </S.PageHeaderPartial>
+    <div className={styles["Foreground"]}>
+      <div className={styles["Content"]}>{children}</div>
+      {aside && <aside className={styles["Aside"]}>{aside}</aside>}
+    </div>
+  </header>
 );

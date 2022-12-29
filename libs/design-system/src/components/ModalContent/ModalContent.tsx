@@ -1,22 +1,24 @@
+import classNames from "classnames";
 import { gsap } from "gsap";
 import { ComponentPropsWithoutRef, useEffect, useRef } from "react";
 
-import * as S from "./ModalContent.styles";
+import styles from "./ModalContent.module.scss";
 
 export type ModalContentProps = ComponentPropsWithoutRef<"div"> & {
-  isOpen: boolean;
   onHideComplete?(): void;
   onHideStart?(): void;
   onShowComplete?(): void;
   onShowStart?(): void;
+  isOpen: boolean;
 };
 
 export const ModalContent = ({
-  isOpen,
+  className,
   onHideComplete,
   onHideStart,
   onShowComplete,
   onShowStart,
+  isOpen,
   ...props
 }: ModalContentProps) => {
   const divRef = useRef<HTMLDivElement>(null);
@@ -53,8 +55,15 @@ export const ModalContent = ({
   }, [isOpen, onHideComplete, onHideStart, onShowComplete, onShowStart]);
 
   return (
-    <S.AnimationContainer ref={divRef} style={{ visibility: "hidden" }}>
-      <S.ModalContent {...props} />
-    </S.AnimationContainer>
+    <div
+      className={styles["AnimationContainer"]}
+      ref={divRef}
+      style={{ visibility: "hidden" }}
+    >
+      <div
+        className={classNames(className, styles["ModalContent"])}
+        {...props}
+      />
+    </div>
   );
 };

@@ -1,6 +1,7 @@
 import type { Meta, Story } from "@storybook/react";
 
-import { Group as GroupComponent, GroupDesign, GroupProps } from "./Group";
+import { Group as GroupComponent, GroupProps } from "./Group";
+import { GroupDesign } from "./Group.types";
 
 export default {
   component: GroupComponent,
@@ -19,7 +20,7 @@ type GroupStoryProps = GroupProps & {
 
 const Template: Story<GroupStoryProps> = (args: GroupStoryProps) => (
   <GroupComponent {...args}>
-    <p>Nulla facilisi. Vivamus ac fringilla urna. Praesent in.</p>
+    <p>Nulla facilisi. Vivamus ac fringilla urna. Praesent in. {args.design}</p>
   </GroupComponent>
 );
 

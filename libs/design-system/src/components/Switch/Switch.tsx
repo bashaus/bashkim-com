@@ -1,6 +1,7 @@
+import classNames from "classnames";
 import { ComponentPropsWithoutRef, ReactNode } from "react";
 
-import * as S from "./Switch.styles";
+import styles from "./Switch.module.scss";
 
 export type SwitchProps = ComponentPropsWithoutRef<"input"> & {
   iconOff?: ReactNode;
@@ -8,16 +9,25 @@ export type SwitchProps = ComponentPropsWithoutRef<"input"> & {
 };
 
 export const Switch = ({
+  className,
   checked = false,
   iconOff,
   iconOn,
   ...props
 }: SwitchProps) => (
-  <S.Switch aria-checked={checked}>
-    <S.Slider>
-      {iconOff && <S.IconOff>{iconOff}</S.IconOff>}
-      {iconOn && <S.IconOn>{iconOn}</S.IconOn>}
-      <S.Input type="checkbox" checked={checked} {...props} />
-    </S.Slider>
-  </S.Switch>
+  <label
+    className={classNames(className, styles["Switch"])}
+    aria-checked={checked}
+  >
+    <div className={styles["Slider"]}>
+      {iconOff && <div className={styles["IconOff"]}>{iconOff}</div>}
+      {iconOn && <div className={styles["IconOn"]}>{iconOn}</div>}
+      <input
+        type="checkbox"
+        className={styles["Input"]}
+        checked={checked}
+        {...props}
+      />
+    </div>
+  </label>
 );

@@ -1,0 +1,33 @@
+.Slider {
+  position: relative;
+  margin-top: 20px;
+  padding-top: 40px;
+
+  &::before {
+    content: "Slide to resize";
+    position: absolute;
+    top: 16px;
+    left: 40px;
+    right: 40px;
+    line-height: 16px;
+    text-align: center;
+    font-size: 80%;
+  }
+}
+
+.IconMobile {
+  position: absolute;
+  top: 10px;
+  left: 0;
+}
+
+.IconDesktop {
+  position: absolute;
+  top: 8px;
+  right: 0;
+}
+
+.Range {
+  width: 100%;
+  cursor: ew-resize;
+}

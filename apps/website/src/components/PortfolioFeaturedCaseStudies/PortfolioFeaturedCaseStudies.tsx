@@ -6,7 +6,7 @@ import type {
 import { PrismicRichText } from "@bashkim-com/prismic-helpers";
 import Link from "next/link";
 
-import * as S from "./PortfolioFeaturedCaseStudies.styles";
+import styles from "./PortfolioFeaturedCaseStudies.module.scss";
 
 export type PortfolioFeaturedCaseStudiesProps = {
   featured: Array<Portfolio_PageFeatured>;
@@ -15,33 +15,37 @@ export type PortfolioFeaturedCaseStudiesProps = {
 export const PortfolioFeaturedCaseStudies = ({
   featured,
 }: PortfolioFeaturedCaseStudiesProps) => (
-  <S.PortfolioFeaturedCaseStudies>
+  <ul className={styles["PortfolioFeaturedCaseStudies"]}>
     {featured.map((feature) => {
       const title = feature.featured_title;
       const description = feature.featured_description;
       const caseStudy = feature.featured_case_study as Case_Study;
 
       return (
-        <S.PortfolioFeaturedCaseStudy key={caseStudy._meta.id}>
-          <S.Details>
+        <li
+          className={styles["PortfolioFeaturedCaseStudy"]}
+          key={caseStudy._meta.id}
+        >
+          <div className={styles["Details"]}>
             <RichTextFormatter>
               <PrismicRichText render={title} />
               <PrismicRichText render={description} />
             </RichTextFormatter>
-          </S.Details>
+          </div>
 
-          <Link href={`/portfolio/${caseStudy._meta.uid}`}>
-            <S.Tile>
-              <Tile
-                title={caseStudy.meta_title}
-                description={caseStudy.meta_description}
-                icon={caseStudy.image_icon.url}
-                poster={caseStudy.image_poster.url}
-              />
-            </S.Tile>
+          <Link
+            href={`/portfolio/${caseStudy._meta.uid}`}
+            className={styles["Tile"]}
+          >
+            <Tile
+              title={caseStudy.meta_title}
+              description={caseStudy.meta_description}
+              icon={caseStudy.image_icon.url}
+              poster={caseStudy.image_poster.url}
+            />
           </Link>
-        </S.PortfolioFeaturedCaseStudy>
+        </li>
       );
     })}
-  </S.PortfolioFeaturedCaseStudies>
+  </ul>
 );

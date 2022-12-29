@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-import * as S from "./TitlePartial.styles";
+import styles from "./TitlePartial.module.scss";
 
 export type TitlePartialProps = {
   children?: ReactNode;
@@ -8,8 +8,8 @@ export type TitlePartialProps = {
 };
 
 export const TitlePartial = ({ children, image }: TitlePartialProps) => (
-  <S.TitlePartial>
-    <S.Content>{children}</S.Content>
-    {image && <S.Image src={image} alt="" />}
-  </S.TitlePartial>
+  <header className={styles["TitlePartial"]}>
+    <div className={styles["Content"]}>{children}</div>
+    {image && <img className={styles["Image"]} src={image} alt="" />}
+  </header>
 );

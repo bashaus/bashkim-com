@@ -1,8 +1,9 @@
+import { SquareIcon, TriangleRightIcon, XIcon } from "@primer/octicons-react";
 import { useCallback, useRef, useState } from "react";
 import ReactPlayer, { ReactPlayerProps } from "react-player/lazy";
 
 import { Modal, ModalProps } from "../Modal/Modal";
-import * as S from "./VideoModal.styles";
+import styles from "./VideoModal.module.scss";
 
 export type VideoModalProps = {
   /**
@@ -58,7 +59,7 @@ export const VideoModal = ({
 
   return (
     <Modal isOpen={isOpen} onRequestClose={onRequestClose}>
-      <S.VideoFrame>
+      <div className={styles["VideoFrame"]}>
         <ReactPlayer
           config={{
             youtube: {
@@ -86,21 +87,33 @@ export const VideoModal = ({
           onPause={handlePlayerPause}
           onDuration={handlePlayerDuration}
         />
-      </S.VideoFrame>
+      </div>
 
-      <S.VideoControls>
-        <S.ControlButton onClick={handlePlayPauseClick}>
+      <div className={styles["VideoControls"]}>
+        <button
+          className={styles["ControlButton"]}
+          onClick={handlePlayPauseClick}
+        >
           {playing ? (
-            <S.StopIcon aria-label="Stop video" />
+            <SquareIcon
+              className={styles["StopIcon"]}
+              aria-label="Stop video"
+            />
           ) : (
-            <S.PlayIcon aria-label="Play video" />
+            <TriangleRightIcon
+              className={styles["PlayIcon"]}
+              aria-label="Play video"
+            />
           )}
-        </S.ControlButton>
+        </button>
 
-        <S.ControlButton onClick={onRequestClose}>
-          <S.CloseIcon aria-label="Stop and close video" />
-        </S.ControlButton>
-      </S.VideoControls>
+        <button className={styles["ControlButton"]} onClick={onRequestClose}>
+          <XIcon
+            className={styles["CloseIcon"]}
+            aria-label="Stop and close video"
+          />
+        </button>
+      </div>
 
       {/* onBuffer?: () => void */}
       {/* onBufferEnd?: () => void */}

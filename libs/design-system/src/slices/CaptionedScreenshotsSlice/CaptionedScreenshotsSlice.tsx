@@ -5,7 +5,7 @@ import { ChangeEvent, useCallback, useState } from "react";
 
 import { RichTextFormatter } from "../../formatters/RichTextFormatter/RichTextFormatter";
 import { CaptionedPartial } from "../../partials/CaptionedPartial/CaptionedPartial";
-import * as S from "./CaptionedScreenshotsSlice.styles";
+import styles from "./CaptionedScreenshotsSlice.module.scss";
 
 export type CaptionedScreenshotsSliceProps = {
   initialWidth?: number;
@@ -76,21 +76,25 @@ export const CaptionedScreenshotsSlice = ({
         <PrismicRichText render={caption} />
       </RichTextFormatter>
 
-      <S.Slider>
-        <S.IconMobile>
+      <div className={styles["Slider"]}>
+        <span className={styles["IconMobile"]}>
           <DeviceMobileIcon size="small" aria-label="Mobile" />
-        </S.IconMobile>
+        </span>
 
-        <S.IconDesktop>
+        <span className={styles["IconDesktop"]}>
           <DeviceDesktopIcon size="medium" aria-label="Desktop" />
-        </S.IconDesktop>
+        </span>
 
-        <S.Range
+        <input
+          className={styles["Range"]}
+          type="range"
+          min={0}
+          step={1}
           max={fields.length - 1}
           value={selectedIndex}
           onChange={handleSizeChange}
         />
-      </S.Slider>
+      </div>
     </CaptionedPartial>
   );
 };

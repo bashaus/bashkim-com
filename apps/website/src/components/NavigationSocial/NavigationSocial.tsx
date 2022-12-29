@@ -1,12 +1,14 @@
+import { NavigationGroup, NavigationItem } from "@bashkim-com/design-system";
+
 import { ReactComponent as GitHubVector } from "../../assets/vectors/social/github.svg";
 import { ReactComponent as LinkedInVector } from "../../assets/vectors/social/linked-in.svg";
 import { ReactComponent as MediumVector } from "../../assets/vectors/social/medium.svg";
 import { ReactComponent as StackOverflowVector } from "../../assets/vectors/social/stack-overflow.svg";
-import * as S from "./NavigationSocial.styles";
+import styles from "./NavigationSocial.module.scss";
 
 export const NavigationSocial = () => (
-  <S.NavigationSocial>
-    <S.IconGitHub>
+  <NavigationGroup className={styles["NavigationSocial"]}>
+    <NavigationItem className={styles["IconGitHub"]}>
       <a
         href="https://github.com/bashaus?tab=repositories"
         target="_blank"
@@ -16,9 +18,9 @@ export const NavigationSocial = () => (
         <GitHubVector />
         <span>GitHub</span>
       </a>
-    </S.IconGitHub>
+    </NavigationItem>
 
-    <S.IconMedium>
+    <NavigationItem className={styles["IconMedium"]}>
       <a
         href="https://medium.com/@bashaus"
         target="_blank"
@@ -28,9 +30,9 @@ export const NavigationSocial = () => (
         <MediumVector />
         <span>Medium</span>
       </a>
-    </S.IconMedium>
+    </NavigationItem>
 
-    <S.IconStackOverflow>
+    <NavigationItem className={styles["IconStackOverflow"]}>
       <a
         href="https://stackoverflow.com/users/600240/bashaus"
         target="_blank"
@@ -40,9 +42,9 @@ export const NavigationSocial = () => (
         <StackOverflowVector />
         <span>Stack Overflow</span>
       </a>
-    </S.IconStackOverflow>
+    </NavigationItem>
 
-    <S.IconLinkedIn>
+    <NavigationItem className={styles["IconLinkedIn"]}>
       <a
         href="https://www.linkedin.com/in/bashaus/"
         target="_blank"
@@ -52,6 +54,6 @@ export const NavigationSocial = () => (
         <LinkedInVector />
         <span>Linked In</span>
       </a>
-    </S.IconLinkedIn>
-  </S.NavigationSocial>
+    </NavigationItem>
+  </NavigationGroup>
 );

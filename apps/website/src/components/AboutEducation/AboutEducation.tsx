@@ -9,7 +9,7 @@ import QutGardensPointImage from "../../assets/images/about/education/qut/garden
 import QutLogoImage from "../../assets/images/about/education/qut/logo.jpg";
 import UqBackgroundImage from "../../assets/images/about/education/uq/background.jpg";
 import UqLogoImage from "../../assets/images/about/education/uq/logo.png";
-import * as S from "./AboutEducation.styles";
+import styles from "./AboutEducation.module.scss";
 
 export const AboutEducation = () => (
   <Group>
@@ -35,7 +35,7 @@ export const AboutEducation = () => (
 
       <SplitItemPartial backgroundImage={UqBackgroundImage.src}>
         <div>
-          <S.Logo alt="" src={UqLogoImage.src} />
+          <img className={styles["Logo"]} alt="" src={UqLogoImage.src} />
         </div>
       </SplitItemPartial>
     </SplitPartial>
@@ -85,7 +85,7 @@ export const AboutEducation = () => (
 
       <SplitItemPartial backgroundImage={QutGardensPointImage.src}>
         <div>
-          <S.Logo alt="" src={QutLogoImage.src} />
+          <img className={styles.Logo} alt="" src={QutLogoImage.src} />
         </div>
       </SplitItemPartial>
     </SplitPartial>

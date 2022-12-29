@@ -1,6 +1,9 @@
-import * as S from "./Brick.styles";
+import classNames from "classnames";
+import { ComponentPropsWithRef } from "react";
 
-export type BrickProps = {
+import styles from "./Brick.module.scss";
+
+export type BrickProps = ComponentPropsWithRef<"article"> & {
   /**
    * The description text, will be wrapped in a `<p>` tag
    */
@@ -17,16 +20,22 @@ export type BrickProps = {
   title?: string;
 };
 
-export const Brick = ({ description, icon, title }: BrickProps) => (
-  <S.Brick>
-    <S.Content>
-      <S.Heading>{title}</S.Heading>
+export const Brick = ({
+  className,
+  description,
+  icon,
+  title,
+  ...restProps
+}: BrickProps) => (
+  <article className={classNames(className, styles["Brick"])} {...restProps}>
+    <div className={styles["Content"]}>
+      <h3 className={styles["Heading"]}>{title}</h3>
 
-      <S.Image>
+      <div className={styles["Image"]}>
         <img alt="" src={icon} />
-      </S.Image>
+      </div>
 
-      {description && <S.Description>{description}</S.Description>}
-    </S.Content>
-  </S.Brick>
+      {description && <p className={styles["Description"]}>{description}</p>}
+    </div>
+  </article>
 );

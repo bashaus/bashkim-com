@@ -1,33 +1,6 @@
 import NextDocument, { Head, Html, Main, NextScript } from "next/document";
-import { ReactNode } from "react";
-import { ServerStyleSheet } from "styled-components";
 
-export type DocumentProps = {
-  styledComponents: ReactNode;
-};
-
-class MyDocument extends NextDocument<DocumentProps> {
-  static async getInitialProps(ctx) {
-    const sheet = new ServerStyleSheet();
-    const originalRenderPage = ctx.renderPage;
-
-    try {
-      ctx.renderPage = () =>
-        originalRenderPage({
-          enhanceApp: (App) => (props) =>
-            sheet.collectStyles(<App {...props} />),
-        });
-
-      const initialProps = await NextDocument.getInitialProps(ctx);
-      return {
-        ...initialProps,
-        styledComponents: sheet.getStyleElement(),
-      };
-    } finally {
-      sheet.seal();
-    }
-  }
-
+class MyDocument extends NextDocument {
   render() {
     return (
       <Html lang="en" dir="ltr">
@@ -79,8 +52,6 @@ class MyDocument extends NextDocument<DocumentProps> {
             <meta property="og:url" content={ destinationPath } />
             <meta name="twitter:url" content={ destinationPath } />
           */}
-
-          {this.props.styledComponents}
         </Head>
         <body>
           <Main />

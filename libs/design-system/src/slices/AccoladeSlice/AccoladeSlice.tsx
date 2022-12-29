@@ -6,9 +6,10 @@ import {
 } from "@bashkim-com/prismic-helpers";
 import { Link } from "prismic-reactjs";
 
+import { ReactComponent as TrophyVector } from "../../assets/vectors/trophy.svg";
 import { DateFormatter } from "../../formatters/DateFormatter/DateFormatter";
 import { RichTextFormatter } from "../../formatters/RichTextFormatter/RichTextFormatter";
-import * as S from "./AccoladeSlice.styles";
+import styles from "./AccoladeSlice.module.scss";
 
 export type AccoladeSliceProps = {
   slice: Case_StudyAccoladesAccoladeslicetype;
@@ -36,8 +37,8 @@ export const AccoladeSlice = ({ slice }: AccoladeSliceProps) => {
   } = slice.primary;
 
   return (
-    <S.AccoladeSlice>
-      <S.Details>
+    <div className={styles["AccoladeSlice"]}>
+      <div className={styles["Details"]}>
         <RichTextFormatter>
           <PrismicRichText render={issuer} />
           <PrismicRichText render={description} />
@@ -49,9 +50,9 @@ export const AccoladeSlice = ({ slice }: AccoladeSliceProps) => {
             </p>
           )}
         </RichTextFormatter>
-      </S.Details>
+      </div>
 
-      <S.Awards>
+      <div className={styles["Awards"]}>
         {slice.fields?.map((field, i) => {
           const {
             accolade_slice_type_award_place: awardPlace,
@@ -62,18 +63,22 @@ export const AccoladeSlice = ({ slice }: AccoladeSliceProps) => {
           const awardHref = Link.url(awardLink, PrismicLinkResolver);
 
           return (
-            <S.Award key={i} data-prop-place={awardPlace}>
+            <div
+              className={styles["Award"]}
+              data-prop-place={awardPlace}
+              key={i}
+            >
               <a href={awardHref} target="_blank" rel="noreferrer">
-                <S.Trophy />
+                <TrophyVector className={styles["Trophy"]} />
                 <RichTextFormatter>
                   {awardPlace && <h3>{AwardPlaceName[awardPlace]}</h3>}
                   <PrismicRichText render={awardCategory} />
                 </RichTextFormatter>
               </a>
-            </S.Award>
+            </div>
           );
         })}
-      </S.Awards>
-    </S.AccoladeSlice>
+      </div>
+    </div>
   );
 };

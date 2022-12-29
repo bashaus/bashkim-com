@@ -1,0 +1,109 @@
+@import "~@bashkim-com/style-guide/colors.scss";
+@import "~@bashkim-com/style-guide/grid.scss";
+@import "~@bashkim-com/style-guide/media.scss";
+
+.FooterColumn {
+  position: relative;
+
+  @media #{$media-query-screen-large} {
+    width: 200px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.Label {
+  @include grid-full-padding(
+    $breakpoints: mobile-portrait mobile-landscape tablet-portrait
+  );
+
+  display: block;
+  line-height: 3em;
+  background-color: $color-greyscale-100;
+  color: $color-white;
+  text-transform: uppercase;
+
+  @media #{$media-query-screen-small} {
+    position: relative;
+    padding-top: 1px;
+    padding-bottom: 0;
+
+    /* Line */
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      background-color: $color-white;
+      left: 14px;
+      right: 14px;
+      bottom: -1px;
+      height: 1px;
+      z-index: 1;
+    }
+
+    /* Expand/collapse icon */
+    &::after {
+      content: "▽";
+      position: absolute;
+      top: 50%;
+      right: 1em;
+      width: 1.5em;
+      height: 3em;
+      text-align: center;
+      transform: translateY(-50%);
+      line-height: 3em;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    .FooterColumn[aria-expanded="true"] &::after {
+      transform: translateY(-50%) rotate(180deg);
+    }
+  }
+
+  @media #{$media-query-screen-large} {
+    cursor: inherit;
+
+    .FooterColumn:nth-last-child(n + 2) &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      height: 1em;
+      width: 1px;
+      right: 10px;
+      background-color: $color-white;
+      margin-top: 1em;
+      z-index: 1;
+    }
+  }
+}
+
+.Content {
+  @include grid-full-padding(
+    $breakpoints: mobile-portrait mobile-landscape tablet-portrait
+  );
+
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+
+  @media #{$media-query-screen-small} {
+    display: none;
+
+    .FooterColumn[aria-expanded="true"] & {
+      display: block;
+    }
+  }
+
+  @media #{$media-query-screen-large} {
+    a {
+      line-height: 1.5em;
+      padding-top: 0.25em;
+      padding-bottom: 0.25em;
+      transition: color 0.3s ease-in-out;
+    }
+
+    a:hover {
+      color: $color-greyscale-150;
+    }
+  }
+}

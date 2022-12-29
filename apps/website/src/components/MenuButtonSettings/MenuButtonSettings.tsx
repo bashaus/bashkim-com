@@ -1,8 +1,9 @@
 import { MenuButton } from "@bashkim-com/design-system";
+import { GearIcon } from "@primer/octicons-react";
 import { useCallback, useState } from "react";
 
 import { SiteSettings } from "../SiteSettings/SiteSettings";
-import * as S from "./MenuButtonSettings.styles";
+import styles from "./MenuButtonSettings.module.scss";
 
 export const MenuButtonSettings = () => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
@@ -18,7 +19,7 @@ export const MenuButtonSettings = () => {
   return (
     <>
       <MenuButton onClick={handleSignifierClick}>
-        <S.Icon />
+        <GearIcon size="small" className={styles["Icon"]} />
       </MenuButton>
       <SiteSettings isVisible={isVisible} onClose={handleClose} />
     </>

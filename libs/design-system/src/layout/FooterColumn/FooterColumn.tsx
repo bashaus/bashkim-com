@@ -1,6 +1,6 @@
 import { ReactNode, useCallback, useState } from "react";
 
-import * as S from "./FooterColumn.styles";
+import styles from "./FooterColumn.module.scss";
 
 export type FooterColumnProps = {
   children: ReactNode;
@@ -16,12 +16,17 @@ export const FooterColumn = ({ label, children }: FooterColumnProps) => {
   }, [isVisible]);
 
   return (
-    <S.FooterColumn aria-expanded={isVisible}>
-      <S.Label onClick={handleHeaderClick} onKeyPress={handleHeaderClick}>
+    <div className={styles["FooterColumn"]} aria-expanded={isVisible}>
+      <div
+        className={styles["Label"]}
+        onClick={handleHeaderClick}
+        onKeyPress={handleHeaderClick}
+        role="menuitem"
+      >
         {label}
-      </S.Label>
+      </div>
 
-      <S.Content>{children}</S.Content>
-    </S.FooterColumn>
+      <div className={styles["Content"]}>{children}</div>
+    </div>
   );
 };
