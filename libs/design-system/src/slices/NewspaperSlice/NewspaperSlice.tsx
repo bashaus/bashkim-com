@@ -10,10 +10,10 @@ export type NewspaperSliceProps = {
 
 export const NewspaperSlice = ({ slice }: NewspaperSliceProps) => (
   <NewspaperPartial>
-    {slice.fields?.map((field, i) => {
+    {slice.fields?.map((field) => {
       const { newspaper_slice_type_group: group } = field;
       return (
-        <RichTextFormatter key={i}>
+        <RichTextFormatter key={JSON.stringify(group)}>
           <PrismicRichText render={group} />
         </RichTextFormatter>
       );

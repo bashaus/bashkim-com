@@ -11,7 +11,7 @@ export type GridVideoSliceProps = {
 
 export const GridVideoSlice = ({ slice }: GridVideoSliceProps) => (
   <ol className={styles["Videos"]} data-column-count={slice.fields?.length}>
-    {slice.fields?.map((field, i) => {
+    {slice.fields?.map((field) => {
       const {
         grid_video_slice_type_description: description,
         grid_video_slice_type_poster: poster,
@@ -23,7 +23,7 @@ export const GridVideoSlice = ({ slice }: GridVideoSliceProps) => (
       }
 
       return (
-        <li className={styles["Video"]} key={i}>
+        <li className={styles["Video"]} key={JSON.stringify(field)}>
           <VideoPoster
             title={video.title}
             imageUrl={poster.url}

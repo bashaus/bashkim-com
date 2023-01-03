@@ -37,7 +37,7 @@ export type CarouselPhonesSliceProps = {
 export const CarouselPhonesSlice = ({ slice }: CarouselPhonesSliceProps) => (
   <FullImagePartial>
     <Carousel slidesToShow={3} responsive={CAROUSEL_RESPONSIVE}>
-      {slice.fields?.map((field, i) => {
+      {slice.fields?.map((field) => {
         const {
           carousel_phones_slice_type_device_type: deviceType,
           carousel_phones_slice_type_caption: caption,
@@ -52,7 +52,7 @@ export const CarouselPhonesSlice = ({ slice }: CarouselPhonesSliceProps) => (
 
         return (
           <CarouselImage
-            key={i}
+            key={JSON.stringify(field)}
             figure={
               <DeviceComponent
                 figure={

@@ -21,8 +21,11 @@ export const CaseStudyExhibitions = ({
       </SubtitlePartial>
 
       <ol className={styles["CaseStudyExhibitions"]}>
-        {slices.map((slice, i) => (
-          <li className={styles["CaseStudyExhibition"]} key={i}>
+        {slices.map((slice) => (
+          <li
+            className={styles["CaseStudyExhibition"]}
+            key={JSON.stringify(slice)}
+          >
             <ExhibitionSlice slice={slice} />
           </li>
         ))}

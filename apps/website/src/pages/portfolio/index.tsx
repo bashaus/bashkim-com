@@ -58,8 +58,8 @@ const PortfolioPage = ({ portfolioPage }: PortfolioPageProps) => {
         <PortfolioFeaturedCaseStudies featured={featured} />
       </Group>
 
-      {portfolioCategories.map((portfolioCategory, i) => (
-        <Group key={i}>
+      {portfolioCategories.map((portfolioCategory) => (
+        <Group key={JSON.stringify(portfolioCategory)}>
           <PortfolioCategory portfolioCategory={portfolioCategory} />
         </Group>
       ))}

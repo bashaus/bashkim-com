@@ -19,8 +19,8 @@ export const CaseStudyAccolades = ({
       </SubtitlePartial>
 
       <div>
-        {slices.map((slice, i) => (
-          <AccoladeSlice slice={slice} key={i} />
+        {slices.map((slice) => (
+          <AccoladeSlice slice={slice} key={JSON.stringify(slice)} />
         ))}
       </div>
     </>

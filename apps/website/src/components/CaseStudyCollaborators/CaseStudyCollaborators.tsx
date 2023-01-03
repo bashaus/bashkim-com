@@ -33,7 +33,10 @@ export const CaseStudyCollaborators = ({
         </li>
 
         {slices.map((slice, i) => (
-          <li className={styles["CaseStudyCollaborator"]} key={i}>
+          <li
+            className={styles["CaseStudyCollaborator"]}
+            key={JSON.stringify(slice)}
+          >
             <CollaboratorSlice slice={slice} />
           </li>
         ))}

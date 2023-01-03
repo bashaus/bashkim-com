@@ -53,7 +53,7 @@ export const AccoladeSlice = ({ slice }: AccoladeSliceProps) => {
       </div>
 
       <div className={styles["Awards"]}>
-        {slice.fields?.map((field, i) => {
+        {slice.fields?.map((field) => {
           const {
             accolade_slice_type_award_place: awardPlace,
             accolade_slice_type_award_link: awardLink,
@@ -66,7 +66,7 @@ export const AccoladeSlice = ({ slice }: AccoladeSliceProps) => {
             <div
               className={styles["Award"]}
               data-prop-place={awardPlace}
-              key={i}
+              key={JSON.stringify(field)}
             >
               <a href={awardHref} target="_blank" rel="noreferrer">
                 <TrophyVector className={styles["Trophy"]} />

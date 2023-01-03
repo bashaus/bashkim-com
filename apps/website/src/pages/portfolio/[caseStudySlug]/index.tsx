@@ -59,8 +59,8 @@ const CaseStudyPage = ({
         <CaseStudyHeader caseStudy={caseStudyPage} />
 
         <Group>
-          {caseStudyBody.body.map((slice, i) => (
-            <Slice slice={slice} key={i} />
+          {caseStudyBody.body.map((slice) => (
+            <Slice slice={slice} key={JSON.stringify(slice)} />
           ))}
         </Group>
 
