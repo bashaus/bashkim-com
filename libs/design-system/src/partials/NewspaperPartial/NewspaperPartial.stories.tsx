@@ -32,12 +32,13 @@ const Template: Story<NewspaperPartialStoryProps> = ({
   <NewspaperPartialComponent {...args}>
     {Array(paragraphs)
       .fill("")
-      .map((_value, index) => (
-        <div key={index}>
-          Paragraph {index + 1}: Pellentesque sit amet luctus diam. Aenean
-          lobortis non arcu sit amet fringilla. Proin sodales vel orci a
-          venenatis. Mauris vulputate, dolor eu consectetur congue, mi leo
-          eleifend lorem, ac lacinia.
+      .map((_value, i) => i + 1)
+      .map((value) => (
+        <div key={value}>
+          Paragraph {value}: Pellentesque sit amet luctus diam. Aenean lobortis
+          non arcu sit amet fringilla. Proin sodales vel orci a venenatis.
+          Mauris vulputate, dolor eu consectetur congue, mi leo eleifend lorem,
+          ac lacinia.
         </div>
       ))}
   </NewspaperPartialComponent>

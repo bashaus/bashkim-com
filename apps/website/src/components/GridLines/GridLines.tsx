@@ -13,9 +13,10 @@ export const GridLines = () => {
     <div className={styles["GridLines"]}>
       <div className={styles["Container"]}>
         {Array(12)
-          .fill(" ")
-          .map((_value, index) => (
-            <div className={styles["Cell"]} key={index} />
+          .fill("")
+          .map((_value, i) => i + 1)
+          .map((value) => (
+            <div className={styles["Cell"]} key={value} />
           ))}
       </div>
     </div>

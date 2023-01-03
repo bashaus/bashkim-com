@@ -24,13 +24,14 @@ const Template: Story<MagazineProps> = (args: MagazineProps) => (
     <MagazineComponent {...args}>
       {Array(args.pages)
         .fill("")
-        .map((_value, index) => (
-          <div key={index}>
+        .map((_value, i) => i + 1)
+        .map((value) => (
+          <div key={value}>
             <img
               src={`https://via.placeholder.com/${args.pageWidth}x${
                 args.pageHeight
-              }?text=Page+${index + 1}`}
-              alt={`Page ${index + 1}`}
+              }?text=Page+${value + 1}`}
+              alt={`Page ${value + 1}`}
               width={args.pageWidth}
               height={args.pageHeight}
             />

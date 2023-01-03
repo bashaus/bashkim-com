@@ -18,13 +18,12 @@ const Template: Story<TurnProps> = (args: TurnProps) => (
     <TurnComponent {...args} pageWidth={300} pageHeight={450}>
       {Array(args.pages)
         .fill("")
-        .map((_value, index) => (
-          <div key={index}>
+        .map((_value, i) => i + 1)
+        .map((value) => (
+          <div key={value}>
             <img
-              src={`https://via.placeholder.com/300x450.png?text=Page+${
-                index + 1
-              }`}
-              alt={`Page ${index + 1}`}
+              src={`https://via.placeholder.com/300x450.png?text=Page+${value}`}
+              alt={`Page ${value}`}
             />
           </div>
         ))}

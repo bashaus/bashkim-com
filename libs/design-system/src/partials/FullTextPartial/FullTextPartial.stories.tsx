@@ -31,8 +31,9 @@ const Template: Story<FullTextPartialStoryProps> = ({
     <h3>{title}</h3>
     {Array(6)
       .fill("")
-      .map((_value, index) => (
-        <p key={index}>
+      .map((_value, i) => i + 1)
+      .map((value) => (
+        <p key={value}>
           Aliquam eu dictum justo. Morbi purus orci, auctor ac maximus at,
           lobortis at leo. Aenean a pulvinar nibh. Phasellus sagittis pulvinar
           risus, non varius mi luctus vel. Etiam laoreet eget.

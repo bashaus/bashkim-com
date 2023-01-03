@@ -38,10 +38,11 @@ const Template: Story<CarouselStoryProps> = ({
     <CarouselComponent {...args}>
       {Array(slides)
         .fill("")
-        .map((_value, index) => (
-          <div key={index}>
+        .map((_value, i) => i + 1)
+        .map((value) => (
+          <div key={value}>
             <RichTextFormatter>
-              <h3>Slide {index + 1}</h3>
+              <h3>Slide {value}</h3>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
                 ultrices ex ut diam suscipit rhoncus. Cras a ligula porta,
