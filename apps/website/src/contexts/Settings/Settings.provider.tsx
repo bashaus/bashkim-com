@@ -1,5 +1,5 @@
 import Cookie from "js-cookie";
-import { ReactNode, useEffect, useReducer } from "react";
+import { ReactNode, useEffect, useMemo, useReducer } from "react";
 
 import { SettingsActionSetAppearance } from "./Settings.actions";
 import { SettingsContext } from "./Settings.context";
@@ -47,8 +47,13 @@ export const SettingsProvider = ({ children }: SettingsProviderProps) => {
     Cookie.set("appearance", appearance);
   }, [appearance]);
 
+  const providerValue = useMemo(
+    () => ({ settingsState, settingsDispatch }),
+    [settingsState, settingsDispatch]
+  );
+
   return (
-    <SettingsContext.Provider value={{ settingsState, settingsDispatch }}>
+    <SettingsContext.Provider value={providerValue}>
       {children}
     </SettingsContext.Provider>
   );

@@ -1,4 +1,4 @@
-import { ReactNode, useReducer } from "react";
+import { ReactNode, useMemo, useReducer } from "react";
 
 import { NavigationContext } from "./Navigation.context";
 import { NavigationReducer } from "./Navigation.reducer";
@@ -14,8 +14,13 @@ export const NavigationProvider = ({ children }: NavigationProviderProps) => {
     navigationStateInitial
   );
 
+  const providerValue = useMemo(
+    () => ({ navigationState, navigationDispatch }),
+    [navigationState, navigationDispatch]
+  );
+
   return (
-    <NavigationContext.Provider value={{ navigationState, navigationDispatch }}>
+    <NavigationContext.Provider value={providerValue}>
       {children}
     </NavigationContext.Provider>
   );

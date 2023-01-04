@@ -28,6 +28,40 @@ export const Modal = ({ isOpen, style = {}, ...props }: ModalProps) => {
 
   const shouldRender = isOpen || isOverlayOpen || isContentOpen;
 
+  const overlayElement = useCallback(
+    (
+      overlayProps: React.ComponentPropsWithRef<"div">,
+      contentElement: React.ReactElement
+    ) => (
+      <ModalOverlay
+        {...overlayProps}
+        isOpen={isOpen}
+        onShowStart={handleOverlayShowStart}
+        onHideComplete={handleOverlayHideComplete}
+      >
+        {contentElement}
+      </ModalOverlay>
+    ),
+    [handleOverlayHideComplete, handleOverlayShowStart, isOpen]
+  );
+
+  const contentElement = useCallback(
+    (
+      contentProps: React.ComponentPropsWithRef<"div">,
+      children: React.ReactNode
+    ) => (
+      <ModalContent
+        {...contentProps}
+        isOpen={isOpen}
+        onShowStart={handleContentShowStart}
+        onHideComplete={handleContentHideComplete}
+      >
+        {children}
+      </ModalContent>
+    ),
+    [handleContentHideComplete, handleContentShowStart, isOpen]
+  );
+
   return (
     <ReactModal
       {...props}
@@ -47,26 +81,8 @@ export const Modal = ({ isOpen, style = {}, ...props }: ModalProps) => {
           padding: undefined,
         },
       }}
-      overlayElement={(overlayProps, contentElement) => (
-        <ModalOverlay
-          {...overlayProps}
-          isOpen={isOpen}
-          onShowStart={handleOverlayShowStart}
-          onHideComplete={handleOverlayHideComplete}
-        >
-          {contentElement}
-        </ModalOverlay>
-      )}
-      contentElement={(contentProps, children) => (
-        <ModalContent
-          {...contentProps}
-          isOpen={isOpen}
-          onShowStart={handleContentShowStart}
-          onHideComplete={handleContentHideComplete}
-        >
-          {children}
-        </ModalContent>
-      )}
+      overlayElement={overlayElement}
+      contentElement={contentElement}
     />
   );
 };
