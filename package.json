@@ -25,7 +25,7 @@
     "@primer/octicons-react": "^17.10.1",
     "@sentry/browser": "^7.28.1",
     "@sentry/serverless": "^7.28.1",
-    "@sentry/tracing": "^7.28.1",
+    "@sentry/tracing": "^7.29.0",
     "@vendia/serverless-express": "^4.10.1",
     "apollo-link-prismic": "^1.1.1",
     "classnames": "^2.3.2",
