@@ -1,4 +1,5 @@
-Copyright © 2008-2022
-Bashkim Isai. All rights reserved.
+Copyright © 2008-2023
+Bashkim Isai
+All rights reserved
 
 https://www.bashkim.com/

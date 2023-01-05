@@ -4,7 +4,7 @@ export const FooterCopyright = () => (
   <p
     className={styles["FooterCopyright"]}
     role="contentinfo"
-    aria-label="Copyright, Two-Thousand-and-Eight to Two-Thousand-and-Twenty-Two, Bashkim Isai. All rights reserved."
+    aria-label="Copyright, Two-Thousand-and-Eight to Two-Thousand-and-Twenty-Three, Bashkim Isai. All rights reserved."
   >
     <small aria-hidden="true">
       Copyright &copy;{" "}
@@ -12,8 +12,8 @@ export const FooterCopyright = () => (
         MMVIII
       </time>
       &#x2011;
-      <time dateTime="2022" title="2022">
-        MMXXII
+      <time dateTime="2023" title="2023">
+        MMXXIII
       </time>
       , Bashkim&nbsp;Isai. All&nbsp;rights&nbsp;reserved.
     </small>
