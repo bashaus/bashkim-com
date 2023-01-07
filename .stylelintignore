@@ -1,3 +1,8 @@
+# Specific folders
 /coverage
 /dist
-/node_modules
+
+# Folder names
+.next/
+.terraform/
+generated/
