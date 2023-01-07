@@ -1,3 +1,4 @@
+import { MoonIcon, SunIcon } from "@primer/octicons-react";
 import type { Meta, Story } from "@storybook/react";
 
 import { Switch as SwitchComponent, SwitchProps } from "./Switch";
@@ -6,8 +7,8 @@ export default {
   component: SwitchComponent,
   title: "Components/Switch",
   args: {
-    iconOff: "🌘",
-    iconOn: "☀️",
+    iconOff: <MoonIcon />,
+    iconOn: <SunIcon />,
   },
   argTypes: {
     onChange: { action: "onChange" },
