@@ -18,7 +18,7 @@
   );
 
   display: block;
-  line-height: 3em;
+  line-height: 3rem;
   background-color: $color-greyscale-100;
   color: $color-white;
   text-transform: uppercase;
@@ -46,12 +46,12 @@
       content: "▽";
       position: absolute;
       top: 50%;
-      right: 1em;
-      width: 1.5em;
-      height: 3em;
+      right: 1rem;
+      width: 1.5rem;
+      height: 3rem;
       text-align: center;
       transform: translateY(-50%);
-      line-height: 3em;
+      line-height: 3rem;
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     }
 
@@ -68,11 +68,11 @@
       display: block;
       position: absolute;
       top: 0;
-      height: 1em;
+      height: 1rem;
       width: 1px;
       right: 10px;
       background-color: $color-white;
-      margin-top: 1em;
+      margin-top: 1rem;
       z-index: 1;
     }
   }
@@ -83,27 +83,14 @@
     $breakpoints: mobile-portrait mobile-landscape tablet-portrait
   );
 
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 
   @media #{$media-query-screen-small} {
     display: none;
 
     .FooterColumn[aria-expanded="true"] & {
       display: block;
-    }
-  }
-
-  @media #{$media-query-screen-large} {
-    a {
-      line-height: 1.5em;
-      padding-top: 0.25em;
-      padding-bottom: 0.25em;
-      transition: color 0.3s ease-in-out;
-    }
-
-    a:hover {
-      color: $color-greyscale-150;
     }
   }
 }

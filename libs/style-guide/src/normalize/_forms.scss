@@ -1,4 +1,5 @@
-@import "~@bashkim-com/style-guide/fonts.scss";
+@import "../variables/font-family";
+@import "../variables/font-size";
 
 label {
   cursor: pointer;
@@ -9,8 +10,8 @@ input,
 select,
 button,
 textarea {
+  @include font-size-medium;
   font-family: $font-family-copy;
-  font-size: 100%;
   color: currentColor;
 }
 

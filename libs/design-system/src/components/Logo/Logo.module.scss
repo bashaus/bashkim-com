@@ -1,3 +1,5 @@
+@import "~@bashkim-com/style-guide/fonts.scss";
+
 .Logo {
   display: flex;
   flex-wrap: wrap;
@@ -10,10 +12,10 @@
 
 .Name {
   display: block;
-  font-weight: bold;
-  line-height: 16px;
-  font-size: 14px;
   padding: 0;
+  font-weight: bold;
+  font-size: 0.75rem;
+  line-height: 115%;
   text-transform: uppercase;
 
   html.isReady & {
@@ -24,8 +26,8 @@
 .Title {
   display: block;
   padding: 0;
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 0.75rem;
+  line-height: 115%;
   text-transform: uppercase;
 
   html.isReady & {

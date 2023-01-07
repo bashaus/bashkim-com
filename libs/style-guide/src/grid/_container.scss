@@ -1,5 +1,4 @@
-@import "~@bashkim-com/style-guide/media.scss";
-
+@import "../variables/media-breakpoint";
 @import "./design";
 
 @mixin grid-container-center($breakpoints: $media-breakpoints) {

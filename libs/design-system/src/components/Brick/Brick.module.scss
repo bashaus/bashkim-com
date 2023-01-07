@@ -1,5 +1,6 @@
 @import "~@bashkim-com/style-guide/colors.scss";
 @import "~@bashkim-com/style-guide/grid.scss";
+@import "~@bashkim-com/style-guide/headings.scss";
 
 .Brick {
   display: block;
@@ -40,8 +41,7 @@
 }
 
 .Heading {
-  font-weight: bold;
-  transition: all 0.3s ease-in-out;
+  @extend %heading-3;
 }
 
 .Description {

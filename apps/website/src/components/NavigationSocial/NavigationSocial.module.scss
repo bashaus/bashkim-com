@@ -85,18 +85,18 @@
 .IconStackOverflow {
   @extend %SocialIcon;
   @media #{$media-query-mobile} {
-    svg .VectorStackOverflowContainer,
-    svg .VectorStackOverflowStack {
+    svg :global(.VectorStackOverflowContainer),
+    svg :global(.VectorStackOverflowStack) {
       fill: currentColor;
     }
   }
 
   @media #{$media-query-not-mobile} {
-    a:hover svg .VectorStackOverflowContainer {
+    a:hover svg :global(.VectorStackOverflowContainer) {
       fill: #bcbbbb;
     }
 
-    a:hover svg .VectorStackOverflowStack {
+    a:hover svg :global(.VectorStackOverflowStack) {
       fill: #f48024;
     }
   }

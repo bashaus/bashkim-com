@@ -1,10 +1,9 @@
 @use "sass:list";
 @use "sass:map";
 
-@import "~@bashkim-com/style-guide/media.scss";
-
-@import "./_container.scss";
-@import "./_design.scss";
+@import "../variables/media-breakpoint";
+@import "./container";
+@import "./design";
 
 @mixin grid-full(
   $breakpoints: $media-breakpoints,

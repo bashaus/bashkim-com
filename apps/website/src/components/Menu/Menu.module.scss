@@ -6,7 +6,6 @@
   left: 0;
   right: 0;
   position: relative;
-  transition: all 0.3s;
 }
 
 .Title {
@@ -19,7 +18,8 @@
   }
 }
 
-.MobileOnly {
+.BackButton,
+.SettingsButton {
   @media #{$media-query-not-mobile} {
     display: none;
   }

@@ -32,6 +32,10 @@
     }
   }
 
+  br {
+    margin: 0;
+  }
+
   h1 {
     @extend %heading-1;
   }

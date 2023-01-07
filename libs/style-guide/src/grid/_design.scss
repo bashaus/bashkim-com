@@ -1,37 +1,37 @@
-@import "~@bashkim-com/style-guide/media.scss";
+@import "../variables/media-query";
 
 $grid-design: (
   mobile-portrait: (
     query: $media-query-mobile-portrait,
-    margin: 14px,
-    gutter: 16px,
+    margin: 0.75rem,
+    gutter: 0.85rem,
   ),
   mobile-landscape: (
     query: $media-query-mobile-landscape,
-    margin: 20px,
-    gutter: 20px,
+    margin: 1.1rem,
+    gutter: 1.1rem,
   ),
   tablet-portrait: (
     query: $media-query-tablet-portrait,
-    margin: 20px,
-    gutter: 28px,
+    margin: 1.1rem,
+    gutter: 1.5rem,
   ),
   tablet-landscape: (
     query: $media-query-tablet-landscape,
     max-width: 1280px,
-    margin: 24px,
-    gutter: 20px,
+    margin: 1.3rem,
+    gutter: 1.1rem,
   ),
   desktop-narrow: (
     query: $media-query-desktop-narrow,
-    max-width: 1280px,
-    margin: 18px,
-    gutter: 20px,
+    max-width: 69rem,
+    margin: 1rem,
+    gutter: 1.1rem,
   ),
   desktop-wide: (
     query: $media-query-desktop-wide,
-    max-width: 1280px,
-    margin: 18px,
-    gutter: 24px,
+    max-width: 69rem,
+    margin: 1rem,
+    gutter: 1.3rem,
   ),
 );

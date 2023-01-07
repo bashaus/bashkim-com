@@ -1,5 +1,6 @@
-@import "~@bashkim-com/style-guide/colors.scss";
-@import "~@bashkim-com/style-guide/fonts.scss";
+@import "../variables/color";
+@import "../variables/font-family";
+@import "../variables/font-size";
 
 a {
   text-decoration: none;
@@ -18,7 +19,7 @@ samp {
 }
 
 small {
-  font-size: 80%;
+  @include font-size-small;
 }
 
 em {

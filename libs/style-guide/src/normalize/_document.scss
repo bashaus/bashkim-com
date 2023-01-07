@@ -1,5 +1,5 @@
-@import "~@bashkim-com/style-guide/colors.scss";
-@import "~@bashkim-com/style-guide/fonts.scss";
+@import "../variables/color";
+@import "../variables/font-family";
 
 *,
 *::before,
@@ -8,13 +8,14 @@
 }
 
 html {
+  font-size: 1.15em;
+  line-height: 150%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  font-size: 18px;
-  line-height: 150%;
+  line-height: inherit;
   font-family: $font-family-copy;
   background-color: $design-page-background-color;
   color: $design-page-foreground-color;

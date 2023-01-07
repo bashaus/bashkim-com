@@ -37,21 +37,16 @@ export const HomeHello = () => (
     }
   >
     <div className={styles["Introduction"]}>
-      <h1>Hello.</h1>
+      <h1>
+        Hi! Call me <Link href="/about">Bash</Link>
+      </h1>
 
       <p>
-        <span className={styles["IntroductionName"]}>
-          <span>My name is </span>
-          <Link href="/about">Bash</Link>
-        </span>
+        I&apos;m a London&#8209;based Creative Technologist specialising in
         <span> </span>
-        <span className={styles["IntroductionSpiel"]}>
-          I&apos;m a London&#8209;based Creative Technologist specialising in
-          <span> </span>
-          <Link href="/portfolio#tangible-media">tangible&nbsp;media</Link>
-          <span> and </span>
-          <Link href="/portfolio#web-development">web&nbsp;development</Link>.
-        </span>
+        <Link href="/portfolio#tangible-media">tangible&nbsp;media</Link>
+        <span> and </span>
+        <Link href="/portfolio#web-development">web&nbsp;development</Link>
       </p>
     </div>
   </PageHeaderPartial>

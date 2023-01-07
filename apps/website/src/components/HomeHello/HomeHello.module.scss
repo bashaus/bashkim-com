@@ -3,14 +3,17 @@
 
 .Introduction {
   a {
-    font-weight: bold;
-    display: inline-block;
-    margin-top: 4px;
-    margin-bottom: 4px;
     border: solid $color-white;
-    padding: 4px 12px;
     color: $color-white;
-    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    font-weight: bold;
+    margin-bottom: 0.4rem;
+    margin-top: 0.4rem;
+    padding: 0.2rem 0.7rem;
+
+    transition-duration: 0.3;
+    transition-property: background-color, color;
+    transition-timing-function: ease-in-out;
   }
 
   a:hover {
@@ -20,41 +23,14 @@
 
   @media #{$media-query-mobile} {
     a {
-      border-width: 1px;
-      line-height: 24px;
+      border-width: 0.13rem;
     }
   }
 
   @media #{$media-query-not-mobile} {
     a {
-      border-width: 3px;
-      line-height: 24px;
+      border-width: 0.17rem;
     }
-  }
-}
-
-.IntroductionName {
-  @media #{$media-query-mobile} {
-    display: block;
-    margin-bottom: 20px;
-
-    &::after {
-      content: ".";
-      display: inline;
-    }
-  }
-
-  @media #{$media-query-not-mobile} {
-    &::after {
-      content: ",";
-      display: inline-block;
-    }
-  }
-}
-
-.IntroductionSpiel {
-  @media #{$media-query-mobile} {
-    display: block;
   }
 }
 
@@ -83,7 +59,9 @@
   height: 75px;
 
   a & {
-    transition: transform 0.3s ease-in-out;
+    transition-duration: 0.3;
+    transition-property: transform;
+    transition-timing-function: ease-in-out;
   }
 
   a:hover & {

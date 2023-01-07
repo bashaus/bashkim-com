@@ -11,7 +11,7 @@ export type MenuProps = {
 
 export const Menu = ({ backButton }: MenuProps) => (
   <div className={styles["Menu"]}>
-    <div className={styles["MobileOnly"]}>{backButton ?? <MenuButton />}</div>
+    <div className={styles["BackButton"]}>{backButton ?? <MenuButton />}</div>
 
     <div className={styles["Title"]}>
       <Link href="/">
@@ -19,7 +19,7 @@ export const Menu = ({ backButton }: MenuProps) => (
       </Link>
     </div>
 
-    <div className={styles["MobileOnly"]}>
+    <div className={styles["SettingsButton"]}>
       <MenuButtonSettings />
     </div>
   </div>

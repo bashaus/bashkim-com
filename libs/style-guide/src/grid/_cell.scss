@@ -1,9 +1,8 @@
 @use "sass:list";
 @use "sass:map";
 
-@import "~@bashkim-com/style-guide/media.scss";
-
-@import "./_design.scss";
+@import "../variables/media-breakpoint";
+@import "./design";
 
 @mixin grid-cell-padding(
   $breakpoints: $media-breakpoints,

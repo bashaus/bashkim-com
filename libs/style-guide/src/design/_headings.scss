@@ -1,5 +1,6 @@
-@import "../variables/fonts.scss";
-@import "../variables/media-queries.scss";
+@import "../variables/font-family";
+@import "../variables/font-size";
+@import "../variables/media-query";
 
 %heading {
   font-family: $font-family-heading;
@@ -8,60 +9,42 @@
 
 %heading-1 {
   @extend %heading;
-
-  @media #{$media-query-mobile} {
-    font-size: 32px;
-    line-height: 125%;
-  }
-
-  @media #{$media-query-not-mobile} {
-    font-size: 46px;
-    line-height: 125%;
-  }
+  @include font-size-largest;
+  letter-spacing: -1.2px;
 }
 
 %heading-2 {
   @extend %heading;
+  @include font-size-larger;
+  letter-spacing: -0.6px;
 
   @media #{$media-query-mobile} {
-    font-size: 22px;
-    line-height: 125%;
-    letter-spacing: -0.5px;
-
     &:not(:first-child) {
-      margin-top: 1.2em;
+      margin-top: 1.2rem;
     }
   }
 
   @media #{$media-query-not-mobile} {
-    font-size: 30px;
-    line-height: 120%;
-
     &:not(:first-child) {
-      margin-top: 1.2em;
+      margin-top: 1.2rem;
     }
   }
 }
 
 %heading-3 {
   @extend %heading;
+  @include font-size-large;
+  letter-spacing: -0.5px;
 
   @media #{$media-query-mobile} {
-    font-size: 18px;
-    line-height: 130%;
-
     &:not(:first-child) {
-      margin-top: 1.23em;
+      margin-top: 1.23rem;
     }
   }
 
   @media #{$media-query-not-mobile} {
-    font-size: 22px;
-    line-height: 130%;
-    letter-spacing: -1px;
-
     &:not(:first-child) {
-      margin-top: 1.72em;
+      margin-top: 1.72rem;
     }
   }
 }
