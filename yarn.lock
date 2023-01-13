@@ -2964,6 +2964,17 @@
     semver "7.3.4"
     tslib "^2.3.0"
 
+"@nrwl/devkit@15.5.0":
+  version "15.5.0"
+  resolved "https://registry.yarnpkg.com/@nrwl/devkit/-/devkit-15.5.0.tgz#42051857859dbf3c22e6aead9f0d606519911f5e"
+  integrity sha512-qJcOG1FpLhL1HpNm7kSZZ9JxGRjuwgciz2l348RZHUyFSA3fM/OeoygHS3E+Nl7OZQgjzFM3w7FtqvLJ4y5a3g==
+  dependencies:
+    "@phenomnomnominal/tsquery" "4.1.1"
+    ejs "^3.1.7"
+    ignore "^5.0.4"
+    semver "7.3.4"
+    tslib "^2.3.0"
+
 "@nrwl/eslint-plugin-nx@15.4.5":
   version "15.4.5"
   resolved "https://registry.yarnpkg.com/@nrwl/eslint-plugin-nx/-/eslint-plugin-nx-15.4.5.tgz#802459f5e8b52d4d0018a5cc174acecc7c734ed5"
@@ -3016,6 +3027,16 @@
   integrity sha512-rWlsRD1gDj4x6exQJzNX9MyAkVnUotAXMiYGKPl+b4X1Usn1/lmqyCE7UxmaYaZvUx4hQnEI0xSr++AdVxd5RA==
   dependencies:
     "@nrwl/devkit" "15.4.5"
+    "@phenomnomnominal/tsquery" "4.1.1"
+    tmp "~0.2.1"
+    tslib "^2.3.0"
+
+"@nrwl/linter@15.5.0":
+  version "15.5.0"
+  resolved "https://registry.yarnpkg.com/@nrwl/linter/-/linter-15.5.0.tgz#c9f8e98c8124e69fd013325e8b89d5f5fbaeeb32"
+  integrity sha512-30X6zr/LqGkVWeuvao9/c4JFWt+h1bb8PfksVynclLRT/Va9h9ukN02B8zl6DlqBczugW6L8TPnDJX9XEKpTNg==
+  dependencies:
+    "@nrwl/devkit" "15.5.0"
     "@phenomnomnominal/tsquery" "4.1.1"
     tmp "~0.2.1"
     tslib "^2.3.0"
