@@ -63,7 +63,7 @@
     "@graphql-codegen/typescript-operations": "^2.5.12",
     "@graphql-codegen/typescript-react-apollo": "^3.3.7",
     "@nrwl/cli": "15.4.5",
-    "@nrwl/cypress": "15.4.5",
+    "@nrwl/cypress": "15.5.1",
     "@nrwl/eslint-plugin-nx": "15.4.5",
     "@nrwl/jest": "15.4.5",
     "@nrwl/linter": "15.4.5",
