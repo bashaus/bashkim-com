@@ -21,7 +21,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@apollo/client": "^3.7.4",
+    "@apollo/client": "^3.7.5",
     "@primer/octicons-react": "^17.10.2",
     "@sentry/browser": "^7.33.0",
     "@sentry/serverless": "^7.33.0",
