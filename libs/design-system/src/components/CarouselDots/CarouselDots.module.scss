@@ -26,11 +26,11 @@
 
   li button {
     font-size: 0;
-    line-height: 0;
+    line-height: 20px;
     display: block;
     width: 20px;
     height: 20px;
-    padding: 5px;
+    padding: 0;
     cursor: pointer;
     color: currentColor;
     border: 0;
@@ -44,7 +44,7 @@
   }
 
   li button::before {
-    font-size: 6px;
+    font-size: 2rem;
     line-height: 20px;
     position: absolute;
     top: 0;
@@ -53,19 +53,19 @@
     height: 20px;
     content: "•";
     text-align: center;
+    color: $color-shade-foreground;
     opacity: 0.25;
-    color: $color-shade-background;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    transition: opacity 0.3s;
   }
 
   li button:hover::before,
   li button:focus::before {
-    opacity: 1;
+    opacity: 0.75;
   }
 
-  li.slick-active button::before {
-    opacity: 0.75;
-    color: $color-shade-foreground;
+  :global(li.slick-active) button::before {
+    opacity: 1;
   }
 }
