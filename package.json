@@ -23,7 +23,7 @@
   "dependencies": {
     "@apollo/client": "^3.7.6",
     "@primer/octicons-react": "^17.11.1",
-    "@sentry/browser": "7.34.0",
+    "@sentry/browser": "7.35.0",
     "@sentry/serverless": "7.34.0",
     "@sentry/tracing": "7.34.0",
     "@vendia/serverless-express": "^4.10.1",
