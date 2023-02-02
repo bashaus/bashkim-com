@@ -1,18 +1,7 @@
-export class PrismicSecretUndefinedError extends Error {
-  statusCode = 500;
-
-  constructor() {
-    super("Prismic webhook secret undefined");
-  }
-}
-
-export class PrismicSecretInvalidError extends Error {
-  statusCode = 401;
-
-  constructor() {
-    super("Prismic webhook secret invalid");
-  }
-}
+import {
+  PrismicSecretInvalidError,
+  PrismicSecretUndefinedError,
+} from "./errors";
 
 export function validatePrismicSecret(secret: string): boolean {
   const { APP_WEBHOOKS_PRISMIC_SECRET_KEY } = process.env;
