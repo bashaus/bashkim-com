@@ -1,11 +1,17 @@
 export class PrismicSecretUndefinedError extends Error {
   statusCode = 500;
-  message = "Prismic webhook secret undefined";
+
+  constructor() {
+    super("Prismic webhook secret undefined");
+  }
 }
 
 export class PrismicSecretInvalidError extends Error {
   statusCode = 401;
-  message = "Prismic webhook secret invalid";
+
+  constructor() {
+    super("Prismic webhook secret invalid");
+  }
 }
 
 export function validatePrismicSecret(secret: string): boolean {

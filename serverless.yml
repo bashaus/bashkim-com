@@ -4,6 +4,7 @@ service: bashkim-com
 variablesResolutionMode: "20210326"
 
 plugins:
+  - serverless-plugin-tracing
   - serverless-jetpack
 
 package:
@@ -18,10 +19,6 @@ custom:
   app:
     git:
       commit: ${env:CIRCLE_SHA1, ''}
-
-    sentry:
-      dsn: ${env:SENTRY_DSN, ''}
-      environment: ${env:SENTRY_ENVIRONMENT, ''}
 
     sitemap:
       baseHref: ${env:APP_SITEMAP_BASE_HREF, ''}
@@ -43,13 +40,17 @@ provider:
   memorySize: 512
   timeout: 15
   lambdaHashingVersion: "20201221"
+  tracing: true
+  iamRoleStatements:
+    - Effect: "Allow"
+      Action:
+        - "xray:PutTraceSegments"
+        - "xray:PutTelemetryRecords"
+      Resource:
+        - "*"
   environment:
     APP_ENV: ${self:custom.stage}
     NODE_ENV: ${self:custom.stage}
-    SENTRY_DSN: ${self:custom.app.sentry.dsn}
-    SENTRY_ENABLED: 1
-    SENTRY_ENVIRONMENT: ${self:custom.app.sentry.environment}
-    SENTRY_RELEASE: ${self:custom.app.git.commit}
 
 functions:
   Sitemap:

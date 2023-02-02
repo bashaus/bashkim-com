@@ -20,7 +20,8 @@
       "@bashkim-com/prismic-fixtures": ["libs/prismic-fixtures/src/index.ts"],
       "@bashkim-com/prismic-helpers": ["libs/prismic-helpers/src/index.ts"],
       "@bashkim-com/style-guide": ["libs/style-guide/src/index.scss"],
-      "@bashkim-com/style-guide/*": ["libs/style-guide/src/entry/*"]
+      "@bashkim-com/style-guide/*": ["libs/style-guide/src/entry/*"],
+      "@bashkim-com/xray-lambda": ["libs/xray-lambda/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
