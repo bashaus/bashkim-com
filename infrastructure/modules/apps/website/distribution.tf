@@ -71,6 +71,23 @@ resource "aws_cloudfront_distribution" "distribution" {
   }
 
   ordered_cache_behavior {
+    path_pattern           = "/.well-known/*"
+    allowed_methods        = ["DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT"]
+    cached_methods         = ["GET", "HEAD"]
+    target_origin_id       = "ApiGatewayOrigin"
+    compress               = true
+    viewer_protocol_policy = "https-only"
+
+    forwarded_values {
+      query_string = true
+
+      cookies {
+        forward = "none"
+      }
+    }
+  }
+
+  ordered_cache_behavior {
     path_pattern           = "/sitemap.xml"
     allowed_methods        = ["GET", "HEAD", "OPTIONS"]
     cached_methods         = ["GET", "HEAD"]

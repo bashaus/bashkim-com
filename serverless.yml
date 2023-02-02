@@ -86,6 +86,9 @@ functions:
       - http:
           method: ANY
           path: /webhooks/{any+}
+      - http:
+          method: ANY
+          path: /.well-known/prismic-webhooks/{any+}
 
 resources:
   Description: bashkim-com
