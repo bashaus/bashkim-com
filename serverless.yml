@@ -71,6 +71,9 @@ functions:
       - http:
           method: GET
           path: /sitemap/{any+}
+      - http:
+          method: ANY
+          path: /.well-known/sitemap/{any+}
   PrismicWebhooks:
     handler: dist/apps/prismic-webhooks/main.handler
     environment:
