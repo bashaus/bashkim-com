@@ -103,7 +103,7 @@
     "babel-loader": "9.1.2",
     "codegen-prismic-fetch": "^1.0.5",
     "css-loader": "^6.7.3",
-    "cypress": "^12.5.0",
+    "cypress": "^12.5.1",
     "eslint": "^8.33.0",
     "eslint-config-next": "13.1.6",
     "eslint-config-prettier": "^8.6.0",
