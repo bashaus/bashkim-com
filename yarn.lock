@@ -17217,10 +17217,10 @@ react-modal@^3.16.1:
     react-lifecycles-compat "^3.0.0"
     warning "^4.0.3"
 
-react-player@^2.11.1:
-  version "2.11.1"
-  resolved "https://registry.yarnpkg.com/react-player/-/react-player-2.11.1.tgz#32d2a59e34d678a98176411d0fabd24cb353f036"
-  integrity sha512-he9xHLUR5gO0sMSMjqShwrnFs1QU90cwPndi/6oJmeUykLRXCKHITloU93hQw7ZVxCbAJP+cXnkX6GxsIKRYkw==
+react-player@^2.11.2:
+  version "2.11.2"
+  resolved "https://registry.yarnpkg.com/react-player/-/react-player-2.11.2.tgz#19a0070e08d5ca0db8329a0584babce636372540"
+  integrity sha512-V5bf3g6lIpOjfKPUw18Og+qfizmlv6PQfJojlFiGpkfn/e21w5U4nSXE8vSIrFkfllgCrLM35nNGR1/jYQ8KIw==
   dependencies:
     deepmerge "^4.0.0"
     load-script "^1.0.0"
