@@ -141,7 +141,7 @@
     "style-loader": "^3.3.0",
     "stylelint": "^14.16.1",
     "stylelint-prettier": "^2.0.0",
-    "stylelint-scss": "^4.3.0",
+    "stylelint-scss": "^4.4.0",
     "stylus": "^0.59.0",
     "stylus-loader": "^7.1.0",
     "svgo": "^3.0.2",
