@@ -139,7 +139,7 @@
     "sort-package-json": "^2.4.1",
     "storybook-addon-swc": "^1.1.9",
     "style-loader": "^3.3.0",
-    "stylelint": "^14.16.1",
+    "stylelint": "^15.1.0",
     "stylelint-prettier": "^2.0.0",
     "stylelint-scss": "^4.4.0",
     "stylus": "^0.59.0",
