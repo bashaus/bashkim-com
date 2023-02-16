@@ -74,7 +74,7 @@
     "@nrwl/react": "15.6.3",
     "@nrwl/storybook": "15.6.3",
     "@nrwl/web": "15.6.3",
-    "@nrwl/webpack": "15.6.3",
+    "@nrwl/webpack": "15.7.1",
     "@nrwl/workspace": "15.6.3",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.7",
     "@storybook/addon-a11y": "6.5.16",
