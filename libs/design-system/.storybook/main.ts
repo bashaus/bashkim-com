@@ -12,7 +12,6 @@ const config: StorybookConfig = {
   },
 
   stories: [
-    ...rootMain.stories,
     "../src/components/**/*.stories.tsx",
     "../src/formatters/**/*.stories.tsx",
     "../src/layout/**/*.stories.tsx",
@@ -20,7 +19,11 @@ const config: StorybookConfig = {
     "../src/slices/**/*.stories.tsx",
   ],
 
-  addons: [...(rootMain.addons || []), "@nrwl/react/plugins/storybook"],
+  addons: [
+    ...(rootMain.addons || []),
+    "@storybook/addon-essentials",
+    "@nrwl/react/plugins/storybook",
+  ],
 
   webpackFinal: async (config, options) => {
     const packageWebpackConfig = {};
