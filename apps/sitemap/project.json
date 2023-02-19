@@ -14,7 +14,8 @@
         "main": "apps/sitemap/src/local.ts",
         "tsConfig": "apps/sitemap/tsconfig.app.json",
         "assets": ["apps/sitemap/src/assets"],
-        "generatePackageJson": true
+        "generatePackageJson": true,
+        "babelUpwardRootMode": true
       },
       "configurations": {
         "production": {

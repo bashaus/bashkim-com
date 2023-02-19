@@ -14,7 +14,8 @@
         "main": "apps/prismic-webhooks/src/main.ts",
         "tsConfig": "apps/prismic-webhooks/tsconfig.app.json",
         "assets": ["apps/prismic-webhooks/src/assets"],
-        "generatePackageJson": true
+        "generatePackageJson": true,
+        "babelUpwardRootMode": true
       },
       "configurations": {
         "production": {
