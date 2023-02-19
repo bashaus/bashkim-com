@@ -65,7 +65,7 @@
     "@graphql-codegen/typescript-react-apollo": "^3.3.7",
     "@nrwl/cli": "15.7.1",
     "@nrwl/cypress": "15.7.1",
-    "@nrwl/eslint-plugin-nx": "15.7.1",
+    "@nrwl/eslint-plugin-nx": "15.7.2",
     "@nrwl/jest": "15.7.1",
     "@nrwl/js": "15.7.1",
     "@nrwl/linter": "15.7.1",
