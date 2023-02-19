@@ -54,7 +54,7 @@ resource "aws_cloudfront_distribution" "distribution" {
   }
 
   ordered_cache_behavior {
-    path_pattern           = "/webhooks/*"
+    path_pattern           = "/api/*"
     allowed_methods        = ["DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT"]
     cached_methods         = ["GET", "HEAD"]
     target_origin_id       = "ApiGatewayOrigin"

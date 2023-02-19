@@ -89,7 +89,7 @@ functions:
     events:
       - http:
           method: ANY
-          path: /webhooks/{any+}
+          path: /api/v1/prismic-webhooks/{any+}
       - http:
           method: ANY
           path: /.well-known/prismic-webhooks/{any+}

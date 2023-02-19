@@ -1,16 +1,9 @@
 import { NextFunction, Request, Response, Router } from "express";
 
+import { UnhandledHttpError } from "../errors/UnhandledHttpError";
 import { triggerCircleCiPipeline } from "../libraries/circleci";
 import { validatePrismicSecret } from "../libraries/prismic";
 import { PrismicError } from "../libraries/prismic/errors";
-
-export class UnhandledError extends Error {
-  statusCode = 500;
-
-  constructor() {
-    super("Unhandled error occurred");
-  }
-}
 
 export type PrismicRequestBody = {
   type: string;
@@ -24,7 +17,7 @@ export type PrismicResponseBody = {
 export const router = Router();
 
 router.post(
-  "/",
+  "/publish",
   async (
     req: Request<unknown, PrismicResponseBody, PrismicRequestBody>,
     res: Response<PrismicResponseBody>,
@@ -48,7 +41,7 @@ router.post(
       }
 
       console.error("Unhandled error", err);
-      next(new UnhandledError());
+      next(new UnhandledHttpError());
     }
   }
 );
