@@ -26,14 +26,20 @@ export const SiteSettings = ({ isVisible, onClose }: SiteSettingsProps) => (
           </MenuButton>
         </div>
 
-        <div className={styles["ListItem"]}>
+        <div
+          className={styles["ListItem"]}
+          data-test-id="SiteSettings.Appearance"
+        >
           <div className={styles["ListItemLabel"]}>Appearance</div>
           <div className={styles["ListItemIcon"]}>
             <SiteSettingsAppearance />
           </div>
         </div>
 
-        <div className={styles["ListItem"]}>
+        <div
+          className={styles["ListItem"]}
+          data-test-id="SiteSettings.GridLines"
+        >
           <div className={styles["ListItemLabel"]}>Grid lines</div>
           <div>
             <SiteSettingsGridLines />

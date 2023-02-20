@@ -22,7 +22,7 @@ export const Header = ({ backButton }: HeaderProps) => {
         <Menu backButton={backButton} />
         <Navigation />
         <div className={styles["MobileHidden"]}>
-          <MenuButtonSettings />
+          <MenuButtonSettings data-test-id="MenuButtonSettings" />
         </div>
       </div>
     </header>
