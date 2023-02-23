@@ -140,7 +140,7 @@
     "storybook-addon-swc": "^1.1.9",
     "style-loader": "^3.3.0",
     "stylelint": "^15.2.0",
-    "stylelint-prettier": "^2.0.0",
+    "stylelint-prettier": "^3.0.0",
     "stylelint-scss": "^4.4.0",
     "stylus": "^0.59.0",
     "stylus-loader": "^7.1.0",
