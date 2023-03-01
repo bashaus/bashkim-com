@@ -71,7 +71,7 @@
     "@nrwl/linter": "15.7.2",
     "@nrwl/next": "15.7.2",
     "@nrwl/node": "15.7.2",
-    "@nrwl/react": "15.7.2",
+    "@nrwl/react": "15.8.1",
     "@nrwl/storybook": "15.7.2",
     "@nrwl/web": "15.7.2",
     "@nrwl/webpack": "15.7.2",
