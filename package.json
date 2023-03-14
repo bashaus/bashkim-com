@@ -89,7 +89,7 @@
     "@testing-library/react": "14.0.0",
     "@types/aws-lambda": "^8.10.111",
     "@types/express": "4.17.17",
-    "@types/jest": "29.4.0",
+    "@types/jest": "29.4.1",
     "@types/jquery": "^3.5.16",
     "@types/node": "18.15.3",
     "@types/react": "18.0.28",
