@@ -24,7 +24,7 @@
     "@apollo/client": "^3.7.10",
     "@primer/octicons-react": "^18.2.0",
     "@sentry/browser": "7.44.2",
-    "@sentry/tracing": "7.44.1",
+    "@sentry/tracing": "7.44.2",
     "@vendia/serverless-express": "^4.10.1",
     "apollo-link-prismic": "^1.1.1",
     "aws-sdk": "^2.1340.0",
