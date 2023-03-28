@@ -85,11 +85,6 @@ jobs:
           command: |
             yarn nx run website:build:production
 
-      - run:
-          name: "nx website export"
-          command: |
-            yarn nx run website:export:production
-
       - save_cache:
           key: website-nextjs-{{ checksum "yarn.lock" }}
           paths:
@@ -105,7 +100,7 @@ jobs:
           name: "zip website"
           working_directory: ./dist/apps
           command: |
-            zip -r website.zip website/exported
+            zip -r website.zip website/.next
 
       - store_artifacts:
           path: dist/apps/website.zip
@@ -211,7 +206,7 @@ jobs:
           at: ./
 
       - aws-bucket/sync:
-          from: ./dist/apps/website/exported
+          from: ./dist/apps/website/.next
           to: "s3://${DEPLOY_S3_WEBSITE_BUCKET}"
           arguments: |
             --cache-control "max-age=86400"

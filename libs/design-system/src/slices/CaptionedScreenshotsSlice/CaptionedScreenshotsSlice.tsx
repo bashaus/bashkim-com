@@ -65,7 +65,7 @@ export const CaptionedScreenshotsSlice = ({
         selectedImage && (
           <img
             src={selectedImage.url}
-            alt={selectedImage.alt || ""}
+            alt={selectedImage.alt ?? ""}
             width={selectedImage.dimensions.width}
             height={selectedImage.dimensions.height}
           />

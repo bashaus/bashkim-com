@@ -10,7 +10,6 @@
   },
   "scripts": {
     "build": "nx build",
-    "export": "nx export",
     "generate": "nx run-many --target=generate",
     "lint:scripts": "eslint .",
     "lint:styles": "stylelint '**/*.scss' '**/*.css'",

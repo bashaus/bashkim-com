@@ -91,7 +91,7 @@ export const CaptionedMagazineSlice = ({
                 <img
                   onDragStart={handleImageDrag}
                   src={field.captioned_magazine_slice_type_images.url}
-                  alt={field.captioned_magazine_slice_type_images.alt || ""}
+                  alt={field.captioned_magazine_slice_type_images.alt ?? ""}
                   width={
                     field.captioned_magazine_slice_type_images.dimensions.width
                   }

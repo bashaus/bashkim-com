@@ -1,8 +1,10 @@
 import Script from "next/script";
 
 export const GoogleAnalytics = () => {
-  const enabled = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ENABLED;
-  const measurementId = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_MEASUREMENT_ID;
+  const {
+    NEXT_PUBLIC_GOOGLE_ANALYTICS_ENABLED: enabled,
+    NEXT_PUBLIC_GOOGLE_ANALYTICS_MEASUREMENT_ID: measurementId,
+  } = process.env;
 
   if (!enabled) {
     return null;

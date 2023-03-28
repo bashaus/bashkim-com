@@ -5,5 +5,7 @@
   "editor.formatOnPaste": false,
   "editor.formatOnSave": true,
   "editor.rulers": [80],
-  "svg.preview.background": "white"
+  "svg.preview.background": "white",
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true
 }

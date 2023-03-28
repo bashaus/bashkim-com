@@ -10,6 +10,7 @@ query CaseStudyPage($caseStudySlug: String) {
           uid
         }
         meta_title
+        meta_keywords
         meta_description
         image_icon
         image_header_desktop

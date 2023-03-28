@@ -33,6 +33,11 @@ export type SliceProps = {
 
 export const Slice = (props: SliceProps) => {
   const { slice } = props;
+
+  if (!slice.type) {
+    return null;
+  }
+
   const SliceTypeComponent = SliceTypeComponentMap[slice.type];
   return <SliceTypeComponent {...props} />;
 };

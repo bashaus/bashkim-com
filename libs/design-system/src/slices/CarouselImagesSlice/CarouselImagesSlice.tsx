@@ -28,7 +28,7 @@ export const CarouselImagesSlice = ({ slice }: CarouselImagesSliceProps) => (
             figure={
               <img
                 src={image.url}
-                alt={image.alt || ""}
+                alt={image.alt ?? ""}
                 width={image.dimensions.width}
                 height={image.dimensions.height}
               />

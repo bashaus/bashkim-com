@@ -1,17 +1,17 @@
 import { NavigationGroup, NavigationItem } from "@bashkim-com/design-system";
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 
 import styles from "./NavigationPrimary.module.scss";
 
 export const NavigationPrimary = () => {
-  const { asPath } = useRouter();
+  const pathname = usePathname();
 
   return (
     <NavigationGroup>
       <NavigationItem
         className={styles["PortfolioNavigationItem"]}
-        isSelected={asPath.startsWith("/portfolio")}
+        isSelected={pathname?.startsWith("/portfolio")}
       >
         <Link href="/portfolio">
           <span>Portfolio</span>
@@ -20,7 +20,7 @@ export const NavigationPrimary = () => {
 
       <NavigationItem
         className={styles["AboutNavigationItem"]}
-        isSelected={asPath.startsWith("/about")}
+        isSelected={pathname?.startsWith("/about")}
       >
         <Link href="/about">
           <span>About</span>
