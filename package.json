@@ -27,7 +27,7 @@
     "@sentry/tracing": "7.46.0",
     "@vendia/serverless-express": "^4.10.1",
     "apollo-link-prismic": "^1.1.1",
-    "aws-sdk": "^2.1348.0",
+    "aws-sdk": "^2.1349.0",
     "aws-xray-sdk": "^3.4.1",
     "classnames": "^2.3.2",
     "core-js": "^3.29.1",
