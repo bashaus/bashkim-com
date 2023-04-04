@@ -6532,48 +6532,48 @@ aws-sign2@~0.7.0:
   resolved "https://registry.yarnpkg.com/aws-sign2/-/aws-sign2-0.7.0.tgz#b46e890934a9591f2d2f6f86d7e6a9f1b3fe76a8"
   integrity sha512-08kcGqnYf/YmjoRhfxyu+CLxBjUtHLXLXX/vUfx9l2LYzG3c1m61nrpyFUZI6zeS+Li/wWMMidD9KgrqtGq3mA==
 
-aws-xray-sdk-core@3.4.1:
-  version "3.4.1"
-  resolved "https://registry.yarnpkg.com/aws-xray-sdk-core/-/aws-xray-sdk-core-3.4.1.tgz#25592b7e4ed3ebd25ece9c1f258d3f68558e1ab6"
-  integrity sha512-HPQ+9GMF+yhDDXNKPp6HGAIv2yVapKTI7WRs2aN3TT+RxQkbmgO+3JlcMvRL2/lu0RqTVWoYCIhmF9/H/zRL1A==
+aws-xray-sdk-core@3.5.0:
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/aws-xray-sdk-core/-/aws-xray-sdk-core-3.5.0.tgz#72ec1f5215477b5e04a745cb638a6e0f8c91a707"
+  integrity sha512-T3mL9mGwnfGyZrf7RsZp702+prTCEMzX7zrqD7flwMZeb6ymXlSgREmeXys80r/9CHFgq/+JR+IclM+hep0yRw==
   dependencies:
     "@aws-sdk/service-error-classification" "^3.4.1"
     "@aws-sdk/types" "^3.4.1"
     "@types/cls-hooked" "^4.3.3"
     atomic-batcher "^1.0.2"
     cls-hooked "^4.2.2"
-    semver "^5.3.0"
+    semver "^7.3.8"
 
-aws-xray-sdk-express@3.4.1:
-  version "3.4.1"
-  resolved "https://registry.yarnpkg.com/aws-xray-sdk-express/-/aws-xray-sdk-express-3.4.1.tgz#e958976db0631b93feaea5db38979f461baea707"
-  integrity sha512-c8efb0ywsvzcqXT0PLbaAG0nMgpbzGu9FOagm569Ic/GMJwglACVAxsHJ3e3fYlRDbq2q6U0QhadqGb4MOa9YQ==
+aws-xray-sdk-express@3.5.0:
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/aws-xray-sdk-express/-/aws-xray-sdk-express-3.5.0.tgz#a5af51af4f415d51f65423aa7a7e0cbfb856b372"
+  integrity sha512-nbdghqiHPUe7P04guh/fkBmHCsbY5pwQrDFJAqYimNK3EsB+pq2/FW7m9vodPmHSbqeTgwO/oQUiCnEQ9luf5A==
   dependencies:
     "@types/express" "*"
 
-aws-xray-sdk-mysql@3.4.1:
-  version "3.4.1"
-  resolved "https://registry.yarnpkg.com/aws-xray-sdk-mysql/-/aws-xray-sdk-mysql-3.4.1.tgz#8f2eab61f020953742d09a42a96994e08028ba75"
-  integrity sha512-k2UczelWpBqNZfnG4+czoLDzhxzcvvZXBjvriVTokdXcNknCRG4lBCnSOh/RdvLq62SDaCwmv5c67B3NObfXbg==
+aws-xray-sdk-mysql@3.5.0:
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/aws-xray-sdk-mysql/-/aws-xray-sdk-mysql-3.5.0.tgz#2bb4ddc671c5349b97100fbc957bda3b4dfa0dae"
+  integrity sha512-vAEfSPMQq48Fg3H45voljAJT8KX79tLEzW1qz6Kb9Gqv11wihu05074L/DArQnvHnG0DaCPttZD7/nOGFc6sYA==
   dependencies:
     "@types/mysql" "*"
 
-aws-xray-sdk-postgres@3.4.1:
-  version "3.4.1"
-  resolved "https://registry.yarnpkg.com/aws-xray-sdk-postgres/-/aws-xray-sdk-postgres-3.4.1.tgz#5a24e36d6520186ab9b2e6af5724ee463d2117ea"
-  integrity sha512-3+qfZD8BttjOQ4jzsuRYJzDPOu4dl4nXZPPijAlLUZC978gFIOAWMqJZE6cDmOjXs2BVYdCW8wfiJ1NPYbesBw==
+aws-xray-sdk-postgres@3.5.0:
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/aws-xray-sdk-postgres/-/aws-xray-sdk-postgres-3.5.0.tgz#3e73049908e5446ba0e1c3d165a2383ca170ec91"
+  integrity sha512-3LadT1yuZYLS9RlqdgDQt5z3vojevrggnuGofT2EqsS5EQBVz7NNLYrJdTJsd4TYVVsToNxDBQI5peb2HC8TRw==
   dependencies:
     "@types/pg" "*"
 
-aws-xray-sdk@^3.4.1:
-  version "3.4.1"
-  resolved "https://registry.yarnpkg.com/aws-xray-sdk/-/aws-xray-sdk-3.4.1.tgz#e8991e71ce0b7c89d3c3a54c445209eee27a3c71"
-  integrity sha512-7iz+svMi47EBW3hCGLoMvXYDTG065gg+pdgk/CYXfx0EW9N+uCovKCQodfIwFAMSQ6P4bMxw6jD30h+XtMeTgQ==
+aws-xray-sdk@^3.5.0:
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/aws-xray-sdk/-/aws-xray-sdk-3.5.0.tgz#ac487761ef8952fd772f36f9aaa69c9a663e61ca"
+  integrity sha512-u9iKR9QAafeoCVk4J1PH6/NbNc/dNsF5T9CoNAST7bMLnGwT9YN4l+N9zxLbuspWv8cdBPoz8dDfbyZNDHgYQQ==
   dependencies:
-    aws-xray-sdk-core "3.4.1"
-    aws-xray-sdk-express "3.4.1"
-    aws-xray-sdk-mysql "3.4.1"
-    aws-xray-sdk-postgres "3.4.1"
+    aws-xray-sdk-core "3.5.0"
+    aws-xray-sdk-express "3.5.0"
+    aws-xray-sdk-mysql "3.5.0"
+    aws-xray-sdk-postgres "3.5.0"
 
 aws4@^1.8.0:
   version "1.11.0"
@@ -17770,7 +17770,7 @@ selfsigned@^2.1.1:
   dependencies:
     node-forge "^1"
 
-"semver@2 || 3 || 4 || 5", semver@^5.3.0, semver@^5.4.1, semver@^5.5.0, semver@^5.6.0:
+"semver@2 || 3 || 4 || 5", semver@^5.4.1, semver@^5.5.0, semver@^5.6.0:
   version "5.7.1"
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.7.1.tgz#a954f931aeba508d307bbf069eff0c01c96116f7"
   integrity sha512-sauaDf/PZdVgrLTNYHRtpXa1iRiKcaebiKQ1BJdpQlWH2lCvexQdX55snPFyK7QzpudqbCI0qXFfOasHdyNDGQ==
