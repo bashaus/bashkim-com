@@ -105,7 +105,7 @@
     "eslint": "^8.37.0",
     "eslint-config-next": "13.3.0",
     "eslint-config-prettier": "^8.8.0",
-    "eslint-import-resolver-typescript": "^3.5.4",
+    "eslint-import-resolver-typescript": "^3.5.5",
     "eslint-module-utils": "^2.7.4",
     "eslint-plugin-cypress": "^2.13.2",
     "eslint-plugin-import": "^2.27.5",
