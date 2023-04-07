@@ -1,5 +1,4 @@
-import type { StorybookConfig } from "@storybook/core-common";
-import { merge } from "webpack-merge";
+import type { StorybookConfig } from "@storybook/types";
 
 import { rootMain } from "../../../.storybook/main";
 
@@ -12,6 +11,7 @@ const config: StorybookConfig = {
   },
 
   stories: [
+    ...rootMain.stories,
     "../src/components/**/*.stories.tsx",
     "../src/formatters/**/*.stories.tsx",
     "../src/layout/**/*.stories.tsx",
@@ -19,23 +19,16 @@ const config: StorybookConfig = {
     "../src/slices/**/*.stories.tsx",
   ],
 
+  framework: {
+    name: "@storybook/react-webpack5",
+    options: {},
+  },
+
   addons: [
     ...(rootMain.addons || []),
     "@storybook/addon-essentials",
     "@nrwl/react/plugins/storybook",
   ],
-
-  webpackFinal: async (config, options) => {
-    const packageWebpackConfig = {};
-
-    if (rootMain.webpackFinal) {
-      const rootWebpackConfig = await rootMain.webpackFinal(config, options);
-
-      config = merge(rootWebpackConfig, packageWebpackConfig);
-    }
-
-    return config;
-  },
 };
 
 export default config;

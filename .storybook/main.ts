@@ -1,14 +1,13 @@
-import type { StorybookConfig } from "@storybook/core-common";
-import { merge } from "webpack-merge";
+import type { StorybookConfig } from "@storybook/types";
 
-export const rootMain: Partial<StorybookConfig> = {
+export const rootMain: StorybookConfig = {
+  stories: [],
+
   core: {
     builder: "webpack5",
     disableTelemetry: true,
+    enableCrashReports: false,
   },
 
   addons: ["storybook-addon-swc", "@storybook/addon-a11y"],
-  webpackFinal: async (config) => {
-    return merge(config, {});
-  },
 };
