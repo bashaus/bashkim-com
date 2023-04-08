@@ -7,5 +7,4 @@ export default {
     "^.+\\.[tj]sx?$": "@swc/jest",
   },
   moduleFileExtensions: ["ts", "tsx", "js", "jsx"],
-  coverageDirectory: "../../coverage/libs/prismic-helpers",
 };

@@ -1,12 +1,15 @@
-name: lint
+---
+name: Lint
 
 on:
   push:
     branches:
       - main
   pull_request:
-    branches:
-      - main
+    types:
+      - opened
+      - synchronize
+      - reopened
 
 jobs:
   lint:

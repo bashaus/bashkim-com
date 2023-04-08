@@ -10,8 +10,6 @@ const config: Config = {
   moduleFileExtensions: ["ts", "tsx", "js", "jsx"],
 
   /* Coverage */
-  coverageDirectory: "../../coverage/apps/website",
-  collectCoverageFrom: ["src/**/*.{js,jsx,ts,tsx}", "!**/stories.tsx"],
   coveragePathIgnorePatterns: [".next/"],
 };
 

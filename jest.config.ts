@@ -13,4 +13,5 @@ export default {
       },
     ],
   ],
+  collectCoverageFrom: ["**/*.{ts,tsx}", "!**/*.d.ts", "!**/*.stories.tsx"],
 };
