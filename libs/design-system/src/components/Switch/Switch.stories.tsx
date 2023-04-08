@@ -1,7 +1,7 @@
 import { MoonIcon, SunIcon } from "@primer/octicons-react";
-import type { Meta, StoryFn } from "@storybook/react";
+import type { Meta } from "@storybook/react";
 
-import { Switch as SwitchComponent, SwitchProps } from "./Switch";
+import { Switch as SwitchComponent } from "./Switch";
 
 export default {
   component: SwitchComponent,

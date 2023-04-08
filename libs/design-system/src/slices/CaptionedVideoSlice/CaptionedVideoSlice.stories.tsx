@@ -1,10 +1,7 @@
 import { CaptionedVideoSliceFixture } from "@bashkim-com/prismic-fixtures";
-import type { Meta, StoryFn } from "@storybook/react";
+import type { Meta } from "@storybook/react";
 
-import {
-  CaptionedVideoSlice as CaptionedVideoSliceComponent,
-  CaptionedVideoSliceProps,
-} from "./CaptionedVideoSlice";
+import { CaptionedVideoSlice as CaptionedVideoSliceComponent } from "./CaptionedVideoSlice";
 
 export default {
   component: CaptionedVideoSliceComponent,

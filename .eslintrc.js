@@ -28,7 +28,9 @@ module.exports = {
     {
       files: ["*.{ts,tsx}"],
       extends: ["plugin:@nrwl/nx/typescript", "plugin:sonarjs/recommended"],
-      rules: {},
+      rules: {
+        "@typescript-eslint/no-unused-vars": "error",
+      },
     },
     {
       files: ["*.{js,jsx}"],

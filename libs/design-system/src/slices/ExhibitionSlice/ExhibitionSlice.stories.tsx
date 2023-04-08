@@ -1,10 +1,7 @@
 import { ExhibitionSliceFixture } from "@bashkim-com/prismic-fixtures";
-import type { Meta, StoryFn } from "@storybook/react";
+import type { Meta } from "@storybook/react";
 
-import {
-  ExhibitionSlice as ExhibitionSliceComponent,
-  ExhibitionSliceProps,
-} from "./ExhibitionSlice";
+import { ExhibitionSlice as ExhibitionSliceComponent } from "./ExhibitionSlice";
 
 export default {
   component: ExhibitionSliceComponent,

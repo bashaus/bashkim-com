@@ -1,9 +1,6 @@
-import type { Meta, StoryFn } from "@storybook/react";
+import type { Meta } from "@storybook/react";
 
-import {
-  VideoPlayer as VideoPlayerComponent,
-  VideoPlayerProps,
-} from "./VideoPlayer";
+import { VideoPlayer as VideoPlayerComponent } from "./VideoPlayer";
 
 export default {
   component: VideoPlayerComponent,

@@ -1,9 +1,6 @@
-import type { Meta, StoryFn } from "@storybook/react";
+import type { Meta } from "@storybook/react";
 
-import {
-  VideoModal as VideoModalComponent,
-  VideoModalProps,
-} from "./VideoModal";
+import { VideoModal as VideoModalComponent } from "./VideoModal";
 
 export default {
   component: VideoModalComponent,

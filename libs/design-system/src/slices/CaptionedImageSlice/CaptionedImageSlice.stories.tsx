@@ -1,10 +1,7 @@
 import { CaptionedImageSliceFixture } from "@bashkim-com/prismic-fixtures";
-import type { Meta, StoryFn } from "@storybook/react";
+import type { Meta } from "@storybook/react";
 
-import {
-  CaptionedImageSlice as CaptionedImageSliceComponent,
-  CaptionedImageSliceProps,
-} from "./CaptionedImageSlice";
+import { CaptionedImageSlice as CaptionedImageSliceComponent } from "./CaptionedImageSlice";
 
 export default {
   component: CaptionedImageSliceComponent,

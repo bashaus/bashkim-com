@@ -1,10 +1,7 @@
 import { SubtitleSliceFixture } from "@bashkim-com/prismic-fixtures";
-import type { Meta, StoryFn } from "@storybook/react";
+import type { Meta } from "@storybook/react";
 
-import {
-  SubtitleSlice as SubtitleSliceComponent,
-  SubtitleSliceProps,
-} from "./SubtitleSlice";
+import { SubtitleSlice as SubtitleSliceComponent } from "./SubtitleSlice";
 
 export default {
   component: SubtitleSliceComponent,

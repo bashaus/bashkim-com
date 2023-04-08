@@ -1,10 +1,7 @@
 import { GridVideoSliceFixture } from "@bashkim-com/prismic-fixtures";
-import type { Meta, StoryFn } from "@storybook/react";
+import type { Meta } from "@storybook/react";
 
-import {
-  GridVideoSlice as GridVideoSliceComponent,
-  GridVideoSliceProps,
-} from "./GridVideoSlice";
+import { GridVideoSlice as GridVideoSliceComponent } from "./GridVideoSlice";
 
 export default {
   component: GridVideoSliceComponent,
