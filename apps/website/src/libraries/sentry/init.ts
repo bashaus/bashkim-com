@@ -1,5 +1,5 @@
 import * as Sentry from "@sentry/browser";
-import { BrowserTracing } from "@sentry/tracing";
+import { BrowserTracing } from "@sentry/browser";
 
 const {
   NEXT_PUBLIC_SENTRY_DSN: sentryDsn,
