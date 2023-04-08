@@ -1,4 +1,4 @@
-import type { Meta, Story } from "@storybook/react";
+import type { Meta, StoryFn } from "@storybook/react";
 
 import { NavigationGroup } from "../NavigationGroup/NavigationGroup";
 import { NavigationItem } from "../NavigationItem/NavigationItem";
@@ -40,8 +40,4 @@ export default {
   },
 } as Meta;
 
-const Template: Story<NavigationProps> = (args: NavigationProps) => (
-  <NavigationComponent {...args} />
-);
-
-export const Navigation = Template.bind({});
+export const Navigation = {};

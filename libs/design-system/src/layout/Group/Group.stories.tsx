@@ -1,4 +1,4 @@
-import type { Meta, Story } from "@storybook/react";
+import type { Meta, StoryFn } from "@storybook/react";
 
 import { Group as GroupComponent, GroupProps } from "./Group";
 import { GroupDesign } from "./Group.types";
@@ -18,18 +18,24 @@ type GroupStoryProps = GroupProps & {
   icon: Array<string>;
 };
 
-const Template: Story<GroupStoryProps> = (args: GroupStoryProps) => (
+const Template: StoryFn<GroupStoryProps> = (args: GroupStoryProps) => (
   <GroupComponent {...args}>
     <p>Nulla facilisi. Vivamus ac fringilla urna. Praesent in. {args.design}</p>
   </GroupComponent>
 );
 
-export const Default = Template.bind({});
-Default.args = {
-  design: GroupDesign.DEFAULT,
+export const Default = {
+  render: Template,
+
+  args: {
+    design: GroupDesign.DEFAULT,
+  },
 };
 
-export const Alternate = Template.bind({});
-Alternate.args = {
-  design: GroupDesign.ALTERNATE,
+export const Alternate = {
+  render: Template,
+
+  args: {
+    design: GroupDesign.ALTERNATE,
+  },
 };

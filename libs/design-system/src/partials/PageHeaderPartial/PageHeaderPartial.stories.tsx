@@ -1,4 +1,4 @@
-import type { Meta, Story } from "@storybook/react";
+import type { Meta, StoryFn } from "@storybook/react";
 
 import {
   PageHeaderPartial as PageHeaderPartialComponent,
@@ -29,7 +29,7 @@ type PageHeaderPartialStoryProps = Omit<
   imageMobile: Array<string>;
 };
 
-const Template: Story<PageHeaderPartialStoryProps> = ({
+const Template: StoryFn<PageHeaderPartialStoryProps> = ({
   imageDesktop,
   imageMobile,
   ...args
@@ -41,4 +41,6 @@ const Template: Story<PageHeaderPartialStoryProps> = ({
   />
 );
 
-export const PageHeaderPartial = Template.bind({});
+export const PageHeaderPartial = {
+  render: Template,
+};

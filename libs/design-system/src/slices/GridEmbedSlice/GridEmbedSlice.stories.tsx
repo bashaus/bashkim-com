@@ -1,5 +1,5 @@
 import { GridEmbedSliceFixture } from "@bashkim-com/prismic-fixtures";
-import type { Meta, Story } from "@storybook/react";
+import type { Meta, StoryFn } from "@storybook/react";
 
 import {
   GridEmbedSlice as GridEmbedSliceComponent,
@@ -23,8 +23,4 @@ export default {
   },
 } as Meta;
 
-const Template: Story<GridEmbedSliceProps> = (args: GridEmbedSliceProps) => (
-  <GridEmbedSliceComponent {...args} />
-);
-
-export const GridEmbedSlice = Template.bind({});
+export const GridEmbedSlice = {};

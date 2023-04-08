@@ -1,4 +1,4 @@
-import type { Meta, Story } from "@storybook/react";
+import type { Meta, StoryFn } from "@storybook/react";
 import { ReactNode } from "react";
 
 import { DeviceSmartphone, DeviceSmartphoneProps } from "./DeviceSmartphone";
@@ -24,7 +24,7 @@ type DeviceSmartphoneStoryProps = Omit<DeviceSmartphoneProps, "figure"> & {
   children: ReactNode;
 };
 
-const Template: Story<DeviceSmartphoneStoryProps> = ({
+const Template: StoryFn<DeviceSmartphoneStoryProps> = ({
   children,
   figure,
   ...args
@@ -34,4 +34,6 @@ const Template: Story<DeviceSmartphoneStoryProps> = ({
   </DeviceSmartphone>
 );
 
-export const Smartphone = Template.bind({});
+export const Smartphone = {
+  render: Template,
+};

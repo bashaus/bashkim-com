@@ -1,5 +1,5 @@
 import { SubtitleSliceFixture } from "@bashkim-com/prismic-fixtures";
-import type { Meta, Story } from "@storybook/react";
+import type { Meta, StoryFn } from "@storybook/react";
 
 import {
   SubtitleSlice as SubtitleSliceComponent,
@@ -23,8 +23,4 @@ export default {
   },
 } as Meta;
 
-const Template: Story<SubtitleSliceProps> = (args: SubtitleSliceProps) => (
-  <SubtitleSliceComponent {...args} />
-);
-
-export const SubtitleSlice = Template.bind({});
+export const SubtitleSlice = {};

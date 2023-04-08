@@ -1,5 +1,5 @@
 import { FullTextSliceFixture } from "@bashkim-com/prismic-fixtures";
-import type { Meta, Story } from "@storybook/react";
+import type { Meta, StoryFn } from "@storybook/react";
 
 import {
   FullTextSlice as FullTextSliceComponent,
@@ -23,8 +23,4 @@ export default {
   },
 } as Meta;
 
-const Template: Story<FullTextSliceProps> = (args: FullTextSliceProps) => (
-  <FullTextSliceComponent {...args} />
-);
-
-export const FullTextSlice = Template.bind({});
+export const FullTextSlice = {};

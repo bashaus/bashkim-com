@@ -1,4 +1,4 @@
-import type { Meta, Story } from "@storybook/react";
+import type { Meta, StoryFn } from "@storybook/react";
 
 import {
   VideoModal as VideoModalComponent,
@@ -17,8 +17,4 @@ export default {
   },
 } as Meta;
 
-const Template: Story<VideoModalProps> = (args: VideoModalProps) => (
-  <VideoModalComponent {...args} />
-);
-
-export const VideoModal = Template.bind({});
+export const VideoModal = {};

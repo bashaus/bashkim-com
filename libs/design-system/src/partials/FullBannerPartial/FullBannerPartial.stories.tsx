@@ -1,4 +1,4 @@
-import type { Meta, Story } from "@storybook/react";
+import type { Meta, StoryFn } from "@storybook/react";
 
 import {
   FullBannerPartial as FullBannerPartialComponent,
@@ -44,7 +44,7 @@ type FullBannerPartialStoryProps = Omit<
   subtitle: string;
 };
 
-const Template: Story<FullBannerPartialStoryProps> = ({
+const Template: StoryFn<FullBannerPartialStoryProps> = ({
   backgroundDesktop,
   backgroundMobile,
   title,
@@ -61,4 +61,6 @@ const Template: Story<FullBannerPartialStoryProps> = ({
   </FullBannerPartialComponent>
 );
 
-export const FullBannerPartial = Template.bind({});
+export const FullBannerPartial = {
+  render: Template,
+};

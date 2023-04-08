@@ -1,4 +1,4 @@
-import type { Meta, Story } from "@storybook/react";
+import type { Meta, StoryFn } from "@storybook/react";
 
 import {
   LifespanFormatter as LifespanFormatterComponent,
@@ -25,7 +25,7 @@ export default {
   },
 } as Meta;
 
-const Template: Story<LifespanFormatterProps> = ({
+const Template: StoryFn<LifespanFormatterProps> = ({
   startDate,
   endDate,
   ...args
@@ -37,4 +37,6 @@ const Template: Story<LifespanFormatterProps> = ({
   />
 );
 
-export const LifespanFormatter = Template.bind({});
+export const LifespanFormatter = {
+  render: Template,
+};

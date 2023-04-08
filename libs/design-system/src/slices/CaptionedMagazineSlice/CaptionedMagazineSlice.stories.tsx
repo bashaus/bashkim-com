@@ -1,5 +1,5 @@
 import { CaptionedMagazineSliceFixture } from "@bashkim-com/prismic-fixtures";
-import type { Meta, Story } from "@storybook/react";
+import type { Meta, StoryFn } from "@storybook/react";
 
 import {
   CaptionedMagazineSlice as CaptionedMagazineSliceComponent,
@@ -23,8 +23,4 @@ export default {
   },
 } as Meta;
 
-const Template: Story<CaptionedMagazineSliceProps> = (
-  args: CaptionedMagazineSliceProps
-) => <CaptionedMagazineSliceComponent {...args} />;
-
-export const CaptionedMagazineSlice = Template.bind({});
+export const CaptionedMagazineSlice = {};

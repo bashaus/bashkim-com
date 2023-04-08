@@ -1,4 +1,4 @@
-import type { Meta, Story } from "@storybook/react";
+import type { Meta, StoryFn } from "@storybook/react";
 
 import { Brick as BrickComponent, BrickProps } from "./Brick";
 
@@ -22,9 +22,11 @@ type BrickStoryProps = Omit<BrickProps, "icon"> & {
   icon: Array<string>;
 };
 
-const Template: Story<BrickStoryProps> = ({
+const Template: StoryFn<BrickStoryProps> = ({
   icon,
   ...args
 }: BrickStoryProps) => <BrickComponent icon={icon[0]} {...args} />;
 
-export const Brick = Template.bind({});
+export const Brick = {
+  render: Template,
+};

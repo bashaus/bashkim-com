@@ -1,4 +1,4 @@
-import type { Meta, Story } from "@storybook/react";
+import type { Meta, StoryFn } from "@storybook/react";
 
 import {
   CallToAction as CallToActionComponent,
@@ -19,7 +19,7 @@ export default {
   },
 } as Meta;
 
-const Template: Story<CallToActionProps> = ({
+const Template: StoryFn<CallToActionProps> = ({
   children,
   ...args
 }: CallToActionProps) => (
@@ -30,4 +30,6 @@ const Template: Story<CallToActionProps> = ({
   </CallToActionComponent>
 );
 
-export const CallToAction = Template.bind({});
+export const CallToAction = {
+  render: Template,
+};

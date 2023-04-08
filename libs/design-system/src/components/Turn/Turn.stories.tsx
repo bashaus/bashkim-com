@@ -1,4 +1,4 @@
-import type { Meta, Story } from "@storybook/react";
+import type { Meta, StoryFn } from "@storybook/react";
 
 import { Turn as TurnComponent, TurnProps } from "./Turn";
 
@@ -13,7 +13,7 @@ export default {
   },
 } as Meta;
 
-const Template: Story<TurnProps> = (args: TurnProps) => (
+const Template: StoryFn<TurnProps> = (args: TurnProps) => (
   <div style={{ maxWidth: 800, width: "100vw" }}>
     <TurnComponent {...args} pageWidth={300} pageHeight={450}>
       {Array(args.pages)
@@ -31,4 +31,6 @@ const Template: Story<TurnProps> = (args: TurnProps) => (
   </div>
 );
 
-export const Turn = Template.bind({});
+export const Turn = {
+  render: Template,
+};

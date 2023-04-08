@@ -1,4 +1,4 @@
-import type { Meta, Story } from "@storybook/react";
+import type { Meta, StoryFn } from "@storybook/react";
 
 import {
   FullImagePartial as FullImagePartialComponent,
@@ -20,7 +20,7 @@ type FullImagePartialStoryProps = Omit<FullImagePartialProps, "figure"> & {
   figure: Array<string>;
 };
 
-const Template: Story<FullImagePartialStoryProps> = ({
+const Template: StoryFn<FullImagePartialStoryProps> = ({
   figure,
   ...args
 }: FullImagePartialStoryProps) => (
@@ -29,4 +29,6 @@ const Template: Story<FullImagePartialStoryProps> = ({
   </FullImagePartialComponent>
 );
 
-export const FullImagePartial = Template.bind({});
+export const FullImagePartial = {
+  render: Template,
+};

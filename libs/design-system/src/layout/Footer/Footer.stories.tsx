@@ -1,4 +1,4 @@
-import type { Meta, Story } from "@storybook/react";
+import type { Meta, StoryFn } from "@storybook/react";
 
 import { FooterColumn } from "../FooterColumn/FooterColumn";
 import { FooterGroup } from "../FooterGroup/FooterGroup";
@@ -11,7 +11,7 @@ export default {
   args: {},
 } as Meta;
 
-const Template: Story<FooterProps> = (args: FooterProps) => (
+const Template: StoryFn<FooterProps> = (args: FooterProps) => (
   <FooterComponent {...args}>
     <FooterGroup>
       <FooterColumn label="Column one">
@@ -33,4 +33,6 @@ const Template: Story<FooterProps> = (args: FooterProps) => (
   </FooterComponent>
 );
 
-export const Footer = Template.bind({});
+export const Footer = {
+  render: Template,
+};

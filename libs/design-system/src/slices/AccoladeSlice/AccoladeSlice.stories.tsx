@@ -1,5 +1,5 @@
 import { AccoladeSliceFixture } from "@bashkim-com/prismic-fixtures";
-import type { Meta, Story } from "@storybook/react";
+import type { Meta, StoryFn } from "@storybook/react";
 
 import {
   AccoladeSlice as AccoladeSliceComponent,
@@ -23,8 +23,4 @@ export default {
   },
 } as Meta;
 
-const Template: Story<AccoladeSliceProps> = (args: AccoladeSliceProps) => (
-  <AccoladeSliceComponent {...args} />
-);
-
-export const AccoladeSlice = Template.bind({});
+export const AccoladeSlice = {};

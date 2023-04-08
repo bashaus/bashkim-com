@@ -1,4 +1,4 @@
-import type { Meta, Story } from "@storybook/react";
+import type { Meta, StoryFn } from "@storybook/react";
 
 import { Tile as TileComponent, TileProps } from "./Tile";
 
@@ -25,7 +25,7 @@ export type TileStoryProps = Omit<TileProps, "icon" | "poster"> & {
   poster: Array<string>;
 };
 
-const Template: Story<TileStoryProps> = ({
+const Template: StoryFn<TileStoryProps> = ({
   icon,
   poster,
   ...args
@@ -33,4 +33,6 @@ const Template: Story<TileStoryProps> = ({
   <TileComponent {...args} icon={icon[0]} poster={poster[0]} />
 );
 
-export const Tile = Template.bind({});
+export const Tile = {
+  render: Template,
+};

@@ -1,4 +1,4 @@
-import type { Meta, Story } from "@storybook/react";
+import type { Meta, StoryFn } from "@storybook/react";
 
 import {
   VideoPlayer as VideoPlayerComponent,
@@ -16,8 +16,4 @@ export default {
   },
 } as Meta;
 
-const Template: Story<VideoPlayerProps> = (args: VideoPlayerProps) => (
-  <VideoPlayerComponent {...args} />
-);
-
-export const VideoPlayer = Template.bind({});
+export const VideoPlayer = {};

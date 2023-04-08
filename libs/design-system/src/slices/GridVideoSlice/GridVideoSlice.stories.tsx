@@ -1,5 +1,5 @@
 import { GridVideoSliceFixture } from "@bashkim-com/prismic-fixtures";
-import type { Meta, Story } from "@storybook/react";
+import type { Meta, StoryFn } from "@storybook/react";
 
 import {
   GridVideoSlice as GridVideoSliceComponent,
@@ -23,8 +23,4 @@ export default {
   },
 } as Meta;
 
-const Template: Story<GridVideoSliceProps> = (args: GridVideoSliceProps) => (
-  <GridVideoSliceComponent {...args} />
-);
-
-export const GridVideoSlice = Template.bind({});
+export const GridVideoSlice = {};

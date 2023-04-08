@@ -1,4 +1,4 @@
-import type { Meta, Story } from "@storybook/react";
+import type { Meta, StoryFn } from "@storybook/react";
 
 import {
   TitlePartial as TitlePartialComponent,
@@ -32,7 +32,7 @@ type TitlePartialStoryProps = Omit<TitlePartialProps, "image"> & {
   subtitle: string;
 };
 
-const Template: Story<TitlePartialStoryProps> = ({
+const Template: StoryFn<TitlePartialStoryProps> = ({
   image,
   title,
   subtitle,
@@ -44,4 +44,6 @@ const Template: Story<TitlePartialStoryProps> = ({
   </TitlePartialComponent>
 );
 
-export const TitlePartial = Template.bind({});
+export const TitlePartial = {
+  render: Template,
+};

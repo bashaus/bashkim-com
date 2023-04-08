@@ -1,4 +1,4 @@
-import type { Meta, Story } from "@storybook/react";
+import type { Meta, StoryFn } from "@storybook/react";
 
 import { FooterLinks } from "../FooterLinks/FooterLinks";
 import {
@@ -14,7 +14,7 @@ export default {
   },
 } as Meta;
 
-const Template: Story<FooterColumnProps> = (args: FooterColumnProps) => (
+const Template: StoryFn<FooterColumnProps> = (args: FooterColumnProps) => (
   <FooterColumnComponent {...args}>
     <FooterLinks>
       <li>
@@ -27,4 +27,6 @@ const Template: Story<FooterColumnProps> = (args: FooterColumnProps) => (
   </FooterColumnComponent>
 );
 
-export const FooterColumn = Template.bind({});
+export const FooterColumn = {
+  render: Template,
+};

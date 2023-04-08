@@ -1,4 +1,4 @@
-import type { Meta, Story } from "@storybook/react";
+import type { Meta, StoryFn } from "@storybook/react";
 
 import { ModalFrame } from "../ModalFrame/ModalFrame";
 import { Modal as ModalComponent, ModalProps } from "./Modal";
@@ -16,10 +16,12 @@ export default {
   },
 } as Meta;
 
-const Template: Story<ModalProps> = (args: ModalProps) => (
+const Template: StoryFn<ModalProps> = (args: ModalProps) => (
   <ModalComponent {...args}>
     <ModalFrame style={{ width: "80vw", height: "60vh" }} />
   </ModalComponent>
 );
 
-export const Modal = Template.bind({});
+export const Modal = {
+  render: Template,
+};

@@ -1,4 +1,4 @@
-import type { Meta, Story } from "@storybook/react";
+import type { Meta, StoryFn } from "@storybook/react";
 
 import {
   DeviceFeaturePhone,
@@ -25,7 +25,7 @@ type DeviceFeaturePhoneStoryProps = Omit<DeviceFeaturePhoneProps, "figure"> & {
   figure: Array<string>;
 };
 
-const Template: Story<DeviceFeaturePhoneStoryProps> = ({
+const Template: StoryFn<DeviceFeaturePhoneStoryProps> = ({
   children,
   figure,
   ...args
@@ -35,4 +35,6 @@ const Template: Story<DeviceFeaturePhoneStoryProps> = ({
   </DeviceFeaturePhone>
 );
 
-export const FeaturePhone = Template.bind({});
+export const FeaturePhone = {
+  render: Template,
+};

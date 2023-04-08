@@ -1,4 +1,4 @@
-import type { Meta, Story } from "@storybook/react";
+import type { Meta, StoryFn } from "@storybook/react";
 
 import { SplitItemPartial } from "../SplitItemPartial/SplitItemPartial";
 import {
@@ -26,7 +26,7 @@ type SplitPartialStoryProps = Omit<SplitPartialProps, "backgroundImage"> & {
   backgroundImage: Array<string>;
 };
 
-const Template: Story<SplitPartialStoryProps> = ({
+const Template: StoryFn<SplitPartialStoryProps> = ({
   backgroundImage,
   index = 0,
   ...args
@@ -48,4 +48,6 @@ const Template: Story<SplitPartialStoryProps> = ({
   </>
 );
 
-export const SplitPartial = Template.bind({});
+export const SplitPartial = {
+  render: Template,
+};

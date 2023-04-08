@@ -1,4 +1,4 @@
-import type { Meta, Story } from "@storybook/react";
+import type { Meta, StoryFn } from "@storybook/react";
 
 import {
   RichTextFormatter as RichTextFormatterComponent,
@@ -14,7 +14,7 @@ export default {
   },
 } as Meta;
 
-const Template: Story<RichTextFormatterProps> = (
+const Template: StoryFn<RichTextFormatterProps> = (
   args: RichTextFormatterProps
 ) => (
   <RichTextFormatterComponent {...args}>
@@ -51,4 +51,6 @@ const Template: Story<RichTextFormatterProps> = (
   </RichTextFormatterComponent>
 );
 
-export const RichTextFormatter = Template.bind({});
+export const RichTextFormatter = {
+  render: Template,
+};

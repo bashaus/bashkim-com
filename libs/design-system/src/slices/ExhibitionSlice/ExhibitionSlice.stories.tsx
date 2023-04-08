@@ -1,5 +1,5 @@
 import { ExhibitionSliceFixture } from "@bashkim-com/prismic-fixtures";
-import type { Meta, Story } from "@storybook/react";
+import type { Meta, StoryFn } from "@storybook/react";
 
 import {
   ExhibitionSlice as ExhibitionSliceComponent,
@@ -24,8 +24,4 @@ export default {
   },
 } as Meta;
 
-const Template: Story<ExhibitionSliceProps> = (args: ExhibitionSliceProps) => (
-  <ExhibitionSliceComponent {...args} />
-);
-
-export const ExhibitionSlice = Template.bind({});
+export const ExhibitionSlice = {};

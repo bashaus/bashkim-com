@@ -1,5 +1,5 @@
 import { MoonIcon, SunIcon } from "@primer/octicons-react";
-import type { Meta, Story } from "@storybook/react";
+import type { Meta, StoryFn } from "@storybook/react";
 
 import { Switch as SwitchComponent, SwitchProps } from "./Switch";
 
@@ -21,8 +21,4 @@ export default {
   },
 } as Meta;
 
-const Template: Story<SwitchProps> = (args: SwitchProps) => (
-  <SwitchComponent {...args} />
-);
-
-export const Switch = Template.bind({});
+export const Switch = {};

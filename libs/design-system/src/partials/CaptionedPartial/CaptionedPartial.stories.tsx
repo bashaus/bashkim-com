@@ -1,4 +1,4 @@
-import type { Meta, Story } from "@storybook/react";
+import type { Meta, StoryFn } from "@storybook/react";
 
 import { RichTextFormatter } from "../../formatters/RichTextFormatter/RichTextFormatter";
 import {
@@ -36,7 +36,7 @@ type CaptionedPartialStoryProps = Omit<CaptionedPartialProps, "figure"> & {
   subtitle: string;
 };
 
-const Template: Story<CaptionedPartialStoryProps> = ({
+const Template: StoryFn<CaptionedPartialStoryProps> = ({
   title,
   subtitle,
   figure,
@@ -50,4 +50,6 @@ const Template: Story<CaptionedPartialStoryProps> = ({
   </CaptionedPartialComponent>
 );
 
-export const CaptionedPartial = Template.bind({});
+export const CaptionedPartial = {
+  render: Template,
+};

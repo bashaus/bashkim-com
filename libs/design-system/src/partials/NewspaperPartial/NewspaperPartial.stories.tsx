@@ -1,4 +1,4 @@
-import type { Meta, Story } from "@storybook/react";
+import type { Meta, StoryFn } from "@storybook/react";
 
 import {
   NewspaperPartial as NewspaperPartialComponent,
@@ -25,7 +25,7 @@ type NewspaperPartialStoryProps = NewspaperPartialProps & {
   paragraphs: number;
 };
 
-const Template: Story<NewspaperPartialStoryProps> = ({
+const Template: StoryFn<NewspaperPartialStoryProps> = ({
   paragraphs,
   ...args
 }: NewspaperPartialStoryProps) => (
@@ -44,4 +44,6 @@ const Template: Story<NewspaperPartialStoryProps> = ({
   </NewspaperPartialComponent>
 );
 
-export const NewspaperPartial = Template.bind({});
+export const NewspaperPartial = {
+  render: Template,
+};

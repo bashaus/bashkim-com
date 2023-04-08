@@ -1,4 +1,4 @@
-import type { Meta, Story } from "@storybook/react";
+import type { Meta, StoryFn } from "@storybook/react";
 
 import { RichTextFormatter } from "../../formatters/RichTextFormatter/RichTextFormatter";
 import { Carousel as CarouselComponent, CarouselProps } from "./Carousel";
@@ -25,7 +25,7 @@ type CarouselStoryProps = CarouselProps & {
   slides: number;
 };
 
-const Template: Story<CarouselStoryProps> = ({
+const Template: StoryFn<CarouselStoryProps> = ({
   slides,
   ...args
 }: CarouselStoryProps) => (
@@ -68,4 +68,6 @@ const Template: Story<CarouselStoryProps> = ({
   </div>
 );
 
-export const Carousel = Template.bind({});
+export const Carousel = {
+  render: Template,
+};

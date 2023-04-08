@@ -1,5 +1,5 @@
 import { CarouselPhonesSliceFixture } from "@bashkim-com/prismic-fixtures";
-import type { Meta, Story } from "@storybook/react";
+import type { Meta, StoryFn } from "@storybook/react";
 
 import {
   CarouselPhonesSlice as CarouselPhonesSliceComponent,
@@ -23,8 +23,4 @@ export default {
   },
 } as Meta;
 
-const Template: Story<CarouselPhonesSliceProps> = (
-  args: CarouselPhonesSliceProps
-) => <CarouselPhonesSliceComponent {...args} />;
-
-export const CarouselPhonesSlice = Template.bind({});
+export const CarouselPhonesSlice = {};

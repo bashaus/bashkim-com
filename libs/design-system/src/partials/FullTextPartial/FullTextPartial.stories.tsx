@@ -1,4 +1,4 @@
-import type { Meta, Story } from "@storybook/react";
+import type { Meta, StoryFn } from "@storybook/react";
 
 import {
   FullTextPartial as FullTextPartialComponent,
@@ -23,7 +23,7 @@ type FullTextPartialStoryProps = FullTextPartialProps & {
   title: string;
 };
 
-const Template: Story<FullTextPartialStoryProps> = ({
+const Template: StoryFn<FullTextPartialStoryProps> = ({
   title,
   ...args
 }: FullTextPartialStoryProps) => (
@@ -42,4 +42,6 @@ const Template: Story<FullTextPartialStoryProps> = ({
   </FullTextPartialComponent>
 );
 
-export const FullTextPartial = Template.bind({});
+export const FullTextPartial = {
+  render: Template,
+};
