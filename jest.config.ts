@@ -1,6 +1,7 @@
 import { getJestProjects } from "@nrwl/jest";
+import type { Config } from "jest";
 
-export default {
+const config: Config = {
   projects: getJestProjects(),
   reporters: [
     "default",
@@ -13,5 +14,7 @@ export default {
       },
     ],
   ],
-  collectCoverageFrom: ["**/*.{ts,tsx}", "!**/*.d.ts", "!**/*.stories.tsx"],
+  collectCoverageFrom: ["src/**/*.{ts,tsx}", "!**/*.d.ts", "!**/*.stories.tsx"],
 };
+
+export default config;
