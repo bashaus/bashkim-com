@@ -71,7 +71,7 @@
     "@nrwl/node": "15.9.2",
     "@nrwl/react": "15.9.2",
     "@nrwl/storybook": "15.9.2",
-    "@nrwl/web": "15.9.2",
+    "@nrwl/web": "16.0.1",
     "@nrwl/webpack": "15.9.2",
     "@nrwl/workspace": "15.9.2",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.7",
