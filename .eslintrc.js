@@ -1,11 +1,11 @@
 module.exports = {
   root: true,
-  plugins: ["@nrwl/nx", "simple-import-sort", "import", "sonarjs"],
+  plugins: ["@nx", "simple-import-sort", "import", "sonarjs"],
   overrides: [
     {
       files: ["*.{js,jsx,ts,tsx}"],
       rules: {
-        "@nrwl/nx/enforce-module-boundaries": [
+        "@nx/enforce-module-boundaries": [
           "error",
           {
             enforceBuildableLibDependency: true,
@@ -27,14 +27,14 @@ module.exports = {
     },
     {
       files: ["*.{ts,tsx}"],
-      extends: ["plugin:@nrwl/nx/typescript", "plugin:sonarjs/recommended"],
+      extends: ["plugin:@nx/typescript", "plugin:sonarjs/recommended"],
       rules: {
         "@typescript-eslint/no-unused-vars": "error",
       },
     },
     {
       files: ["*.{js,jsx}"],
-      extends: ["plugin:@nrwl/nx/javascript", "plugin:sonarjs/recommended"],
+      extends: ["plugin:@nx/javascript", "plugin:sonarjs/recommended"],
       rules: {},
     },
     {
