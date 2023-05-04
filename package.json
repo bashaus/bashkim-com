@@ -75,7 +75,7 @@
     "@nx/workspace": "16.0.1",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.7",
     "@storybook/addon-a11y": "7.0.7",
-    "@storybook/addon-essentials": "7.0.7",
+    "@storybook/addon-essentials": "7.0.8",
     "@storybook/core-server": "7.0.7",
     "@storybook/react-webpack5": "7.0.7",
     "@svgr/webpack": "^7.0.0",
