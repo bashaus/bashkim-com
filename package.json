@@ -47,7 +47,7 @@
     "regenerator-runtime": "0.13.11",
     "reset-css": "^5.0.1",
     "sharp": "^0.32.1",
-    "tslib": "^2.5.0",
+    "tslib": "^2.5.1",
     "turn-js": "blasten/turn.js#master",
     "xmlbuilder": "^15.1.1"
   },
