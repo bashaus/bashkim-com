@@ -1,24 +1,24 @@
 {
-  "name": "style-guide",
+  "name": "prismic-fixtures",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/style-guide/src",
+  "sourceRoot": "packages/prismic-fixtures/src",
   "projectType": "library",
-  "tags": [],
   "targets": {
     "lint": {
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/style-guide/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["packages/prismic-fixtures/**/*.ts"]
       }
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "libs/style-guide/jest.config.ts",
+        "jestConfig": "packages/prismic-fixtures/jest.config.ts",
         "passWithNoTests": true
       }
     }
-  }
+  },
+  "tags": []
 }

@@ -1,7 +1,7 @@
 {
-  "name": "sitemap",
+  "name": "prismic-webhooks",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/sitemap/src",
+  "sourceRoot": "packages/prismic-webhooks/src",
   "projectType": "application",
   "targets": {
     "build": {
@@ -10,30 +10,30 @@
       "options": {
         "target": "node",
         "compiler": "tsc",
-        "outputPath": "dist/apps/sitemap",
-        "main": "apps/sitemap/src/local.ts",
-        "tsConfig": "apps/sitemap/tsconfig.app.json",
-        "assets": ["apps/sitemap/src/assets"],
+        "outputPath": "dist/packages/prismic-webhooks",
+        "main": "packages/prismic-webhooks/src/main.ts",
+        "tsConfig": "packages/prismic-webhooks/tsconfig.app.json",
+        "assets": ["packages/prismic-webhooks/src/assets"],
         "generatePackageJson": true,
         "babelUpwardRootMode": true
       },
       "configurations": {
         "production": {
+          "main": "packages/prismic-webhooks/src/lambda.ts",
           "optimization": true,
           "extractLicenses": true,
-          "inspect": false,
-          "main": "apps/sitemap/src/lambda.ts"
+          "inspect": false
         }
       }
     },
     "serve": {
       "executor": "@nx/js:node",
       "options": {
-        "buildTarget": "sitemap:build"
+        "buildTarget": "prismic-webhooks:build"
       },
       "configurations": {
         "production": {
-          "buildTarget": "sitemap:build:production"
+          "buildTarget": "prismic-webhooks:build:production"
         }
       }
     },
@@ -41,14 +41,14 @@
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/sitemap/**/*.ts"]
+        "lintFilePatterns": ["packages/prismic-webhooks/**/*.ts"]
       }
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/sitemap/jest.config.ts",
+        "jestConfig": "packages/prismic-webhooks/jest.config.ts",
         "passWithNoTests": true
       }
     }

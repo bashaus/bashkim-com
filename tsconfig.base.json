@@ -15,13 +15,15 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@bashkim-com/design-system": ["libs/design-system/src/index.ts"],
-      "@bashkim-com/prismic-dal": ["libs/prismic-dal/src/index.ts"],
-      "@bashkim-com/prismic-fixtures": ["libs/prismic-fixtures/src/index.ts"],
-      "@bashkim-com/prismic-helpers": ["libs/prismic-helpers/src/index.ts"],
-      "@bashkim-com/style-guide": ["libs/style-guide/src/index.scss"],
-      "@bashkim-com/style-guide/*": ["libs/style-guide/src/entry/*"],
-      "@bashkim-com/xray-lambda": ["libs/xray-lambda/src/index.ts"]
+      "@bashkim-com/design-system": ["packages/design-system/src/index.ts"],
+      "@bashkim-com/prismic-dal": ["packages/prismic-dal/src/index.ts"],
+      "@bashkim-com/prismic-fixtures": [
+        "packages/prismic-fixtures/src/index.ts"
+      ],
+      "@bashkim-com/prismic-helpers": ["packages/prismic-helpers/src/index.ts"],
+      "@bashkim-com/style-guide": ["packages/style-guide/src/index.scss"],
+      "@bashkim-com/style-guide/*": ["packages/style-guide/src/entry/*"],
+      "@bashkim-com/xray-lambda": ["packages/xray-lambda/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -1,7 +1,7 @@
 {
   "name": "website",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/website",
+  "sourceRoot": "packages/website",
   "projectType": "application",
   "targets": {
     "build": {
@@ -9,12 +9,12 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "root": "apps/website",
-        "outputPath": "dist/apps/website"
+        "root": "packages/website",
+        "outputPath": "dist/packages/website"
       },
       "configurations": {
         "development": {
-          "outputPath": "apps/website"
+          "outputPath": "packages/website"
         },
         "production": {}
       }
@@ -47,7 +47,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/website/jest.config.ts",
+        "jestConfig": "packages/website/jest.config.ts",
         "passWithNoTests": true
       }
     },
@@ -55,7 +55,7 @@
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/website/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["packages/website/**/*.{ts,tsx,js,jsx}"]
       }
     }
   },

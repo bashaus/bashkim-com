@@ -42,7 +42,7 @@ jobs:
           root: ./
           paths:
             - node_modules/
-            - libs/prismic-dal/src/generated/
+            - packages/prismic-dal/src/generated/
 
   build-serverless:
     executor: exec-node
@@ -65,8 +65,8 @@ jobs:
       - persist_to_workspace:
           root: ./
           paths:
-            - dist/apps/prismic-webhooks/
-            - dist/apps/sitemap/
+            - dist/packages/prismic-webhooks/
+            - dist/packages/sitemap/
 
   build-website:
     executor: exec-node
@@ -88,22 +88,22 @@ jobs:
       - save_cache:
           key: website-nextjs-{{ checksum "yarn.lock" }}
           paths:
-            - apps/website/.next/
+            - packages/website/.next/
 
       - persist_to_workspace:
           root: ./
           paths:
-            - apps/website/.next/
-            - dist/apps/website/
+            - packages/website/.next/
+            - dist/packages/website/
 
       - run:
           name: "zip website"
-          working_directory: ./dist/apps
+          working_directory: ./dist/packages
           command: |
             zip -r website.zip website/.next
 
       - store_artifacts:
-          path: dist/apps/website.zip
+          path: dist/packages/website.zip
           destination: website.zip
 
   build-design-system:
@@ -206,7 +206,7 @@ jobs:
           at: ./
 
       - aws-bucket/sync:
-          from: ./dist/apps/website/.next
+          from: ./dist/packages/website/.next
           to: "s3://${DEPLOY_S3_WEBSITE_BUCKET}"
           arguments: |
             --cache-control "max-age=86400"

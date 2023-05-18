@@ -1,28 +1,28 @@
 {
-  "name": "prismic-schema",
+  "name": "xray-lambda",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/prismic-schema/src",
-  "projectType": "application",
+  "sourceRoot": "packages/xray-lambda/src",
+  "projectType": "library",
   "targets": {
-    "generate": {
-      "executor": "nx:run-commands",
-      "options": {
-        "commands": ["ts-node apps/prismic-schema/src/main.ts"]
-      }
-    },
     "lint": {
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/prismic-schema/**/*.ts"]
+        "lintFilePatterns": ["packages/xray-lambda/**/*.ts"]
       }
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/prismic-schema/jest.config.ts",
+        "jestConfig": "packages/xray-lambda/jest.config.ts",
         "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
       }
     }
   },

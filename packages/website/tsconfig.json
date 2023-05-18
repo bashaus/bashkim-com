@@ -25,8 +25,8 @@
     "**/*.js",
     "**/*.jsx",
     "next-env.d.ts",
-    "../../apps/website/.next/types/**/*.ts",
-    "../../dist/apps/website/.next/types/**/*.ts",
+    "../../packages/website/.next/types/**/*.ts",
+    "../../dist/packages/website/.next/types/**/*.ts",
     ".next/types/**/*.ts"
   ],
   "exclude": [
@@ -35,7 +35,7 @@
     /**
      * @see https://github.com/vercel/next.js/issues/44363
      */
-    "../../apps/website/.next/types/**/*.ts",
-    "../../dist/apps/website/.next/types/**/*.ts"
+    "../../packages/website/.next/types/**/*.ts",
+    "../../dist/packages/website/.next/types/**/*.ts"
   ]
 }

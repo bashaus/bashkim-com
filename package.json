@@ -13,7 +13,7 @@
     "generate": "nx run-many --target=generate",
     "lint:scripts": "eslint .",
     "lint:styles": "stylelint '**/*.scss' '**/*.css'",
-    "lint:vectors": "svgo $(find apps libs -name '*.svg')",
+    "lint:vectors": "svgo $(find packages -name '*.svg')",
     "prepare": "husky install",
     "start": "nx serve",
     "storybook": "nx run design-system:storybook",

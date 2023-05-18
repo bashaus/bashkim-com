@@ -7,7 +7,10 @@ import PeerContentTypeSchema from "./content-types/peer/schema";
 import PortfolioPageContentTypeSchema from "./content-types/portfolio_page/schema";
 import TechnologyContentTypeSchema from "./content-types/technology/schema";
 
-const OUT_DIR = path.resolve(__dirname, "../../../dist/apps/prismic-schema");
+const OUT_DIR = path.resolve(
+  __dirname,
+  "../../../dist/packages/prismic-schema"
+);
 
 const OUT_FILES = {
   "case_study.json": CaseStudyContentTypeSchema,

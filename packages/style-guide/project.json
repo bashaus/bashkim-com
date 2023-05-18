@@ -1,7 +1,7 @@
 {
-  "name": "prismic-helpers",
+  "name": "style-guide",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/prismic-helpers/src",
+  "sourceRoot": "packages/style-guide/src",
   "projectType": "library",
   "tags": [],
   "targets": {
@@ -9,14 +9,14 @@
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/prismic-helpers/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["packages/style-guide/**/*.{ts,tsx,js,jsx}"]
       }
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "libs/prismic-helpers/jest.config.ts",
+        "jestConfig": "packages/style-guide/jest.config.ts",
         "passWithNoTests": true
       }
     }
