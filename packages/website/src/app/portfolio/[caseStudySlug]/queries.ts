@@ -1,23 +1,23 @@
 import {
-  CaseStudiesDocument,
-  CaseStudiesQuery,
-  CaseStudyBodyDocument,
-  CaseStudyBodyQuery,
-  CaseStudyPageDocument,
-  CaseStudyPageQuery,
+  GetCaseStudiesDocument,
+  GetCaseStudiesQuery,
+  GetCaseStudyBodyDocument,
+  GetCaseStudyBodyQuery,
+  GetCaseStudyPageDocument,
+  GetCaseStudyPageQuery,
 } from "@bashkim-com/prismic-dal";
 
 import { prismicClient } from "../../../libraries/prismic/PrismicClient";
 
 export const getPrismicSlugs = async () => {
-  return prismicClient.query<CaseStudiesQuery>({
-    query: CaseStudiesDocument,
+  return prismicClient.query<GetCaseStudiesQuery>({
+    query: GetCaseStudiesDocument,
   });
 };
 
 export const getPrismicPage = async (caseStudySlug: string) => {
-  return prismicClient.query<CaseStudyPageQuery>({
-    query: CaseStudyPageDocument,
+  return prismicClient.query<GetCaseStudyPageQuery>({
+    query: GetCaseStudyPageDocument,
     variables: {
       caseStudySlug,
     },
@@ -25,8 +25,8 @@ export const getPrismicPage = async (caseStudySlug: string) => {
 };
 
 export const getPrismicBody = async (caseStudySlug: string) => {
-  return prismicClient.query<CaseStudyBodyQuery>({
-    query: CaseStudyBodyDocument,
+  return prismicClient.query<GetCaseStudyBodyQuery>({
+    query: GetCaseStudyBodyDocument,
     variables: {
       caseStudySlug,
     },

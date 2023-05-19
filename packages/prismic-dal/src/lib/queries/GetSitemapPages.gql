@@ -1,4 +1,4 @@
-query SitemapPages {
+query GetSitemapPages {
   homePage: allHome_pages(first: 1) {
     edges {
       node {

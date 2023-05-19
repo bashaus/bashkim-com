@@ -1,6 +1,6 @@
 import {
-  SitemapPagesDocument,
-  SitemapPagesQuery,
+  GetSitemapPagesDocument,
+  GetSitemapPagesQuery,
 } from "@bashkim-com/prismic-dal";
 import { PrismicDate } from "@bashkim-com/prismic-helpers";
 
@@ -12,8 +12,8 @@ export const PagesSitemap = async () => {
   const now = new Date().toISOString();
   const baseHref = process.env.APP_SITEMAP_BASE_HREF;
 
-  const pageQuery = prismicClient.query<SitemapPagesQuery>({
-    query: SitemapPagesDocument,
+  const pageQuery = prismicClient.query<GetSitemapPagesQuery>({
+    query: GetSitemapPagesDocument,
   });
 
   const [pagesResult] = await Promise.all([pageQuery]);

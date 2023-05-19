@@ -10,7 +10,7 @@
 # import "../slice-types/NewspaperSliceType.gql"
 # import "../slice-types/SubtitleSliceType.gql"
 
-query CaseStudyBody($caseStudySlug: String) {
+query GetCaseStudyBody($caseStudySlug: String) {
   caseStudyBody: allCase_studys(uid: $caseStudySlug) {
     edges {
       node {

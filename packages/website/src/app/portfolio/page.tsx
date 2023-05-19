@@ -1,4 +1,3 @@
-import { Portfolio_Page } from "@bashkim-com/prismic-dal";
 import type { Metadata } from "next";
 
 import { generateCanonical } from "../../libraries/app/generateCanonical";
@@ -30,9 +29,7 @@ export async function PortfolioPage() {
     throw new NotFoundError();
   }
 
-  return (
-    <PortfolioPageLockup portfolioPage={portfolioPage as Portfolio_Page} />
-  );
+  return <PortfolioPageLockup portfolioPage={portfolioPage} />;
 }
 
 export default PortfolioPage;

@@ -1,4 +1,4 @@
-query CaseStudies {
+query GetCaseStudies {
   caseStudies: allCase_studys(first: 100) {
     edges {
       node {

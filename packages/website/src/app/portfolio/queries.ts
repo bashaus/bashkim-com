@@ -1,12 +1,12 @@
 import {
-  PortfolioPageDocument,
-  PortfolioPageQuery,
+  GetPortfolioPageDocument,
+  GetPortfolioPageQuery,
 } from "@bashkim-com/prismic-dal";
 
 import { prismicClient } from "../../libraries/prismic/PrismicClient";
 
 export const getPrismicPage = async () => {
-  return prismicClient.query<PortfolioPageQuery>({
-    query: PortfolioPageDocument,
+  return prismicClient.query<GetPortfolioPageQuery>({
+    query: GetPortfolioPageDocument,
   });
 };

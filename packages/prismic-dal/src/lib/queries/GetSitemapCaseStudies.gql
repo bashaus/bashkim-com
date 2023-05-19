@@ -1,4 +1,4 @@
-query SitemapCaseStudies {
+query GetSitemapCaseStudies {
   caseStudies: allCase_studys(
     sortBy: meta_lastPublicationDate_DESC
     first: 100

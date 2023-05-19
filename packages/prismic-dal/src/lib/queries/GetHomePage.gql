@@ -1,4 +1,4 @@
-query HomePage {
+query GetHomePage {
   homePage: allHome_pages(first: 1) {
     edges {
       node {

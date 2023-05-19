@@ -2,7 +2,7 @@
 # import "../slice-types/AccoladeSliceType.gql"
 # import "../slice-types/ExhibitionSliceType.gql"
 
-query CaseStudyPage($caseStudySlug: String) {
+query GetCaseStudyPage($caseStudySlug: String) {
   caseStudyPage: allCase_studys(uid: $caseStudySlug) {
     edges {
       node {

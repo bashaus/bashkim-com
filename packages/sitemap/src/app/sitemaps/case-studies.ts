@@ -1,6 +1,6 @@
 import {
-  SitemapCaseStudiesDocument,
-  SitemapCaseStudiesQuery,
+  GetSitemapCaseStudiesDocument,
+  GetSitemapCaseStudiesQuery,
 } from "@bashkim-com/prismic-dal";
 import { PrismicDate } from "@bashkim-com/prismic-helpers";
 
@@ -11,9 +11,10 @@ export const CaseStudiesSitemap = async () => {
   const urlset: Array<UrlType> = [];
   const baseHref = process.env.APP_SITEMAP_BASE_HREF;
 
-  const caseStudiesResult = await prismicClient.query<SitemapCaseStudiesQuery>({
-    query: SitemapCaseStudiesDocument,
-  });
+  const caseStudiesResult =
+    await prismicClient.query<GetSitemapCaseStudiesQuery>({
+      query: GetSitemapCaseStudiesDocument,
+    });
 
   caseStudiesResult.data.caseStudies.edges.forEach(({ node: caseStudy }) => {
     urlset.push({

@@ -1,8 +1,8 @@
 "use client";
 
 import {
+  GetHomePageQuery,
   Home_PageFeatured_Case_Studies,
-  HomePageQuery,
 } from "@bashkim-com/prismic-dal";
 
 import { Page } from "../../components/Page/Page";
@@ -11,7 +11,7 @@ import { HomeFooter } from "./components/HomeFooter/HomeFooter";
 import { HomeHello } from "./components/HomeHello/HomeHello";
 
 type HomePageLockupProps = {
-  homePageResult: HomePageQuery;
+  homePageResult: GetHomePageQuery;
 };
 
 export const HomePageLockup = ({ homePageResult }: HomePageLockupProps) => {
