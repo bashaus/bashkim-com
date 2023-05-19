@@ -1,4 +1,4 @@
-import type { Case_StudyBodyCaptionedscreenshotsslicetype } from "@bashkim-com/prismic-dal";
+import type { CaptionedScreenshotsSliceTypeFragment } from "@bashkim-com/prismic-dal";
 import { PrismicRichText } from "@bashkim-com/prismic-helpers";
 import { DeviceDesktopIcon, DeviceMobileIcon } from "@primer/octicons-react";
 import { ChangeEvent, useCallback, useState } from "react";
@@ -9,7 +9,7 @@ import styles from "./CaptionedScreenshotsSlice.module.scss";
 
 export type CaptionedScreenshotsSliceProps = {
   initialWidth?: number;
-  slice: Case_StudyBodyCaptionedscreenshotsslicetype;
+  slice: CaptionedScreenshotsSliceTypeFragment;
 };
 
 export const CaptionedScreenshotsSlice = ({

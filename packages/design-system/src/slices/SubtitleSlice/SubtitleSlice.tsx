@@ -1,10 +1,10 @@
-import type { Case_StudyBodySubtitleslicetype } from "@bashkim-com/prismic-dal";
+import type { SubtitleSliceTypeFragment } from "@bashkim-com/prismic-dal";
 import { PrismicRichText } from "@bashkim-com/prismic-helpers";
 
 import { SubtitlePartial } from "../../partials/SubtitlePartial/SubtitlePartial";
 
 export type SubtitleSliceProps = {
-  slice: Case_StudyBodySubtitleslicetype;
+  slice: SubtitleSliceTypeFragment;
 };
 
 export const SubtitleSlice = ({ slice }: SubtitleSliceProps) => {

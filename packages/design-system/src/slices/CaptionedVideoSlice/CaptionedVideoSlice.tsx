@@ -1,4 +1,4 @@
-import type { Case_StudyBodyCaptionedvideoslicetype } from "@bashkim-com/prismic-dal";
+import type { CaptionedVideoSliceTypeFragment } from "@bashkim-com/prismic-dal";
 import { PrismicRichText } from "@bashkim-com/prismic-helpers";
 
 import { VideoPlayer } from "../../components/VideoPlayer/VideoPlayer";
@@ -6,7 +6,7 @@ import { RichTextFormatter } from "../../formatters/RichTextFormatter/RichTextFo
 import { CaptionedPartial } from "../../partials/CaptionedPartial/CaptionedPartial";
 
 export type CaptionedVideoSliceProps = {
-  slice: Case_StudyBodyCaptionedvideoslicetype;
+  slice: CaptionedVideoSliceTypeFragment;
 };
 
 export const CaptionedVideoSlice = ({ slice }: CaptionedVideoSliceProps) => {

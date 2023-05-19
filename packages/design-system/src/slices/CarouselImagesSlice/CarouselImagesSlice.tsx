@@ -1,4 +1,4 @@
-import type { Case_StudyBodyCarouselimagesslicetype } from "@bashkim-com/prismic-dal";
+import type { CarouselImagesSliceTypeFragment } from "@bashkim-com/prismic-dal";
 import { PrismicRichText } from "@bashkim-com/prismic-helpers";
 
 import { Carousel } from "../../components/Carousel/Carousel";
@@ -6,7 +6,7 @@ import { CarouselImage } from "../../components/CarouselImage/CarouselImage";
 import { FullImagePartial } from "../../partials/FullImagePartial/FullImagePartial";
 
 export type CarouselImagesSliceProps = {
-  slice: Case_StudyBodyCarouselimagesslicetype;
+  slice: CarouselImagesSliceTypeFragment;
 };
 
 export const CarouselImagesSlice = ({ slice }: CarouselImagesSliceProps) => (

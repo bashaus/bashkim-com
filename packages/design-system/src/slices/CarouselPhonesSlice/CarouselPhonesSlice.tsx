@@ -1,4 +1,4 @@
-import type { Case_StudyBodyCarouselphonesslicetype } from "@bashkim-com/prismic-dal";
+import type { CarouselPhonesSliceTypeFragment } from "@bashkim-com/prismic-dal";
 import { PrismicRichText } from "@bashkim-com/prismic-helpers";
 
 import { Carousel } from "../../components/Carousel/Carousel";
@@ -31,7 +31,7 @@ const DeviceTypeComponents: Record<
 };
 
 export type CarouselPhonesSliceProps = {
-  slice: Case_StudyBodyCarouselphonesslicetype;
+  slice: CarouselPhonesSliceTypeFragment;
 };
 
 export const CarouselPhonesSlice = ({ slice }: CarouselPhonesSliceProps) => (

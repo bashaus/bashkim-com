@@ -1,31 +1,31 @@
-# import "../slice-types/SubtitleSliceType.gql"
-# import "../slice-types/FullTextSliceType.gql"
-# import "../slice-types/NewspaperSliceType.gql"
-# import "../slice-types/GridEmbedSliceType.gql"
-# import "../slice-types/GridVideoSliceType.gql"
 # import "../slice-types/CaptionedImageSliceType.gql"
+# import "../slice-types/CaptionedMagazineSliceType.gql"
+# import "../slice-types/CaptionedScreenshotsSliceType.gql"
 # import "../slice-types/CaptionedVideoSliceType.gql"
 # import "../slice-types/CarouselImagesSliceType.gql"
 # import "../slice-types/CarouselPhonesSliceType.gql"
-# import "../slice-types/CaptionedMagazineSliceType.gql"
-# import "../slice-types/CaptionedScreenshotsSliceType.gql"
+# import "../slice-types/FullTextSliceType.gql"
+# import "../slice-types/GridEmbedSliceType.gql"
+# import "../slice-types/GridVideoSliceType.gql"
+# import "../slice-types/NewspaperSliceType.gql"
+# import "../slice-types/SubtitleSliceType.gql"
 
 query CaseStudyBody($caseStudySlug: String) {
   caseStudyBody: allCase_studys(uid: $caseStudySlug) {
     edges {
       node {
         body {
-          ...SubtitleSliceType
-          ...FullTextSliceType
-          ...NewspaperSliceType
-          ...GridEmbedSliceType
-          ...GridVideoSliceType
           ...CaptionedImageSliceType
+          ...CaptionedMagazineSliceType
+          ...CaptionedScreenshotsSliceType
           ...CaptionedVideoSliceType
           ...CarouselImagesSliceType
           ...CarouselPhonesSliceType
-          ...CaptionedMagazineSliceType
-          ...CaptionedScreenshotsSliceType
+          ...FullTextSliceType
+          ...GridEmbedSliceType
+          ...GridVideoSliceType
+          ...NewspaperSliceType
+          ...SubtitleSliceType
         }
       }
     }

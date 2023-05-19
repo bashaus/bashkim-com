@@ -1,4 +1,4 @@
-import type { Case_StudyAccoladesAccoladeslicetype } from "@bashkim-com/prismic-dal";
+import type { AccoladeSliceTypeFragment } from "@bashkim-com/prismic-dal";
 import {
   PrismicDate,
   PrismicRichText,
@@ -12,7 +12,7 @@ import { RichTextFormatter } from "../../formatters/RichTextFormatter/RichTextFo
 import styles from "./AccoladeSlice.module.scss";
 
 export type AccoladeSliceProps = {
-  slice: Case_StudyAccoladesAccoladeslicetype;
+  slice: AccoladeSliceTypeFragment;
 };
 
 const AwardPlaceName: Record<string, string> = {

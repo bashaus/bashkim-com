@@ -1,11 +1,11 @@
-import type { Case_StudyExhibitionsExhibitionslicetype } from "@bashkim-com/prismic-dal";
+import type { ExhibitionSliceTypeFragment } from "@bashkim-com/prismic-dal";
 import { PrismicDate, PrismicRichText } from "@bashkim-com/prismic-helpers";
 
 import { LifespanFormatter } from "../../formatters/LifespanFormatter/LifespanFormatter";
 import { RichTextFormatter } from "../../formatters/RichTextFormatter/RichTextFormatter";
 
 export type ExhibitionSliceProps = {
-  slice: Case_StudyExhibitionsExhibitionslicetype;
+  slice: ExhibitionSliceTypeFragment;
 };
 
 export const ExhibitionSlice = ({ slice }: ExhibitionSliceProps) => {

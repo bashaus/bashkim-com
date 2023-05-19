@@ -1,7 +1,7 @@
 import { SubtitlePartial } from "@bashkim-com/design-system";
 import type {
   Case_Study,
-  Portfolio_PagePortfolio_CategoriesPortfoliocategoryslicetype,
+  PortfolioCategorySliceTypeFragment,
 } from "@bashkim-com/prismic-dal";
 import { PrismicRichText } from "@bashkim-com/prismic-helpers";
 
@@ -9,7 +9,7 @@ import { PortfolioCaseStudyBrick } from "../PortfolioCaseStudyBrick/PortfolioCas
 import styles from "./PortfolioCategory.module.scss";
 
 export type PortfolioCategoryProps = {
-  portfolioCategory: Portfolio_PagePortfolio_CategoriesPortfoliocategoryslicetype;
+  portfolioCategory: PortfolioCategorySliceTypeFragment;
 };
 
 export const PortfolioCategory = ({
