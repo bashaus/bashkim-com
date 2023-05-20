@@ -29,7 +29,9 @@ export async function PortfolioPage() {
     throw new NotFoundError();
   }
 
-  return <PortfolioPageLockup portfolioPage={portfolioPage} />;
+  return (
+    <PortfolioPageLockup portfolioPageResult={result.data.portfolioPage} />
+  );
 }
 
 export default PortfolioPage;

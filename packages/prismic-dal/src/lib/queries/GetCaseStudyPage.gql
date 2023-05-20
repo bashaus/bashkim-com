@@ -6,59 +6,7 @@ query GetCaseStudyPage($caseStudySlug: String) {
   caseStudyPage: allCase_studys(uid: $caseStudySlug) {
     edges {
       node {
-        _meta {
-          uid
-        }
-        meta_title
-        meta_keywords
-        meta_description
-        image_icon
-        image_header_desktop
-        image_header_mobile
-        info_brief
-        info_strategy
-        info_implementation
-        info_deliverables {
-          ... on Case_studyInfo_deliverables {
-            info_deliverable_name
-            info_deliverable_link {
-              ...ExternalLinkFragment
-            }
-          }
-        }
-        info_client
-        info_agency
-        info_role
-        info_institution
-        info_degree
-        info_markets {
-          info_market
-        }
-        info_target_audiences {
-          info_target_audience_name
-        }
-        info_launch_date
-        info_decommission_date
-        info_outcomes {
-          info_outcome
-        }
-        info_technologies {
-          info_technology {
-            ... on Technology {
-              technology_name
-              technology_icon
-            }
-          }
-        }
-        accolades {
-          ...AccoladeSliceType
-        }
-        collaborators {
-          ...CollaboratorSliceType
-        }
-        exhibitions {
-          ...ExhibitionSliceType
-        }
+        ...CaseStudyPageModel
       }
     }
   }

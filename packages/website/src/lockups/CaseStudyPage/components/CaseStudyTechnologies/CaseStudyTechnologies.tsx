@@ -1,10 +1,13 @@
-import type { Case_Study, Technology } from "@bashkim-com/prismic-dal";
+import type {
+  CaseStudyPageModelFragment,
+  Technology,
+} from "@bashkim-com/prismic-dal";
 import Image from "next/image";
 
 import styles from "./CaseStudyTechnologies.module.scss";
 
 export type CaseStudyTechnologiesProps = {
-  caseStudy: Case_Study;
+  caseStudy: CaseStudyPageModelFragment;
 };
 
 export const CaseStudyTechnologies = ({

@@ -6,7 +6,7 @@ import {
   PageHeaderPartial,
   SubtitlePartial,
 } from "@bashkim-com/design-system";
-import { Portfolio_Page } from "@bashkim-com/prismic-dal";
+import { GetPortfolioPageQuery } from "@bashkim-com/prismic-dal";
 
 import { MenuButtonHome } from "../../components/MenuButtonHome/MenuButtonHome";
 import { Page } from "../../components/Page/Page";
@@ -15,10 +15,17 @@ import { PortfolioCategory } from "./components/PortfolioCategory/PortfolioCateg
 import { PortfolioFeaturedCaseStudies } from "./components/PortfolioFeaturedCaseStudies/PortfolioFeaturedCaseStudies";
 
 type PortfolioPageProps = {
-  portfolioPage: Portfolio_Page;
+  portfolioPageResult: GetPortfolioPageQuery["portfolioPage"];
 };
 
-export const PortfolioPageLockup = ({ portfolioPage }: PortfolioPageProps) => {
+export const PortfolioPageLockup = ({
+  portfolioPageResult,
+}: PortfolioPageProps) => {
+  const portfolioPage = portfolioPageResult.edges?.[0]?.node;
+  if (!portfolioPage) {
+    return null;
+  }
+
   const {
     meta_title: metaTitle,
     meta_description: metaDescription,
@@ -46,15 +53,11 @@ export const PortfolioPageLockup = ({ portfolioPage }: PortfolioPageProps) => {
         </Group>
       )}
 
-      {portfolioCategories && (
-        <>
-          {portfolioCategories.map((portfolioCategory) => (
-            <Group key={JSON.stringify(portfolioCategory)}>
-              <PortfolioCategory portfolioCategory={portfolioCategory} />
-            </Group>
-          ))}
-        </>
-      )}
+      {portfolioCategories?.map((portfolioCategory) => (
+        <Group key={JSON.stringify(portfolioCategory)}>
+          <PortfolioCategory portfolioCategory={portfolioCategory} />
+        </Group>
+      ))}
     </Page>
   );
 };

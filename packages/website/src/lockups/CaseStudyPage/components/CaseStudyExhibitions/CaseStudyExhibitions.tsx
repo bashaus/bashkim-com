@@ -1,10 +1,10 @@
 import { ExhibitionSlice, SubtitlePartial } from "@bashkim-com/design-system";
-import type { Case_StudyExhibitionsExhibitionslicetype } from "@bashkim-com/prismic-dal";
+import type { ExhibitionSliceTypeFragment } from "@bashkim-com/prismic-dal";
 
 import styles from "./CaseStudyExhibitions.module.scss";
 
 export type CaseStudyExhibitionsProps = {
-  slices: Array<Case_StudyExhibitionsExhibitionslicetype>;
+  slices: Array<ExhibitionSliceTypeFragment>;
 };
 
 export const CaseStudyExhibitions = ({

@@ -1,7 +1,7 @@
 import { RichTextFormatter, Tile } from "@bashkim-com/design-system";
 import type {
   Case_Study,
-  Portfolio_PageFeatured,
+  PortfolioPageFeaturedModelFragment,
 } from "@bashkim-com/prismic-dal";
 import { PrismicRichText } from "@bashkim-com/prismic-helpers";
 import Link from "next/link";
@@ -9,7 +9,7 @@ import Link from "next/link";
 import styles from "./PortfolioFeaturedCaseStudies.module.scss";
 
 export type PortfolioFeaturedCaseStudiesProps = {
-  featured: Array<Portfolio_PageFeatured>;
+  featured: Array<PortfolioPageFeaturedModelFragment>;
 };
 
 export const PortfolioFeaturedCaseStudies = ({

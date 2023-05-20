@@ -5,14 +5,14 @@ import {
   SubtitlePartial,
   TitlePartial,
 } from "@bashkim-com/design-system";
-import type { Case_Study } from "@bashkim-com/prismic-dal";
+import type { CaseStudyPageModelFragment } from "@bashkim-com/prismic-dal";
 
 import { CaseStudyDetails } from "../CaseStudyDetails/CaseStudyDetails";
 import { CaseStudyTechnologies } from "../CaseStudyTechnologies/CaseStudyTechnologies";
 import styles from "./CaseStudyHeader.module.scss";
 
 export type CaseStudyHeaderProps = {
-  caseStudy: Case_Study;
+  caseStudy: CaseStudyPageModelFragment;
 };
 
 export const CaseStudyHeader = ({ caseStudy }: CaseStudyHeaderProps) => (

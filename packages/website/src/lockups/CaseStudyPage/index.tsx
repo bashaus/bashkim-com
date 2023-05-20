@@ -1,7 +1,10 @@
 "use client";
 
 import { Group, GroupDesign } from "@bashkim-com/design-system";
-import { Case_Study } from "@bashkim-com/prismic-dal";
+import {
+  CaseStudyBodyModelFragment,
+  CaseStudyPageModelFragment,
+} from "@bashkim-com/prismic-dal";
 
 import { MenuButtonPortfolio } from "../../components/MenuButtonPortfolio/MenuButtonPortfolio";
 import { Page } from "../../components/Page/Page";
@@ -12,8 +15,8 @@ import { CaseStudyExhibitions } from "./components/CaseStudyExhibitions/CaseStud
 import { CaseStudyHeader } from "./components/CaseStudyHeader/CaseStudyHeader";
 
 export type CaseStudyPageProps = {
-  caseStudyPage: Case_Study;
-  caseStudyBody: Case_Study;
+  caseStudyPage: CaseStudyPageModelFragment;
+  caseStudyBody: CaseStudyBodyModelFragment;
 };
 
 export const CaseStudyPageLockup = ({

@@ -1,4 +1,3 @@
-import { Case_Study } from "@bashkim-com/prismic-dal";
 import { Metadata } from "next";
 
 import { generateCanonical } from "../../../libraries/app/generateCanonical";
@@ -50,10 +49,14 @@ export async function CaseStudyPage({ params }) {
   const caseStudyPage = caseStudyPageResult.data.caseStudyPage.edges?.[0]?.node;
   const caseStudyBody = caseStudyBodyResult.data.caseStudyBody.edges?.[0]?.node;
 
+  if (!caseStudyPage || !caseStudyBody) {
+    throw new NotFoundError();
+  }
+
   return (
     <CaseStudyPageLockup
-      caseStudyPage={caseStudyPage as Case_Study}
-      caseStudyBody={caseStudyBody as Case_Study}
+      caseStudyPage={caseStudyPage}
+      caseStudyBody={caseStudyBody}
     />
   );
 }

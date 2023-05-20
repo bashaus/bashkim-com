@@ -14,19 +14,7 @@ query GetCaseStudyBody($caseStudySlug: String) {
   caseStudyBody: allCase_studys(uid: $caseStudySlug) {
     edges {
       node {
-        body {
-          ...CaptionedImageSliceType
-          ...CaptionedMagazineSliceType
-          ...CaptionedScreenshotsSliceType
-          ...CaptionedVideoSliceType
-          ...CarouselImagesSliceType
-          ...CarouselPhonesSliceType
-          ...FullTextSliceType
-          ...GridEmbedSliceType
-          ...GridVideoSliceType
-          ...NewspaperSliceType
-          ...SubtitleSliceType
-        }
+        ...CaseStudyBodyModel
       }
     }
   }
