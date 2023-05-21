@@ -1,4 +1,4 @@
-resource "aws_s3_bucket_website_configuration" "bucket" {
+resource "aws_s3_bucket_website_configuration" "bucket_website_configuration" {
   bucket = aws_s3_bucket.bucket.bucket
 
   index_document {
@@ -11,7 +11,7 @@ resource "aws_s3_bucket_website_configuration" "bucket" {
 
   routing_rules = jsonencode(
     yamldecode(
-      file("${path.module}/bucket_website_configuration.routing_rules.yml")
+      file("${path.module}/resource.bucket_website_configuration.routing_rules.yml")
     )
   )
 }

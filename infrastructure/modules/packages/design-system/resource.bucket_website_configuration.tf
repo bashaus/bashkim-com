@@ -1,4 +1,4 @@
-resource "aws_s3_bucket_website_configuration" "bucket" {
+resource "aws_s3_bucket_website_configuration" "bucket_website_configuration" {
   bucket = aws_s3_bucket.bucket.bucket
 
   index_document {

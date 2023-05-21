@@ -10,7 +10,7 @@ resource "aws_cloudfront_distribution" "distribution" {
     connection_attempts = 3
     connection_timeout  = 10
     origin_id           = "WebsiteBucketOrigin"
-    domain_name         = aws_s3_bucket_website_configuration.bucket.website_endpoint
+    domain_name         = aws_s3_bucket_website_configuration.bucket_website_configuration.website_endpoint
 
     custom_origin_config {
       http_port              = 80

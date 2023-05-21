@@ -1,4 +1,4 @@
-resource "aws_route53_record" "google_domainkey" {
+resource "aws_route53_record" "record_google_domainkey" {
   zone_id = aws_route53_zone.zone.id
   name    = "google._domainkey.${var.domain_name}."
   type    = "TXT"
