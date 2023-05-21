@@ -12,7 +12,7 @@ export const generateStaticParams = async () => {
   }));
 };
 
-export async function generateMetadata({ params }): Promise<Metadata> {
+export const generateMetadata = async ({ params }): Promise<Metadata> => {
   const { caseStudySlug } = params;
 
   const result = await getPrismicPage(caseStudySlug);
@@ -29,9 +29,9 @@ export async function generateMetadata({ params }): Promise<Metadata> {
       canonical: generateCanonical(`/portfolio/${caseStudySlug}/`),
     },
   };
-}
+};
 
-export async function CaseStudyPage({ params }) {
+const CaseStudyPage = async ({ params }) => {
   const { caseStudySlug } = params;
 
   const caseStudyPagePromise = getPrismicPage(caseStudySlug);
@@ -59,6 +59,6 @@ export async function CaseStudyPage({ params }) {
       caseStudyBody={caseStudyBody}
     />
   );
-}
+};
 
 export default CaseStudyPage;

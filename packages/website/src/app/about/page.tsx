@@ -10,6 +10,6 @@ export const metadata = {
   },
 };
 
-export default function AboutPage() {
-  return <AboutPageLockup />;
-}
+const AboutPage = () => <AboutPageLockup />;
+
+export default AboutPage;

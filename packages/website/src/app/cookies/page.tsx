@@ -9,6 +9,6 @@ export const metadata = {
   },
 };
 
-export default function CookiesPage() {
-  return <CookiesPageLockup />;
-}
+const CookiesPage = () => <CookiesPageLockup />;
+
+export default CookiesPage;

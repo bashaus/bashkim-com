@@ -3,7 +3,7 @@ import {
   PrismicSecretUndefinedError,
 } from "./errors";
 
-export function validatePrismicSecret(secret: string): boolean {
+export const validatePrismicSecret = (secret: string): boolean => {
   const { APP_WEBHOOKS_PRISMIC_SECRET_KEY } = process.env;
 
   if (!APP_WEBHOOKS_PRISMIC_SECRET_KEY) {
@@ -15,4 +15,4 @@ export function validatePrismicSecret(secret: string): boolean {
   }
 
   return true;
-}
+};

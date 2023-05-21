@@ -5,7 +5,7 @@ import { NotFoundError } from "../../libraries/next/errors/NotFoundError";
 import { PortfolioPageLockup } from "../../lockups/PortfolioPage";
 import { getPrismicPage } from "./queries";
 
-export async function generateMetadata(): Promise<Metadata> {
+export const generateMetadata = async (): Promise<Metadata> => {
   const result = await getPrismicPage();
   const portfolioPage = result.data.portfolioPage.edges?.[0]?.node;
   if (!portfolioPage) {
@@ -20,9 +20,9 @@ export async function generateMetadata(): Promise<Metadata> {
       canonical: generateCanonical("/portfolio/"),
     },
   };
-}
+};
 
-export async function PortfolioPage() {
+const PortfolioPage = async () => {
   const result = await getPrismicPage();
   const portfolioPage = result.data.portfolioPage.edges?.[0]?.node;
   if (!portfolioPage) {
@@ -32,6 +32,6 @@ export async function PortfolioPage() {
   return (
     <PortfolioPageLockup portfolioPageResult={result.data.portfolioPage} />
   );
-}
+};
 
 export default PortfolioPage;

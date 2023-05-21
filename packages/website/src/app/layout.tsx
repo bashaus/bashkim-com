@@ -11,14 +11,12 @@ export const metadata = {
   },
 };
 
-function MyLayout({ children }: PropsWithChildren) {
-  return (
-    <html lang="en" dir="ltr">
-      <body>
-        <RootLayout>{children}</RootLayout>
-      </body>
-    </html>
-  );
-}
+const MyLayout = ({ children }: PropsWithChildren) => (
+  <html lang="en" dir="ltr">
+    <body>
+      <RootLayout>{children}</RootLayout>
+    </body>
+  </html>
+);
 
 export default MyLayout;

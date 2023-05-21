@@ -3,7 +3,7 @@
  * when you want to return a 404 error
  *
  * @example
- * Component.getInitialProps = function (context: NextPageContext) {
+ * Component.getInitialProps = (context: NextPageContext) => {
  *  if (error) {
  *    throw new NotFoundError();
  *  }
