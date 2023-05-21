@@ -8,7 +8,7 @@ import { getPrismicBody, getPrismicPage, getPrismicSlugs } from "./queries";
 export const generateStaticParams = async () => {
   const caseStudiesResult = await getPrismicSlugs();
   return caseStudiesResult.data.caseStudies.edges?.map((caseStudy) => ({
-    params: { caseStudySlug: caseStudy?.node._meta.uid },
+    caseStudySlug: caseStudy?.node._meta.uid,
   }));
 };
 
