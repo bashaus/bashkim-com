@@ -28,8 +28,8 @@ export const ModalContent = ({
     if (isOpen) {
       gsap
         .timeline({
-          onStart: () => onShowStart && onShowStart(),
-          onComplete: () => onShowComplete && onShowComplete(),
+          onStart: () => onShowStart?.(),
+          onComplete: () => onShowComplete?.(),
         })
         .set(divRef.current, { autoAlpha: 0 })
         .to(divRef.current, {
@@ -42,8 +42,8 @@ export const ModalContent = ({
     if (!isOpen) {
       gsap
         .timeline({
-          onStart: () => onHideStart && onHideStart(),
-          onComplete: () => onHideComplete && onHideComplete(),
+          onStart: () => onHideStart?.(),
+          onComplete: () => onHideComplete?.(),
         })
         .set(divRef.current, { autoAlpha: 1 })
         .to(divRef.current, {

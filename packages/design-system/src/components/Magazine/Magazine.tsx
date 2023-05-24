@@ -86,7 +86,7 @@ export const Magazine = ({
   );
 
   const handleTurnInitialize = useCallback(
-    (): void => onInitialize && onInitialize(),
+    (): void => onInitialize?.(),
     [onInitialize]
   );
 

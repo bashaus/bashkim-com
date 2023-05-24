@@ -29,8 +29,8 @@ export const ModalOverlay = ({
     if (isOpen) {
       gsap
         .timeline({
-          onStart: () => onShowStart && onShowStart(),
-          onComplete: () => onShowComplete && onShowComplete(),
+          onStart: () => onShowStart?.(),
+          onComplete: () => onShowComplete?.(),
         })
         .set(svgRef.current, {
           attr: { d: "M 0 100 V 100 Q 50 100 100 100 V 100 z" },
@@ -54,8 +54,8 @@ export const ModalOverlay = ({
     if (!isOpen) {
       gsap
         .timeline({
-          onStart: () => onHideStart && onHideStart(),
-          onComplete: () => onHideComplete && onHideComplete(),
+          onStart: () => onHideStart?.(),
+          onComplete: () => onHideComplete?.(),
         })
         .set(svgRef.current, {
           attr: { d: "M 0 100 V 0 Q 50 0 100 0 V 100 z" },

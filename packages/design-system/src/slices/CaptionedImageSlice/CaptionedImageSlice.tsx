@@ -22,8 +22,7 @@ export const CaptionedImageSlice = ({ slice }: CaptionedImageSliceProps) => {
   return (
     <CaptionedPartial
       figure={
-        image &&
-        image.url && (
+        image?.url && (
           <img
             src={image.url}
             alt={image.alt ?? ""}
