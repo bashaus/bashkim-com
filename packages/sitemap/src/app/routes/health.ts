@@ -3,13 +3,15 @@ import { Response } from "ts-json-api";
 
 export const router = Router();
 
-router.get("/", async (_req, res) => {
-  const response: Response = {
-    jsonapi: {
-      version: "1.1",
-    },
-  };
+router.get("/", (_req, res) => {
+  (async () => {
+    const response: Response = {
+      jsonapi: {
+        version: "1.1",
+      },
+    };
 
-  res.status(200);
-  res.json(response);
+    res.status(200);
+    res.json(response);
+  })();
 });

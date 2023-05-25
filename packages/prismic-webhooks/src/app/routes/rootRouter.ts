@@ -18,30 +18,32 @@ export const router = Router();
 
 router.post(
   "/publish",
-  async (
+  (
     req: Request<unknown, PrismicResponseBody, PrismicRequestBody>,
     res: Response<PrismicResponseBody>,
     next: NextFunction
   ) => {
-    const { type, secret } = req.body;
+    (async () => {
+      const { type, secret } = req.body;
 
-    try {
-      validatePrismicSecret(secret);
+      try {
+        validatePrismicSecret(secret);
 
-      if (type === "api-update") {
-        await triggerCircleCiPipeline();
+        if (type === "api-update") {
+          await triggerCircleCiPipeline();
+        }
+
+        res.send({ ok: true });
+      } catch (err) {
+        if (err instanceof PrismicError) {
+          console.error(err);
+          next(err);
+          return;
+        }
+
+        console.error("Unhandled error", err);
+        next(new UnhandledHttpError());
       }
-
-      res.send({ ok: true });
-    } catch (err) {
-      if (err instanceof PrismicError) {
-        console.error(err);
-        next(err);
-        return;
-      }
-
-      console.error("Unhandled error", err);
-      next(new UnhandledHttpError());
-    }
+    })();
   }
 );
