@@ -144,7 +144,7 @@
     "typescript": "^5.0.4",
     "url-loader": "^4.1.1",
     "utility-types": "^3.10.0",
-    "webpack": "^5.83.1",
+    "webpack": "^5.84.0",
     "webpack-merge": "^5.9.0"
   }
 }
