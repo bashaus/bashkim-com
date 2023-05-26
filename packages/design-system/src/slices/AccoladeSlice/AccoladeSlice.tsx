@@ -6,7 +6,7 @@ import {
 } from "@bashkim-com/prismic-helpers";
 import { Link } from "prismic-reactjs";
 
-import { ReactComponent as TrophyVector } from "../../assets/vectors/trophy.svg";
+import TrophyVector from "../../assets/vectors/trophy.svg";
 import { DateFormatter } from "../../formatters/DateFormatter/DateFormatter";
 import { RichTextFormatter } from "../../formatters/RichTextFormatter/RichTextFormatter";
 import styles from "./AccoladeSlice.module.scss";

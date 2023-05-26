@@ -1,33 +1,24 @@
 import type { StorybookConfig } from "@storybook/types";
 
-import { rootMain } from "../../../.storybook/main";
-
 const config: StorybookConfig = {
-  ...rootMain,
+  addons: ["@storybook/addon-a11y", "@storybook/addon-essentials"],
 
   core: {
-    ...rootMain.core,
-    builder: "webpack5",
+    disableTelemetry: true,
+    enableCrashReports: false,
+  },
+
+  framework: {
+    name: "@storybook/nextjs",
+    options: {},
   },
 
   stories: [
-    ...rootMain.stories,
     "../src/components/**/*.stories.tsx",
     "../src/formatters/**/*.stories.tsx",
     "../src/layout/**/*.stories.tsx",
     "../src/partials/**/*.stories.tsx",
     "../src/slices/**/*.stories.tsx",
-  ],
-
-  framework: {
-    name: "@storybook/react-webpack5",
-    options: {},
-  },
-
-  addons: [
-    ...(rootMain.addons || []),
-    "@storybook/addon-essentials",
-    "@nx/react/plugins/storybook",
   ],
 };
 

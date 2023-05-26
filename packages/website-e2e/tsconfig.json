@@ -1,8 +1,8 @@
 {
-  "extends": "../../tsconfig.base.json",
+  "extends": "@bashkim-com/tsconfig/tsconfig.base.json",
   "compilerOptions": {
     "sourceMap": false,
-    "outDir": "../../dist/out-tsc",
+    "rootDir": "./src",
     "allowJs": true,
     "types": ["cypress", "node"]
   },

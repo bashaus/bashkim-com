@@ -1,10 +1,7 @@
 {
-  "extends": "../../tsconfig.base.json",
+  "extends": "@bashkim-com/tsconfig/tsconfig.base.json",
   "files": [],
   "include": [],
-  "compilerOptions": {
-    "esModuleInterop": true
-  },
   "references": [
     {
       "path": "./tsconfig.app.json"

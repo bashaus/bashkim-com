@@ -19,7 +19,7 @@ export const CaseStudyTechnologies = ({
 
   return (
     <>
-      <h3 className={styles.Heading}>Key technologies</h3>
+      <h3 className={styles["Heading"]}>Key technologies</h3>
 
       <ul className={styles["Technologies"]}>
         {caseStudy.info_technologies.map((info_technology) => {

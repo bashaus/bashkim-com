@@ -1,10 +1,7 @@
 //@ts-check
 
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const { withNx } = require("@nx/next/plugins/with-nx");
-
 /**
- * @type {import('@nx/next/plugins/with-nx').WithNxOptions}
+ * @type {import('next').NextConfig}
  **/
 const nextConfig = {
   experimental: {
@@ -13,13 +10,24 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  nx: {
-    // Set this to true if you would like to to use SVGR
-    // See: https://github.com/gregberge/svgr
-    svgr: true,
-  },
   output: "export",
   trailingSlash: true,
+  reactStrictMode: true,
+  transpilePackages: [
+    "@bashkim-com/design-system",
+    "@bashkim-com/prismic-dal",
+    "@bashkim-com/style-guide",
+    "@bashkim-com/prismic-helpers",
+  ],
+  webpack(config) {
+    config.module.rules.push({
+      test: /\.svg$/i,
+      issuer: /\.[jt]sx?$/,
+      use: ["@svgr/webpack"],
+    });
+
+    return config;
+  },
 };
 
-module.exports = withNx(nextConfig);
+module.exports = nextConfig;

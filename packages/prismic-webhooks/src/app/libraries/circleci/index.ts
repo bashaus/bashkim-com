@@ -2,12 +2,12 @@ import fetch from "node-fetch";
 
 export class CircleCiApiKeyUndefinedError extends Error {
   statusCode = 500;
-  message = "Circle CI API Key undefined";
+  override message = "Circle CI API Key undefined";
 }
 
 export class CircleCiProjectSlugUndefinedError extends Error {
   statusCode = 500;
-  message = "Circle CI Project Slug undefined";
+  override message = "Circle CI Project Slug undefined";
 }
 
 export class CircleCiTriggerPipelineError extends Error {}

@@ -1,7 +1,6 @@
 /* eslint-disable */
 export default {
   displayName: "xray-lambda",
-  preset: "../../jest.preset.js",
   globals: {},
   testEnvironment: "node",
   transform: {

@@ -5,8 +5,8 @@ export type UrlType = {
   url: {
     loc: string;
     lastmod: string;
-    changefreq: string;
-    priority: string;
+    changefreq: string | undefined;
+    priority: string | undefined;
   };
 };
 

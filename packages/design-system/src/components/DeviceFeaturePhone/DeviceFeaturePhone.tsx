@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-import { ReactComponent as DeviceVector } from "../../assets/vectors/devices/feature-phone.svg";
+import DeviceVector from "../../assets/vectors/devices/feature-phone.svg";
 import { RichTextFormatter } from "../../formatters/RichTextFormatter/RichTextFormatter";
 import styles from "./DeviceFeaturePhone.module.scss";
 

@@ -85,7 +85,7 @@ export const AboutEducation = () => (
 
       <SplitItemPartial backgroundImage={QutGardensPointImage.src}>
         <div>
-          <img className={styles.Logo} alt="" src={QutLogoImage.src} />
+          <img className={styles["Logo"]} alt="" src={QutLogoImage.src} />
         </div>
       </SplitItemPartial>
     </SplitPartial>

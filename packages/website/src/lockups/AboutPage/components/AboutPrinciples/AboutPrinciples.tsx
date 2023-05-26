@@ -4,14 +4,14 @@ import {
   SubtitlePartial,
 } from "@bashkim-com/design-system";
 
-import { ReactComponent as EthicallyVector } from "../../assets/principles/ethically.svg";
-import { ReactComponent as MaintainableVector } from "../../assets/principles/maintainable.svg";
-import { ReactComponent as OnTimeVector } from "../../assets/principles/on-time.svg";
-import { ReactComponent as RobustVector } from "../../assets/principles/robust.svg";
-import { ReactComponent as SecurelyVector } from "../../assets/principles/securely.svg";
-import { ReactComponent as ToSatisfactionVector } from "../../assets/principles/to-satisfaction.svg";
-import { ReactComponent as ToSpecificationVector } from "../../assets/principles/to-specification.svg";
-import { ReactComponent as WithinBudgetVector } from "../../assets/principles/within-budget.svg";
+import EthicallyVector from "../../assets/principles/ethically.svg";
+import MaintainableVector from "../../assets/principles/maintainable.svg";
+import OnTimeVector from "../../assets/principles/on-time.svg";
+import RobustVector from "../../assets/principles/robust.svg";
+import SecurelyVector from "../../assets/principles/securely.svg";
+import ToSatisfactionVector from "../../assets/principles/to-satisfaction.svg";
+import ToSpecificationVector from "../../assets/principles/to-specification.svg";
+import WithinBudgetVector from "../../assets/principles/within-budget.svg";
 import styles from "./AboutPrinciples.module.scss";
 
 export const AboutPrinciples = () => (

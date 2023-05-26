@@ -1,6 +1,5 @@
 {
   "recommendations": [
-    "circleci.circleci",
     "dbaeumer.vscode-eslint",
     "editorconfig.editorconfig",
     "esbenp.prettier-vscode",
@@ -10,7 +9,6 @@
     "jock.svg",
     "mhutchie.git-graph",
     "mikestead.dotenv",
-    "nrwl.angular-console",
     "stylelint.vscode-stylelint",
     "wix.vscode-import-cost"
   ]

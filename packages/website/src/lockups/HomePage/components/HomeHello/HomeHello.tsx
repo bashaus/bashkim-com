@@ -1,8 +1,8 @@
 import { PageHeaderPartial } from "@bashkim-com/design-system";
 import Link from "next/link";
 
-import { ReactComponent as PortfolioVector } from "../../../../assets/vectors/icons/portfolio.svg";
-import { ReactComponent as GitHubVector } from "../../../../assets/vectors/social/github.svg";
+import PortfolioVector from "../../../../assets/vectors/icons/portfolio.svg";
+import GitHubVector from "../../../../assets/vectors/social/github.svg";
 import BackgroundImage from "../../assets/background-image.jpg";
 import styles from "./HomeHello.module.scss";
 

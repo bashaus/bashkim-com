@@ -10,7 +10,7 @@ export const AboutPageHeader = () => (
     imageDesktop={HeaderDesktopImage.src}
   >
     <div className={styles["AboutPageHeader"]}>
-      <img className={styles.HeaderImage} src={PhotoImage.src} />
+      <img className={styles["HeaderImage"]} src={PhotoImage.src} />
       <h1>Bash</h1>
     </div>
   </PageHeaderPartial>

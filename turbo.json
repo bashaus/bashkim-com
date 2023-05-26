@@ -1,0 +1,27 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": ["**/.env"],
+  "pipeline": {
+    "build": {
+      "dependsOn": ["codegen", "^build"],
+      "outputs": [".next/**", "!.next/cache/**"]
+    },
+    "lint": {},
+    "codegen": {
+      "dependsOn": ["^codegen"]
+    },
+    "dev": {
+      "dependsOn": ["codegen"],
+      "cache": false,
+      "persistent": true
+    },
+    "storybook:build": {
+      "dependsOn": ["codegen"],
+      "outputs": ["storybook-static"]
+    },
+    "storybook:dev": {
+      "cache": false,
+      "persistent": true
+    }
+  }
+}

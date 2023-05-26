@@ -54,14 +54,14 @@ provider:
 
 functions:
   Sitemap:
-    handler: dist/packages/sitemap/main.handler
+    handler: packages/sitemap/dist/lambda.handler
     environment:
       APP_SITEMAP_BASE_HREF: ${self:custom.app.sitemap.baseHref}
     jetpack:
       roots:
-        - "dist/packages/sitemap"
+        - "packages/sitemap"
       preInclude:
-        - "dist/packages/sitemap/**"
+        - "packages/sitemap/dist/**"
     events:
       - http:
           method: GET
@@ -76,16 +76,16 @@ functions:
           method: ANY
           path: /.well-known/sitemap/{any+}
   PrismicWebhooks:
-    handler: dist/packages/prismic-webhooks/main.handler
+    handler: packages/prismic-webhooks/dist/lambda.handler
     environment:
       APP_WEBHOOKS_CIRCLE_API_KEY: ${self:custom.app.prismic-webhooks.circleApiKey}
       APP_WEBHOOKS_CIRCLE_PROJECT_SLUG: ${self:custom.app.prismic-webhooks.circleProjectSlug}
       APP_WEBHOOKS_PRISMIC_SECRET_KEY: ${self:custom.app.prismic-webhooks.prismicSecretKey}
     jetpack:
       roots:
-        - "dist/packages/prismic-webhooks"
+        - "packages/prismic-webhooks"
       preInclude:
-        - "dist/packages/prismic-webhooks/**"
+        - "packages/prismic-webhooks/dist/**"
     events:
       - http:
           method: ANY

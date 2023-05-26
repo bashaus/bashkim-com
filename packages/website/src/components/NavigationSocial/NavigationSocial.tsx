@@ -1,9 +1,9 @@
 import { NavigationGroup, NavigationItem } from "@bashkim-com/design-system";
 
-import { ReactComponent as GitHubVector } from "../../assets/vectors/social/github.svg";
-import { ReactComponent as LinkedInVector } from "../../assets/vectors/social/linked-in.svg";
-import { ReactComponent as MediumVector } from "../../assets/vectors/social/medium.svg";
-import { ReactComponent as StackOverflowVector } from "../../assets/vectors/social/stack-overflow.svg";
+import GitHubVector from "../../assets/vectors/social/github.svg";
+import LinkedInVector from "../../assets/vectors/social/linked-in.svg";
+import MediumVector from "../../assets/vectors/social/medium.svg";
+import StackOverflowVector from "../../assets/vectors/social/stack-overflow.svg";
 import styles from "./NavigationSocial.module.scss";
 
 export const NavigationSocial = () => (

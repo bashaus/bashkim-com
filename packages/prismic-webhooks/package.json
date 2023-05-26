@@ -1,0 +1,23 @@
+{
+  "name": "@bashkim-com/prismic-webhooks",
+  "version": "0.0.0",
+  "scripts": {
+    "build": "tsc --project tsconfig.app.json",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@bashkim-com/xray-lambda": "*",
+    "@vendia/serverless-express": "^4.10.4",
+    "express": "^4.18.2",
+    "node-fetch": "^2.6.11"
+  },
+  "devDependencies": {
+    "@bashkim-com/tsconfig": "*",
+    "@swc/jest": "^0.2.26",
+    "@types/express": "4.17.17",
+    "@types/jest": "29.5.1",
+    "jest": "29.5.0",
+    "jest-environment-jsdom": "29.5.0",
+    "jest-junit": "^16.0.0"
+  }
+}

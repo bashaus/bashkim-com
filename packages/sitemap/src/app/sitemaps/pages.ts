@@ -10,36 +10,37 @@ import type { UrlType } from "../templates/sitemap";
 export const PagesSitemap = async () => {
   const urlset: Array<UrlType> = [];
   const now = new Date().toISOString();
-  const baseHref = process.env.APP_SITEMAP_BASE_HREF;
+  const { APP_SITEMAP_BASE_HREF: baseHref } = process.env;
 
-  const pageQuery = prismicClient.query<GetSitemapPagesQuery>({
+  const pagesResult = await prismicClient.query<GetSitemapPagesQuery>({
     query: GetSitemapPagesDocument,
   });
 
-  const [pagesResult] = await Promise.all([pageQuery]);
+  const homePage = pagesResult.data.homePage.edges?.[0]?.node;
+  if (homePage) {
+    urlset.push({
+      url: {
+        loc: `${baseHref}/`,
+        lastmod: PrismicDate(homePage._meta.lastPublicationDate).toISOString(),
+        changefreq: homePage.sitemap_changefreq ?? undefined,
+        priority: homePage.sitemap_priority ?? undefined,
+      },
+    });
+  }
 
-  const { node: homePage } = pagesResult.data.homePage.edges[0];
-  const { node: portfolioPage } = pagesResult.data.portfolioPage.edges[0];
-
-  urlset.push({
-    url: {
-      loc: `${baseHref}/`,
-      lastmod: PrismicDate(homePage._meta.lastPublicationDate).toISOString(),
-      changefreq: homePage.sitemap_changefreq,
-      priority: homePage.sitemap_priority,
-    },
-  });
-
-  urlset.push({
-    url: {
-      loc: `${baseHref}/portfolio/`,
-      lastmod: PrismicDate(
-        portfolioPage._meta.lastPublicationDate
-      ).toISOString(),
-      changefreq: portfolioPage.sitemap_changefreq,
-      priority: portfolioPage.sitemap_priority,
-    },
-  });
+  const portfolioPage = pagesResult.data.portfolioPage.edges?.[0]?.node;
+  if (portfolioPage) {
+    urlset.push({
+      url: {
+        loc: `${baseHref}/portfolio/`,
+        lastmod: PrismicDate(
+          portfolioPage._meta.lastPublicationDate
+        ).toISOString(),
+        changefreq: portfolioPage.sitemap_changefreq ?? undefined,
+        priority: portfolioPage.sitemap_priority ?? undefined,
+      },
+    });
+  }
 
   urlset.push({
     url: {

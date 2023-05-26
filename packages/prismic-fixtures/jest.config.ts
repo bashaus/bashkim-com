@@ -1,7 +1,6 @@
 /* eslint-disable */
 export default {
   displayName: "prismic-fixtures",
-  preset: "../../jest.preset.js",
   globals: {},
   testEnvironment: "node",
   transform: {

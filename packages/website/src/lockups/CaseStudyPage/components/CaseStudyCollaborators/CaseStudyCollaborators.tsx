@@ -32,7 +32,7 @@ export const CaseStudyCollaborators = ({
           {myRole}
         </li>
 
-        {slices.map((slice, i) => (
+        {slices.map((slice) => (
           <li
             className={styles["CaseStudyCollaborator"]}
             key={JSON.stringify(slice)}

@@ -1,9 +1,8 @@
 {
-  "extends": "../../tsconfig.base.json",
+  "extends": "@bashkim-com/tsconfig/tsconfig.base.json",
   "files": [],
   "include": [],
   "compilerOptions": {
-    "esModuleInterop": true,
     "jsx": "react-jsx"
   },
   "references": [

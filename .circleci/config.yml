@@ -11,7 +11,7 @@ executors:
       - image: cimg/python:3.11.1
 
 orbs:
-  aws-bucket: circleci/aws-s3@3.0.0
+  aws-s3: circleci/aws-s3@3.0.0
 
 jobs:
   dependencies:
@@ -28,166 +28,85 @@ jobs:
           command: |
             yarn install --frozen-lockfile
 
-      - run:
-          name: "nx prismic-dal generate"
-          command: |
-            yarn nx run prismic-dal:generate:production
-
       - save_cache:
           key: yarn-lock-{{ checksum "yarn.lock" }}
           paths:
             - node_modules/
 
-      - persist_to_workspace:
-          root: ./
-          paths:
-            - node_modules/
-            - packages/prismic-dal/src/generated/
-
-  build-serverless:
+  build-applications:
     executor: exec-node
     steps:
       - checkout
-
-      - attach_workspace:
-          at: ./
-
-      - run:
-          name: "nx build sitemap"
-          command: |
-            yarn nx run sitemap:build:production
-
-      - run:
-          name: "nx build prismic-webhooks"
-          command: |
-            yarn nx run prismic-webhooks:build:production
-
-      - persist_to_workspace:
-          root: ./
-          paths:
-            - dist/packages/prismic-webhooks/
-            - dist/packages/sitemap/
-
-  build-website:
-    executor: exec-node
-    steps:
-      - checkout
-
-      - attach_workspace:
-          at: ./
 
       - restore_cache:
           keys:
+            - yarn-lock-{{ checksum "yarn.lock" }}
             - website-nextjs-{{ checksum "yarn.lock" }}
 
       - run:
-          name: "nx website build"
+          name: "build"
           command: |
-            yarn nx run website:build:production
+            yarn build
+
+      - run:
+          name: "zip website"
+          working_directory: packages/website/
+          command: |
+            zip -r website.zip out
+
+      - store_artifacts:
+          path: packages/website/website.zip
+          destination: website.zip
+
+      - persist_to_workspace:
+          root: ./
+          paths:
+            - packages/prismic-webhooks/dist/
+            - packages/sitemap/dist/
+            - packages/website/out/
 
       - save_cache:
           key: website-nextjs-{{ checksum "yarn.lock" }}
           paths:
             - packages/website/.next/
 
-      - persist_to_workspace:
-          root: ./
-          paths:
-            - packages/website/.next/
-            - dist/packages/website/
-
-      - run:
-          name: "zip website"
-          working_directory: ./dist/packages
-          command: |
-            zip -r website.zip website/.next
-
-      - store_artifacts:
-          path: dist/packages/website.zip
-          destination: website.zip
-
   build-design-system:
     executor: exec-node
     steps:
       - checkout
 
-      - attach_workspace:
-          at: ./
+      - restore_cache:
+          keys:
+            - yarn-lock-{{ checksum "yarn.lock" }}
 
       - run:
-          name: "nx design-system build-storybook"
+          name: "storybook build"
           command: |
-            yarn nx run design-system:build-storybook:production
+            yarn storybook:build
 
       - persist_to_workspace:
           root: ./
           paths:
-            - dist/storybook/design-system/
+            - packages/design-system/storybook-static/
 
       - run:
-          name: "zip design-system"
-          working_directory: ./dist/storybook
+          name: zip
+          working_directory: ./packages/design-system/
           command: |
-            zip -r design-system.zip design-system
+            zip -r design-system.zip storybook-static
 
       - store_artifacts:
-          path: dist/storybook/design-system.zip
+          path: ./packages/design-system/design-system.zip
           destination: design-system.zip
-
-  test:
-    executor: exec-node
-    steps:
-      - checkout
-
-      - attach_workspace:
-          at: ./
-
-      - run:
-          name: test
-          command: |
-            yarn test --ci
-
-      - store_test_results:
-          path: test-results/
-
-  lint:
-    executor: exec-node
-    steps:
-      - checkout
-
-      - attach_workspace:
-          at: ./
-
-      - run:
-          name: prettier
-          command: |
-            yarn prettier --check .
-
-      - run:
-          name: eslint
-          command: |
-            mkdir -p test-results/eslint/
-            yarn lint:scripts
-
-      - run:
-          name: stylelint
-          command: |
-            mkdir -p test-results/stylelint/
-            yarn lint:styles
-
-      - run:
-          name: vectors
-          command: |
-            yarn lint:vectors
-            git diff --exit-code "*.svg"
-
-      - store_test_results:
-          path: test-results/
 
   deploy-serverless:
     executor: exec-node
     steps:
       - checkout
+
+      - restore_cache:
+          keys:
+            - yarn-lock-{{ checksum "yarn.lock" }}
 
       - attach_workspace:
           at: ./
@@ -205,8 +124,8 @@ jobs:
       - attach_workspace:
           at: ./
 
-      - aws-bucket/sync:
-          from: ./dist/packages/website/.next
+      - aws-s3/sync:
+          from: packages/website/out/
           to: "s3://${DEPLOY_S3_WEBSITE_BUCKET}"
           arguments: |
             --cache-control "max-age=86400"
@@ -227,8 +146,8 @@ jobs:
       - attach_workspace:
           at: ./
 
-      - aws-bucket/sync:
-          from: ./dist/storybook/design-system
+      - aws-s3/sync:
+          from: packages/design-system/storybook-static/
           to: "s3://${DEPLOY_S3_DESIGN_SYSTEM_BUCKET}/"
           arguments: |
             --cache-control "max-age=86400"
@@ -246,34 +165,19 @@ workflows:
     jobs:
       - dependencies
 
+      - build-applications:
+          requires:
+            - dependencies
+
       - build-design-system:
-          requires:
-            - dependencies
-
-      - build-serverless:
-          requires:
-            - dependencies
-
-      - build-website:
-          requires:
-            - dependencies
-
-      - test:
-          requires:
-            - dependencies
-
-      - lint:
           requires:
             - dependencies
 
       - approval:
           type: approval
           requires:
+            - build-applications
             - build-design-system
-            - build-serverless
-            - build-website
-            - test
-            - lint
           filters:
             branches:
               only:

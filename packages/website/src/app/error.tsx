@@ -10,7 +10,7 @@ type RootErrorProps = {
   reset: () => void;
 };
 
-const RootError = ({ error, reset }: RootErrorProps) => {
+const RootError = ({ error /* , reset */ }: RootErrorProps) => {
   return (
     <Page backButton={MenuButtonHome}>
       <PageHeaderPartial>

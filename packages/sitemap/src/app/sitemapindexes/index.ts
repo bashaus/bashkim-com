@@ -2,7 +2,7 @@ import { SitemapType } from "../templates/sitemapindex";
 
 export const SitemapIndex = async (): Promise<Array<SitemapType>> => {
   const sitemaps: Array<SitemapType> = [];
-  const baseHref = process.env.APP_SITEMAP_BASE_HREF;
+  const { APP_SITEMAP_BASE_HREF: baseHref } = process.env;
 
   sitemaps.push({
     sitemap: {

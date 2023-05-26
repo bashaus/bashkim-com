@@ -1,0 +1,29 @@
+{
+  "name": "@bashkim-com/style-guide",
+  "version": "0.0.0",
+  "exports": {
+    ".": "./src/index.scss",
+    "./colors.scss": "./src/entry/colors.scss",
+    "./fonts.scss": "./src/entry/fonts.scss",
+    "./grid.scss": "./src/entry/grid.scss",
+    "./headings.scss": "./src/entry/headings.scss",
+    "./list.scss": "./src/entry/list.scss",
+    "./media.scss": "./src/entry/media.scss",
+    "./normalize.scss": "./src/entry/normalize.scss",
+    "./utils.scss": "./src/entry/utils.scss"
+  },
+  "main": "./src/index.scss",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "reset-css": "^5.0.1"
+  },
+  "devDependencies": {
+    "@swc/jest": "^0.2.26",
+    "@types/jest": "29.5.1",
+    "jest": "29.5.0",
+    "jest-environment-jsdom": "29.5.0",
+    "jest-junit": "^16.0.0"
+  }
+}

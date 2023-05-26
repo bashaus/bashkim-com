@@ -1,6 +1,6 @@
 import type { Meta } from "@storybook/react";
 
-import { ReactComponent as TrophyVector } from "../../assets/vectors/trophy.svg";
+import TrophyVector from "../../assets/vectors/trophy.svg";
 import { MenuButton as MenuButtonComponent } from "./MenuButton";
 
 export default {

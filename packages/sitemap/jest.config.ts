@@ -1,7 +1,6 @@
 /* eslint-disable */
 export default {
   displayName: "sitemap",
-  preset: "../../jest.preset.js",
   globals: {},
   testEnvironment: "node",
   transform: {
