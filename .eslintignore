@@ -2,5 +2,6 @@
 .terraform/
 coverage/
 dist/
+out/
 node_modules/
 storybook-static/

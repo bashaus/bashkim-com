@@ -14,12 +14,26 @@ module.exports = {
   overrides: [
     {
       files: ["*.{js,jsx,ts,tsx}"],
+      extends: ["plugin:prettier/recommended"],
       rules: {
+        "prettier/prettier": "error",
         "import/first": "error",
         "import/newline-after-import": "error",
         "import/no-duplicates": "error",
         "simple-import-sort/imports": "error",
         "simple-import-sort/exports": "error",
+        "no-restricted-imports": [
+          "error",
+          {
+            paths: [
+              {
+                name: "react",
+                importNames: ["default"],
+                message: "Use named imports for React",
+              },
+            ],
+          },
+        ],
       },
     },
     {
