@@ -1,5 +1,5 @@
 ---
-name: SonarCloud
+name: Test
 
 on:
   push:
@@ -12,8 +12,7 @@ on:
       - reopened
 
 jobs:
-  scan:
-    name: SonarCloud
+  test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository

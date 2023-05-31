@@ -19,7 +19,8 @@
     "lint:vectors": "svgo $(find packages -name '*.svg')",
     "prepare": "husky install",
     "storybook:build": "turbo run storybook:build",
-    "storybook:dev": "turbo run storybook:dev"
+    "storybook:dev": "turbo run storybook:dev",
+    "test": "jest"
   },
   "dependencies": {
     "aws-sdk": "^2.1387.0",

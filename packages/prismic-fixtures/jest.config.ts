@@ -4,12 +4,7 @@ export default {
   globals: {},
   testEnvironment: "node",
   transform: {
-    "^.+\\.[tj]sx?$": [
-      "ts-jest",
-      {
-        tsconfig: "<rootDir>/tsconfig.spec.json",
-      },
-    ],
+    "^.+\\.[tj]sx?$": "@swc/jest",
   },
   moduleFileExtensions: ["ts", "tsx", "js", "jsx"],
 };
