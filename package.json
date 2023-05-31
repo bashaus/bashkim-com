@@ -22,7 +22,7 @@
     "storybook:dev": "turbo run storybook:dev"
   },
   "dependencies": {
-    "aws-sdk": "^2.1384.0",
+    "aws-sdk": "^2.1387.0",
     "core-js": "^3.30.2",
     "graphql": "^16.6.0",
     "graphql-tag": "^2.12.6",
