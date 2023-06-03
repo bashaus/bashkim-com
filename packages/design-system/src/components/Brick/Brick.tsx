@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { ComponentPropsWithRef } from "react";
+import { ComponentPropsWithRef, ReactNode } from "react";
 
 import styles from "./Brick.module.scss";
 
@@ -12,7 +12,7 @@ export type BrickProps = ComponentPropsWithRef<"article"> & {
   /**
    * A URL to the image to use as the icon
    */
-  icon: string;
+  icon: ReactNode;
 
   /**
    * The title or heading, will be wrapped in a `<h3>` tag
@@ -30,11 +30,7 @@ export const Brick = ({
   <article className={classNames(className, styles["Brick"])} {...restProps}>
     <div className={styles["Content"]}>
       <h3 className={styles["Heading"]}>{title}</h3>
-
-      <div className={styles["Image"]}>
-        <img alt="" src={icon} />
-      </div>
-
+      <div className={styles["Image"]}>{icon}</div>
       {description && <p className={styles["Description"]}>{description}</p>}
     </div>
   </article>

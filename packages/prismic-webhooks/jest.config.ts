@@ -1,4 +1,3 @@
-/* eslint-disable */
 export default {
   displayName: "prismic-webhooks",
   globals: {},

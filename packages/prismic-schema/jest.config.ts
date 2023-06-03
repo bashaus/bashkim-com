@@ -1,4 +1,3 @@
-/* eslint-disable */
 export default {
   displayName: "prismic-schema",
   globals: {},

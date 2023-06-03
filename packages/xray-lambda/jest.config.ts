@@ -1,4 +1,3 @@
-/* eslint-disable */
 export default {
   displayName: "xray-lambda",
   globals: {},
