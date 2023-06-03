@@ -2,7 +2,7 @@ import { PrismicLinkResolver } from "./PrismicLinkResolver";
 
 describe("Prismic/Helpers/Link", () => {
   describe("#PrismicLinkResolver", () => {
-    it("converts case_study", () => {
+    it("should handle case_study", () => {
       expect(
         PrismicLinkResolver({ type: "case_study", uid: "item-slug" })
       ).toEqual("/portfolio/item-slug/");
@@ -10,6 +10,12 @@ describe("Prismic/Helpers/Link", () => {
       expect(
         PrismicLinkResolver({ type: "case_study", uid: "case-study-slug" })
       ).toEqual("/portfolio/case-study-slug/");
+    });
+
+    it("should throw error on unknown", () => {
+      expect(() =>
+        PrismicLinkResolver({ type: "unknown", uid: "case-study-slug" })
+      ).toThrowError();
     });
   });
 });
