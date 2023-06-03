@@ -12,7 +12,7 @@ import UqLogoImage from "../../assets/education/uq/logo.png";
 import styles from "./AboutEducation.module.scss";
 
 export const AboutEducation = () => (
-  <Group>
+  <Group data-testid="AboutEducation">
     <SubtitlePartial>
       <h2>Education</h2>
     </SubtitlePartial>
