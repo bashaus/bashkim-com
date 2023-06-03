@@ -1,4 +1,7 @@
 import type { Config } from "jest";
+import nextJest from "next/jest.js";
+
+const createJestConfig = nextJest({});
 
 const config: Config = {
   displayName: "website",
@@ -32,4 +35,4 @@ const config: Config = {
   coveragePathIgnorePatterns: [".next/"],
 };
 
-export default config;
+export default createJestConfig(config);
