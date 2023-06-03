@@ -12,6 +12,7 @@ export const MenuButton = ({
   ...props
 }: MenuButtonProps) => (
   <button
+    data-testid="MenuButton"
     className={classNames(
       className,
       styles["MenuButton"],

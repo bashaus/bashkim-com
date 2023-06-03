@@ -1,5 +1,6 @@
 import type { CarouselPhonesSliceTypeFragment } from "@bashkim-com/prismic-dal";
 import { PrismicRichText } from "@bashkim-com/prismic-helpers";
+import Image from "next/image";
 
 import { Carousel } from "../../components/Carousel/Carousel";
 import { CarouselImage } from "../../components/CarouselImage/CarouselImage";
@@ -56,7 +57,7 @@ export const CarouselPhonesSlice = ({ slice }: CarouselPhonesSliceProps) => (
             figure={
               <DeviceComponent
                 figure={
-                  <img
+                  <Image
                     src={image.url}
                     alt={image.alt ?? ""}
                     width={image.dimensions.width}

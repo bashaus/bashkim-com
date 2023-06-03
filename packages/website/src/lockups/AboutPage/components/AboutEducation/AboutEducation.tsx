@@ -4,6 +4,7 @@ import {
   SplitPartial,
   SubtitlePartial,
 } from "@bashkim-com/design-system";
+import Image from "next/image";
 
 import QutGardensPointImage from "../../assets/education/qut/gardens-point.jpg";
 import QutLogoImage from "../../assets/education/qut/logo.jpg";
@@ -35,7 +36,13 @@ export const AboutEducation = () => (
 
       <SplitItemPartial backgroundImage={UqBackgroundImage.src}>
         <div>
-          <img className={styles["Logo"]} alt="" src={UqLogoImage.src} />
+          <Image
+            className={styles["Logo"]}
+            alt="University of Queensland"
+            src={UqLogoImage.src}
+            width={UqLogoImage.width}
+            height={UqLogoImage.height}
+          />
         </div>
       </SplitItemPartial>
     </SplitPartial>
@@ -85,7 +92,13 @@ export const AboutEducation = () => (
 
       <SplitItemPartial backgroundImage={QutGardensPointImage.src}>
         <div>
-          <img className={styles["Logo"]} alt="" src={QutLogoImage.src} />
+          <Image
+            className={styles["Logo"]}
+            alt="Queensland University of Technology"
+            src={QutLogoImage.src}
+            width={QutLogoImage.width}
+            height={QutLogoImage.height}
+          />
         </div>
       </SplitItemPartial>
     </SplitPartial>

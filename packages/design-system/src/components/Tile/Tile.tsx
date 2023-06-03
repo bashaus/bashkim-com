@@ -1,27 +1,33 @@
+import { ComponentPropsWithRef, ReactNode } from "react";
+
 import styles from "./Tile.module.scss";
 
-export type TileProps = {
-  description: string;
-  icon: string;
-  poster: string;
-  title: string;
+export type TileProps = ComponentPropsWithRef<"div"> & {
+  description?: string;
+  icon?: ReactNode;
+  poster?: string;
+  title?: string;
 };
 
-export const Tile = ({ description, title, icon, poster }: TileProps) => (
-  <div className={styles["Tile"]}>
-    <div
-      className={styles["Poster"]}
-      style={{ backgroundImage: `url(${poster})` }}
-    />
+export const Tile = ({
+  description,
+  title,
+  icon,
+  poster,
+  ...props
+}: TileProps) => (
+  <div className={styles["Tile"]} {...props}>
+    {poster && (
+      <div
+        className={styles["Poster"]}
+        style={{ backgroundImage: `url(${poster})` }}
+      />
+    )}
 
     <div className={styles["Content"]}>
-      <h3 className={styles["Heading"]}>{title}</h3>
-
-      <div className={styles["Icon"]}>
-        <img alt="" src={icon} />
-      </div>
-
-      <p className={styles["Description"]}>{description}</p>
+      {title && <h3 className={styles["Heading"]}>{title}</h3>}
+      {icon && <div className={styles["Icon"]}>{icon}</div>}
+      {description && <p className={styles["Description"]}>{description}</p>}
     </div>
   </div>
 );

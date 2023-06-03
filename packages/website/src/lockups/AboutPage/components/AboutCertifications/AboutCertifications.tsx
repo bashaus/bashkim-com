@@ -4,6 +4,7 @@ import {
   SplitPartial,
   SubtitlePartial,
 } from "@bashkim-com/design-system";
+import Image from "next/image";
 
 import JavaLogoImage from "../../assets/certifications/java/logo.jpg";
 import JavaOcaImage from "../../assets/certifications/java/oca.png";
@@ -27,15 +28,22 @@ export const AboutCertifications = () => (
             <time dateTime="2012-08-23">April 2016</time>
           </p>
           <p>
-            <img alt="Oracle Certified Associate" src={JavaOcaImage.src} />
+            <Image
+              alt="Oracle Certified Associate"
+              src={JavaOcaImage.src}
+              width={JavaOcaImage.width}
+              height={JavaOcaImage.height}
+            />
           </p>
         </div>
       </SplitItemPartial>
       <SplitItemPartial>
-        <img
+        <Image
           className={styles["Logo"]}
           alt="Duke - The Java Mascot"
           src={JavaLogoImage.src}
+          width={JavaLogoImage.width}
+          height={JavaLogoImage.height}
         />
       </SplitItemPartial>
     </SplitPartial>
@@ -55,17 +63,24 @@ export const AboutCertifications = () => (
               target="_blank"
               rel="noreferrer"
             >
-              <img alt="Zend Certified Engineer" src={PhpZceImage.src} />
+              <Image
+                alt="Zend Certified Engineer"
+                src={PhpZceImage.src}
+                width={PhpZceImage.width}
+                height={PhpZceImage.height}
+              />
             </a>
           </p>
         </div>
       </SplitItemPartial>
 
       <SplitItemPartial>
-        <img
+        <Image
           className={styles["Logo"]}
           alt="ElePHPant"
           src={PhpLogoImage.src}
+          width={PhpLogoImage.width}
+          height={PhpLogoImage.height}
         />
       </SplitItemPartial>
     </SplitPartial>

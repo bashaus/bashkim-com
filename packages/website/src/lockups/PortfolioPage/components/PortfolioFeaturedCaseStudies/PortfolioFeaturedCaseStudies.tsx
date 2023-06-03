@@ -4,6 +4,7 @@ import type {
   PortfolioPageFeaturedModelFragment,
 } from "@bashkim-com/prismic-dal";
 import { PrismicRichText } from "@bashkim-com/prismic-helpers";
+import Image from "next/image";
 import Link from "next/link";
 
 import styles from "./PortfolioFeaturedCaseStudies.module.scss";
@@ -40,7 +41,14 @@ export const PortfolioFeaturedCaseStudies = ({
             <Tile
               title={caseStudy.meta_title ?? ""}
               description={caseStudy.meta_description ?? ""}
-              icon={caseStudy.image_icon.url}
+              icon={
+                <Image
+                  src={caseStudy.image_icon.url}
+                  alt={caseStudy.image_icon.alt}
+                  width={caseStudy.image_icon.dimensions.width}
+                  height={caseStudy.image_icon.dimensions.height}
+                />
+              }
               poster={caseStudy.image_poster.url}
             />
           </Link>

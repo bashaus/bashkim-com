@@ -1,5 +1,6 @@
 import type { CarouselImagesSliceTypeFragment } from "@bashkim-com/prismic-dal";
 import { PrismicRichText } from "@bashkim-com/prismic-helpers";
+import Image from "next/image";
 
 import { Carousel } from "../../components/Carousel/Carousel";
 import { CarouselImage } from "../../components/CarouselImage/CarouselImage";
@@ -26,7 +27,7 @@ export const CarouselImagesSlice = ({ slice }: CarouselImagesSliceProps) => (
           <CarouselImage
             key={image.url}
             figure={
-              <img
+              <Image
                 src={image.url}
                 alt={image.alt ?? ""}
                 width={image.dimensions.width}

@@ -1,4 +1,5 @@
 import { PageHeaderPartial } from "@bashkim-com/design-system";
+import Image from "next/image";
 
 import HeaderDesktopImage from "../../assets/header-desktop.jpg";
 import PhotoImage from "../../assets/profile/photo@4x.jpg";
@@ -10,7 +11,13 @@ export const AboutPageHeader = () => (
     imageDesktop={HeaderDesktopImage.src}
   >
     <div className={styles["AboutPageHeader"]}>
-      <img className={styles["HeaderImage"]} src={PhotoImage.src} />
+      <Image
+        className={styles["HeaderImage"]}
+        src={PhotoImage.src}
+        alt="Photo of Bashkim Isai"
+        width={PhotoImage.width}
+        height={PhotoImage.height}
+      />
       <h1>Bash</h1>
     </div>
   </PageHeaderPartial>
