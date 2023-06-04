@@ -12,7 +12,8 @@ on:
       - reopened
 
 jobs:
-  build:
+  build-website:
+    name: website
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -32,3 +33,25 @@ jobs:
       - name: build
         run: |
           yarn build
+
+  build-design-system:
+    name: design-system
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "18.15.0"
+          cache: "yarn"
+
+      - name: yarn
+        run: |
+          yarn --frozen-lockfile
+
+      - name: storybook
+        run: |
+          yarn storybook:build
