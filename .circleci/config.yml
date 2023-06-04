@@ -163,7 +163,11 @@ jobs:
 workflows:
   publish:
     jobs:
-      - dependencies
+      - dependencies:
+          filters:
+            branches:
+              only:
+                - main
 
       - build-applications:
           requires:
@@ -178,10 +182,6 @@ workflows:
           requires:
             - build-applications
             - build-design-system
-          filters:
-            branches:
-              only:
-                - main
 
       - deploy-serverless:
           context: bashkim-com-prod

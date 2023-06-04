@@ -1,7 +1,6 @@
 {
   "name": "@bashkim-com/sitemap",
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "build": "tsc --project tsconfig.app.json",
     "test": "jest"
