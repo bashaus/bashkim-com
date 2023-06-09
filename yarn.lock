@@ -4285,10 +4285,10 @@
   resolved "https://registry.yarnpkg.com/@tsconfig/node16/-/node16-1.0.2.tgz#423c77877d0569db20e1fc80885ac4118314010e"
   integrity sha512-eZxlbI8GZscaGS7kkc/trHTT5xgrjH3/1n2JDwusC9iahPKWMRvRjJSAN5mCXviuTGQ/lHnhvv8Q1YTpnfz9gA==
 
-"@turbo/gen@^1.10.2":
-  version "1.10.2"
-  resolved "https://registry.yarnpkg.com/@turbo/gen/-/gen-1.10.2.tgz#ef8616a31a1584450f582d7091edec3d4bbc3a84"
-  integrity sha512-P4cMM0KhQcyjfTSZN/W1sRyDTrKN/fLpMJZDK8yT8vccofQhjaUgzHP2NHlSSr3Az1/eY+5HIiCKBhZg5joJLA==
+"@turbo/gen@^1.10.3":
+  version "1.10.3"
+  resolved "https://registry.yarnpkg.com/@turbo/gen/-/gen-1.10.3.tgz#9651cb95b587626df3fe2c9eb4cd673a088ce55c"
+  integrity sha512-AWQme9P9X9ENko8hEW4iKsr3ry7zRtx/RPGBXJuJFF+ecWmoSQYf83+D02G0p2pYV5rCAlerf9WOdOU9zbaqSw==
   dependencies:
     chalk "2.4.2"
     commander "^10.0.0"
