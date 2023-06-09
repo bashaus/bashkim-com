@@ -17,7 +17,7 @@
     "@bashkim-com/tsconfig": "*",
     "@primer/octicons-react": "^19.1.0",
     "@sentry/browser": "7.54.0",
-    "apollo-link-prismic": "^1.1.1",
+    "apollo-link-prismic": "^1.1.2",
     "js-cookie": "^3.0.5",
     "next": "^13.4.4",
     "node-fetch": "^2.6.11",
