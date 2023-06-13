@@ -3002,10 +3002,10 @@
     schema-utils "^3.0.0"
     source-map "^0.7.3"
 
-"@primer/octicons-react@^19.1.0":
-  version "19.1.0"
-  resolved "https://registry.yarnpkg.com/@primer/octicons-react/-/octicons-react-19.1.0.tgz#3fa08f5dc6dd02e2c46703a8052541425e40cbc7"
-  integrity sha512-owWS3jHcsMOQMRzXURSnbqkkQCgmNOZWmm/vejzwnPU21m8Wz1Xng5i0pu1B/VuW7cmsNh5+r5XsVM8r1igY6A==
+"@primer/octicons-react@^19.2.0":
+  version "19.2.0"
+  resolved "https://registry.yarnpkg.com/@primer/octicons-react/-/octicons-react-19.2.0.tgz#65ea3af936c5e4bc736fb0ae1888b41d5360ba4c"
+  integrity sha512-cqjqCmrMrFr2TUVXcUmpjfMPAxK4XA2PizU8preVtLnxi2LMX8cDBSQ0RaAAsXFSvtoC5G1xT20oxUn32P+cUA==
 
 "@prismicio/client@^7.0.1":
   version "7.1.0"
