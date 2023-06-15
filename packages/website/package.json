@@ -15,7 +15,7 @@
     "@bashkim-com/prismic-helpers": "*",
     "@bashkim-com/style-guide": "*",
     "@bashkim-com/tsconfig": "*",
-    "@primer/octicons-react": "^19.2.0",
+    "@primer/octicons-react": "^19.3.0",
     "@sentry/browser": "7.55.0",
     "apollo-link-prismic": "^1.1.2",
     "js-cookie": "^3.0.5",
