@@ -20,7 +20,7 @@ describe("<Switch />", () => {
     );
 
     expect(getByTestId("Switch")).toBeTruthy();
-    expect(onChange).not.toBeCalled();
+    expect(onChange).not.toHaveBeenCalled();
   });
 
   it("should change on click", () => {
@@ -37,7 +37,7 @@ describe("<Switch />", () => {
     );
 
     fireEvent.click(getByTestId("Switch"));
-    expect(onChange).toBeCalled();
+    expect(onChange).toHaveBeenCalled();
   });
 
   it("should change be false when undefined", () => {
@@ -54,6 +54,6 @@ describe("<Switch />", () => {
     );
 
     expect(getByTestId("Switch.Input").getAttribute("checked")).toBeFalsy();
-    expect(onChange).not.toBeCalled();
+    expect(onChange).not.toHaveBeenCalled();
   });
 });

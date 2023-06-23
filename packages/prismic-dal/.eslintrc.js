@@ -1,6 +1,7 @@
+/* eslint-env node */
+
 module.exports = {
-  extends: ["../../.eslintrc.js"],
-  ignorePatterns: ["!**/*"],
+  extends: ["@bashkim-com"],
   overrides: [
     {
       files: ["*.ts", "*.tsx", "*.js", "*.jsx"],

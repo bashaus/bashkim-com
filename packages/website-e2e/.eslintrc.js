@@ -1,6 +1,7 @@
+/* eslint-env node */
+
 module.exports = {
-  extends: ["plugin:cypress/recommended", "../../.eslintrc.js"],
-  ignorePatterns: ["!**/*"],
+  extends: ["@bashkim-com", "plugin:cypress/recommended"],
   overrides: [
     {
       files: ["*.ts", "*.tsx", "*.js", "*.jsx"],

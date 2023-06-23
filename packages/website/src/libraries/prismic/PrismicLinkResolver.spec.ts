@@ -15,7 +15,7 @@ describe("Prismic/Helpers/Link", () => {
     it("should throw error on unknown", () => {
       expect(() =>
         PrismicLinkResolver({ type: "unknown", uid: "case-study-slug" })
-      ).toThrowError();
+      ).toThrow();
     });
   });
 });

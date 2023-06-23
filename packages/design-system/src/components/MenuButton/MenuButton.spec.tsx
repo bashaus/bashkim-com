@@ -25,6 +25,6 @@ describe("<MenuButton />", () => {
     );
 
     fireEvent.click(getByTestId("MenuButton"));
-    expect(onClick).toBeCalled();
+    expect(onClick).toHaveBeenCalled();
   });
 });

@@ -1,10 +1,18 @@
+/* eslint-env node */
+
 module.exports = {
-  extends: ["next", "next/core-web-vitals", "../../.eslintrc.js"],
-  ignorePatterns: ["!**/*", ".next/**/*"],
+  extends: ["@bashkim-com", "next", "next/core-web-vitals"],
+  settings: {
+    next: {
+      rootDir: [__dirname],
+    },
+  },
   overrides: [
     {
       files: ["*.ts", "*.tsx", "*.js", "*.jsx"],
-      rules: {},
+      rules: {
+        "@next/next/no-html-link-for-pages": "off",
+      },
     },
     {
       files: ["*.ts", "*.tsx"],
@@ -15,15 +23,4 @@ module.exports = {
       rules: {},
     },
   ],
-  rules: {
-    "@next/next/no-html-link-for-pages": "off",
-  },
-  env: {
-    jest: true,
-  },
-  settings: {
-    next: {
-      rootDir: ["packages/website/"],
-    },
-  },
 };

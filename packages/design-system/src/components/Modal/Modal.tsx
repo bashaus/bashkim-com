@@ -1,4 +1,10 @@
-import { useCallback, useState } from "react";
+import {
+  ComponentPropsWithRef,
+  ReactElement,
+  ReactNode,
+  useCallback,
+  useState,
+} from "react";
 import ReactModal, { Props as ReactModalProps } from "react-modal";
 
 import { ModalContent } from "../ModalContent/ModalContent";
@@ -30,8 +36,8 @@ export const Modal = ({ isOpen, style = {}, ...props }: ModalProps) => {
 
   const overlayElement = useCallback(
     (
-      overlayProps: React.ComponentPropsWithRef<"div">,
-      contentElement: React.ReactElement
+      overlayProps: ComponentPropsWithRef<"div">,
+      contentElement: ReactElement
     ) => (
       <ModalOverlay
         {...overlayProps}
@@ -46,10 +52,7 @@ export const Modal = ({ isOpen, style = {}, ...props }: ModalProps) => {
   );
 
   const contentElement = useCallback(
-    (
-      contentProps: React.ComponentPropsWithRef<"div">,
-      children: React.ReactNode
-    ) => (
+    (contentProps: ComponentPropsWithRef<"div">, children: ReactNode) => (
       <ModalContent
         {...contentProps}
         isOpen={isOpen}

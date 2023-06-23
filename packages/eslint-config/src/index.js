@@ -1,6 +1,6 @@
 /* eslint-env node */
+
 module.exports = {
-  root: true,
   plugins: [
     "simple-import-sort",
     "react",
@@ -11,10 +11,25 @@ module.exports = {
     "promise",
     "prettier",
   ],
+  env: {
+    es2021: true,
+  },
   overrides: [
     {
       files: ["*.{js,jsx,ts,tsx}"],
-      extends: ["plugin:prettier/recommended"],
+      extends: [
+        "plugin:react/recommended",
+        "plugin:react/jsx-runtime",
+        "plugin:react-hooks/recommended",
+        "plugin:promise/recommended",
+        "plugin:prettier/recommended",
+        "plugin:sonarjs/recommended",
+      ],
+      settings: {
+        react: {
+          version: "detect",
+        },
+      },
       rules: {
         "prettier/prettier": "error",
         "import/first": "error",
@@ -38,7 +53,7 @@ module.exports = {
     },
     {
       files: ["*.{ts,tsx}"],
-      extends: ["plugin:sonarjs/recommended"],
+      extends: [],
       parser: "@typescript-eslint/parser",
       plugins: ["@typescript-eslint"],
       rules: {
@@ -47,11 +62,15 @@ module.exports = {
     },
     {
       files: ["*.{js,jsx}"],
-      extends: ["plugin:sonarjs/recommended"],
+      extends: [],
       rules: {},
     },
     {
       files: ["*.spec.{js,jsx,ts,tsx}"],
+      extends: ["plugin:jest/recommended"],
+      env: {
+        "jest/globals": true,
+      },
       rules: {
         /**
          * The `describe` and `it` functions will commonly use the same values.

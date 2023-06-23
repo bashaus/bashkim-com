@@ -1,3 +1,5 @@
+/* eslint-env node */
+
 module.exports = {
   js2svg: {
     indent: 2,
