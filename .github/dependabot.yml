@@ -1,5 +1,6 @@
 # https://help.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
 # https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
+# https://docs.github.com/en/code-security/dependabot/working-with-dependabot/keeping-your-actions-up-to-date-with-dependabot
 
 ---
 version: 2
@@ -21,3 +22,16 @@ updates:
       - dependency-name: "node-fetch"
         versions:
           - ">= 3"
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "saturday"
+      time: "06:00"
+      timezone: "UTC"
+    target-branch: "chore/deps"
+    assignees:
+      - "bashaus"
+    reviewers:
+      - "bashaus"
