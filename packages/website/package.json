@@ -20,7 +20,7 @@
     "apollo-link-prismic": "^1.1.2",
     "js-cookie": "^3.0.5",
     "next": "^13.4.7",
-    "node-fetch": "^2.6.11",
+    "node-fetch": "^2.6.12",
     "prismic-reactjs": "^1.3.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
