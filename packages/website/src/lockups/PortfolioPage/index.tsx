@@ -6,7 +6,7 @@ import {
   PageHeaderPartial,
   SubtitlePartial,
 } from "@bashkim-com/design-system";
-import { GetPortfolioPageQuery } from "@bashkim-com/prismic-dal";
+import { PortfolioPageModelFragment } from "@bashkim-com/prismic-dal";
 
 import { MenuButtonHome } from "../../components/MenuButtonHome/MenuButtonHome";
 import { Page } from "../../components/Page/Page";
@@ -15,17 +15,10 @@ import { PortfolioCategory } from "./components/PortfolioCategory/PortfolioCateg
 import { PortfolioFeaturedCaseStudies } from "./components/PortfolioFeaturedCaseStudies/PortfolioFeaturedCaseStudies";
 
 type PortfolioPageProps = {
-  portfolioPageResult: GetPortfolioPageQuery["portfolioPage"];
+  portfolioPage: PortfolioPageModelFragment;
 };
 
-export const PortfolioPageLockup = ({
-  portfolioPageResult,
-}: PortfolioPageProps) => {
-  const portfolioPage = portfolioPageResult.edges?.[0]?.node;
-  if (!portfolioPage) {
-    return null;
-  }
-
+export const PortfolioPageLockup = ({ portfolioPage }: PortfolioPageProps) => {
   const {
     meta_title: metaTitle,
     meta_description: metaDescription,

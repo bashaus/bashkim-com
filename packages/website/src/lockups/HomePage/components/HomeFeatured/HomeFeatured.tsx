@@ -1,22 +1,21 @@
 import { CallToAction, FullBannerPartial } from "@bashkim-com/design-system";
-import type {
-  Case_Study,
-  Home_PageFeatured_Case_Studies,
-} from "@bashkim-com/prismic-dal";
+import type { FeaturedCaseStudiesModelFragment } from "@bashkim-com/prismic-dal";
 import { useLinkResolver } from "@bashkim-com/prismic-helpers";
 import Link from "next/link";
 
 export type HomeFeaturedProps = {
-  caseStudies: Array<Home_PageFeatured_Case_Studies>;
+  featuredCaseStudies: Array<FeaturedCaseStudiesModelFragment>;
 };
 
-export const HomeFeatured = ({ caseStudies }: HomeFeaturedProps) => {
+export const HomeFeatured = ({ featuredCaseStudies }: HomeFeaturedProps) => {
   const PrismicLinkResolver = useLinkResolver();
 
   return (
     <ul>
-      {caseStudies.map((featuredCaseStudy) => {
-        const caseStudy = featuredCaseStudy.featured_case_study as Case_Study;
+      {featuredCaseStudies.map(({ featured_case_study: caseStudy }) => {
+        if (caseStudy.__typename !== "Case_study") {
+          return null;
+        }
 
         const {
           image_header_desktop: backgroundDesktop,

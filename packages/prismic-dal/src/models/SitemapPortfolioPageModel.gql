@@ -1,0 +1,8 @@
+fragment SitemapPortfolioPageModel on Portfolio_page {
+  _meta {
+    uid
+    lastPublicationDate
+  }
+  sitemap_changefreq
+  sitemap_priority
+}

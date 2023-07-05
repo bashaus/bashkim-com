@@ -1,5 +1,3 @@
-# import "../slice-types/PortfolioCategorySliceType.gql"
-
 query GetPortfolioPage {
   portfolioPage: allPortfolio_pages(first: 1) {
     edges {

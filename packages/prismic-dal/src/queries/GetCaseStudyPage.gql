@@ -1,7 +1,3 @@
-# import "../fragments/ExternalLinkFragment.gql"
-# import "../slice-types/AccoladeSliceType.gql"
-# import "../slice-types/ExhibitionSliceType.gql"
-
 query GetCaseStudyPage($caseStudySlug: String) {
   caseStudyPage: allCase_studys(uid: $caseStudySlug) {
     edges {

@@ -1,0 +1,8 @@
+fragment SitemapCaseStudyModel on Case_study {
+  _meta {
+    uid
+    lastPublicationDate
+  }
+  sitemap_changefreq
+  sitemap_priority
+}

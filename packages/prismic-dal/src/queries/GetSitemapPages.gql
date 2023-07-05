@@ -2,12 +2,7 @@ query GetSitemapPages {
   homePage: allHome_pages(first: 1) {
     edges {
       node {
-        _meta {
-          uid
-          lastPublicationDate
-        }
-        sitemap_changefreq
-        sitemap_priority
+        ...SitemapHomePageModel
       }
     }
   }
@@ -15,12 +10,7 @@ query GetSitemapPages {
   portfolioPage: allPortfolio_pages(first: 1) {
     edges {
       node {
-        _meta {
-          uid
-          lastPublicationDate
-        }
-        sitemap_changefreq
-        sitemap_priority
+        ...SitemapPortfolioPageModel
       }
     }
   }

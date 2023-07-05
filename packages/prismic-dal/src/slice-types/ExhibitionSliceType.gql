@@ -1,5 +1,3 @@
-# import "../fragments/ExternalLinkFragment.gql"
-
 fragment ExhibitionSliceType on Case_studyExhibitionsExhibitionslicetype {
   primary {
     exhibition_slice_type_name

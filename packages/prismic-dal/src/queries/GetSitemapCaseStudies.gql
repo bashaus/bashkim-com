@@ -5,12 +5,7 @@ query GetSitemapCaseStudies {
   ) {
     edges {
       node {
-        _meta {
-          uid
-          lastPublicationDate
-        }
-        sitemap_changefreq
-        sitemap_priority
+        ...SitemapCaseStudyModel
       }
     }
   }

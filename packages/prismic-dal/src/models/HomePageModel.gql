@@ -1,0 +1,8 @@
+fragment HomePageModel on Home_page {
+  meta_title
+  meta_keywords
+  meta_description
+  featured_case_studies {
+    ...FeaturedCaseStudiesModel
+  }
+}

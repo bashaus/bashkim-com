@@ -40,19 +40,19 @@ export const CaseStudyPageLockup = ({
           ))}
         </Group>
 
-        {exhibitionSlices && exhibitionSlices.length > 0 && (
+        {exhibitionSlices?.length > 0 && (
           <Group design={GroupDesign.ALTERNATE}>
             <CaseStudyExhibitions slices={exhibitionSlices} />
           </Group>
         )}
 
-        {accoladeSlices && accoladeSlices.length > 0 && (
+        {accoladeSlices?.length > 0 && (
           <Group design={GroupDesign.ALTERNATE}>
             <CaseStudyAccolades slices={accoladeSlices} />
           </Group>
         )}
 
-        {collaboratorSlices && collaboratorSlices.length > 0 && (
+        {collaboratorSlices?.length > 0 && (
           <Group design={GroupDesign.ALTERNATE}>
             <CaseStudyCollaborators
               myRole={caseStudyPage.info_role || undefined}
