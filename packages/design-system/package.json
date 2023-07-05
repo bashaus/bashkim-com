@@ -23,7 +23,7 @@
   "devDependencies": {
     "@storybook/addon-a11y": "7.0.25",
     "@storybook/addon-essentials": "7.0.25",
-    "@storybook/core-server": "7.0.25",
+    "@storybook/core-server": "7.0.26",
     "@storybook/nextjs": "7.0.25",
     "@swc/jest": "^0.2.26",
     "@types/jest": "29.5.2",
