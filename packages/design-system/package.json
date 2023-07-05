@@ -21,7 +21,7 @@
     "react-slick": "^0.29.0"
   },
   "devDependencies": {
-    "@storybook/addon-a11y": "7.0.25",
+    "@storybook/addon-a11y": "7.0.26",
     "@storybook/addon-essentials": "7.0.25",
     "@storybook/core-server": "7.0.25",
     "@storybook/nextjs": "7.0.25",
