@@ -1,7 +1,9 @@
+# Folder names
 .next/
 .terraform/
 coverage/
 dist/
-out/
+generated/
 node_modules/
+out/
 storybook-static/
