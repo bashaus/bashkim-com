@@ -1,6 +1,6 @@
 resource "aws_route53_record" "record_app_design_system" {
   zone_id = aws_route53_zone.zone.id
-  name    = "design-system.${var.domain_name}."
+  name    = "ui.${var.domain_name}."
   type    = "A"
 
   alias {

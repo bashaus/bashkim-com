@@ -9,5 +9,5 @@ variable "certificate_arn" {
 
 variable "domain_name" {
   type    = string
-  default = "design-system.bashkim.com"
+  default = "ui.bashkim.com"
 }
