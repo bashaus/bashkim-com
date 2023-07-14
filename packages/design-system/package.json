@@ -26,7 +26,7 @@
     "@storybook/core-server": "7.0.26",
     "@storybook/nextjs": "7.0.26",
     "@swc/jest": "^0.2.26",
-    "@types/jest": "29.5.2",
+    "@types/jest": "29.5.3",
     "@types/react-modal": "^3.16.0",
     "@types/react-slick": "^0.23.10",
     "identity-obj-proxy": "^3.0.0",
