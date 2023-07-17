@@ -32,6 +32,30 @@ jobs:
         run: |
           yarn build
 
+      - uses: actions/upload-artifact@v3
+        with:
+          name: build-website
+          path: packages/website/out/
+          retention-days: 3
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: build-sitemap
+          path: packages/sitemap/dist
+          retention-days: 3
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: build-prismic-webhooks
+          path: packages/prismic-webhooks/dist
+          retention-days: 3
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: build-prismic-schema
+          path: packages/prismic-schema/dist
+          retention-days: 3
+
   build-design-system:
     name: design-system
     runs-on: ubuntu-latest
@@ -51,3 +75,9 @@ jobs:
       - name: storybook
         run: |
           yarn storybook:build
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: storybook-design-system
+          path: packages/design-system/storybook-static/
+          retention-days: 3
