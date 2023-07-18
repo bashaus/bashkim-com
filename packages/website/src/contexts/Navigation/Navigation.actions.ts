@@ -14,7 +14,7 @@ export type NavigationActionSetScrollAtTopType = {
 };
 
 export const NavigationActionSetScrollAtTop = (
-  payload: NavigationActionSetScrollAtTopPayloadType
+  payload: NavigationActionSetScrollAtTopPayloadType,
 ): NavigationActionSetScrollAtTopType => ({
   type: NavigationAction.SET_SCROLL_AT_TOP,
   payload,

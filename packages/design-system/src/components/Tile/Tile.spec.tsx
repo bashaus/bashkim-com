@@ -7,7 +7,7 @@ describe("<Tile />", () => {
     const title = "title text";
 
     const { getByTestId, getByText } = render(
-      <Tile data-testid="Tile" title={title} />
+      <Tile data-testid="Tile" title={title} />,
     );
 
     expect(getByTestId("Tile")).toBeTruthy();

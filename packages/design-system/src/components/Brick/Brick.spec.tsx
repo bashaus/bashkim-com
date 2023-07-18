@@ -14,7 +14,7 @@ describe("<Brick />", () => {
         title={title}
         description={description}
         icon={icon}
-      />
+      />,
     );
 
     expect(getByTestId("Brick")).toBeTruthy();

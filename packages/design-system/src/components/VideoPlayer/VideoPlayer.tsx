@@ -38,7 +38,7 @@ export const VideoPlayer = ({ url }: VideoPlayerProps) => {
     (durationValue: ReactPlayerProps["duration"]) => {
       setDuration(durationValue);
     },
-    []
+    [],
   );
 
   return (

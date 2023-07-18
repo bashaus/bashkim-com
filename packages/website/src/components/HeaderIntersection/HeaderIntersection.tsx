@@ -14,11 +14,11 @@ export const HeaderIntersection = memo(function HeaderIntersection() {
         navigationDispatch(
           NavigationActionSetScrollAtTop({
             scrollAtTop: entry.isIntersecting,
-          })
-        )
+          }),
+        ),
       );
     },
-    [navigationDispatch]
+    [navigationDispatch],
   );
 
   useEffect(() => {
@@ -29,7 +29,7 @@ export const HeaderIntersection = memo(function HeaderIntersection() {
     }
 
     const interactionObserver = new IntersectionObserver(
-      processIntersectionEntries
+      processIntersectionEntries,
     );
 
     const { current } = ref;

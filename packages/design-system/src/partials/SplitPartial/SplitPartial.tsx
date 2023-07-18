@@ -17,7 +17,7 @@ export const SplitPartial = ({
       className,
       styles["SplitPartial"],
       index % 2 === 1 && styles["isOdd"],
-      index % 2 === 0 && styles["isEven"]
+      index % 2 === 0 && styles["isEven"],
     )}
     {...props}
   />

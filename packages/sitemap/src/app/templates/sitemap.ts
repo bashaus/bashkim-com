@@ -13,7 +13,7 @@ export type UrlType = {
 export const SitemapTemplate = (sitemap: () => Promise<Array<UrlType>>) => {
   return async (
     _req: express.Request,
-    res: express.Response
+    res: express.Response,
   ): Promise<void> => {
     const doc = xmlCreate(
       {
@@ -29,7 +29,7 @@ export const SitemapTemplate = (sitemap: () => Promise<Array<UrlType>>) => {
           ].join(" "),
         },
       },
-      { encoding: "UTF-8" }
+      { encoding: "UTF-8" },
     );
 
     const urlset = await sitemap();

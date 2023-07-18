@@ -8,11 +8,11 @@ export type SitemapType = {
 };
 
 export const SitemapIndexTemplate = (
-  sitemaps: () => Promise<Array<SitemapType>>
+  sitemaps: () => Promise<Array<SitemapType>>,
 ) => {
   return async (
     _req: express.Request,
-    res: express.Response
+    res: express.Response,
   ): Promise<void> => {
     const doc = xmlCreate(
       {
@@ -25,7 +25,7 @@ export const SitemapIndexTemplate = (
           ].join(" "),
         },
       },
-      { encoding: "UTF-8" }
+      { encoding: "UTF-8" },
     );
 
     const sitemapIndexes = await sitemaps();

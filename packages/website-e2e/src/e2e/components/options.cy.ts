@@ -31,7 +31,7 @@ describe("options", () => {
       cy.getCookie(COOKIE_NAME_APPEARANCE).should(
         "have.property",
         "value",
-        "dark"
+        "dark",
       );
     });
 

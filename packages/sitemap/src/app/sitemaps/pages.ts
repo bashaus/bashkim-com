@@ -34,7 +34,7 @@ export const PagesSitemap = async () => {
       url: {
         loc: `${baseHref}/portfolio/`,
         lastmod: PrismicDate(
-          portfolioPage._meta.lastPublicationDate
+          portfolioPage._meta.lastPublicationDate,
         ).toISOString(),
         changefreq: portfolioPage.sitemap_changefreq ?? undefined,
         priority: portfolioPage.sitemap_priority ?? undefined,

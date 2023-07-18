@@ -25,12 +25,12 @@ export const CaptionedMagazineSlice = ({
 
   const handleImageDrag = useCallback(
     (event: DragEvent<HTMLImageElement>): void => event.preventDefault(),
-    []
+    [],
   );
 
   const handleMagazineInitialize = useCallback(
     (): void => setMagazineIsInitialized(true),
-    []
+    [],
   );
 
   const handleMagazineSpreadChange = useCallback(
@@ -39,14 +39,14 @@ export const CaptionedMagazineSlice = ({
       setSpreads(event.spreads);
       setPageNumbers(event.pageNumbers);
     },
-    []
+    [],
   );
 
   const handleSpreadChange = useCallback(
     (event: FormEvent<HTMLInputElement>): void => {
       setSpread(+event.currentTarget.value);
     },
-    []
+    [],
   );
 
   const handlePaginationBack = useCallback((): void => {

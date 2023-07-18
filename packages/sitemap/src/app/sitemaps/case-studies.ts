@@ -23,7 +23,7 @@ export const CaseStudiesSitemap = async () => {
         url: {
           loc: `${baseHref}/portfolio/${caseStudy._meta.uid}/`,
           lastmod: PrismicDate(
-            caseStudy._meta.lastPublicationDate
+            caseStudy._meta.lastPublicationDate,
           ).toISOString(),
           changefreq: caseStudy.sitemap_changefreq || "monthly",
           priority: caseStudy.sitemap_priority || "0.5",

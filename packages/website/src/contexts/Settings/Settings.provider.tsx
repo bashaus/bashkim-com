@@ -13,7 +13,7 @@ export type SettingsProviderProps = {
 export const SettingsProvider = ({ children }: SettingsProviderProps) => {
   const [settingsState, settingsDispatch] = useReducer(
     SettingsReducer,
-    settingsStateInitial
+    settingsStateInitial,
   );
 
   const { appearance } = settingsState;
@@ -29,7 +29,7 @@ export const SettingsProvider = ({ children }: SettingsProviderProps) => {
     }
 
     settingsDispatch(
-      SettingsActionSetAppearance({ appearance: appearanceCookie })
+      SettingsActionSetAppearance({ appearance: appearanceCookie }),
     );
   }, []);
 
@@ -49,7 +49,7 @@ export const SettingsProvider = ({ children }: SettingsProviderProps) => {
 
   const providerValue = useMemo(
     () => ({ settingsState, settingsDispatch }),
-    [settingsState, settingsDispatch]
+    [settingsState, settingsDispatch],
   );
 
   return (

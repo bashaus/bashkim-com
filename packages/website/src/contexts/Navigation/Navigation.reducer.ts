@@ -3,7 +3,7 @@ import { NavigationState } from "./Navigation.state";
 
 export const NavigationReducer = (
   state: NavigationState,
-  action: NavigationActionType
+  action: NavigationActionType,
 ): NavigationState => {
   if (action.type === NavigationAction.SET_SCROLL_AT_TOP) {
     return {

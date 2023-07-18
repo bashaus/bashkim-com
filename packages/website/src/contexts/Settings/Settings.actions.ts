@@ -18,7 +18,7 @@ export type SettingsActionSetAppearanceType = {
 };
 
 export const SettingsActionSetAppearance = (
-  payload: SettingsActionSetAppearancePayloadType
+  payload: SettingsActionSetAppearancePayloadType,
 ): SettingsActionSetAppearanceType => ({
   type: SettingsAction.SET_APPEARANCE,
   payload,
@@ -34,7 +34,7 @@ export type SettingsActionToggleAppearanceType = {
 };
 
 export const SettingsActionToggleAppearance = (
-  payload: SettingsActionToggleAppearancePayloadType = {}
+  payload: SettingsActionToggleAppearancePayloadType = {},
 ): SettingsActionToggleAppearanceType => ({
   type: SettingsAction.TOGGLE_APPEARANCE,
   payload,
@@ -50,7 +50,7 @@ export type SettingsActionToggleGridLinesType = {
 };
 
 export const SettingsActionToggleGridLines = (
-  payload: SettingsActionToggleGridLinesPayloadType = {}
+  payload: SettingsActionToggleGridLinesPayloadType = {},
 ): SettingsActionToggleGridLinesType => ({
   type: SettingsAction.TOGGLE_GRID_LINES,
   payload,

@@ -37,7 +37,7 @@ export const Modal = ({ isOpen, style = {}, ...props }: ModalProps) => {
   const overlayElement = useCallback(
     (
       overlayProps: ComponentPropsWithRef<"div">,
-      contentElement: ReactElement
+      contentElement: ReactElement,
     ) => (
       <ModalOverlay
         {...overlayProps}
@@ -48,7 +48,7 @@ export const Modal = ({ isOpen, style = {}, ...props }: ModalProps) => {
         {contentElement}
       </ModalOverlay>
     ),
-    [handleOverlayHideComplete, handleOverlayShowStart, isOpen]
+    [handleOverlayHideComplete, handleOverlayShowStart, isOpen],
   );
 
   const contentElement = useCallback(
@@ -62,7 +62,7 @@ export const Modal = ({ isOpen, style = {}, ...props }: ModalProps) => {
         {children}
       </ModalContent>
     ),
-    [handleContentHideComplete, handleContentShowStart, isOpen]
+    [handleContentHideComplete, handleContentShowStart, isOpen],
   );
 
   return (

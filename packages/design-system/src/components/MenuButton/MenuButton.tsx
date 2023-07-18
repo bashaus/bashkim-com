@@ -16,7 +16,7 @@ export const MenuButton = ({
     className={classNames(
       className,
       styles["MenuButton"],
-      onClick ? styles["clickable"] : undefined
+      onClick ? styles["clickable"] : undefined,
     )}
     type={type}
     onClick={onClick}

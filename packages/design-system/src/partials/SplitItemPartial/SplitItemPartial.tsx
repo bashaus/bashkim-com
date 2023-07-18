@@ -24,7 +24,7 @@ export const SplitItemPartial = ({
       styles["SplitItemPartial"],
       !!backgroundImage && "SplitPartial_chevron",
       !!backgroundImage && styles["hasBackground"],
-      !backgroundImage && styles["hasNoBackground"]
+      !backgroundImage && styles["hasNoBackground"],
     )}
     {...props}
   >

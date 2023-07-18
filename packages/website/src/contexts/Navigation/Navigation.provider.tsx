@@ -11,12 +11,12 @@ export type NavigationProviderProps = {
 export const NavigationProvider = ({ children }: NavigationProviderProps) => {
   const [navigationState, navigationDispatch] = useReducer(
     NavigationReducer,
-    navigationStateInitial
+    navigationStateInitial,
   );
 
   const providerValue = useMemo(
     () => ({ navigationState, navigationDispatch }),
-    [navigationState, navigationDispatch]
+    [navigationState, navigationDispatch],
   );
 
   return (

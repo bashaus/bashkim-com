@@ -21,7 +21,7 @@ router.post(
   (
     req: Request<unknown, PrismicResponseBody, PrismicRequestBody>,
     res: Response<PrismicResponseBody>,
-    next: NextFunction
+    next: NextFunction,
   ) => {
     (async () => {
       const { type, secret } = req.body;
@@ -45,5 +45,5 @@ router.post(
         next(new UnhandledHttpError());
       }
     })();
-  }
+  },
 );

@@ -14,7 +14,7 @@ export const normalizePage = (display: TurnDisplay, page: number): number => {
 
 export const convertSpreadToPage = (
   display: TurnDisplay,
-  spread: number
+  spread: number,
 ): number => {
   switch (display) {
     case TurnDisplay.SINGLE: {
@@ -29,7 +29,7 @@ export const convertSpreadToPage = (
 
 export const convertPageToSpread = (
   display: TurnDisplay,
-  page: number
+  page: number,
 ): number => {
   switch (display) {
     case TurnDisplay.SINGLE: {
@@ -45,7 +45,7 @@ export const convertPageToSpread = (
 export const convertSpreadToPageNumbers = (
   display: TurnDisplay,
   spread: number,
-  pages: number
+  pages: number,
 ): Array<number> => {
   const page = convertSpreadToPage(display, spread);
 

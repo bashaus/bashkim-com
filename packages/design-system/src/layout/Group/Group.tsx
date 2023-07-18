@@ -17,7 +17,7 @@ export const Group = ({
     className={classNames(
       className,
       styles["Group"],
-      design === GroupDesign.ALTERNATE ? styles["isAlternate"] : undefined
+      design === GroupDesign.ALTERNATE ? styles["isAlternate"] : undefined,
     )}
     {...props}
   />

@@ -15,7 +15,7 @@ export default {
 } as Meta;
 
 const Template: StoryFn<RichTextFormatterProps> = (
-  args: RichTextFormatterProps
+  args: RichTextFormatterProps,
 ) => (
   <RichTextFormatterComponent {...args}>
     <h1>&lt;RichTextFormatter /&gt;</h1>

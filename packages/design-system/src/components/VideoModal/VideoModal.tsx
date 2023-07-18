@@ -49,7 +49,7 @@ export const VideoModal = ({
     (durationValue: ReactPlayerProps["duration"]) => {
       setDuration(durationValue);
     },
-    []
+    [],
   );
 
   /* */

@@ -143,7 +143,7 @@ export class Turn extends PureComponent<TurnProps, TurnState> {
       <div
         className={classNames(
           styles["Turn"],
-          isInitialized ? styles["isInitialized"] : undefined
+          isInitialized ? styles["isInitialized"] : undefined,
         )}
         ref={this.containerRef}
       >

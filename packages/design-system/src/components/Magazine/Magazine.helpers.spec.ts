@@ -90,7 +90,7 @@ describe("Magazine/Helpers", () => {
           4,
         ]);
         expect(
-          convertSpreadToPageNumbers(TurnDisplay.SINGLE, 100, 100)
+          convertSpreadToPageNumbers(TurnDisplay.SINGLE, 100, 100),
         ).toEqual([100]);
       });
 

@@ -24,8 +24,8 @@ const OUT_FILES = {
     Object.entries(OUT_FILES).map(([file, schema]) => {
       return fs.writeFile(
         path.resolve(OUT_DIR, file),
-        JSON.stringify(schema, null, 2)
+        JSON.stringify(schema, null, 2),
       );
-    })
+    }),
   );
 })();

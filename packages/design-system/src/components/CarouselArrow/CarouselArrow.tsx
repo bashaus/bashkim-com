@@ -17,7 +17,7 @@ export const CarouselArrow = ({
     className={classNames(
       className,
       direction === CarouselArrowDirection.NEXT && styles["CarouselArrowNext"],
-      direction === CarouselArrowDirection.PREV && styles["CarouselArrowPrev"]
+      direction === CarouselArrowDirection.PREV && styles["CarouselArrowPrev"],
     )}
     {...props}
   >

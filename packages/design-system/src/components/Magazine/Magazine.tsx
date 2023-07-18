@@ -74,7 +74,7 @@ export const Magazine = ({
         pageNumbers,
       } as MagazineSpreadChangeEvent);
     },
-    [display, onSpreadChange, pages]
+    [display, onSpreadChange, pages],
   );
 
   const handleTurnPageChange = useCallback(
@@ -82,12 +82,12 @@ export const Magazine = ({
       const newSpread = convertPageToSpread(display, newPage);
       handleSpreadChange(newSpread);
     },
-    [display, handleSpreadChange]
+    [display, handleSpreadChange],
   );
 
   const handleTurnInitialize = useCallback(
     (): void => onInitialize?.(),
-    [onInitialize]
+    [onInitialize],
   );
 
   /* effects */

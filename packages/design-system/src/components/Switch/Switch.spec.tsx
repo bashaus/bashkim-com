@@ -16,7 +16,7 @@ describe("<Switch />", () => {
         iconOn={iconOn}
         checked={checked}
         onChange={onChange}
-      />
+      />,
     );
 
     expect(getByTestId("Switch")).toBeTruthy();
@@ -33,7 +33,7 @@ describe("<Switch />", () => {
         iconOn={iconOn}
         checked={checked}
         onChange={onChange}
-      />
+      />,
     );
 
     fireEvent.click(getByTestId("Switch"));
@@ -50,7 +50,7 @@ describe("<Switch />", () => {
         iconOn={iconOn}
         checked={checked}
         onChange={onChange}
-      />
+      />,
     );
 
     expect(getByTestId("Switch.Input").getAttribute("checked")).toBeFalsy();

@@ -42,7 +42,7 @@ export const ModalOverlay = ({
             ease: "power4.in",
             attr: { d: "M 0 100 V 50 Q 50 0 100 50 V 100 z" },
           },
-          0
+          0,
         )
         .to(svgRef.current, {
           duration: 0.5,

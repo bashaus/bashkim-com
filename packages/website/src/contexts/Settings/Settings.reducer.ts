@@ -4,7 +4,7 @@ import { Appearance } from "./Settings.types";
 
 export const SettingsReducer = (
   state: SettingsState,
-  action: SettingsActionType
+  action: SettingsActionType,
 ): SettingsState => {
   switch (action.type) {
     case SettingsAction.SET_APPEARANCE: {

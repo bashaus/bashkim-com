@@ -7,7 +7,7 @@ describe("<CallToAction />", () => {
     const title = "title text";
 
     const { getByTestId, getByText } = render(
-      <CallToAction data-testid="CallToAction">{title}</CallToAction>
+      <CallToAction data-testid="CallToAction">{title}</CallToAction>,
     );
 
     expect(getByTestId("CallToAction")).toBeTruthy();

@@ -25,7 +25,7 @@ declare module "turn-js/turn.min" {
   export type TurnEndEvent = (
     event: Event,
     page: number,
-    pageObject: unknown // object
+    pageObject: unknown, // object
   ) => void;
   export type TurnFirstEvent = (event: Event) => void;
   export type TurnLastEvent = (event: Event) => void;
@@ -33,22 +33,22 @@ declare module "turn-js/turn.min" {
   export type TurnStartEvent = (
     event: Event,
     pageObject: unknown, // object
-    corner: TurnCorner
+    corner: TurnCorner,
   ) => void;
   export type TurnTurningEvent = (
     event: Event,
     page: number,
-    view: TurnView
+    view: TurnView,
   ) => void;
   export type TurnTurnedEvent = (
     event: Event,
     page: number,
-    view: TurnView
+    view: TurnView,
   ) => void;
   export type TurnZoomingEvent = (
     event: Event,
     newFactor: number,
-    current: number
+    current: number,
   ) => void;
 
   export const enum TurnCorner {

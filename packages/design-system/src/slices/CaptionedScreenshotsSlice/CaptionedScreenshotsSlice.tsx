@@ -50,7 +50,7 @@ export const CaptionedScreenshotsSlice = ({
     (event: ChangeEvent<HTMLInputElement>): void => {
       setSelectedIndex(+event.currentTarget.value);
     },
-    []
+    [],
   );
 
   if (!slice.primary) {

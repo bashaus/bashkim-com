@@ -7,7 +7,7 @@ describe("<MenuButton />", () => {
     const title = "title text";
 
     const { getByTestId, getByText } = render(
-      <MenuButton data-testid="MenuButton">{title}</MenuButton>
+      <MenuButton data-testid="MenuButton">{title}</MenuButton>,
     );
 
     expect(getByTestId("MenuButton")).toBeTruthy();
@@ -21,7 +21,7 @@ describe("<MenuButton />", () => {
     const { getByTestId } = render(
       <MenuButton data-testid="MenuButton" onClick={onClick}>
         {title}
-      </MenuButton>
+      </MenuButton>,
     );
 
     fireEvent.click(getByTestId("MenuButton"));
