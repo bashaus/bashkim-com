@@ -4,7 +4,6 @@ module.exports = {
   plugins: [
     "simple-import-sort",
     "react",
-    "react-hooks",
     "jsx-a11y",
     "import",
     "sonarjs",
@@ -20,7 +19,6 @@ module.exports = {
       extends: [
         "plugin:react/recommended",
         "plugin:react/jsx-runtime",
-        "plugin:react-hooks/recommended",
         "plugin:promise/recommended",
         "plugin:prettier/recommended",
         "plugin:sonarjs/recommended",
