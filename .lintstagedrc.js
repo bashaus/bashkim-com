@@ -3,4 +3,5 @@ module.exports = {
   "*.{js,ts,tsx}": ["eslint --fix"],
   "*.{css,scss}": ["stylelint --fix"],
   "*.svg": ["svgo"],
+  "*": ["prettier --write --ignore-unknown"],
 };
