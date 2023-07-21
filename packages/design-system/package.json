@@ -25,7 +25,7 @@
     "@storybook/addon-essentials": "7.1.0",
     "@storybook/core-server": "7.1.0",
     "@storybook/nextjs": "7.1.0",
-    "@swc/jest": "^0.2.26",
+    "@swc/jest": "^0.2.27",
     "@types/jest": "29.5.3",
     "@types/react-modal": "^3.16.0",
     "@types/react-slick": "^0.23.10",
