@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 
 import { generateCanonical } from "../../libraries/app/generateCanonical";
-import { NotFoundError } from "../../libraries/next/errors/NotFoundError";
 import { PortfolioPageLockup } from "../../lockups/PortfolioPage";
 import { getPrismicPage } from "./queries";
 
@@ -26,7 +26,7 @@ const PortfolioPage = async () => {
   const result = await getPrismicPage();
   const portfolioPage = result.data.portfolioPage.edges?.[0]?.node;
   if (!portfolioPage) {
-    throw new NotFoundError();
+    notFound();
   }
 
   return <PortfolioPageLockup portfolioPage={portfolioPage} />;

@@ -1,7 +1,7 @@
 import { Metadata } from "next";
+import { notFound } from "next/navigation";
 
 import { generateCanonical } from "../libraries/app/generateCanonical";
-import { NotFoundError } from "../libraries/next/errors/NotFoundError";
 import { HomePageLockup } from "../lockups/HomePage";
 import { getPrismicPage } from "./queries";
 
@@ -26,7 +26,7 @@ const HomePage = async () => {
   const result = await getPrismicPage();
   const homePage = result.data.homePage.edges?.[0]?.node;
   if (!homePage) {
-    throw new NotFoundError();
+    notFound();
   }
 
   return <HomePageLockup homePage={homePage} />;

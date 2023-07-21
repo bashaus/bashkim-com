@@ -1,7 +1,7 @@
 import { Metadata } from "next";
+import { notFound } from "next/navigation";
 
 import { generateCanonical } from "../../../libraries/app/generateCanonical";
-import { NotFoundError } from "../../../libraries/next/errors/NotFoundError";
 import { CaseStudyPageLockup } from "../../../lockups/CaseStudyPage";
 import { getPrismicBody, getPrismicPage, getPrismicSlugs } from "./queries";
 
@@ -18,7 +18,7 @@ export const generateMetadata = async ({ params }): Promise<Metadata> => {
   const result = await getPrismicPage(caseStudySlug);
   const caseStudyPage = result.data.caseStudyPage.edges?.[0]?.node;
   if (!caseStudyPage) {
-    throw new NotFoundError();
+    notFound();
   }
 
   return {
@@ -43,14 +43,14 @@ const CaseStudyPage = async ({ params }) => {
   ]);
 
   if (!caseStudyPageResult.data.caseStudyPage) {
-    throw new NotFoundError();
+    notFound();
   }
 
   const caseStudyPage = caseStudyPageResult.data.caseStudyPage.edges?.[0]?.node;
   const caseStudyBody = caseStudyBodyResult.data.caseStudyBody.edges?.[0]?.node;
 
   if (!caseStudyPage || !caseStudyBody) {
-    throw new NotFoundError();
+    notFound();
   }
 
   return (
