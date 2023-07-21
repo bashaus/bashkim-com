@@ -8,7 +8,11 @@ const codegenConfig: CodegenConfig = {
   schema: uri,
   customFetch: "codegen-prismic-fetch",
   generates: {
-    "dist/index.ts": {
+    "./dist/prismic.schema.gql": {
+      plugins: ["schema-ast"],
+    },
+
+    "./dist/index.ts": {
       documents: "src/**/*.gql",
       plugins: [
         "typescript",

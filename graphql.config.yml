@@ -1,0 +1,7 @@
+extensions:
+  languageService:
+    cacheSchemaFileForLookup: true
+    useSchemaFileDefinitions: true
+schema: "./packages/prismic-dal/dist/prismic.schema.gql"
+documents:
+  - "./packages/prismic-dal/src/**/*.gql"
