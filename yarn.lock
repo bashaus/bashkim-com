@@ -4923,10 +4923,10 @@
   resolved "https://registry.yarnpkg.com/@tsconfig/node16/-/node16-1.0.2.tgz#423c77877d0569db20e1fc80885ac4118314010e"
   integrity sha512-eZxlbI8GZscaGS7kkc/trHTT5xgrjH3/1n2JDwusC9iahPKWMRvRjJSAN5mCXviuTGQ/lHnhvv8Q1YTpnfz9gA==
 
-"@turbo/gen@^1.10.8":
-  version "1.10.8"
-  resolved "https://registry.yarnpkg.com/@turbo/gen/-/gen-1.10.8.tgz#95ed22de6ffe5f9390682aade0b288c68062e10b"
-  integrity sha512-USj3kBtIPi+fK+EB4/mmLdEesCVB75NQhubpygM8w30KtK3VLpc2JRuQi81SEiPCWqCjsdLy2KYKTco3e+5o2A==
+"@turbo/gen@^1.10.9":
+  version "1.10.9"
+  resolved "https://registry.yarnpkg.com/@turbo/gen/-/gen-1.10.9.tgz#67defe52c47bf625e315187202ce0c4a23903644"
+  integrity sha512-EQdg4NqN032+o2Wgj9lg49puijGc4tbgKjGjDOi8+rN/RqE9CUKxKtrfaTGdDjfdC1Uy8FaaKk7y1zYK3zIojg==
   dependencies:
     chalk "2.4.2"
     commander "^10.0.0"
@@ -13066,14 +13066,7 @@ minimatch@^5.0.1:
   dependencies:
     brace-expansion "^2.0.1"
 
-minimatch@^9.0.0:
-  version "9.0.1"
-  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-9.0.1.tgz#8a555f541cf976c622daf078bb28f29fb927c253"
-  integrity sha512-0jWhJpD/MdhPXwPuiRkCbfYfSKp2qnn2eOc279qI7f+osl/l+prKSrvhg157zSYvx/1nmgn2NqdT6k2Z7zSH9w==
-  dependencies:
-    brace-expansion "^2.0.1"
-
-minimatch@^9.0.1:
+minimatch@^9.0.0, minimatch@^9.0.1:
   version "9.0.3"
   resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-9.0.3.tgz#a6e00c3de44c3a542bfaae70abfc22420a6da825"
   integrity sha512-RHiac9mvaRw0x3AYRgDC1CxAP7HTcNrrECeA8YYJeWnpo+2Q5CegtZjaotWTWxDG3UeGA1coE05iH1mPjT/2mg==
