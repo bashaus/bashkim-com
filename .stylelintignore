@@ -3,6 +3,7 @@
 .terraform/
 coverage/
 dist/
+generated/
 node_modules/
 out/
 storybook-static/

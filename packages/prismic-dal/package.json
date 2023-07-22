@@ -7,7 +7,6 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@bashkim-com/tsconfig": "*",
     "@graphql-codegen/cli": "^4.0.1",
     "@graphql-codegen/schema-ast": "^4.0.0",
     "@graphql-codegen/typescript": "^4.0.1",

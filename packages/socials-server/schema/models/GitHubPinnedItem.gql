@@ -1,0 +1,5 @@
+type GitHubPinnedItem {
+  name: String!
+  description: String
+  url: String!
+}

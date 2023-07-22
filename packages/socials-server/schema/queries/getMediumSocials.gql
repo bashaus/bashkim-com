@@ -1,0 +1,7 @@
+type GetMediumSocialsResponse {
+  articles: [MediumArticle!]!
+}
+
+type Query {
+  getMediumSocials: GetMediumSocialsResponse!
+}

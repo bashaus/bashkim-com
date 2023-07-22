@@ -1,0 +1,16 @@
+{
+  "extends": "@bashkim-com/tsconfig/tsconfig.app.json",
+  "files": ["src/cache-manager-sqlite.d.ts"],
+  "include": [],
+  "compilerOptions": {
+    "jsx": "react-jsx"
+  },
+  "references": [
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.spec.json"
+    }
+  ]
+}

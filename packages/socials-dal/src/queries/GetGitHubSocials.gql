@@ -1,0 +1,9 @@
+query GetGitHubSocials {
+  getGitHubSocials {
+    pinnedItems {
+      name
+      description
+      url
+    }
+  }
+}

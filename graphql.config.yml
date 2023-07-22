@@ -2,6 +2,22 @@ extensions:
   languageService:
     cacheSchemaFileForLookup: true
     useSchemaFileDefinitions: true
-schema: "./packages/prismic-dal/dist/prismic.schema.gql"
-documents:
-  - "./packages/prismic-dal/src/**/*.gql"
+
+projects:
+  prismic-dal:
+    schema: "./packages/prismic-dal/dist/prismic.schema.gql"
+    documents:
+      - "./packages/prismic-dal/src/**/*.gql"
+
+  socials-dal:
+    schema: "./packages/socials-dal/dist/schema.gql"
+    documents:
+      - "./packages/socials-dal/src/**/*.gql"
+
+  socials-server:
+    schema: "./packages/socials-server/schema/**/*.gql"
+
+  socials-server-github:
+    schema: "./packages/socials-server/src/types/github.gql"
+    documents:
+      - "./packages/socials-server/src/app/services/github/**/*.gql"

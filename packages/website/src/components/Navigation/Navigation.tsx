@@ -1,11 +1,11 @@
 import { Navigation as DSNavigation } from "@bashkim-com/design-system";
 
+import { HeaderDesktopSocial } from "../HeaderDesktopSocial/HeaderDesktopSocial";
 import { NavigationPrimary } from "../NavigationPrimary/NavigationPrimary";
-import { NavigationSocial } from "../NavigationSocial/NavigationSocial";
 
 export const Navigation = () => (
   <DSNavigation>
     <NavigationPrimary />
-    <NavigationSocial />
+    <HeaderDesktopSocial />
   </DSNavigation>
 );

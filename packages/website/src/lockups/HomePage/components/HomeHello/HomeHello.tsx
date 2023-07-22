@@ -1,8 +1,8 @@
 import { PageHeaderPartial } from "@bashkim-com/design-system";
 import Link from "next/link";
 
-import PortfolioVector from "../../../../assets/vectors/icons/portfolio.svg";
-import GitHubVector from "../../../../assets/vectors/social/github.svg";
+import PortfolioVector from "../../../../assets/vectors/icons/Portfolio.svg";
+import GitHubVector from "../../../../assets/vectors/social/GitHub.svg";
 import BackgroundImage from "../../assets/background-image.jpg";
 import styles from "./HomeHello.module.scss";
 
@@ -18,18 +18,14 @@ export const HomeHello = () => (
             target="_blank"
             rel="noreferrer"
           >
-            <svg className={styles["LinkIcon"]}>
-              <GitHubVector />
-            </svg>
+            <GitHubVector className={styles["LinkIcon"]} />
             View code
           </a>
         </li>
 
         <li className={styles["Link"]}>
           <Link href="/portfolio" passHref>
-            <svg className={styles["LinkIcon"]}>
-              <PortfolioVector />
-            </svg>
+            <PortfolioVector className={styles["LinkIcon"]} />
             View portfolio
           </Link>
         </li>

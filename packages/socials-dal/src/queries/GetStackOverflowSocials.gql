@@ -1,0 +1,19 @@
+query GetStackOverflowSocials {
+  getStackOverflowSocials {
+    user {
+      badgeCounts {
+        gold
+        silver
+        bronze
+      }
+      reputation
+    }
+    posts {
+      id
+      link
+      score
+      title
+      type
+    }
+  }
+}

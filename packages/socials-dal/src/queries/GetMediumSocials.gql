@@ -1,0 +1,10 @@
+query GetMediumSocials {
+  getMediumSocials {
+    articles {
+      title
+      subtitle
+      url
+      claps
+    }
+  }
+}

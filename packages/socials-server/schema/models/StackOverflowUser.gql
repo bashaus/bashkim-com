@@ -1,0 +1,10 @@
+type StackOverflowUserBadgeCounts {
+  gold: Int!
+  silver: Int!
+  bronze: Int!
+}
+
+type StackOverflowUser {
+  reputation: Int!
+  badgeCounts: StackOverflowUserBadgeCounts
+}

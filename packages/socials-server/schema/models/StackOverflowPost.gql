@@ -1,0 +1,12 @@
+enum StackOverflowPostType {
+  ANSWER
+  QUESTION
+}
+
+type StackOverflowPost {
+  score: Int!
+  id: ID!
+  title: String!
+  link: String!
+  type: StackOverflowPostType!
+}

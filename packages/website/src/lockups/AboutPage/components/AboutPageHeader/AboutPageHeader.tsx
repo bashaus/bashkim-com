@@ -1,8 +1,8 @@
 import { PageHeaderPartial } from "@bashkim-com/design-system";
 import Image from "next/image";
 
+import PhotoImage from "../../../../assets/images/photo/photo@4x.jpg";
 import HeaderDesktopImage from "../../assets/header-desktop.jpg";
-import PhotoImage from "../../assets/profile/photo@4x.jpg";
 import styles from "./AboutPageHeader.module.scss";
 
 export const AboutPageHeader = () => (

@@ -23,6 +23,13 @@ custom:
     sitemap:
       baseHref: ${env:APP_SITEMAP_BASE_HREF, ''}
 
+    socials-server:
+      cacheDriver: ${env:APP_SOCIALS_SERVER_CACHE_DRIVER, ''}
+      githubToken: ${env:APP_SOCIALS_SERVER_GITHUB_TOKEN, ''}
+      port: ${env:APP_SOCIALS_SERVER_PORT, ''}
+      redisHost: ${env:APP_SOCIALS_SERVER_REDIS_HOST, ''}
+      stackOverflowUserId: ${env:APP_SOCIALS_SERVER_STACK_OVERFLOW_USER_ID, ''}
+
     prismic-webhooks:
       circleApiKey: ${env:APP_WEBHOOKS_CIRCLE_API_KEY, ''}
       circleProjectSlug: ${env:APP_WEBHOOKS_CIRCLE_PROJECT_SLUG, ''}
@@ -75,6 +82,33 @@ functions:
       - http:
           method: ANY
           path: /.well-known/sitemap/{any+}
+
+  SocialsServer:
+    handler: packages/socials-server/dist/lambda.handler
+    environment:
+      APP_SOCIALS_SERVER_CACHE_DRIVER: ${self:custom.app.socials-server.cacheDriver}
+      APP_SOCIALS_SERVER_GITHUB_TOKEN: ${self:custom.app.socials-server.githubToken}
+      APP_SOCIALS_SERVER_PORT: ${self:custom.app.socials-server.port}
+      APP_SOCIALS_SERVER_REDIS_HOST: ${self:custom.app.socials-server.redisHost}
+      APP_SOCIALS_SERVER_STACK_OVERFLOW_USER_ID: ${self:custom.app.socials-server.stackOverflowUserId}
+    jetpack:
+      roots:
+        - "packages/socials-server"
+      preInclude:
+        - "packages/socials-server/dist/**"
+    events:
+      - http:
+          method: ANY
+          path: /api/v1/socials-server
+      - http:
+          method: ANY
+          path: /api/v1/socials-server/{any+}
+    vpc:
+      securityGroupIds:
+        - bashkim-com-${self:custom.stage}-elasticache-subnet-group
+      subnetIds:
+        - bashkim-com-${self:custom.stage}-elasticache-vpc
+
   PrismicWebhooks:
     handler: packages/prismic-webhooks/dist/lambda.handler
     environment:

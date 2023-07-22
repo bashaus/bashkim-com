@@ -3,6 +3,7 @@ import "../libraries/sentry/init";
 import { PropsWithChildren } from "react";
 
 import { RootLayout } from "../layouts/RootLayout";
+import ThemeRegistry from "../libraries/material-ui/ThemeRegistry";
 
 export const metadata = {
   title: {
@@ -14,7 +15,9 @@ export const metadata = {
 const MyLayout = ({ children }: PropsWithChildren) => (
   <html lang="en" dir="ltr">
     <body>
-      <RootLayout>{children}</RootLayout>
+      <ThemeRegistry options={{ key: "mui" }}>
+        <RootLayout>{children}</RootLayout>
+      </ThemeRegistry>
     </body>
   </html>
 );

@@ -37,7 +37,9 @@ yarn-error.log*
 .vercel
 
 # Application
-dist/
+.cache/
 .serverless/
 .terraform/
+dist/
 storybook-static/
+generated/
