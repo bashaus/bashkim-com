@@ -17,7 +17,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "reset-css": "^5.0.1"
+    "reset-css": "^5.0.2"
   },
   "devDependencies": {
     "@swc/jest": "^0.2.26",
