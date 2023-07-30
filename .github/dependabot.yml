@@ -18,10 +18,6 @@ updates:
       - "bashaus"
     reviewers:
       - "bashaus"
-    ignore:
-      - dependency-name: "node-fetch"
-        versions:
-          - ">= 3"
 
   - package-ecosystem: "github-actions"
     directory: "/"

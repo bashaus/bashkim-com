@@ -1,6 +1,6 @@
 import { ApolloClient, InMemoryCache } from "@apollo/client";
 import { createPrismicLink } from "apollo-link-prismic";
-import fetch from "node-fetch";
+import fetch from "cross-fetch";
 
 export const prismicClient = new ApolloClient({
   link: createPrismicLink({
