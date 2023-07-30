@@ -1,3 +1,5 @@
+import fetch from "cross-fetch";
+
 import {
   StackOverflowPost,
   StackOverflowPostType,
@@ -66,6 +68,6 @@ export const getStackOverflowPosts = async (): Promise<
           post.post_type === "question"
             ? StackOverflowPostType.Question
             : StackOverflowPostType.Answer,
-      } as StackOverflowPost)
+      }) as StackOverflowPost,
   );
 };

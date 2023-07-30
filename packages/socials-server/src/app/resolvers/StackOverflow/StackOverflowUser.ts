@@ -1,3 +1,5 @@
+import fetch from "cross-fetch";
+
 import { StackOverflowUser } from "../../../types/socials-server";
 import { cacheStorePromise } from "../../services/cache";
 
