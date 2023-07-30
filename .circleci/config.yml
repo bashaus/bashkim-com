@@ -63,6 +63,7 @@ jobs:
           paths:
             - packages/prismic-webhooks/dist/
             - packages/sitemap/dist/
+            - packages/socials-server/dist/
             - packages/website/out/
 
       - save_cache:
