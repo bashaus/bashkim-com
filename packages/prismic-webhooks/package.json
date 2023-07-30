@@ -9,7 +9,7 @@
     "@bashkim-com/xray-lambda": "*",
     "@vendia/serverless-express": "^4.10.4",
     "express": "^4.18.2",
-    "node-fetch": "^2.6.12"
+    "node-fetch": "^3.3.2"
   },
   "devDependencies": {
     "@bashkim-com/tsconfig": "*",
