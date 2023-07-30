@@ -22,6 +22,8 @@ export const cacheStorePromise = (async () => {
       ? (APP_SOCIALS_SERVER_CACHE_DRIVER as CacheStoreDriver)
       : CacheStoreDriver.SQLITE; /* fallback */
 
+  console.log("cache driver", currentDriver);
+
   const driver = drivers[currentDriver];
   return driver();
 })();

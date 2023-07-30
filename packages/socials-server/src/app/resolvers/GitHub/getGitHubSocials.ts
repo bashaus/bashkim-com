@@ -10,7 +10,6 @@ const CACHE_KEY = "getGitHubData";
 
 const getGitHubCachedData = async () => {
   const diskCache = await cacheStorePromise;
-  console.log("diskCache", diskCache);
   const value = await diskCache.get(CACHE_KEY);
   return value ? (value as GetGitHubPinnedItemsQuery) : undefined;
 };
