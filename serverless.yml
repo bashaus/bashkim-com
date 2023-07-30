@@ -96,6 +96,7 @@ functions:
         - "packages/socials-server"
       preInclude:
         - "packages/socials-server/dist/**"
+        - "packages/socials-server/schema/**"
     events:
       - http:
           method: ANY

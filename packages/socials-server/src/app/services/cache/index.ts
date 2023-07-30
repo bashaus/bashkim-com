@@ -13,7 +13,7 @@ const drivers: Record<CacheStoreDriver, () => Promise<Cache<Store>>> = {
   [CacheStoreDriver.SQLITE]: createSqliteStore,
 };
 
-const { APP_SOCIALS_SERVER_CACHE_DRIVER = CacheStoreDriver.SQLITE } =
+const { APP_SOCIALS_SERVER_CACHE_DRIVER = CacheStoreDriver.REDIS } =
   process.env;
 
 export const cacheStorePromise = (async () => {
