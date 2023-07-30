@@ -105,9 +105,9 @@ functions:
           path: /api/v1/socials-server/{any+}
     vpc:
       securityGroupIds:
-        - bashkim-com-${self:custom.stage}-elasticache-subnet-group
+        - sg-01d85115e4890b3dc
       subnetIds:
-        - bashkim-com-${self:custom.stage}-elasticache-vpc
+        - subnet-063590adfb67f9b72
 
   PrismicWebhooks:
     handler: packages/prismic-webhooks/dist/lambda.handler
