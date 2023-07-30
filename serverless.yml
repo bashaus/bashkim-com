@@ -130,13 +130,3 @@ functions:
 
 resources:
   Description: bashkim-com
-  extensions:
-    PrismicWebhooksLogGroup:
-      Properties:
-        RetentionInDays: "3"
-    SocialsServer:
-      Properties:
-        RetentionInDays: "3"
-    SitemapLogGroup:
-      Properties:
-        RetentionInDays: "3"
