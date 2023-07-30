@@ -11,6 +11,7 @@
     "@apollo/client": "^3.7.17",
     "@apollo/server": "^4.8.1",
     "@as-integrations/aws-lambda": "2.0.1",
+    "@bashkim-com/xray-lambda": "*",
     "@graphql-tools/load-files": "^7.0.0",
     "@graphql-tools/merge": "^9.0.0",
     "cache-manager": "^5.2.3",
