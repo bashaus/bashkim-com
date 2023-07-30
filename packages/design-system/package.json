@@ -12,7 +12,7 @@
     "@bashkim-com/prismic-fixtures": "*",
     "@bashkim-com/prismic-helpers": "*",
     "@bashkim-com/style-guide": "*",
-    "@primer/octicons-react": "^19.4.0",
+    "@primer/octicons-react": "^19.5.0",
     "classnames": "^2.3.2",
     "gsap": "^3.12.2",
     "prismic-reactjs": "^1.3.4",
