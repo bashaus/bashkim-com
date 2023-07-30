@@ -188,12 +188,12 @@ workflows:
           requires:
             - approval
 
-      - deploy-website:
-          context: bashkim-com-prod
-          requires:
-            - approval
+      # - deploy-website:
+      #     context: bashkim-com-prod
+      #     requires:
+      #       - approval
 
-      - deploy-design-system:
-          context: bashkim-com-prod
-          requires:
-            - approval
+      # - deploy-design-system:
+      #     context: bashkim-com-prod
+      #     requires:
+      #       - approval
