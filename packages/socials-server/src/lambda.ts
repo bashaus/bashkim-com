@@ -1,5 +1,3 @@
-import "@bashkim-com/xray-lambda";
-
 import {
   handlers,
   startServerAndCreateLambdaHandler,
