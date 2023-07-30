@@ -1,3 +1,5 @@
+import "./aws-x-ray";
+
 import {
   handlers,
   startServerAndCreateLambdaHandler,
