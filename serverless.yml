@@ -1,7 +1,7 @@
 ---
 service: bashkim-com
 
-variablesResolutionMode: "20210326"
+# configValidationMode: error
 
 plugins:
   - serverless-plugin-tracing
@@ -23,10 +23,10 @@ custom:
     sitemap:
       baseHref: ${env:APP_SITEMAP_BASE_HREF, ''}
 
-    # socials-server:
-    #   githubToken: ${env:APP_SOCIALS_SERVER_GITHUB_TOKEN, ''}
-    #   redisHost: ${env:APP_SOCIALS_SERVER_REDIS_HOST, ''}
-    #   stackOverflowUserId: ${env:APP_SOCIALS_SERVER_STACK_OVERFLOW_USER_ID, ''}
+    socials-server:
+      githubToken: ${env:APP_SOCIALS_SERVER_GITHUB_TOKEN, ''}
+      redisHost: ${env:APP_SOCIALS_SERVER_REDIS_HOST, ''}
+      stackOverflowUserId: ${env:APP_SOCIALS_SERVER_STACK_OVERFLOW_USER_ID, ''}
 
     prismic-webhooks:
       circleApiKey: ${env:APP_WEBHOOKS_CIRCLE_API_KEY, ''}
@@ -44,15 +44,18 @@ provider:
   region: ${self:custom.region}
   memorySize: 512
   timeout: 15
-  lambdaHashingVersion: "20201221"
-  tracing: true
-  iamRoleStatements:
-    - Effect: "Allow"
-      Action:
-        - "xray:PutTraceSegments"
-        - "xray:PutTelemetryRecords"
-      Resource:
-        - "*"
+  tracing:
+    apiGateway: true
+    lambda: true
+  iam:
+    role:
+      statements:
+        - Effect: "Allow"
+          Action:
+            - "xray:PutTraceSegments"
+            - "xray:PutTelemetryRecords"
+          Resource:
+            - "*"
   environment:
     APP_ENV: ${self:custom.stage}
     NODE_ENV: ${self:custom.stage}
@@ -81,32 +84,32 @@ functions:
           method: ANY
           path: /.well-known/sitemap/{any+}
 
-  # SocialsServer:
-  #   handler: packages/socials-server/dist/lambda.handler
-  #   environment:
-  #     APP_SOCIALS_SERVER_CACHE_DRIVER: "redis"
-  #     APP_SOCIALS_SERVER_GITHUB_TOKEN: ${self:custom.app.socials-server.githubToken}
-  #     APP_SOCIALS_SERVER_REDIS_HOST: ${self:custom.app.socials-server.redisHost}
-  #     APP_SOCIALS_SERVER_STACK_OVERFLOW_USER_ID: ${self:custom.app.socials-server.stackOverflowUserId}
-  #   jetpack:
-  #     roots:
-  #       - "packages/socials-server"
-  #     preInclude:
-  #       - "packages/socials-server/dist/**"
-  #       - "packages/socials-server/schema/**"
-  #   events:
-  #     - http:
-  #         method: ANY
-  #         path: /api/v1/socials-server
-  #     - http:
-  #         method: ANY
-  #         path: /api/v1/socials-server/{any+}
-  #   vpc:
-  #     securityGroupIds:
-  #       - sg-01d85115e4890b3dc
-  #     subnetIds:
-  #       - subnet-070077b5cb19f7dc4 # private
-  #       - subnet-01b6c34b3669e7a0b # public
+  SocialsServer:
+    handler: packages/socials-server/dist/lambda.handler
+    environment:
+      APP_SOCIALS_SERVER_CACHE_DRIVER: "redis"
+      APP_SOCIALS_SERVER_GITHUB_TOKEN: ${self:custom.app.socials-server.githubToken}
+      APP_SOCIALS_SERVER_REDIS_HOST: ${self:custom.app.socials-server.redisHost}
+      APP_SOCIALS_SERVER_STACK_OVERFLOW_USER_ID: ${self:custom.app.socials-server.stackOverflowUserId}
+    jetpack:
+      roots:
+        - "packages/socials-server"
+      preInclude:
+        - "packages/socials-server/dist/**"
+        - "packages/socials-server/schema/**"
+    events:
+      - http:
+          method: ANY
+          path: /api/v1/socials-server
+      - http:
+          method: ANY
+          path: /api/v1/socials-server/{any+}
+    vpc:
+      securityGroupIds:
+        - sg-01d85115e4890b3dc
+      subnetIds:
+        - subnet-070077b5cb19f7dc4 # private
+        - subnet-01b6c34b3669e7a0b # public
 
   PrismicWebhooks:
     handler: packages/prismic-webhooks/dist/lambda.handler
