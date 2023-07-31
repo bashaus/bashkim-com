@@ -106,7 +106,7 @@ functions:
           path: /api/v1/socials-server/{any+}
     vpc:
       securityGroupIds:
-        - sg-01d85115e4890b3dc
+        - sg-0429a0cf51ce10aef
       subnetIds:
         - subnet-070077b5cb19f7dc4 # private
         - subnet-01b6c34b3669e7a0b # public
