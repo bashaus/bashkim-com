@@ -1,7 +1,7 @@
 resource "aws_eip" "nat" {
-  depends_on = [aws_internet_gateway.internet_gateway]
+  depends_on = [aws_internet_gateway.igw]
 
   tags = {
-    Name = "${var.stack_name}-elasticache-nat-elastic-ip"
+    Name = "${var.stack_name}-nat-elastic-ip"
   }
 }

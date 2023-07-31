@@ -1,4 +1,4 @@
-resource "aws_elasticache_subnet_group" "elasticache_subnet_group" {
+resource "aws_elasticache_subnet_group" "esg" {
   name       = "${var.stack_name}-elasticache-subnet-group"
-  subnet_ids = [aws_subnet.elasticache_subnet.id]
+  subnet_ids = [aws_subnet.private.id]
 }
