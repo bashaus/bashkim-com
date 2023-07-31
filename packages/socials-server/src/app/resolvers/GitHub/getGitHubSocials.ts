@@ -20,12 +20,20 @@ const setGitHubCachedData = async (value: GetGitHubPinnedItemsQuery) => {
 };
 
 const getGitHubApiData = async (): Promise<GetGitHubPinnedItemsQuery> => {
-  const result = await apolloGitHubClient.query<GetGitHubPinnedItemsQuery>({
-    query: GetGitHubPinnedItemsDocument,
-    variables: {},
-  });
+  console.log("getGitHubApiData");
 
-  return result.data;
+  try {
+    const result = await apolloGitHubClient.query<GetGitHubPinnedItemsQuery>({
+      query: GetGitHubPinnedItemsDocument,
+      variables: {},
+    });
+
+    console.log("getGitHubApiData.success", result.data);
+    return result.data;
+  } catch (err) {
+    console.error("getGitHubApiData.failed", err);
+    throw err;
+  }
 };
 
 const getGitHubData = async () => {
