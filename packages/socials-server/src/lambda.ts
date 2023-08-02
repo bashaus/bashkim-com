@@ -1,4 +1,4 @@
-import "./aws-x-ray";
+import "@bashkim-com/xray-lambda";
 
 import {
   handlers,
@@ -9,5 +9,5 @@ import { app } from "./app";
 
 export const handler = startServerAndCreateLambdaHandler(
   app,
-  handlers.createAPIGatewayProxyEventRequestHandler(),
+  handlers.createAPIGatewayProxyEventV2RequestHandler(),
 );

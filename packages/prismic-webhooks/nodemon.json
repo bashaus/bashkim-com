@@ -1,0 +1,7 @@
+{
+  "$schema": "https://json.schemastore.org/nodemon.json",
+  "watch": ["src/**/*.*"],
+  "ext": "js,ts",
+  "exec": "ts-node ./src/local.ts",
+  "delay": 100
+}

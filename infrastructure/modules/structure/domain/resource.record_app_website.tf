@@ -1,4 +1,4 @@
-resource "aws_route53_record" "record_app_website" {
+resource "aws_route53_record" "record_website" {
   zone_id = aws_route53_zone.zone.id
   name    = "www.${var.domain_name}."
   type    = "A"

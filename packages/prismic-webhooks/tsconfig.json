@@ -1,10 +1,13 @@
 {
   "extends": "@bashkim-com/tsconfig/tsconfig.app.json",
+  "compilerOptions": {
+    "lib": ["dom"]
+  },
   "files": [],
   "include": [],
   "references": [
     {
-      "path": "./tsconfig.app.json"
+      "path": "./tsconfig.build.json"
     },
     {
       "path": "./tsconfig.spec.json"

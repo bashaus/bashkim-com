@@ -11,7 +11,7 @@ resource "aws_s3_bucket_website_configuration" "bucket_website_configuration" {
 
   routing_rules = jsonencode(
     yamldecode(
-      file("${path.module}/resource.bucket_website_configuration.routing_rules.yml")
+      file("${path.module}/data.bucket_routing_rules.yml")
     )
   )
 }

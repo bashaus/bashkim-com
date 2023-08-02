@@ -9,14 +9,14 @@ import { apolloGitHubClient } from "../../services/github/client";
 const CACHE_KEY = "getGitHubData";
 
 const getGitHubCachedData = async () => {
-  const diskCache = await cacheStorePromise;
-  const value = await diskCache.get(CACHE_KEY);
+  const cache = await cacheStorePromise;
+  const value = await cache.get(CACHE_KEY);
   return value ? (value as GetGitHubPinnedItemsQuery) : undefined;
 };
 
 const setGitHubCachedData = async (value: GetGitHubPinnedItemsQuery) => {
-  const diskCache = await cacheStorePromise;
-  return diskCache.set(CACHE_KEY, value);
+  const cache = await cacheStorePromise;
+  return cache.set(CACHE_KEY, value);
 };
 
 const getGitHubApiData = async (): Promise<GetGitHubPinnedItemsQuery> => {

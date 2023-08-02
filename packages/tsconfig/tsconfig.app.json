@@ -3,6 +3,7 @@
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
     "jsx": "react-jsx",
+    "lib": ["dom"],
     "module": "commonjs",
     "types": ["node"],
     "declaration": false,

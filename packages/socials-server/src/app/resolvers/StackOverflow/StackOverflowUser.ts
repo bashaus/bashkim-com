@@ -1,4 +1,4 @@
-import fetch from "cross-fetch";
+import fetch from "node-fetch";
 
 import { StackOverflowUser } from "../../../types/socials-server";
 import { cacheStorePromise } from "../../services/cache";
@@ -6,14 +6,14 @@ import { cacheStorePromise } from "../../services/cache";
 const CACHE_KEY = "getStackOverflowUserData";
 
 const getStackOverflowUserCachedData = async () => {
-  const diskCache = await cacheStorePromise;
-  const value = await diskCache.get(CACHE_KEY);
+  const cache = await cacheStorePromise;
+  const value = await cache.get(CACHE_KEY);
   return value ? (value as any) : undefined;
 };
 
 const setStackOverflowCachedData = async (value: any) => {
-  const diskCache = await cacheStorePromise;
-  return diskCache.set(CACHE_KEY, value);
+  const cache = await cacheStorePromise;
+  return cache.set(CACHE_KEY, value);
 };
 
 const getStackOverflowUserApiData = async (): Promise<any> => {

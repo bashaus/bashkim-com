@@ -1,16 +1,24 @@
-import fetch from "cross-fetch";
-
 export class CircleCiApiKeyUndefinedError extends Error {
   statusCode = 500;
-  override message = "Circle CI API Key undefined";
+
+  constructor() {
+    super("Circle CI API Key undefined");
+  }
 }
 
 export class CircleCiProjectSlugUndefinedError extends Error {
   statusCode = 500;
-  override message = "Circle CI Project Slug undefined";
+
+  constructor() {
+    super("Circle CI Project Slug undefined");
+  }
 }
 
-export class CircleCiTriggerPipelineError extends Error {}
+export class CircleCiTriggerPipelineError extends Error {
+  constructor() {
+    super("Circle CI Trigger Pipeline Error");
+  }
+}
 
 export const triggerCircleCiPipeline = async (
   branch = "main",
