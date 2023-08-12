@@ -8,7 +8,7 @@
     "dev": "nodemon"
   },
   "dependencies": {
-    "@apollo/client": "^3.7.17",
+    "@apollo/client": "^3.8.1",
     "@apollo/server": "^4.9.1",
     "@as-integrations/aws-lambda": "3.0.0",
     "@graphql-tools/load-files": "^7.0.0",
