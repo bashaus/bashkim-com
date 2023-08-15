@@ -23,7 +23,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "aws-sdk": "^2.1435.0",
+    "aws-sdk": "^2.1437.0",
     "core-js": "^3.32.0",
     "graphql": "^16.7.1",
     "graphql-tag": "^2.12.6",
