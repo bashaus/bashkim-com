@@ -154,10 +154,12 @@ workflows:
                 - main
 
       - build-applications:
+          context: bashkim-com-prod
           requires:
             - dependencies
 
       - build-design-system:
+          context: bashkim-com-prod
           requires:
             - dependencies
 
