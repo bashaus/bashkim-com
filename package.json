@@ -53,7 +53,7 @@
     "lint-staged": "^13.2.3",
     "postcss": "^8.4.28",
     "postcss-scss": "^4.0.6",
-    "prettier": "3.0.1",
+    "prettier": "3.0.2",
     "sass": "1.65.1",
     "serverless": "^3.34.0",
     "serverless-jetpack": "^0.11.2",
