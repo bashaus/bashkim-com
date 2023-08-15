@@ -24,7 +24,7 @@
     "@storybook/addon-a11y": "7.1.1",
     "@storybook/addon-essentials": "7.1.1",
     "@storybook/core-server": "7.1.1",
-    "@storybook/nextjs": "7.1.1",
+    "@storybook/nextjs": "7.3.0",
     "@swc/jest": "^0.2.29",
     "@types/jest": "29.5.3",
     "@types/react-modal": "^3.16.0",
