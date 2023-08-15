@@ -100,23 +100,6 @@ jobs:
           path: ./packages/design-system/design-system.zip
           destination: design-system.zip
 
-  deploy-serverless:
-    executor: exec-node
-    steps:
-      - checkout
-
-      - restore_cache:
-          keys:
-            - yarn-lock-{{ checksum "yarn.lock" }}
-
-      - attach_workspace:
-          at: ./
-
-      - run:
-          name: serverless deploy
-          command: |
-            yarn serverless deploy
-
   deploy-website:
     executor: exec-python
     steps:
@@ -183,11 +166,6 @@ workflows:
           requires:
             - build-applications
             - build-design-system
-
-      - deploy-serverless:
-          context: bashkim-com-prod
-          requires:
-            - approval
 
       - deploy-website:
           context: bashkim-com-prod
