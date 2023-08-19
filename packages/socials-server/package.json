@@ -28,7 +28,7 @@
     "@graphql-codegen/typescript": "^4.0.1",
     "@graphql-codegen/typescript-operations": "^4.0.1",
     "@graphql-codegen/typescript-react-apollo": "^3.3.7",
-    "@types/node": "^20.5.0",
+    "@types/node": "^20.5.1",
     "dotenv": "^16.3.1",
     "nodemon": "^3.0.1",
     "ts-node": "^10.9.1",
