@@ -1,12 +1,16 @@
+import { dirname, join } from "path";
 import type { StorybookConfig } from "@storybook/types";
 const config: StorybookConfig = {
-  addons: ["@storybook/addon-a11y", "@storybook/addon-essentials"],
+  addons: [
+    getAbsolutePath("@storybook/addon-a11y"),
+    getAbsolutePath("@storybook/addon-essentials"),
+  ],
   core: {
     disableTelemetry: true,
     enableCrashReports: false,
   },
   framework: {
-    name: "@storybook/nextjs",
+    name: getAbsolutePath("@storybook/nextjs"),
     options: {},
   },
   stories: [
@@ -21,3 +25,7 @@ const config: StorybookConfig = {
   },
 };
 export default config;
+
+function getAbsolutePath(value: string): any {
+  return dirname(require.resolve(join(value, "package.json")));
+}
