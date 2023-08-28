@@ -6,15 +6,6 @@ module "lambda" {
   function_name     = "prismic-webhooks"
   iam_role          = var.iam_role
 
-  vpc_security_group_ids = [
-    var.vpc_security_group_id
-  ]
-
-  vpc_subnet_ids = [
-    var.vpc_subnet_public_id,
-    var.vpc_subnet_private_id
-  ]
-
   env = {
     APP_WEBHOOKS_CIRCLE_API_KEY      = "",
     APP_WEBHOOKS_CIRCLE_PROJECT_SLUG = "",

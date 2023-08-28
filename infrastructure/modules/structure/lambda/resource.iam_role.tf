@@ -1,6 +1,6 @@
 data "aws_iam_policy_document" "assume_role_policy" {
   statement {
-    effect = "Allow"
+    effect  = "Allow"
     actions = ["sts:AssumeRole"]
 
     principals {
@@ -11,12 +11,12 @@ data "aws_iam_policy_document" "assume_role_policy" {
 }
 
 resource "aws_iam_role_policy_attachment" "AWSLambdaVPCAccessExecutionRole" {
-    role       = aws_iam_role.lambda.name
-    policy_arn = "arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole"
+  role       = aws_iam_role.lambda.name
+  policy_arn = "arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole"
 }
 
 resource "aws_iam_role" "lambda" {
-  name = "${var.stack_name}-lambda-role"
+  name               = "${var.stack_name}-lambda-role"
   assume_role_policy = data.aws_iam_policy_document.assume_role_policy.json
 }
 

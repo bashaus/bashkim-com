@@ -15,18 +15,8 @@ variable "iam_role" {
 }
 
 variable "log_retention_days" {
-  type = number
+  type    = number
   default = 3
-}
-
-variable "vpc_security_group_ids" {
-  type = list(string)
-  default = null
-}
-
-variable "vpc_subnet_ids" {
-  type = list(string)
-  default = null
 }
 
 variable "env" {

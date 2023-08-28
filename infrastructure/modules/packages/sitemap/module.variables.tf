@@ -15,18 +15,6 @@ variable "iam_role" {
 }
 
 variable "base_href" {
-  type = string
+  type    = string
   default = "https://www.bashkim.com"
-}
-
-variable "vpc_security_group_id" {
-  type = string
-}
-
-variable "vpc_subnet_public_id" {
-  type = string
-}
-
-variable "vpc_subnet_private_id" {
-  type = string
 }

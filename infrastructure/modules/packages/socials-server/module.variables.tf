@@ -13,15 +13,3 @@ variable "api_execution_arn" {
 variable "iam_role" {
   type = string
 }
-
-variable "vpc_security_group_id" {
-  type = string
-}
-
-variable "vpc_subnet_public_id" {
-  type = string
-}
-
-variable "vpc_subnet_private_id" {
-  type = string
-}
