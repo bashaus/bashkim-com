@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "@storybook/addon-a11y": "7.3.2",
-    "@storybook/addon-essentials": "7.3.2",
+    "@storybook/addon-essentials": "7.4.0",
     "@storybook/core-server": "7.3.2",
     "@storybook/nextjs": "7.3.2",
     "@swc/jest": "^0.2.29",
