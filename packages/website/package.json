@@ -20,7 +20,7 @@
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.14.6",
     "@mui/material": "^5.14.6",
-    "@primer/octicons-react": "^19.6.0",
+    "@primer/octicons-react": "^19.7.0",
     "@sentry/browser": "7.65.0",
     "@xstate/react": "^3.2.2",
     "apollo-link-prismic": "^1.1.2",
