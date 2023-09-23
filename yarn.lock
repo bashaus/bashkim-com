@@ -4559,16 +4559,16 @@
     "@sentry/types" "7.69.0"
     tslib "^2.4.1 || ^1.9.3"
 
-"@serverless/dashboard-plugin@^7.0.1":
-  version "7.0.1"
-  resolved "https://registry.yarnpkg.com/@serverless/dashboard-plugin/-/dashboard-plugin-7.0.1.tgz#eeeec98e591ec58a85ede8a94c6e4fa07eee0662"
-  integrity sha512-jibw3yqKU0s/VoRmetp/nlI5qQIcMWALYBlSpHgajBXUWo80mm75bRlZZxFPeZtj/+yQBLDdoKW2C3a+dYZf0g==
+"@serverless/dashboard-plugin@^7.0.2":
+  version "7.0.3"
+  resolved "https://registry.yarnpkg.com/@serverless/dashboard-plugin/-/dashboard-plugin-7.0.3.tgz#fa7802129c56a07c18d39d0f7da34174ec10c778"
+  integrity sha512-rnVMyD4+IOFbsK4dxt541YaS0Lpia6DHXV01AFA5YnAwzVBlX4gSxx9aIQPkpx0PvB1A1S3rPgx/gfACWmdbgQ==
   dependencies:
     "@aws-sdk/client-cloudformation" "^3.410.0"
     "@aws-sdk/client-sts" "^3.410.0"
     "@serverless/event-mocks" "^1.1.1"
-    "@serverless/platform-client" "^4.3.2"
-    "@serverless/utils" "^6.8.2"
+    "@serverless/platform-client" "^4.4.0"
+    "@serverless/utils" "^6.14.0"
     child-process-ext "^3.0.1"
     chokidar "^3.5.3"
     flat "^5.0.2"
@@ -4596,7 +4596,7 @@
     "@types/lodash" "^4.14.123"
     lodash "^4.17.11"
 
-"@serverless/platform-client@^4.3.2", "@serverless/platform-client@^4.4.0":
+"@serverless/platform-client@^4.4.0":
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/@serverless/platform-client/-/platform-client-4.4.0.tgz#8a1c76ceface3eef6792a35c3e5b295f68beb967"
   integrity sha512-urL7SNefRqC2EOFDcpvm8fyn/06B5yXWneKpyGw7ylGt0Qr9JHZCB9TiUeTkIpPUNz0jTvKUaJ2+M/JNEiaVIA==
@@ -4617,10 +4617,10 @@
     traverse "^0.6.6"
     ws "^7.5.3"
 
-"@serverless/utils@^6.13.1", "@serverless/utils@^6.8.2":
-  version "6.13.1"
-  resolved "https://registry.yarnpkg.com/@serverless/utils/-/utils-6.13.1.tgz#bff40cbe82b4337185ab52b6f57bfe647b037700"
-  integrity sha512-yokWzlsIaAd3TWzNgIDz6l8HZmtYZs9caaLuheZ0IiZ/bDWSCLBWn84HKkdWZOmFnYxejyPNJEOwE59mtSR3Ow==
+"@serverless/utils@^6.13.1", "@serverless/utils@^6.14.0":
+  version "6.15.0"
+  resolved "https://registry.yarnpkg.com/@serverless/utils/-/utils-6.15.0.tgz#499255c517581b1edd8c2bfedbcf61cc7aaa7539"
+  integrity sha512-7eDbqKv/OBd11jjdZjUwFGN8sHWkeUqLeHXHQxQ1azja2IM7WIH+z/aLgzR6LhB3/MINNwtjesDpjGqTMj2JKQ==
   dependencies:
     archive-type "^4.0.0"
     chalk "^4.1.2"
@@ -17770,12 +17770,12 @@ serverless-plugin-tracing@^2.0.0:
   resolved "https://registry.yarnpkg.com/serverless-plugin-tracing/-/serverless-plugin-tracing-2.0.0.tgz#df6b8b3166ac9bb70a37c7fc875014b2369158f6"
   integrity sha512-cndG6QC5ZFHSwmylOqxOzy/M9TAKtUl+wnpqdmqZ5sFfWjcUi4BLV7MkQnsIdKPKJcCv19tpNONYmGPmw6tXIg==
 
-serverless@^3.35.0:
-  version "3.35.0"
-  resolved "https://registry.yarnpkg.com/serverless/-/serverless-3.35.0.tgz#a7c9f375625601253c8bc3e88e1ac20e30d518f2"
-  integrity sha512-Hd8nvJVyx7qq/sTde5bNW7IofAbwkKYKviqulfbmhqhV3kchL2HO7J1dBSwMZY2abHguIuNYofUAdDceYB+2Qw==
+serverless@^3.35.2:
+  version "3.35.2"
+  resolved "https://registry.yarnpkg.com/serverless/-/serverless-3.35.2.tgz#8f0e24ba0814ffb9a3a5937fbd3dbea9802f44be"
+  integrity sha512-1RZ4eHl2OaGG2Rzw0l0ZD3byCk2JMCL9/+btzGQGQruuQWu9HwRZGJI7l4A2ghW3Mu6DVwLYLfceNpmEWBZoag==
   dependencies:
-    "@serverless/dashboard-plugin" "^7.0.1"
+    "@serverless/dashboard-plugin" "^7.0.2"
     "@serverless/platform-client" "^4.4.0"
     "@serverless/utils" "^6.13.1"
     abort-controller "^3.0.0"
