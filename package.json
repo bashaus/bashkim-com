@@ -44,7 +44,7 @@
     "@turbo/gen": "^1.10.16",
     "@types/jquery": "^3.5.24",
     "@types/node": "^20.8.7",
-    "@types/react": "^18.2.30",
+    "@types/react": "^18.2.31",
     "@types/react-dom": "^18.2.14",
     "css-loader": "^6.8.1",
     "encoding": "^0.1.13",
