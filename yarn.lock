@@ -4541,10 +4541,10 @@
     "@sentry/types" "7.74.1"
     tslib "^2.4.1 || ^1.9.3"
 
-"@serverless/dashboard-plugin@^7.0.2":
-  version "7.0.3"
-  resolved "https://registry.yarnpkg.com/@serverless/dashboard-plugin/-/dashboard-plugin-7.0.3.tgz#fa7802129c56a07c18d39d0f7da34174ec10c778"
-  integrity sha512-rnVMyD4+IOFbsK4dxt541YaS0Lpia6DHXV01AFA5YnAwzVBlX4gSxx9aIQPkpx0PvB1A1S3rPgx/gfACWmdbgQ==
+"@serverless/dashboard-plugin@^7.1.0":
+  version "7.1.0"
+  resolved "https://registry.yarnpkg.com/@serverless/dashboard-plugin/-/dashboard-plugin-7.1.0.tgz#575a2f87277c08325f27206fb5dbc78a06fccfb6"
+  integrity sha512-mAiTU2ERsDHdCrXJa/tihh/r+8ZwSuYYBqln3SkwuBD/49ct9QrK7S00cpiqFoY/geMFlHpOkriGzCPz6UP/rw==
   dependencies:
     "@aws-sdk/client-cloudformation" "^3.410.0"
     "@aws-sdk/client-sts" "^3.410.0"
@@ -18082,12 +18082,12 @@ serverless-plugin-tracing@^2.0.0:
   resolved "https://registry.yarnpkg.com/serverless-plugin-tracing/-/serverless-plugin-tracing-2.0.0.tgz#df6b8b3166ac9bb70a37c7fc875014b2369158f6"
   integrity sha512-cndG6QC5ZFHSwmylOqxOzy/M9TAKtUl+wnpqdmqZ5sFfWjcUi4BLV7MkQnsIdKPKJcCv19tpNONYmGPmw6tXIg==
 
-serverless@^3.35.2:
-  version "3.35.2"
-  resolved "https://registry.yarnpkg.com/serverless/-/serverless-3.35.2.tgz#8f0e24ba0814ffb9a3a5937fbd3dbea9802f44be"
-  integrity sha512-1RZ4eHl2OaGG2Rzw0l0ZD3byCk2JMCL9/+btzGQGQruuQWu9HwRZGJI7l4A2ghW3Mu6DVwLYLfceNpmEWBZoag==
+serverless@^3.36.0:
+  version "3.36.0"
+  resolved "https://registry.yarnpkg.com/serverless/-/serverless-3.36.0.tgz#bd7b030299b6ce7f75cb405793c6e2f1c1354a83"
+  integrity sha512-VY7UzP4u1/yuTNpF2Wssrru16qhhReLCjgL2oeHCvhujxPyTFv9TQGSlLhaT0ZUCXhRBphwVwITTRopo6NSUgA==
   dependencies:
-    "@serverless/dashboard-plugin" "^7.0.2"
+    "@serverless/dashboard-plugin" "^7.1.0"
     "@serverless/platform-client" "^4.4.0"
     "@serverless/utils" "^6.13.1"
     abort-controller "^3.0.0"
@@ -18265,12 +18265,7 @@ signal-exit@^3.0.0, signal-exit@^3.0.2, signal-exit@^3.0.3, signal-exit@^3.0.7:
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.7.tgz#a9a1767f8af84155114eaabd73f99273c8f59ad9"
   integrity sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==
 
-signal-exit@^4.0.1:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-4.0.1.tgz#96a61033896120ec9335d96851d902cc98f0ba2a"
-  integrity sha512-uUWsN4aOxJAS8KOuf3QMyFtgm1pkb6I+KRZbRF/ghdf5T7sM+B1lLLzPDxswUjkmHyxQAVzEgG35E3NzDM9GVw==
-
-signal-exit@^4.1.0:
+signal-exit@^4.0.1, signal-exit@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-4.1.0.tgz#952188c1cbd546070e2dd20d0f41c0ae0530cb04"
   integrity sha512-bzyZ1e88w9O1iNJbKnOlvYTrWPDl46O1bG0D3XInv+9tkPrxrN8jUUTiFlDkkmKWgn1M6CfIA13SuGqOa9Korw==
