@@ -22,7 +22,7 @@
     "@mui/material": "^5.15.1",
     "@primer/octicons-react": "^19.8.0",
     "@sentry/browser": "7.90.0",
-    "@xstate/react": "^3.2.2",
+    "@xstate/react": "^4.0.1",
     "apollo-link-prismic": "^1.1.2",
     "js-cookie": "^3.0.5",
     "next": "^13.5.6",
