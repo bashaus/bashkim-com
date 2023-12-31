@@ -1,35 +1,48 @@
 import { assign, createMachine } from "xstate";
 
-import { PromiseMachineAction } from "./PromiseMachine.action";
-import { initialPromiseMachineContext } from "./PromiseMachine.context";
-import { PromiseMachineService } from "./PromiseMachine.service";
+import {
+  PromiseMachineActor,
+  PromiseMachineActorsType,
+} from "./PromiseMachine.actors";
+import {
+  initialPromiseMachineContext,
+  PromiseMachineContextType,
+} from "./PromiseMachine.context";
+import {
+  PromiseMachineEvent,
+  PromiseMachineEventsType,
+} from "./PromiseMachine.events";
 import { PromiseMachineState } from "./PromiseMachine.state";
 
 export const promiseMachine = createMachine({
   id: "PromiseMachine",
   initial: PromiseMachineState.IDLE,
   context: initialPromiseMachineContext,
-  predictableActionArguments: true,
+  types: {} as {
+    context: PromiseMachineContextType;
+    events: PromiseMachineEventsType;
+    actors: PromiseMachineActorsType;
+  },
   states: {
     [PromiseMachineState.IDLE]: {
       on: {
-        [PromiseMachineAction.FETCH]: PromiseMachineState.LOADING,
+        [PromiseMachineEvent.FETCH]: PromiseMachineState.LOADING,
       },
     },
 
     [PromiseMachineState.LOADING]: {
       invoke: {
-        src: PromiseMachineService.FETCH,
+        src: PromiseMachineActor.FETCH,
         onDone: {
           target: PromiseMachineState.SUCCESS,
           actions: assign({
-            response: (_, event) => event.data,
+            response: ({ event }) => event.output,
           }),
         },
         onError: {
           target: PromiseMachineState.FAILURE,
           actions: assign({
-            response: () => "",
+            response: () => null,
           }),
         },
       },
@@ -41,10 +54,10 @@ export const promiseMachine = createMachine({
 
     [PromiseMachineState.FAILURE]: {
       on: {
-        [PromiseMachineAction.RETRY]: {
+        [PromiseMachineEvent.RETRY]: {
           target: PromiseMachineState.LOADING,
           actions: assign({
-            retries: (context /*, event */) => context.retries + 1,
+            retries: ({ context }) => context.retries + 1,
           }),
         },
       },
