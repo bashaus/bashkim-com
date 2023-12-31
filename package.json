@@ -20,7 +20,7 @@
     "prepare": "husky install",
     "storybook:build": "turbo run storybook:build",
     "storybook:dev": "turbo run storybook:dev",
-    "test": "jest"
+    "test": "jest --passWithNoTests"
   },
   "dependencies": {
     "aws-sdk": "^2.1528.0",

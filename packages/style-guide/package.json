@@ -14,7 +14,7 @@
   },
   "main": "./src/index.scss",
   "scripts": {
-    "test": "jest"
+    "test": "jest --passWithNoTests"
   },
   "dependencies": {
     "reset-css": "^5.0.2"

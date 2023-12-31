@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "main": "./src/index",
   "scripts": {
-    "test": "jest"
+    "test": "jest --passWithNoTests"
   },
   "dependencies": {
     "@bashkim-com/prismic-dal": "*"

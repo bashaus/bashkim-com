@@ -6,7 +6,7 @@
     "dev": "next dev",
     "lint": "next lint",
     "start": "next start",
-    "test": "jest"
+    "test": "jest --passWithNoTests"
   },
   "dependencies": {
     "@apollo/client": "^3.8.8",

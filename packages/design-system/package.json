@@ -5,7 +5,7 @@
   "scripts": {
     "storybook:build": "storybook build",
     "storybook:dev": "storybook dev",
-    "test": "jest"
+    "test": "jest --passWithNoTests"
   },
   "dependencies": {
     "@bashkim-com/prismic-dal": "*",
