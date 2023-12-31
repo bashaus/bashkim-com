@@ -1,11 +1,12 @@
 import { useGetStackOverflowSocialsLazyQuery } from "@bashkim-com/socials-dal";
 import { useMachine } from "@xstate/react";
 import { useCallback } from "react";
+import { fromPromise } from "xstate";
 
 import { socialsClient } from "../../libraries/socials/SocialsClient";
-import { PromiseMachineAction } from "../../machines/Promise/PromiseMachine.action";
+import { PromiseMachineActor } from "../../machines/Promise/PromiseMachine.actors";
+import { PromiseMachineFetchEvent } from "../../machines/Promise/PromiseMachine.events";
 import { promiseMachine } from "../../machines/Promise/PromiseMachine.machine";
-import { PromiseMachineService } from "../../machines/Promise/PromiseMachine.service";
 import { PromiseMachineState } from "../../machines/Promise/PromiseMachine.state";
 
 export const useSocialMenuStackOverflowViewModel = () => {
@@ -13,18 +14,20 @@ export const useSocialMenuStackOverflowViewModel = () => {
     client: socialsClient,
   });
 
-  const [promiseMachineState, promiseMachineSend] = useMachine(promiseMachine, {
-    services: {
-      [PromiseMachineService.FETCH]: async (/* _, e */) => {
-        const result = await getSocials();
-        return result.data.getStackOverflowSocials;
+  const [promiseMachineState, promiseMachineSend] = useMachine(
+    promiseMachine.provide({
+      actors: {
+        [PromiseMachineActor.FETCH]: fromPromise(async () => {
+          const result = await getSocials();
+          return result.data.getStackOverflowSocials;
+        }),
       },
-    },
-  });
+    }),
+  );
 
   const handleOpen = useCallback(() => {
     if (promiseMachineState.value === PromiseMachineState.IDLE) {
-      promiseMachineSend(PromiseMachineAction.FETCH);
+      promiseMachineSend(PromiseMachineFetchEvent());
     }
   }, [promiseMachineState.value, promiseMachineSend]);
 
