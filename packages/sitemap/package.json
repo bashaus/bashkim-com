@@ -6,7 +6,7 @@
     "test": "jest --passWithNoTests"
   },
   "dependencies": {
-    "@apollo/client": "^3.8.8",
+    "@apollo/client": "^3.8.9",
     "@bashkim-com/prismic-dal": "*",
     "@bashkim-com/prismic-helpers": "*",
     "@bashkim-com/xray-lambda": "*",
