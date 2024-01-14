@@ -59,7 +59,7 @@
     "serverless-jetpack": "^0.11.2",
     "serverless-plugin-tracing": "^2.0.0",
     "sort-package-json": "^2.6.0",
-    "style-loader": "^3.3.3",
+    "style-loader": "^3.3.4",
     "stylelint": "^16.1.0",
     "stylelint-prettier": "^5.0.0",
     "stylelint-scss": "^6.0.0",
