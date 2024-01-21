@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "aws-sdk": "^2.1540.0",
-    "core-js": "^3.35.0",
+    "core-js": "^3.35.1",
     "graphql": "^16.8.1",
     "graphql-tag": "^2.12.6",
     "jquery": "^3.7.1",
