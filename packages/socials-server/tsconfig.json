@@ -3,14 +3,14 @@
   "files": ["src/cache-manager-sqlite.d.ts"],
   "include": [],
   "compilerOptions": {
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
   },
   "references": [
     {
-      "path": "./tsconfig.build.json"
+      "path": "./tsconfig.build.json",
     },
     {
-      "path": "./tsconfig.spec.json"
-    }
-  ]
+      "path": "./tsconfig.spec.json",
+    },
+  ],
 }
