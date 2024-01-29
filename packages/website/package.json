@@ -21,7 +21,7 @@
     "@mui/icons-material": "^5.15.6",
     "@mui/material": "^5.15.6",
     "@primer/octicons-react": "^19.8.0",
-    "@sentry/browser": "7.94.1",
+    "@sentry/browser": "7.98.0",
     "@xstate/react": "^4.0.3",
     "apollo-link-prismic": "^1.1.2",
     "js-cookie": "^3.0.5",
