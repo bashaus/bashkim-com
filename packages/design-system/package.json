@@ -23,7 +23,7 @@
     "react-slick": "^0.30.1"
   },
   "devDependencies": {
-    "@storybook/addon-a11y": "^7.6.10",
+    "@storybook/addon-a11y": "^7.6.16",
     "@storybook/addon-essentials": "^7.6.10",
     "@storybook/core-server": "^7.6.10",
     "@storybook/nextjs": "^7.6.10",
