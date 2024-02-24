@@ -34,7 +34,7 @@
   },
   "devDependencies": {
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.11",
-    "@swc/jest": "^0.2.34",
+    "@swc/jest": "^0.2.36",
     "@types/jest": "29.5.12",
     "@types/node": "^20.11.19",
     "@types/react": "^18.2.56",
