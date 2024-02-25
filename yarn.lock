@@ -7889,10 +7889,10 @@
   dependencies:
     tslib "^2.3.0"
 
-"@xstate/react@^4.0.3":
-  version "4.0.3"
-  resolved "https://registry.yarnpkg.com/@xstate/react/-/react-4.0.3.tgz#038382f28ae050c6e6611cf4d072e542608f6a0c"
-  integrity sha512-yGxW6WljN04tyKxHrmejVdnKeRt26rzqNmJFYXtMZSUTDI98xFToI18eSoW2tSoyGRH/3Bmb8kUsa3l9Mr2E4Q==
+"@xstate/react@^4.1.0":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@xstate/react/-/react-4.1.0.tgz#369378951e1f7f9326700f65ed02847598aad704"
+  integrity sha512-Fh89luCwuMXIVXIua67d8pNuVgdGpqke2jHfIIL+ZjkfNh6YFtPDSwNSZZDhdNUsOW1zZYSbtUzbC8MIUyTSHQ==
   dependencies:
     use-isomorphic-layout-effect "^1.1.2"
     use-sync-external-store "^1.0.0"
