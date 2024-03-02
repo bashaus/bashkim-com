@@ -7,7 +7,7 @@
     "test": "echo \"no tests\" && exit 0"
   },
   "dependencies": {
-    "aws-xray-sdk": "^3.5.3"
+    "aws-xray-sdk": "^3.5.4"
   },
   "devDependencies": {
     "typescript": "^5.3.3"
