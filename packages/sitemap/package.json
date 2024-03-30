@@ -12,7 +12,7 @@
     "@bashkim-com/xray-lambda": "*",
     "@vendia/serverless-express": "^4.12.6",
     "apollo-link-prismic": "^1.1.2",
-    "express": "^4.18.3",
+    "express": "^4.19.2",
     "xmlbuilder": "^15.1.1"
   },
   "devDependencies": {
