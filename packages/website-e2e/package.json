@@ -5,7 +5,7 @@
     "e2e": "cypress run"
   },
   "dependencies": {
-    "cypress": "^13.7.2"
+    "cypress": "^13.7.3"
   },
   "devDependencies": {
     "@swc/jest": "^0.2.36",
