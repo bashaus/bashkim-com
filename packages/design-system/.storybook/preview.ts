@@ -3,7 +3,6 @@ import { NormalizeDecorator } from "./decorators/NormalizeDecorator";
 export const decorators = [NormalizeDecorator];
 
 export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
     expanded: true,
     sort: "requiredFirst",
