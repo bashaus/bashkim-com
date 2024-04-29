@@ -28,7 +28,7 @@
     "graphql": "^16.8.1",
     "graphql-tag": "^2.12.6",
     "jquery": "^3.7.1",
-    "react": "18.2.0",
+    "react": "18.3.1",
     "react-dom": "18.2.0",
     "tslib": "^2.6.2",
     "turn-js": "blasten/turn.js#master"
@@ -44,7 +44,7 @@
     "@turbo/gen": "^1.13.2",
     "@types/jquery": "^3.5.29",
     "@types/node": "^20.12.7",
-    "@types/react": "^18.2.77",
+    "@types/react": "^18.3.1",
     "@types/react-dom": "^18.2.25",
     "css-loader": "^7.1.1",
     "encoding": "^0.1.13",
