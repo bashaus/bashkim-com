@@ -4,7 +4,7 @@
     "../**/*.spec.ts",
     "../**/*.spec.js",
     "../**/*.spec.tsx",
-    "../**/*.spec.jsx",
+    "../**/*.spec.jsx"
   ],
   "include": [
     "../src/**/*.stories.ts",
@@ -13,6 +13,6 @@
     "../src/**/*.stories.tsx",
     "../src/**/*.stories.mdx",
     "*.ts",
-    "*.js",
-  ],
+    "*.js"
+  ]
 }
