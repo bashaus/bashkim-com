@@ -29,7 +29,7 @@
     "graphql-tag": "^2.12.6",
     "jquery": "^3.7.1",
     "react": "18.3.1",
-    "react-dom": "18.2.0",
+    "react-dom": "18.3.1",
     "tslib": "^2.6.2",
     "turn-js": "blasten/turn.js#master"
   },
@@ -45,7 +45,7 @@
     "@types/jquery": "^3.5.29",
     "@types/node": "^20.12.7",
     "@types/react": "^18.3.2",
-    "@types/react-dom": "^18.2.25",
+    "@types/react-dom": "^18.3.0",
     "css-loader": "^7.1.1",
     "encoding": "^0.1.13",
     "eslint": "^8.57.0",
