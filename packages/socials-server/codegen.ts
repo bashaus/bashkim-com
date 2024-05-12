@@ -9,7 +9,7 @@ const codegenConfig: CodegenConfig = {
     },
 
     "./src/types/github.ts": {
-      schema: "https://docs.github.com/public/schema.docs.graphql",
+      schema: "https://docs.github.com/public/fpt/schema.docs.graphql",
       documents: ["./src/app/services/github/**/*.gql"],
       plugins: [
         "typescript",
@@ -24,7 +24,7 @@ const codegenConfig: CodegenConfig = {
     },
 
     "./src/types/github.gql": {
-      schema: "https://docs.github.com/public/schema.docs.graphql",
+      schema: "https://docs.github.com/public/fpt/schema.docs.graphql",
       plugins: ["schema-ast"],
     },
   },
