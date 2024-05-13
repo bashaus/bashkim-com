@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
 
-import { Brick } from "./Brick";
+import { Brick } from ".";
 
 describe("<Brick />", () => {
   it("should render", () => {

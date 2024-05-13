@@ -1,6 +1,6 @@
 import type { Meta, StoryFn } from "@storybook/react";
 
-import { Brick as BrickComponent, BrickProps } from "./Brick";
+import { Brick as BrickComponent, BrickProps } from ".";
 
 export default {
   component: BrickComponent,
