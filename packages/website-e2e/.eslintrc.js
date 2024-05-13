@@ -4,7 +4,7 @@ module.exports = {
   extends: ["@bashkim-com", "plugin:cypress/recommended"],
   overrides: [
     {
-      files: ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      files: ["*.ts", "*.tsx"],
       rules: {},
     },
     {

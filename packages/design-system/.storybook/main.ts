@@ -19,11 +19,11 @@ const config: StorybookConfig = {
     options: {},
   },
   stories: [
-    "../src/components/**/*.stories.tsx",
-    "../src/formatters/**/*.stories.tsx",
-    "../src/layout/**/*.stories.tsx",
-    "../src/partials/**/*.stories.tsx",
-    "../src/slices/**/*.stories.tsx",
+    "../src/components/**/stories.tsx",
+    "../src/formatters/**/stories.tsx",
+    "../src/layout/**/stories.tsx",
+    "../src/partials/**/stories.tsx",
+    "../src/slices/**/stories.tsx",
   ],
   docs: {
     autodocs: true,

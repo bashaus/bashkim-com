@@ -5,9 +5,9 @@ import "@bashkim-com/style-guide/normalize.scss";
 import { LinkResolverContext } from "@bashkim-com/prismic-helpers";
 import { PropsWithChildren, useEffect } from "react";
 
-import { GoogleAnalytics } from "../../components/GoogleAnalytics/GoogleAnalytics";
-import { NavigationProvider } from "../../contexts/Navigation/Navigation.provider";
-import { SettingsProvider } from "../../contexts/Settings/Settings.provider";
+import { GoogleAnalytics } from "../../components/GoogleAnalytics";
+import { NavigationProvider } from "../../contexts/Navigation/provider";
+import { SettingsProvider } from "../../contexts/Settings/provider";
 import { PrismicLinkResolver } from "../../libraries/prismic/PrismicLinkResolver";
 
 export const RootLayout = ({ children }: PropsWithChildren) => {

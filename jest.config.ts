@@ -13,7 +13,7 @@ const config: Config = {
       },
     ],
   ],
-  collectCoverageFrom: ["src/**/*.{ts,tsx}", "!**/*.d.ts", "!**/*.stories.tsx"],
+  collectCoverageFrom: ["src/**/*.{ts,tsx}", "!**/*.d.ts", "!**/stories.tsx"],
 };
 
 export default config;

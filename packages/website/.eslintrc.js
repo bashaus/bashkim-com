@@ -9,18 +9,10 @@ module.exports = {
   },
   overrides: [
     {
-      files: ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      files: ["*.ts", "*.tsx"],
       rules: {
         "@next/next/no-html-link-for-pages": "off",
       },
-    },
-    {
-      files: ["*.ts", "*.tsx"],
-      rules: {},
-    },
-    {
-      files: ["*.js", "*.jsx"],
-      rules: {},
     },
   ],
 };

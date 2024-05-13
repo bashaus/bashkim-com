@@ -78,7 +78,7 @@ module.exports = {
       },
     },
     {
-      files: ["*.stories.{js,jsx,ts,tsx}"],
+      files: ["stories.{ts,tsx}"],
       extends: ["plugin:storybook/recommended"],
     },
   ],

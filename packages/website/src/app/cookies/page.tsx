@@ -1,5 +1,5 @@
+import { CookiesPageLockup } from "../../domains/cookies-page/components/CookiesPageLockup";
 import { generateCanonical } from "../../libraries/app/generateCanonical";
-import { CookiesPageLockup } from "../../lockups/CookiesPage";
 
 export const metadata = {
   title: "Cookie policy",

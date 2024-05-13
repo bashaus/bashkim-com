@@ -2,8 +2,8 @@
 
 import { PageHeaderPartial } from "@bashkim-com/design-system";
 
-import { MenuButtonHome } from "../components/MenuButtonHome/MenuButtonHome";
-import { Page } from "../components/Page/Page";
+import { MenuButtonHome } from "../components/MenuButtonHome";
+import { Page } from "../components/Page";
 
 type RootErrorProps = {
   error: Error;

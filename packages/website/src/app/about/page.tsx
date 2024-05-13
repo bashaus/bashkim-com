@@ -1,5 +1,5 @@
+import { AboutPageLockup } from "../../domains/about-page/components/AboutPageLockup";
 import { generateCanonical } from "../../libraries/app/generateCanonical";
-import { AboutPageLockup } from "../../lockups/AboutPage";
 
 export const metadata = {
   title: "About",
