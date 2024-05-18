@@ -19,7 +19,7 @@
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
     "@mui/icons-material": "^5.15.18",
-    "@mui/material": "^5.15.17",
+    "@mui/material": "^5.15.18",
     "@primer/octicons-react": "^19.9.0",
     "@sentry/browser": "7.114.0",
     "@xstate/react": "^4.1.1",
