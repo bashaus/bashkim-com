@@ -12,8 +12,8 @@ export const FooterCopyright = () => (
         MMVIII
       </time>
       &#x2011;
-      <time dateTime="2023" title="2023">
-        MMXXIII
+      <time dateTime="2024" title="2024">
+        MMXXIV
       </time>
       , Bashkim&nbsp;Isai. All&nbsp;rights&nbsp;reserved.
     </small>
