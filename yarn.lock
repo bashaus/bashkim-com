@@ -7951,10 +7951,10 @@ available-typed-arrays@^1.0.7:
   dependencies:
     possible-typed-array-names "^1.0.0"
 
-aws-sdk@^2.1632.0:
-  version "2.1632.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.1632.0.tgz#24bd0bd000f500300f7d52ac4c6e316a0311e25d"
-  integrity sha512-doNHUxto00r7r9qWb5RcIsQHUTHdGiPPyJoXxmsmQW6aOr69BqYeuFl8SicNS1YzP6s5sFFnDNKq9KB7jA2fyA==
+aws-sdk@^2.1658.0:
+  version "2.1658.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.1658.0.tgz#c7e0cc4bcd787932af01dac69d564d9adf416ae1"
+  integrity sha512-aJLps/LIRJtrfEv+1jQ//IfHbwDxJiBJJyXf+Oc9hH+l1PqLEwHtd+vWxSNGE4/YX1HFIVt2fCZJs4d/nL8HNg==
   dependencies:
     buffer "4.9.2"
     events "1.1.1"
