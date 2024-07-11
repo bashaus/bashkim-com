@@ -69,6 +69,6 @@
     "turbo": "^1.13.3",
     "typescript": "^5.4.5",
     "url-loader": "^4.1.1",
-    "webpack": "^5.91.0"
+    "webpack": "^5.93.0"
   }
 }
