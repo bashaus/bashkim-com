@@ -17494,10 +17494,10 @@ serverless-plugin-tracing@^2.0.0:
   resolved "https://registry.yarnpkg.com/serverless-plugin-tracing/-/serverless-plugin-tracing-2.0.0.tgz#df6b8b3166ac9bb70a37c7fc875014b2369158f6"
   integrity sha512-cndG6QC5ZFHSwmylOqxOzy/M9TAKtUl+wnpqdmqZ5sFfWjcUi4BLV7MkQnsIdKPKJcCv19tpNONYmGPmw6tXIg==
 
-serverless@^4.1.11:
-  version "4.1.11"
-  resolved "https://registry.yarnpkg.com/serverless/-/serverless-4.1.11.tgz#8edfd14325f36f030befab1a452132828cba35b4"
-  integrity sha512-tSpE3Q6V5+QTb75l+4YYJouuI9Ik9BN+TYjZOHS0FNEUbqrF315zrfJvPsnEsJ9c5/T6VA+L7cyAQTQXImdtUA==
+serverless@^4.1.12:
+  version "4.1.12"
+  resolved "https://registry.yarnpkg.com/serverless/-/serverless-4.1.12.tgz#35e37206ca604a1cc329dd1493bd86fe0a211177"
+  integrity sha512-2PLNRei9a0kqK3caV6M8lgUAd0w36MpVvA3PFHhkbOdznSw7fk5QWdm8j6OcigWMS2EPKpxUuTESk8wsIGcxYw==
   dependencies:
     axios "^1.6.0"
     axios-proxy-builder "^0.1.2"

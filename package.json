@@ -55,7 +55,7 @@
     "postcss-scss": "^4.0.9",
     "prettier": "3.3.2",
     "sass": "1.77.4",
-    "serverless": "^4.1.11",
+    "serverless": "^4.1.12",
     "serverless-jetpack": "^0.11.2",
     "serverless-plugin-tracing": "^2.0.0",
     "sort-package-json": "^2.10.0",
