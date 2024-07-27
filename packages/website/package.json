@@ -9,7 +9,7 @@
     "test": "jest --passWithNoTests"
   },
   "dependencies": {
-    "@apollo/client": "^3.10.4",
+    "@apollo/client": "^3.11.1",
     "@bashkim-com/design-system": "*",
     "@bashkim-com/prismic-dal": "*",
     "@bashkim-com/prismic-helpers": "*",
