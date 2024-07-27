@@ -43,7 +43,7 @@
     "@testing-library/react": "15.0.7",
     "@turbo/gen": "^1.13.3",
     "@types/jquery": "^3.5.30",
-    "@types/node": "^20.13.0",
+    "@types/node": "^20.14.12",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "css-loader": "^7.1.2",
