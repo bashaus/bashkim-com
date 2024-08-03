@@ -5683,29 +5683,28 @@
   resolved "https://registry.yarnpkg.com/@tsconfig/node16/-/node16-1.0.2.tgz#423c77877d0569db20e1fc80885ac4118314010e"
   integrity sha512-eZxlbI8GZscaGS7kkc/trHTT5xgrjH3/1n2JDwusC9iahPKWMRvRjJSAN5mCXviuTGQ/lHnhvv8Q1YTpnfz9gA==
 
-"@turbo/gen@^1.13.3":
-  version "1.13.3"
-  resolved "https://registry.yarnpkg.com/@turbo/gen/-/gen-1.13.3.tgz#34946632d62a094006feb5fe44340f66762a8779"
-  integrity sha512-l+EM1gGzckFMaaVQyj3BVRa0QJ+tpp8HfiHOhGpBWW3Vc0Hfj92AY87Di/7HGABa+HVY7ueatMi7DJG+zkJBYg==
+"@turbo/gen@^2.0.11":
+  version "2.0.11"
+  resolved "https://registry.yarnpkg.com/@turbo/gen/-/gen-2.0.11.tgz#b83497df43ce32035ce217b714c2cc48f0749df1"
+  integrity sha512-9F2JvM2hwpPtTZii5CESVQZFquVlpEKM1F2JOQgyBnmuhyCylI7s/oz/v/G/reu8zO9NQy22MashkgUCpyV9Zg==
   dependencies:
-    "@turbo/workspaces" "1.13.3"
-    chalk "2.4.2"
+    "@turbo/workspaces" "2.0.11"
     commander "^10.0.0"
     fs-extra "^10.1.0"
     inquirer "^8.2.4"
     minimatch "^9.0.0"
     node-plop "^0.26.3"
+    picocolors "1.0.1"
     proxy-agent "^6.2.2"
     ts-node "^10.9.1"
     update-check "^1.5.4"
     validate-npm-package-name "^5.0.0"
 
-"@turbo/workspaces@1.13.3":
-  version "1.13.3"
-  resolved "https://registry.yarnpkg.com/@turbo/workspaces/-/workspaces-1.13.3.tgz#ff8dd80dc7235f0bf4398e7769fd4d55ed5a1914"
-  integrity sha512-QYZ8g3IVQebqNM8IsBlWYOWmOKjBZY55e6lx4EDOLuch1iWmyk+U8CLAI9UomMrSaKTs1Sx+PDkt63EgakvhUw==
+"@turbo/workspaces@2.0.11":
+  version "2.0.11"
+  resolved "https://registry.yarnpkg.com/@turbo/workspaces/-/workspaces-2.0.11.tgz#ea0edbd5c49030b564fa1dcfb7e72f758f492c5a"
+  integrity sha512-/S1Q5lAGya+hKWO/iabN7a0vbXQwDac6am9r/CSmKbxvRwRVB2hNzcqLIx+xKmIj0N8GCK028CbgYOY3+SWXAw==
   dependencies:
-    chalk "2.4.2"
     commander "^10.0.0"
     execa "5.1.1"
     fast-glob "^3.2.12"
@@ -5714,6 +5713,7 @@
     inquirer "^8.0.0"
     js-yaml "^4.1.0"
     ora "4.1.1"
+    picocolors "1.0.1"
     rimraf "^3.0.2"
     semver "^7.3.5"
     update-check "^1.5.4"
@@ -8026,7 +8026,7 @@ chai@^4.3.10:
     pathval "^1.1.1"
     type-detect "^4.0.8"
 
-chalk@2.4.2, chalk@^2.0.0, chalk@^2.4.2:
+chalk@^2.0.0, chalk@^2.4.2:
   version "2.4.2"
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-2.4.2.tgz#cd42541677a54333cf541a49108c1432b44c9424"
   integrity sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ==
@@ -15017,7 +15017,7 @@ pg-types@^2.2.0:
     postgres-date "~1.0.4"
     postgres-interval "^1.1.0"
 
-picocolors@^1.0.0, picocolors@^1.0.1:
+picocolors@1.0.1, picocolors@^1.0.0, picocolors@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/picocolors/-/picocolors-1.0.1.tgz#a8ad579b571952f0e5d25892de5445bcfe25aaa1"
   integrity sha512-anP1Z8qwhkbmu7MFP5iTt+wQKXgwzf7zTyGlcdzabySa9vd0Xt392U0rVmz9poOaBj0uHJKyyo9/upk0HrEQew==
