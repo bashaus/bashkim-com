@@ -7,7 +7,7 @@
     "dev": "nodemon"
   },
   "dependencies": {
-    "@apollo/client": "^3.10.4",
+    "@apollo/client": "^3.11.2",
     "@apollo/server": "^4.10.4",
     "@as-integrations/aws-lambda": "3.1.0",
     "@bashkim-com/xray-lambda": "*",
