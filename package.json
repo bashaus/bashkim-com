@@ -41,7 +41,7 @@
     "@swc/core": "^1.6.7",
     "@testing-library/jest-dom": "^6.4.5",
     "@testing-library/react": "15.0.7",
-    "@turbo/gen": "^1.13.3",
+    "@turbo/gen": "^2.0.12",
     "@types/jquery": "^3.5.30",
     "@types/node": "^20.13.0",
     "@types/react": "^18.3.3",
