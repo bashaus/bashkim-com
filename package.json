@@ -61,7 +61,7 @@
     "sort-package-json": "^2.10.0",
     "style-loader": "^4.0.0",
     "stylelint": "^16.8.2",
-    "stylelint-prettier": "^5.0.0",
+    "stylelint-prettier": "^5.0.2",
     "stylelint-scss": "^6.5.0",
     "svgo": "^3.3.2",
     "ts-json-api": "^1.2.0",
