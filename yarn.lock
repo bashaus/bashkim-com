@@ -5630,10 +5630,10 @@ axios-proxy-builder@^0.1.2:
   dependencies:
     tunnel "^0.0.6"
 
-axios@^1.6.0:
-  version "1.7.4"
-  resolved "https://registry.yarnpkg.com/axios/-/axios-1.7.4.tgz#4c8ded1b43683c8dd362973c393f3ede24052aa2"
-  integrity sha512-DukmaFRnY6AzAALSH4J2M3k6PkaC+MfaAGdEERRWcC9q3/TWQwLpHR8ZRLKTdQ3aBDL64EdluRDjJqKw+BPZEw==
+axios@^1.7.4:
+  version "1.7.5"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-1.7.5.tgz#21eed340eb5daf47d29b6e002424b3e88c8c54b1"
+  integrity sha512-fZu86yCo+svH3uqJ/yTdQ0QHpQu5oL+/QE+QPSv6BZSkDAoky9vytxp7u5qk83OJFS3kEBcesWni9WTZAv3tSw==
   dependencies:
     follow-redirects "^1.15.6"
     form-data "^4.0.0"
@@ -13954,12 +13954,12 @@ serverless-plugin-tracing@^2.0.0:
   resolved "https://registry.yarnpkg.com/serverless-plugin-tracing/-/serverless-plugin-tracing-2.0.0.tgz#df6b8b3166ac9bb70a37c7fc875014b2369158f6"
   integrity sha512-cndG6QC5ZFHSwmylOqxOzy/M9TAKtUl+wnpqdmqZ5sFfWjcUi4BLV7MkQnsIdKPKJcCv19tpNONYmGPmw6tXIg==
 
-serverless@^4.1.11:
-  version "4.1.22"
-  resolved "https://registry.yarnpkg.com/serverless/-/serverless-4.1.22.tgz#9dcc593b0c87be0e763c77787f3f8f6b251c69e6"
-  integrity sha512-MNEZqktEIib/JB+JRc504EaijEr1CgG5jlbUfUV7u2BXpneJinhTgVQH56TVZLSPWEEMIIdA9Eu0Wdi3jUfpbw==
+serverless@^4.2.3:
+  version "4.2.3"
+  resolved "https://registry.yarnpkg.com/serverless/-/serverless-4.2.3.tgz#91518a8523b22d42704e13ed3dfb03f89fd84111"
+  integrity sha512-Rt4Y9LqVEV7OGPKGfB//sCQXjG6irAqa545OuXef7SPWD+bm/diCh93sCqCkON7IdYpzWkmIBeQVdF3Q58bU6Q==
   dependencies:
-    axios "^1.6.0"
+    axios "^1.7.4"
     axios-proxy-builder "^0.1.2"
     rimraf "^5.0.5"
     xml2js "0.6.2"
