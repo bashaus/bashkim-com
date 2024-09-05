@@ -69,7 +69,7 @@
     "turbo": "^2.0.14",
     "typescript": "^5.5.4",
     "url-loader": "^4.1.1",
-    "webpack": "^5.91.0"
+    "webpack": "^5.94.0"
   },
   "packageManager": "yarn@1.22.22"
 }
