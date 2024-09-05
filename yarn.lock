@@ -7990,10 +7990,10 @@ eslint-import-resolver-typescript@^3.5.2, eslint-import-resolver-typescript@^3.6
     is-bun-module "^1.0.2"
     is-glob "^4.0.3"
 
-eslint-module-utils@^2.8.0, eslint-module-utils@^2.8.1:
-  version "2.8.1"
-  resolved "https://registry.yarnpkg.com/eslint-module-utils/-/eslint-module-utils-2.8.1.tgz#52f2404300c3bd33deece9d7372fb337cc1d7c34"
-  integrity sha512-rXDXR3h7cs7dy9RNpUlQf80nX31XWJEyGq1tRMo+6GsO5VmTe4UTwtmonAD4ZkAsrfMVDA2wlGJ3790Ys+D49Q==
+eslint-module-utils@^2.8.0, eslint-module-utils@^2.8.1, eslint-module-utils@^2.9.0:
+  version "2.9.0"
+  resolved "https://registry.yarnpkg.com/eslint-module-utils/-/eslint-module-utils-2.9.0.tgz#95d4ac038a68cd3f63482659dffe0883900eb342"
+  integrity sha512-McVbYmwA3NEKwRQY5g4aWMdcZE5xZxV8i8l7CqJSrameuGSQJtSWaL/LxTEzSKKaCcOhlpDR8XEfYXWPrdo/ZQ==
   dependencies:
     debug "^3.2.7"
 
