@@ -11,6 +11,6 @@
     "@graphql-codegen/schema-ast": "^4.0.2",
     "@graphql-codegen/typescript": "^4.0.7",
     "@graphql-codegen/typescript-operations": "^4.2.3",
-    "@graphql-codegen/typescript-react-apollo": "^4.3.0"
+    "@graphql-codegen/typescript-react-apollo": "^4.3.1"
   }
 }
