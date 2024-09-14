@@ -18,7 +18,7 @@
     "@bashkim-com/tsconfig": "*",
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
-    "@mui/icons-material": "^6.0.2",
+    "@mui/icons-material": "^6.1.0",
     "@mui/material": "^6.0.2",
     "@primer/octicons-react": "^19.9.0",
     "@sentry/browser": "7.114.0",
