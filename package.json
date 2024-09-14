@@ -36,7 +36,7 @@
   "devDependencies": {
     "@bashkim-com/eslint-config": "*",
     "@commitlint/cli": "^19.5.0",
-    "@commitlint/config-conventional": "^19.4.1",
+    "@commitlint/config-conventional": "^19.5.0",
     "@svgr/webpack": "^8.1.0",
     "@swc/core": "^1.7.26",
     "@testing-library/jest-dom": "^6.5.0",
