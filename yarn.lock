@@ -3448,10 +3448,10 @@
   resolved "https://registry.yarnpkg.com/@storybook/components/-/components-8.2.9.tgz#a2394749d52940b7a224d1d4801d756b2750b488"
   integrity sha512-OkkcZ/f/6o3GdFEEK9ZHKIGHWUHmavZUYs5xaSgU64bOrA2aqEFtfeWWitZYTv3Euhk8MVLWfyEMDfez0AlvDg==
 
-"@storybook/core-server@^8.2.9":
-  version "8.2.9"
-  resolved "https://registry.yarnpkg.com/@storybook/core-server/-/core-server-8.2.9.tgz#efe8ccc54b2e2ff79c1d064eb10474d90d19ed50"
-  integrity sha512-+BbicETGCPVoEpvsx/6HxEeGVy6pStUPUQDdAq5JGV9X4h6uZtSZk8FQfHK2nfoFLllbbwImNpFeJeKEs4xd9g==
+"@storybook/core-server@^8.3.0":
+  version "8.3.0"
+  resolved "https://registry.yarnpkg.com/@storybook/core-server/-/core-server-8.3.0.tgz#55480038740f4e735bd0091b638291d4873dd732"
+  integrity sha512-rtHlEyaSZw5UAmxFnmsIqM3B5MmxI8HE0j2oMRjDjpZgYpIBRB8PFqeNRdRvzpaAi0+tXYAPSvTVV2YysQvR3Q==
 
 "@storybook/core-webpack@8.2.9":
   version "8.2.9"
