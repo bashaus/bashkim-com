@@ -35,7 +35,7 @@
   },
   "devDependencies": {
     "@bashkim-com/eslint-config": "*",
-    "@commitlint/cli": "^19.4.1",
+    "@commitlint/cli": "^19.5.0",
     "@commitlint/config-conventional": "^19.4.1",
     "@svgr/webpack": "^8.1.0",
     "@swc/core": "^1.7.26",
