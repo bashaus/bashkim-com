@@ -3410,10 +3410,10 @@
   resolved "https://registry.yarnpkg.com/@storybook/components/-/components-8.3.0.tgz#45c39e5b6768efafe8e7dfd946c01617da59ae1a"
   integrity sha512-SO/iTkmWp3aYCIy8DEhRMoOn6K7lcKTPNC/YjTvOFFzwq/CLq86WNqz6aX+wV5n6MvWTs7evSwMoz7lp4Lc4sw==
 
-"@storybook/core-server@^8.3.0":
-  version "8.3.0"
-  resolved "https://registry.yarnpkg.com/@storybook/core-server/-/core-server-8.3.0.tgz#55480038740f4e735bd0091b638291d4873dd732"
-  integrity sha512-rtHlEyaSZw5UAmxFnmsIqM3B5MmxI8HE0j2oMRjDjpZgYpIBRB8PFqeNRdRvzpaAi0+tXYAPSvTVV2YysQvR3Q==
+"@storybook/core-server@^8.3.1":
+  version "8.3.1"
+  resolved "https://registry.yarnpkg.com/@storybook/core-server/-/core-server-8.3.1.tgz#9ae548edb2e00d35eaf99ff34038ff93823c3409"
+  integrity sha512-u//9EMD7IQO3zIe1lBhL3//lSZmTdOOyhZeSSdZkJTbQb0j5czHwSmc3l2BVjxzPmyLlO6bUi73sRdTjInwHVw==
 
 "@storybook/core-webpack@8.3.0":
   version "8.3.0"
