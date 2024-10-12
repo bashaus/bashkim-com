@@ -1,4 +1,4 @@
-import { StackOverflowPostType } from "@bashkim-com/socials-dal";
+import { StackOverflowPostType } from "@bashkim-com/socials";
 import Divider from "@mui/material/Divider";
 import ListItemAvatar from "@mui/material/ListItemAvatar";
 import ListItemText from "@mui/material/ListItemText";

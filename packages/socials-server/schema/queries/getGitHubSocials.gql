@@ -1,7 +1,0 @@
-type GetGitHubSocialsResponse {
-  pinnedItems: [GitHubPinnedItem!]!
-}
-
-type Query {
-  getGitHubSocials: GetGitHubSocialsResponse!
-}

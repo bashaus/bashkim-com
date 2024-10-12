@@ -6,6 +6,5 @@ module "structure_api_gateway" {
   redeployment_triggers = sha1(join(",", concat(
     module.package_prismic_webhooks.apigw_schema,
     module.package_sitemap.apigw_schema,
-    module.package_socials_server.apigw_schema,
   )))
 }

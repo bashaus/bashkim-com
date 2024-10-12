@@ -1,8 +1,0 @@
-type GetStackOverflowSocialsResponse {
-  user: StackOverflowUser!
-  posts: [StackOverflowPost!]!
-}
-
-type Query {
-  getStackOverflowSocials: GetStackOverflowSocialsResponse!
-}

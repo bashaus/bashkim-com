@@ -1,0 +1,26 @@
+{
+  "name": "@bashkim-com/socials",
+  "version": "0.1.0",
+  "exports": {
+    ".": "./src/index.ts",
+    "./github": "./src/github/index.ts",
+    "./medium": "./src/medium/index.ts",
+    "./stack-overflow": "./src/stack-overflow/index.ts"
+  },
+  "main": "./src/index.ts",
+  "scripts": {
+    "codegen": "graphql-codegen --config codegen.ts"
+  },
+  "dependencies": {
+    "@apollo-link-debug/handle-errors": "^0.0.5",
+    "@apollo-link-debug/handle-request": "^0.0.5",
+    "@apollo/client": "^3.11.8"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^5.0.2",
+    "@graphql-codegen/schema-ast": "^4.0.2",
+    "@graphql-codegen/typescript": "^4.0.7",
+    "@graphql-codegen/typescript-operations": "^4.2.3",
+    "@graphql-codegen/typescript-react-apollo": "^4.3.2"
+  }
+}

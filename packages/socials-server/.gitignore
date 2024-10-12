@@ -1,5 +1,0 @@
-src/app/services/*/schema.gql
-src/app/services/*/schema.ts
-src/app/services/cache/drivers/sqlite.db
-src/types/*.gql
-src/types/*.ts

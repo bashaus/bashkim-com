@@ -13,7 +13,7 @@
     "@bashkim-com/design-system": "*",
     "@bashkim-com/prismic-dal": "*",
     "@bashkim-com/prismic-helpers": "*",
-    "@bashkim-com/socials-dal": "*",
+    "@bashkim-com/socials": "*",
     "@bashkim-com/style-guide": "*",
     "@bashkim-com/tsconfig": "*",
     "@emotion/react": "^11.13.3",

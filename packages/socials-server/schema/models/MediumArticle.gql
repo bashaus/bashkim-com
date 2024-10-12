@@ -1,6 +1,0 @@
-type MediumArticle {
-  title: String!
-  subtitle: String!
-  claps: Int!
-  url: String!
-}
