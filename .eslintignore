@@ -1,6 +1,5 @@
 # Folder names
 .next/
-.terraform/
 coverage/
 dist/
 generated/

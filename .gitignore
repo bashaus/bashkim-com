@@ -39,7 +39,6 @@ yarn-error.log*
 # Application
 .cache/
 .serverless/
-.terraform/
 dist/
 storybook-static/
 generated/
