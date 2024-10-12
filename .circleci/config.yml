@@ -61,7 +61,6 @@ jobs:
       - persist_to_workspace:
           root: ./
           paths:
-            - packages/prismic-webhooks/dist/
             - packages/sitemap/dist/
             - packages/socials/dist/
             - packages/website/out/
