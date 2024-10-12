@@ -1,8 +1,6 @@
 {
   "extends": "@bashkim-com/tsconfig/tsconfig.nextjs.json",
   "compilerOptions": {
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
     "plugins": [
       {
         "name": "next"

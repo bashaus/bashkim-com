@@ -1,5 +1,4 @@
 import * as Sentry from "@sentry/browser";
-import { BrowserTracing } from "@sentry/browser";
 
 const {
   NEXT_PUBLIC_SENTRY_DSN: sentryDsn,
@@ -12,7 +11,7 @@ Sentry.init({
   dsn: sentryDsn,
   enabled: sentryEnabled === "1",
   environment: sentryEnvironment,
-  integrations: [new BrowserTracing()],
+  integrations: [Sentry.browserTracingIntegration()],
   release: sentryRelease,
   tracesSampleRate: 1.0,
 });

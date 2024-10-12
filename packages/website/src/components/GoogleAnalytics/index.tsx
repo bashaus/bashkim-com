@@ -6,7 +6,7 @@ export const GoogleAnalytics = () => {
     NEXT_PUBLIC_GOOGLE_ANALYTICS_MEASUREMENT_ID: measurementId,
   } = process.env;
 
-  if (!enabled) {
+  if (enabled !== "1") {
     return null;
   }
 

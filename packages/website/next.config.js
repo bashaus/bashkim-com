@@ -7,14 +7,14 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  output: "export",
   trailingSlash: true,
   reactStrictMode: true,
   transpilePackages: [
     "@bashkim-com/design-system",
     "@bashkim-com/prismic-dal",
-    "@bashkim-com/style-guide",
     "@bashkim-com/prismic-helpers",
+    "@bashkim-com/socials",
+    "@bashkim-com/style-guide",
   ],
   webpack(config) {
     config.module.rules.push({

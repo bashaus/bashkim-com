@@ -40,12 +40,6 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          name: build-sitemap
-          path: packages/sitemap/dist
-          retention-days: 3
-
-      - uses: actions/upload-artifact@v4
-        with:
           name: build-prismic-schema
           path: packages/prismic-schema/dist
           retention-days: 3

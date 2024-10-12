@@ -1,9 +1,0 @@
-{
-  "extends": "@bashkim-com/tsconfig/tsconfig.app.json",
-  "compilerOptions": {
-    "outDir": "./dist",
-    "rootDir": "./src"
-  },
-  "files": [],
-  "include": ["src/**/*.ts"]
-}

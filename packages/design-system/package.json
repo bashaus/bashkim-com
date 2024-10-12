@@ -1,6 +1,7 @@
 {
   "name": "@bashkim-com/design-system",
   "version": "0.0.0",
+  "type": "module",
   "main": "./src/index.ts",
   "scripts": {
     "storybook:build": "storybook build",
