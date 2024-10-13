@@ -39,7 +39,7 @@
     "@commitlint/cli": "^19.5.0",
     "@commitlint/config-conventional": "^19.5.0",
     "@svgr/webpack": "^8.1.0",
-    "@swc/core": "^1.7.28",
+    "@swc/core": "^1.7.35",
     "@testing-library/jest-dom": "^6.5.0",
     "@testing-library/react": "15.0.7",
     "@turbo/gen": "^2.1.3",
