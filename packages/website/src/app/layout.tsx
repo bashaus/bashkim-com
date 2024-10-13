@@ -1,9 +1,9 @@
 import "../libraries/sentry/init";
 
+import { AppRouterCacheProvider } from "@mui/material-nextjs/v14-appRouter";
 import { PropsWithChildren } from "react";
 
 import { RootLayout } from "../layouts/RootLayout";
-import ThemeRegistry from "../libraries/material-ui/ThemeRegistry";
 
 export const metadata = {
   title: {
@@ -15,9 +15,9 @@ export const metadata = {
 const MyLayout = ({ children }: PropsWithChildren) => (
   <html lang="en" dir="ltr">
     <body>
-      <ThemeRegistry options={{ key: "mui" }}>
+      <AppRouterCacheProvider>
         <RootLayout>{children}</RootLayout>
-      </ThemeRegistry>
+      </AppRouterCacheProvider>
     </body>
   </html>
 );

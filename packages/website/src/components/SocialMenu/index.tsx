@@ -65,6 +65,9 @@ export const SocialMenu = ({
             variant: "social",
           },
         }}
+        MenuListProps={{
+          disablePadding: true,
+        }}
       >
         {children}
       </Menu>

@@ -1,9 +1,10 @@
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
+import { Box, ListItemButton, ListItemIcon } from "@mui/material";
 import Avatar from "@mui/material/Avatar";
 import Badge from "@mui/material/Badge";
 import type { LinkProps } from "@mui/material/Link";
 import ListItemAvatar from "@mui/material/ListItemAvatar";
 import ListItemText from "@mui/material/ListItemText";
-import MenuItem from "@mui/material/MenuItem";
 import Image from "next/image";
 import type { ReactNode } from "react";
 
@@ -33,7 +34,7 @@ export const SocialMenuItemHeader = ({
   textPrimary,
   textSecondary,
 }: SocialMenuItemHeaderProps) => (
-  <MenuItem href={href} target="_blank" component="a">
+  <ListItemButton href={href} target="_blank">
     <ListItemAvatar>
       <Badge
         overlap="circular"
@@ -56,6 +57,11 @@ export const SocialMenuItemHeader = ({
         <Avatar>{avatarImage}</Avatar>
       </Badge>
     </ListItemAvatar>
+
     <ListItemText primary={textPrimary} secondary={textSecondary} />
-  </MenuItem>
+
+    <Box px={2}>
+      <OpenInNewIcon sx={{ width: 18, height: 18 }} color="action" />
+    </Box>
+  </ListItemButton>
 );
