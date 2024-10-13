@@ -5,14 +5,14 @@
     "enabled": false
   },
   "tasks": {
-    "build": {
-      "cache": false,
-      "dependsOn": ["codegen", "^build"],
-      "outputs": [".next/**", "!.next/cache/**"]
-    },
-    "codegen": {
+    "build:init": {
       "cache": false
     },
+    "build": {
+      "dependsOn": ["codegen"],
+      "outputs": [".next/**", "!.next/cache/**"]
+    },
+    "codegen": {},
     "dev": {
       "cache": false,
       "dependsOn": ["codegen"],

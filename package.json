@@ -13,7 +13,9 @@
     "packages/*"
   ],
   "scripts": {
+    "prebuild": "yarn build:init",
     "build": "turbo run build",
+    "build:init": "turbo run build:init",
     "dev": "turbo run dev",
     "lint:scripts": "eslint . && turbo run lint:scripts",
     "lint:styles": "stylelint '**/*.scss' '**/*.css'",
