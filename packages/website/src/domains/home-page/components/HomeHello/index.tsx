@@ -18,7 +18,10 @@ export const HomeHello = () => (
             target="_blank"
             rel="noreferrer"
           >
-            <GitHubVector className={styles["LinkIcon"]} />
+            <GitHubVector
+              className={styles["LinkIcon"]}
+              viewBox="0 0 100 100"
+            />
             View code
           </a>
         </li>
