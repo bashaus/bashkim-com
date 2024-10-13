@@ -1,6 +1,7 @@
 import type { CaptionedScreenshotsSliceTypeFragment } from "@bashkim-com/prismic-dal";
 import { PrismicRichText } from "@bashkim-com/prismic-helpers";
-import { DeviceDesktopIcon, DeviceMobileIcon } from "@primer/octicons-react";
+import ComputerIcon from "@mui/icons-material/Computer";
+import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
 import { ChangeEvent, useCallback, useState } from "react";
 
 import { RichTextFormatter } from "../../formatters/RichTextFormatter";
@@ -78,11 +79,11 @@ export const CaptionedScreenshotsSlice = ({
 
       <div className={styles["Slider"]}>
         <span className={styles["IconMobile"]}>
-          <DeviceMobileIcon size="small" aria-label="Mobile" />
+          <PhoneAndroidIcon width={16} height={16} aria-label="Mobile" />
         </span>
 
         <span className={styles["IconDesktop"]}>
-          <DeviceDesktopIcon size="medium" aria-label="Desktop" />
+          <ComputerIcon width={16} height={16} aria-label="Desktop" />
         </span>
 
         <input

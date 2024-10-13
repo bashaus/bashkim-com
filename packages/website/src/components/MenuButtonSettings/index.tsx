@@ -1,5 +1,5 @@
 import { MenuButton } from "@bashkim-com/design-system";
-import { GearIcon } from "@primer/octicons-react";
+import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import { ComponentPropsWithoutRef, useCallback, useState } from "react";
 
 import { SiteSettings } from "../SiteSettings";
@@ -21,7 +21,10 @@ export const MenuButtonSettings = (props: MenuButtonSettingsProps) => {
   return (
     <div {...props}>
       <MenuButton onClick={handleSignifierClick}>
-        <GearIcon size="small" className={styles["Icon"]} />
+        <SettingsOutlinedIcon
+          sx={{ width: 20, height: 20 }}
+          className={styles["Icon"]}
+        />
       </MenuButton>
       <SiteSettings isVisible={isVisible} onClose={handleClose} />
     </div>

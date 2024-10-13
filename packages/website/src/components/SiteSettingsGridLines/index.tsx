@@ -1,5 +1,6 @@
 import { Switch } from "@bashkim-com/design-system";
-import { CpuIcon, EyeClosedIcon } from "@primer/octicons-react";
+import GridOffIcon from "@mui/icons-material/GridOff";
+import GridOnIcon from "@mui/icons-material/GridOn";
 import { useCallback } from "react";
 
 import { SettingsActionToggleGridLines } from "../../contexts/Settings/actions";
@@ -16,8 +17,8 @@ export const SiteSettingsGridLines = () => {
 
   return (
     <Switch
-      iconOff={<EyeClosedIcon className={styles["IconOff"]} />}
-      iconOn={<CpuIcon className={styles["IconOn"]} />}
+      iconOff={<GridOffIcon className={styles["IconOff"]} />}
+      iconOn={<GridOnIcon className={styles["IconOn"]} />}
       onChange={handleChange}
       checked={isGridLinesVisible}
     />

@@ -1,9 +1,10 @@
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
-import { Box, ListItemButton, ListItemIcon } from "@mui/material";
 import Avatar from "@mui/material/Avatar";
 import Badge from "@mui/material/Badge";
+import Box from "@mui/material/Box";
 import type { LinkProps } from "@mui/material/Link";
 import ListItemAvatar from "@mui/material/ListItemAvatar";
+import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import Image from "next/image";
 import type { ReactNode } from "react";

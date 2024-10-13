@@ -1,4 +1,6 @@
-import { SquareIcon, TriangleRightIcon, XIcon } from "@primer/octicons-react";
+import CloseIcon from "@mui/icons-material/Close";
+import PlayArrowIcon from "@mui/icons-material/PlayArrow";
+import StopIcon from "@mui/icons-material/Stop";
 import { useCallback, useRef, useState } from "react";
 import ReactPlayer, { ReactPlayerProps } from "react-player/lazy";
 
@@ -80,12 +82,9 @@ export const VideoModal = ({
           onClick={handlePlayPauseClick}
         >
           {playing ? (
-            <SquareIcon
-              className={styles["StopIcon"]}
-              aria-label="Stop video"
-            />
+            <StopIcon className={styles["StopIcon"]} aria-label="Stop video" />
           ) : (
-            <TriangleRightIcon
+            <PlayArrowIcon
               className={styles["PlayIcon"]}
               aria-label="Play video"
             />
@@ -93,7 +92,7 @@ export const VideoModal = ({
         </button>
 
         <button className={styles["ControlButton"]} onClick={onRequestClose}>
-          <XIcon
+          <CloseIcon
             className={styles["CloseIcon"]}
             aria-label="Stop and close video"
           />

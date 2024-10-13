@@ -1,5 +1,6 @@
 import { Switch } from "@bashkim-com/design-system";
-import { MoonIcon, SunIcon } from "@primer/octicons-react";
+import DarkModeIcon from "@mui/icons-material/DarkMode";
+import LightModeIcon from "@mui/icons-material/LightMode";
 import { useCallback } from "react";
 
 import { SettingsActionToggleAppearance } from "../../contexts/Settings/actions";
@@ -18,8 +19,8 @@ export const SiteSettingsAppearance = () => {
   return (
     <Switch
       onChange={handleChange}
-      iconOff={<MoonIcon className={styles["IconOff"]} />}
-      iconOn={<SunIcon className={styles["IconOn"]} />}
+      iconOff={<DarkModeIcon className={styles["IconOff"]} />}
+      iconOn={<LightModeIcon className={styles["IconOn"]} />}
       checked={appearance === Appearance.LIGHT}
     />
   );

@@ -1,5 +1,5 @@
 import { MenuButton, Modal, ModalFrame } from "@bashkim-com/design-system";
-import { CheckIcon } from "@primer/octicons-react";
+import CheckIcon from "@mui/icons-material/Check";
 import { ComponentPropsWithoutRef } from "react";
 
 import { SiteSettingsAppearance } from "../SiteSettingsAppearance";

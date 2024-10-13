@@ -1,3 +1,4 @@
+import CodeIcon from "@mui/icons-material/Code";
 import Chip from "@mui/material/Chip";
 import Divider from "@mui/material/Divider";
 import ListItemIcon from "@mui/material/ListItemIcon";
@@ -5,7 +6,6 @@ import ListItemText from "@mui/material/ListItemText";
 import ListSubheader from "@mui/material/ListSubheader";
 import MenuItem from "@mui/material/MenuItem";
 import Stack from "@mui/material/Stack";
-import { RepoIcon } from "@primer/octicons-react";
 
 import GitHubVector from "../../assets/vectors/social/GitHub.svg";
 import { PromiseMachineState } from "../../machines/Promise/PromiseMachine.state";
@@ -67,7 +67,10 @@ export const SocialMenuGitHubView = ({
               style={{ alignItems: "flex-start" }}
             >
               <ListItemIcon sx={{ py: 0.5 }}>
-                <RepoIcon size={28} aria-label="Back to Homepage" />
+                <CodeIcon
+                  sx={{ width: 28, height: 28 }}
+                  aria-label="Repository"
+                />
               </ListItemIcon>
 
               <ListItemText
