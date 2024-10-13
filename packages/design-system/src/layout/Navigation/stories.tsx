@@ -12,24 +12,24 @@ export default {
       <>
         <NavigationGroup>
           <NavigationItem>
-            <a href="#">One</a>
+            <a href="#root">One</a>
           </NavigationItem>
           <NavigationItem>
-            <a href="#">Two</a>
+            <a href="#root">Two</a>
           </NavigationItem>
           <NavigationItem>
-            <a href="#">Three</a>
+            <a href="#root">Three</a>
           </NavigationItem>
         </NavigationGroup>
         <NavigationGroup>
           <NavigationItem>
-            <a href="#">Alpha</a>
+            <a href="#root">Alpha</a>
           </NavigationItem>
           <NavigationItem>
-            <a href="#">Beta</a>
+            <a href="#root">Beta</a>
           </NavigationItem>
           <NavigationItem>
-            <a href="#">Gamma</a>
+            <a href="#root">Gamma</a>
           </NavigationItem>
         </NavigationGroup>
       </>

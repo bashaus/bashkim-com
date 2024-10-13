@@ -15,10 +15,10 @@ const Template: StoryFn<FooterColumnProps> = (args: FooterColumnProps) => (
   <FooterColumnComponent {...args}>
     <FooterLinks>
       <li>
-        <a href="#">Menu item #1</a>
+        <a href="#root">Menu item #1</a>
       </li>
       <li>
-        <a href="#">Menu item #2</a>
+        <a href="#root">Menu item #2</a>
       </li>
     </FooterLinks>
   </FooterColumnComponent>

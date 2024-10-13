@@ -1,5 +1,6 @@
 export type PromiseMachineContextType = {
   retries: number;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   response?: any;
 };
 

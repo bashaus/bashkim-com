@@ -13,13 +13,13 @@ export default {
     children: (
       <>
         <NavigationItem>
-          <a href="#">One</a>
+          <a href="#root">One</a>
         </NavigationItem>
         <NavigationItem>
-          <a href="#">Two</a>
+          <a href="#root">Two</a>
         </NavigationItem>
         <NavigationItem>
-          <a href="#">Three</a>
+          <a href="#root">Three</a>
         </NavigationItem>
       </>
     ),

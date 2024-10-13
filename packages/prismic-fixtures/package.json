@@ -3,12 +3,14 @@
   "version": "0.0.0",
   "main": "./src/index",
   "scripts": {
+    "lint:scripts": "eslint .",
     "test": "jest --passWithNoTests"
   },
   "dependencies": {
     "@bashkim-com/prismic-dal": "*"
   },
   "devDependencies": {
+    "@bashkim-com/eslint": "*",
     "@bashkim-com/tsconfig": "*",
     "@swc/jest": "^0.2.36",
     "@types/jest": "29.5.13",

@@ -29,13 +29,7 @@ export const VideoModal = ({
 }: VideoModalProps) => {
   const playerRef = useRef(null);
 
-  const [, setReady] = useState<boolean>(false);
-  const [, setDuration] = useState<ReactPlayerProps["duration"]>(0);
   const [playing, setPlaying] = useState<ReactPlayerProps["playing"]>(false);
-
-  const handlePlayerReady = useCallback(() => {
-    setReady(true);
-  }, []);
 
   const handlePlayerPlay = useCallback(() => {
     setPlaying(true);
@@ -44,13 +38,6 @@ export const VideoModal = ({
   const handlePlayerPause = useCallback(() => {
     setPlaying(false);
   }, []);
-
-  const handlePlayerDuration = useCallback(
-    (durationValue: ReactPlayerProps["duration"]) => {
-      setDuration(durationValue);
-    },
-    [],
-  );
 
   /* */
   const handlePlayPauseClick = useCallback(() => {
@@ -82,10 +69,8 @@ export const VideoModal = ({
           height="100%"
           pip={false}
           light={false}
-          onReady={handlePlayerReady}
           onPlay={handlePlayerPlay}
           onPause={handlePlayerPause}
-          onDuration={handlePlayerDuration}
         />
       </div>
 

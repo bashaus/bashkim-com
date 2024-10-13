@@ -29,7 +29,7 @@ export const SocialMenu = ({
   const handleSignifierClick = useCallback(
     (event: MouseEvent<HTMLElement>) => {
       setAnchorEl(event.currentTarget);
-      onOpen && onOpen();
+      onOpen?.();
     },
     [onOpen],
   );

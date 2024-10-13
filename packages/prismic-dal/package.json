@@ -4,18 +4,17 @@
   "type": "module",
   "main": "./dist/index.ts",
   "scripts": {
-    "codegen": "graphql-codegen --config codegen.ts"
+    "codegen": "graphql-codegen --config codegen.ts",
+    "lint:scripts": "eslint ."
   },
   "devDependencies": {
     "@apollo/client": "^3.11.8",
+    "@bashkim-com/eslint": "*",
     "@graphql-codegen/cli": "^5.0.2",
     "@graphql-codegen/schema-ast": "^4.0.2",
     "@graphql-codegen/typescript": "^4.0.7",
     "@graphql-codegen/typescript-operations": "^4.2.3",
     "@graphql-codegen/typescript-react-apollo": "^4.3.2",
     "codegen-prismic-fetch": "^1.0.5"
-  },
-  "peerDependencies": {
-    "@apollo/client": "^3.11.8"
   }
 }

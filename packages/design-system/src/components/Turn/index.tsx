@@ -25,7 +25,7 @@ export class Turn extends PureComponent<TurnProps, TurnState> {
   public containerRef = createRef<HTMLDivElement>();
   public pagesRef = createRef<HTMLDivElement>();
 
-  static defaultProps = {
+  static readonly defaultProps = {
     display: TurnDisplay.DOUBLE,
   };
 

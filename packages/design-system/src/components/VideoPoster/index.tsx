@@ -57,6 +57,7 @@ export const VideoPoster = ({
         width={width && height ? width : undefined}
         height={width && height ? height : undefined}
         onClick={handleModalOpen}
+        onKeyUp={handleModalOpen}
       />
 
       <VideoModal

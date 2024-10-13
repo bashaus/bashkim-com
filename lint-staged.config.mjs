@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   "package.json": ["sort-package-json"],
   "*.{js,ts,tsx}": ["eslint --fix"],
   "*.{css,scss}": ["stylelint --fix"],

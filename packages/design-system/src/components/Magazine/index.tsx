@@ -102,7 +102,9 @@ export const Magazine = ({
   }, [handleWindowResize]);
 
   useEffect(() => {
-    isInitialized && handleSpreadChange(spread);
+    if (isInitialized) {
+      handleSpreadChange(spread);
+    }
   }, [display, spread, handleSpreadChange, isInitialized]);
 
   return (

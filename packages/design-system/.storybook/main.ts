@@ -1,7 +1,7 @@
-import { dirname, join } from "path";
 import type { StorybookConfig } from "@storybook/types";
+import { dirname, join } from "path";
 
-function getAbsolutePath(value: string): any {
+function getAbsolutePath(value: string) {
   return dirname(require.resolve(join(value, "package.json")));
 }
 

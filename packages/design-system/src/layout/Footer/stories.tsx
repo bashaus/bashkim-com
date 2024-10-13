@@ -17,7 +17,7 @@ const Template: StoryFn<FooterProps> = (args: FooterProps) => (
       <FooterColumn label="Column one">
         <FooterLinks>
           <li>
-            <a href="#">Menu item 1</a>
+            <a href="#root">Menu item 1</a>
           </li>
         </FooterLinks>
       </FooterColumn>
@@ -25,7 +25,7 @@ const Template: StoryFn<FooterProps> = (args: FooterProps) => (
       <FooterColumn label="Column two">
         <FooterLinks>
           <li>
-            <a href="#">Menu item 1</a>
+            <a href="#root">Menu item 1</a>
           </li>
         </FooterLinks>
       </FooterColumn>

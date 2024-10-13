@@ -16,13 +16,13 @@ import { SocialMenuStateLoading } from "../SocialMenuStateLoading";
 import styles from "./styles.module.scss";
 import { useSocialMenuStackOverflowViewModel } from "./view-model";
 
-export type SocialMenuStackOverflowView = {
+export type SocialMenuStackOverflowViewProps = {
   viewModel: ReturnType<typeof useSocialMenuStackOverflowViewModel>;
 };
 
 export const SocialMenuStackOverflowView = ({
   viewModel,
-}: SocialMenuStackOverflowView) => {
+}: SocialMenuStackOverflowViewProps) => {
   const {
     promiseMachineState: {
       value: viewState,

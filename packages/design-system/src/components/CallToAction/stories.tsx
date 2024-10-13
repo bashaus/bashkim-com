@@ -21,7 +21,7 @@ const Template: StoryFn<CallToActionProps> = ({
   ...args
 }: CallToActionProps) => (
   <CallToActionComponent {...args}>
-    <a>
+    <a href="#root">
       <span>{children}</span>
     </a>
   </CallToActionComponent>

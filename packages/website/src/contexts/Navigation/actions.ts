@@ -22,4 +22,5 @@ export const NavigationActionSetScrollAtTop = (
 
 /* */
 
+// eslint-disable-next-line sonarjs/redundant-type-aliases
 export type NavigationActionType = NavigationActionSetScrollAtTopType;

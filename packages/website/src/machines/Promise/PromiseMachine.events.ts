@@ -7,7 +7,8 @@ export enum PromiseMachineEvent {
 
 /* PromiseMachineEvent.FETCH */
 
-export type PromiseMachineFetchParamsType = {};
+// eslint-disable-next-line sonarjs/redundant-type-aliases
+export type PromiseMachineFetchParamsType = unknown;
 
 export type PromiseMachineFetchEventType = {
   type: PromiseMachineEvent.FETCH;
@@ -23,7 +24,8 @@ export const PromiseMachineFetchEvent = (
 
 /* PromiseMachineEvent.RESOLVE */
 
-export type PromiseMachineResolveParamsType = {};
+// eslint-disable-next-line sonarjs/redundant-type-aliases
+export type PromiseMachineResolveParamsType = unknown;
 
 export type PromiseMachineResolveEventType = {
   type: PromiseMachineEvent.RESOLVE;
@@ -39,7 +41,8 @@ export const PromiseMachineResolveEvent = (
 
 /* PromiseMachineEvent.REJECT */
 
-export type PromiseMachineRejectParamsType = {};
+// eslint-disable-next-line sonarjs/redundant-type-aliases
+export type PromiseMachineRejectParamsType = unknown;
 
 export type PromiseMachineRejectEventType = {
   type: PromiseMachineEvent.REJECT;
@@ -55,7 +58,8 @@ export const PromiseMachineRejectEvent = (
 
 /* PromiseMachineEvent.RETRY */
 
-export type PromiseMachineRetryParamsType = {};
+// eslint-disable-next-line sonarjs/redundant-type-aliases
+export type PromiseMachineRetryParamsType = unknown;
 
 export type PromiseMachineRetryEventType = {
   type: PromiseMachineEvent.RETRY;

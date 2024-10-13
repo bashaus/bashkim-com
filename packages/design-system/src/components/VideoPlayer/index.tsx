@@ -18,13 +18,7 @@ export type VideoPlayerProps = {
 export const VideoPlayer = ({ url }: VideoPlayerProps) => {
   const playerRef = useRef(null);
 
-  const [, setReady] = useState<boolean>(false);
-  const [, setDuration] = useState<ReactPlayerProps["duration"]>(0);
   const [playing, setPlaying] = useState<ReactPlayerProps["playing"]>(false);
-
-  const handlePlayerReady = useCallback(() => {
-    setReady(true);
-  }, []);
 
   const handlePlayerPlay = useCallback(() => {
     setPlaying(true);
@@ -33,13 +27,6 @@ export const VideoPlayer = ({ url }: VideoPlayerProps) => {
   const handlePlayerPause = useCallback(() => {
     setPlaying(false);
   }, []);
-
-  const handlePlayerDuration = useCallback(
-    (durationValue: ReactPlayerProps["duration"]) => {
-      setDuration(durationValue);
-    },
-    [],
-  );
 
   return (
     <div className={styles["VideoPlayer"]}>
@@ -64,10 +51,8 @@ export const VideoPlayer = ({ url }: VideoPlayerProps) => {
         width="100%"
         height="100%"
         light={false}
-        onReady={handlePlayerReady}
         onPlay={handlePlayerPlay}
         onPause={handlePlayerPause}
-        onDuration={handlePlayerDuration}
       />
     </div>
   );
