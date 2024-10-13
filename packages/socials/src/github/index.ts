@@ -1,7 +1,4 @@
-import {
-  GetPinnedItemsDocument,
-  GetPinnedItemsQuery,
-} from "../../graphql/github/types";
+import { GetPinnedItemsDocument, GetPinnedItemsQuery } from "./graphql-types";
 import { apolloGitHubClient } from "./client";
 import { GetGitHubSocialsResponse } from "./types";
 
@@ -32,7 +29,7 @@ export const getGitHubSocials = async (): Promise<GetGitHubSocialsResponse> => {
     })
     .map((node) => ({
       name: node.name,
-      description: node.description,
+      description: node.description ?? undefined,
       url: node.url,
     }));
 

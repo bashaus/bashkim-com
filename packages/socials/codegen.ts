@@ -3,8 +3,8 @@ import type { CodegenConfig } from "@graphql-codegen/cli";
 const codegenConfig: CodegenConfig = {
   overwrite: true,
   generates: {
-    "./graphql/github/types.ts": {
-      schema: "https://docs.github.com/public/fpt/schema.docs.graphql",
+    "./src/github/graphql-types.ts": {
+      schema: "./generated/github/schema.gql",
       documents: [
         "./graphql/github/queries/**/*.gql",
         "./graphql/github/mutations/**/*.gql",
@@ -19,11 +19,6 @@ const codegenConfig: CodegenConfig = {
         withComponent: false,
         withHOC: false,
       },
-    },
-
-    "./graphql/github/schema.gql": {
-      schema: "https://docs.github.com/public/fpt/schema.docs.graphql",
-      plugins: ["schema-ast"],
     },
   },
   hooks: {

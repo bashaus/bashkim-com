@@ -4,9 +4,9 @@
   "type": "module",
   "main": "./dist/index.ts",
   "scripts": {
-    "build:init": "yarn codegen:prismic",
+    "build:init": "yarn codegen:deps",
     "codegen": "graphql-codegen --config codegen.ts",
-    "codegen:prismic": "graphql-codegen --config codegen.prismic.ts",
+    "codegen:deps": "graphql-codegen --config codegen.deps.ts",
     "lint:scripts": "eslint ."
   },
   "devDependencies": {

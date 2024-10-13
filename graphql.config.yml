@@ -10,7 +10,7 @@ projects:
       - "./packages/prismic-dal/src/**/*.gql"
 
   socials-github:
-    schema: "./packages/socials/graphql/github/schema.gql"
+    schema: "./packages/socials/generated/github/schema.gql"
     documents:
       - "./packages/socials/graphql/github/queries/**/*.gql"
       - "./packages/socials/graphql/github/mutations/**/*.gql"

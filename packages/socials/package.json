@@ -9,7 +9,10 @@
   },
   "main": "./src/index.ts",
   "scripts": {
-    "codegen": "graphql-codegen --config codegen.ts"
+    "build:init": "yarn codegen:deps",
+    "codegen": "graphql-codegen --config codegen.ts",
+    "codegen:deps": "graphql-codegen --config codegen.deps.ts",
+    "lint:scripts": "eslint ."
   },
   "dependencies": {
     "@apollo-link-debug/handle-errors": "^0.0.5",
