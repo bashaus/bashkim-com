@@ -4,7 +4,7 @@ import { generateCanonical } from "../../libraries/app/generateCanonical";
 export const metadata = {
   title: "About",
   description: "Information on the work history of Bashkim Isai",
-  keywords: ["bashkim isai", "creative technologist", "london"],
+  keywords: ["bashkim isai", "creative technologist", "digital nomad"],
   alternates: {
     canonical: generateCanonical("/about/"),
   },

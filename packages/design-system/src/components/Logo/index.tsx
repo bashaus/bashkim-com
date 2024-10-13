@@ -8,6 +8,6 @@ export type LogoProps = ComponentPropsWithoutRef<"div">;
 export const Logo = ({ className, ...props }: LogoProps) => (
   <div className={classNames(className, styles["Logo"])} {...props}>
     <strong className={styles["Name"]}>Bashkim Isai</strong>
-    <span className={styles["Title"]}>Creative Technologist</span>
+    <span className={styles["Title"]}>Digital Nomad Technologist</span>
   </div>
 );

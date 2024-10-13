@@ -7,7 +7,7 @@ import { RootLayout } from "../layouts/RootLayout";
 
 export const metadata = {
   title: {
-    default: "Bashkim Isai - Creative Technologist",
+    default: "Bashkim Isai - Digital Nomad Technologist",
     template: "%s | Bashkim Isai",
   },
 };

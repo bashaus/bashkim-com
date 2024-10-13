@@ -41,10 +41,8 @@ export const HomeHello = () => (
       </h1>
 
       <p>
-        I&apos;m a London&#8209;based Creative Technologist specialising in
-        <span> </span>
-        <Link href="/portfolio#tangible-media">tangible&nbsp;media</Link>
-        <span> and </span>
+        I&apos;m a Digital Nomad Technologist based in Barcelona, specialising
+        in <Link href="/portfolio#tangible-media">tangible&nbsp;media</Link> and{" "}
         <Link href="/portfolio#web-development">web&nbsp;development</Link>
       </p>
     </div>
