@@ -22,7 +22,7 @@ export const SiteSettings = ({ isVisible, onClose }: SiteSettingsProps) => (
         <div className={styles["Header"]}>
           <div className={styles["HeaderText"]}>Options</div>
           <MenuButton onClick={onClose}>
-            <CheckIcon size="small" />
+            <CheckIcon sx={{ width: 16, height: 16 }} />
           </MenuButton>
         </div>
 

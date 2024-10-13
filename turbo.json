@@ -1,25 +1,29 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "globalDependencies": ["**/.env"],
+  "globalDependencies": ["**/.env", "package.json", "yarn.lock"],
+  "remoteCache": {
+    "enabled": false
+  },
   "tasks": {
     "build": {
+      "cache": false,
       "dependsOn": ["codegen", "^build"],
-      "outputs": [".next/**", "!.next/cache/**", "dist", "out"]
-    },
-    "lint:scripts": {
-      "dependsOn": ["^lint:scripts"]
+      "outputs": [".next/**", "!.next/cache/**"]
     },
     "codegen": {
-      "dependsOn": ["^codegen"]
+      "cache": false
     },
     "dev": {
-      "dependsOn": ["codegen"],
       "cache": false,
+      "dependsOn": ["codegen"],
       "persistent": true
     },
+    "lint:scripts": {
+      "inputs": ["**/*.ts", "**/*.tsx", "**/*.mjs", "**/*.js"]
+    },
     "storybook:build": {
-      "dependsOn": ["codegen"],
-      "outputs": ["storybook-static"]
+      "cache": false,
+      "dependsOn": ["codegen"]
     },
     "storybook:dev": {
       "cache": false,
