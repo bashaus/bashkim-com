@@ -1,4 +1,4 @@
-export default {
+const config = {
   js2svg: {
     indent: 2,
     pretty: true,
@@ -46,3 +46,5 @@ export default {
     { name: "sortDefsChildren" },
   ],
 };
+
+export default config;

@@ -34,7 +34,6 @@
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^14.2.15",
-    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.15",
     "@swc/jest": "^0.2.36",
     "@types/jest": "29.5.13",
     "@types/node": "^22.7.4",

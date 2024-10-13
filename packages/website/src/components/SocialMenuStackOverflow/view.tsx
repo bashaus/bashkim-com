@@ -33,13 +33,21 @@ export const SocialMenuStackOverflowView = ({
   return (
     <SocialMenu
       label="Stack Overflow"
-      signifierIcon={<StackOverflowVector width="30" height="30" />}
+      signifierIcon={
+        <StackOverflowVector width={30} height={30} viewBox="0 0 100 100" />
+      }
       onOpen={viewModel.handleOpen}
     >
       <SocialMenuItemHeader
         href="https://stackoverflow.com/users/600240/bashaus"
         avatarBadgeBackground="#FFF"
-        avatarBadge={<StackOverflowFilledVector width="20" height="20" />}
+        avatarBadge={
+          <StackOverflowFilledVector
+            width={20}
+            height={20}
+            viewBox="0 0 100 100"
+          />
+        }
         textPrimary="Bashkim Isai"
         textSecondary={
           <>

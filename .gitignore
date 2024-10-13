@@ -38,7 +38,6 @@ yarn-error.log*
 
 # Application
 .cache/
-.serverless/
 dist/
 storybook-static/
 generated/

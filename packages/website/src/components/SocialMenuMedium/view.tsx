@@ -29,13 +29,22 @@ export const SocialMenuMediumView = ({ viewModel }: SocialMenuMediumProps) => {
   return (
     <SocialMenu
       label="Medium"
-      signifierIcon={<MediumVector width="30" height="30" />}
+      signifierIcon={
+        <MediumVector width={30} height={30} viewBox="0 0 100 100" />
+      }
       onOpen={viewModel.handleOpen}
     >
       <SocialMenuItemHeader
         href="https://medium.com/@bashaus"
         avatarBadgeBackground="#000"
-        avatarBadge={<MediumVector width="10" height="10" color="#FFFFF" />}
+        avatarBadge={
+          <MediumVector
+            width={10}
+            height={10}
+            viewBox="0 0 100 100"
+            color="#FFFFF"
+          />
+        }
         textPrimary="Bashkim Isai"
         textSecondary="View profile on Medium"
       />

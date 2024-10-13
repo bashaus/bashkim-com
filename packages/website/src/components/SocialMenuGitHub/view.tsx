@@ -32,13 +32,22 @@ export const SocialMenuGitHubView = ({
   return (
     <SocialMenu
       label="GitHub"
-      signifierIcon={<GitHubVector width="30" height="30" />}
+      signifierIcon={
+        <GitHubVector width={30} height={30} viewBox="0 0 100 100" />
+      }
       onOpen={viewModel.handleOpen}
     >
       <SocialMenuItemHeader
         href="https://github.com/bashaus/"
         avatarBadgeBackground="#333"
-        avatarBadge={<GitHubVector width="15" height="15" color="#FFFFF" />}
+        avatarBadge={
+          <GitHubVector
+            width={15}
+            height={15}
+            viewBox="0 0 100 100"
+            color="#FFFFF"
+          />
+        }
         textPrimary="@bashaus"
         textSecondary="View profile on GitHub"
       />
