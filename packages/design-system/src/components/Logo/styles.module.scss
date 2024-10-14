@@ -1,36 +1,54 @@
-@import "~@bashkim-com/style-guide/fonts.scss";
+@import "typed/typed.scss";
 
 .Logo {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  text-decoration: none;
-  height: 60px;
-  cursor: pointer;
+  font-family: "Courier New", Courier, monospace;
+  display: block;
 }
 
-.Name {
-  display: block;
-  padding: 0;
+.Command {
   font-weight: bold;
-  font-size: 0.75rem;
-  line-height: 115%;
-  text-transform: uppercase;
+}
 
-  html.isReady & {
-    transition: all 0.3s ease-in-out;
+.CommandPath {
+  color: orange;
+}
+
+.Typewriter {
+  @include typed(
+    "creative technologist",
+    "digital nomad",
+    (
+      type: 0.03,
+      delete: 0.02,
+    ),
+    (
+      caret: false,
+      iterations: 1,
+      end-on: "bashkim isai.",
+    )
+  );
+
+  /* caret */
+  &::after {
+    content: "​";
+    position: relative;
+    display: inline-block;
+    border-right: 10px solid transparent;
+    white-space: nowrap;
+    animation-name: caret;
+    animation-duration: 0.75s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.2s;
+    animation-iteration-count: 14;
+    animation-direction: forwards;
+
+    border-right-width: 10px;
+    height: 24px;
   }
 }
 
-.Title {
-  display: block;
-  padding: 0;
-  font-size: 0.75rem;
-  line-height: 115%;
-  text-transform: uppercase;
-
-  html.isReady & {
-    transition: all 0.3s ease-in-out;
+@keyframes caret {
+  25% {
+    border-color: currentColor;
   }
 }

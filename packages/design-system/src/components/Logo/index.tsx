@@ -1,13 +1,17 @@
-import classNames from "classnames";
-import { ComponentPropsWithoutRef } from "react";
-
 import styles from "./styles.module.scss";
 
-export type LogoProps = ComponentPropsWithoutRef<"div">;
+export type LogoProps = {
+  animated?: boolean;
+};
 
-export const Logo = ({ className, ...props }: LogoProps) => (
-  <div className={classNames(className, styles["Logo"])} {...props}>
-    <strong className={styles["Name"]}>Bashkim Isai</strong>
-    <span className={styles["Title"]}>Digital Nomad Technologist</span>
-  </div>
-);
+export const Logo = ({ animated = false }: LogoProps) => {
+  return (
+    <div className={styles["Logo"]}>
+      <span className={styles["Command"]}>
+        bash:<span className={styles["CommandPath"]}>~</span>$&nbsp;
+      </span>
+      {animated && <span className={styles["Typewriter"]} />}
+      {!animated && <span>bashkim isai.</span>}
+    </div>
+  );
+};
