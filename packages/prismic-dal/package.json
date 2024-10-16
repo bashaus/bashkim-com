@@ -4,7 +4,6 @@
   "type": "module",
   "main": "./dist/index.ts",
   "scripts": {
-    "build:init": "yarn codegen:deps",
     "codegen": "graphql-codegen --config codegen.ts",
     "codegen:deps": "graphql-codegen --config codegen.deps.ts",
     "lint:scripts": "eslint ."
