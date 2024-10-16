@@ -1,6 +1,4 @@
 export const generateCanonical = (pathname: string) => {
-  const { APP_BASE_HREF } = process.env;
-
   if (!pathname.startsWith("/")) {
     throw new Error(`pathname ${pathname} must start with a slash (/)`);
   }
@@ -9,5 +7,5 @@ export const generateCanonical = (pathname: string) => {
     throw new Error(`pathname ${pathname} must end with a slash (/)`);
   }
 
-  return `${APP_BASE_HREF}/${pathname}/`;
+  return `https://www.bashkim.com/${pathname}/`;
 };

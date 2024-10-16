@@ -14,8 +14,6 @@ export async function generateSitemaps() {
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const urlset = [];
 
-  const { APP_BASE_HREF } = process.env;
-
   const caseStudiesResult =
     await prismicClient.query<GetSitemapCaseStudiesQuery>({
       query: GetSitemapCaseStudiesDocument,
@@ -25,7 +23,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     if (edge?.node) {
       const caseStudy = edge?.node;
       urlset.push({
-        url: `${APP_BASE_HREF}/portfolio/${caseStudy._meta.uid}/`,
+        url: `https://www.bashkim.com/portfolio/${caseStudy._meta.uid}/`,
         lastModified: PrismicDate(
           caseStudy._meta.lastPublicationDate,
         ).toISOString(),

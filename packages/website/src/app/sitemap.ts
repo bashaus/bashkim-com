@@ -15,7 +15,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const urlset = [];
   const now = new Date().toISOString();
 
-  const { APP_BASE_HREF } = process.env;
+  const APP_BASE_HREF = "https://www.bashkim.com";
 
   const pagesResult = await prismicClient.query<GetSitemapPagesQuery>({
     query: GetSitemapPagesDocument,
