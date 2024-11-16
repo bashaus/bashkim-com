@@ -1,9 +1,11 @@
 {
   "$schema": "https://turbo.build/schema.json",
+  "ui": "tui",
   "globalDependencies": ["**/.env", "package.json", "yarn.lock"],
   "tasks": {
     "build": {
-      "dependsOn": ["^codegen"],
+      "dependsOn": ["^codegen", "^build"],
+      "inputs": ["$TURBO_DEFAULT$", ".env*"],
       "outputs": [".next/**", "!.next/cache/**"]
     },
     "codegen:deps": {
@@ -19,15 +21,12 @@
       "persistent": true
     },
     "lint:scripts": {
+      "dependsOn": ["^lint:scripts"],
       "inputs": ["**/*.ts", "**/*.tsx", "**/*.mjs", "**/*.js"]
     },
     "storybook:build": {
       "dependsOn": ["^codegen"],
       "outputs": ["storybook-static/"]
-    },
-    "storybook:dev": {
-      "cache": false,
-      "persistent": true
     }
   }
 }

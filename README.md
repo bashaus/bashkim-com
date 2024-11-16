@@ -28,11 +28,3 @@ Run the main website in development mode:
 ```bash
 yarn dev
 ```
-
-### Design system
-
-Run storybook for the design system:
-
-```bash
-yarn storybook:dev
-```

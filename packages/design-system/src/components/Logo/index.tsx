@@ -11,7 +11,7 @@ export const Logo = ({ animated = false }: LogoProps) => {
         bash:<span className={styles["CommandPath"]}>~</span>$&nbsp;
       </span>
       {animated && <span className={styles["Typewriter"]} />}
-      {!animated && <span>bashkim isai.</span>}
+      {!animated && <span>bashkim isai</span>}
     </div>
   );
 };
