@@ -4,9 +4,9 @@
   "type": "module",
   "main": "./src/index.ts",
   "scripts": {
+    "dev": "storybook dev -p 6006",
     "lint:scripts": "eslint .",
     "storybook:build": "storybook build",
-    "storybook:dev": "storybook dev",
     "test": "jest --passWithNoTests"
   },
   "dependencies": {
@@ -26,11 +26,11 @@
   },
   "devDependencies": {
     "@bashkim-com/eslint": "*",
-    "@storybook/addon-a11y": "^8.3.5",
-    "@storybook/addon-essentials": "^8.3.5",
-    "@storybook/core-server": "^8.3.5",
-    "@storybook/nextjs": "^8.3.5",
-    "@storybook/types": "^8.3.5",
+    "@storybook/addon-a11y": "^8.4.4",
+    "@storybook/addon-essentials": "^8.4.4",
+    "@storybook/core-server": "^8.4.4",
+    "@storybook/nextjs": "^8.4.4",
+    "@storybook/types": "^8.4.4",
     "@swc/jest": "^0.2.36",
     "@types/jest": "29.5.13",
     "@types/react-modal": "^3.16.3",
@@ -39,6 +39,6 @@
     "jest": "29.7.0",
     "jest-environment-jsdom": "29.7.0",
     "jest-junit": "^16.0.0",
-    "storybook": "^8.3.5"
+    "storybook": "^8.4.4"
   }
 }
