@@ -3,7 +3,7 @@
 import "@bashkim-com/style-guide/normalize.scss";
 
 import { LinkResolverContext } from "@bashkim-com/prismic-helpers";
-import { ThemeProvider } from "@mui/material";
+import ThemeProvider from "@mui/material/styles/ThemeProvider";
 import { PropsWithChildren, useEffect } from "react";
 
 import { GoogleAnalytics } from "../../components/GoogleAnalytics";
