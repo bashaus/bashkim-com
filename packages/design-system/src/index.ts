@@ -1,5 +1,4 @@
 /* Components */
-export { Brick } from "./components/Brick";
 export { Carousel } from "./components/Carousel";
 export { CarouselImage } from "./components/CarouselImage";
 export { DeviceFeaturePhone } from "./components/DeviceFeaturePhone";

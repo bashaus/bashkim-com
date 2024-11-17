@@ -1,5 +1,5 @@
 import { PageHeaderPartial } from "@bashkim-com/design-system";
-import { Button } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 import Link from "next/link";
 
 import PortfolioVector from "../../../../assets/vectors/icons/Portfolio.svg";
@@ -37,14 +37,8 @@ export const HomeHello = () => (
     }
   >
     <div className={styles["Introduction"]}>
-      <h1>
-        Hi! Call me{" "}
-        <Button variant="outlined" color="currentColor" href="/about">
-          Bash
-        </Button>
-      </h1>
-
-      <p>
+      <Typography variant="h1">Hello, I&apos;m Bash.</Typography>
+      <Typography>
         I&apos;m a Digital Nomad Technologist based in Barcelona, specialising
         in{" "}
         <Button
@@ -62,7 +56,7 @@ export const HomeHello = () => (
         >
           web&nbsp;development
         </Button>
-      </p>
+      </Typography>
     </div>
   </PageHeaderPartial>
 );
