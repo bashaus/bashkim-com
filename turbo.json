@@ -13,6 +13,7 @@
       "outputs": ["generated/"]
     },
     "codegen": {
+      "cache": false,
       "dependsOn": ["codegen:deps"]
     },
     "dev": {
