@@ -1,4 +1,4 @@
-import type { Meta } from "@storybook/react";
+import type { Meta, Story } from "@storybook/react";
 
 import { Logo as LogoComponent } from ".";
 
@@ -7,8 +7,14 @@ export default {
   title: "Components/Logo",
   args: {},
   parameters: {
-    layout: "centered",
+    layout: "padded",
   },
 } as Meta;
 
-export const Logo = {};
+export const Logo: Story = {};
+
+export const Animated: Story = {
+  args: {
+    animated: true,
+  },
+};
