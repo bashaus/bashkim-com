@@ -1,5 +1,5 @@
-import { MenuButton } from "@bashkim-com/design-system";
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
+import { IconButton, Tooltip } from "@mui/material";
 import { ComponentPropsWithoutRef, useCallback, useState } from "react";
 
 import { SiteSettings } from "../SiteSettings";
@@ -20,12 +20,12 @@ export const MenuButtonSettings = (props: MenuButtonSettingsProps) => {
 
   return (
     <div {...props}>
-      <MenuButton onClick={handleSignifierClick}>
-        <SettingsOutlinedIcon
-          sx={{ width: 20, height: 20 }}
-          className={styles["Icon"]}
-        />
-      </MenuButton>
+      <Tooltip title="Site settings" arrow>
+        <IconButton color="inherit" onClick={handleSignifierClick}>
+          <SettingsOutlinedIcon className={styles["Icon"]} color="inherit" />
+        </IconButton>
+      </Tooltip>
+
       <SiteSettings isVisible={isVisible} onClose={handleClose} />
     </div>
   );

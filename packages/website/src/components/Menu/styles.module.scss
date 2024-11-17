@@ -24,4 +24,10 @@
   @media #{$media-query-not-mobile} {
     display: none;
   }
+
+  display: flex;
+  width: 60px;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
 }

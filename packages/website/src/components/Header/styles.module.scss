@@ -68,8 +68,12 @@
   );
 }
 
-.MobileHidden {
+.SettingsButton {
   @media #{$media-query-mobile} {
     display: none;
   }
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

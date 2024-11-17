@@ -20,7 +20,7 @@ export const SiteSettings = ({ isVisible, onClose }: SiteSettingsProps) => (
     <ModalFrame>
       <div className={styles["SiteSettings"]}>
         <div className={styles["Header"]}>
-          <div className={styles["HeaderText"]}>Options</div>
+          <div className={styles["HeaderText"]}>Site settings</div>
           <MenuButton onClick={onClose}>
             <CheckIcon sx={{ width: 16, height: 16 }} />
           </MenuButton>
