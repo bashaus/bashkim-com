@@ -1,6 +1,5 @@
 /* Components */
 export { Brick } from "./components/Brick";
-export { CallToAction } from "./components/CallToAction";
 export { Carousel } from "./components/Carousel";
 export { CarouselImage } from "./components/CarouselImage";
 export { DeviceFeaturePhone } from "./components/DeviceFeaturePhone";

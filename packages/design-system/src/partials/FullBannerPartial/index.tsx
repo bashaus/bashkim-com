@@ -1,6 +1,5 @@
 import { ReactNode } from "react";
 
-import { RichTextFormatter } from "../../formatters/RichTextFormatter";
 import styles from "./styles.module.scss";
 
 export type FullBannerPartialProps = {
@@ -18,9 +17,7 @@ export const FullBannerPartial = ({
 }: FullBannerPartialProps) => (
   <div className={styles["FullBannerPartial"]} id={id}>
     <div className={styles["Container"]}>
-      <div className={styles["Content"]}>
-        <RichTextFormatter>{children}</RichTextFormatter>
-      </div>
+      <div className={styles["Content"]}>{children}</div>
     </div>
 
     {backgroundDesktop && (

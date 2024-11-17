@@ -1,12 +1,12 @@
 "use client";
 
 import {
-  CallToAction,
   Group,
   SplitItemPartial,
   SplitPartial,
   SubtitlePartial,
 } from "@bashkim-com/design-system";
+import { Button } from "@mui/material";
 
 import { MenuButtonHome } from "../../../../components/MenuButtonHome";
 import { Page } from "../../../../components/Page";
@@ -31,30 +31,28 @@ export const AboutPageLockup = () => (
         <SplitItemPartial>
           <div>
             <p>Looking for recommendations from industry professionals?</p>
-            <CallToAction>
-              <a
-                href="https://www.linkedin.com/in/bashaus/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <span>Visit my LinkedIn profile</span>
-              </a>
-            </CallToAction>
+            <Button
+              variant="outlined"
+              href="https://www.linkedin.com/in/bashaus/"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              Visit my LinkedIn profile
+            </Button>
           </div>
         </SplitItemPartial>
 
         <SplitItemPartial>
           <div>
             <p>Looking to see some examples of code?</p>
-            <CallToAction>
-              <a
-                href="https://github.com/bashaus?tab=repositories"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <span>Visit my GitHub profile</span>
-              </a>
-            </CallToAction>
+            <Button
+              variant="outlined"
+              href="https://github.com/bashaus?tab=repositories"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              Visit my GitHub profile
+            </Button>
           </div>
         </SplitItemPartial>
       </SplitPartial>

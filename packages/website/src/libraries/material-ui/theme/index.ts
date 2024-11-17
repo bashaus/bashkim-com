@@ -1,5 +1,11 @@
 import createTheme from "@mui/material/styles/createTheme";
 
+declare module "@mui/material/Button" {
+  interface ButtonPropsColorOverrides {
+    currentColor: true;
+  }
+}
+
 declare module "@mui/material/Paper" {
   interface PaperPropsVariantOverrides {
     social: true;
@@ -8,6 +14,17 @@ declare module "@mui/material/Paper" {
 
 const theme = createTheme({
   components: {
+    MuiButton: {
+      variants: [
+        {
+          props: { color: "currentColor", variant: "outlined" },
+          style: {
+            color: "currentColor",
+            borderColor: "currentColor",
+          },
+        },
+      ],
+    },
     MuiListItemText: {
       styleOverrides: {
         root: {

@@ -1,7 +1,10 @@
-import { CallToAction, FullBannerPartial } from "@bashkim-com/design-system";
+import {
+  FullBannerPartial,
+  RichTextFormatter,
+} from "@bashkim-com/design-system";
 import type { FeaturedCaseStudiesModelFragment } from "@bashkim-com/prismic-dal";
 import { useLinkResolver } from "@bashkim-com/prismic-helpers";
-import Link from "next/link";
+import { Button } from "@mui/material";
 
 export type HomeFeaturedProps = {
   featuredCaseStudies: Array<FeaturedCaseStudiesModelFragment>;
@@ -29,18 +32,21 @@ export const HomeFeatured = ({ featuredCaseStudies }: HomeFeaturedProps) => {
               backgroundMobile={backgroundMobile?.url}
               id={`HomePage-FullBannerPartial-${caseStudy._meta.id}`}
             >
-              <h2>{caseStudy.meta_title}</h2>
-              <p>{caseStudy.meta_description}</p>
-              <CallToAction>
-                <Link
-                  href={PrismicLinkResolver({
-                    type: "case_study",
-                    uid: caseStudy._meta.uid,
-                  })}
-                >
-                  <span>Read case study</span>
-                </Link>
-              </CallToAction>
+              <RichTextFormatter>
+                <h2>{caseStudy.meta_title}</h2>
+                <p>{caseStudy.meta_description}</p>
+              </RichTextFormatter>
+
+              <Button
+                variant="outlined"
+                color="currentColor"
+                href={PrismicLinkResolver({
+                  type: "case_study",
+                  uid: caseStudy._meta.uid,
+                })}
+              >
+                Read case study
+              </Button>
             </FullBannerPartial>
           </li>
         );

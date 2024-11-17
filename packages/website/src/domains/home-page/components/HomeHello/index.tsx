@@ -1,4 +1,5 @@
 import { PageHeaderPartial } from "@bashkim-com/design-system";
+import { Button } from "@mui/material";
 import Link from "next/link";
 
 import PortfolioVector from "../../../../assets/vectors/icons/Portfolio.svg";
@@ -37,13 +38,30 @@ export const HomeHello = () => (
   >
     <div className={styles["Introduction"]}>
       <h1>
-        Hi! Call me <Link href="/about">Bash</Link>
+        Hi! Call me{" "}
+        <Button variant="outlined" color="currentColor" href="/about">
+          Bash
+        </Button>
       </h1>
 
       <p>
         I&apos;m a Digital Nomad Technologist based in Barcelona, specialising
-        in <Link href="/portfolio#tangible-media">tangible&nbsp;media</Link> and{" "}
-        <Link href="/portfolio#web-development">web&nbsp;development</Link>
+        in{" "}
+        <Button
+          variant="outlined"
+          color="currentColor"
+          href="/portfolio#tangible-media"
+        >
+          tangible&nbsp;media
+        </Button>{" "}
+        and{" "}
+        <Button
+          variant="outlined"
+          color="currentColor"
+          href="/portfolio#web-development"
+        >
+          web&nbsp;development
+        </Button>
       </p>
     </div>
   </PageHeaderPartial>

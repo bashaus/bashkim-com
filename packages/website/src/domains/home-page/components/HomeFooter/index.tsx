@@ -1,9 +1,5 @@
-import {
-  CallToAction,
-  SplitItemPartial,
-  SplitPartial,
-} from "@bashkim-com/design-system";
-import Link from "next/link";
+import { SplitItemPartial, SplitPartial } from "@bashkim-com/design-system";
+import Button from "@mui/material/Button";
 
 import PortfolioBackground from "../../assets/portfolio-background.jpg";
 import PracticeBackground from "../../assets/practice-background.jpg";
@@ -13,23 +9,17 @@ export const HomeFooter = () => (
   <SplitPartial>
     <SplitItemPartial backgroundImage={PortfolioBackground.src}>
       <div className={styles["PortfolioSplitItemPartial"]}>
-        <h3>Looking for more case&nbsp;studies?</h3>
-        <CallToAction>
-          <Link href="/portfolio">
-            <span>Browse portfolio</span>
-          </Link>
-        </CallToAction>
+        <Button variant="outlined" color="currentColor" href="/portfolio">
+          Browse portfolio
+        </Button>
       </div>
     </SplitItemPartial>
 
     <SplitItemPartial backgroundImage={PracticeBackground.src}>
       <div>
-        <h3>Want more details about my practice?</h3>
-        <CallToAction>
-          <Link href="/about">
-            <span>About me</span>
-          </Link>
-        </CallToAction>
+        <Button variant="outlined" color="currentColor" href="/about">
+          About me
+        </Button>
       </div>
     </SplitItemPartial>
   </SplitPartial>

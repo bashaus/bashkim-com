@@ -1,7 +1,6 @@
 import classNames from "classnames";
 import { ComponentPropsWithoutRef, ReactNode } from "react";
 
-import { RichTextFormatter } from "../../formatters/RichTextFormatter";
 import styles from "./styles.module.scss";
 
 export type SplitItemPartialProps = ComponentPropsWithoutRef<"div"> & {
@@ -28,6 +27,6 @@ export const SplitItemPartial = ({
     )}
     {...props}
   >
-    <RichTextFormatter>{children}</RichTextFormatter>
+    {children}
   </div>
 );
