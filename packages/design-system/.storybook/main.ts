@@ -1,33 +1,51 @@
-import type { StorybookConfig } from "@storybook/types";
-import { dirname, join } from "path";
-
-function getAbsolutePath(value: string) {
-  return dirname(require.resolve(join(value, "package.json")));
-}
+import type { StorybookConfig } from "@storybook/nextjs";
+import TsconfigPathsPlugin from "tsconfig-paths-webpack-plugin";
+import merge from "webpack-merge";
 
 const config: StorybookConfig = {
-  addons: [
-    getAbsolutePath("@storybook/addon-a11y"),
-    getAbsolutePath("@storybook/addon-essentials"),
-  ],
-
-  core: {
-    disableTelemetry: true,
-    enableCrashReports: false,
-  },
+  stories: ["../src/**/stories.@(ts|tsx)"],
+  addons: ["@storybook/addon-essentials", "@storybook/addon-a11y"],
 
   framework: {
-    name: getAbsolutePath("@storybook/nextjs"),
+    name: "@storybook/nextjs",
     options: {},
   },
 
-  stories: [
-    "../src/components/**/stories.tsx",
-    "../src/formatters/**/stories.tsx",
-    "../src/layout/**/stories.tsx",
-    "../src/partials/**/stories.tsx",
-    "../src/slices/**/stories.tsx",
-  ],
+  core: {
+    disableTelemetry: true,
+  },
+
+  async webpackFinal(config) {
+    config.module?.rules?.forEach((rule) => {
+      if (
+        rule &&
+        typeof rule === "object" &&
+        rule?.test instanceof RegExp &&
+        rule.test.test(".svg")
+      ) {
+        rule.exclude = /\.svg$/;
+      }
+    });
+
+    return merge(config, {
+      resolve: {
+        plugins: [
+          new TsconfigPathsPlugin({
+            extensions: config?.resolve?.extensions,
+          }),
+        ],
+      },
+
+      module: {
+        rules: [
+          {
+            test: /\.svg$/,
+            use: ["@svgr/webpack"],
+          },
+        ],
+      },
+    });
+  },
 };
 
 export default config;
