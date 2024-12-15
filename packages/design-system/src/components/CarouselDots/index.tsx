@@ -2,10 +2,8 @@ import { ReactNode } from "react";
 
 import styles from "./styles.module.scss";
 
-export type CarouselDotsChildren = ReactNode;
-
-export const CarouselDots = (children: CarouselDotsChildren) => (
+export const CarouselDots = (dots: ReactNode) => (
   <div>
-    <ol className={styles["CarouselDots"]}>{children}</ol>
+    <ol className={styles["CarouselDots"]}>{dots}</ol>
   </div>
 );
