@@ -1,4 +1,5 @@
 import type { Meta, StoryFn } from "@storybook/react";
+import { placeholderImage } from "placeholder-image-data-url-svg";
 
 import { Magazine as MagazineComponent, MagazineProps } from ".";
 
@@ -28,10 +29,12 @@ const Template: StoryFn<MagazineProps> = (args: MagazineProps) => (
         .map((value) => (
           <div key={value}>
             <img
-              src={`https://via.placeholder.com/${args.pageWidth}x${
-                args.pageHeight
-              }?text=Page+${value + 1}`}
-              alt={`Page ${value + 1}`}
+              src={placeholderImage({
+                width: args.pageWidth,
+                height: args.pageHeight,
+                text: `Page ${value}`,
+              })}
+              alt={`Page ${value}`}
               width={args.pageWidth}
               height={args.pageHeight}
             />

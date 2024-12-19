@@ -1,4 +1,5 @@
 import type { Meta, StoryFn } from "@storybook/react";
+import { placeholderImage } from "placeholder-image-data-url-svg";
 import { ReactNode } from "react";
 
 import { DeviceSmartphone, DeviceSmartphoneProps } from ".";
@@ -7,7 +8,7 @@ export default {
   component: DeviceSmartphone,
   title: "Components/Device/Smartphone",
   args: {
-    figure: ["https://via.placeholder.com/640x1130.png?text=figure"],
+    figure: [placeholderImage({ width: 640, height: 1130, text: "figure" })],
     children: "Class aptent taciti sociosqu ad litora torquent per.",
   },
   argTypes: {

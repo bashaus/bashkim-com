@@ -1,4 +1,5 @@
 import type { Meta, StoryFn } from "@storybook/react";
+import { placeholderImage } from "placeholder-image-data-url-svg";
 
 import {
   FullBannerPartial as FullBannerPartialComponent,
@@ -11,10 +12,10 @@ export default {
   args: {
     id: "FullBannerPartial",
     backgroundDesktop: [
-      "https://via.placeholder.com/1920x400.png?text=backgroundDesktop",
+      placeholderImage({ width: 1920, height: 400, text: "backgroundDesktop" }),
     ],
     backgroundMobile: [
-      "https://via.placeholder.com/1000x800.png?text=backgroundMobile",
+      placeholderImage({ width: 1000, height: 800, text: "backgroundMobile" }),
     ],
     title: "FullBannerPartial",
     subtitle:

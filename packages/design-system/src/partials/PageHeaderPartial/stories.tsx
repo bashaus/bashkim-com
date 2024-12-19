@@ -1,4 +1,5 @@
 import type { Meta, StoryFn } from "@storybook/react";
+import { placeholderImage } from "placeholder-image-data-url-svg";
 
 import {
   PageHeaderPartial as PageHeaderPartialComponent,
@@ -11,9 +12,11 @@ export default {
   args: {
     id: "PageHeaderPartial",
     imageDesktop: [
-      "https://via.placeholder.com/1920x400.png?text=imageDesktop",
+      placeholderImage({ width: 1920, height: 400, text: "imageDesktop" }),
     ],
-    imageMobile: ["https://via.placeholder.com/1000x8000.png?text=imageMobile"],
+    imageMobile: [
+      placeholderImage({ width: 1000, height: 8000, text: "imageMobile" }),
+    ],
   },
   argTypes: {
     imageDesktop: { control: "file" },

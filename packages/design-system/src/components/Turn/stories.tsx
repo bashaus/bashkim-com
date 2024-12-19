@@ -1,4 +1,5 @@
 import type { Meta, StoryFn } from "@storybook/react";
+import { placeholderImage } from "placeholder-image-data-url-svg";
 
 import { Turn as TurnComponent, TurnProps } from ".";
 
@@ -22,7 +23,11 @@ const Template: StoryFn<TurnProps> = (args: TurnProps) => (
         .map((value) => (
           <div key={value}>
             <img
-              src={`https://via.placeholder.com/300x450.png?text=Page+${value}`}
+              src={placeholderImage({
+                width: 300,
+                height: 450,
+                text: `Page ${value}`,
+              })}
               alt={`Page ${value}`}
             />
           </div>

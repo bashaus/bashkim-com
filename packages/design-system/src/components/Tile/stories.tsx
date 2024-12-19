@@ -1,4 +1,5 @@
 import type { Meta, StoryFn } from "@storybook/react";
+import { placeholderImage } from "placeholder-image-data-url-svg";
 
 import { Tile as TileComponent, TileProps } from ".";
 
@@ -8,8 +9,8 @@ export default {
   args: {
     title: "Tile",
     description: "Cras sit amet purus commodo, semper dui non.",
-    icon: ["https://via.placeholder.com/300x300.png?text=icon"],
-    poster: ["https://via.placeholder.com/640x360.png?text=poster"],
+    icon: [placeholderImage({ width: 300, height: 300, text: "icon" })],
+    poster: [placeholderImage({ width: 640, height: 360, text: "poster" })],
   },
   argTypes: {
     icon: { control: "file" },
@@ -30,7 +31,7 @@ const Template: StoryFn<TileStoryProps> = ({
   poster,
   ...args
 }: TileStoryProps) => (
-  <TileComponent {...args} icon={icon[0]} poster={poster[0]} />
+  <TileComponent {...args} icon={<img src={icon[0]} />} poster={poster[0]} />
 );
 
 export const Tile = {

@@ -1,4 +1,5 @@
 import type { Meta, StoryFn } from "@storybook/react";
+import { placeholderImage } from "placeholder-image-data-url-svg";
 
 import {
   FullImagePartial as FullImagePartialComponent,
@@ -9,7 +10,7 @@ export default {
   component: FullImagePartialComponent,
   title: "Partials/Full Image Partial",
   args: {
-    figure: ["https://via.placeholder.com/1200x630.png?text=figure"],
+    figure: [placeholderImage({ width: 1200, height: 630, text: "figure" })],
   },
   argTypes: {
     figure: { control: "file" },

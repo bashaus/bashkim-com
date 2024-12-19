@@ -1,4 +1,5 @@
 import type { Meta, StoryFn } from "@storybook/react";
+import { placeholderImage } from "placeholder-image-data-url-svg";
 
 import { SplitItemPartial } from "../SplitItemPartial";
 import { SplitPartial as SplitPartialComponent, SplitPartialProps } from ".";
@@ -8,7 +9,7 @@ export default {
   title: "Partials/Split Partial",
   args: {
     backgroundImage: [
-      "https://via.placeholder.com/992x558.png?text=Background+image",
+      placeholderImage({ width: 992, height: 558, text: "backgroundImage" }),
     ],
   },
   argTypes: {

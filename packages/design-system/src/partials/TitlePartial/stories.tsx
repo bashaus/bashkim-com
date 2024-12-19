@@ -1,4 +1,5 @@
 import type { Meta, StoryFn } from "@storybook/react";
+import { placeholderImage } from "placeholder-image-data-url-svg";
 
 import { TitlePartial as TitlePartialComponent, TitlePartialProps } from ".";
 
@@ -6,7 +7,7 @@ export default {
   component: TitlePartialComponent,
   title: "Partials/Title Partial",
   args: {
-    image: ["https://via.placeholder.com/300x300.png?text=image"],
+    image: [placeholderImage({ width: 300, height: 300, text: "image" })],
     title: "TitlePartial",
     subtitle: "Nulla venenatis lobortis dignissim. Nullam sit amet nisi.",
   },
