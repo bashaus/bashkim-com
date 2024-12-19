@@ -13,7 +13,7 @@ export const generateStaticParams = async () => {
 };
 
 export const generateMetadata = async ({ params }): Promise<Metadata> => {
-  const { caseStudySlug } = params;
+  const { caseStudySlug } = await params;
 
   const result = await getPrismicPage(caseStudySlug);
   const caseStudyPage = result.data.caseStudyPage.edges?.[0]?.node;
@@ -32,7 +32,7 @@ export const generateMetadata = async ({ params }): Promise<Metadata> => {
 };
 
 const CaseStudyPage = async ({ params }) => {
-  const { caseStudySlug } = params;
+  const { caseStudySlug } = await params;
 
   const caseStudyPagePromise = getPrismicPage(caseStudySlug);
   const caseStudyBodyPromise = getPrismicBody(caseStudySlug);
