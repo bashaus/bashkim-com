@@ -2,4 +2,6 @@
 
 import { getMediumSocials } from "@bashkim-com/socials";
 
-export const getMediumSocialsAction = async () => getMediumSocials();
+export default async function getMediumSocialsAction() {
+  return getMediumSocials();
+}

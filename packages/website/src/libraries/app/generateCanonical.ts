@@ -1,4 +1,4 @@
-export const generateCanonical = (pathname: string) => {
+export default function generateCanonical(pathname: string) {
   if (!pathname.startsWith("/")) {
     throw new Error(`pathname ${pathname} must start with a slash (/)`);
   }
@@ -8,4 +8,4 @@ export const generateCanonical = (pathname: string) => {
   }
 
   return `https://www.bashkim.com/${pathname}/`;
-};
+}

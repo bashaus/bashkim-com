@@ -1,7 +1,7 @@
 import { AccoladeSliceFixture } from "@bashkim-com/prismic-fixtures";
 import type { Meta } from "@storybook/react";
 
-import { AccoladeSlice as AccoladeSliceComponent } from ".";
+import AccoladeSliceComponent from ".";
 
 export default {
   component: AccoladeSliceComponent,

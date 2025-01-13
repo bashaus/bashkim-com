@@ -1,7 +1,7 @@
 import { CaptionedMagazineSliceFixture } from "@bashkim-com/prismic-fixtures";
 import type { Meta } from "@storybook/react";
 
-import { CaptionedMagazineSlice as CaptionedMagazineSliceComponent } from ".";
+import CaptionedMagazineSliceComponent from ".";
 
 export default {
   component: CaptionedMagazineSliceComponent,

@@ -1,14 +1,14 @@
 import type { ExhibitionSliceTypeFragment } from "@bashkim-com/prismic-dal";
 import { PrismicDate, PrismicRichText } from "@bashkim-com/prismic-helpers";
 
-import { LifespanFormatter } from "../../formatters/LifespanFormatter";
-import { RichTextFormatter } from "../../formatters/RichTextFormatter";
+import LifespanFormatter from "../../formatters/LifespanFormatter";
+import RichTextFormatter from "../../formatters/RichTextFormatter";
 
 export type ExhibitionSliceProps = {
   slice: ExhibitionSliceTypeFragment;
 };
 
-export const ExhibitionSlice = ({ slice }: ExhibitionSliceProps) => {
+export default function ExhibitionSlice({ slice }: ExhibitionSliceProps) {
   if (!slice.primary) {
     return null;
   }
@@ -31,4 +31,4 @@ export const ExhibitionSlice = ({ slice }: ExhibitionSliceProps) => {
       />
     </RichTextFormatter>
   );
-};
+}

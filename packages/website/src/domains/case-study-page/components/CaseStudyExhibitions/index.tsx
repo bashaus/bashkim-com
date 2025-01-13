@@ -7,9 +7,9 @@ export type CaseStudyExhibitionsProps = {
   slices: Array<ExhibitionSliceTypeFragment>;
 };
 
-export const CaseStudyExhibitions = ({
+export default function CaseStudyExhibitions({
   slices = [],
-}: CaseStudyExhibitionsProps) => {
+}: CaseStudyExhibitionsProps) {
   if (!slices.length) {
     return null;
   }
@@ -32,4 +32,4 @@ export const CaseStudyExhibitions = ({
       </ol>
     </>
   );
-};
+}

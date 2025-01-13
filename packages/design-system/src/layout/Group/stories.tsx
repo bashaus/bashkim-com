@@ -1,6 +1,6 @@
 import type { Meta, StoryFn } from "@storybook/react";
 
-import { Group as GroupComponent, GroupProps } from ".";
+import GroupComponent, { GroupProps } from ".";
 import { GroupDesign } from "./types";
 
 export default {

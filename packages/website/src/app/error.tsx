@@ -2,8 +2,8 @@
 
 import { PageHeaderPartial } from "@bashkim-com/design-system";
 
-import { MenuButtonHome } from "../components/MenuButtonHome";
-import { Page } from "../components/Page";
+import MenuButtonHome from "../components/MenuButtonHome";
+import Page from "../components/Page";
 
 type RootErrorProps = {
   error: Error;
@@ -12,7 +12,7 @@ type RootErrorProps = {
 
 const RootError = ({ error /* , reset */ }: RootErrorProps) => {
   return (
-    <Page backButton={MenuButtonHome}>
+    <Page backButton={<MenuButtonHome />}>
       <PageHeaderPartial>
         <h1>An error occurred</h1>
         <p>{error.message}</p>

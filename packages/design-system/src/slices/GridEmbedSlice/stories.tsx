@@ -1,7 +1,7 @@
 import { GridEmbedSliceFixture } from "@bashkim-com/prismic-fixtures";
 import type { Meta } from "@storybook/react";
 
-import { GridEmbedSlice as GridEmbedSliceComponent } from ".";
+import GridEmbedSliceComponent from ".";
 
 export default {
   component: GridEmbedSliceComponent,

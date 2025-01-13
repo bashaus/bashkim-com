@@ -1,10 +1,7 @@
 import type { Meta, StoryFn } from "@storybook/react";
 import { placeholderImage } from "placeholder-image-data-url-svg";
 
-import {
-  PageHeaderPartial as PageHeaderPartialComponent,
-  PageHeaderPartialProps,
-} from ".";
+import PageHeaderPartialComponent, { PageHeaderPartialProps } from ".";
 
 export default {
   component: PageHeaderPartialComponent,

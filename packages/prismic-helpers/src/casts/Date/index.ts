@@ -1,1 +1,1 @@
-export { Date as PrismicDate } from "prismic-reactjs";
+export { Date as default } from "prismic-reactjs";

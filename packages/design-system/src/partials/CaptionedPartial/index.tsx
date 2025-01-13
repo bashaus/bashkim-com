@@ -11,12 +11,14 @@ export type CaptionedPartialProps = {
   figure: ReactNode;
 };
 
-export const CaptionedPartial = ({
+export default function CaptionedPartial({
   children,
   figure,
-}: CaptionedPartialProps) => (
-  <figure className={styles["CaptionedPartial"]}>
-    <figcaption className={styles["Caption"]}>{children}</figcaption>
-    <div className={styles["Figure"]}>{figure}</div>
-  </figure>
-);
+}: CaptionedPartialProps) {
+  return (
+    <figure className={styles["CaptionedPartial"]}>
+      <figcaption className={styles["Caption"]}>{children}</figcaption>
+      <div className={styles["Figure"]}>{figure}</div>
+    </figure>
+  );
+}

@@ -4,9 +4,9 @@ import { fromPromise } from "xstate";
 
 import { PromiseMachineActor } from "../../machines/Promise/PromiseMachine.actors";
 import { PromiseMachineFetchEvent } from "../../machines/Promise/PromiseMachine.events";
-import { promiseMachine } from "../../machines/Promise/PromiseMachine.machine";
+import promiseMachine from "../../machines/Promise/PromiseMachine.machine";
 import { PromiseMachineState } from "../../machines/Promise/PromiseMachine.state";
-import { getGitHubSocialsAction } from "./actions";
+import getGitHubSocialsAction from "./actions";
 
 export const useSocialMenuGitHubViewModel = () => {
   const [promiseMachineState, promiseMachineSend] = useMachine(

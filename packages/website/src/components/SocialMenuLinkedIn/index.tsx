@@ -1,9 +1,9 @@
 import LinkedInVector from "../../assets/vectors/social/LinkedIn.svg";
 import LinkedInOutlinedVector from "../../assets/vectors/social/LinkedInOutlined.svg";
-import { SocialMenu } from "../SocialMenu";
-import { SocialMenuItemHeader } from "../SocialMenuItemHeader";
+import SocialMenu from "../SocialMenu";
+import SocialMenuItemHeader from "../SocialMenuItemHeader";
 
-export const SocialMenuLinkedIn = () => {
+export default function SocialMenuLinkedIn() {
   return (
     <SocialMenu
       label="LinkedIn"
@@ -27,4 +27,4 @@ export const SocialMenuLinkedIn = () => {
       />
     </SocialMenu>
   );
-};
+}

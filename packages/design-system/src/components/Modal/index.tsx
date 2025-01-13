@@ -7,12 +7,12 @@ import {
 } from "react";
 import ReactModal, { Props as ReactModalProps } from "react-modal";
 
-import { ModalContent } from "../ModalContent";
-import { ModalOverlay } from "../ModalOverlay";
+import ModalContent from "../ModalContent";
+import ModalOverlay from "../ModalOverlay";
 
 export type ModalProps = ReactModalProps;
 
-export const Modal = ({ isOpen, style = {}, ...props }: ModalProps) => {
+export default function Modal({ isOpen, style = {}, ...props }: ModalProps) {
   const [isOverlayOpen, setIsOverlayOpen] = useState(false);
   const [isContentOpen, setIsContentOpen] = useState(false);
 
@@ -88,4 +88,4 @@ export const Modal = ({ isOpen, style = {}, ...props }: ModalProps) => {
       contentElement={contentElement}
     />
   );
-};
+}

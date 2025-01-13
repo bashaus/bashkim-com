@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-import { PortfolioPageLockup } from "../../domains/portfolio-page/components/PortfolioPageLockup";
-import { generateCanonical } from "../../libraries/app/generateCanonical";
+import PortfolioPageLockup from "../../domains/portfolio-page/components/PortfolioPageLockup";
+import generateCanonical from "../../libraries/app/generateCanonical";
 import { getPrismicPage } from "./queries";
 
-export const generateMetadata = async (): Promise<Metadata> => {
+export async function generateMetadata(): Promise<Metadata> {
   const result = await getPrismicPage();
   const portfolioPage = result.data.portfolioPage.edges?.[0]?.node;
   if (!portfolioPage) {
@@ -20,9 +20,9 @@ export const generateMetadata = async (): Promise<Metadata> => {
       canonical: generateCanonical("/portfolio/"),
     },
   };
-};
+}
 
-const PortfolioPage = async () => {
+export default async function PortfolioPage() {
   const result = await getPrismicPage();
   const portfolioPage = result.data.portfolioPage.edges?.[0]?.node;
   if (!portfolioPage) {
@@ -30,6 +30,4 @@ const PortfolioPage = async () => {
   }
 
   return <PortfolioPageLockup portfolioPage={portfolioPage} />;
-};
-
-export default PortfolioPage;
+}

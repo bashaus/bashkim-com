@@ -1,14 +1,16 @@
 import type { CaptionedImageSliceTypeFragment } from "@bashkim-com/prismic-dal";
 import { PrismicRichText } from "@bashkim-com/prismic-helpers";
 
-import { RichTextFormatter } from "../../formatters/RichTextFormatter";
-import { CaptionedPartial } from "../../partials/CaptionedPartial";
+import RichTextFormatter from "../../formatters/RichTextFormatter";
+import CaptionedPartial from "../../partials/CaptionedPartial";
 
 export type CaptionedImageSliceProps = {
   slice: CaptionedImageSliceTypeFragment;
 };
 
-export const CaptionedImageSlice = ({ slice }: CaptionedImageSliceProps) => {
+export default function CaptionedImageSlice({
+  slice,
+}: CaptionedImageSliceProps) {
   if (!slice.primary) {
     return null;
   }
@@ -37,6 +39,4 @@ export const CaptionedImageSlice = ({ slice }: CaptionedImageSliceProps) => {
       </RichTextFormatter>
     </CaptionedPartial>
   );
-};
-
-export default CaptionedImageSlice;
+}

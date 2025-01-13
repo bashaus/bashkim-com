@@ -9,19 +9,19 @@ import Stack from "@mui/material/Stack";
 
 import GitHubVector from "../../assets/vectors/social/GitHub.svg";
 import { PromiseMachineState } from "../../machines/Promise/PromiseMachine.state";
-import { SocialMenu } from "../SocialMenu";
-import { SocialMenuItemHeader } from "../SocialMenuItemHeader";
-import { SocialMenuStateFailure } from "../SocialMenuStateFailure";
-import { SocialMenuStateLoading } from "../SocialMenuStateLoading";
+import SocialMenu from "../SocialMenu";
+import SocialMenuItemHeader from "../SocialMenuItemHeader";
+import SocialMenuStateFailure from "../SocialMenuStateFailure";
+import SocialMenuStateLoading from "../SocialMenuStateLoading";
 import { useSocialMenuGitHubViewModel } from "./view-model";
 
 export type SocialMenuGitHubViewProps = {
   viewModel: ReturnType<typeof useSocialMenuGitHubViewModel>;
 };
 
-export const SocialMenuGitHubView = ({
+export default function SocialMenuGitHubView({
   viewModel,
-}: SocialMenuGitHubViewProps) => {
+}: SocialMenuGitHubViewProps) {
   const {
     promiseMachineState: {
       value: viewState,
@@ -100,4 +100,4 @@ export const SocialMenuGitHubView = ({
       )}
     </SocialMenu>
   );
-};
+}

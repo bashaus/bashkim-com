@@ -6,18 +6,18 @@ export type GridEmbedSliceProps = {
   slice: GridEmbedSliceTypeFragment;
 };
 
-export const GridEmbedSlice = ({ slice }: GridEmbedSliceProps) => (
-  <div className={styles["Embeds"]}>
-    {slice.fields?.map((field) => {
-      const { grid_embed_slice_type_embed: embed } = field;
+export default function GridEmbedSlice({ slice }: GridEmbedSliceProps) {
+  return (
+    <div className={styles["Embeds"]}>
+      {slice.fields?.map((field) => {
+        const { grid_embed_slice_type_embed: embed } = field;
 
-      return (
-        <div className={styles["Embed"]} key={JSON.stringify(field)}>
-          <span dangerouslySetInnerHTML={{ __html: embed?.html ?? "" }} />
-        </div>
-      );
-    })}
-  </div>
-);
-
-export default GridEmbedSlice;
+        return (
+          <div className={styles["Embed"]} key={JSON.stringify(field)}>
+            <span dangerouslySetInnerHTML={{ __html: embed?.html ?? "" }} />
+          </div>
+        );
+      })}
+    </div>
+  );
+}

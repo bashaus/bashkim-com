@@ -1,7 +1,7 @@
 import { CarouselImagesSliceFixture } from "@bashkim-com/prismic-fixtures";
 import type { Meta } from "@storybook/react";
 
-import { CarouselImagesSlice as CarouselImagesSliceComponent } from ".";
+import CarouselImagesSliceComponent from ".";
 
 export default {
   component: CarouselImagesSliceComponent,

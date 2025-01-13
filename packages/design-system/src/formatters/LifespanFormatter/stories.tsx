@@ -1,9 +1,6 @@
 import type { Meta, StoryFn } from "@storybook/react";
 
-import {
-  LifespanFormatter as LifespanFormatterComponent,
-  LifespanFormatterProps,
-} from ".";
+import LifespanFormatterComponent, { LifespanFormatterProps } from ".";
 
 export default {
   component: LifespanFormatterComponent,

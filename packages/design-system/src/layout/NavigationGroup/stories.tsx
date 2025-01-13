@@ -1,10 +1,7 @@
 import type { Meta, StoryFn } from "@storybook/react";
 
-import { NavigationItem } from "../NavigationItem";
-import {
-  NavigationGroup as NavigationGroupComponent,
-  NavigationGroupProps,
-} from ".";
+import NavigationItem from "../NavigationItem";
+import NavigationGroupComponent, { NavigationGroupProps } from ".";
 
 export default {
   component: NavigationGroupComponent,

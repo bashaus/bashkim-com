@@ -4,9 +4,9 @@ import { fromPromise } from "xstate";
 
 import { PromiseMachineActor } from "../../machines/Promise/PromiseMachine.actors";
 import { PromiseMachineFetchEvent } from "../../machines/Promise/PromiseMachine.events";
-import { promiseMachine } from "../../machines/Promise/PromiseMachine.machine";
+import promiseMachine from "../../machines/Promise/PromiseMachine.machine";
 import { PromiseMachineState } from "../../machines/Promise/PromiseMachine.state";
-import { getStackOverflowSocialsAction } from "./actions";
+import getStackOverflowSocialsAction from "./actions";
 
 export const useSocialMenuStackOverflowViewModel = () => {
   const [promiseMachineState, promiseMachineSend] = useMachine(

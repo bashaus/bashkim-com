@@ -15,7 +15,7 @@ const getStackOverflowUserData = async (): Promise<any> => {
   return response.json();
 };
 
-export const getStackOverflowUser = async (): Promise<StackOverflowUser> => {
+export async function getStackOverflowUser(): Promise<StackOverflowUser> {
   const result = await getStackOverflowUserData();
 
   const [user] = result.items;
@@ -31,4 +31,4 @@ export const getStackOverflowUser = async (): Promise<StackOverflowUser> => {
     },
     reputation: user.reputation,
   };
-};
+}

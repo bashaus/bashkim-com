@@ -5,12 +5,14 @@ import styles from "./styles.module.scss";
 
 export type NewspaperPartialProps = ComponentPropsWithoutRef<"div">;
 
-export const NewspaperPartial = ({
+export default function NewspaperPartial({
   className,
   ...props
-}: NewspaperPartialProps) => (
-  <div
-    className={classNames(className, styles["NewspaperPartial"])}
-    {...props}
-  />
-);
+}: NewspaperPartialProps) {
+  return (
+    <div
+      className={classNames(className, styles["NewspaperPartial"])}
+      {...props}
+    />
+  );
+}

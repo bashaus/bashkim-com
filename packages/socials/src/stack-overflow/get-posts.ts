@@ -20,9 +20,9 @@ const getStackOverflowPostsData = async (): Promise<any> => {
   return response.json();
 };
 
-export const getStackOverflowPosts = async (): Promise<
+export async function getStackOverflowPosts(): Promise<
   Array<StackOverflowPost>
-> => {
+> {
   const result = await getStackOverflowPostsData();
   return result.items.map(
     (post: any) =>
@@ -37,4 +37,4 @@ export const getStackOverflowPosts = async (): Promise<
             : StackOverflowPostType.Answer,
       }) as StackOverflowPost,
   );
-};
+}

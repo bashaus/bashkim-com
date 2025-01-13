@@ -4,7 +4,7 @@ export type LogoProps = {
   animated?: boolean;
 };
 
-export const Logo = ({ animated = false }: LogoProps) => {
+export default function Logo({ animated = false }: LogoProps) {
   return (
     <div className={styles["Logo"]}>
       <span className={styles["Command"]}>
@@ -14,4 +14,4 @@ export const Logo = ({ animated = false }: LogoProps) => {
       {!animated && <span>bashkim isai</span>}
     </div>
   );
-};
+}

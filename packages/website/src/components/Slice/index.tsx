@@ -31,7 +31,7 @@ export type SliceProps = {
   slice: Case_StudyBody;
 };
 
-export const Slice = (props: SliceProps) => {
+export default function Slice(props: SliceProps) {
   const { slice } = props;
 
   if (!slice.type) {
@@ -40,4 +40,4 @@ export const Slice = (props: SliceProps) => {
 
   const SliceTypeComponent = SliceTypeComponentMap[slice.type];
   return <SliceTypeComponent {...props} />;
-};
+}

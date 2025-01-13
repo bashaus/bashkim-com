@@ -1,6 +1,6 @@
 import type { Meta, StoryFn } from "@storybook/react";
 
-import { DateFormatter as DateFormatterComponent, DateFormatterProps } from ".";
+import DateFormatterComponent, { DateFormatterProps } from ".";
 
 export default {
   component: DateFormatterComponent,

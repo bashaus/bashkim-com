@@ -1,6 +1,6 @@
 import Script from "next/script";
 
-export const GoogleAnalytics = () => {
+export default function GoogleAnalytics() {
   const {
     NEXT_PUBLIC_GOOGLE_ANALYTICS_ENABLED: enabled,
     NEXT_PUBLIC_GOOGLE_ANALYTICS_MEASUREMENT_ID: measurementId,
@@ -27,4 +27,4 @@ export const GoogleAnalytics = () => {
       </Script>
     </>
   );
-};
+}

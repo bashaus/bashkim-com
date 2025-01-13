@@ -1,6 +1,6 @@
 import { ReactNode, useCallback, useEffect, useState } from "react";
 
-import { Turn } from "../Turn";
+import Turn from "../Turn";
 import { TurnDisplay } from "../Turn/types";
 import {
   convertPageToSpread,
@@ -33,7 +33,7 @@ export type MagazineProps = {
   pageHeight: number;
 };
 
-export const Magazine = ({
+export default function Magazine({
   children,
   onInitialize,
   onSpreadChange,
@@ -41,7 +41,7 @@ export const Magazine = ({
   pages,
   pageWidth,
   pageHeight,
-}: MagazineProps) => {
+}: MagazineProps) {
   /* infinite state */
   const [isInitialized, setIsInitialized] = useState<boolean>(false);
   const [display, setDisplay] = useState<TurnDisplay>(TurnDisplay.SINGLE);
@@ -121,4 +121,4 @@ export const Magazine = ({
       {children}
     </Turn>
   );
-};
+}

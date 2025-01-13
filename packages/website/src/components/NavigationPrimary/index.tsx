@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 
 import styles from "./styles.module.scss";
 
-export const NavigationPrimary = () => {
+export default function NavigationPrimary() {
   const pathname = usePathname();
 
   return (
@@ -28,4 +28,4 @@ export const NavigationPrimary = () => {
       </NavigationItem>
     </NavigationGroup>
   );
-};
+}

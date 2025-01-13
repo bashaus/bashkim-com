@@ -1,16 +1,16 @@
 import { ReactNode } from "react";
 
 import { useNavigation } from "../../contexts/Navigation/context";
-import { Menu } from "../Menu";
-import { MenuButtonSettings } from "../MenuButtonSettings";
-import { Navigation } from "../Navigation";
+import Menu from "../Menu";
+import MenuButtonSettings from "../MenuButtonSettings";
+import Navigation from "../Navigation";
 import styles from "./styles.module.scss";
 
 export type HeaderProps = {
   backButton?: ReactNode;
 };
 
-export const Header = ({ backButton }: HeaderProps) => {
+export default function Header({ backButton }: HeaderProps) {
   const { navigationState } = useNavigation();
 
   return (
@@ -27,4 +27,4 @@ export const Header = ({ backButton }: HeaderProps) => {
       </div>
     </header>
   );
-};
+}

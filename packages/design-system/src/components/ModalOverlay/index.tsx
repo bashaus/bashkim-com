@@ -12,7 +12,7 @@ export type ModalOverlayProps = ComponentPropsWithoutRef<"div"> & {
   onShowStart?(): void;
 };
 
-export const ModalOverlay = ({
+export default function ModalOverlay({
   children,
   className,
   isOpen,
@@ -21,7 +21,7 @@ export const ModalOverlay = ({
   onShowComplete,
   onShowStart,
   ...props
-}: ModalOverlayProps) => {
+}: ModalOverlayProps) {
   const svgRef = useRef<SVGPathElement>(null);
 
   // wait until DOM has been rendered
@@ -90,4 +90,4 @@ export const ModalOverlay = ({
       {children}
     </div>
   );
-};
+}

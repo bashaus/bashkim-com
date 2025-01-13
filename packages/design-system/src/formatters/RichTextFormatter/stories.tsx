@@ -1,9 +1,6 @@
 import type { Meta, StoryFn } from "@storybook/react";
 
-import {
-  RichTextFormatter as RichTextFormatterComponent,
-  RichTextFormatterProps,
-} from ".";
+import RichTextFormatterComponent, { RichTextFormatterProps } from ".";
 
 export default {
   component: RichTextFormatterComponent,

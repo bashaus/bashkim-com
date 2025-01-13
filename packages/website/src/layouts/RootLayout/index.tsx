@@ -6,13 +6,13 @@ import { LinkResolverContext } from "@bashkim-com/prismic-helpers";
 import ThemeProvider from "@mui/material/styles/ThemeProvider";
 import { PropsWithChildren, useEffect } from "react";
 
-import { GoogleAnalytics } from "../../components/GoogleAnalytics";
-import { NavigationProvider } from "../../contexts/Navigation/provider";
-import { SettingsProvider } from "../../contexts/Settings/provider";
+import GoogleAnalytics from "../../components/GoogleAnalytics";
+import NavigationProvider from "../../contexts/Navigation/provider";
+import SettingsProvider from "../../contexts/Settings/provider";
 import theme from "../../libraries/material-ui/theme";
-import { PrismicLinkResolver } from "../../libraries/prismic/PrismicLinkResolver";
+import PrismicLinkResolver from "../../libraries/prismic/PrismicLinkResolver";
 
-export const RootLayout = ({ children }: PropsWithChildren) => {
+export default function RootLayout({ children }: PropsWithChildren) {
   useEffect((): void => {
     document.documentElement.classList.add("isReady");
   }, []);
@@ -30,4 +30,4 @@ export const RootLayout = ({ children }: PropsWithChildren) => {
       </LinkResolverContext.Provider>
     </ThemeProvider>
   );
-};
+}

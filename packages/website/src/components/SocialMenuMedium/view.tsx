@@ -8,17 +8,19 @@ import Stack from "@mui/material/Stack";
 import MediumClapVector from "../../assets/vectors/icons/MediumClap.svg";
 import MediumVector from "../../assets/vectors/social/Medium.svg";
 import { PromiseMachineState } from "../../machines/Promise/PromiseMachine.state";
-import { SocialMenu } from "../SocialMenu";
-import { SocialMenuItemHeader } from "../SocialMenuItemHeader";
-import { SocialMenuStateFailure } from "../SocialMenuStateFailure";
-import { SocialMenuStateLoading } from "../SocialMenuStateLoading";
+import SocialMenu from "../SocialMenu";
+import SocialMenuItemHeader from "../SocialMenuItemHeader";
+import SocialMenuStateFailure from "../SocialMenuStateFailure";
+import SocialMenuStateLoading from "../SocialMenuStateLoading";
 import { useSocialMenuMediumViewModel } from "./view-model";
 
 export type SocialMenuMediumProps = {
   viewModel: ReturnType<typeof useSocialMenuMediumViewModel>;
 };
 
-export const SocialMenuMediumView = ({ viewModel }: SocialMenuMediumProps) => {
+export default function SocialMenuMediumView({
+  viewModel,
+}: SocialMenuMediumProps) {
   const {
     promiseMachineState: {
       value: viewState,
@@ -79,4 +81,4 @@ export const SocialMenuMediumView = ({ viewModel }: SocialMenuMediumProps) => {
       )}
     </SocialMenu>
   );
-};
+}

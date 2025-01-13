@@ -6,7 +6,7 @@ export type SentryHandlerProps = {
   error?: Error;
 };
 
-export const SentryHandler = ({ error }) => {
+export default function SentryHandler({ error }) {
   useEffect(() => {
     Sentry.captureException(error);
   }, [error]);
@@ -22,4 +22,4 @@ export const SentryHandler = ({ error }) => {
       <p>Please refresh this page to continue using this website.</p>
     </RichTextFormatter>
   );
-};
+}

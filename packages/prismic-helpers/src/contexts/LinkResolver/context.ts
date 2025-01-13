@@ -7,7 +7,8 @@ const LinkResolverDefault: LinkResolver = () => {
   throw LinkResolverNotImplementedError;
 };
 
-export const LinkResolverContext =
-  createContext<LinkResolver>(LinkResolverDefault);
+const LinkResolverContext = createContext<LinkResolver>(LinkResolverDefault);
 
 export const useLinkResolver = () => useContext(LinkResolverContext);
+
+export default LinkResolverContext;

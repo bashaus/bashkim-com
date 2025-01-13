@@ -7,9 +7,11 @@ export type TitlePartialProps = {
   image?: string;
 };
 
-export const TitlePartial = ({ children, image }: TitlePartialProps) => (
-  <header className={styles["TitlePartial"]}>
-    <div className={styles["Content"]}>{children}</div>
-    {image && <img className={styles["Image"]} src={image} alt="" />}
-  </header>
-);
+export default function TitlePartial({ children, image }: TitlePartialProps) {
+  return (
+    <header className={styles["TitlePartial"]}>
+      <div className={styles["Content"]}>{children}</div>
+      {image && <img className={styles["Image"]} src={image} alt="" />}
+    </header>
+  );
+}

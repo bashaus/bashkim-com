@@ -5,7 +5,7 @@ import {
   getStackOverflowUser,
 } from "@bashkim-com/socials";
 
-export const getStackOverflowSocialsAction = async () => {
+export default async function getStackOverflowSocialsAction() {
   console.log("getStackOverflowSocialsAction");
 
   const [user, posts] = await Promise.all([
@@ -14,4 +14,4 @@ export const getStackOverflowSocialsAction = async () => {
   ]);
 
   return { user, posts };
-};
+}

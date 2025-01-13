@@ -1,6 +1,6 @@
 import { GetMediumSocialsResponse } from "./types";
 
-export const getMediumSocials = async (): Promise<GetMediumSocialsResponse> => {
+export async function getMediumSocials(): Promise<GetMediumSocialsResponse> {
   return {
     articles: [
       {
@@ -20,4 +20,4 @@ export const getMediumSocials = async (): Promise<GetMediumSocialsResponse> => {
       },
     ],
   };
-};
+}

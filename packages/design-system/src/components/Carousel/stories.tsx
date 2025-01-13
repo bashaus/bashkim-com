@@ -1,7 +1,7 @@
 import type { Meta, StoryFn } from "@storybook/react";
 
-import { RichTextFormatter } from "../../formatters/RichTextFormatter";
-import { Carousel as CarouselComponent, CarouselProps } from ".";
+import RichTextFormatter from "../../formatters/RichTextFormatter";
+import CarouselComponent, { CarouselProps } from ".";
 
 export default {
   component: CarouselComponent,

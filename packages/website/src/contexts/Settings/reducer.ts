@@ -2,10 +2,10 @@ import { SettingsAction, SettingsActionType } from "./actions";
 import { SettingsState } from "./state";
 import { Appearance } from "./types";
 
-export const SettingsReducer = (
+export default function SettingsReducer(
   state: SettingsState,
   action: SettingsActionType,
-): SettingsState => {
+): SettingsState {
   switch (action.type) {
     case SettingsAction.SET_APPEARANCE: {
       return {
@@ -31,4 +31,4 @@ export const SettingsReducer = (
       };
     }
   }
-};
+}

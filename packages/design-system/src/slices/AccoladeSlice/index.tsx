@@ -7,8 +7,8 @@ import {
 import { Link } from "prismic-reactjs";
 
 import TrophyVector from "../../assets/vectors/trophy.svg";
-import { DateFormatter } from "../../formatters/DateFormatter";
-import { RichTextFormatter } from "../../formatters/RichTextFormatter";
+import DateFormatter from "../../formatters/DateFormatter";
+import RichTextFormatter from "../../formatters/RichTextFormatter";
 import styles from "./styles.module.scss";
 
 export type AccoladeSliceProps = {
@@ -23,7 +23,7 @@ const AwardPlaceName: Record<string, string> = {
   shortlist: "Shortlist",
 };
 
-export const AccoladeSlice = ({ slice }: AccoladeSliceProps) => {
+export default function AccoladeSlice({ slice }: AccoladeSliceProps) {
   const PrismicLinkResolver = useLinkResolver();
 
   if (!slice.primary) {
@@ -81,4 +81,4 @@ export const AccoladeSlice = ({ slice }: AccoladeSliceProps) => {
       </div>
     </div>
   );
-};
+}

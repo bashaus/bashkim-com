@@ -9,10 +9,10 @@ export type CaseStudyCollaboratorsProps = {
   slices: Array<CollaboratorSliceTypeFragment>;
 };
 
-export const CaseStudyCollaborators = ({
+export default function CaseStudyCollaborators({
   slices = [],
   myRole,
-}: CaseStudyCollaboratorsProps) => {
+}: CaseStudyCollaboratorsProps) {
   if (!slices.length) {
     return null;
   }
@@ -43,4 +43,4 @@ export const CaseStudyCollaborators = ({
       </ul>
     </>
   );
-};
+}

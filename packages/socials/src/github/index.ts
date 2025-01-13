@@ -1,5 +1,5 @@
 import { GetPinnedItemsDocument, GetPinnedItemsQuery } from "./graphql-types";
-import { apolloGitHubClient } from "./client";
+import apolloGitHubClient from "./client";
 import { GetGitHubSocialsResponse } from "./types";
 
 const getGitHubData = async () => {
@@ -19,7 +19,7 @@ const getGitHubData = async () => {
   }
 };
 
-export const getGitHubSocials = async (): Promise<GetGitHubSocialsResponse> => {
+export async function getGitHubSocials(): Promise<GetGitHubSocialsResponse> {
   const result = await getGitHubData();
   const nodes = result.user?.pinnedItems.nodes || [];
 
@@ -36,4 +36,4 @@ export const getGitHubSocials = async (): Promise<GetGitHubSocialsResponse> => {
   return {
     pinnedItems,
   };
-};
+}

@@ -8,20 +8,24 @@ export type CarouselArrowProps = ComponentPropsWithRef<"button"> & {
   direction: CarouselArrowDirection;
 };
 
-export const CarouselArrow = ({
+export default function CarouselArrow({
   className,
   direction,
   ...props
-}: CarouselArrowProps) => (
-  <button
-    className={classNames(
-      className,
-      direction === CarouselArrowDirection.NEXT && styles["CarouselArrowNext"],
-      direction === CarouselArrowDirection.PREV && styles["CarouselArrowPrev"],
-    )}
-    {...props}
-  >
-    {direction === CarouselArrowDirection.NEXT && "Next"}
-    {direction === CarouselArrowDirection.PREV && "Previous"}
-  </button>
-);
+}: CarouselArrowProps) {
+  return (
+    <button
+      className={classNames(
+        className,
+        direction === CarouselArrowDirection.NEXT &&
+          styles["CarouselArrowNext"],
+        direction === CarouselArrowDirection.PREV &&
+          styles["CarouselArrowPrev"],
+      )}
+      {...props}
+    >
+      {direction === CarouselArrowDirection.NEXT && "Next"}
+      {direction === CarouselArrowDirection.PREV && "Previous"}
+    </button>
+  );
+}

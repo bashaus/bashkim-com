@@ -9,37 +9,39 @@ export type FullBannerPartialProps = {
   id: string;
 };
 
-export const FullBannerPartial = ({
+export default function FullBannerPartial({
   backgroundDesktop,
   backgroundMobile,
   children,
   id,
-}: FullBannerPartialProps) => (
-  <div className={styles["FullBannerPartial"]} id={id}>
-    <div className={styles["Container"]}>
-      <div className={styles["Content"]}>{children}</div>
-    </div>
+}: FullBannerPartialProps) {
+  return (
+    <div className={styles["FullBannerPartial"]} id={id}>
+      <div className={styles["Container"]}>
+        <div className={styles["Content"]}>{children}</div>
+      </div>
 
-    {backgroundDesktop && (
-      <style type="text/css">
-        {`
+      {backgroundDesktop && (
+        <style type="text/css">
+          {`
           #${id} {
             background-image: url(${backgroundDesktop});
           }
         `}
-      </style>
-    )}
+        </style>
+      )}
 
-    {backgroundMobile && (
-      <style type="text/css">
-        {`
+      {backgroundMobile && (
+        <style type="text/css">
+          {`
           @media screen and (max-width: 767px) {
             #${id} {
               background-image: url(${backgroundMobile});
             }
           }
         `}
-      </style>
-    )}
-  </div>
-);
+        </style>
+      )}
+    </div>
+  );
+}

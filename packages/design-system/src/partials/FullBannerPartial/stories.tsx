@@ -1,10 +1,7 @@
 import type { Meta, StoryFn } from "@storybook/react";
 import { placeholderImage } from "placeholder-image-data-url-svg";
 
-import {
-  FullBannerPartial as FullBannerPartialComponent,
-  FullBannerPartialProps,
-} from ".";
+import FullBannerPartialComponent, { FullBannerPartialProps } from ".";
 
 export default {
   component: FullBannerPartialComponent,

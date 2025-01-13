@@ -15,7 +15,7 @@ export type VideoPlayerProps = {
   url: string;
 };
 
-export const VideoPlayer = ({ url }: VideoPlayerProps) => {
+export default function VideoPlayer({ url }: VideoPlayerProps) {
   const playerRef = useRef(null);
 
   const [playing, setPlaying] = useState<ReactPlayerProps["playing"]>(false);
@@ -56,4 +56,4 @@ export const VideoPlayer = ({ url }: VideoPlayerProps) => {
       />
     </div>
   );
-};
+}

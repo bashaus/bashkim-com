@@ -1,6 +1,6 @@
 import { fireEvent, render } from "@testing-library/react";
 
-import { Switch } from ".";
+import Switch from ".";
 
 describe("<Switch />", () => {
   const iconOn = "ON";

@@ -8,7 +8,7 @@ export type SettingsContextType = {
   settingsDispatch: Dispatch<SettingsActionType>;
 };
 
-export const SettingsContext = createContext<SettingsContextType>({
+const SettingsContext = createContext<SettingsContextType>({
   settingsState: settingsStateInitial,
   settingsDispatch: () => {
     /* void */
@@ -16,3 +16,5 @@ export const SettingsContext = createContext<SettingsContextType>({
 });
 
 export const useSettings = () => useContext(SettingsContext);
+
+export default SettingsContext;

@@ -10,7 +10,9 @@ export type HomeFeaturedProps = {
   featuredCaseStudies: Array<FeaturedCaseStudiesModelFragment>;
 };
 
-export const HomeFeatured = ({ featuredCaseStudies }: HomeFeaturedProps) => {
+export default function HomeFeatured({
+  featuredCaseStudies,
+}: HomeFeaturedProps) {
   const PrismicLinkResolver = useLinkResolver();
 
   return (
@@ -53,4 +55,4 @@ export const HomeFeatured = ({ featuredCaseStudies }: HomeFeaturedProps) => {
       })}
     </ul>
   );
-};
+}

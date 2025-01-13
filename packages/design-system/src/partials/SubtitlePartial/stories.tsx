@@ -1,9 +1,6 @@
 import type { Meta, StoryFn } from "@storybook/react";
 
-import {
-  SubtitlePartial as SubtitlePartialComponent,
-  SubtitlePartialProps,
-} from ".";
+import SubtitlePartialComponent, { SubtitlePartialProps } from ".";
 
 export default {
   components: SubtitlePartialComponent,

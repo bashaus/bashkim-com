@@ -8,17 +8,19 @@ import {
 } from "@bashkim-com/design-system";
 import { PortfolioPageModelFragment } from "@bashkim-com/prismic-dal";
 
-import { MenuButtonHome } from "../../../../components/MenuButtonHome";
-import { Page } from "../../../../components/Page";
+import MenuButtonHome from "../../../../components/MenuButtonHome";
+import Page from "../../../../components/Page";
 import backgroundImage from "../../assets/background-image.jpg";
-import { PortfolioCategory } from "../PortfolioCategory";
-import { PortfolioFeaturedCaseStudies } from "../PortfolioFeaturedCaseStudies";
+import PortfolioCategory from "../PortfolioCategory";
+import PortfolioFeaturedCaseStudies from "../PortfolioFeaturedCaseStudies";
 
 type PortfolioPageProps = {
   portfolioPage: PortfolioPageModelFragment;
 };
 
-export const PortfolioPageLockup = ({ portfolioPage }: PortfolioPageProps) => {
+export default function PortfolioPageLockup({
+  portfolioPage,
+}: PortfolioPageProps) {
   const {
     meta_title: metaTitle,
     meta_description: metaDescription,
@@ -27,7 +29,7 @@ export const PortfolioPageLockup = ({ portfolioPage }: PortfolioPageProps) => {
   } = portfolioPage;
 
   return (
-    <Page backButton={MenuButtonHome}>
+    <Page backButton={<MenuButtonHome />}>
       <PageHeaderPartial
         id="PortfolioPage-Header"
         imageDesktop={backgroundImage.src}
@@ -53,4 +55,4 @@ export const PortfolioPageLockup = ({ portfolioPage }: PortfolioPageProps) => {
       ))}
     </Page>
   );
-};
+}

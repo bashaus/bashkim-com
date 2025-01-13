@@ -1,7 +1,7 @@
 import { useSettings } from "../../contexts/Settings/context";
 import styles from "./styles.module.scss";
 
-export const GridLines = () => {
+export default function GridLines() {
   const { settingsState } = useSettings();
   const { isGridLinesVisible } = settingsState;
 
@@ -21,4 +21,4 @@ export const GridLines = () => {
       </div>
     </div>
   );
-};
+}

@@ -8,7 +8,7 @@ import { useSettings } from "../../contexts/Settings/context";
 import { Appearance } from "../../contexts/Settings/types";
 import styles from "./styles.module.scss";
 
-export const SiteSettingsAppearance = () => {
+export default function SiteSettingsAppearance() {
   const { settingsState, settingsDispatch } = useSettings();
   const { appearance } = settingsState;
 
@@ -24,4 +24,4 @@ export const SiteSettingsAppearance = () => {
       checked={appearance === Appearance.LIGHT}
     />
   );
-};
+}

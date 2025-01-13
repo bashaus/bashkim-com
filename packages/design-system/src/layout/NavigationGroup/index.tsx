@@ -5,9 +5,14 @@ import styles from "./styles.module.scss";
 
 export type NavigationGroupProps = ComponentPropsWithoutRef<"ul">;
 
-export const NavigationGroup = ({
+export default function NavigationGroup({
   className,
   ...props
-}: NavigationGroupProps) => (
-  <ul className={classNames(className, styles["NavigationGroup"])} {...props} />
-);
+}: NavigationGroupProps) {
+  return (
+    <ul
+      className={classNames(className, styles["NavigationGroup"])}
+      {...props}
+    />
+  );
+}

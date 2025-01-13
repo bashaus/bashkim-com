@@ -1,4 +1,4 @@
-import { PrismicLinkResolver } from "./PrismicLinkResolver";
+import PrismicLinkResolver from "./PrismicLinkResolver";
 
 describe("Prismic/Helpers/Link", () => {
   describe("#PrismicLinkResolver", () => {

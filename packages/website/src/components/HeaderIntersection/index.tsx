@@ -1,10 +1,10 @@
-import { memo, useCallback, useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef } from "react";
 
 import { NavigationActionSetScrollAtTop } from "../../contexts/Navigation/actions";
 import { useNavigation } from "../../contexts/Navigation/context";
 import styles from "./styles.module.scss";
 
-export const HeaderIntersection = memo(function HeaderIntersection() {
+export default function HeaderIntersection() {
   const { navigationDispatch } = useNavigation();
   const ref = useRef<HTMLDivElement>(null);
 
@@ -46,4 +46,4 @@ export const HeaderIntersection = memo(function HeaderIntersection() {
   }, [processIntersectionEntries]);
 
   return <div ref={ref} className={styles["HeaderIntersection"]} />;
-});
+}

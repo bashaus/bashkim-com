@@ -2,7 +2,7 @@ import type { Meta, StoryFn } from "@storybook/react";
 import { placeholderImage } from "placeholder-image-data-url-svg";
 import { ReactNode } from "react";
 
-import { DeviceSmartphone, DeviceSmartphoneProps } from ".";
+import DeviceSmartphone, { DeviceSmartphoneProps } from ".";
 
 export default {
   component: DeviceSmartphone,

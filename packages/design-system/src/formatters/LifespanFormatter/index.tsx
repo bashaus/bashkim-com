@@ -1,14 +1,14 @@
-import { DateFormatter } from "../DateFormatter";
+import DateFormatter from "../DateFormatter";
 
 export type LifespanFormatterProps = {
   startDate: Date;
   endDate?: Date;
 };
 
-export const LifespanFormatter = ({
+export default function LifespanFormatter({
   startDate,
   endDate,
-}: LifespanFormatterProps) => {
+}: LifespanFormatterProps) {
   const formattedStartDate = <DateFormatter date={startDate} />;
 
   // If there is no decommissioned date, this is an on-going project
@@ -33,4 +33,4 @@ export const LifespanFormatter = ({
       {formattedEndDate}
     </>
   );
-};
+}

@@ -1,7 +1,7 @@
 import type { Meta, StoryFn } from "@storybook/react";
 import { placeholderImage } from "placeholder-image-data-url-svg";
 
-import { Turn as TurnComponent, TurnProps } from ".";
+import TurnComponent, { TurnProps } from ".";
 
 export default {
   component: TurnComponent,

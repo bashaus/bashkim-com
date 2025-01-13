@@ -8,11 +8,11 @@ export type { PrismicRelatedDocumentType } from "./types/RelatedDocument";
 export type { PrismicSliceType } from "./types/Slice";
 
 /* Prismic type casts */
-export { PrismicDate } from "./casts/Date";
-export { PrismicRichText } from "./casts/RichText";
+export { default as PrismicDate } from "./casts/Date";
+export { default as PrismicRichText } from "./casts/RichText";
 
 /* Contexts */
 export {
-  LinkResolverContext,
+  default as LinkResolverContext,
   useLinkResolver,
 } from "./contexts/LinkResolver/context";

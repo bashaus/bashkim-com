@@ -9,7 +9,7 @@ export type CollaboratorSliceProps = {
   slice: CollaboratorSliceTypeFragment;
 };
 
-export const CollaboratorSlice = ({ slice }: CollaboratorSliceProps) => {
+export default function CollaboratorSlice({ slice }: CollaboratorSliceProps) {
   const PrismicLinkResolver = useLinkResolver();
 
   if (!slice.primary) {
@@ -51,4 +51,4 @@ export const CollaboratorSlice = ({ slice }: CollaboratorSliceProps) => {
       {role}
     </>
   );
-};
+}

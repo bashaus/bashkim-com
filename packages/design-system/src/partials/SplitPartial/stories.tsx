@@ -1,8 +1,8 @@
 import type { Meta, StoryFn } from "@storybook/react";
 import { placeholderImage } from "placeholder-image-data-url-svg";
 
-import { SplitItemPartial } from "../SplitItemPartial";
-import { SplitPartial as SplitPartialComponent, SplitPartialProps } from ".";
+import SplitItemPartial from "../SplitItemPartial";
+import SplitPartialComponent, { SplitPartialProps } from ".";
 
 export default {
   component: SplitPartialComponent,

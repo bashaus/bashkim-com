@@ -1,14 +1,16 @@
-import { CookiesPageLockup } from "../../domains/cookies-page/components/CookiesPageLockup";
-import { generateCanonical } from "../../libraries/app/generateCanonical";
+import CookiesPageLockup from "../../domains/cookies-page/components/CookiesPageLockup";
+import generateCanonical from "../../libraries/app/generateCanonical";
 
-export const metadata = {
-  title: "Cookie policy",
-  description: "How your personal information is used on this website",
-  alternates: {
-    canonical: generateCanonical("/cookies/"),
-  },
-};
+export async function generateMetadata() {
+  return {
+    title: "Cookie policy",
+    description: "How your personal information is used on this website",
+    alternates: {
+      canonical: generateCanonical("/cookies/"),
+    },
+  };
+}
 
-const CookiesPage = () => <CookiesPageLockup />;
-
-export default CookiesPage;
+export default async function CookiesPage() {
+  return <CookiesPageLockup />;
+}

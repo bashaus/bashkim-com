@@ -9,7 +9,7 @@ import { createRequestLink } from "@apollo-link-debug/handle-request";
 
 const token = process.env["APP_SOCIALS_GITHUB_TOKEN"];
 
-export const apolloGitHubClient = new ApolloClient({
+const client = new ApolloClient({
   link: ApolloLink.from([
     createRequestLink(),
     createErrorsLink(),
@@ -22,3 +22,5 @@ export const apolloGitHubClient = new ApolloClient({
   ]),
   cache: new InMemoryCache(),
 });
+
+export default client;

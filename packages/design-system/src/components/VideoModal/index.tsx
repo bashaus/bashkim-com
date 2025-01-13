@@ -4,7 +4,7 @@ import StopIcon from "@mui/icons-material/Stop";
 import { useCallback, useRef, useState } from "react";
 import ReactPlayer, { ReactPlayerProps } from "react-player/lazy";
 
-import { Modal, ModalProps } from "../Modal";
+import Modal, { ModalProps } from "../Modal";
 import styles from "./styles.module.scss";
 
 export type VideoModalProps = {
@@ -24,11 +24,11 @@ export type VideoModalProps = {
   url: string;
 };
 
-export const VideoModal = ({
+export default function VideoModal({
   isOpen,
   onRequestClose,
   url,
-}: VideoModalProps) => {
+}: VideoModalProps) {
   const playerRef = useRef(null);
 
   const [playing, setPlaying] = useState<ReactPlayerProps["playing"]>(false);
@@ -106,4 +106,4 @@ export const VideoModal = ({
       {/* onSeek?: (seconds: number) => void */}
     </Modal>
   );
-};
+}

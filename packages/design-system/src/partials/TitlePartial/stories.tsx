@@ -1,7 +1,7 @@
 import type { Meta, StoryFn } from "@storybook/react";
 import { placeholderImage } from "placeholder-image-data-url-svg";
 
-import { TitlePartial as TitlePartialComponent, TitlePartialProps } from ".";
+import TitlePartialComponent, { TitlePartialProps } from ".";
 
 export default {
   component: TitlePartialComponent,

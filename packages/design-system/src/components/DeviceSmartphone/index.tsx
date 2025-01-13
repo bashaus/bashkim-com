@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 
 import DeviceVector from "../../assets/vectors/devices/smartphone.svg";
-import { RichTextFormatter } from "../../formatters/RichTextFormatter";
+import RichTextFormatter from "../../formatters/RichTextFormatter";
 import styles from "./styles.module.scss";
 
 export type DeviceSmartphoneProps = {
@@ -12,18 +12,20 @@ export type DeviceSmartphoneProps = {
 /**
  * A scrollable screenshot encapsulated by a smartphone design.
  */
-export const DeviceSmartphone = ({
+export default function DeviceSmartphone({
   children,
   figure,
-}: DeviceSmartphoneProps) => (
-  <figure className={styles["DeviceSmartphone"]}>
-    <div className={styles["Wrapper"]}>
-      <DeviceVector className={styles["Device"]} />
-      <div className={styles["Figure"]}>{figure}</div>
-    </div>
+}: DeviceSmartphoneProps) {
+  return (
+    <figure className={styles["DeviceSmartphone"]}>
+      <div className={styles["Wrapper"]}>
+        <DeviceVector className={styles["Device"]} />
+        <div className={styles["Figure"]}>{figure}</div>
+      </div>
 
-    <figcaption className={styles["Caption"]}>
-      <RichTextFormatter>{children}</RichTextFormatter>
-    </figcaption>
-  </figure>
-);
+      <figcaption className={styles["Caption"]}>
+        <RichTextFormatter>{children}</RichTextFormatter>
+      </figcaption>
+    </figure>
+  );
+}

@@ -1,7 +1,7 @@
 import type { Meta, StoryFn } from "@storybook/react";
 import { placeholderImage } from "placeholder-image-data-url-svg";
 
-import { DeviceFeaturePhone, DeviceFeaturePhoneProps } from ".";
+import DeviceFeaturePhone, { DeviceFeaturePhoneProps } from ".";
 
 export default {
   component: DeviceFeaturePhone,

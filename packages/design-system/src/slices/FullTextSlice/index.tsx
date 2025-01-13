@@ -1,13 +1,13 @@
 import type { FullTextSliceTypeFragment } from "@bashkim-com/prismic-dal";
 import { PrismicRichText } from "@bashkim-com/prismic-helpers";
 
-import { FullTextPartial } from "../../partials/FullTextPartial";
+import FullTextPartial from "../../partials/FullTextPartial";
 
 export type FullTextSliceProps = {
   slice: FullTextSliceTypeFragment;
 };
 
-export const FullTextSlice = ({ slice }: FullTextSliceProps) => {
+export default function FullTextSlice({ slice }: FullTextSliceProps) {
   if (!slice.primary) {
     return null;
   }
@@ -19,6 +19,4 @@ export const FullTextSlice = ({ slice }: FullTextSliceProps) => {
       <PrismicRichText render={body} />
     </FullTextPartial>
   );
-};
-
-export default FullTextSlice;
+}

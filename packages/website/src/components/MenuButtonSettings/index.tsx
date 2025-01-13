@@ -2,12 +2,12 @@ import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import { IconButton, Tooltip } from "@mui/material";
 import { ComponentPropsWithoutRef, useCallback, useState } from "react";
 
-import { SiteSettings } from "../SiteSettings";
+import SiteSettings from "../SiteSettings";
 import styles from "./styles.module.scss";
 
 export type MenuButtonSettingsProps = ComponentPropsWithoutRef<"div">;
 
-export const MenuButtonSettings = (props: MenuButtonSettingsProps) => {
+export default function MenuButtonSettings(props: MenuButtonSettingsProps) {
   const [isVisible, setIsVisible] = useState<boolean>(false);
 
   const handleSignifierClick = useCallback(() => {
@@ -29,4 +29,4 @@ export const MenuButtonSettings = (props: MenuButtonSettingsProps) => {
       <SiteSettings isVisible={isVisible} onClose={handleClose} />
     </div>
   );
-};
+}

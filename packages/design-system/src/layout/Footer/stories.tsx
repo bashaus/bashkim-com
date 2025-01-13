@@ -1,9 +1,9 @@
 import type { Meta, StoryFn } from "@storybook/react";
 
-import { FooterColumn } from "../FooterColumn";
-import { FooterGroup } from "../FooterGroup";
-import { FooterLinks } from "../FooterLinks";
-import { Footer as FooterComponent, FooterProps } from ".";
+import FooterColumn from "../FooterColumn";
+import FooterGroup from "../FooterGroup";
+import FooterLinks from "../FooterLinks";
+import FooterComponent, { FooterProps } from ".";
 
 export default {
   component: FooterComponent,

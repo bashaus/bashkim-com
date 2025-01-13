@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
 
-import { Tile } from ".";
+import Tile from ".";
 
 describe("<Tile />", () => {
   it("should render", () => {

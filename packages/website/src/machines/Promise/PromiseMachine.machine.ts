@@ -14,7 +14,7 @@ import {
 } from "./PromiseMachine.events";
 import { PromiseMachineState } from "./PromiseMachine.state";
 
-export const promiseMachine = createMachine({
+const promiseMachine = createMachine({
   id: "PromiseMachine",
   initial: PromiseMachineState.IDLE,
   context: initialPromiseMachineContext,
@@ -64,3 +64,5 @@ export const promiseMachine = createMachine({
     },
   },
 });
+
+export default promiseMachine;

@@ -5,16 +5,16 @@ import type {
 } from "@bashkim-com/prismic-dal";
 import { PrismicRichText } from "@bashkim-com/prismic-helpers";
 
-import { PortfolioCaseStudyBrick } from "../PortfolioCaseStudyBrick";
+import PortfolioCaseStudyBrick from "../PortfolioCaseStudyBrick";
 import styles from "./styles.module.scss";
 
 export type PortfolioCategoryProps = {
   portfolioCategory: PortfolioCategorySliceTypeFragment;
 };
 
-export const PortfolioCategory = ({
+export default function PortfolioCategory({
   portfolioCategory,
-}: PortfolioCategoryProps) => {
+}: PortfolioCategoryProps) {
   const { fields } = portfolioCategory;
   const {
     portfolio_category_slug: slug,
@@ -44,4 +44,4 @@ export const PortfolioCategory = ({
       )}
     </>
   );
-};
+}

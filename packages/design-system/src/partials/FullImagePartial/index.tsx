@@ -5,12 +5,14 @@ import styles from "./styles.module.scss";
 
 export type FullImagePartialProps = ComponentPropsWithoutRef<"div">;
 
-export const FullImagePartial = ({
+export default function FullImagePartial({
   className,
   ...props
-}: FullImagePartialProps) => (
-  <div
-    className={classNames(className, styles["FullImagePartial"])}
-    {...props}
-  />
-);
+}: FullImagePartialProps) {
+  return (
+    <div
+      className={classNames(className, styles["FullImagePartial"])}
+      {...props}
+    />
+  );
+}

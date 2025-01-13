@@ -2,19 +2,19 @@ import type { CaptionedMagazineSliceTypeFragment } from "@bashkim-com/prismic-da
 import { PrismicRichText } from "@bashkim-com/prismic-helpers";
 import { DragEvent, FormEvent, useCallback, useState } from "react";
 
-import { Magazine } from "../../components/Magazine";
+import Magazine from "../../components/Magazine";
 import { MagazineSpreadChangeEvent } from "../../components/Magazine/types";
-import { RichTextFormatter } from "../../formatters/RichTextFormatter";
-import { CaptionedPartial } from "../../partials/CaptionedPartial";
+import RichTextFormatter from "../../formatters/RichTextFormatter";
+import CaptionedPartial from "../../partials/CaptionedPartial";
 import styles from "./styles.module.scss";
 
 export type CaptionedMagazineSliceProps = {
   slice: CaptionedMagazineSliceTypeFragment;
 };
 
-export const CaptionedMagazineSlice = ({
+export default function CaptionedMagazineSlice({
   slice,
-}: CaptionedMagazineSliceProps) => {
+}: CaptionedMagazineSliceProps) {
   /* infinite state */
   const [magazineIsInitialized, setMagazineIsInitialized] =
     useState<boolean>(false);
@@ -146,6 +146,4 @@ export const CaptionedMagazineSlice = ({
       )}
     </CaptionedPartial>
   );
-};
-
-export default CaptionedMagazineSlice;
+}

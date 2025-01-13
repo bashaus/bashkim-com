@@ -1,7 +1,7 @@
 import { NewspaperSliceFixture } from "@bashkim-com/prismic-fixtures";
 import type { Meta } from "@storybook/react";
 
-import { NewspaperSlice as NewspaperSliceComponent } from ".";
+import NewspaperSliceComponent from ".";
 
 export default {
   component: NewspaperSliceComponent,

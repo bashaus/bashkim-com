@@ -1,9 +1,6 @@
 import type { Meta, StoryFn } from "@storybook/react";
 
-import {
-  NewspaperPartial as NewspaperPartialComponent,
-  NewspaperPartialProps,
-} from ".";
+import NewspaperPartialComponent, { NewspaperPartialProps } from ".";
 
 export default {
   component: NewspaperPartialComponent,

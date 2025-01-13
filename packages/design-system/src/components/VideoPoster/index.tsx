@@ -1,6 +1,6 @@
 import { ComponentPropsWithoutRef, useCallback, useState } from "react";
 
-import { VideoModal } from "../VideoModal";
+import VideoModal from "../VideoModal";
 import styles from "./styles.module.scss";
 
 export type VideoPosterProps = ComponentPropsWithoutRef<"div"> & {
@@ -30,14 +30,14 @@ export type VideoPosterProps = ComponentPropsWithoutRef<"div"> & {
   videoUrl: string;
 };
 
-export const VideoPoster = ({
+export default function VideoPoster({
   title,
   imageUrl,
   width,
   height,
   videoUrl,
   ...restProps
-}: VideoPosterProps) => {
+}: VideoPosterProps) {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const handleModalOpen = useCallback(() => {
@@ -67,4 +67,4 @@ export const VideoPoster = ({
       />
     </div>
   );
-};
+}

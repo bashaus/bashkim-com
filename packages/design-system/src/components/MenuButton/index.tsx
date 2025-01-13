@@ -5,21 +5,23 @@ import styles from "./styles.module.scss";
 
 export type MenuButtonProps = ComponentPropsWithoutRef<"button">;
 
-export const MenuButton = ({
+export default function MenuButton({
   className,
   type = "button",
   onClick,
   ...props
-}: MenuButtonProps) => (
-  <button
-    data-testid="MenuButton"
-    className={classNames(
-      className,
-      styles["MenuButton"],
-      onClick ? styles["clickable"] : undefined,
-    )}
-    type={type}
-    onClick={onClick}
-    {...props}
-  />
-);
+}: MenuButtonProps) {
+  return (
+    <button
+      data-testid="MenuButton"
+      className={classNames(
+        className,
+        styles["MenuButton"],
+        onClick ? styles["clickable"] : undefined,
+      )}
+      type={type}
+      onClick={onClick}
+      {...props}
+    />
+  );
+}

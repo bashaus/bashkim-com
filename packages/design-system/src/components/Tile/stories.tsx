@@ -1,7 +1,7 @@
 import type { Meta, StoryFn } from "@storybook/react";
 import { placeholderImage } from "placeholder-image-data-url-svg";
 
-import { Tile as TileComponent, TileProps } from ".";
+import TileComponent, { TileProps } from ".";
 
 export default {
   component: TileComponent,

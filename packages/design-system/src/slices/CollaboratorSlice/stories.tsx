@@ -1,7 +1,7 @@
 import { CollaboratorSliceFixture } from "@bashkim-com/prismic-fixtures";
 import type { Meta } from "@storybook/react";
 
-import { CollaboratorSlice as CollaboratorSliceComponent } from ".";
+import CollaboratorSliceComponent from ".";
 
 export default {
   component: CollaboratorSliceComponent,

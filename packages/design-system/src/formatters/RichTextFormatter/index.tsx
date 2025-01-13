@@ -5,12 +5,14 @@ import styles from "./styles.module.scss";
 
 export type RichTextFormatterProps = ComponentPropsWithoutRef<"div">;
 
-export const RichTextFormatter = ({
+export default function RichTextFormatter({
   className,
   ...props
-}: RichTextFormatterProps) => (
-  <div
-    className={classNames(className, styles["RichTextFormatter"])}
-    {...props}
-  />
-);
+}: RichTextFormatterProps) {
+  return (
+    <div
+      className={classNames(className, styles["RichTextFormatter"])}
+      {...props}
+    />
+  );
+}

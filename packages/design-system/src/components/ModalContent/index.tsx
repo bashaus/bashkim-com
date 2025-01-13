@@ -12,7 +12,7 @@ export type ModalContentProps = ComponentPropsWithoutRef<"div"> & {
   isOpen: boolean;
 };
 
-export const ModalContent = ({
+export default function ModalContent({
   className,
   onHideComplete,
   onHideStart,
@@ -20,7 +20,7 @@ export const ModalContent = ({
   onShowStart,
   isOpen,
   ...props
-}: ModalContentProps) => {
+}: ModalContentProps) {
   const divRef = useRef<HTMLDivElement>(null);
 
   // Wait until DOM has been rendered
@@ -66,4 +66,4 @@ export const ModalContent = ({
       />
     </div>
   );
-};
+}

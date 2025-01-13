@@ -15,12 +15,12 @@ export type SocialMenuProps = {
   signifierIcon: ReactNode;
 };
 
-export const SocialMenu = ({
+export default function SocialMenu({
   children,
   label,
   onOpen,
   signifierIcon,
-}: SocialMenuProps) => {
+}: SocialMenuProps) {
   const menuId = useId();
 
   const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
@@ -73,4 +73,4 @@ export const SocialMenu = ({
       </Menu>
     </>
   );
-};
+}

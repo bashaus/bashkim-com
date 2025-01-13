@@ -5,6 +5,8 @@ import styles from "./styles.module.scss";
 
 export type FooterGroupProps = ComponentPropsWithoutRef<"div">;
 
-export const FooterGroup = ({ className, ...props }: FooterGroupProps) => (
-  <div className={classNames(className, styles["FooterGroup"])} {...props} />
-);
+export default function FooterGroup({ className, ...props }: FooterGroupProps) {
+  return (
+    <div className={classNames(className, styles["FooterGroup"])} {...props} />
+  );
+}

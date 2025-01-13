@@ -5,9 +5,9 @@ export type CaseStudyAccoladesProps = {
   slices: Array<AccoladeSliceTypeFragment>;
 };
 
-export const CaseStudyAccolades = ({
+export default function CaseStudyAccolades({
   slices = [],
-}: CaseStudyAccoladesProps) => {
+}: CaseStudyAccoladesProps) {
   if (!slices.length) {
     return null;
   }
@@ -25,4 +25,4 @@ export const CaseStudyAccolades = ({
       </div>
     </>
   );
-};
+}

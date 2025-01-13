@@ -6,7 +6,7 @@ export type PrismicRichTextProps = {
   render: Array<RichTextBlock> | null;
 };
 
-export const PrismicRichText = ({ render }: PrismicRichTextProps) => {
+export default function PrismicRichText({ render }: PrismicRichTextProps) {
   const PrismicLinkResolver = useLinkResolver();
 
   if (!render) {
@@ -14,4 +14,4 @@ export const PrismicRichText = ({ render }: PrismicRichTextProps) => {
   }
 
   return <RichText render={render} linkResolver={PrismicLinkResolver} />;
-};
+}

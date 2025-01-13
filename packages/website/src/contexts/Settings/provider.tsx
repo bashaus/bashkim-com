@@ -2,15 +2,15 @@ import Cookie from "js-cookie";
 import { ReactNode, useEffect, useMemo, useReducer } from "react";
 
 import { SettingsActionSetAppearance } from "./actions";
-import { SettingsContext } from "./context";
-import { SettingsReducer } from "./reducer";
+import SettingsContext from "./context";
+import SettingsReducer from "./reducer";
 import { settingsStateInitial } from "./state";
 
 export type SettingsProviderProps = {
   children: ReactNode;
 };
 
-export const SettingsProvider = ({ children }: SettingsProviderProps) => {
+export default function SettingsProvider({ children }: SettingsProviderProps) {
   const [settingsState, settingsDispatch] = useReducer(
     SettingsReducer,
     settingsStateInitial,
@@ -57,4 +57,4 @@ export const SettingsProvider = ({ children }: SettingsProviderProps) => {
       {children}
     </SettingsContext.Provider>
   );
-};
+}

@@ -5,14 +5,14 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ComponentPropsWithRef, ReactNode } from "react";
 
-import { MenuButtonSettings } from "../MenuButtonSettings";
+import MenuButtonSettings from "../MenuButtonSettings";
 import styles from "./styles.module.scss";
 
 export type MenuProps = ComponentPropsWithRef<"div"> & {
   backButton?: ReactNode;
 };
 
-export const Menu = ({ backButton, ...restProps }: MenuProps) => {
+export default function Menu({ backButton, ...restProps }: MenuProps) {
   const nextPath = usePathname();
   const pathUrl = new URL(nextPath, "http://localhost");
   const { pathname } = pathUrl;
@@ -32,4 +32,4 @@ export const Menu = ({ backButton, ...restProps }: MenuProps) => {
       </div>
     </div>
   );
-};
+}

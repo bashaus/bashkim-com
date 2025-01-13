@@ -1,6 +1,6 @@
 import type { Meta } from "@storybook/react";
 
-import { VideoModal as VideoModalComponent } from ".";
+import VideoModalComponent from ".";
 
 export default {
   component: VideoModalComponent,

@@ -10,9 +10,9 @@ export type CaseStudyTechnologiesProps = {
   caseStudy: CaseStudyPageModelFragment;
 };
 
-export const CaseStudyTechnologies = ({
+export default function CaseStudyTechnologies({
   caseStudy,
-}: CaseStudyTechnologiesProps) => {
+}: CaseStudyTechnologiesProps) {
   if (!caseStudy.info_technologies) {
     return null;
   }
@@ -47,4 +47,4 @@ export const CaseStudyTechnologies = ({
       </ul>
     </>
   );
-};
+}

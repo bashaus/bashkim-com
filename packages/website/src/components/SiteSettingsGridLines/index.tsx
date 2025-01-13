@@ -7,7 +7,7 @@ import { SettingsActionToggleGridLines } from "../../contexts/Settings/actions";
 import { useSettings } from "../../contexts/Settings/context";
 import styles from "./styles.module.scss";
 
-export const SiteSettingsGridLines = () => {
+export default function SiteSettingsGridLines() {
   const { settingsState, settingsDispatch } = useSettings();
   const { isGridLinesVisible } = settingsState;
 
@@ -23,4 +23,4 @@ export const SiteSettingsGridLines = () => {
       checked={isGridLinesVisible}
     />
   );
-};
+}

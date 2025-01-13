@@ -1,7 +1,7 @@
 import { FullTextSliceFixture } from "@bashkim-com/prismic-fixtures";
 import type { Meta } from "@storybook/react";
 
-import { FullTextSlice as FullTextSliceComponent } from ".";
+import FullTextSliceComponent from ".";
 
 export default {
   component: FullTextSliceComponent,

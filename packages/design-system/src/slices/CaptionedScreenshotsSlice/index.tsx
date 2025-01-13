@@ -4,8 +4,8 @@ import ComputerIcon from "@mui/icons-material/Computer";
 import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
 import { ChangeEvent, useCallback, useState } from "react";
 
-import { RichTextFormatter } from "../../formatters/RichTextFormatter";
-import { CaptionedPartial } from "../../partials/CaptionedPartial";
+import RichTextFormatter from "../../formatters/RichTextFormatter";
+import CaptionedPartial from "../../partials/CaptionedPartial";
 import styles from "./styles.module.scss";
 
 export type CaptionedScreenshotsSliceProps = {
@@ -13,10 +13,10 @@ export type CaptionedScreenshotsSliceProps = {
   slice: CaptionedScreenshotsSliceTypeFragment;
 };
 
-export const CaptionedScreenshotsSlice = ({
+export default function CaptionedScreenshotsSlice({
   slice,
   initialWidth = 1024,
-}: CaptionedScreenshotsSliceProps) => {
+}: CaptionedScreenshotsSliceProps) {
   const fields = [...(slice.fields ?? [])];
 
   // Sort the elements by the width of the image
@@ -98,6 +98,4 @@ export const CaptionedScreenshotsSlice = ({
       </div>
     </CaptionedPartial>
   );
-};
-
-export default CaptionedScreenshotsSlice;
+}

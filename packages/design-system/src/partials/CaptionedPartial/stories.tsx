@@ -1,11 +1,8 @@
 import type { Meta, StoryFn } from "@storybook/react";
 import { placeholderImage } from "placeholder-image-data-url-svg";
 
-import { RichTextFormatter } from "../../formatters/RichTextFormatter";
-import {
-  CaptionedPartial as CaptionedPartialComponent,
-  CaptionedPartialProps,
-} from ".";
+import RichTextFormatter from "../../formatters/RichTextFormatter";
+import CaptionedPartialComponent, { CaptionedPartialProps } from ".";
 
 export default {
   component: CaptionedPartialComponent,

@@ -8,7 +8,7 @@ export type FooterColumnProps = {
   label: string;
 };
 
-export const FooterColumn = ({ label, children }: FooterColumnProps) => {
+export default function FooterColumn({ label, children }: FooterColumnProps) {
   const [isVisible, setIsVisible] = useState(false);
 
   const handleHeaderClick = useCallback((): void => {
@@ -29,4 +29,4 @@ export const FooterColumn = ({ label, children }: FooterColumnProps) => {
       <div className={styles["Content"]}>{children}</div>
     </div>
   );
-};
+}

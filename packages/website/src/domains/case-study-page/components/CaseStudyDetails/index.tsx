@@ -11,7 +11,7 @@ export type CaseStudyDetailsProps = {
   caseStudy: CaseStudyPageModelFragment;
 };
 
-export const CaseStudyDetails = ({ caseStudy }: CaseStudyDetailsProps) => {
+export default function CaseStudyDetails({ caseStudy }: CaseStudyDetailsProps) {
   const {
     info_brief: brief,
     info_strategy: strategy,
@@ -149,4 +149,4 @@ export const CaseStudyDetails = ({ caseStudy }: CaseStudyDetailsProps) => {
       )}
     </div>
   );
-};
+}

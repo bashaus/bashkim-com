@@ -4,6 +4,6 @@ import styles from "./styles.module.scss";
 
 export type FooterProps = ComponentPropsWithoutRef<"div">;
 
-export const Footer = (props: FooterProps) => (
-  <footer className={styles["Footer"]} {...props} />
-);
+export default function Footer(props: FooterProps) {
+  return <footer className={styles["Footer"]} {...props} />;
+}

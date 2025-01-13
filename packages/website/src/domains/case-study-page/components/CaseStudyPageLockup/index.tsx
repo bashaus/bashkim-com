@@ -6,23 +6,23 @@ import {
   CaseStudyPageModelFragment,
 } from "@bashkim-com/prismic-dal";
 
-import { MenuButtonPortfolio } from "../../../../components/MenuButtonPortfolio";
-import { Page } from "../../../../components/Page";
-import { Slice } from "../../../../components/Slice";
-import { CaseStudyAccolades } from "../CaseStudyAccolades";
-import { CaseStudyCollaborators } from "../CaseStudyCollaborators";
-import { CaseStudyExhibitions } from "../CaseStudyExhibitions";
-import { CaseStudyHeader } from "../CaseStudyHeader";
+import MenuButtonPortfolio from "../../../../components/MenuButtonPortfolio";
+import Page from "../../../../components/Page";
+import Slice from "../../../../components/Slice";
+import CaseStudyAccolades from "../CaseStudyAccolades";
+import CaseStudyCollaborators from "../CaseStudyCollaborators";
+import CaseStudyExhibitions from "../CaseStudyExhibitions";
+import CaseStudyHeader from "../CaseStudyHeader";
 
 export type CaseStudyPageProps = {
   caseStudyPage: CaseStudyPageModelFragment;
   caseStudyBody: CaseStudyBodyModelFragment;
 };
 
-export const CaseStudyPageLockup = ({
+export default function CaseStudyPageLockup({
   caseStudyPage,
   caseStudyBody,
-}: CaseStudyPageProps) => {
+}: CaseStudyPageProps) {
   const {
     accolades: accoladeSlices,
     collaborators: collaboratorSlices,
@@ -30,7 +30,7 @@ export const CaseStudyPageLockup = ({
   } = caseStudyPage;
 
   return (
-    <Page backButton={MenuButtonPortfolio}>
+    <Page backButton={<MenuButtonPortfolio />}>
       <article itemScope itemType="https://schema.org/CreativeWork">
         <CaseStudyHeader caseStudy={caseStudyPage} />
 
@@ -63,4 +63,4 @@ export const CaseStudyPageLockup = ({
       </article>
     </Page>
   );
-};
+}

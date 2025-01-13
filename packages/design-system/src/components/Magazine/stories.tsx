@@ -1,7 +1,7 @@
 import type { Meta, StoryFn } from "@storybook/react";
 import { placeholderImage } from "placeholder-image-data-url-svg";
 
-import { Magazine as MagazineComponent, MagazineProps } from ".";
+import MagazineComponent, { MagazineProps } from ".";
 
 export default {
   component: MagazineComponent,

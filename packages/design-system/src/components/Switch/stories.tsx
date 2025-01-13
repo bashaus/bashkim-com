@@ -2,7 +2,7 @@ import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import type { Meta } from "@storybook/react";
 
-import { Switch as SwitchComponent } from ".";
+import SwitchComponent from ".";
 
 export default {
   component: SwitchComponent,

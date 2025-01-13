@@ -21,7 +21,7 @@ export type TurnState = {
   isInitialized: boolean;
 };
 
-export class Turn extends PureComponent<TurnProps, TurnState> {
+class Turn extends PureComponent<TurnProps, TurnState> {
   public containerRef = createRef<HTMLDivElement>();
   public pagesRef = createRef<HTMLDivElement>();
 
@@ -154,3 +154,5 @@ export class Turn extends PureComponent<TurnProps, TurnState> {
     );
   }
 }
+
+export default Turn;

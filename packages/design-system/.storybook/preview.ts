@@ -1,4 +1,4 @@
-import { NormalizeDecorator } from "./decorators/NormalizeDecorator";
+import NormalizeDecorator from "./decorators/NormalizeDecorator";
 
 export const decorators = [NormalizeDecorator];
 

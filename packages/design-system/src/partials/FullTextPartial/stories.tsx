@@ -1,9 +1,6 @@
 import type { Meta, StoryFn } from "@storybook/react";
 
-import {
-  FullTextPartial as FullTextPartialComponent,
-  FullTextPartialProps,
-} from ".";
+import FullTextPartialComponent, { FullTextPartialProps } from ".";
 
 export default {
   component: FullTextPartialComponent,

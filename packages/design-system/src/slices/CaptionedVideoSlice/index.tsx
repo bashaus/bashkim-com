@@ -1,15 +1,17 @@
 import type { CaptionedVideoSliceTypeFragment } from "@bashkim-com/prismic-dal";
 import { PrismicRichText } from "@bashkim-com/prismic-helpers";
 
-import { VideoPlayer } from "../../components/VideoPlayer";
-import { RichTextFormatter } from "../../formatters/RichTextFormatter";
-import { CaptionedPartial } from "../../partials/CaptionedPartial";
+import VideoPlayer from "../../components/VideoPlayer";
+import RichTextFormatter from "../../formatters/RichTextFormatter";
+import CaptionedPartial from "../../partials/CaptionedPartial";
 
 export type CaptionedVideoSliceProps = {
   slice: CaptionedVideoSliceTypeFragment;
 };
 
-export const CaptionedVideoSlice = ({ slice }: CaptionedVideoSliceProps) => {
+export default function CaptionedVideoSlice({
+  slice,
+}: CaptionedVideoSliceProps) {
   if (!slice.primary) {
     return null;
   }
@@ -32,6 +34,4 @@ export const CaptionedVideoSlice = ({ slice }: CaptionedVideoSliceProps) => {
       </RichTextFormatter>
     </CaptionedPartial>
   );
-};
-
-export default CaptionedVideoSlice;
+}

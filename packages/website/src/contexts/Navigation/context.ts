@@ -8,7 +8,7 @@ export type NavigationContextType = {
   navigationDispatch: Dispatch<NavigationActionType>;
 };
 
-export const NavigationContext = createContext<NavigationContextType>({
+const NavigationContext = createContext<NavigationContextType>({
   navigationState: navigationStateInitial,
   navigationDispatch: () => {
     /* void */
@@ -16,3 +16,5 @@ export const NavigationContext = createContext<NavigationContextType>({
 });
 
 export const useNavigation = () => useContext(NavigationContext);
+
+export default NavigationContext;

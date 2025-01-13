@@ -1,7 +1,7 @@
 import type { Meta, StoryFn } from "@storybook/react";
 
-import { ModalFrame } from "../ModalFrame";
-import { Modal as ModalComponent, ModalProps } from ".";
+import ModalFrame from "../ModalFrame";
+import ModalComponent, { ModalProps } from ".";
 
 export default {
   component: ModalComponent,

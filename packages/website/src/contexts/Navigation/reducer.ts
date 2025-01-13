@@ -1,10 +1,10 @@
 import { NavigationAction, NavigationActionType } from "./actions";
 import { NavigationState } from "./state";
 
-export const NavigationReducer = (
+export default function NavigationReducer(
   state: NavigationState,
   action: NavigationActionType,
-): NavigationState => {
+): NavigationState {
   if (action.type === NavigationAction.SET_SCROLL_AT_TOP) {
     return {
       ...state,
@@ -13,4 +13,4 @@ export const NavigationReducer = (
   }
 
   return state;
-};
+}

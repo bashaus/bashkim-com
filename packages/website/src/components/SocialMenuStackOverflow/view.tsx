@@ -9,10 +9,10 @@ import Stack from "@mui/material/Stack";
 import StackOverflowVector from "../../assets/vectors/social/StackOverflow.svg";
 import StackOverflowFilledVector from "../../assets/vectors/social/StackOverflowFilled.svg";
 import { PromiseMachineState } from "../../machines/Promise/PromiseMachine.state";
-import { SocialMenu } from "../SocialMenu";
-import { SocialMenuItemHeader } from "../SocialMenuItemHeader";
-import { SocialMenuStateFailure } from "../SocialMenuStateFailure";
-import { SocialMenuStateLoading } from "../SocialMenuStateLoading";
+import SocialMenu from "../SocialMenu";
+import SocialMenuItemHeader from "../SocialMenuItemHeader";
+import SocialMenuStateFailure from "../SocialMenuStateFailure";
+import SocialMenuStateLoading from "../SocialMenuStateLoading";
 import styles from "./styles.module.scss";
 import { useSocialMenuStackOverflowViewModel } from "./view-model";
 
@@ -20,9 +20,9 @@ export type SocialMenuStackOverflowViewProps = {
   viewModel: ReturnType<typeof useSocialMenuStackOverflowViewModel>;
 };
 
-export const SocialMenuStackOverflowView = ({
+export default function SocialMenuStackOverflowView({
   viewModel,
-}: SocialMenuStackOverflowViewProps) => {
+}: SocialMenuStackOverflowViewProps) {
   const {
     promiseMachineState: {
       value: viewState,
@@ -109,4 +109,4 @@ export const SocialMenuStackOverflowView = ({
       )}
     </SocialMenu>
   );
-};
+}

@@ -8,17 +8,19 @@ export type GroupProps = ComponentPropsWithoutRef<"div"> & {
   design?: GroupDesign;
 };
 
-export const Group = ({
+export default function Group({
   className,
   design = GroupDesign.DEFAULT,
   ...props
-}: GroupProps) => (
-  <section
-    className={classNames(
-      className,
-      styles["Group"],
-      design === GroupDesign.ALTERNATE ? styles["isAlternate"] : undefined,
-    )}
-    {...props}
-  />
-);
+}: GroupProps) {
+  return (
+    <section
+      className={classNames(
+        className,
+        styles["Group"],
+        design === GroupDesign.ALTERNATE ? styles["isAlternate"] : undefined,
+      )}
+      {...props}
+    />
+  );
+}
