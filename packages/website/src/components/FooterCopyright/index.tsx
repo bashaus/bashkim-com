@@ -13,8 +13,8 @@ export default function FooterCopyright() {
           MMVIII
         </time>
         &#x2011;
-        <time dateTime="2024" title="2024">
-          MMXXIV
+        <time dateTime="2025" title="2025">
+          MMXXV
         </time>
         , Bashkim&nbsp;Isai. All&nbsp;rights&nbsp;reserved.
       </small>

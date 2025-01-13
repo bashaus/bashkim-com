@@ -1,4 +1,4 @@
-Copyright © 2008-2024
+Copyright © 2008-2025
 Bashkim Isai
 All rights reserved
 
