@@ -1,12 +1,13 @@
-import { ReactNode, useCallback, useState } from "react";
+import { PropsWithChildren, useCallback, useState } from "react";
 
 import styles from "./styles.module.scss";
 
-export type FooterColumnProps = {
-  children: ReactNode;
-  className?: string;
-  label: string;
-};
+export type FooterColumnProps = Readonly<
+  PropsWithChildren<{
+    className?: string;
+    label: string;
+  }>
+>;
 
 export default function FooterColumn({ label, children }: FooterColumnProps) {
   const [isVisible, setIsVisible] = useState(false);

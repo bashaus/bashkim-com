@@ -1,12 +1,13 @@
-import { ReactNode } from "react";
+import { PropsWithChildren, ReactNode } from "react";
 
 import RichTextFormatter from "../../formatters/RichTextFormatter";
 import styles from "./styles.module.scss";
 
-export type CarouselImageProps = {
-  figure?: ReactNode;
-  children?: ReactNode;
-};
+export type CarouselImageProps = Readonly<
+  PropsWithChildren<{
+    figure?: ReactNode;
+  }>
+>;
 
 export default function CarouselImage({
   children,

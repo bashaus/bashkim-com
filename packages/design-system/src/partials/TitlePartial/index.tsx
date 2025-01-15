@@ -1,11 +1,12 @@
-import { ReactNode } from "react";
+import { PropsWithChildren } from "react";
 
 import styles from "./styles.module.scss";
 
-export type TitlePartialProps = {
-  children?: ReactNode;
-  image?: string;
-};
+export type TitlePartialProps = Readonly<
+  PropsWithChildren<{
+    image?: string;
+  }>
+>;
 
 export default function TitlePartial({ children, image }: TitlePartialProps) {
   return (

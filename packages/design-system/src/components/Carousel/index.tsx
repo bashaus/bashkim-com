@@ -6,9 +6,11 @@ import { CarouselArrowDirection } from "../CarouselArrow/types";
 import CarouselDots from "../CarouselDots";
 import styles from "./styles.module.scss";
 
-export type CarouselProps = Settings & {
-  className?: string;
-};
+export type CarouselProps = Readonly<
+  Settings & {
+    className?: string;
+  }
+>;
 
 export default function Carousel({
   adaptiveHeight = true,

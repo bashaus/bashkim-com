@@ -1,14 +1,12 @@
 import Cookie from "js-cookie";
-import { ReactNode, useEffect, useMemo, useReducer } from "react";
+import { PropsWithChildren, useEffect, useMemo, useReducer } from "react";
 
 import { SettingsActionSetAppearance } from "./actions";
 import SettingsContext from "./context";
 import SettingsReducer from "./reducer";
 import { settingsStateInitial } from "./state";
 
-export type SettingsProviderProps = {
-  children: ReactNode;
-};
+export type SettingsProviderProps = Readonly<PropsWithChildren>;
 
 export default function SettingsProvider({ children }: SettingsProviderProps) {
   const [settingsState, settingsDispatch] = useReducer(

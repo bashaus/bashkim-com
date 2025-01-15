@@ -27,9 +27,9 @@ const SliceTypeComponentMap = {
   SubtitleSliceType: SubtitleSlice,
 };
 
-export type SliceProps = {
+export type SliceProps = Readonly<{
   slice: Case_StudyBody;
-};
+}>;
 
 export default function Slice(props: SliceProps) {
   const { slice } = props;

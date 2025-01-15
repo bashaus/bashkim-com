@@ -6,10 +6,10 @@ import SiteSettingsAppearance from "../SiteSettingsAppearance";
 import SiteSettingsGridLines from "../SiteSettingsGridLines";
 import styles from "./styles.module.scss";
 
-export type SiteSettingsProps = {
+export type SiteSettingsProps = Readonly<{
   isVisible: boolean;
   onClose: ComponentPropsWithoutRef<"button">["onClick"];
-};
+}>;
 
 export default function SiteSettings({
   isVisible,

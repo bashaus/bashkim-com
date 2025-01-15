@@ -4,10 +4,10 @@ import Link from "next/link";
 
 import styles from "./styles.module.scss";
 
-export type CaseStudyCollaboratorsProps = {
+export type CaseStudyCollaboratorsProps = Readonly<{
   myRole?: string;
   slices: Array<CollaboratorSliceTypeFragment>;
-};
+}>;
 
 export default function CaseStudyCollaborators({
   slices = [],

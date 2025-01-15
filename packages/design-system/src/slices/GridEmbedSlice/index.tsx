@@ -2,9 +2,9 @@ import type { GridEmbedSliceTypeFragment } from "@bashkim-com/prismic-dal";
 
 import styles from "./styles.module.scss";
 
-export type GridEmbedSliceProps = {
+export type GridEmbedSliceProps = Readonly<{
   slice: GridEmbedSliceTypeFragment;
-};
+}>;
 
 export default function GridEmbedSlice({ slice }: GridEmbedSliceProps) {
   return (

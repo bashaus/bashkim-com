@@ -7,9 +7,9 @@ import { PrismicDate } from "@bashkim-com/prismic-helpers";
 
 import styles from "./styles.module.scss";
 
-export type CaseStudyDetailsProps = {
+export type CaseStudyDetailsProps = Readonly<{
   caseStudy: CaseStudyPageModelFragment;
-};
+}>;
 
 export default function CaseStudyDetails({ caseStudy }: CaseStudyDetailsProps) {
   const {

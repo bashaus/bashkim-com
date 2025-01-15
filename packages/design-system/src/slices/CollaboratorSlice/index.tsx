@@ -5,9 +5,9 @@ import type {
 import { useLinkResolver } from "@bashkim-com/prismic-helpers";
 import { Link } from "prismic-reactjs";
 
-export type CollaboratorSliceProps = {
+export type CollaboratorSliceProps = Readonly<{
   slice: CollaboratorSliceTypeFragment;
-};
+}>;
 
 export default function CollaboratorSlice({ slice }: CollaboratorSliceProps) {
   const PrismicLinkResolver = useLinkResolver();

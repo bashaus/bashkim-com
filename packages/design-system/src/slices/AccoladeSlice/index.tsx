@@ -11,9 +11,9 @@ import DateFormatter from "../../formatters/DateFormatter";
 import RichTextFormatter from "../../formatters/RichTextFormatter";
 import styles from "./styles.module.scss";
 
-export type AccoladeSliceProps = {
+export type AccoladeSliceProps = Readonly<{
   slice: AccoladeSliceTypeFragment;
-};
+}>;
 
 const AwardPlaceName: Record<string, string> = {
   gold: "Gold",

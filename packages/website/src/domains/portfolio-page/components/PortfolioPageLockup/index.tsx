@@ -14,9 +14,9 @@ import backgroundImage from "../../assets/background-image.jpg";
 import PortfolioCategory from "../PortfolioCategory";
 import PortfolioFeaturedCaseStudies from "../PortfolioFeaturedCaseStudies";
 
-type PortfolioPageProps = {
+type PortfolioPageProps = Readonly<{
   portfolioPage: PortfolioPageModelFragment;
-};
+}>;
 
 export default function PortfolioPageLockup({
   portfolioPage,

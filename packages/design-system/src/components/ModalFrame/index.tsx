@@ -3,7 +3,7 @@ import { ComponentPropsWithoutRef } from "react";
 
 import styles from "./styles.module.scss";
 
-export type ModalFrameProps = ComponentPropsWithoutRef<"div">;
+export type ModalFrameProps = Readonly<ComponentPropsWithoutRef<"div">>;
 
 export default function ModalFrame({ className, ...props }: ModalFrameProps) {
   return (

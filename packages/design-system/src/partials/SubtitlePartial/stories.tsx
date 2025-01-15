@@ -21,10 +21,12 @@ export default {
   },
 } as Meta;
 
-type SubtitlePartialStoryProps = SubtitlePartialProps & {
-  title: string;
-  subtitle: string;
-};
+type SubtitlePartialStoryProps = Readonly<
+  SubtitlePartialProps & {
+    title: string;
+    subtitle: string;
+  }
+>;
 
 const Template: StoryFn<SubtitlePartialStoryProps> = ({
   title,

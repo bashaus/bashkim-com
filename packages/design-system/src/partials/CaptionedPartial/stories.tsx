@@ -28,11 +28,13 @@ export default {
   },
 } as Meta;
 
-type CaptionedPartialStoryProps = Omit<CaptionedPartialProps, "figure"> & {
-  figure: Array<string>;
-  title: string;
-  subtitle: string;
-};
+type CaptionedPartialStoryProps = Readonly<
+  Omit<CaptionedPartialProps, "figure"> & {
+    figure: Array<string>;
+    title: string;
+    subtitle: string;
+  }
+>;
 
 const Template: StoryFn<CaptionedPartialStoryProps> = ({
   title,

@@ -5,9 +5,9 @@ import VideoPlayer from "../../components/VideoPlayer";
 import RichTextFormatter from "../../formatters/RichTextFormatter";
 import CaptionedPartial from "../../partials/CaptionedPartial";
 
-export type CaptionedVideoSliceProps = {
+export type CaptionedVideoSliceProps = Readonly<{
   slice: CaptionedVideoSliceTypeFragment;
-};
+}>;
 
 export default function CaptionedVideoSlice({
   slice,

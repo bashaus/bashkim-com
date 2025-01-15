@@ -5,10 +5,10 @@ import { PageHeaderPartial } from "@bashkim-com/design-system";
 import MenuButtonHome from "../components/MenuButtonHome";
 import Page from "../components/Page";
 
-type RootErrorProps = {
+type RootErrorProps = Readonly<{
   error: Error;
   reset: () => void;
-};
+}>;
 
 const RootError = ({ error /* , reset */ }: RootErrorProps) => {
   return (

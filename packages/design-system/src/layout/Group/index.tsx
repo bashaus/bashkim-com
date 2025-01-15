@@ -4,9 +4,11 @@ import { ComponentPropsWithoutRef } from "react";
 import styles from "./styles.module.scss";
 import { GroupDesign } from "./types";
 
-export type GroupProps = ComponentPropsWithoutRef<"div"> & {
-  design?: GroupDesign;
-};
+export type GroupProps = Readonly<
+  ComponentPropsWithoutRef<"div"> & {
+    design?: GroupDesign;
+  }
+>;
 
 export default function Group({
   className,

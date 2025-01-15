@@ -16,9 +16,9 @@ import SocialMenuStateLoading from "../SocialMenuStateLoading";
 import styles from "./styles.module.scss";
 import { useSocialMenuStackOverflowViewModel } from "./view-model";
 
-export type SocialMenuStackOverflowViewProps = {
+export type SocialMenuStackOverflowViewProps = Readonly<{
   viewModel: ReturnType<typeof useSocialMenuStackOverflowViewModel>;
-};
+}>;
 
 export default function SocialMenuStackOverflowView({
   viewModel,

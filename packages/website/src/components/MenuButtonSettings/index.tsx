@@ -5,7 +5,7 @@ import { ComponentPropsWithoutRef, useCallback, useState } from "react";
 import SiteSettings from "../SiteSettings";
 import styles from "./styles.module.scss";
 
-export type MenuButtonSettingsProps = ComponentPropsWithoutRef<"div">;
+export type MenuButtonSettingsProps = Readonly<ComponentPropsWithoutRef<"div">>;
 
 export default function MenuButtonSettings(props: MenuButtonSettingsProps) {
   const [isVisible, setIsVisible] = useState<boolean>(false);

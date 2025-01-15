@@ -4,9 +4,9 @@ import { PrismicDate, PrismicRichText } from "@bashkim-com/prismic-helpers";
 import LifespanFormatter from "../../formatters/LifespanFormatter";
 import RichTextFormatter from "../../formatters/RichTextFormatter";
 
-export type ExhibitionSliceProps = {
+export type ExhibitionSliceProps = Readonly<{
   slice: ExhibitionSliceTypeFragment;
-};
+}>;
 
 export default function ExhibitionSlice({ slice }: ExhibitionSliceProps) {
   if (!slice.primary) {

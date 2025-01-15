@@ -7,7 +7,7 @@ import ReactPlayer, { ReactPlayerProps } from "react-player/lazy";
 import Modal, { ModalProps } from "../Modal";
 import styles from "./styles.module.scss";
 
-export type VideoModalProps = {
+export type VideoModalProps = Readonly<{
   /**
    * Whether or not to display the video modal
    */
@@ -22,7 +22,7 @@ export type VideoModalProps = {
    * The URL of the video to be embedded
    */
   url: string;
-};
+}>;
 
 export default function VideoModal({
   isOpen,

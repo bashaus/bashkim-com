@@ -3,10 +3,12 @@ import { ComponentPropsWithoutRef, ReactNode } from "react";
 
 import styles from "./styles.module.scss";
 
-export type SwitchProps = ComponentPropsWithoutRef<"input"> & {
-  iconOff?: ReactNode;
-  iconOn?: ReactNode;
-};
+export type SwitchProps = Readonly<
+  ComponentPropsWithoutRef<"input"> & {
+    iconOff?: ReactNode;
+    iconOn?: ReactNode;
+  }
+>;
 
 export default function Switch({
   className,

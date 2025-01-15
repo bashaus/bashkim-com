@@ -3,7 +3,7 @@ import { ComponentPropsWithoutRef } from "react";
 
 import styles from "./styles.module.scss";
 
-export type RichTextFormatterProps = ComponentPropsWithoutRef<"div">;
+export type RichTextFormatterProps = Readonly<ComponentPropsWithoutRef<"div">>;
 
 export default function RichTextFormatter({
   className,

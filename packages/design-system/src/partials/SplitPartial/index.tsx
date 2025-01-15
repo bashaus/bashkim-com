@@ -3,9 +3,11 @@ import { ComponentPropsWithoutRef } from "react";
 
 import styles from "./styles.module.scss";
 
-export type SplitPartialProps = ComponentPropsWithoutRef<"div"> & {
-  index?: number;
-};
+export type SplitPartialProps = Readonly<
+  ComponentPropsWithoutRef<"div"> & {
+    index?: number;
+  }
+>;
 
 export default function SplitPartial({
   className,

@@ -3,7 +3,7 @@ import ReactPlayer, { ReactPlayerProps } from "react-player/lazy";
 
 import styles from "./styles.module.scss";
 
-export type VideoPlayerProps = {
+export type VideoPlayerProps = Readonly<{
   /**
    * An accessible title of the video
    */
@@ -13,7 +13,7 @@ export type VideoPlayerProps = {
    * The URL of the video to be played
    */
   url: string;
-};
+}>;
 
 export default function VideoPlayer({ url }: VideoPlayerProps) {
   const playerRef = useRef(null);

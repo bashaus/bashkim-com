@@ -1,8 +1,8 @@
 import styles from "./styles.module.scss";
 
-export type LogoProps = {
+export type LogoProps = Readonly<{
   animated?: boolean;
-};
+}>;
 
 export default function Logo({ animated = false }: LogoProps) {
   return (

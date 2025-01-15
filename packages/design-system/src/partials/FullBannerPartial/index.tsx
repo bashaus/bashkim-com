@@ -1,13 +1,14 @@
-import { ReactNode } from "react";
+import { PropsWithChildren } from "react";
 
 import styles from "./styles.module.scss";
 
-export type FullBannerPartialProps = {
-  backgroundDesktop?: string;
-  backgroundMobile?: string;
-  children: ReactNode;
-  id: string;
-};
+export type FullBannerPartialProps = Readonly<
+  PropsWithChildren<{
+    backgroundDesktop?: string;
+    backgroundMobile?: string;
+    id: string;
+  }>
+>;
 
 export default function FullBannerPartial({
   backgroundDesktop,

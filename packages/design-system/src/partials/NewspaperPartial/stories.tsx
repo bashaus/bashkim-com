@@ -18,9 +18,11 @@ export default {
   },
 } as Meta;
 
-type NewspaperPartialStoryProps = NewspaperPartialProps & {
-  paragraphs: number;
-};
+type NewspaperPartialStoryProps = Readonly<
+  NewspaperPartialProps & {
+    paragraphs: number;
+  }
+>;
 
 const Template: StoryFn<NewspaperPartialStoryProps> = ({
   paragraphs,

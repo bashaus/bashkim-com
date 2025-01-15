@@ -16,9 +16,11 @@ export default {
   },
 } as Meta;
 
-type FullTextPartialStoryProps = FullTextPartialProps & {
-  title: string;
-};
+type FullTextPartialStoryProps = Readonly<
+  FullTextPartialProps & {
+    title: string;
+  }
+>;
 
 const Template: StoryFn<FullTextPartialStoryProps> = ({
   title,

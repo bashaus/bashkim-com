@@ -1,9 +1,9 @@
 import { AccoladeSlice, SubtitlePartial } from "@bashkim-com/design-system";
 import type { AccoladeSliceTypeFragment } from "@bashkim-com/prismic-dal";
 
-export type CaseStudyAccoladesProps = {
+export type CaseStudyAccoladesProps = Readonly<{
   slices: Array<AccoladeSliceTypeFragment>;
-};
+}>;
 
 export default function CaseStudyAccolades({
   slices = [],

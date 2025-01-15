@@ -3,9 +3,11 @@ import { ComponentPropsWithoutRef } from "react";
 
 import styles from "./styles.module.scss";
 
-export type NavigationItemProps = ComponentPropsWithoutRef<"li"> & {
-  isSelected?: boolean;
-};
+export type NavigationItemProps = Readonly<
+  ComponentPropsWithoutRef<"li"> & {
+    isSelected?: boolean;
+  }
+>;
 
 export default function NavigationItem({
   className,

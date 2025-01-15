@@ -8,9 +8,11 @@ import { ComponentPropsWithRef, ReactNode } from "react";
 import MenuButtonSettings from "../MenuButtonSettings";
 import styles from "./styles.module.scss";
 
-export type MenuProps = ComponentPropsWithRef<"div"> & {
-  backButton?: ReactNode;
-};
+export type MenuProps = Readonly<
+  ComponentPropsWithRef<"div"> & {
+    backButton?: ReactNode;
+  }
+>;
 
 export default function Menu({ backButton, ...restProps }: MenuProps) {
   const nextPath = usePathname();

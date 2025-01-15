@@ -21,9 +21,11 @@ export default {
   },
 } as Meta;
 
-type CarouselStoryProps = CarouselProps & {
-  slides: number;
-};
+type CarouselStoryProps = Readonly<
+  CarouselProps & {
+    slides: number;
+  }
+>;
 
 const Template: StoryFn<CarouselStoryProps> = ({
   slides,

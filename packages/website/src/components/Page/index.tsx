@@ -1,14 +1,15 @@
-import { ReactNode } from "react";
+import { PropsWithChildren, ReactNode } from "react";
 
 import Footer from "../Footer";
 import GridLines from "../GridLines";
 import Header from "../Header";
 import HeaderIntersection from "../HeaderIntersection";
 
-export type PageProps = {
-  backButton?: ReactNode;
-  children?: ReactNode;
-};
+export type PageProps = Readonly<
+  PropsWithChildren<{
+    backButton?: ReactNode;
+  }>
+>;
 
 export default function Page({ backButton, children }: PageProps) {
   return (

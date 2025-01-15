@@ -14,9 +14,11 @@ export default {
   },
 } as Meta;
 
-type GroupStoryProps = GroupProps & {
-  icon: Array<string>;
-};
+type GroupStoryProps = Readonly<
+  GroupProps & {
+    icon: Array<string>;
+  }
+>;
 
 const Template: StoryFn<GroupStoryProps> = (args: GroupStoryProps) => (
   <GroupComponent {...args}>

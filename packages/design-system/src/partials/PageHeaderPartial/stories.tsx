@@ -21,13 +21,12 @@ export default {
   },
 } as Meta;
 
-type PageHeaderPartialStoryProps = Omit<
-  PageHeaderPartialProps,
-  "imageDesktop" | "imageMobile"
-> & {
-  imageDesktop: Array<string>;
-  imageMobile: Array<string>;
-};
+type PageHeaderPartialStoryProps = Readonly<
+  Omit<PageHeaderPartialProps, "imageDesktop" | "imageMobile"> & {
+    imageDesktop: Array<string>;
+    imageMobile: Array<string>;
+  }
+>;
 
 const Template: StoryFn<PageHeaderPartialStoryProps> = ({
   imageDesktop,

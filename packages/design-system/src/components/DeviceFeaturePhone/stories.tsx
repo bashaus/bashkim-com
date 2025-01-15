@@ -19,9 +19,11 @@ export default {
   },
 } as Meta;
 
-type DeviceFeaturePhoneStoryProps = Omit<DeviceFeaturePhoneProps, "figure"> & {
-  figure: Array<string>;
-};
+type DeviceFeaturePhoneStoryProps = Readonly<
+  Omit<DeviceFeaturePhoneProps, "figure"> & {
+    figure: Array<string>;
+  }
+>;
 
 const Template: StoryFn<DeviceFeaturePhoneStoryProps> = ({
   children,

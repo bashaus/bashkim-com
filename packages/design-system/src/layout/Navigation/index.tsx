@@ -2,7 +2,7 @@ import { ComponentPropsWithoutRef } from "react";
 
 import styles from "./styles.module.scss";
 
-export type NavigationProps = ComponentPropsWithoutRef<"div">;
+export type NavigationProps = Readonly<ComponentPropsWithoutRef<"div">>;
 
 export default function Navigation({ children, ...props }: NavigationProps) {
   return (

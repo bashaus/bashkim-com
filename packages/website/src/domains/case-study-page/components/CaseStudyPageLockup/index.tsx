@@ -14,10 +14,10 @@ import CaseStudyCollaborators from "../CaseStudyCollaborators";
 import CaseStudyExhibitions from "../CaseStudyExhibitions";
 import CaseStudyHeader from "../CaseStudyHeader";
 
-export type CaseStudyPageProps = {
+export type CaseStudyPageProps = Readonly<{
   caseStudyPage: CaseStudyPageModelFragment;
   caseStudyBody: CaseStudyBodyModelFragment;
-};
+}>;
 
 export default function CaseStudyPageLockup({
   caseStudyPage,

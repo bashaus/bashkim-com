@@ -1,12 +1,13 @@
 import classNames from "classnames";
-import { ComponentPropsWithoutRef, ReactNode } from "react";
+import { ComponentPropsWithoutRef } from "react";
 
 import styles from "./styles.module.scss";
 
-export type SplitItemPartialProps = ComponentPropsWithoutRef<"div"> & {
-  backgroundImage?: string;
-  children?: ReactNode;
-};
+export type SplitItemPartialProps = Readonly<
+  ComponentPropsWithoutRef<"div"> & {
+    backgroundImage?: string;
+  }
+>;
 
 export default function SplitItemPartial({
   backgroundImage,

@@ -32,15 +32,14 @@ export default {
   },
 } as Meta;
 
-type FullBannerPartialStoryProps = Omit<
-  FullBannerPartialProps,
-  "backgroundDesktop" | "backgroundMobile"
-> & {
-  backgroundDesktop: Array<string>;
-  backgroundMobile: Array<string>;
-  title: string;
-  subtitle: string;
-};
+type FullBannerPartialStoryProps = Readonly<
+  Omit<FullBannerPartialProps, "backgroundDesktop" | "backgroundMobile"> & {
+    backgroundDesktop: Array<string>;
+    backgroundMobile: Array<string>;
+    title: string;
+    subtitle: string;
+  }
+>;
 
 const Template: StoryFn<FullBannerPartialStoryProps> = ({
   backgroundDesktop,

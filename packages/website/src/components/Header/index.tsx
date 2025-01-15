@@ -6,9 +6,9 @@ import MenuButtonSettings from "../MenuButtonSettings";
 import Navigation from "../Navigation";
 import styles from "./styles.module.scss";
 
-export type HeaderProps = {
+export type HeaderProps = Readonly<{
   backButton?: ReactNode;
-};
+}>;
 
 export default function Header({ backButton }: HeaderProps) {
   const { navigationState } = useNavigation();

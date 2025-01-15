@@ -3,7 +3,7 @@ import { ComponentPropsWithoutRef } from "react";
 
 import styles from "./styles.module.scss";
 
-export type FooterGroupProps = ComponentPropsWithoutRef<"div">;
+export type FooterGroupProps = Readonly<ComponentPropsWithoutRef<"div">>;
 
 export default function FooterGroup({ className, ...props }: FooterGroupProps) {
   return (

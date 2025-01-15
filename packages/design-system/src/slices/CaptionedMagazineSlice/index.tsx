@@ -8,9 +8,9 @@ import RichTextFormatter from "../../formatters/RichTextFormatter";
 import CaptionedPartial from "../../partials/CaptionedPartial";
 import styles from "./styles.module.scss";
 
-export type CaptionedMagazineSliceProps = {
+export type CaptionedMagazineSliceProps = Readonly<{
   slice: CaptionedMagazineSliceTypeFragment;
-};
+}>;
 
 export default function CaptionedMagazineSlice({
   slice,

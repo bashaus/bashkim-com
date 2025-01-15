@@ -3,7 +3,7 @@ import { ComponentPropsWithoutRef } from "react";
 
 import styles from "./styles.module.scss";
 
-export type MenuButtonProps = ComponentPropsWithoutRef<"button">;
+export type MenuButtonProps = Readonly<ComponentPropsWithoutRef<"button">>;
 
 export default function MenuButton({
   className,

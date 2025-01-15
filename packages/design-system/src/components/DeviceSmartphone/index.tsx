@@ -1,13 +1,14 @@
-import { ReactNode } from "react";
+import { PropsWithChildren, ReactNode } from "react";
 
 import DeviceVector from "../../assets/vectors/devices/smartphone.svg";
 import RichTextFormatter from "../../formatters/RichTextFormatter";
 import styles from "./styles.module.scss";
 
-export type DeviceSmartphoneProps = {
-  children: ReactNode;
-  figure: ReactNode;
-};
+export type DeviceSmartphoneProps = Readonly<
+  PropsWithChildren<{
+    figure: ReactNode;
+  }>
+>;
 
 /**
  * A scrollable screenshot encapsulated by a smartphone design.

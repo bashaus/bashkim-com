@@ -3,7 +3,7 @@ import { ComponentPropsWithoutRef } from "react";
 
 import styles from "./styles.module.scss";
 
-export type NavigationGroupProps = ComponentPropsWithoutRef<"ul">;
+export type NavigationGroupProps = Readonly<ComponentPropsWithoutRef<"ul">>;
 
 export default function NavigationGroup({
   className,

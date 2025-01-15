@@ -3,32 +3,34 @@ import { ComponentPropsWithoutRef, useCallback, useState } from "react";
 import VideoModal from "../VideoModal";
 import styles from "./styles.module.scss";
 
-export type VideoPosterProps = ComponentPropsWithoutRef<"div"> & {
-  /**
-   * The title of the video, for accessibility
-   */
-  title?: string;
+export type VideoPosterProps = Readonly<
+  ComponentPropsWithoutRef<"div"> & {
+    /**
+     * The title of the video, for accessibility
+     */
+    title?: string;
 
-  /**
-   * The URL of the image to display as a poster
-   */
-  imageUrl: string;
+    /**
+     * The URL of the image to display as a poster
+     */
+    imageUrl: string;
 
-  /**
-   * Dimensions: width
-   */
-  width?: number;
+    /**
+     * Dimensions: width
+     */
+    width?: number;
 
-  /**
-   * Dimensions: height
-   */
-  height?: number;
+    /**
+     * Dimensions: height
+     */
+    height?: number;
 
-  /**
-   * The URL of the video to display in a modal
-   */
-  videoUrl: string;
-};
+    /**
+     * The URL of the video to display in a modal
+     */
+    videoUrl: string;
+  }
+>;
 
 export default function VideoPoster({
   title,

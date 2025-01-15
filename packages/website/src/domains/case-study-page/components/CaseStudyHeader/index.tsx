@@ -11,9 +11,9 @@ import CaseStudyDetails from "../CaseStudyDetails";
 import CaseStudyTechnologies from "../CaseStudyTechnologies";
 import styles from "./styles.module.scss";
 
-export type CaseStudyHeaderProps = {
+export type CaseStudyHeaderProps = Readonly<{
   caseStudy: CaseStudyPageModelFragment;
-};
+}>;
 
 export default function CaseStudyHeader({ caseStudy }: CaseStudyHeaderProps) {
   return (

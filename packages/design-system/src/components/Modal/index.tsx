@@ -10,7 +10,7 @@ import ReactModal, { Props as ReactModalProps } from "react-modal";
 import ModalContent from "../ModalContent";
 import ModalOverlay from "../ModalOverlay";
 
-export type ModalProps = ReactModalProps;
+export type ModalProps = Readonly<ReactModalProps>;
 
 export default function Modal({ isOpen, style = {}, ...props }: ModalProps) {
   const [isOverlayOpen, setIsOverlayOpen] = useState(false);

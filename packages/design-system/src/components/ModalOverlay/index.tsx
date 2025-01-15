@@ -4,13 +4,15 @@ import { ComponentPropsWithoutRef, useEffect, useRef } from "react";
 
 import styles from "./styles.module.scss";
 
-export type ModalOverlayProps = ComponentPropsWithoutRef<"div"> & {
-  isOpen: boolean;
-  onHideComplete?(): void;
-  onHideStart?(): void;
-  onShowComplete?(): void;
-  onShowStart?(): void;
-};
+export type ModalOverlayProps = Readonly<
+  ComponentPropsWithoutRef<"div"> & {
+    isOpen: boolean;
+    onHideComplete?(): void;
+    onHideStart?(): void;
+    onShowComplete?(): void;
+    onShowStart?(): void;
+  }
+>;
 
 export default function ModalOverlay({
   children,

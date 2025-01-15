@@ -6,9 +6,9 @@ import Carousel from "../../components/Carousel";
 import CarouselImage from "../../components/CarouselImage";
 import FullImagePartial from "../../partials/FullImagePartial";
 
-export type CarouselImagesSliceProps = {
+export type CarouselImagesSliceProps = Readonly<{
   slice: CarouselImagesSliceTypeFragment;
-};
+}>;
 
 export default function CarouselImagesSlice({
   slice,

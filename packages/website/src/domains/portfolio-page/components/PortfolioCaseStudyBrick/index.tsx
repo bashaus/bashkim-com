@@ -4,9 +4,9 @@ import Link from "next/link";
 
 import * as S from "./styles";
 
-export type PortfolioCaseStudyBrickProps = {
+export type PortfolioCaseStudyBrickProps = Readonly<{
   caseStudy: Case_Study;
-};
+}>;
 
 export default function PortfolioCaseStudyBrick({
   caseStudy,

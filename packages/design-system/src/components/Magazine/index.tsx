@@ -1,4 +1,4 @@
-import { ReactNode, useCallback, useEffect, useState } from "react";
+import { PropsWithChildren, useCallback, useEffect, useState } from "react";
 
 import Turn from "../Turn";
 import { TurnDisplay } from "../Turn/types";
@@ -23,15 +23,16 @@ const RESPONSIVE =
       ]
     : [];
 
-export type MagazineProps = {
-  children: ReactNode;
-  onInitialize?(): void;
-  onSpreadChange?(event: MagazineSpreadChangeEvent): void;
-  spread: number;
-  pages: number;
-  pageWidth: number;
-  pageHeight: number;
-};
+export type MagazineProps = Readonly<
+  PropsWithChildren<{
+    onInitialize?(): void;
+    onSpreadChange?(event: MagazineSpreadChangeEvent): void;
+    spread: number;
+    pages: number;
+    pageWidth: number;
+    pageHeight: number;
+  }>
+>;
 
 export default function Magazine({
   children,

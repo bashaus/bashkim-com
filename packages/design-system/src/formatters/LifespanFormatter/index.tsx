@@ -1,9 +1,9 @@
 import DateFormatter from "../DateFormatter";
 
-export type LifespanFormatterProps = {
+export type LifespanFormatterProps = Readonly<{
   startDate: Date;
   endDate?: Date;
-};
+}>;
 
 export default function LifespanFormatter({
   startDate,

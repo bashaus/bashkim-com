@@ -21,10 +21,12 @@ export default {
   },
 } as Meta;
 
-export type TileStoryProps = Omit<TileProps, "icon" | "poster"> & {
-  icon: Array<string>;
-  poster: Array<string>;
-};
+export type TileStoryProps = Readonly<
+  Omit<TileProps, "icon" | "poster"> & {
+    icon: Array<string>;
+    poster: Array<string>;
+  }
+>;
 
 const Template: StoryFn<TileStoryProps> = ({
   icon,

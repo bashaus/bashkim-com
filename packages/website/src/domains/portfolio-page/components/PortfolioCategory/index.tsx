@@ -8,9 +8,9 @@ import { PrismicRichText } from "@bashkim-com/prismic-helpers";
 import PortfolioCaseStudyBrick from "../PortfolioCaseStudyBrick";
 import styles from "./styles.module.scss";
 
-export type PortfolioCategoryProps = {
+export type PortfolioCategoryProps = Readonly<{
   portfolioCategory: PortfolioCategorySliceTypeFragment;
-};
+}>;
 
 export default function PortfolioCategory({
   portfolioCategory,

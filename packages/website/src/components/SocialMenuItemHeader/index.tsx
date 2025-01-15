@@ -11,14 +11,14 @@ import type { ReactNode } from "react";
 
 import photoImage from "../../assets/images/photo/photo@4x.jpg";
 
-export type SocialMenuItemHeaderProps = {
+export type SocialMenuItemHeaderProps = Readonly<{
   avatarBadge: ReactNode;
   avatarBadgeBackground: string;
   avatarImage?: ReactNode;
   href: LinkProps["href"];
   textPrimary: ReactNode;
   textSecondary: ReactNode;
-};
+}>;
 
 export default function SocialMenuItemHeader({
   avatarBadge,

@@ -3,9 +3,9 @@ import { PrismicRichText } from "@bashkim-com/prismic-helpers";
 
 import FullTextPartial from "../../partials/FullTextPartial";
 
-export type FullTextSliceProps = {
+export type FullTextSliceProps = Readonly<{
   slice: FullTextSliceTypeFragment;
-};
+}>;
 
 export default function FullTextSlice({ slice }: FullTextSliceProps) {
   if (!slice.primary) {

@@ -3,7 +3,7 @@ import { ComponentPropsWithoutRef } from "react";
 
 import styles from "./styles.module.scss";
 
-export type FullImagePartialProps = ComponentPropsWithoutRef<"div">;
+export type FullImagePartialProps = Readonly<ComponentPropsWithoutRef<"div">>;
 
 export default function FullImagePartial({
   className,

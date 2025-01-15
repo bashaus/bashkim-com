@@ -5,9 +5,9 @@ import VideoPoster from "../../components/VideoPoster";
 import RichTextFormatter from "../../formatters/RichTextFormatter";
 import styles from "./styles.module.scss";
 
-export type GridVideoSliceProps = {
+export type GridVideoSliceProps = Readonly<{
   slice: GridVideoSliceTypeFragment;
-};
+}>;
 
 export default function GridVideoSlice({ slice }: GridVideoSliceProps) {
   return (

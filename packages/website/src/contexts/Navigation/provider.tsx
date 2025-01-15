@@ -1,12 +1,10 @@
-import { ReactNode, useMemo, useReducer } from "react";
+import { PropsWithChildren, useMemo, useReducer } from "react";
 
 import NavigationContext from "./context";
 import NavigationReducer from "./reducer";
 import { navigationStateInitial } from "./state";
 
-export type NavigationProviderProps = {
-  children: ReactNode;
-};
+export type NavigationProviderProps = Readonly<PropsWithChildren>;
 
 export default function NavigationProvider({
   children,

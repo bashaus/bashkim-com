@@ -14,9 +14,9 @@ import SocialMenuStateFailure from "../SocialMenuStateFailure";
 import SocialMenuStateLoading from "../SocialMenuStateLoading";
 import { useSocialMenuMediumViewModel } from "./view-model";
 
-export type SocialMenuMediumProps = {
+export type SocialMenuMediumProps = Readonly<{
   viewModel: ReturnType<typeof useSocialMenuMediumViewModel>;
-};
+}>;
 
 export default function SocialMenuMediumView({
   viewModel,

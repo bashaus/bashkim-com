@@ -1,14 +1,15 @@
-import { ReactNode } from "react";
+import { PropsWithChildren, ReactNode } from "react";
 
 import styles from "./styles.module.scss";
 
-export type PageHeaderPartialProps = {
-  aside?: ReactNode;
-  children?: ReactNode;
-  id?: string;
-  imageDesktop?: string;
-  imageMobile?: string;
-};
+export type PageHeaderPartialProps = Readonly<
+  PropsWithChildren<{
+    aside?: ReactNode;
+    id?: string;
+    imageDesktop?: string;
+    imageMobile?: string;
+  }>
+>;
 
 export default function PageHeaderPartial({
   aside,

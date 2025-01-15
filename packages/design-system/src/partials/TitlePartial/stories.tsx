@@ -24,11 +24,13 @@ export default {
   },
 } as Meta;
 
-type TitlePartialStoryProps = Omit<TitlePartialProps, "image"> & {
-  image: Array<string>;
-  title: string;
-  subtitle: string;
-};
+type TitlePartialStoryProps = Readonly<
+  Omit<TitlePartialProps, "image"> & {
+    image: Array<string>;
+    title: string;
+    subtitle: string;
+  }
+>;
 
 const Template: StoryFn<TitlePartialStoryProps> = ({
   image,

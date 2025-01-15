@@ -1,11 +1,9 @@
-import { ReactNode } from "react";
+import { PropsWithChildren } from "react";
 
 import RichTextFormatter from "../../formatters/RichTextFormatter";
 import styles from "./styles.module.scss";
 
-export type FullTextPartialProps = {
-  children?: ReactNode;
-};
+export type FullTextPartialProps = Readonly<PropsWithChildren>;
 
 export default function FullTextPartial({ children }: FullTextPartialProps) {
   return (

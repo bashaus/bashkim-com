@@ -7,9 +7,9 @@ import HomeFeatured from "../HomeFeatured";
 import HomeFooter from "../HomeFooter";
 import HomeHello from "../HomeHello";
 
-type HomePageLockupProps = {
+type HomePageLockupProps = Readonly<{
   homePage: HomePageModelFragment;
-};
+}>;
 
 export default function HomePageLockup({ homePage }: HomePageLockupProps) {
   return (

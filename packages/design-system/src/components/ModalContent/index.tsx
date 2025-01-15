@@ -4,13 +4,15 @@ import { ComponentPropsWithoutRef, useEffect, useRef } from "react";
 
 import styles from "./styles.module.scss";
 
-export type ModalContentProps = ComponentPropsWithoutRef<"div"> & {
-  onHideComplete?(): void;
-  onHideStart?(): void;
-  onShowComplete?(): void;
-  onShowStart?(): void;
-  isOpen: boolean;
-};
+export type ModalContentProps = Readonly<
+  ComponentPropsWithoutRef<"div"> & {
+    onHideComplete?(): void;
+    onHideStart?(): void;
+    onShowComplete?(): void;
+    onShowStart?(): void;
+    isOpen: boolean;
+  }
+>;
 
 export default function ModalContent({
   className,

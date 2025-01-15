@@ -1,15 +1,15 @@
-import { ReactNode } from "react";
+import { PropsWithChildren, ReactNode } from "react";
 
 import styles from "./styles.module.scss";
 
-export type CaptionedPartialProps = {
-  children: ReactNode;
-
-  /**
-   * An image, canvas, etc. which represents the figure
-   */
-  figure: ReactNode;
-};
+export type CaptionedPartialProps = Readonly<
+  PropsWithChildren<{
+    /**
+     * An image, canvas, etc. which represents the figure
+     */
+    figure: ReactNode;
+  }>
+>;
 
 export default function CaptionedPartial({
   children,

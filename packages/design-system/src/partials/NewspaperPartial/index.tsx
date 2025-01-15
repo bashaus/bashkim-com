@@ -3,7 +3,7 @@ import { ComponentPropsWithoutRef } from "react";
 
 import styles from "./styles.module.scss";
 
-export type NewspaperPartialProps = ComponentPropsWithoutRef<"div">;
+export type NewspaperPartialProps = Readonly<ComponentPropsWithoutRef<"div">>;
 
 export default function NewspaperPartial({
   className,

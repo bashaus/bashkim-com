@@ -1,19 +1,20 @@
 import IconButton from "@mui/material/IconButton";
 import Menu from "@mui/material/Menu";
 import Tooltip from "@mui/material/Tooltip";
-import type { MouseEvent, ReactNode } from "react";
+import type { MouseEvent, PropsWithChildren, ReactNode } from "react";
 import { useCallback, useId, useState } from "react";
 
-export type SocialMenuChildProps = {
+export type SocialMenuChildProps = Readonly<{
   open: boolean;
-};
+}>;
 
-export type SocialMenuProps = {
-  children: ReactNode;
-  label: ReactNode;
-  onOpen?: () => void;
-  signifierIcon: ReactNode;
-};
+export type SocialMenuProps = Readonly<
+  PropsWithChildren<{
+    label: ReactNode;
+    onOpen?: () => void;
+    signifierIcon: ReactNode;
+  }>
+>;
 
 export default function SocialMenu({
   children,

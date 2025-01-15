@@ -13,9 +13,9 @@ const MONTH_NAMES = [
   "December",
 ];
 
-export type DateFormatterProps = {
+export type DateFormatterProps = Readonly<{
   date: Date;
-};
+}>;
 
 export default function DateFormatter({ date }: DateFormatterProps) {
   const d = `${date.getDate()}`.padStart(2, "0");

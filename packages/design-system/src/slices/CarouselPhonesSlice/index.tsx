@@ -31,9 +31,9 @@ const DeviceTypeComponents: Record<
   FEATURE_PHONE: DeviceFeaturePhone,
 };
 
-export type CarouselPhonesSliceProps = {
+export type CarouselPhonesSliceProps = Readonly<{
   slice: CarouselPhonesSliceTypeFragment;
-};
+}>;
 
 export default function CarouselPhonesSlice({
   slice,

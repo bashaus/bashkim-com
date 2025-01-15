@@ -20,9 +20,11 @@ export default {
   },
 } as Meta;
 
-type SplitPartialStoryProps = Omit<SplitPartialProps, "backgroundImage"> & {
-  backgroundImage: Array<string>;
-};
+type SplitPartialStoryProps = Readonly<
+  Omit<SplitPartialProps, "backgroundImage"> & {
+    backgroundImage: Array<string>;
+  }
+>;
 
 const Template: StoryFn<SplitPartialStoryProps> = ({
   backgroundImage,

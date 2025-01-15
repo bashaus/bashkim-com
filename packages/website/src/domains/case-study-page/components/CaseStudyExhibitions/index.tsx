@@ -3,9 +3,9 @@ import type { ExhibitionSliceTypeFragment } from "@bashkim-com/prismic-dal";
 
 import styles from "./styles.module.scss";
 
-export type CaseStudyExhibitionsProps = {
+export type CaseStudyExhibitionsProps = Readonly<{
   slices: Array<ExhibitionSliceTypeFragment>;
-};
+}>;
 
 export default function CaseStudyExhibitions({
   slices = [],

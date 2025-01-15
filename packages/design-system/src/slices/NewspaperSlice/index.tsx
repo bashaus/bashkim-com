@@ -4,9 +4,9 @@ import { PrismicRichText } from "@bashkim-com/prismic-helpers";
 import RichTextFormatter from "../../formatters/RichTextFormatter";
 import NewspaperPartial from "../../partials/NewspaperPartial";
 
-export type NewspaperSliceProps = {
+export type NewspaperSliceProps = Readonly<{
   slice: NewspaperSliceTypeFragment;
-};
+}>;
 
 export default function NewspaperSlice({ slice }: NewspaperSliceProps) {
   return (

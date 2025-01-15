@@ -14,9 +14,11 @@ export default {
   },
 } as Meta;
 
-type FullImagePartialStoryProps = Omit<FullImagePartialProps, "figure"> & {
-  figure: Array<string>;
-};
+type FullImagePartialStoryProps = Readonly<
+  Omit<FullImagePartialProps, "figure"> & {
+    figure: Array<string>;
+  }
+>;
 
 const Template: StoryFn<FullImagePartialStoryProps> = ({
   figure,

@@ -2,9 +2,9 @@ import { RichTextFormatter } from "@bashkim-com/design-system";
 import * as Sentry from "@sentry/browser";
 import { useEffect } from "react";
 
-export type SentryHandlerProps = {
+export type SentryHandlerProps = Readonly<{
   error?: Error;
-};
+}>;
 
 export default function SentryHandler({ error }) {
   useEffect(() => {

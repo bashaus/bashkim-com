@@ -15,9 +15,9 @@ import SocialMenuStateFailure from "../SocialMenuStateFailure";
 import SocialMenuStateLoading from "../SocialMenuStateLoading";
 import { useSocialMenuGitHubViewModel } from "./view-model";
 
-export type SocialMenuGitHubViewProps = {
+export type SocialMenuGitHubViewProps = Readonly<{
   viewModel: ReturnType<typeof useSocialMenuGitHubViewModel>;
-};
+}>;
 
 export default function SocialMenuGitHubView({
   viewModel,

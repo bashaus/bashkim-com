@@ -3,9 +3,9 @@ import { PrismicRichText } from "@bashkim-com/prismic-helpers";
 
 import SubtitlePartial from "../../partials/SubtitlePartial";
 
-export type SubtitleSliceProps = {
+export type SubtitleSliceProps = Readonly<{
   slice: SubtitleSliceTypeFragment;
-};
+}>;
 
 export default function SubtitleSlice({ slice }: SubtitleSliceProps) {
   if (!slice.primary) {

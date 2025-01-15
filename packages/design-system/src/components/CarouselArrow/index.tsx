@@ -4,9 +4,11 @@ import { ComponentPropsWithRef } from "react";
 import styles from "./styles.module.scss";
 import { CarouselArrowDirection } from "./types";
 
-export type CarouselArrowProps = ComponentPropsWithRef<"button"> & {
-  direction: CarouselArrowDirection;
-};
+export type CarouselArrowProps = Readonly<
+  ComponentPropsWithRef<"button"> & {
+    direction: CarouselArrowDirection;
+  }
+>;
 
 export default function CarouselArrow({
   className,

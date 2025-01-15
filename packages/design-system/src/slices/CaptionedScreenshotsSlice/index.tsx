@@ -8,10 +8,10 @@ import RichTextFormatter from "../../formatters/RichTextFormatter";
 import CaptionedPartial from "../../partials/CaptionedPartial";
 import styles from "./styles.module.scss";
 
-export type CaptionedScreenshotsSliceProps = {
+export type CaptionedScreenshotsSliceProps = Readonly<{
   initialWidth?: number;
   slice: CaptionedScreenshotsSliceTypeFragment;
-};
+}>;
 
 export default function CaptionedScreenshotsSlice({
   slice,

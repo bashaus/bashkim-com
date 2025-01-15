@@ -1,21 +1,22 @@
 import classNames from "classnames";
 import JQuery from "jquery";
-import { createRef, PureComponent, ReactNode } from "react";
+import { createRef, PropsWithChildren, PureComponent } from "react";
 
 import styles from "./styles.module.scss";
 import { TurnDisplay } from "./types";
 
-export type TurnProps = {
-  center?: boolean;
-  children: ReactNode;
-  display: TurnDisplay;
-  page: number;
-  pages: number;
-  pageWidth: number;
-  pageHeight: number;
-  onInitialize?(): void;
-  onPageChange?(pageNumber: number | undefined): void;
-};
+export type TurnProps = Readonly<
+  PropsWithChildren<{
+    center?: boolean;
+    display: TurnDisplay;
+    page: number;
+    pages: number;
+    pageWidth: number;
+    pageHeight: number;
+    onInitialize?(): void;
+    onPageChange?(pageNumber: number | undefined): void;
+  }>
+>;
 
 export type TurnState = {
   isInitialized: boolean;

@@ -2,12 +2,14 @@ import { ComponentPropsWithRef, ReactNode } from "react";
 
 import styles from "./styles.module.scss";
 
-export type TileProps = ComponentPropsWithRef<"div"> & {
-  description?: string;
-  icon?: ReactNode;
-  poster?: string;
-  title?: string;
-};
+export type TileProps = Readonly<
+  ComponentPropsWithRef<"div"> & {
+    description?: string;
+    icon?: ReactNode;
+    poster?: string;
+    title?: string;
+  }
+>;
 
 export default function Tile({
   description,

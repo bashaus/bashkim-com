@@ -9,9 +9,9 @@ import Link from "next/link";
 
 import styles from "./styles.module.scss";
 
-export type PortfolioFeaturedCaseStudiesProps = {
+export type PortfolioFeaturedCaseStudiesProps = Readonly<{
   featured: Array<PortfolioPageFeaturedModelFragment>;
-};
+}>;
 
 export default function PortfolioFeaturedCaseStudies({
   featured,
