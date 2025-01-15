@@ -26,7 +26,7 @@ const promiseMachine = createMachine({
   states: {
     [PromiseMachineState.IDLE]: {
       on: {
-        [PromiseMachineEvent.FETCH]: PromiseMachineState.LOADING,
+        [PromiseMachineEvent.Fetch]: PromiseMachineState.LOADING,
       },
     },
 
@@ -54,7 +54,7 @@ const promiseMachine = createMachine({
 
     [PromiseMachineState.FAILURE]: {
       on: {
-        [PromiseMachineEvent.RETRY]: {
+        [PromiseMachineEvent.Retry]: {
           target: PromiseMachineState.LOADING,
           actions: assign({
             retries: ({ context }) => context.retries + 1,

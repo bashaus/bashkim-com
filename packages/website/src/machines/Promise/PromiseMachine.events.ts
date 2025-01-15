@@ -1,75 +1,71 @@
 export enum PromiseMachineEvent {
-  FETCH = "PromiseMachineEvent:FETCH",
-  RESOLVE = "PromiseMachineEvent:RESOLVE",
-  REJECT = "PromiseMachineEvent:REJECT",
-  RETRY = "PromiseMachineEvent:RETRY",
+  Fetch = "Fetch",
+  Resolve = "Resolve",
+  Reject = "Reject",
+  Retry = "Retry",
 }
 
-/* PromiseMachineEvent.FETCH */
+/* PromiseMachineEvent.Fetch */
 
-// eslint-disable-next-line sonarjs/redundant-type-aliases
-export type PromiseMachineFetchParamsType = unknown;
+export type PromiseMachineFetchParamsType = undefined;
 
 export type PromiseMachineFetchEventType = {
-  type: PromiseMachineEvent.FETCH;
+  type: PromiseMachineEvent.Fetch;
   params: PromiseMachineFetchParamsType;
 };
 
 export const PromiseMachineFetchEvent = (
-  params: PromiseMachineFetchParamsType = {},
+  params: PromiseMachineFetchParamsType = undefined,
 ): PromiseMachineFetchEventType => ({
-  type: PromiseMachineEvent.FETCH,
+  type: PromiseMachineEvent.Fetch,
   params,
 });
 
-/* PromiseMachineEvent.RESOLVE */
+/* PromiseMachineEvent.Resolve */
 
-// eslint-disable-next-line sonarjs/redundant-type-aliases
-export type PromiseMachineResolveParamsType = unknown;
+export type PromiseMachineResolveParamsType = undefined;
 
 export type PromiseMachineResolveEventType = {
-  type: PromiseMachineEvent.RESOLVE;
+  type: PromiseMachineEvent.Resolve;
   params: PromiseMachineResolveParamsType;
 };
 
 export const PromiseMachineResolveEvent = (
-  params: PromiseMachineResolveParamsType = {},
+  params: PromiseMachineResolveParamsType = undefined,
 ): PromiseMachineResolveEventType => ({
-  type: PromiseMachineEvent.RESOLVE,
+  type: PromiseMachineEvent.Resolve,
   params,
 });
 
-/* PromiseMachineEvent.REJECT */
+/* PromiseMachineEvent.Reject */
 
-// eslint-disable-next-line sonarjs/redundant-type-aliases
-export type PromiseMachineRejectParamsType = unknown;
+export type PromiseMachineRejectParamsType = undefined;
 
 export type PromiseMachineRejectEventType = {
-  type: PromiseMachineEvent.REJECT;
+  type: PromiseMachineEvent.Reject;
   params: PromiseMachineRejectParamsType;
 };
 
 export const PromiseMachineRejectEvent = (
-  params: PromiseMachineRejectParamsType = {},
+  params: PromiseMachineRejectParamsType = undefined,
 ): PromiseMachineRejectEventType => ({
-  type: PromiseMachineEvent.REJECT,
+  type: PromiseMachineEvent.Reject,
   params,
 });
 
-/* PromiseMachineEvent.RETRY */
+/* PromiseMachineEvent.Retry */
 
-// eslint-disable-next-line sonarjs/redundant-type-aliases
-export type PromiseMachineRetryParamsType = unknown;
+export type PromiseMachineRetryParamsType = undefined;
 
 export type PromiseMachineRetryEventType = {
-  type: PromiseMachineEvent.RETRY;
+  type: PromiseMachineEvent.Retry;
   params: PromiseMachineRetryParamsType;
 };
 
 export const PromiseMachineRetryEvent = (
-  params: PromiseMachineRetryParamsType = {},
+  params: PromiseMachineRetryParamsType = undefined,
 ): PromiseMachineRetryEventType => ({
-  type: PromiseMachineEvent.RETRY,
+  type: PromiseMachineEvent.Retry,
   params,
 });
 

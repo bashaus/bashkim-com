@@ -12,7 +12,9 @@ import SettingsProvider from "../../contexts/Settings/provider";
 import theme from "../../libraries/material-ui/theme";
 import PrismicLinkResolver from "../../libraries/prismic/PrismicLinkResolver";
 
-export default function RootLayout({ children }: PropsWithChildren) {
+export type RootLayoutProps = Readonly<PropsWithChildren>;
+
+export default function RootLayout({ children }: RootLayoutProps) {
   useEffect((): void => {
     document.documentElement.classList.add("isReady");
   }, []);

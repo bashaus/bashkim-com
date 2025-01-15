@@ -14,7 +14,9 @@ export async function generateMetadata() {
   };
 }
 
-export default async function MyLayout({ children }: PropsWithChildren) {
+export type MyLayoutProps = Readonly<PropsWithChildren>;
+
+export default async function MyLayout({ children }: MyLayoutProps) {
   return (
     <html lang="en" dir="ltr">
       <body>
