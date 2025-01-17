@@ -19,6 +19,7 @@
     "@apollo/client": "^3.11.8"
   },
   "devDependencies": {
+    "@bashkim-com/eslint": "*",
     "@graphql-codegen/cli": "^5.0.2",
     "@graphql-codegen/schema-ast": "^4.0.2",
     "@graphql-codegen/typescript": "^4.1.0",

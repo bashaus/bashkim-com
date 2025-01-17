@@ -2,16 +2,14 @@ import fetch from "node-fetch";
 
 import { StackOverflowUser } from "./types";
 
-const getStackOverflowUserData = async (): Promise<any> => {
+const getStackOverflowUserData = async () => {
   const userId = 600240;
 
   const url = new URL("https://api.stackexchange.com/");
   url.pathname = `/2.3/users/${userId}`;
   url.searchParams.append("site", "stackoverflow");
 
-  console.log(url.toString());
-
-  const response = await fetch(url.toString());
+  const response = await fetch(url.toString(), {});
   return response.json();
 };
 

@@ -1,9 +1,9 @@
 import "../libraries/sentry/init";
 
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v14-appRouter";
-import { PropsWithChildren } from "react";
+import type { PropsWithChildren, ReactNode } from "react";
 
-import RootLayout from "../layouts/RootLayout";
+import SiteLayout from "../layouts/SiteLayout";
 
 export async function generateMetadata() {
   return {
@@ -14,14 +14,24 @@ export async function generateMetadata() {
   };
 }
 
-export type MyLayoutProps = Readonly<PropsWithChildren>;
+export type RootLayoutProps = Readonly<
+  PropsWithChildren<{
+    socialModals: ReactNode;
+  }>
+>;
 
-export default async function MyLayout({ children }: MyLayoutProps) {
+export default async function RootLayout({
+  children,
+  socialModals,
+}: RootLayoutProps) {
   return (
     <html lang="en" dir="ltr">
       <body>
         <AppRouterCacheProvider>
-          <RootLayout>{children}</RootLayout>
+          <SiteLayout>
+            {children}
+            {socialModals}
+          </SiteLayout>
         </AppRouterCacheProvider>
       </body>
     </html>

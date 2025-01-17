@@ -1,22 +1,14 @@
-import { GetPinnedItemsDocument, GetPinnedItemsQuery } from "./graphql-types";
 import apolloGitHubClient from "./client";
+import { GetPinnedItemsDocument, GetPinnedItemsQuery } from "./graphql-types";
 import { GetGitHubSocialsResponse } from "./types";
 
 const getGitHubData = async () => {
-  console.log("getGitHubApiData");
+  const result = await apolloGitHubClient.query<GetPinnedItemsQuery>({
+    query: GetPinnedItemsDocument,
+    variables: {},
+  });
 
-  try {
-    const result = await apolloGitHubClient.query<GetPinnedItemsQuery>({
-      query: GetPinnedItemsDocument,
-      variables: {},
-    });
-
-    console.log("getGitHubApiData.success", result.data);
-    return result.data;
-  } catch (err) {
-    console.error("getGitHubApiData.failed", err);
-    throw err;
-  }
+  return result.data;
 };
 
 export async function getGitHubSocials(): Promise<GetGitHubSocialsResponse> {
@@ -33,7 +25,5 @@ export async function getGitHubSocials(): Promise<GetGitHubSocialsResponse> {
       url: node.url,
     }));
 
-  return {
-    pinnedItems,
-  };
+  return { pinnedItems };
 }

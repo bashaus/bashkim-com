@@ -2,8 +2,8 @@ import { PageHeaderPartial } from "@bashkim-com/design-system";
 import { Button, Typography } from "@mui/material";
 import Link from "next/link";
 
-import PortfolioVector from "../../../../assets/vectors/icons/Portfolio.svg";
-import GitHubVector from "../../../../assets/vectors/social/GitHub.svg";
+import PortfolioVector from "../../../../assets/vectors/icons/portfolio.svg";
+import GitHubVector from "../../../../assets/vectors/social/github.svg";
 import BackgroundImage from "../../assets/background-image.jpg";
 import styles from "./styles.module.scss";
 

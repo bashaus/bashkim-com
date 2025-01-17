@@ -1,5 +1,7 @@
 import createTheme from "@mui/material/styles/createTheme";
 
+import NextLinkComponent from "../link";
+
 declare module "@mui/material/Button" {
   interface ButtonPropsColorOverrides {
     currentColor: true;
@@ -14,6 +16,11 @@ declare module "@mui/material/Paper" {
 
 const theme = createTheme({
   components: {
+    MuiButtonBase: {
+      defaultProps: {
+        LinkComponent: NextLinkComponent,
+      },
+    },
     MuiButton: {
       variants: [
         {

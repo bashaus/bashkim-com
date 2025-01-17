@@ -2,7 +2,7 @@ import fetch from "node-fetch";
 
 import { StackOverflowPost, StackOverflowPostType } from "./types";
 
-const getStackOverflowPostsData = async (): Promise<any> => {
+const getStackOverflowPostsData = async () => {
   const userId = 600240;
 
   const url = new URL("https://api.stackexchange.com/");
@@ -14,9 +14,7 @@ const getStackOverflowPostsData = async (): Promise<any> => {
   url.searchParams.append("pageSize", "10");
   url.searchParams.append("filter", "!nNPvSNOTRz");
 
-  console.log(url.toString());
-
-  const response = await fetch(url.toString());
+  const response = await fetch(url.toString(), {});
   return response.json();
 };
 
@@ -25,7 +23,7 @@ export async function getStackOverflowPosts(): Promise<
 > {
   const result = await getStackOverflowPostsData();
   return result.items.map(
-    (post: any) =>
+    (post) =>
       ({
         score: post.score,
         id: post.post_id,

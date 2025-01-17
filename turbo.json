@@ -6,7 +6,8 @@
     "build": {
       "dependsOn": ["^codegen", "^build"],
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
-      "outputs": [".next/**", "!.next/cache/**"]
+      "outputs": [".next/**", "!.next/cache/**"],
+      "env": ["APP_SOCIALS_GITHUB_TOKEN"]
     },
     "codegen:deps": {
       "cache": false,
