@@ -9,7 +9,7 @@ import ListItemText from "@mui/material/ListItemText";
 import Image from "next/image";
 import type { ReactNode } from "react";
 
-import photoImage from "../../assets/images/photo/photo@4x.jpg";
+import photoImage from "../../../assets/images/photo/photo@4x.jpg";
 
 export type SocialHeaderProps = Readonly<{
   avatarBadge: ReactNode;

@@ -1,3 +1,5 @@
+"use client";
+
 import {
   StackOverflowPost,
   StackOverflowPostType,
@@ -10,7 +12,7 @@ import ListSubheader from "@mui/material/ListSubheader";
 import MenuItem from "@mui/material/MenuItem";
 import Stack from "@mui/material/Stack";
 
-import StackOverflowFilledVector from "../../assets/vectors/social/stack-overflow-filled.svg";
+import StackOverflowFilledVector from "../../../assets/vectors/social/stack-overflow-filled.svg";
 import SocialDrawer from "../SocialDrawer";
 import SocialHeader from "../SocialHeader";
 import styles from "./styles.module.scss";

@@ -1,15 +1,15 @@
-import { MediumArticle } from "@bashkim-com/socials";
-import Divider from "@mui/material/Divider";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import ListSubheader from "@mui/material/ListSubheader";
-import MenuItem from "@mui/material/MenuItem";
-import Stack from "@mui/material/Stack";
+"use client";
 
-import MediumClapVector from "../../assets/vectors/icons/medium-clap.svg";
-import MediumVector from "../../assets/vectors/social/medium.svg";
+import { MediumArticle } from "@bashkim-com/socials";
+import { Stack } from "@mui/material";
+import Divider from "@mui/material/Divider";
+import ListSubheader from "@mui/material/ListSubheader";
+
+import MediumVector from "../../../assets/vectors/social/medium.svg";
 import SocialDrawer from "../SocialDrawer";
 import SocialHeader from "../SocialHeader";
+import SocialMediumMultiPartArticle from "../SocialMediumMultiPartArticle";
+import SocialMediumSingleArticle from "../SocialMediumSingleArticle";
 
 export type SocialModalMediumProps = Readonly<{
   articles: Array<MediumArticle>;
@@ -40,22 +40,15 @@ export default function SocialModalMedium({
       <ListSubheader>Recent articles</ListSubheader>
 
       {articles.map((article) => (
-        <MenuItem
-          key={article.title}
-          component="a"
-          href={article.url}
-          target="_blank"
-          style={{ alignItems: "flex-start" }}
-        >
-          <ListItemIcon>
-            <Stack alignItems="center" justifyContent="center">
-              <MediumClapVector width={24} height={24} />
-              <div>{article.claps}</div>
-            </Stack>
-          </ListItemIcon>
+        <Stack key={article.title}>
+          {article.links.length === 1 && (
+            <SocialMediumSingleArticle article={article} />
+          )}
 
-          <ListItemText primary="Article" secondary={article.title} />
-        </MenuItem>
+          {article.links.length !== 1 && (
+            <SocialMediumMultiPartArticle article={article} />
+          )}
+        </Stack>
       ))}
     </SocialDrawer>
   );

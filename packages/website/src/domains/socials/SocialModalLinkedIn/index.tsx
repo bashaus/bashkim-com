@@ -1,6 +1,6 @@
 "use client";
 
-import LinkedInVector from "../../assets/vectors/social/linked-in.svg";
+import LinkedInVector from "../../../assets/vectors/social/linked-in.svg";
 import SocialDrawer from "../SocialDrawer";
 import SocialHeader from "../SocialHeader";
 

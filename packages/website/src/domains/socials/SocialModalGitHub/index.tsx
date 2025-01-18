@@ -1,3 +1,5 @@
+"use client";
+
 import { GitHubPinnedItem } from "@bashkim-com/socials";
 import Chip from "@mui/material/Chip";
 import Divider from "@mui/material/Divider";
@@ -7,8 +9,8 @@ import ListSubheader from "@mui/material/ListSubheader";
 import MenuItem from "@mui/material/MenuItem";
 import Stack from "@mui/material/Stack";
 
-import GitHubRepo from "../../assets/vectors/icons/github-repo.svg";
-import GitHubVector from "../../assets/vectors/social/github.svg";
+import GitHubRepo from "../../../assets/vectors/icons/github-repo.svg";
+import GitHubVector from "../../../assets/vectors/social/github.svg";
 import SocialDrawer from "../SocialDrawer";
 import SocialHeader from "../SocialHeader";
 

@@ -1,6 +1,6 @@
 import { getGitHubSocials } from "@bashkim-com/socials";
 
-import SocialModalGitHub from "../../../../components/SocialModalGitHub";
+import SocialModalGitHub from "../../../../domains/socials/SocialModalGitHub";
 
 export const dynamic = "force-dynamic";
 
