@@ -10,7 +10,7 @@ export async function getMediumSocials(): Promise<GetMediumSocialsResponse> {
           "If you’ve ever been on Unsplash or Instagram’s desktop website, you may notice that depending on the context of your visiting you will receive a different user experience when enlarging a photo. This article walks you through the process to implement this design pattern in Next.js.",
         links: [
           {
-            url: "https://medium.com/@bashaus/1-5-profiling-and-logging-microservices-using-opentelemetry-and-aws-x-ray-669bc7755462",
+            url: "https://medium.com/@bashaus/using-modals-in-next-js-with-parallel-routes-slots-route-groups-and-interceptors-0873e173c96d",
             title:
               "Using modals in Next.js with parallel routes (slots), route groups and interceptors",
           },
@@ -19,7 +19,8 @@ export async function getMediumSocials(): Promise<GetMediumSocialsResponse> {
       {
         title:
           "Managing environment variables in Azure Kubernetes Service (AKS)",
-        subtitle: "",
+        subtitle:
+          "A key principle of the Twelve-Factor App is the strict separation of config from code. Using Azure Kubernetes Service (AKS), environment variables can be retrieved from Azure App Configuration or Key Vault (or both).",
         links: [
           {
             title:
@@ -47,7 +48,8 @@ export async function getMediumSocials(): Promise<GetMediumSocialsResponse> {
       {
         title:
           "Profiling and logging microservices using OpenTelemetry and AWS X-Ray",
-        subtitle: "",
+        subtitle:
+          "Introducing OpenTelemetry to profile an application to better understand application performance/bottlenecks and provide a unified approach to debugging distributed microservices.",
         links: [
           {
             title:
@@ -75,7 +77,8 @@ export async function getMediumSocials(): Promise<GetMediumSocialsResponse> {
       },
       {
         title: "Validating a person’s name from user input",
-        subtitle: "",
+        subtitle:
+          "Bill Shakespeare (or was it William?) once famously wrote “What’s in a name? That which we call a rose by any other name would smell as sweet.”",
         links: [
           {
             title: "Validating a person’s name from user input",
