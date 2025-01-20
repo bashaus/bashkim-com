@@ -6,7 +6,6 @@ import { LinkResolverContext } from "@bashkim-com/prismic-helpers";
 import ThemeProvider from "@mui/material/styles/ThemeProvider";
 import type { PropsWithChildren } from "react";
 
-import GoogleAnalytics from "../../components/GoogleAnalytics";
 import NavigationProvider from "../../contexts/Navigation/provider";
 import SettingsProvider from "../../contexts/Settings/provider";
 import theme from "../../libraries/material-ui/theme";
@@ -19,11 +18,7 @@ export default function SiteLayout({ children }: SiteLayoutProps) {
     <SettingsProvider>
       <ThemeProvider theme={theme}>
         <LinkResolverContext.Provider value={PrismicLinkResolver}>
-          <NavigationProvider>
-            {children}
-
-            <GoogleAnalytics />
-          </NavigationProvider>
+          <NavigationProvider>{children}</NavigationProvider>
         </LinkResolverContext.Provider>
       </ThemeProvider>
     </SettingsProvider>

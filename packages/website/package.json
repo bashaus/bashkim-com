@@ -22,7 +22,7 @@
     "@mui/icons-material": "^6.1.3",
     "@mui/material": "^6.1.3",
     "@mui/material-nextjs": "^6.1.3",
-    "@sentry/browser": "7.119.1",
+    "@next/third-parties": "^15.1.5",
     "apollo-link-prismic": "^1.1.2",
     "client-only": "^0.0.1",
     "next": "^15.1.2",
