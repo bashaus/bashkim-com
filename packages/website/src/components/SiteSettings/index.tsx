@@ -1,10 +1,14 @@
-import { MenuButton, Modal, ModalFrame } from "@bashkim-com/design-system";
-import CheckIcon from "@mui/icons-material/Check";
+import CloseIcon from "@mui/icons-material/Close";
+import { List, ListItem, ListItemIcon, ListItemText } from "@mui/material";
+import Button from "@mui/material/Button";
+import Dialog from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
+import DialogTitle from "@mui/material/DialogTitle";
 import { ComponentPropsWithoutRef } from "react";
 
 import SiteSettingsAppearance from "../SiteSettingsAppearance";
 import SiteSettingsGridLines from "../SiteSettingsGridLines";
-import styles from "./styles.module.scss";
 
 export type SiteSettingsProps = Readonly<{
   isVisible: boolean;
@@ -16,41 +20,35 @@ export default function SiteSettings({
   onClose,
 }: SiteSettingsProps) {
   return (
-    <Modal
-      isOpen={isVisible}
-      onRequestClose={onClose}
-      contentLabel="Site settings"
-    >
-      <ModalFrame>
-        <div className={styles["SiteSettings"]}>
-          <div className={styles["Header"]}>
-            <div className={styles["HeaderText"]}>Site settings</div>
-            <MenuButton onClick={onClose}>
-              <CheckIcon sx={{ width: 16, height: 16 }} />
-            </MenuButton>
-          </div>
+    <Dialog open={isVisible} onClose={onClose} maxWidth="sm" fullWidth>
+      <DialogTitle>Site settings</DialogTitle>
 
-          <div
-            className={styles["ListItem"]}
-            data-test-id="SiteSettings.Appearance"
-          >
-            <div className={styles["ListItemLabel"]}>Appearance</div>
-            <div className={styles["ListItemIcon"]}>
+      <DialogContent dividers sx={{ px: 1, py: 0 }}>
+        <List>
+          <ListItem>
+            <ListItemText primary="Appearance" />
+            <ListItemIcon>
               <SiteSettingsAppearance />
-            </div>
-          </div>
+            </ListItemIcon>
+          </ListItem>
 
-          <div
-            className={styles["ListItem"]}
-            data-test-id="SiteSettings.GridLines"
-          >
-            <div className={styles["ListItemLabel"]}>Grid lines</div>
-            <div>
+          <ListItem>
+            <ListItemText primary="Grid lines" />
+            <ListItemIcon>
               <SiteSettingsGridLines />
-            </div>
-          </div>
-        </div>
-      </ModalFrame>
-    </Modal>
+            </ListItemIcon>
+          </ListItem>
+        </List>
+      </DialogContent>
+
+      <DialogActions>
+        <Button
+          onClick={onClose}
+          startIcon={<CloseIcon sx={{ width: 16, height: 16 }} />}
+        >
+          Close
+        </Button>
+      </DialogActions>
+    </Dialog>
   );
 }

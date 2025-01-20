@@ -1,23 +1,4 @@
-@import "~@bashkim-com/style-guide/colors.scss";
 @import "~@bashkim-com/style-guide/grid.scss";
-@import "~@bashkim-com/style-guide/headings.scss";
-
-.SiteSettings {
-  width: 320px;
-  max-width: calc(100vw - 40px);
-}
-
-.Header {
-  display: flex;
-  border-bottom: solid 1px $design-box-border-color;
-  align-items: center;
-}
-
-.HeaderText {
-  @include grid-full-padding($sides: left right);
-  @extend %heading-3;
-  flex: 1;
-}
 
 .ListItem {
   @include grid-container-padding();

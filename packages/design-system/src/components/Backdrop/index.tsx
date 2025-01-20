@@ -1,38 +1,29 @@
-import classNames from "classnames";
+import MuiBackdrop, {
+  BackdropProps as MuiBackdropProps,
+} from "@mui/material/Backdrop";
 import { gsap } from "gsap";
-import { ComponentPropsWithoutRef, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 
 import styles from "./styles.module.scss";
 
-export type ModalOverlayProps = Readonly<
-  ComponentPropsWithoutRef<"div"> & {
-    isOpen: boolean;
-    onHideComplete?(): void;
-    onHideStart?(): void;
-    onShowComplete?(): void;
-    onShowStart?(): void;
-  }
->;
+export type BackdropProps = Readonly<MuiBackdropProps>;
 
-export default function ModalOverlay({
+export default function Backdrop({
   children,
-  className,
-  isOpen,
-  onHideComplete,
-  onHideStart,
-  onShowComplete,
-  onShowStart,
+  open,
+  onTransitionStart,
+  onTransitionEnd,
   ...props
-}: ModalOverlayProps) {
+}: BackdropProps) {
   const svgRef = useRef<SVGPathElement>(null);
 
   // wait until DOM has been rendered
   useEffect(() => {
-    if (isOpen) {
+    if (open) {
       gsap
         .timeline({
-          onStart: () => onShowStart?.(),
-          onComplete: () => onShowComplete?.(),
+          onStart: onTransitionStart,
+          onComplete: onTransitionEnd,
         })
         .set(svgRef.current, {
           attr: { d: "M 0 100 V 100 Q 50 100 100 100 V 100 z" },
@@ -40,7 +31,7 @@ export default function ModalOverlay({
         .to(
           svgRef.current,
           {
-            duration: 0.5,
+            duration: 0.3,
             ease: "power4.in",
             attr: { d: "M 0 100 V 50 Q 50 0 100 50 V 100 z" },
           },
@@ -53,17 +44,17 @@ export default function ModalOverlay({
         });
     }
 
-    if (!isOpen) {
+    if (!open) {
       gsap
         .timeline({
-          onStart: () => onHideStart?.(),
-          onComplete: () => onHideComplete?.(),
+          onStart: onTransitionStart,
+          onComplete: onTransitionEnd,
         })
         .set(svgRef.current, {
           attr: { d: "M 0 100 V 0 Q 50 0 100 0 V 100 z" },
         })
         .to(svgRef.current, {
-          duration: 0.8,
+          duration: 0.3,
           ease: "power4.in",
           attr: { d: "M 0 100 V 50 Q 50 0 100 50 V 100 z" },
         })
@@ -73,10 +64,10 @@ export default function ModalOverlay({
           attr: { d: "M 0 100 V 100 Q 50 100 100 100 V 100 z" },
         });
     }
-  }, [isOpen, onHideComplete, onHideStart, onShowComplete, onShowStart]);
+  }, [open]);
 
   return (
-    <div className={classNames(className, styles["ModalOverlay"])} {...props}>
+    <MuiBackdrop open={open} {...props} sx={{ backgroundColor: "transparent" }}>
       <svg
         className={styles["SvgContainer"]}
         viewBox="0 0 100 100"
@@ -89,7 +80,8 @@ export default function ModalOverlay({
           fill="rgba(0, 0, 0, .8)"
         />
       </svg>
+
       {children}
-    </div>
+    </MuiBackdrop>
   );
 }

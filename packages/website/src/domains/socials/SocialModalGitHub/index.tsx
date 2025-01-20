@@ -7,7 +7,6 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import ListSubheader from "@mui/material/ListSubheader";
 import MenuItem from "@mui/material/MenuItem";
-import Stack from "@mui/material/Stack";
 
 import GitHubRepo from "../../../assets/vectors/icons/github-repo.svg";
 import GitHubVector from "../../../assets/vectors/social/github.svg";
@@ -54,7 +53,7 @@ export default function SocialModalGitHub({
 
           <ListItemText
             primary={
-              <Stack direction="row" spacing={1}>
+              <>
                 <span>{item.name}</span>
 
                 {item.name === "bashkim-com" && (
@@ -62,14 +61,15 @@ export default function SocialModalGitHub({
                     label="This site"
                     color="primary"
                     size="small"
-                    style={{
+                    sx={{
                       pointerEvents: "none",
                       textTransform: "uppercase",
                       fontSize: "60%",
+                      marginLeft: 1,
                     }}
                   />
                 )}
-              </Stack>
+              </>
             }
             secondary={item.description}
           />

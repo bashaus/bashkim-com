@@ -6,11 +6,11 @@ import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
 import { PropsWithChildren } from "react";
 
-import { useSocialDrawerViewModal } from "./view-model";
+import { useSocialDrawerViewModel } from "./view-model";
 
 export type SocialDrawerViewProps = Readonly<
   PropsWithChildren<{
-    viewModel: ReturnType<typeof useSocialDrawerViewModal>;
+    viewModel: ReturnType<typeof useSocialDrawerViewModel>;
   }>
 >;
 
@@ -20,17 +20,13 @@ export default function SocialDrawerView({
 }: SocialDrawerViewProps) {
   const { open, handleClose, handleExited } = viewModel;
   return (
-    <Drawer
-      open={open}
-      onClose={handleClose}
-      onTransitionExited={handleExited}
-      anchor="right"
-    >
+    <Drawer open={open} onClose={handleClose} onTransitionExited={handleExited}>
       <Box flex="1" overflow="scroll">
         <Box sx={{ width: 350, maxWidth: "100%" }}>{children}</Box>
       </Box>
 
       <Divider />
+
       <DialogActions>
         <Button startIcon={<CloseIcon />} onClick={handleClose}>
           Close

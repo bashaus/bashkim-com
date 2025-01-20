@@ -1,7 +1,7 @@
 import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
 
-export const useSocialDrawerViewModal = () => {
+export const useSocialDrawerViewModel = () => {
   const [open, setOpen] = useState(false);
   const router = useRouter();
 

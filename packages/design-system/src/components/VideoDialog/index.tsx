@@ -1,22 +1,22 @@
 import CloseIcon from "@mui/icons-material/Close";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import StopIcon from "@mui/icons-material/Stop";
-import { useCallback, useRef, useState } from "react";
+import Dialog, { DialogProps } from "@mui/material/Dialog";
+import { MouseEventHandler, useCallback, useRef, useState } from "react";
 import ReactPlayer, { ReactPlayerProps } from "react-player/lazy";
 
-import Modal, { ModalProps } from "../Modal";
 import styles from "./styles.module.scss";
 
-export type VideoModalProps = Readonly<{
+export type VideoDialogProps = Readonly<{
   /**
-   * Whether or not to display the video modal
+   * Whether or not to display the video dialog
    */
-  isOpen: boolean;
+  open: boolean;
 
   /**
-   * Called when the modal is requested to be closed
+   * Called when the dialog is requested to be closed
    */
-  onRequestClose: ModalProps["onRequestClose"];
+  onClose: DialogProps["onClose"];
 
   /**
    * The URL of the video to be embedded
@@ -24,14 +24,17 @@ export type VideoModalProps = Readonly<{
   url: string;
 }>;
 
-export default function VideoModal({
-  isOpen,
-  onRequestClose,
-  url,
-}: VideoModalProps) {
+export default function VideoDialog({ open, onClose, url }: VideoDialogProps) {
   const playerRef = useRef(null);
 
   const [playing, setPlaying] = useState<ReactPlayerProps["playing"]>(false);
+
+  const handleClose: MouseEventHandler<HTMLButtonElement> = useCallback(
+    (event) => {
+      onClose?.(event, "backdropClick");
+    },
+    [onClose],
+  );
 
   const handlePlayerPlay = useCallback(() => {
     setPlaying(true);
@@ -47,7 +50,7 @@ export default function VideoModal({
   }, [playing]);
 
   return (
-    <Modal isOpen={isOpen} onRequestClose={onRequestClose}>
+    <Dialog open={open} onClose={onClose}>
       <div className={styles["VideoFrame"]}>
         <ReactPlayer
           config={{
@@ -91,7 +94,7 @@ export default function VideoModal({
           )}
         </button>
 
-        <button className={styles["ControlButton"]} onClick={onRequestClose}>
+        <button className={styles["ControlButton"]} onClick={handleClose}>
           <CloseIcon
             className={styles["CloseIcon"]}
             aria-label="Stop and close video"
@@ -104,6 +107,6 @@ export default function VideoModal({
       {/* onClickPreview?: (event: any) => void */}
       {/* onError?: (error: any, data?: any, hlsInstance?: any, hlsGlobal?: any) => void */}
       {/* onSeek?: (seconds: number) => void */}
-    </Modal>
+    </Dialog>
   );
 }

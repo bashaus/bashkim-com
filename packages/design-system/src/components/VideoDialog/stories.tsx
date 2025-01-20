@@ -1,10 +1,10 @@
 import type { Meta } from "@storybook/react";
 
-import VideoModalComponent from ".";
+import VideoDialogComponent from ".";
 
 export default {
-  component: VideoModalComponent,
-  title: "Components/Video Modal",
+  component: VideoDialogComponent,
+  title: "Components/Video Dialog",
   args: {
     isOpen: true,
     url: "https://youtu.be/aqz-KE-bpKQ",
@@ -14,4 +14,4 @@ export default {
   },
 } as Meta;
 
-export const VideoModal = {};
+export const VideoDialog = {};

@@ -1,42 +1,23 @@
-import { Appearance } from "./types";
-
 export enum SettingsAction {
-  SET_APPEARANCE = "SettingsAction.SET_APPEARANCE",
-  TOGGLE_APPEARANCE = "SettingsAction.TOGGLE_APPEARANCE",
-  TOGGLE_GRID_LINES = "SettingsAction.TOGGLE_GRID_LINES",
+  SetGridLines = "SettingsAction.SET_GRID_LINES",
+  ToggleGridLines = "SettingsAction.TOGGLE_GRID_LINES",
 }
 
-/* SettingsActionSetAppearance */
+/* SettingsActionSetGridLines */
 
-export type SettingsActionSetAppearancePayloadType = {
-  appearance: Appearance;
+export type SettingsActionSetGridLinesPayloadType = {
+  visible: boolean;
 };
 
-export type SettingsActionSetAppearanceType = {
-  type: SettingsAction.SET_APPEARANCE;
-  payload: SettingsActionSetAppearancePayloadType;
+export type SettingsActionSetGridLinesType = {
+  type: SettingsAction.SetGridLines;
+  payload: SettingsActionSetGridLinesPayloadType;
 };
 
-export const SettingsActionSetAppearance = (
-  payload: SettingsActionSetAppearancePayloadType,
-): SettingsActionSetAppearanceType => ({
-  type: SettingsAction.SET_APPEARANCE,
-  payload,
-});
-
-/* SettingsActionToggleAppearance */
-
-export type SettingsActionToggleAppearancePayloadType = Record<string, never>;
-
-export type SettingsActionToggleAppearanceType = {
-  type: SettingsAction.TOGGLE_APPEARANCE;
-  payload: SettingsActionToggleAppearancePayloadType;
-};
-
-export const SettingsActionToggleAppearance = (
-  payload: SettingsActionToggleAppearancePayloadType = {},
-): SettingsActionToggleAppearanceType => ({
-  type: SettingsAction.TOGGLE_APPEARANCE,
+export const SettingsActionSetGridLines = (
+  payload: SettingsActionSetGridLinesPayloadType,
+): SettingsActionSetGridLinesType => ({
+  type: SettingsAction.SetGridLines,
   payload,
 });
 
@@ -45,20 +26,19 @@ export const SettingsActionToggleAppearance = (
 export type SettingsActionToggleGridLinesPayloadType = Record<string, never>;
 
 export type SettingsActionToggleGridLinesType = {
-  type: SettingsAction.TOGGLE_GRID_LINES;
+  type: SettingsAction.ToggleGridLines;
   payload: SettingsActionToggleGridLinesPayloadType;
 };
 
 export const SettingsActionToggleGridLines = (
   payload: SettingsActionToggleGridLinesPayloadType = {},
 ): SettingsActionToggleGridLinesType => ({
-  type: SettingsAction.TOGGLE_GRID_LINES,
+  type: SettingsAction.ToggleGridLines,
   payload,
 });
 
 /* */
 
 export type SettingsActionType =
-  | SettingsActionSetAppearanceType
-  | SettingsActionToggleAppearanceType
+  | SettingsActionSetGridLinesType
   | SettingsActionToggleGridLinesType;

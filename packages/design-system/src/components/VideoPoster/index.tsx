@@ -1,6 +1,6 @@
 import { ComponentPropsWithoutRef, useCallback, useState } from "react";
 
-import VideoModal from "../VideoModal";
+import VideoDialog from "../VideoDialog";
 import styles from "./styles.module.scss";
 
 export type VideoPosterProps = Readonly<
@@ -26,7 +26,7 @@ export type VideoPosterProps = Readonly<
     height?: number;
 
     /**
-     * The URL of the video to display in a modal
+     * The URL of the video to display in a dialog
      */
     videoUrl: string;
   }
@@ -42,11 +42,11 @@ export default function VideoPoster({
 }: VideoPosterProps) {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
-  const handleModalOpen = useCallback(() => {
+  const handleDialogOpen = useCallback(() => {
     setIsOpen(true);
   }, []);
 
-  const handleModalClose = useCallback(() => {
+  const handleDialogClose = useCallback(() => {
     setIsOpen(false);
   }, []);
 
@@ -58,15 +58,11 @@ export default function VideoPoster({
         alt={title}
         width={width && height ? width : undefined}
         height={width && height ? height : undefined}
-        onClick={handleModalOpen}
-        onKeyUp={handleModalOpen}
+        onClick={handleDialogOpen}
+        onKeyUp={handleDialogOpen}
       />
 
-      <VideoModal
-        isOpen={isOpen}
-        onRequestClose={handleModalClose}
-        url={videoUrl}
-      />
+      <VideoDialog open={isOpen} onClose={handleDialogClose} url={videoUrl} />
     </div>
   );
 }

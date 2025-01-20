@@ -1,4 +1,5 @@
 /* Components */
+export { default as Backdrop } from "./components/Backdrop";
 export { default as Carousel } from "./components/Carousel";
 export { default as CarouselImage } from "./components/CarouselImage";
 export { default as DeviceFeaturePhone } from "./components/DeviceFeaturePhone";
@@ -7,13 +8,10 @@ export { default as Logo } from "./components/Logo";
 export { default as Magazine } from "./components/Magazine";
 export type { MagazineSpreadChangeEvent } from "./components/Magazine/types";
 export { default as MenuButton } from "./components/MenuButton";
-export { default as Modal } from "./components/Modal";
-export { default as ModalFrame } from "./components/ModalFrame";
-export { default as Switch } from "./components/Switch";
 export { default as Tile } from "./components/Tile";
 export { default as Turn } from "./components/Turn";
 export { TurnDisplay } from "./components/Turn/types";
-export { default as VideoModal } from "./components/VideoModal";
+export { default as VideoDialog } from "./components/VideoDialog";
 export { default as VideoPlayer } from "./components/VideoPlayer";
 
 /* Formatters */

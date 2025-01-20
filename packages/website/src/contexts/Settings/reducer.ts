@@ -1,34 +1,25 @@
 import { SettingsAction, SettingsActionType } from "./actions";
 import { SettingsState } from "./state";
-import { Appearance } from "./types";
 
 export default function SettingsReducer(
   state: SettingsState,
   action: SettingsActionType,
 ): SettingsState {
   switch (action.type) {
-    case SettingsAction.SET_APPEARANCE: {
+    case SettingsAction.SetGridLines: {
       return {
         ...state,
-        appearance: action.payload.appearance,
+        isGridLinesVisible: action.payload.visible,
       };
     }
 
-    case SettingsAction.TOGGLE_APPEARANCE: {
-      return {
-        ...state,
-        appearance:
-          state.appearance === Appearance.DARK
-            ? Appearance.LIGHT
-            : Appearance.DARK,
-      };
-    }
-
-    case SettingsAction.TOGGLE_GRID_LINES: {
+    case SettingsAction.ToggleGridLines: {
       return {
         ...state,
         isGridLinesVisible: !state.isGridLinesVisible,
       };
     }
   }
+
+  return state;
 }

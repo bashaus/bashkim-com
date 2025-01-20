@@ -3,11 +3,11 @@
 import { PropsWithChildren } from "react";
 
 import SocialDrawerView from "./view";
-import { useSocialDrawerViewModal } from "./view-model";
+import { useSocialDrawerViewModel } from "./view-model";
 
 export type SocialDrawerProps = PropsWithChildren;
 
 export default function SocialDrawer({ children }: SocialDrawerProps) {
-  const viewModel = useSocialDrawerViewModal();
+  const viewModel = useSocialDrawerViewModel();
   return <SocialDrawerView viewModel={viewModel}>{children}</SocialDrawerView>;
 }
