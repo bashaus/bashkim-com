@@ -14,6 +14,7 @@
     "@bashkim-com/prismic-fixtures": "*",
     "@bashkim-com/prismic-helpers": "*",
     "@bashkim-com/style-guide": "*",
+    "@mui/material": "^6.1.3",
     "classnames": "^2.5.1",
     "gsap": "^3.12.5",
     "placeholder-image-data-url-svg": "^0.0.1",
