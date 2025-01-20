@@ -3,7 +3,7 @@ import {
   getStackOverflowUser,
 } from "@bashkim-com/socials";
 
-import SocialModalStackOverflow from "../../../../domains/socials-stack-overflow/SocialModalStackOverflow";
+import SocialStackOverflow from "../../../../domains/socials-stack-overflow/SocialStackOverflow";
 
 export const dynamic = "force-dynamic";
 
@@ -13,5 +13,5 @@ export default async function SocialModalsSlotStackOverflow() {
     getStackOverflowPosts(),
   ]);
 
-  return <SocialModalStackOverflow user={user} posts={posts} />;
+  return <SocialStackOverflow user={user} posts={posts} />;
 }

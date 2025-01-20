@@ -1,7 +1,6 @@
 "use client";
 
 import { GitHubPinnedItem } from "@bashkim-com/socials";
-import { Typography } from "@mui/material";
 import Chip from "@mui/material/Chip";
 import Divider from "@mui/material/Divider";
 import ListItemIcon from "@mui/material/ListItemIcon";
@@ -10,25 +9,16 @@ import ListSubheader from "@mui/material/ListSubheader";
 import MenuItem from "@mui/material/MenuItem";
 
 import GitHubRepo from "../../../assets/vectors/icons/github-repo.svg";
-import GitHubVector from "../../../assets/vectors/social/github.svg";
-import SocialHeader from "../../socials/SocialHeader";
+import SocialGitHubHeader from "../SocialGitHubHeader";
 
-export type SocialModalGitHubProps = Readonly<{
+export type SocialGitHubProps = Readonly<{
   pinnedItems: Array<GitHubPinnedItem>;
 }>;
 
-export default function SocialModalGitHub({
-  pinnedItems,
-}: SocialModalGitHubProps) {
+export default function SocialGitHub({ pinnedItems }: SocialGitHubProps) {
   return (
     <>
-      <SocialHeader
-        href="https://github.com/bashaus/"
-        avatarBadgeBackground="#333"
-        avatarBadge={<GitHubVector width={15} height={15} color="#FFFFF" />}
-        textPrimary="@bashaus"
-        textSecondary="View profile on GitHub"
-      />
+      <SocialGitHubHeader />
 
       <Divider />
       <ListSubheader>Pinned items</ListSubheader>

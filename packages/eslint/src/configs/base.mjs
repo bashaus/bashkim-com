@@ -1,6 +1,7 @@
 import { fixupConfigRules } from "@eslint/compat";
 import { FlatCompat } from "@eslint/eslintrc";
 import jestPlugin from "eslint-plugin-jest";
+import muiPathImportsPlugin from "eslint-plugin-mui-path-imports";
 import prettierPlugin from "eslint-plugin-prettier/recommended";
 import promisePlugin from "eslint-plugin-promise";
 import simpleImportSortPlugin from "eslint-plugin-simple-import-sort";
@@ -48,6 +49,17 @@ export default tseslint.config(
     rules: {
       "simple-import-sort/imports": "error",
       "simple-import-sort/exports": "error",
+    },
+  },
+
+  /* */
+
+  {
+    plugins: {
+      "mui-path-imports": muiPathImportsPlugin,
+    },
+    rules: {
+      "mui-path-imports/mui-path-imports": "error",
     },
   },
 

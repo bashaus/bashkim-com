@@ -3,12 +3,12 @@ import DialogContent from "@mui/material/DialogContent";
 import Divider from "@mui/material/Divider";
 import ListSubheader from "@mui/material/ListSubheader";
 
-import SocialMediumHeader from "../SocialMediumHeader";
+import SocialGitHubHeader from "../SocialGitHubHeader";
 
-export default function SocialModalMediumLoading() {
+export default function SocialGitHubLoading() {
   return (
     <>
-      <SocialMediumHeader />
+      <SocialGitHubHeader />
 
       <Divider />
       <ListSubheader>Loading profile</ListSubheader>

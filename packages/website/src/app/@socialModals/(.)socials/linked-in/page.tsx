@@ -1,7 +1,7 @@
-import SocialModalLinkedIn from "../../../../domains/socials-linked-in/SocialModalLinkedIn";
+import SocialLinkedIn from "../../../../domains/socials-linked-in/SocialLinkedIn";
 
 export const dynamic = "force-dynamic";
 
 export default async function SocialModalsSlotLinkedIn() {
-  return <SocialModalLinkedIn />;
+  return <SocialLinkedIn />;
 }

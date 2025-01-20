@@ -3,7 +3,7 @@
 import LinkedInVector from "../../../assets/vectors/social/linked-in.svg";
 import SocialHeader from "../../socials/SocialHeader";
 
-export default function SocialHeaderLinkedIn() {
+export default function SocialLinkedInHeader() {
   return (
     <SocialHeader
       href="https://www.linkedin.com/in/bashaus/"

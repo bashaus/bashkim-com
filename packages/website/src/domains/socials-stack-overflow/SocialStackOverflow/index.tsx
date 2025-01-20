@@ -16,15 +16,15 @@ import StackOverflowFilledVector from "../../../assets/vectors/social/stack-over
 import SocialHeader from "../../socials/SocialHeader";
 import styles from "./styles.module.scss";
 
-export type SocialModalStackOverflowProps = Readonly<{
+export type SocialStackOverflowProps = Readonly<{
   user: StackOverflowUser;
   posts: Array<StackOverflowPost>;
 }>;
 
-export default function SocialModalStackOverflow({
+export default function SocialStackOverflow({
   user,
   posts,
-}: SocialModalStackOverflowProps) {
+}: SocialStackOverflowProps) {
   return (
     <>
       <SocialHeader

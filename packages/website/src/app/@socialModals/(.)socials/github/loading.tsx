@@ -1,5 +1,5 @@
-import SocialModalGithubLoading from "../../../../domains/socials-github/SocialModalGithubLoading";
+import SocialGitHubLoading from "../../../../domains/socials-github/SocialGitHubLoading";
 
 export default function SocialModalsSlotGitHubLoading() {
-  return <SocialModalGithubLoading />;
+  return <SocialGitHubLoading />;
 }

@@ -6,7 +6,7 @@ import ListSubheader from "@mui/material/ListSubheader";
 import StackOverflowFilledVector from "../../../assets/vectors/social/stack-overflow-filled.svg";
 import SocialHeader from "../../socials/SocialHeader";
 
-export default function SocialModalStackOverflowLoading() {
+export default function SocialStackOverflowLoading() {
   return (
     <>
       <SocialHeader

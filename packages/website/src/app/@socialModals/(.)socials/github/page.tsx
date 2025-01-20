@@ -1,10 +1,10 @@
 import { getGitHubSocials } from "@bashkim-com/socials";
 
-import SocialModalGitHub from "../../../../domains/socials-github/SocialModalGitHub";
+import SocialGitHub from "../../../../domains/socials-github/SocialGitHub";
 
 export const dynamic = "force-dynamic";
 
 export default async function SocialModalsSlotGitHub() {
   const { pinnedItems } = await getGitHubSocials();
-  return <SocialModalGitHub pinnedItems={pinnedItems} />;
+  return <SocialGitHub pinnedItems={pinnedItems} />;
 }

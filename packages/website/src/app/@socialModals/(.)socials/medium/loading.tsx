@@ -1,5 +1,5 @@
-import SocialModalMediumLoading from "../../../../domains/socials-medium/SocialModalMediumLoading";
+import SocialMediumLoading from "../../../../domains/socials-medium/SocialMediumLoading";
 
 export default function SocialModalsSlotMediumLoading() {
-  return <SocialModalMediumLoading />;
+  return <SocialMediumLoading />;
 }

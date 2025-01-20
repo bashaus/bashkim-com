@@ -1,5 +1,5 @@
-import SocialModalStackOverflowLoading from "../../../../domains/socials-stack-overflow/SocialModalStackOverflowLoading";
+import SocialStackOverflowLoading from "../../../../domains/socials-stack-overflow/SocialStackOverflowLoading";
 
 export default function SocialModalsSlotStackOverflowLoading() {
-  return <SocialModalStackOverflowLoading />;
+  return <SocialStackOverflowLoading />;
 }

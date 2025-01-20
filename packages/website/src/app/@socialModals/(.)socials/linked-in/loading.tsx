@@ -1,5 +1,5 @@
-import SocialModalLinkedInLoading from "../../../../domains/socials-linked-in/SocialModalLinkedInLoading";
+import SocialLinkedInLoading from "../../../../domains/socials-linked-in/SocialLinkedInLoading";
 
 export default function SocialModalsSlotLinkedInLoading() {
-  return <SocialModalLinkedInLoading />;
+  return <SocialLinkedInLoading />;
 }

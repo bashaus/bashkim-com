@@ -1,21 +1,19 @@
 "use client";
 
 import { MediumArticle } from "@bashkim-com/socials";
-import { Stack } from "@mui/material";
 import Divider from "@mui/material/Divider";
 import ListSubheader from "@mui/material/ListSubheader";
+import Stack from "@mui/material/Stack";
 
 import SocialMediumHeader from "../SocialMediumHeader";
 import SocialMediumMultiPartArticle from "../SocialMediumMultiPartArticle";
 import SocialMediumSingleArticle from "../SocialMediumSingleArticle";
 
-export type SocialModalMediumProps = Readonly<{
+export type SocialMediumProps = Readonly<{
   articles: Array<MediumArticle>;
 }>;
 
-export default function SocialModalMedium({
-  articles,
-}: SocialModalMediumProps) {
+export default function SocialMedium({ articles }: SocialMediumProps) {
   return (
     <>
       <SocialMediumHeader />
