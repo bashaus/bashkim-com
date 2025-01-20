@@ -1,4 +1,4 @@
-import SocialModalLinkedIn from "../../../../domains/socials/SocialModalLinkedIn";
+import SocialModalLinkedIn from "../../../../domains/socials-linked-in/SocialModalLinkedIn";
 
 export const dynamic = "force-dynamic";
 

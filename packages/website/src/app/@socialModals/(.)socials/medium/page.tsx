@@ -1,6 +1,6 @@
 import { getMediumSocials } from "@bashkim-com/socials";
 
-import SocialModalMedium from "../../../../domains/socials/SocialModalMedium";
+import SocialModalMedium from "../../../../domains/socials-medium/SocialModalMedium";
 
 export const dynamic = "force-dynamic";
 

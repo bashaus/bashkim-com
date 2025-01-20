@@ -3,7 +3,7 @@ import {
   getStackOverflowUser,
 } from "@bashkim-com/socials";
 
-import SocialModalStackOverflow from "../../../../domains/socials/SocialModalStackOverflow";
+import SocialModalStackOverflow from "../../../../domains/socials-stack-overflow/SocialModalStackOverflow";
 
 export const dynamic = "force-dynamic";
 

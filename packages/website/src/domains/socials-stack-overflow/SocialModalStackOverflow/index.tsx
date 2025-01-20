@@ -13,8 +13,7 @@ import MenuItem from "@mui/material/MenuItem";
 import Stack from "@mui/material/Stack";
 
 import StackOverflowFilledVector from "../../../assets/vectors/social/stack-overflow-filled.svg";
-import SocialDrawer from "../SocialDrawer";
-import SocialHeader from "../SocialHeader";
+import SocialHeader from "../../socials/SocialHeader";
 import styles from "./styles.module.scss";
 
 export type SocialModalStackOverflowProps = Readonly<{
@@ -27,20 +26,14 @@ export default function SocialModalStackOverflow({
   posts,
 }: SocialModalStackOverflowProps) {
   return (
-    <SocialDrawer>
+    <>
       <SocialHeader
         href="https://stackoverflow.com/users/600240/bashaus"
         avatarBadgeBackground="#FFF"
-        avatarBadge={
-          <StackOverflowFilledVector
-            width={20}
-            height={20}
-            viewBox="0 0 100 100"
-          />
-        }
+        avatarBadge={<StackOverflowFilledVector width={20} height={20} />}
         textPrimary="Bashkim Isai"
         textSecondary={
-          <Stack direction="row" spacing={2}>
+          <Stack direction="row" spacing={2} component="span">
             <span>{user.reputation}</span>
 
             <span className={styles["BadgesGold"]}>
@@ -59,8 +52,8 @@ export default function SocialModalStackOverflow({
       />
 
       <Divider />
-
       <ListSubheader>Top posts</ListSubheader>
+
       {posts.map((post) => (
         <MenuItem
           component="a"
@@ -83,6 +76,6 @@ export default function SocialModalStackOverflow({
           />
         </MenuItem>
       ))}
-    </SocialDrawer>
+    </>
   );
 }

@@ -5,9 +5,7 @@ import { Stack } from "@mui/material";
 import Divider from "@mui/material/Divider";
 import ListSubheader from "@mui/material/ListSubheader";
 
-import MediumVector from "../../../assets/vectors/social/medium.svg";
-import SocialDrawer from "../SocialDrawer";
-import SocialHeader from "../SocialHeader";
+import SocialMediumHeader from "../SocialMediumHeader";
 import SocialMediumMultiPartArticle from "../SocialMediumMultiPartArticle";
 import SocialMediumSingleArticle from "../SocialMediumSingleArticle";
 
@@ -19,24 +17,10 @@ export default function SocialModalMedium({
   articles,
 }: SocialModalMediumProps) {
   return (
-    <SocialDrawer>
-      <SocialHeader
-        href="https://medium.com/@bashaus"
-        avatarBadgeBackground="#000"
-        avatarBadge={
-          <MediumVector
-            width={10}
-            height={10}
-            viewBox="0 0 100 100"
-            color="#FFFFF"
-          />
-        }
-        textPrimary="Bashkim Isai"
-        textSecondary="View profile on Medium"
-      />
+    <>
+      <SocialMediumHeader />
 
       <Divider />
-
       <ListSubheader>Recent articles</ListSubheader>
 
       {articles.map((article) => (
@@ -50,6 +34,6 @@ export default function SocialModalMedium({
           )}
         </Stack>
       ))}
-    </SocialDrawer>
+    </>
   );
 }

@@ -1,5 +1,6 @@
 import { PageHeaderPartial } from "@bashkim-com/design-system";
-import { Button, Typography } from "@mui/material";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
 import Link from "next/link";
 
 import PortfolioVector from "../../../../assets/vectors/icons/portfolio.svg";
@@ -20,10 +21,7 @@ export default function HomeHello() {
               target="_blank"
               rel="noreferrer"
             >
-              <GitHubVector
-                className={styles["LinkIcon"]}
-                viewBox="0 0 100 100"
-              />
+              <GitHubVector className={styles["LinkIcon"]} />
               View code
             </a>
           </li>

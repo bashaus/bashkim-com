@@ -4,7 +4,7 @@ import {
 } from "@bashkim-com/design-system";
 import type { FeaturedCaseStudiesModelFragment } from "@bashkim-com/prismic-dal";
 import { useLinkResolver } from "@bashkim-com/prismic-helpers";
-import { Button } from "@mui/material";
+import Button from "@mui/material/Button";
 
 export type HomeFeaturedProps = Readonly<{
   featuredCaseStudies: Array<FeaturedCaseStudiesModelFragment>;

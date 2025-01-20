@@ -1,6 +1,7 @@
 "use client";
 
 import { GitHubPinnedItem } from "@bashkim-com/socials";
+import { Typography } from "@mui/material";
 import Chip from "@mui/material/Chip";
 import Divider from "@mui/material/Divider";
 import ListItemIcon from "@mui/material/ListItemIcon";
@@ -10,8 +11,7 @@ import MenuItem from "@mui/material/MenuItem";
 
 import GitHubRepo from "../../../assets/vectors/icons/github-repo.svg";
 import GitHubVector from "../../../assets/vectors/social/github.svg";
-import SocialDrawer from "../SocialDrawer";
-import SocialHeader from "../SocialHeader";
+import SocialHeader from "../../socials/SocialHeader";
 
 export type SocialModalGitHubProps = Readonly<{
   pinnedItems: Array<GitHubPinnedItem>;
@@ -21,24 +21,18 @@ export default function SocialModalGitHub({
   pinnedItems,
 }: SocialModalGitHubProps) {
   return (
-    <SocialDrawer>
+    <>
       <SocialHeader
         href="https://github.com/bashaus/"
         avatarBadgeBackground="#333"
-        avatarBadge={
-          <GitHubVector
-            width={15}
-            height={15}
-            viewBox="0 0 100 100"
-            color="#FFFFF"
-          />
-        }
+        avatarBadge={<GitHubVector width={15} height={15} color="#FFFFF" />}
         textPrimary="@bashaus"
         textSecondary="View profile on GitHub"
       />
 
       <Divider />
       <ListSubheader>Pinned items</ListSubheader>
+
       {pinnedItems.map((item) => (
         <MenuItem
           component="a"
@@ -48,7 +42,7 @@ export default function SocialModalGitHub({
           style={{ alignItems: "flex-start" }}
         >
           <ListItemIcon sx={{ py: 0.5 }}>
-            <GitHubRepo aria-label="Repository" />
+            <GitHubRepo aria-label="Repository" fill="currentColor" />
           </ListItemIcon>
 
           <ListItemText
@@ -75,6 +69,6 @@ export default function SocialModalGitHub({
           />
         </MenuItem>
       ))}
-    </SocialDrawer>
+    </>
   );
 }

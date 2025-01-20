@@ -25,6 +25,6 @@ export const Text = {
 
 export const Vector = {
   args: {
-    children: <TrophyVector width={30} height={30} viewBox="0 0 512 512" />,
+    children: <TrophyVector width={30} height={30} />,
   },
 };

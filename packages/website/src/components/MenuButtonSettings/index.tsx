@@ -1,5 +1,6 @@
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
-import { IconButton, Tooltip } from "@mui/material";
+import IconButton from "@mui/material/IconButton";
+import Tooltip from "@mui/material/Tooltip";
 import { ComponentPropsWithoutRef, useCallback, useState } from "react";
 
 import SiteSettings from "../SiteSettings";

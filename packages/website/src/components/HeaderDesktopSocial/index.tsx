@@ -1,5 +1,6 @@
 import { NavigationGroup } from "@bashkim-com/design-system";
-import { IconButton, Tooltip } from "@mui/material";
+import IconButton from "@mui/material/IconButton";
+import Tooltip from "@mui/material/Tooltip";
 import Link from "next/link";
 
 import GitHubVector from "../../assets/vectors/social/github.svg";
