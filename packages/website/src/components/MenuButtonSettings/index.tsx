@@ -8,14 +8,14 @@ import styles from "./styles.module.scss";
 export type MenuButtonSettingsProps = Readonly<ComponentPropsWithoutRef<"div">>;
 
 export default function MenuButtonSettings(props: MenuButtonSettingsProps) {
-  const [isVisible, setIsVisible] = useState<boolean>(false);
+  const [open, setOpen] = useState<boolean>(false);
 
   const handleSignifierClick = useCallback(() => {
-    setIsVisible(true);
+    setOpen(true);
   }, []);
 
   const handleClose = useCallback(() => {
-    setIsVisible(false);
+    setOpen(false);
   }, []);
 
   return (
@@ -26,7 +26,7 @@ export default function MenuButtonSettings(props: MenuButtonSettingsProps) {
         </IconButton>
       </Tooltip>
 
-      <SiteSettings isVisible={isVisible} onClose={handleClose} />
+      <SiteSettings open={open} onClose={handleClose} />
     </div>
   );
 }

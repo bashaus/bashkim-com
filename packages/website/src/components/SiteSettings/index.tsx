@@ -1,44 +1,43 @@
 import CloseIcon from "@mui/icons-material/Close";
-import { List, ListItem, ListItemIcon, ListItemText } from "@mui/material";
+import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogTitle from "@mui/material/DialogTitle";
+import Stack from "@mui/material/Stack";
+import Typography from "@mui/material/Typography";
 import { ComponentPropsWithoutRef } from "react";
 
 import SiteSettingsAppearance from "../SiteSettingsAppearance";
 import SiteSettingsGridLines from "../SiteSettingsGridLines";
 
 export type SiteSettingsProps = Readonly<{
-  isVisible: boolean;
+  open: boolean;
   onClose: ComponentPropsWithoutRef<"button">["onClick"];
 }>;
 
-export default function SiteSettings({
-  isVisible,
-  onClose,
-}: SiteSettingsProps) {
+export default function SiteSettings({ open, onClose }: SiteSettingsProps) {
   return (
-    <Dialog open={isVisible} onClose={onClose} maxWidth="sm" fullWidth>
+    <Dialog open={open} onClose={onClose} maxWidth="xs" fullWidth>
       <DialogTitle>Site settings</DialogTitle>
 
-      <DialogContent dividers sx={{ px: 1, py: 0 }}>
-        <List>
-          <ListItem>
-            <ListItemText primary="Appearance" />
-            <ListItemIcon>
-              <SiteSettingsAppearance />
-            </ListItemIcon>
-          </ListItem>
+      <DialogContent dividers>
+        <Stack spacing={2}>
+          <Box>
+            <Typography variant="subtitle1" gutterBottom>
+              Appearance
+            </Typography>
+            <SiteSettingsAppearance />
+          </Box>
 
-          <ListItem>
-            <ListItemText primary="Grid lines" />
-            <ListItemIcon>
-              <SiteSettingsGridLines />
-            </ListItemIcon>
-          </ListItem>
-        </List>
+          <Box>
+            <Typography variant="subtitle1" gutterBottom>
+              Grid lines
+            </Typography>
+            <SiteSettingsGridLines />
+          </Box>
+        </Stack>
       </DialogContent>
 
       <DialogActions>

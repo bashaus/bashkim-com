@@ -1,6 +1,6 @@
 import GridOffIcon from "@mui/icons-material/GridOff";
 import GridOnIcon from "@mui/icons-material/GridOn";
-import { ToggleButton, ToggleButtonGroup } from "@mui/material";
+import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 import { useCallback } from "react";
 
 import { SettingsActionSetGridLines } from "../../contexts/Settings/actions";
@@ -27,17 +27,13 @@ export default function SiteSettingsGridLines() {
       onChange={handleChange}
       value={isGridLinesVisible ? "1" : "0"}
     >
-      <ToggleButton value="1">
-        <SiteSettingsToggleButton startIcon={<GridOnIcon />}>
-          On
-        </SiteSettingsToggleButton>
-      </ToggleButton>
+      <SiteSettingsToggleButton startIcon={<GridOnIcon />} value="1">
+        On
+      </SiteSettingsToggleButton>
 
-      <ToggleButton value="0">
-        <SiteSettingsToggleButton startIcon={<GridOffIcon />}>
-          Off
-        </SiteSettingsToggleButton>
-      </ToggleButton>
+      <SiteSettingsToggleButton startIcon={<GridOffIcon />} value="0">
+        Off
+      </SiteSettingsToggleButton>
     </ToggleButtonGroup>
   );
 }

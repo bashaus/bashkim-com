@@ -2,7 +2,6 @@ import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import SettingsBrightnessIcon from "@mui/icons-material/SettingsBrightness";
 import { useColorScheme } from "@mui/material/styles";
-import ToggleButton from "@mui/material/ToggleButton";
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 import { Mode } from "@mui/system/cssVars/useCurrentColorScheme";
 import { MouseEventHandler, useCallback } from "react";
@@ -21,23 +20,20 @@ export default function SiteSettingsAppearance() {
 
   return (
     <ToggleButtonGroup value={mode} size="small" onChange={handleClick}>
-      <ToggleButton value="system">
-        <SiteSettingsToggleButton startIcon={<SettingsBrightnessIcon />}>
-          System
-        </SiteSettingsToggleButton>
-      </ToggleButton>
+      <SiteSettingsToggleButton
+        startIcon={<SettingsBrightnessIcon />}
+        value="system"
+      >
+        System
+      </SiteSettingsToggleButton>
 
-      <ToggleButton value="light">
-        <SiteSettingsToggleButton startIcon={<LightModeIcon />}>
-          Light
-        </SiteSettingsToggleButton>
-      </ToggleButton>
+      <SiteSettingsToggleButton startIcon={<LightModeIcon />} value="light">
+        Light
+      </SiteSettingsToggleButton>
 
-      <ToggleButton value="dark">
-        <SiteSettingsToggleButton startIcon={<DarkModeIcon />}>
-          Dark
-        </SiteSettingsToggleButton>
-      </ToggleButton>
+      <SiteSettingsToggleButton startIcon={<DarkModeIcon />} value="dark">
+        Dark
+      </SiteSettingsToggleButton>
     </ToggleButtonGroup>
   );
 }

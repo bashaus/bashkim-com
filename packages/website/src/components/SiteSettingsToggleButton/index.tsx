@@ -1,23 +1,29 @@
 import Stack from "@mui/material/Stack";
-import { PropsWithChildren, ReactNode } from "react";
+import { ToggleButtonProps } from "@mui/material/ToggleButton";
+import { ReactNode } from "react";
+
+import * as S from "./styles";
 
 export type SiteSettingsToggleButtonProps = Readonly<
-  PropsWithChildren<{
+  ToggleButtonProps & {
     startIcon?: ReactNode;
     endIcon?: ReactNode;
-  }>
+  }
 >;
 
 export default function SiteSettingsToggleButton({
   startIcon,
   endIcon,
   children,
+  ...restProps
 }: SiteSettingsToggleButtonProps) {
   return (
-    <Stack spacing={0.5} alignItems="center" width={100}>
-      {startIcon}
-      {children}
-      {endIcon}
-    </Stack>
+    <S.Button {...restProps}>
+      <Stack spacing={0.5} alignItems="center">
+        {startIcon}
+        {children}
+        {endIcon}
+      </Stack>
+    </S.Button>
   );
 }
