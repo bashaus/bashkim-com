@@ -5,12 +5,8 @@ export { default as CarouselImage } from "./components/CarouselImage";
 export { default as DeviceFeaturePhone } from "./components/DeviceFeaturePhone";
 export { default as DeviceSmartphone } from "./components/DeviceSmartphone";
 export { default as Logo } from "./components/Logo";
-export { default as Magazine } from "./components/Magazine";
-export type { MagazineSpreadChangeEvent } from "./components/Magazine/types";
 export { default as MenuButton } from "./components/MenuButton";
 export { default as Tile } from "./components/Tile";
-export { default as Turn } from "./components/Turn";
-export { TurnDisplay } from "./components/Turn/types";
 export { default as VideoDialog } from "./components/VideoDialog";
 export { default as VideoPlayer } from "./components/VideoPlayer";
 

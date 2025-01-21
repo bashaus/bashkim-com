@@ -1,6 +1,6 @@
 @use "sass:list";
 
-$z-indexes: ("turn" "header" "menu" "grid-lines");
+$z-indexes: ("header" "menu" "grid-lines");
 
 @function z-index($z-index-name) {
   @return list.index($z-indexes, $z-index-name) * 10;
