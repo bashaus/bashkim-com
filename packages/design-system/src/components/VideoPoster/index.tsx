@@ -16,12 +16,12 @@ export type VideoPosterProps = Readonly<
     imageUrl: string;
 
     /**
-     * Dimensions: width
+     * Width of image
      */
     width?: number;
 
     /**
-     * Dimensions: height
+     * Height of image
      */
     height?: number;
 
@@ -40,14 +40,14 @@ export default function VideoPoster({
   videoUrl,
   ...restProps
 }: VideoPosterProps) {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [open, setOpen] = useState<boolean>(false);
 
   const handleDialogOpen = useCallback(() => {
-    setIsOpen(true);
+    setOpen(true);
   }, []);
 
   const handleDialogClose = useCallback(() => {
-    setIsOpen(false);
+    setOpen(false);
   }, []);
 
   return (
@@ -62,7 +62,7 @@ export default function VideoPoster({
         onKeyUp={handleDialogOpen}
       />
 
-      <VideoDialog open={isOpen} onClose={handleDialogClose} url={videoUrl} />
+      <VideoDialog open={open} onClose={handleDialogClose} url={videoUrl} />
     </div>
   );
 }

@@ -1,11 +1,12 @@
 import CloseIcon from "@mui/icons-material/Close";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import StopIcon from "@mui/icons-material/Stop";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
 import Dialog, { DialogProps } from "@mui/material/Dialog";
+import Stack from "@mui/material/Stack";
 import { MouseEventHandler, useCallback, useRef, useState } from "react";
 import ReactPlayer, { ReactPlayerProps } from "react-player/lazy";
-
-import styles from "./styles.module.scss";
 
 export type VideoDialogProps = Readonly<{
   /**
@@ -50,8 +51,8 @@ export default function VideoDialog({ open, onClose, url }: VideoDialogProps) {
   }, [playing]);
 
   return (
-    <Dialog open={open} onClose={onClose}>
-      <div className={styles["VideoFrame"]}>
+    <Dialog open={open} onClose={onClose} fullWidth>
+      <Box sx={{ aspectRatio: "16 / 9" }}>
         <ReactPlayer
           config={{
             youtube: {
@@ -77,30 +78,21 @@ export default function VideoDialog({ open, onClose, url }: VideoDialogProps) {
           onPlay={handlePlayerPlay}
           onPause={handlePlayerPause}
         />
-      </div>
+      </Box>
 
-      <div className={styles["VideoControls"]}>
-        <button
-          className={styles["ControlButton"]}
-          onClick={handlePlayPauseClick}
-        >
+      <Stack direction="row" justifyContent="center" spacing={2}>
+        <Button onClick={handlePlayPauseClick}>
           {playing ? (
-            <StopIcon className={styles["StopIcon"]} aria-label="Stop video" />
+            <StopIcon aria-label="Stop video" />
           ) : (
-            <PlayArrowIcon
-              className={styles["PlayIcon"]}
-              aria-label="Play video"
-            />
+            <PlayArrowIcon aria-label="Play video" />
           )}
-        </button>
+        </Button>
 
-        <button className={styles["ControlButton"]} onClick={handleClose}>
-          <CloseIcon
-            className={styles["CloseIcon"]}
-            aria-label="Stop and close video"
-          />
-        </button>
-      </div>
+        <Button onClick={handleClose}>
+          <CloseIcon aria-label="Stop and close video" />
+        </Button>
+      </Stack>
 
       {/* onBuffer?: () => void */}
       {/* onBufferEnd?: () => void */}

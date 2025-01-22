@@ -6,7 +6,7 @@ export default {
   component: VideoDialogComponent,
   title: "Components/Video Dialog",
   args: {
-    isOpen: true,
+    open: true,
     url: "https://youtu.be/aqz-KE-bpKQ",
   },
   parameters: {
