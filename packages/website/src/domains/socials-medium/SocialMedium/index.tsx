@@ -1,13 +1,16 @@
 "use client";
 
 import { MediumArticle } from "@bashkim-com/socials";
+import DescriptionOutlinedIcon from "@mui/icons-material/DescriptionOutlined";
 import Divider from "@mui/material/Divider";
+import ListItem from "@mui/material/ListItem";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
 import ListSubheader from "@mui/material/ListSubheader";
+import MenuItem from "@mui/material/MenuItem";
 import Stack from "@mui/material/Stack";
 
 import SocialMediumHeader from "../SocialMediumHeader";
-import SocialMediumMultiPartArticle from "../SocialMediumMultiPartArticle";
-import SocialMediumSingleArticle from "../SocialMediumSingleArticle";
 
 export type SocialMediumProps = Readonly<{
   articles: Array<MediumArticle>;
@@ -23,13 +26,26 @@ export default function SocialMedium({ articles }: SocialMediumProps) {
 
       {articles.map((article) => (
         <Stack key={article.title}>
-          {article.links.length === 1 && (
-            <SocialMediumSingleArticle article={article} />
-          )}
+          <MenuItem
+            component="a"
+            href={article.url}
+            target="_blank"
+            rel="noreferrer noopener"
+            sx={{ padding: 0 }}
+          >
+            <ListItem alignItems="flex-start">
+              <ListItemIcon>
+                <DescriptionOutlinedIcon />
+              </ListItemIcon>
 
-          {article.links.length !== 1 && (
-            <SocialMediumMultiPartArticle article={article} />
-          )}
+              <ListItemText
+                primary={
+                  article.multipart && <>Part {article.multipart.part}</>
+                }
+                secondary={article.title}
+              />
+            </ListItem>
+          </MenuItem>
         </Stack>
       ))}
     </>

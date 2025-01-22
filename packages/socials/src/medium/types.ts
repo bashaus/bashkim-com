@@ -1,12 +1,11 @@
-export type MediumLink = {
-  title: string;
-  url: string;
-};
-
 export type MediumArticle = {
   title: string;
   subtitle: string;
-  links: Array<MediumLink>;
+  url: string;
+  multipart?: {
+    part: string;
+    parts: string;
+  };
 };
 
 export type GetMediumSocialsResponse = {
