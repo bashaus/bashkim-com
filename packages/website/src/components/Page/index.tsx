@@ -4,6 +4,7 @@ import Footer from "../Footer";
 import GridLines from "../GridLines";
 import Header from "../Header";
 import HeaderIntersection from "../HeaderIntersection";
+import MotionFadeIn from "../MotionFadeIn";
 
 export type PageProps = Readonly<
   PropsWithChildren<{
@@ -13,7 +14,7 @@ export type PageProps = Readonly<
 
 export default function Page({ backButton, children }: PageProps) {
   return (
-    <>
+    <MotionFadeIn>
       <HeaderIntersection />
       <Header backButton={backButton} />
       <main id="content" tabIndex={-1}>
@@ -21,6 +22,6 @@ export default function Page({ backButton, children }: PageProps) {
       </main>
       <Footer />
       <GridLines />
-    </>
+    </MotionFadeIn>
   );
 }
