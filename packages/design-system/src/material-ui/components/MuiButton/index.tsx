@@ -17,6 +17,15 @@ const MuiButtonTheme = createTheme({
             borderColor: "currentColor",
           },
         },
+        {
+          props: { variant: "outlined" },
+          style: {
+            fontWeight: "bold",
+            borderWidth: 2.5,
+            marginTop: "0.2rem",
+            marginBottom: "0.2rem",
+          },
+        },
       ],
     },
   },
