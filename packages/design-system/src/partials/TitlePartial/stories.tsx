@@ -1,3 +1,4 @@
+import Typography from "@mui/material/Typography";
 import type { Meta, StoryFn } from "@storybook/react";
 import { placeholderImage } from "placeholder-image-data-url-svg";
 
@@ -39,8 +40,11 @@ const Template: StoryFn<TitlePartialStoryProps> = ({
   ...args
 }: TitlePartialStoryProps) => (
   <TitlePartialComponent image={image[0]} {...args}>
-    <h1>{title}</h1>
-    <p>{subtitle}</p>
+    <Typography variant="h1" gutterBottom>
+      {title}
+    </Typography>
+
+    <Typography>{subtitle}</Typography>
   </TitlePartialComponent>
 );
 

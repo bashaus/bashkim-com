@@ -7,6 +7,7 @@ import {
   SubtitlePartial,
 } from "@bashkim-com/design-system";
 import { PortfolioPageModelFragment } from "@bashkim-com/prismic-dal";
+import Typography from "@mui/material/Typography";
 
 import MenuButtonHome from "../../../../components/MenuButtonHome";
 import Page from "../../../../components/Page";
@@ -35,8 +36,11 @@ export default function PortfolioPageLockup({
         imageDesktop={backgroundImage.src}
         imageMobile={backgroundImage.src}
       >
-        <h1>{metaTitle}</h1>
-        <p>{metaDescription}</p>
+        <Typography variant="h1" gutterBottom>
+          {metaTitle}
+        </Typography>
+
+        <Typography variant="subtitle1">{metaDescription}</Typography>
       </PageHeaderPartial>
 
       {featured && (

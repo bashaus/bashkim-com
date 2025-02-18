@@ -49,15 +49,6 @@
   );
 
   position: relative;
-
-  h1 {
-    @extend %heading-1;
-    font-weight: bold;
-  }
-
-  p {
-    @extend %heading-3;
-  }
 }
 
 .Aside {

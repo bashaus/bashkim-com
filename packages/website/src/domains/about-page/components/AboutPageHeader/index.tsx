@@ -1,4 +1,5 @@
 import { PageHeaderPartial } from "@bashkim-com/design-system";
+import Typography from "@mui/material/Typography";
 import Image from "next/image";
 
 import PhotoImage from "../../../../assets/images/photo/photo@4x.jpg";
@@ -19,7 +20,7 @@ export default function AboutPageHeader() {
           width={PhotoImage.width}
           height={PhotoImage.height}
         />
-        <h1>Bash</h1>
+        <Typography variant="h1">Bash</Typography>
       </div>
     </PageHeaderPartial>
   );

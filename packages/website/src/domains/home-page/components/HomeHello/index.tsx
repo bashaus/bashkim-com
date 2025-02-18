@@ -36,7 +36,10 @@ export default function HomeHello() {
       }
     >
       <div className={styles["Introduction"]}>
-        <Typography variant="h1">Hello, I&apos;m Bash.</Typography>
+        <Typography variant="h1" gutterBottom>
+          Hello, I&apos;m Bash.
+        </Typography>
+
         <Typography>
           I&apos;m a Digital Nomad Technologist based in Barcelona, specialising
           in{" "}
