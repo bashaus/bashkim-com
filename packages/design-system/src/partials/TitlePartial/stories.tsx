@@ -40,7 +40,7 @@ const Template: StoryFn<TitlePartialStoryProps> = ({
   ...args
 }: TitlePartialStoryProps) => (
   <TitlePartialComponent image={image[0]} {...args}>
-    <Typography variant="h1" gutterBottom>
+    <Typography variant="h2" component="h1" gutterBottom>
       {title}
     </Typography>
 

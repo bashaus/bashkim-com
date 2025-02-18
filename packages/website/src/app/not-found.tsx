@@ -10,7 +10,7 @@ const NotFoundPage = () => {
   return (
     <Page backButton={<MenuButtonHome />}>
       <PageHeaderPartial>
-        <Typography variant="h1" gutterBottom>
+        <Typography variant="h2" component="h1" gutterBottom>
           Page not found
         </Typography>
 

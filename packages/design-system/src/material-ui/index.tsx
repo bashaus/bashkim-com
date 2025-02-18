@@ -5,6 +5,7 @@ import MuiDialogTheme from "./components/MuiDialog";
 import MuiDrawerTheme from "./components/MuiDrawer";
 import MuiListItemTextTheme from "./components/MuiListItemText";
 import MuiListSubheaderTheme from "./components/MuiListSubheader";
+import MuiTypographyTheme from "./components/MuiTypography";
 
 export const theme = createTheme({
   colorSchemes: {
@@ -16,5 +17,6 @@ export const theme = createTheme({
     MuiDrawer: MuiDrawerTheme.components?.MuiDrawer,
     MuiListItemText: MuiListItemTextTheme.components?.MuiListItemText,
     MuiListSubheader: MuiListSubheaderTheme.components?.MuiListSubheader,
+    MuiTypography: MuiTypographyTheme.components?.MuiTypography,
   },
 });

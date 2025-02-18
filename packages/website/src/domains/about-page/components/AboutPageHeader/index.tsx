@@ -20,7 +20,10 @@ export default function AboutPageHeader() {
           width={PhotoImage.width}
           height={PhotoImage.height}
         />
-        <Typography variant="h1">Bash</Typography>
+
+        <Typography variant="h2" component="h1">
+          Bash
+        </Typography>
       </div>
     </PageHeaderPartial>
   );
