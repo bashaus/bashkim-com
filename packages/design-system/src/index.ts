@@ -53,3 +53,6 @@ export { default as GridEmbedSlice } from "./slices/GridEmbedSlice";
 export { default as GridVideoSlice } from "./slices/GridVideoSlice";
 export { default as NewspaperSlice } from "./slices/NewspaperSlice";
 export { default as SubtitleSlice } from "./slices/SubtitleSlice";
+
+/* Material UI */
+export { theme as siteMuiTheme } from "./material-ui";

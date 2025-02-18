@@ -1,24 +1,14 @@
+import { siteMuiTheme } from "@bashkim-com/design-system";
 import createTheme from "@mui/material/styles/createTheme";
+import deepmerge from "@mui/utils/deepmerge";
 
-import MuiButtonTheme from "../components/MuiButton";
 import MuiButtonBaseTheme from "../components/MuiButtonBase";
-import MuiDialogTheme from "../components/MuiDialog";
-import MuiDrawerTheme from "../components/MuiDrawer";
-import MuiListItemTextTheme from "../components/MuiListItemText";
-import MuiListSubheaderTheme from "../components/MuiListSubheader";
 
-const theme = createTheme({
-  colorSchemes: {
-    dark: true,
-  },
+const nextMuiTheme = createTheme({
   components: {
-    MuiButton: MuiButtonTheme.components?.MuiButton,
-    MuiButtonBase: MuiButtonBaseTheme.components?.MuiButtonBase,
-    MuiDialog: MuiDialogTheme.components?.MuiDialog,
-    MuiDrawer: MuiDrawerTheme.components?.MuiDrawer,
-    MuiListItemText: MuiListItemTextTheme.components?.MuiListItemText,
-    MuiListSubheader: MuiListSubheaderTheme.components?.MuiListSubheader,
+    MuiButtonBase: MuiButtonBaseTheme.components.MuiButtonBase,
   },
 });
 
+const theme = createTheme(deepmerge(siteMuiTheme, nextMuiTheme));
 export default theme;

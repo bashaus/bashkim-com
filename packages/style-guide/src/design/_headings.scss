@@ -10,13 +10,11 @@
 %heading-1 {
   @extend %heading;
   @include font-size-largest;
-  letter-spacing: -1.2px;
 }
 
 %heading-2 {
   @extend %heading;
   @include font-size-larger;
-  letter-spacing: -0.6px;
 
   @media #{$media-query-mobile} {
     &:not(:first-child) {
@@ -34,7 +32,6 @@
 %heading-3 {
   @extend %heading;
   @include font-size-large;
-  letter-spacing: -0.5px;
 
   @media #{$media-query-mobile} {
     &:not(:first-child) {
