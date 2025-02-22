@@ -5,6 +5,8 @@ import SocialGitHub from "../../../../domains/socials-github/SocialGitHub";
 export const dynamic = "force-dynamic";
 
 export default async function SocialModalsSlotGitHub() {
-  const { pinnedItems } = await getGitHubSocials();
-  return <SocialGitHub pinnedItems={pinnedItems} />;
+  const { pinnedItems, repositoryCount } = await getGitHubSocials();
+  return (
+    <SocialGitHub pinnedItems={pinnedItems} repositoryCount={repositoryCount} />
+  );
 }

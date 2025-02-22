@@ -5,5 +5,6 @@ export type GitHubPinnedItem = {
 };
 
 export type GetGitHubSocialsResponse = {
+  repositoryCount: number;
   pinnedItems: Array<GitHubPinnedItem>;
 };

@@ -4,6 +4,10 @@ query GetPinnedItems {
   }
 
   user(login: "bashaus") {
+    repositories {
+      totalCount
+    }
+
     pinnedItems(first: 6) {
       nodes {
         ... on Gist {

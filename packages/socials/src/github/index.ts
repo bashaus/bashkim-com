@@ -25,5 +25,7 @@ export async function getGitHubSocials(): Promise<GetGitHubSocialsResponse> {
       url: node.url,
     }));
 
-  return { pinnedItems };
+  const repositoryCount = result.user?.repositories.totalCount ?? 0;
+
+  return { pinnedItems, repositoryCount };
 }
