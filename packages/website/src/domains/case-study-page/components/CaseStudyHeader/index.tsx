@@ -6,6 +6,7 @@ import {
   TitlePartial,
 } from "@bashkim-com/design-system";
 import type { CaseStudyPageModelFragment } from "@bashkim-com/prismic-dal";
+import Image from "next/image";
 
 import CaseStudyDetails from "../CaseStudyDetails";
 import CaseStudyTechnologies from "../CaseStudyTechnologies";
@@ -24,10 +25,18 @@ export default function CaseStudyHeader({ caseStudy }: CaseStudyHeaderProps) {
       />
 
       <Group>
-        <TitlePartial image={caseStudy.image_icon.url}>
-          <h1>{caseStudy.meta_title}</h1>
-          <p>{caseStudy.meta_description}</p>
-        </TitlePartial>
+        <TitlePartial
+          title={caseStudy.meta_title}
+          description={caseStudy.meta_description}
+          image={
+            <Image
+              src={caseStudy.image_icon.url}
+              alt={caseStudy.image_icon.alt ?? ""}
+              width={caseStudy.image_icon.dimensions.width}
+              height={caseStudy.image_icon.dimensions.height}
+            />
+          }
+        />
       </Group>
 
       <Group design={GroupDesign.Alternate}>
