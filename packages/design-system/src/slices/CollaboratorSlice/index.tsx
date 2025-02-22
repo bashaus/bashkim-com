@@ -3,6 +3,8 @@ import type {
   Peer,
 } from "@bashkim-com/prismic-dal";
 import { useLinkResolver } from "@bashkim-com/prismic-helpers";
+import MuiLink from "@mui/material/Link";
+import ListItemText from "@mui/material/ListItemText";
 import { Link } from "prismic-reactjs";
 
 export type CollaboratorSliceProps = Readonly<{
@@ -29,26 +31,29 @@ export default function CollaboratorSlice({ slice }: CollaboratorSliceProps) {
   const url = Link.url(website, PrismicLinkResolver);
 
   return (
-    <>
-      <strong>
-        {url && (
-          <a href={url} target="_blank" rel="noreferrer">
-            {name}
-          </a>
-        )}
-
-        {!url && name}
-      </strong>
-
-      {company && (
+    <ListItemText
+      primary={
         <>
-          <br />
-          {company}
+          {!url && <>{name}</>}
+          {!!url && (
+            <MuiLink href={url} target="_blank" rel="noreferrer">
+              {name}
+            </MuiLink>
+          )}
         </>
-      )}
-
-      <br />
-      {role}
-    </>
+      }
+      secondary={
+        <>
+          {!!company && (
+            <>
+              {company}
+              <br />
+              {role}
+            </>
+          )}
+          {!company && <>{role}</>}
+        </>
+      }
+    />
   );
 }
