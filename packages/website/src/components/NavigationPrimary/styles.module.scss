@@ -4,7 +4,7 @@
 .PortfolioNavigationItem {
   @media #{$media-query-not-mobile} {
     a:hover {
-      color: $color-primary-100;
+      color: #29e5d0;
     }
   }
 }
@@ -12,7 +12,7 @@
 .AboutNavigationItem {
   @media #{$media-query-not-mobile} {
     a:hover {
-      color: $color-secondary-100;
+      color: #f2911c;
     }
   }
 }

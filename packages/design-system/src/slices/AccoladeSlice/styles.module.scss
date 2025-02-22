@@ -1,59 +1,6 @@
 @import "~@bashkim-com/style-guide/colors.scss";
 @import "~@bashkim-com/style-guide/grid.scss";
 
-.AccoladeSlice {
-  @include grid-container($margin: (), $padding: top left right bottom);
-}
-
-.Details {
-  @include grid-cell(
-    $columns: (
-      mobile-portrait: 12,
-      mobile-landscape: 12,
-      tablet-portrait: 3,
-      tablet-landscape: 3,
-      desktop-narrow: 3,
-      desktop-wide: 3,
-    )
-  );
-}
-
-.Awards {
-  @include grid-cell(
-    $columns: (
-      mobile-portrait: 12,
-      mobile-landscape: 12,
-      tablet-portrait: 9,
-      tablet-landscape: 9,
-      desktop-narrow: 9,
-      desktop-wide: 9,
-    )
-  );
-
-  @include grid-container($margin: (), $padding: ());
-
-  width: 100%;
-}
-
-.Award {
-  @include grid-cell(
-    $columns: (
-      mobile-portrait: 12,
-      mobile-landscape: 6,
-      tablet-portrait: 6,
-      tablet-landscape: 4,
-      desktop-narrow: 4,
-      desktop-wide: 4,
-    )
-  );
-
-  @include grid-cell-padding($sides: top bottom);
-
-  a {
-    display: block;
-  }
-}
-
 .Trophy {
   display: block;
   width: 50px;

@@ -1,13 +1,5 @@
 @mixin appearance--light {
-  --color-shade-background: #f5f5f5;
   --color-shade-foreground: #444444;
-
-  --design--box--background-color: #ffffff;
-  --design--box--foreground-color: #444444;
-  --design--box--shadow: 0 0 14px 1px rgba(204, 204, 204, 0.5);
-  --design--box--shadow--accent: 0 0 20px 3px rgba(204, 204, 204, 0.7);
-  --design--box--screen: rgba(255, 255, 255, 0.75);
-  --design--box--border-color: #dadada;
 
   --design--page--background-color: #ffffff;
   --design--page--background-color--accent: #ececec;

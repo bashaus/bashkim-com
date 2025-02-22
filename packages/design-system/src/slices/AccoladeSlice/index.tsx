@@ -4,12 +4,14 @@ import {
   PrismicRichText,
   useLinkResolver,
 } from "@bashkim-com/prismic-helpers";
+import { Grid2 } from "@mui/material";
+import Container from "@mui/material/Container";
+import Typography from "@mui/material/Typography";
 import { Link } from "prismic-reactjs";
 
-import TrophyVector from "../../assets/vectors/trophy.svg";
 import DateFormatter from "../../formatters/DateFormatter";
 import RichTextFormatter from "../../formatters/RichTextFormatter";
-import styles from "./styles.module.scss";
+import * as S from "./styles";
 
 export type AccoladeSliceProps = Readonly<{
   slice: AccoladeSliceTypeFragment;
@@ -37,48 +39,60 @@ export default function AccoladeSlice({ slice }: AccoladeSliceProps) {
   } = slice.primary;
 
   return (
-    <div className={styles["AccoladeSlice"]}>
-      <div className={styles["Details"]}>
-        <RichTextFormatter>
-          <PrismicRichText render={issuer} />
-          <PrismicRichText render={description} />
-          {date && (
-            <p>
-              <small>
-                <DateFormatter date={PrismicDate(date)} />
-              </small>
-            </p>
-          )}
-        </RichTextFormatter>
-      </div>
+    <Container>
+      <Grid2 container spacing={2}>
+        <Grid2 size={{ xs: 12, sm: 12, md: 3, lg: 3, xl: 3 }}>
+          <RichTextFormatter>
+            <PrismicRichText render={issuer} />
+            <PrismicRichText render={description} />
+            {date && (
+              <p>
+                <small>
+                  <DateFormatter date={PrismicDate(date)} />
+                </small>
+              </p>
+            )}
+          </RichTextFormatter>
+        </Grid2>
 
-      <div className={styles["Awards"]}>
-        {slice.fields?.map((field) => {
-          const {
-            accolade_slice_type_award_place: awardPlace,
-            accolade_slice_type_award_link: awardLink,
-            accolade_slice_type_award_category: awardCategory,
-          } = field;
+        <Grid2
+          container
+          size={{ xs: 12, sm: 12, md: 9, lg: 9, xl: 9 }}
+          spacing={2}
+        >
+          {slice.fields?.map((field) => {
+            const {
+              accolade_slice_type_award_place: awardPlace,
+              accolade_slice_type_award_link: awardLink,
+              accolade_slice_type_award_category: awardCategory,
+            } = field;
 
-          const awardHref = Link.url(awardLink, PrismicLinkResolver);
+            const awardHref = Link.url(awardLink, PrismicLinkResolver);
 
-          return (
-            <div
-              className={styles["Award"]}
-              data-prop-place={awardPlace}
-              key={JSON.stringify(field)}
-            >
-              <a href={awardHref} target="_blank" rel="noreferrer">
-                <TrophyVector className={styles["Trophy"]} />
-                <RichTextFormatter>
-                  {awardPlace && <h3>{AwardPlaceName[awardPlace]}</h3>}
-                  <PrismicRichText render={awardCategory} />
-                </RichTextFormatter>
-              </a>
-            </div>
-          );
-        })}
-      </div>
-    </div>
+            return (
+              <Grid2
+                size={{ xs: 12, sm: 6, md: 4, lg: 3, xl: 3 }}
+                key={JSON.stringify(field)}
+                data-prop-place={awardPlace}
+              >
+                <S.Link href={awardHref} target="_blank" rel="noreferrer">
+                  <S.Trophy place={awardPlace} />
+
+                  {awardPlace && (
+                    <Typography variant="h6" component="h4">
+                      {AwardPlaceName[awardPlace]}
+                    </Typography>
+                  )}
+
+                  <RichTextFormatter>
+                    <PrismicRichText render={awardCategory} />
+                  </RichTextFormatter>
+                </S.Link>
+              </Grid2>
+            );
+          })}
+        </Grid2>
+      </Grid2>
+    </Container>
   );
 }
