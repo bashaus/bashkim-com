@@ -1,8 +1,7 @@
-import {
-  Group,
-  RichTextFormatter,
-  SubtitlePartial,
-} from "@bashkim-com/design-system";
+import { Group, SubtitlePartial } from "@bashkim-com/design-system";
+import { Grid2 } from "@mui/material";
+import Container from "@mui/material/Container";
+import Typography from "@mui/material/Typography";
 
 import EthicallyVector from "../../assets/principles/ethically.svg";
 import MaintainableVector from "../../assets/principles/maintainable.svg";
@@ -12,7 +11,7 @@ import SecurelyVector from "../../assets/principles/securely.svg";
 import ToSatisfactionVector from "../../assets/principles/to-satisfaction.svg";
 import ToSpecificationVector from "../../assets/principles/to-specification.svg";
 import WithinBudgetVector from "../../assets/principles/within-budget.svg";
-import styles from "./styles.module.scss";
+import * as S from "./styles";
 
 export default function AboutPrinciples() {
   return (
@@ -21,88 +20,129 @@ export default function AboutPrinciples() {
         <h2>Core principles</h2>
       </SubtitlePartial>
 
-      <ul className={styles["Principles"]}>
-        <li className={styles["Principle"]}>
-          <RichTextFormatter className={styles["Cell"]}>
-            <h3>On-time</h3>
-            <OnTimeVector />
-            <p>
+      <Container>
+        <Grid2 container rowSpacing={4} columnSpacing={2}>
+          <S.Principle>
+            <S.Icon>
+              <OnTimeVector />
+            </S.Icon>
+
+            <Typography variant="h6" gutterBottom>
+              On-time
+            </Typography>
+
+            <Typography>
               Committed to delivering a resolved product to an
               agreed&nbsp;schedule
-            </p>
-          </RichTextFormatter>
-        </li>
-        <li className={styles["Principle"]}>
-          <RichTextFormatter className={styles["Cell"]}>
-            <h3>Within budget</h3>
-            <WithinBudgetVector />
-            <p>
+            </Typography>
+          </S.Principle>
+
+          <S.Principle>
+            <S.Icon>
+              <WithinBudgetVector />
+            </S.Icon>
+
+            <Typography variant="h6" gutterBottom>
+              Within budget
+            </Typography>
+
+            <Typography>
               Because all financial investments are a risk, there needs to be a
               responsibility to&nbsp;deliver
-            </p>
-          </RichTextFormatter>
-        </li>
-        <li className={styles["Principle"]}>
-          <RichTextFormatter className={styles["Cell"]}>
-            <h3>To specification</h3>
-            <ToSpecificationVector />
-            <p>
+            </Typography>
+          </S.Principle>
+
+          <S.Principle>
+            <S.Icon>
+              <ToSpecificationVector />
+            </S.Icon>
+
+            <Typography variant="h6" gutterBottom>
+              To specification
+            </Typography>
+
+            <Typography>
               Producing exactly what everyone agrees to the highest
               possible&nbsp;standards
-            </p>
-          </RichTextFormatter>
-        </li>
-        <li className={styles["Principle"]}>
-          <RichTextFormatter className={styles["Cell"]}>
-            <h3>To satisfaction</h3>
-            <ToSatisfactionVector />
-            <p>
+            </Typography>
+          </S.Principle>
+
+          <S.Principle>
+            <S.Icon>
+              <ToSatisfactionVector />
+            </S.Icon>
+
+            <Typography variant="h6" gutterBottom>
+              To satisfaction
+            </Typography>
+
+            <Typography>
               Software is designed for people, so let&apos;s put a&nbsp;smile on
               our client&apos;s customers&apos;&nbsp;faces
-            </p>
-          </RichTextFormatter>
-        </li>
-        <li className={styles["Principle"]}>
-          <RichTextFormatter className={styles["Cell"]}>
-            <h3>Maintainable</h3>
-            <MaintainableVector />
-            <p>
+            </Typography>
+          </S.Principle>
+
+          <S.Principle>
+            <S.Icon>
+              <MaintainableVector />
+            </S.Icon>
+
+            <Typography variant="h6" gutterBottom>
+              Maintainable
+            </Typography>
+
+            <Typography>
               Everyone who works on the project also has to fall in love with
               the code&nbsp;too
-            </p>
-          </RichTextFormatter>
-        </li>
-        <li className={styles["Principle"]}>
-          <RichTextFormatter className={styles["Cell"]}>
-            <h3>Securely</h3>
-            <SecurelyVector />
-            <p>
+            </Typography>
+          </S.Principle>
+
+          <S.Principle>
+            <S.Icon>
+              <SecurelyVector />
+            </S.Icon>
+
+            <Typography variant="h6" gutterBottom>
+              Securely
+            </Typography>
+
+            <Typography>
               No client wants media attention for the wrong reasons, especially
               because of your&nbsp;work
-            </p>
-          </RichTextFormatter>
-        </li>
-        <li className={styles["Principle"]}>
-          <RichTextFormatter className={styles["Cell"]}>
-            <h3>Ethically</h3>
-            <EthicallyVector />
-            <p>
+            </Typography>
+          </S.Principle>
+
+          <S.Principle>
+            <S.Icon>
+              <EthicallyVector />
+            </S.Icon>
+
+            <Typography variant="h6" gutterBottom>
+              Ethically
+            </Typography>
+
+            <Typography>
               Projects must increase the quality of life for
               all&nbsp;stakeholders
-            </p>
-          </RichTextFormatter>
-        </li>
-        <li className={styles["Principle"]}>
-          <RichTextFormatter className={styles["Cell"]}>
-            <h3>Robust</h3>
-            <RobustVector />
-            <p>
+            </Typography>
+          </S.Principle>
+
+          <S.Principle>
+            <S.Icon>
+              <RobustVector />
+            </S.Icon>
+
+            <Typography variant="h6" gutterBottom>
+              Robust
+            </Typography>
+
+            <Typography>
               Responsible testing methodologies accompanied with continuous
               integration and automated&nbsp;deployment
-            </p>
-          </RichTextFormatter>
-        </li>
-      </ul>
+            </Typography>
+          </S.Principle>
+        </Grid2>
+      </Container>
     </Group>
   );
 }
