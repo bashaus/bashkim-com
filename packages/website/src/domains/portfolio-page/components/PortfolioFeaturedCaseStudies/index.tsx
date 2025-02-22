@@ -4,9 +4,9 @@ import type {
   PortfolioPageFeaturedModelFragment,
 } from "@bashkim-com/prismic-dal";
 import { PrismicRichText } from "@bashkim-com/prismic-helpers";
-import { Grid2 } from "@mui/material";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
+import Grid from "@mui/material/Grid2";
 import Stack from "@mui/material/Stack";
 import Link from "next/link";
 
@@ -19,14 +19,14 @@ export default function PortfolioFeaturedCaseStudies({
 }: PortfolioFeaturedCaseStudiesProps) {
   return (
     <Container>
-      <Grid2 container spacing={2}>
+      <Grid container spacing={2}>
         {featured.map((feature) => {
           const title = feature.featured_title;
           const description = feature.featured_description;
           const caseStudy = feature.featured_case_study as Case_Study;
 
           return (
-            <Grid2
+            <Grid
               size={{ xs: 12, sm: 6, md: 6, lg: 3, xl: 3 }}
               key={caseStudy._meta.id}
             >
@@ -54,10 +54,10 @@ export default function PortfolioFeaturedCaseStudies({
                   </Link>
                 </Box>
               </Stack>
-            </Grid2>
+            </Grid>
           );
         })}
-      </Grid2>
+      </Grid>
     </Container>
   );
 }

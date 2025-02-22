@@ -1,7 +1,7 @@
 import { CollaboratorSlice, SubtitlePartial } from "@bashkim-com/design-system";
 import type { CollaboratorSliceTypeFragment } from "@bashkim-com/prismic-dal";
-import { Grid2 } from "@mui/material";
 import Container from "@mui/material/Container";
+import Grid from "@mui/material/Grid2";
 import Link from "@mui/material/Link";
 import ListItemText from "@mui/material/ListItemText";
 
@@ -25,23 +25,23 @@ export default function CaseStudyCollaborators({
       </SubtitlePartial>
 
       <Container>
-        <Grid2 container rowSpacing={1} columnSpacing={2}>
-          <Grid2 size={{ xs: 12, sm: 6, md: 4, lg: 3, xl: 3 }}>
+        <Grid container rowSpacing={1} columnSpacing={2}>
+          <Grid size={{ xs: 12, sm: 6, md: 4, lg: 3, xl: 3 }}>
             <ListItemText
               primary={<Link href="/">Bashkim Isai</Link>}
               secondary={myRole}
             />
-          </Grid2>
+          </Grid>
 
           {slices.map((slice) => (
-            <Grid2
+            <Grid
               size={{ xs: 12, sm: 6, md: 4, lg: 3, xl: 3 }}
               key={JSON.stringify(slice)}
             >
               <CollaboratorSlice slice={slice} />
-            </Grid2>
+            </Grid>
           ))}
-        </Grid2>
+        </Grid>
       </Container>
     </>
   );
