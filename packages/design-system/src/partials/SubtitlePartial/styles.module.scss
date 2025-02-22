@@ -1,5 +1,0 @@
-@import "~@bashkim-com/style-guide/grid.scss";
-
-.SubtitlePartial {
-  @include grid-container-bounds($padding: top left right bottom);
-}
