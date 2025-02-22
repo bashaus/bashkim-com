@@ -47,7 +47,7 @@ export default function PortfolioFeaturedCaseStudies({
                       icon={
                         <Image
                           src={caseStudy.image_icon.url}
-                          alt={caseStudy.image_icon.alt}
+                          alt={caseStudy.image_icon.alt ?? ""}
                           width={caseStudy.image_icon.dimensions.width}
                           height={caseStudy.image_icon.dimensions.height}
                         />
