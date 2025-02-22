@@ -1,15 +1,16 @@
 import { StyledComponent } from "@emotion/styled";
-import Box, { BoxProps } from "@mui/material/Box";
+import Stack, { StackProps } from "@mui/material/Stack";
 import { darken, lighten, styled } from "@mui/material/styles";
 
 import { GroupDesign } from "./types";
 
-export const GroupDefault = styled(Box)(({ theme }) => ({
+export const GroupDefault = styled(Stack)(({ theme }) => ({
   backgroundColor: theme.palette.background.default,
   color: theme.palette.text.primary,
+  alignItems: "center",
 }));
 
-export const GroupAlternate = styled(Box)(({ theme }) => [
+export const GroupAlternate = styled(Stack)(({ theme }) => [
   {
     backgroundColor: darken(theme.palette.background.default, 0.03),
     color: theme.palette.text.primary,
@@ -21,7 +22,7 @@ export const GroupAlternate = styled(Box)(({ theme }) => [
 
 export const groupDesignComponentMap: Record<
   GroupDesign,
-  StyledComponent<BoxProps>
+  StyledComponent<StackProps>
 > = {
   [GroupDesign.Default]: GroupDefault,
   [GroupDesign.Alternate]: GroupAlternate,

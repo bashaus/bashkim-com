@@ -14,5 +14,9 @@ export default function Group({
   children,
 }: GroupProps) {
   const Component = S.groupDesignComponentMap[design];
-  return <Component component="section">{children}</Component>;
+  return (
+    <Component component="section" spacing={4} py={8} alignItems="center">
+      {children}
+    </Component>
+  );
 }
