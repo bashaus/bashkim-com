@@ -8,7 +8,6 @@ import { Grid2 } from "@mui/material";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Stack from "@mui/material/Stack";
-import Image from "next/image";
 import Link from "next/link";
 
 export type PortfolioFeaturedCaseStudiesProps = Readonly<{
@@ -44,14 +43,12 @@ export default function PortfolioFeaturedCaseStudies({
                     <Tile
                       title={caseStudy.meta_title ?? ""}
                       description={caseStudy.meta_description ?? ""}
-                      icon={
-                        <Image
-                          src={caseStudy.image_icon.url}
-                          alt={caseStudy.image_icon.alt ?? ""}
-                          width={caseStudy.image_icon.dimensions.width}
-                          height={caseStudy.image_icon.dimensions.height}
-                        />
-                      }
+                      icon={{
+                        src: caseStudy.image_icon.url,
+                        alt: caseStudy.image_icon.alt ?? "",
+                        width: caseStudy.image_icon.dimensions.width,
+                        height: caseStudy.image_icon.dimensions.height,
+                      }}
                       poster={caseStudy.image_poster.url}
                     />
                   </Link>
