@@ -1,3 +1,4 @@
+import Typography from "@mui/material/Typography";
 import type { Meta, StoryFn } from "@storybook/react";
 import { placeholderImage } from "placeholder-image-data-url-svg";
 
@@ -7,12 +8,11 @@ export default {
   component: PageHeaderPartialComponent,
   title: "Partials/Page Header Partial",
   args: {
-    id: "PageHeaderPartial",
     imageDesktop: [
       placeholderImage({ width: 1920, height: 400, text: "imageDesktop" }),
     ],
     imageMobile: [
-      placeholderImage({ width: 1000, height: 8000, text: "imageMobile" }),
+      placeholderImage({ width: 1000, height: 800, text: "imageMobile" }),
     ],
   },
   argTypes: {
@@ -41,5 +41,15 @@ const Template: StoryFn<PageHeaderPartialStoryProps> = ({
 );
 
 export const PageHeaderPartial = {
+  args: {
+    children: (
+      <>
+        <Typography variant="h2" component="h1" gutterBottom>
+          Page header partial
+        </Typography>
+        <Typography variant="subtitle1">Lorem ipsum dolar sit a met</Typography>
+      </>
+    ),
+  },
   render: Template,
 };

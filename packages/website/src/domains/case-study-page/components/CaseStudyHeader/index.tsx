@@ -19,7 +19,6 @@ export default function CaseStudyHeader({ caseStudy }: CaseStudyHeaderProps) {
   return (
     <>
       <PageHeaderPartial
-        id="CaseStudyPage-Header"
         imageDesktop={caseStudy.image_header_desktop?.url}
         imageMobile={caseStudy.image_header_mobile?.url}
       />
@@ -31,7 +30,7 @@ export default function CaseStudyHeader({ caseStudy }: CaseStudyHeaderProps) {
         </TitlePartial>
       </Group>
 
-      <Group design={GroupDesign.ALTERNATE}>
+      <Group design={GroupDesign.Alternate}>
         <SubtitlePartial>
           <h2>Project details</h2>
         </SubtitlePartial>

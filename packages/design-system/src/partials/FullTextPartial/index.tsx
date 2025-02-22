@@ -1,14 +1,23 @@
+import Container from "@mui/material/Container";
 import { PropsWithChildren } from "react";
 
 import RichTextFormatter from "../../formatters/RichTextFormatter";
-import styles from "./styles.module.scss";
 
 export type FullTextPartialProps = Readonly<PropsWithChildren>;
 
 export default function FullTextPartial({ children }: FullTextPartialProps) {
   return (
-    <div className={styles["FullTextPartial"]}>
+    <Container
+      sx={(theme) => ({
+        [theme.breakpoints.down("md")]: {
+          maxWidth: 526,
+        },
+        [theme.breakpoints.up("md")]: {
+          maxWidth: 648,
+        },
+      })}
+    >
       <RichTextFormatter>{children}</RichTextFormatter>
-    </div>
+    </Container>
   );
 }

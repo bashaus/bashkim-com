@@ -32,7 +32,6 @@ export default function HomeFeatured({
             <FullBannerPartial
               backgroundDesktop={backgroundDesktop?.url}
               backgroundMobile={backgroundMobile?.url}
-              id={`HomePage-FullBannerPartial-${caseStudy._meta.id}`}
             >
               <RichTextFormatter>
                 <h2>{caseStudy.meta_title}</h2>

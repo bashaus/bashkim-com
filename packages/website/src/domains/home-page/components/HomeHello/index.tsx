@@ -6,7 +6,10 @@ import BackgroundImage from "../../assets/background-image.jpg";
 
 export default function HomeHello() {
   return (
-    <PageHeaderPartial id="HomePage-Hello" imageDesktop={BackgroundImage.src}>
+    <PageHeaderPartial
+      imageDesktop={BackgroundImage.src}
+      imageMobile={BackgroundImage.src}
+    >
       <Typography variant="h2" component="h1" gutterBottom>
         Hello, I&apos;m Bash
       </Typography>

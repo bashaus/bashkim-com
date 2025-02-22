@@ -32,7 +32,6 @@ export default function PortfolioPageLockup({
   return (
     <Page backButton={<MenuButtonHome />}>
       <PageHeaderPartial
-        id="PortfolioPage-Header"
         imageDesktop={backgroundImage.src}
         imageMobile={backgroundImage.src}
       >
@@ -44,7 +43,7 @@ export default function PortfolioPageLockup({
       </PageHeaderPartial>
 
       {featured && (
-        <Group design={GroupDesign.ALTERNATE}>
+        <Group design={GroupDesign.Alternate}>
           <SubtitlePartial>
             <h2>Featured case studies</h2>
           </SubtitlePartial>
@@ -53,7 +52,7 @@ export default function PortfolioPageLockup({
       )}
 
       {portfolioCategories?.map((portfolioCategory) => (
-        <Group key={JSON.stringify(portfolioCategory)}>
+        <Group key={portfolioCategory.primary.portfolio_category_slug}>
           <PortfolioCategory portfolioCategory={portfolioCategory} />
         </Group>
       ))}

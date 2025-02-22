@@ -1,43 +1,28 @@
-import type { Meta, StoryFn } from "@storybook/react";
+import type { Meta } from "@storybook/react";
 
-import GroupComponent, { GroupProps } from ".";
+import GroupComponent from ".";
 import { GroupDesign } from "./types";
 
 export default {
   component: GroupComponent,
   title: "Layout/Group",
   args: {
-    design: GroupDesign.DEFAULT,
+    design: GroupDesign.Default,
+    children: <p>Nulla facilisi. Vivamus ac fringilla urna. Praesent in.</p>,
   },
   parameters: {
     layout: "fullscreen",
   },
 } as Meta;
 
-type GroupStoryProps = Readonly<
-  GroupProps & {
-    icon: Array<string>;
-  }
->;
-
-const Template: StoryFn<GroupStoryProps> = (args: GroupStoryProps) => (
-  <GroupComponent {...args}>
-    <p>Nulla facilisi. Vivamus ac fringilla urna. Praesent in. {args.design}</p>
-  </GroupComponent>
-);
-
 export const Default = {
-  render: Template,
-
   args: {
-    design: GroupDesign.DEFAULT,
+    design: GroupDesign.Default,
   },
 };
 
 export const Alternate = {
-  render: Template,
-
   args: {
-    design: GroupDesign.ALTERNATE,
+    design: GroupDesign.Alternate,
   },
 };

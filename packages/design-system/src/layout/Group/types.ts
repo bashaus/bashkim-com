@@ -1,4 +1,4 @@
 export enum GroupDesign {
-  DEFAULT = "default",
-  ALTERNATE = "alternate",
+  Default = "Default",
+  Alternate = "Alternate",
 }

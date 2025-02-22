@@ -1,51 +1,47 @@
-import { PropsWithChildren, ReactNode } from "react";
-
-import styles from "./styles.module.scss";
+import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
+import Grid from "@mui/material/Grid2";
+import { PropsWithChildren } from "react";
 
 export type PageHeaderPartialProps = Readonly<
   PropsWithChildren<{
-    aside?: ReactNode;
-    id?: string;
     imageDesktop?: string;
     imageMobile?: string;
   }>
 >;
 
 export default function PageHeaderPartial({
-  aside,
   children,
-  id,
   imageDesktop,
   imageMobile,
 }: PageHeaderPartialProps) {
   return (
-    <header className={styles["PageHeaderPartial"]} id={id}>
-      {id && imageDesktop && (
-        <style type="text/css">
-          {`
-          #${id} {
-            background-image: url(${imageDesktop});
-          }
-        `}
-        </style>
-      )}
+    <Box
+      component="header"
+      sx={(theme) => ({
+        display: "flex",
+        color: theme.palette.common.white,
 
-      {id && imageMobile && (
-        <style type="text/css">
-          {`
-          @media screen and (max-width: 767px) {
-            #${id} {
-              background-image: url(${imageMobile});
-            }
-          }
-        `}
-        </style>
-      )}
+        backgroundColor: theme.palette.grey[900],
+        minHeight: 400,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        backgroundPosition: "center center",
 
-      <div className={styles["Foreground"]}>
-        <div className={styles["Content"]}>{children}</div>
-        {aside && <aside className={styles["Aside"]}>{aside}</aside>}
-      </div>
-    </header>
+        [theme.breakpoints.down("md")]: {
+          backgroundImage: imageMobile ? `url("${imageMobile}")` : undefined,
+        },
+        [theme.breakpoints.up("md")]: {
+          paddingTop: "61px",
+          backgroundImage: imageDesktop ? `url("${imageDesktop}")` : undefined,
+        },
+      })}
+    >
+      <Container sx={{ alignSelf: "flex-end", paddingBottom: 4 }}>
+        <Grid container>
+          <Grid size={{ xs: 12, sm: 12, md: 9, lg: 6 }}>{children}</Grid>
+        </Grid>
+      </Container>
+    </Box>
   );
 }

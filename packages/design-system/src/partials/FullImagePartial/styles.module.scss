@@ -1,9 +1,0 @@
-@import "~@bashkim-com/style-guide/grid.scss";
-
-.FullImagePartial {
-  @include grid-container-bounds;
-
-  & > * {
-    margin: 0 auto;
-  }
-}

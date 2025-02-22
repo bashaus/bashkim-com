@@ -1,18 +1,8 @@
-import classNames from "classnames";
-import { ComponentPropsWithoutRef } from "react";
+import Container from "@mui/material/Container";
+import { PropsWithChildren } from "react";
 
-import styles from "./styles.module.scss";
+export type FullImagePartialProps = Readonly<PropsWithChildren>;
 
-export type FullImagePartialProps = Readonly<ComponentPropsWithoutRef<"div">>;
-
-export default function FullImagePartial({
-  className,
-  ...props
-}: FullImagePartialProps) {
-  return (
-    <div
-      className={classNames(className, styles["FullImagePartial"])}
-      {...props}
-    />
-  );
+export default function FullImagePartial({ children }: FullImagePartialProps) {
+  return <Container>{children}</Container>;
 }

@@ -41,19 +41,19 @@ export default function CaseStudyPageLockup({
         </Group>
 
         {exhibitionSlices?.length > 0 && (
-          <Group design={GroupDesign.ALTERNATE}>
+          <Group design={GroupDesign.Alternate}>
             <CaseStudyExhibitions slices={exhibitionSlices} />
           </Group>
         )}
 
         {accoladeSlices?.length > 0 && (
-          <Group design={GroupDesign.ALTERNATE}>
+          <Group design={GroupDesign.Alternate}>
             <CaseStudyAccolades slices={accoladeSlices} />
           </Group>
         )}
 
         {collaboratorSlices?.length > 0 && (
-          <Group design={GroupDesign.ALTERNATE}>
+          <Group design={GroupDesign.Alternate}>
             <CaseStudyCollaborators
               myRole={caseStudyPage.info_role || undefined}
               slices={collaboratorSlices}

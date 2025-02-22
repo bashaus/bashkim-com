@@ -1,18 +1,9 @@
-import classNames from "classnames";
-import { ComponentPropsWithoutRef } from "react";
+import { PropsWithChildren } from "react";
 
-import styles from "./styles.module.scss";
+import * as S from "./styles";
 
-export type NewspaperPartialProps = Readonly<ComponentPropsWithoutRef<"div">>;
+export type NewspaperPartialProps = Readonly<PropsWithChildren>;
 
-export default function NewspaperPartial({
-  className,
-  ...props
-}: NewspaperPartialProps) {
-  return (
-    <div
-      className={classNames(className, styles["NewspaperPartial"])}
-      {...props}
-    />
-  );
+export default function NewspaperPartial({ children }: NewspaperPartialProps) {
+  return <S.NewspaperContainer>{children}</S.NewspaperContainer>;
 }

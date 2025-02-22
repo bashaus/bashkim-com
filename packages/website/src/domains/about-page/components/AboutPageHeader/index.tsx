@@ -9,8 +9,8 @@ import styles from "./styles.module.scss";
 export default function AboutPageHeader() {
   return (
     <PageHeaderPartial
-      id="AboutPage-Header"
       imageDesktop={HeaderDesktopImage.src}
+      imageMobile={HeaderDesktopImage.src}
     >
       <div className={styles["AboutPageHeader"]}>
         <Image

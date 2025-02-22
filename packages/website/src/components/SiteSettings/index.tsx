@@ -22,7 +22,7 @@ export default function SiteSettings({ open, onClose }: SiteSettingsProps) {
     <Dialog open={open} onClose={onClose} maxWidth="xs" fullWidth>
       <DialogTitle>Site settings</DialogTitle>
 
-      <DialogContent dividers>
+      <DialogContent>
         <Stack spacing={2}>
           <Box>
             <Typography variant="subtitle1" gutterBottom>

@@ -20,12 +20,11 @@ export default function PortfolioCaseStudyBrick({
             alt={caseStudy.meta_title ?? ""}
             width={caseStudy.image_icon.dimensions.width}
             height={caseStudy.image_icon.dimensions.height}
-            style={{ width: 100, height: 100, borderRadius: "50%" }}
+            style={{ width: 64, height: 64, borderRadius: "50%" }}
           />
         </S.Icon>
 
         <S.Text
-          sx={(theme) => ({ marginLeft: theme.spacing(2) })}
           primary={caseStudy.meta_title ?? ""}
           secondary={caseStudy.meta_description ?? ""}
         />

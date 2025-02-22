@@ -12,7 +12,6 @@ export default function CookiesDetails() {
   return (
     <>
       <PageHeaderPartial
-        id="CookiesPage-Header"
         imageDesktop={HeaderDesktopImage.src}
         imageMobile={HeaderMobileImage.src}
       />

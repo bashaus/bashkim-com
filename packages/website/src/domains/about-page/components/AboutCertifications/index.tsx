@@ -34,6 +34,10 @@ export default function AboutCertifications() {
                 src={JavaOcaImage.src}
                 width={JavaOcaImage.width}
                 height={JavaOcaImage.height}
+                style={{
+                  width: JavaOcaImage.width,
+                  height: JavaOcaImage.height,
+                }}
               />
             </p>
           </div>
@@ -59,18 +63,16 @@ export default function AboutCertifications() {
               <time dateTime="2012-08-23">August 2012</time>
             </p>
             <p>
-              <a
-                href="https://www.zend.com/en/yellow-pages/ZEND020625"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Image
-                  alt="Zend Certified Engineer"
-                  src={PhpZceImage.src}
-                  width={PhpZceImage.width}
-                  height={PhpZceImage.height}
-                />
-              </a>
+              <Image
+                alt="Zend Certified Engineer"
+                src={PhpZceImage.src}
+                width={PhpZceImage.width}
+                height={PhpZceImage.height}
+                style={{
+                  width: PhpZceImage.width,
+                  height: PhpZceImage.height,
+                }}
+              />
             </p>
           </div>
         </SplitItemPartial>

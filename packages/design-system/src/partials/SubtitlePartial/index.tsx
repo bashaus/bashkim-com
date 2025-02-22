@@ -1,22 +1,21 @@
-import classNames from "classnames";
-import { ComponentPropsWithoutRef } from "react";
+import Container from "@mui/material/Container";
+import { PropsWithChildren } from "react";
 
 import RichTextFormatter from "../../formatters/RichTextFormatter";
-import styles from "./styles.module.scss";
 
-export type SubtitlePartialProps = Readonly<ComponentPropsWithoutRef<"div">>;
+export type SubtitlePartialProps = Readonly<
+  PropsWithChildren<{
+    id?: string;
+  }>
+>;
 
 export default function SubtitlePartial({
+  id,
   children,
-  className,
-  ...props
 }: SubtitlePartialProps) {
   return (
-    <div
-      className={classNames(className, styles["SubtitlePartial"])}
-      {...props}
-    >
+    <Container id={id}>
       <RichTextFormatter>{children}</RichTextFormatter>
-    </div>
+    </Container>
   );
 }
