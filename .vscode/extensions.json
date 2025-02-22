@@ -6,7 +6,6 @@
     "esbenp.prettier-vscode",
     "graphql.vscode-graphql",
     "jock.svg",
-    "mikestead.dotenv",
-    "stylelint.vscode-stylelint"
+    "mikestead.dotenv"
   ]
 }
