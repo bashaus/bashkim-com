@@ -1,13 +1,14 @@
-import styles from "./styles.module.scss";
+import Container from "@mui/material/Container";
+import Typography from "@mui/material/Typography";
 
 export default function FooterCopyright() {
   return (
-    <p
-      className={styles["FooterCopyright"]}
+    <Container
       role="contentinfo"
-      aria-label="Copyright, Two-Thousand-and-Eight to Two-Thousand-and-Twenty-Three, Bashkim Isai. All rights reserved."
+      aria-label="Copyright, Two-Thousand-and-Eight to Two-Thousand-and-Twenty-Five, Bashkim Isai. All rights reserved."
+      sx={{ py: 2 }}
     >
-      <small aria-hidden="true">
+      <Typography aria-hidden="true" fontSize="small">
         Copyright &copy;{" "}
         <time dateTime="2008" title="2008">
           MMVIII
@@ -17,7 +18,7 @@ export default function FooterCopyright() {
           MMXXV
         </time>
         , Bashkim&nbsp;Isai. All&nbsp;rights&nbsp;reserved.
-      </small>
-    </p>
+      </Typography>
+    </Container>
   );
 }
