@@ -1,7 +1,7 @@
 import { ExhibitionSlice, SubtitlePartial } from "@bashkim-com/design-system";
 import type { ExhibitionSliceTypeFragment } from "@bashkim-com/prismic-dal";
-import { Grid2 } from "@mui/material";
 import Container from "@mui/material/Container";
+import Grid from "@mui/material/Grid2";
 
 export type CaseStudyExhibitionsProps = Readonly<{
   slices: Array<ExhibitionSliceTypeFragment>;
@@ -21,16 +21,16 @@ export default function CaseStudyExhibitions({
       </SubtitlePartial>
 
       <Container>
-        <Grid2 container>
+        <Grid container>
           {slices.map((slice) => (
-            <Grid2
+            <Grid
               size={{ xs: 12, sm: 6, md: 4, lg: 3, xl: 3 }}
               key={JSON.stringify(slice)}
             >
               <ExhibitionSlice slice={slice} />
-            </Grid2>
+            </Grid>
           ))}
-        </Grid2>
+        </Grid>
       </Container>
     </>
   );

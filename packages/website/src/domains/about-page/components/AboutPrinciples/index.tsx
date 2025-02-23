@@ -1,6 +1,6 @@
 import { Group, SubtitlePartial } from "@bashkim-com/design-system";
-import { Grid2 } from "@mui/material";
 import Container from "@mui/material/Container";
+import Grid from "@mui/material/Grid2";
 import Typography from "@mui/material/Typography";
 
 import EthicallyVector from "../../assets/principles/ethically.svg";
@@ -21,7 +21,7 @@ export default function AboutPrinciples() {
       </SubtitlePartial>
 
       <Container>
-        <Grid2 container rowSpacing={4} columnSpacing={2}>
+        <Grid container rowSpacing={4} columnSpacing={2}>
           <S.Principle>
             <S.Icon>
               <OnTimeVector />
@@ -141,7 +141,7 @@ export default function AboutPrinciples() {
               integration and automated&nbsp;deployment
             </Typography>
           </S.Principle>
-        </Grid2>
+        </Grid>
       </Container>
     </Group>
   );
