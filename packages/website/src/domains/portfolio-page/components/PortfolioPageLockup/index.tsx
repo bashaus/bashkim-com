@@ -7,7 +7,6 @@ import {
   SubtitlePartial,
 } from "@bashkim-com/design-system";
 import { PortfolioPageModelFragment } from "@bashkim-com/prismic-dal";
-import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 
 import MenuButtonHome from "../../../../components/MenuButtonHome";

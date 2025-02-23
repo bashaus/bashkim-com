@@ -4,8 +4,8 @@ import {
   PrismicRichText,
   useLinkResolver,
 } from "@bashkim-com/prismic-helpers";
-import { Grid2 } from "@mui/material";
 import Container from "@mui/material/Container";
+import Grid from "@mui/material/Grid2";
 import Typography from "@mui/material/Typography";
 import { Link } from "prismic-reactjs";
 
@@ -40,8 +40,8 @@ export default function AccoladeSlice({ slice }: AccoladeSliceProps) {
 
   return (
     <Container>
-      <Grid2 container spacing={2}>
-        <Grid2 size={{ xs: 12, sm: 12, md: 3, lg: 3, xl: 3 }}>
+      <Grid container spacing={2}>
+        <Grid size={{ xs: 12, sm: 12, md: 3, lg: 3, xl: 3 }}>
           <RichTextFormatter>
             <PrismicRichText render={issuer} />
             <PrismicRichText render={description} />
@@ -53,9 +53,9 @@ export default function AccoladeSlice({ slice }: AccoladeSliceProps) {
               </p>
             )}
           </RichTextFormatter>
-        </Grid2>
+        </Grid>
 
-        <Grid2
+        <Grid
           container
           size={{ xs: 12, sm: 12, md: 9, lg: 9, xl: 9 }}
           spacing={2}
@@ -70,7 +70,7 @@ export default function AccoladeSlice({ slice }: AccoladeSliceProps) {
             const awardHref = Link.url(awardLink, PrismicLinkResolver);
 
             return (
-              <Grid2
+              <Grid
                 size={{ xs: 12, sm: 6, md: 4, lg: 3, xl: 3 }}
                 key={JSON.stringify(field)}
                 data-prop-place={awardPlace}
@@ -88,11 +88,11 @@ export default function AccoladeSlice({ slice }: AccoladeSliceProps) {
                     <PrismicRichText render={awardCategory} />
                   </RichTextFormatter>
                 </S.Link>
-              </Grid2>
+              </Grid>
             );
           })}
-        </Grid2>
-      </Grid2>
+        </Grid>
+      </Grid>
     </Container>
   );
 }
