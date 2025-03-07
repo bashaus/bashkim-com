@@ -25,7 +25,7 @@ export default function Tile({
   poster,
 }: TileProps) {
   return (
-    <Card>
+    <Card data-testid="Tile">
       <CardActionArea>
         <CardHeader
           avatar={

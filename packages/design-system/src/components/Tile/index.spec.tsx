@@ -1,13 +1,24 @@
 import { render } from "@testing-library/react";
+import { placeholderImage } from "placeholder-image-data-url-svg";
 
 import Tile from ".";
 
 describe("<Tile />", () => {
   it("should render", () => {
     const title = "title text";
+    const description = "description text";
 
     const { getByTestId, getByText } = render(
-      <Tile data-testid="Tile" title={title} />,
+      <Tile
+        title={title}
+        description={description}
+        icon={{
+          alt: "",
+          src: placeholderImage({ width: 300, height: 300, text: "icon" }),
+          width: 300,
+          height: 300,
+        }}
+      />,
     );
 
     expect(getByTestId("Tile")).toBeTruthy();

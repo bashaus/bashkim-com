@@ -33,7 +33,16 @@ const Template: StoryFn<TileStoryProps> = ({
   poster,
   ...args
 }: TileStoryProps) => (
-  <TileComponent {...args} icon={<img src={icon[0]} />} poster={poster[0]} />
+  <TileComponent
+    {...args}
+    icon={{
+      alt: "",
+      src: icon[0],
+      width: 300,
+      height: 300,
+    }}
+    poster={poster[0]}
+  />
 );
 
 export const Tile = {
