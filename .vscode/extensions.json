@@ -5,7 +5,6 @@
     "editorconfig.editorconfig",
     "esbenp.prettier-vscode",
     "graphql.vscode-graphql",
-    "jock.svg",
     "mikestead.dotenv"
   ]
 }
