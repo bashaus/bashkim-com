@@ -1,5 +1,5 @@
 export function matchMultipartTitle(title: string) {
-  const part = title.match(/^(\[(\d+)\/(\d+)\] )?(.+)$/);
+  const part = /^(\[(\d+)\/(\d+)\] )?(.+)$/.exec(title);
 
   if (part?.[1]) {
     return {
