@@ -5,7 +5,7 @@ import { PropsWithChildren } from "react";
 import SocialDrawerView from "./view";
 import { useSocialDrawerViewModel } from "./view-model";
 
-export type SocialDrawerProps = PropsWithChildren;
+export type SocialDrawerProps = Readonly<PropsWithChildren>;
 
 export default function SocialDrawer({ children }: SocialDrawerProps) {
   const viewModel = useSocialDrawerViewModel();
