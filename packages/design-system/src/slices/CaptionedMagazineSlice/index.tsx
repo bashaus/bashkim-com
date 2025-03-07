@@ -52,7 +52,7 @@ export default function CaptionedMagazineSlice({
           disableFlipByClick={false}
         >
           {fields.map((field) => (
-            <div>
+            <div key={JSON.stringify(field)}>
               <div
                 style={{
                   width: firstImage.dimensions.width / 2,
