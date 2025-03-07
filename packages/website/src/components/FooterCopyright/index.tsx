@@ -4,7 +4,6 @@ import Typography from "@mui/material/Typography";
 export default function FooterCopyright() {
   return (
     <Container
-      role="contentinfo"
       aria-label="Copyright, Two-Thousand-and-Eight to Two-Thousand-and-Twenty-Five, Bashkim Isai. All rights reserved."
       sx={{ py: 2 }}
     >
