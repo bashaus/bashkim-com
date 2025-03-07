@@ -21,7 +21,6 @@ export default function FooterColumn({ label, children }: FooterColumnProps) {
       <div
         className={styles["Label"]}
         onClick={handleHeaderClick}
-        onKeyPress={handleHeaderClick}
         role="menuitem"
       >
         {label}
