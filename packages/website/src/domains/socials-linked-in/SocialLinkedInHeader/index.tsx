@@ -1,7 +1,7 @@
 "use client";
 
-import LinkedInVector from "../../../assets/vectors/social/linked-in.svg";
-import SocialHeader from "../../socials/SocialHeader";
+import LinkedInVector from "@/assets/vectors/social/linked-in.svg";
+import SocialHeader from "@/domains/socials/SocialHeader";
 
 export default function SocialLinkedInHeader() {
   return (

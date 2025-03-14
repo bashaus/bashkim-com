@@ -3,14 +3,15 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid2";
 import Typography from "@mui/material/Typography";
 
-import EthicallyVector from "../../assets/principles/ethically.svg";
-import MaintainableVector from "../../assets/principles/maintainable.svg";
-import OnTimeVector from "../../assets/principles/on-time.svg";
-import RobustVector from "../../assets/principles/robust.svg";
-import SecurelyVector from "../../assets/principles/securely.svg";
-import ToSatisfactionVector from "../../assets/principles/to-satisfaction.svg";
-import ToSpecificationVector from "../../assets/principles/to-specification.svg";
-import WithinBudgetVector from "../../assets/principles/within-budget.svg";
+import EthicallyVector from "@/domains/about-page/assets/principles/ethically.svg";
+import MaintainableVector from "@/domains/about-page/assets/principles/maintainable.svg";
+import OnTimeVector from "@/domains/about-page/assets/principles/on-time.svg";
+import RobustVector from "@/domains/about-page/assets/principles/robust.svg";
+import SecurelyVector from "@/domains/about-page/assets/principles/securely.svg";
+import ToSatisfactionVector from "@/domains/about-page/assets/principles/to-satisfaction.svg";
+import ToSpecificationVector from "@/domains/about-page/assets/principles/to-specification.svg";
+import WithinBudgetVector from "@/domains/about-page/assets/principles/within-budget.svg";
+
 import * as S from "./styles";
 
 export default function AboutPrinciples() {

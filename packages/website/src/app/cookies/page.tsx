@@ -1,5 +1,5 @@
-import CookiesPageLockup from "../../domains/cookies-page/components/CookiesPageLockup";
-import generateCanonical from "../../libraries/app/generateCanonical";
+import CookiesPageLockup from "@/domains/cookies-page/components/CookiesPageLockup";
+import generateCanonical from "@/libraries/app/generateCanonical";
 
 export async function generateMetadata() {
   return {

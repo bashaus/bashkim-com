@@ -9,11 +9,11 @@ import {
 import { PortfolioPageModelFragment } from "@bashkim-com/prismic-dal";
 import Typography from "@mui/material/Typography";
 
-import MenuButtonHome from "../../../../components/MenuButtonHome";
-import Page from "../../../../components/Page";
-import backgroundImage from "../../assets/background-image.jpg";
-import PortfolioCategory from "../PortfolioCategory";
-import PortfolioFeaturedCaseStudies from "../PortfolioFeaturedCaseStudies";
+import MenuButtonHome from "@/components/MenuButtonHome";
+import Page from "@/components/Page";
+import backgroundImage from "@/domains/portfolio-page/assets/background-image.jpg";
+import PortfolioCategory from "@/domains/portfolio-page/components/PortfolioCategory";
+import PortfolioFeaturedCaseStudies from "@/domains/portfolio-page/components/PortfolioFeaturedCaseStudies";
 
 type PortfolioPageProps = Readonly<{
   portfolioPage: PortfolioPageModelFragment;

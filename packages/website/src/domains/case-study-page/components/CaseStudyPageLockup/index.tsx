@@ -6,13 +6,13 @@ import {
   CaseStudyPageModelFragment,
 } from "@bashkim-com/prismic-dal";
 
-import MenuButtonPortfolio from "../../../../components/MenuButtonPortfolio";
-import Page from "../../../../components/Page";
-import Slice from "../../../../components/Slice";
-import CaseStudyAccolades from "../CaseStudyAccolades";
-import CaseStudyCollaborators from "../CaseStudyCollaborators";
-import CaseStudyExhibitions from "../CaseStudyExhibitions";
-import CaseStudyHeader from "../CaseStudyHeader";
+import MenuButtonPortfolio from "@/components/MenuButtonPortfolio";
+import Page from "@/components/Page";
+import Slice from "@/components/Slice";
+import CaseStudyAccolades from "@/domains/case-study-page/components/CaseStudyAccolades";
+import CaseStudyCollaborators from "@/domains/case-study-page/components/CaseStudyCollaborators";
+import CaseStudyExhibitions from "@/domains/case-study-page/components/CaseStudyExhibitions";
+import CaseStudyHeader from "@/domains/case-study-page/components/CaseStudyHeader";
 
 export type CaseStudyPageProps = Readonly<{
   caseStudyPage: CaseStudyPageModelFragment;

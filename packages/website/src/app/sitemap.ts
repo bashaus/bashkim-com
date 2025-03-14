@@ -5,7 +5,7 @@ import {
 import { MetadataRoute } from "next";
 import { Date as PrismicDate } from "prismic-reactjs";
 
-import prismicClient from "../libraries/prismic/PrismicClient";
+import prismicClient from "@/libraries/prismic/PrismicClient";
 
 export async function generateSitemaps() {
   return [{ id: "pages" }];

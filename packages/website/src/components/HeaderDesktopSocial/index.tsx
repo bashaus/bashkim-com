@@ -3,10 +3,10 @@ import IconButton from "@mui/material/IconButton";
 import Tooltip from "@mui/material/Tooltip";
 import Link from "next/link";
 
-import GitHubVector from "../../assets/vectors/social/github.svg";
-import LinkedInOutlinedVector from "../../assets/vectors/social/linked-in-outlined.svg";
-import MediumVector from "../../assets/vectors/social/medium.svg";
-import StackOverflowVector from "../../assets/vectors/social/stack-overflow.svg";
+import GitHubVector from "@/assets/vectors/social/github.svg";
+import LinkedInOutlinedVector from "@/assets/vectors/social/linked-in-outlined.svg";
+import MediumVector from "@/assets/vectors/social/medium.svg";
+import StackOverflowVector from "@/assets/vectors/social/stack-overflow.svg";
 
 export default function HeaderDesktopSocial() {
   return (

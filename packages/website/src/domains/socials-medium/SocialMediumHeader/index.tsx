@@ -1,5 +1,5 @@
-import MediumVector from "../../../assets/vectors/social/medium.svg";
-import SocialHeader from "../../socials/SocialHeader";
+import MediumVector from "@/assets/vectors/social/medium.svg";
+import SocialHeader from "@/domains/socials/SocialHeader";
 
 export default function SocialMediumHeader() {
   return (

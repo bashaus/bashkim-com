@@ -3,7 +3,7 @@ import DialogContent from "@mui/material/DialogContent";
 import Divider from "@mui/material/Divider";
 import ListSubheader from "@mui/material/ListSubheader";
 
-import SocialGitHubHeader from "../SocialGitHubHeader";
+import SocialGitHubHeader from "@/domains/socials-github/SocialGitHubHeader";
 
 export default function SocialGitHubLoading() {
   return (

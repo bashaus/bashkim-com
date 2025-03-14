@@ -3,9 +3,9 @@ import GridOnIcon from "@mui/icons-material/GridOn";
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 import { useCallback } from "react";
 
-import { SettingsActionSetGridLines } from "../../contexts/Settings/actions";
-import { useSettings } from "../../contexts/Settings/context";
-import SiteSettingsToggleButton from "../SiteSettingsToggleButton";
+import SiteSettingsToggleButton from "@/components/SiteSettingsToggleButton";
+import { SettingsActionSetGridLines } from "@/contexts/Settings/actions";
+import { useSettings } from "@/contexts/Settings/context";
 
 export default function SiteSettingsGridLines() {
   const { settingsState, settingsDispatch } = useSettings();

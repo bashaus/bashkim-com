@@ -1,7 +1,8 @@
 import { useCallback, useEffect, useRef } from "react";
 
-import { NavigationActionSetScrollAtTop } from "../../contexts/Navigation/actions";
-import { useNavigation } from "../../contexts/Navigation/context";
+import { NavigationActionSetScrollAtTop } from "@/contexts/Navigation/actions";
+import { useNavigation } from "@/contexts/Navigation/context";
+
 import styles from "./styles.module.scss";
 
 export default function HeaderIntersection() {

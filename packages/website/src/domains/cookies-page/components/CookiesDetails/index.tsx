@@ -4,8 +4,9 @@ import {
   PageHeaderPartial,
 } from "@bashkim-com/design-system";
 
-import HeaderDesktopImage from "../../assets/header-desktop.jpg";
-import HeaderMobileImage from "../../assets/header-mobile.jpg";
+import HeaderDesktopImage from "@/domains/cookies-page/assets/header-desktop.jpg";
+import HeaderMobileImage from "@/domains/cookies-page/assets/header-mobile.jpg";
+
 import styles from "./styles.module.scss";
 
 export default function CookiesDetails() {

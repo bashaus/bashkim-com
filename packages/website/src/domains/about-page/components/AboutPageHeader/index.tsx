@@ -2,8 +2,9 @@ import { PageHeaderPartial } from "@bashkim-com/design-system";
 import Typography from "@mui/material/Typography";
 import Image from "next/image";
 
-import PhotoImage from "../../../../assets/images/photo/photo@4x.jpg";
-import HeaderDesktopImage from "../../assets/header-desktop.jpg";
+import PhotoImage from "@/assets/images/photo/photo@4x.jpg";
+import HeaderDesktopImage from "@/domains/about-page/assets/header-desktop.jpg";
+
 import styles from "./styles.module.scss";
 
 export default function AboutPageHeader() {

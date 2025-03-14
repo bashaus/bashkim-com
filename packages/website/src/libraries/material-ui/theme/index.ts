@@ -2,7 +2,7 @@ import { siteMuiTheme } from "@bashkim-com/design-system";
 import createTheme from "@mui/material/styles/createTheme";
 import deepmerge from "@mui/utils/deepmerge";
 
-import MuiButtonBaseTheme from "../components/MuiButtonBase";
+import MuiButtonBaseTheme from "@/libraries/material-ui/components/MuiButtonBase";
 
 const nextMuiTheme = createTheme({
   components: {

@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-import PortfolioPageLockup from "../../domains/portfolio-page/components/PortfolioPageLockup";
-import generateCanonical from "../../libraries/app/generateCanonical";
+import PortfolioPageLockup from "@/domains/portfolio-page/components/PortfolioPageLockup";
+import generateCanonical from "@/libraries/app/generateCanonical";
+
 import { getPrismicPage } from "./queries";
 
 export async function generateMetadata(): Promise<Metadata> {

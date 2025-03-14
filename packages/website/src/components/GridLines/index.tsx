@@ -1,4 +1,5 @@
-import { useSettings } from "../../contexts/Settings/context";
+import { useSettings } from "@/contexts/Settings/context";
+
 import * as S from "./styles";
 
 export default function GridLines() {

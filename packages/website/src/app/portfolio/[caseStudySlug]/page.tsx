@@ -1,8 +1,9 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-import CaseStudyPageLockup from "../../../domains/case-study-page/components/CaseStudyPageLockup";
-import generateCanonical from "../../../libraries/app/generateCanonical";
+import CaseStudyPageLockup from "@/domains/case-study-page/components/CaseStudyPageLockup";
+import generateCanonical from "@/libraries/app/generateCanonical";
+
 import { getPrismicBody, getPrismicPage, getPrismicSlugs } from "./queries";
 
 export const generateStaticParams = async () => {

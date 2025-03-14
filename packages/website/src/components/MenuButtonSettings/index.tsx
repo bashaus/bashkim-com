@@ -3,7 +3,8 @@ import IconButton from "@mui/material/IconButton";
 import Tooltip from "@mui/material/Tooltip";
 import { ComponentPropsWithoutRef, useCallback, useState } from "react";
 
-import SiteSettings from "../SiteSettings";
+import SiteSettings from "@/components/SiteSettings";
+
 import styles from "./styles.module.scss";
 
 export type MenuButtonSettingsProps = Readonly<ComponentPropsWithoutRef<"div">>;

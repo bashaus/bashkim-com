@@ -5,7 +5,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ComponentPropsWithRef, ReactNode } from "react";
 
-import MenuButtonSettings from "../MenuButtonSettings";
+import MenuButtonSettings from "@/components/MenuButtonSettings";
+
 import styles from "./styles.module.scss";
 
 export type MenuProps = Readonly<

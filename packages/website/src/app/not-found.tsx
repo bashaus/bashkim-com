@@ -3,8 +3,8 @@
 import { PageHeaderPartial } from "@bashkim-com/design-system";
 import Typography from "@mui/material/Typography";
 
-import MenuButtonHome from "../components/MenuButtonHome";
-import Page from "../components/Page";
+import MenuButtonHome from "@/components/MenuButtonHome";
+import Page from "@/components/Page";
 
 const NotFoundPage = () => {
   return (

@@ -6,7 +6,7 @@ import {
 } from "@bashkim-com/design-system";
 import Link from "next/link";
 
-import FooterCopyright from "../FooterCopyright";
+import FooterCopyright from "@/components/FooterCopyright";
 
 export default function Footer() {
   return (

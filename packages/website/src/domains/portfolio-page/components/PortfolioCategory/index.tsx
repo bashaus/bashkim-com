@@ -7,7 +7,7 @@ import { PrismicRichText } from "@bashkim-com/prismic-helpers";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid2";
 
-import PortfolioCaseStudyBrick from "../PortfolioCaseStudyBrick";
+import PortfolioCaseStudyBrick from "@/domains/portfolio-page/components/PortfolioCaseStudyBrick";
 
 export type PortfolioCategoryProps = Readonly<{
   portfolioCategory: PortfolioCategorySliceTypeFragment;

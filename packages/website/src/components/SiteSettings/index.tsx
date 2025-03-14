@@ -9,8 +9,8 @@ import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import { ComponentPropsWithoutRef } from "react";
 
-import SiteSettingsAppearance from "../SiteSettingsAppearance";
-import SiteSettingsGridLines from "../SiteSettingsGridLines";
+import SiteSettingsAppearance from "@/components/SiteSettingsAppearance";
+import SiteSettingsGridLines from "@/components/SiteSettingsGridLines";
 
 export type SiteSettingsProps = Readonly<{
   open: boolean;

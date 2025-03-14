@@ -1,8 +1,9 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-import HomePageLockup from "../domains/home-page/components/HomePageLockup";
-import generateCanonical from "../libraries/app/generateCanonical";
+import HomePageLockup from "@/domains/home-page/components/HomePageLockup";
+import generateCanonical from "@/libraries/app/generateCanonical";
+
 import { getPrismicPage } from "./queries";
 
 export const generateMetadata = async (): Promise<Metadata> => {

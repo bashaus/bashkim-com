@@ -1,8 +1,9 @@
 import { SplitItemPartial, SplitPartial } from "@bashkim-com/design-system";
 import Button from "@mui/material/Button";
 
-import PortfolioBackground from "../../assets/portfolio-background.jpg";
-import PracticeBackground from "../../assets/practice-background.jpg";
+import PortfolioBackground from "@/domains/home-page/assets/portfolio-background.jpg";
+import PracticeBackground from "@/domains/home-page/assets/practice-background.jpg";
+
 import styles from "./styles.module.scss";
 
 export default function HomeFooter() {

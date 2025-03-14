@@ -8,8 +8,9 @@ import {
 import type { CaseStudyPageModelFragment } from "@bashkim-com/prismic-dal";
 import Image from "next/image";
 
-import CaseStudyDetails from "../CaseStudyDetails";
-import CaseStudyTechnologies from "../CaseStudyTechnologies";
+import CaseStudyDetails from "@/domains/case-study-page/components/CaseStudyDetails";
+import CaseStudyTechnologies from "@/domains/case-study-page/components/CaseStudyTechnologies";
+
 import styles from "./styles.module.scss";
 
 export type CaseStudyHeaderProps = Readonly<{

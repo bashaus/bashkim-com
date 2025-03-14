@@ -1,5 +1,5 @@
-import GitHubVector from "../../../assets/vectors/social/github.svg";
-import SocialHeader from "../../socials/SocialHeader";
+import GitHubVector from "@/assets/vectors/social/github.svg";
+import SocialHeader from "@/domains/socials/SocialHeader";
 
 export default function SocialGitHubHeader() {
   return (

@@ -2,7 +2,7 @@ import { PageHeaderPartial } from "@bashkim-com/design-system";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
-import BackgroundImage from "../../assets/background-image.jpg";
+import BackgroundImage from "@/domains/home-page/assets/background-image.jpg";
 
 export default function HomeHello() {
   return (

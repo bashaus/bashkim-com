@@ -2,10 +2,10 @@
 
 import { HomePageModelFragment } from "@bashkim-com/prismic-dal";
 
-import Page from "../../../../components/Page";
-import HomeFeatured from "../HomeFeatured";
-import HomeFooter from "../HomeFooter";
-import HomeHello from "../HomeHello";
+import Page from "@/components/Page";
+import HomeFeatured from "@/domains/home-page/components/HomeFeatured";
+import HomeFooter from "@/domains/home-page/components/HomeFooter";
+import HomeHello from "@/domains/home-page/components/HomeHello";
 
 type HomePageLockupProps = Readonly<{
   homePage: HomePageModelFragment;

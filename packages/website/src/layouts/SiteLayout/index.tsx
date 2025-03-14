@@ -6,10 +6,10 @@ import { LinkResolverContext } from "@bashkim-com/prismic-helpers";
 import ThemeProvider from "@mui/material/styles/ThemeProvider";
 import type { PropsWithChildren } from "react";
 
-import NavigationProvider from "../../contexts/Navigation/provider";
-import SettingsProvider from "../../contexts/Settings/provider";
-import theme from "../../libraries/material-ui/theme";
-import PrismicLinkResolver from "../../libraries/prismic/PrismicLinkResolver";
+import NavigationProvider from "@/contexts/Navigation/provider";
+import SettingsProvider from "@/contexts/Settings/provider";
+import theme from "@/libraries/material-ui/theme";
+import PrismicLinkResolver from "@/libraries/prismic/PrismicLinkResolver";
 
 export type SiteLayoutProps = Readonly<PropsWithChildren>;
 

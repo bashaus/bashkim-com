@@ -1,9 +1,10 @@
 import { ReactNode } from "react";
 
-import { useNavigation } from "../../contexts/Navigation/context";
-import Menu from "../Menu";
-import MenuButtonSettings from "../MenuButtonSettings";
-import Navigation from "../Navigation";
+import Menu from "@/components/Menu";
+import MenuButtonSettings from "@/components/MenuButtonSettings";
+import Navigation from "@/components/Navigation";
+import { useNavigation } from "@/contexts/Navigation/context";
+
 import styles from "./styles.module.scss";
 
 export type HeaderProps = Readonly<{

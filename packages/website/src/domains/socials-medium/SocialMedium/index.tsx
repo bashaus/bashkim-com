@@ -10,7 +10,7 @@ import ListSubheader from "@mui/material/ListSubheader";
 import MenuItem from "@mui/material/MenuItem";
 import Stack from "@mui/material/Stack";
 
-import SocialMediumHeader from "../SocialMediumHeader";
+import SocialMediumHeader from "@/domains/socials-medium/SocialMediumHeader";
 
 export type SocialMediumProps = Readonly<{
   articles: Array<MediumArticle>;

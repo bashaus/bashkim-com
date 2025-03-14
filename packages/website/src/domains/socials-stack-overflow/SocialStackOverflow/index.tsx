@@ -12,8 +12,9 @@ import ListSubheader from "@mui/material/ListSubheader";
 import MenuItem from "@mui/material/MenuItem";
 import Stack from "@mui/material/Stack";
 
-import StackOverflowFilledVector from "../../../assets/vectors/social/stack-overflow-filled.svg";
-import SocialHeader from "../../socials/SocialHeader";
+import StackOverflowFilledVector from "@/assets/vectors/social/stack-overflow-filled.svg";
+import SocialHeader from "@/domains/socials/SocialHeader";
+
 import styles from "./styles.module.scss";
 
 export type SocialStackOverflowProps = Readonly<{

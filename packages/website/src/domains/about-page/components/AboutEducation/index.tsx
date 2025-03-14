@@ -6,10 +6,11 @@ import {
 } from "@bashkim-com/design-system";
 import Image from "next/image";
 
-import QutGardensPointImage from "../../assets/education/qut/gardens-point.jpg";
-import QutLogoImage from "../../assets/education/qut/logo.jpg";
-import UqBackgroundImage from "../../assets/education/uq/background.jpg";
-import UqLogoImage from "../../assets/education/uq/logo.png";
+import QutGardensPointImage from "@/domains/about-page/assets/education/qut/gardens-point.jpg";
+import QutLogoImage from "@/domains/about-page/assets/education/qut/logo.jpg";
+import UqBackgroundImage from "@/domains/about-page/assets/education/uq/background.jpg";
+import UqLogoImage from "@/domains/about-page/assets/education/uq/logo.png";
+
 import styles from "./styles.module.scss";
 
 export default function AboutEducation() {

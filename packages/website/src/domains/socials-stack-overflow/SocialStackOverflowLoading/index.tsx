@@ -3,8 +3,8 @@ import DialogContent from "@mui/material/DialogContent";
 import Divider from "@mui/material/Divider";
 import ListSubheader from "@mui/material/ListSubheader";
 
-import StackOverflowFilledVector from "../../../assets/vectors/social/stack-overflow-filled.svg";
-import SocialHeader from "../../socials/SocialHeader";
+import StackOverflowFilledVector from "@/assets/vectors/social/stack-overflow-filled.svg";
+import SocialHeader from "@/domains/socials/SocialHeader";
 
 export default function SocialStackOverflowLoading() {
   return (

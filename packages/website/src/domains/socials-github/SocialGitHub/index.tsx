@@ -9,8 +9,8 @@ import ListItemText from "@mui/material/ListItemText";
 import ListSubheader from "@mui/material/ListSubheader";
 import MenuItem from "@mui/material/MenuItem";
 
-import GitHubRepo from "../../../assets/vectors/icons/github-repo.svg";
-import SocialGitHubHeader from "../SocialGitHubHeader";
+import GitHubRepo from "@/assets/vectors/icons/github-repo.svg";
+import SocialGitHubHeader from "@/domains/socials-github/SocialGitHubHeader";
 
 export type SocialGitHubProps = Readonly<{
   repositoryCount: number;

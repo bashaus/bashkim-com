@@ -6,10 +6,11 @@ import {
 } from "@bashkim-com/design-system";
 import Image from "next/image";
 
-import JavaLogoImage from "../../assets/certifications/java/logo.jpg";
-import JavaOcaImage from "../../assets/certifications/java/oca.png";
-import PhpLogoImage from "../../assets/certifications/php/logo.png";
-import PhpZceImage from "../../assets/certifications/php/zce.jpg";
+import JavaLogoImage from "@/domains/about-page/assets/certifications/java/logo.jpg";
+import JavaOcaImage from "@/domains/about-page/assets/certifications/java/oca.png";
+import PhpLogoImage from "@/domains/about-page/assets/certifications/php/logo.png";
+import PhpZceImage from "@/domains/about-page/assets/certifications/php/zce.jpg";
+
 import styles from "./styles.module.scss";
 
 export default function AboutCertifications() {

@@ -2,7 +2,7 @@ import { AppRouterCacheProvider } from "@mui/material-nextjs/v14-appRouter";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import type { PropsWithChildren, ReactNode } from "react";
 
-import SiteLayout from "../layouts/SiteLayout";
+import SiteLayout from "@/layouts/SiteLayout";
 
 export async function generateMetadata() {
   return {
