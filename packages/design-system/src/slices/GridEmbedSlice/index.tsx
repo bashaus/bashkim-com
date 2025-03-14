@@ -15,7 +15,10 @@ export default function GridEmbedSlice({ slice }: GridEmbedSliceProps) {
         {slice.fields?.map((field) => {
           const { grid_embed_slice_type_embed: embed } = field;
           return (
-            <Grid size={{ xs: 12, sm: 6, md: 6, lg: 4, xl: 4 }}>
+            <Grid
+              size={{ xs: 12, sm: 6, md: 6, lg: 4, xl: 4 }}
+              key={JSON.stringify(field)}
+            >
               <div className={styles["Embed"]} key={JSON.stringify(field)}>
                 <div dangerouslySetInnerHTML={{ __html: embed?.html ?? "" }} />
               </div>
