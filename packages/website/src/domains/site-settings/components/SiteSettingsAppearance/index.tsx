@@ -6,7 +6,7 @@ import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 import { Mode } from "@mui/system/cssVars/useCurrentColorScheme";
 import { MouseEventHandler, useCallback } from "react";
 
-import SiteSettingsToggleButton from "@/components/SiteSettingsToggleButton";
+import SiteSettingsToggleButton from "@/domains/site-settings/components/SiteSettingsToggleButton";
 
 export default function SiteSettingsAppearance() {
   const { mode, setMode } = useColorScheme();

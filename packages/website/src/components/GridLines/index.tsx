@@ -1,9 +1,9 @@
-import { useSettings } from "@/contexts/Settings/context";
+import { useSiteSettings } from "@/domains/site-settings/contexts/SiteSettings/context";
 
 import * as S from "./styles";
 
 export default function GridLines() {
-  const { settingsState } = useSettings();
+  const { siteSettingsState: settingsState } = useSiteSettings();
   const { isGridLinesVisible } = settingsState;
 
   if (!isGridLinesVisible) {

@@ -3,23 +3,23 @@ import GridOnIcon from "@mui/icons-material/GridOn";
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 import { useCallback } from "react";
 
-import SiteSettingsToggleButton from "@/components/SiteSettingsToggleButton";
-import { SettingsActionSetGridLines } from "@/contexts/Settings/actions";
-import { useSettings } from "@/contexts/Settings/context";
+import SiteSettingsToggleButton from "@/domains/site-settings/components/SiteSettingsToggleButton";
+import { SiteSettingsActionSetGridLines } from "@/domains/site-settings/contexts/SiteSettings/actions";
+import { useSiteSettings } from "@/domains/site-settings/contexts/SiteSettings/context";
 
 export default function SiteSettingsGridLines() {
-  const { settingsState, settingsDispatch } = useSettings();
-  const { isGridLinesVisible } = settingsState;
+  const { siteSettingsState, siteSettingsDispatch } = useSiteSettings();
+  const { isGridLinesVisible } = siteSettingsState;
 
   const handleChange = useCallback(
     (event) => {
-      settingsDispatch(
-        SettingsActionSetGridLines({
+      siteSettingsDispatch(
+        SiteSettingsActionSetGridLines({
           visible: event.currentTarget.value === "1",
         }),
       );
     },
-    [settingsDispatch],
+    [siteSettingsDispatch],
   );
 
   return (
