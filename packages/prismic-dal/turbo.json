@@ -6,7 +6,9 @@
       "cache": false,
       "outputs": ["generated/prismic/schema.gql"]
     },
+
     "codegen": {
+      "dependsOn": ["codegen:deps"],
       "inputs": ["codegen.ts", "generated/prismic/schema.gql", "src/**/*.gql"]
     }
   }

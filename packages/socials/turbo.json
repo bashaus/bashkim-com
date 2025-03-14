@@ -6,7 +6,9 @@
       "cache": false,
       "outputs": ["generated/github/schema.gql"]
     },
+
     "codegen": {
+      "dependsOn": ["codegen:deps"],
       "inputs": [
         "codegen.ts",
         "generated/github/schema.gql",

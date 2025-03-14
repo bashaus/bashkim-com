@@ -5,12 +5,11 @@ extensions:
 
 projects:
   prismic-dal:
-    schema: "./packages/prismic-dal/dist/prismic.schema.gql"
+    schema: "./packages/prismic-dal/generated/prismic/schema.gql"
     documents:
       - "./packages/prismic-dal/src/**/*.gql"
 
   socials-github:
     schema: "./packages/socials/generated/github/schema.gql"
     documents:
-      - "./packages/socials/graphql/github/queries/**/*.gql"
-      - "./packages/socials/graphql/github/mutations/**/*.gql"
+      - "./packages/socials/graphql/github/**/*.gql"

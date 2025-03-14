@@ -6,28 +6,30 @@
     "build": {
       "dependsOn": ["^codegen", "^build"],
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
-      "outputs": [".next/**", "!.next/cache/**"],
-      "env": ["APP_SOCIALS_GITHUB_TOKEN"]
+      "outputs": [".next/**", "!.next/cache/**"]
     },
 
     "codegen:deps": {
       "cache": false
     },
+
     "codegen": {
       "dependsOn": ["codegen:deps"]
     },
 
     "dev": {
       "cache": false,
-      "dependsOn": ["^codegen"],
+      "dependsOn": ["codegen"],
       "persistent": true
     },
+
     "lint:scripts": {
-      "dependsOn": ["^lint:scripts"],
+      "dependsOn": ["codegen", "^lint:scripts"],
       "inputs": ["**/*.ts", "**/*.tsx", "**/*.mjs", "**/*.js"]
     },
+
     "storybook:build": {
-      "dependsOn": ["^codegen"],
+      "dependsOn": ["codegen"],
       "outputs": ["storybook-static/"]
     }
   }
