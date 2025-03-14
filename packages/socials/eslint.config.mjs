@@ -1,13 +1,13 @@
-import bashkimEslint from "@bashkim-com/eslint";
+import eslintConfig from "@bashkim-com/eslint";
 
 const config = [
-  ...bashkimEslint.configs.base,
+  ...eslintConfig.configs.base,
   {
     files: ["*.ts", "*.tsx"],
     rules: {},
   },
   {
-    ignores: ["graphql/**", "node_modules", "src/github/graphql-types.ts"],
+    ignores: ["src/github/graphql-types.ts"],
   },
 ];
 

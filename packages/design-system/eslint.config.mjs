@@ -1,7 +1,7 @@
-import bashkimEslint from "@bashkim-com/eslint";
+import eslintConfig from "@bashkim-com/eslint";
 
 const config = [
-  ...bashkimEslint.configs.base,
+  ...eslintConfig.configs.base,
   {
     files: ["*.ts", "*.tsx"],
     rules: {},

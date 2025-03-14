@@ -9,7 +9,8 @@
 
     "codegen": {
       "dependsOn": ["codegen:deps"],
-      "inputs": ["codegen.ts", "generated/prismic/schema.gql", "src/**/*.gql"]
+      "inputs": ["codegen.ts", "generated/prismic/schema.gql", "src/**/*.gql"],
+      "outputs": ["./dist/index.ts"]
     }
   }
 }

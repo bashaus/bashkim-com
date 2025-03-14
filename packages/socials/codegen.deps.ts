@@ -8,9 +8,6 @@ const codegenConfig: CodegenConfig = {
       plugins: ["schema-ast"],
     },
   },
-  hooks: {
-    afterAllFileWrite: ["npx prettier --write"],
-  },
 };
 
 export default codegenConfig;
