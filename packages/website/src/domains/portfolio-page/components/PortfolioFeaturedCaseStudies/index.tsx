@@ -31,28 +31,27 @@ export default function PortfolioFeaturedCaseStudies({
               key={caseStudy._meta.id}
             >
               <Stack display="flex" flexDirection="column" spacing={2}>
-                <Box flexGrow={0}>
-                  <RichTextFormatter>
-                    <PrismicRichText render={title} />
-                    <PrismicRichText render={description} />
-                  </RichTextFormatter>
-                </Box>
+                <RichTextFormatter>
+                  <PrismicRichText render={title} />
+                </RichTextFormatter>
 
-                <Box flexGrow={1}>
-                  <Link href={`/portfolio/${caseStudy._meta.uid}`}>
-                    <Tile
-                      title={caseStudy.meta_title ?? ""}
-                      description={caseStudy.meta_description ?? ""}
-                      icon={{
-                        src: caseStudy.image_icon.url,
-                        alt: caseStudy.image_icon.alt ?? "",
-                        width: caseStudy.image_icon.dimensions.width,
-                        height: caseStudy.image_icon.dimensions.height,
-                      }}
-                      poster={caseStudy.image_poster.url}
-                    />
-                  </Link>
-                </Box>
+                <Link href={`/portfolio/${caseStudy._meta.uid}`}>
+                  <Tile
+                    title={caseStudy.meta_title ?? ""}
+                    description={caseStudy.meta_description ?? ""}
+                    icon={{
+                      src: caseStudy.image_icon.url,
+                      alt: caseStudy.image_icon.alt ?? "",
+                      width: caseStudy.image_icon.dimensions.width,
+                      height: caseStudy.image_icon.dimensions.height,
+                    }}
+                    poster={caseStudy.image_poster.url}
+                  />
+                </Link>
+
+                <RichTextFormatter>
+                  <PrismicRichText render={description} />
+                </RichTextFormatter>
               </Stack>
             </Grid>
           );
