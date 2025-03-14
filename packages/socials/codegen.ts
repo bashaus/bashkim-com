@@ -5,10 +5,7 @@ const codegenConfig: CodegenConfig = {
   generates: {
     "./src/github/graphql-types.ts": {
       schema: "./generated/github/schema.gql",
-      documents: [
-        "./graphql/github/queries/**/*.gql",
-        "./graphql/github/mutations/**/*.gql",
-      ],
+      documents: ["./graphql/github/**/*.gql"],
       plugins: [
         "typescript",
         "typescript-operations",

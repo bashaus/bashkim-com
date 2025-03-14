@@ -9,14 +9,14 @@
       "outputs": [".next/**", "!.next/cache/**"],
       "env": ["APP_SOCIALS_GITHUB_TOKEN"]
     },
+
     "codegen:deps": {
-      "cache": false,
-      "outputs": ["generated/"]
+      "cache": false
     },
     "codegen": {
-      "cache": false,
       "dependsOn": ["codegen:deps"]
     },
+
     "dev": {
       "cache": false,
       "dependsOn": ["^codegen"],

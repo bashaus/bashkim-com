@@ -2,8 +2,16 @@
   "$schema": "https://turbo.build/schema.json",
   "extends": ["//"],
   "tasks": {
+    "codegen:deps": {
+      "cache": false,
+      "outputs": ["generated/github/schema.gql"]
+    },
     "codegen": {
-      "cache": false
+      "inputs": [
+        "codegen.ts",
+        "generated/github/schema.gql",
+        "graphql/github/**/*.gql"
+      ]
     }
   }
 }
