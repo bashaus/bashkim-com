@@ -1,5 +1,6 @@
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v14-appRouter";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { PropsWithChildren, ReactNode } from "react";
 
 import SiteLayout from "@/layouts/SiteLayout";
@@ -41,6 +42,7 @@ export default async function RootLayout({
             {socialModals}
           </SiteLayout>
         </AppRouterCacheProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
