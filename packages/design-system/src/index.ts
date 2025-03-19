@@ -5,6 +5,7 @@ export { default as CarouselImage } from "./components/CarouselImage";
 export { default as DeviceFeaturePhone } from "./components/DeviceFeaturePhone";
 export { default as DeviceSmartphone } from "./components/DeviceSmartphone";
 export { default as Logo } from "./components/Logo";
+export { default as SiteLogo } from "./components/SiteLogo";
 export { default as Tile } from "./components/Tile";
 export { default as VideoDialog } from "./components/VideoDialog";
 export { default as VideoPlayer } from "./components/VideoPlayer";
@@ -16,9 +17,6 @@ export { default as RichTextFormatter } from "./formatters/RichTextFormatter";
 
 /* Layout */
 export { default as Footer } from "./layout/Footer";
-export { default as FooterColumn } from "./layout/FooterColumn";
-export { default as FooterGroup } from "./layout/FooterGroup";
-export { default as FooterLinks } from "./layout/FooterLinks";
 export { default as Group } from "./layout/Group";
 export { GroupDesign } from "./layout/Group/types";
 
