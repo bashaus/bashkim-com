@@ -16,7 +16,6 @@ export { default as LifespanFormatter } from "./formatters/LifespanFormatter";
 export { default as RichTextFormatter } from "./formatters/RichTextFormatter";
 
 /* Layout */
-export { default as Footer } from "./layout/Footer";
 export { default as Group } from "./layout/Group";
 export { GroupDesign } from "./layout/Group/types";
 
