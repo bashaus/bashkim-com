@@ -5,9 +5,9 @@ import HeaderPrimary from "../HeaderPrimary";
 import HeaderSocial from "../HeaderSocial";
 import * as S from "./styles";
 
-export type HeaderMobileProps = {
+export type HeaderMobileProps = Readonly<{
   backButton?: ReactNode;
-};
+}>;
 
 export default function HeaderMobile({ backButton }: HeaderMobileProps) {
   return (
