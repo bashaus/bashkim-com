@@ -1,5 +1,3 @@
-@import "~@bashkim-com/style-guide/colors.scss";
-
 .CarouselDots {
   position: absolute;
   display: block;
@@ -53,7 +51,7 @@
     height: 20px;
     content: "•";
     text-align: center;
-    color: $color-shade-foreground;
+    color: currentColor;
     opacity: 0.25;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

@@ -1,5 +1,5 @@
-import { NavigationGroup } from "@bashkim-com/design-system";
 import IconButton from "@mui/material/IconButton";
+import Stack from "@mui/material/Stack";
 import Tooltip from "@mui/material/Tooltip";
 import Link from "next/link";
 
@@ -8,9 +8,9 @@ import LinkedInOutlinedVector from "@/assets/vectors/social/linked-in-outlined.s
 import MediumVector from "@/assets/vectors/social/medium.svg";
 import StackOverflowVector from "@/assets/vectors/social/stack-overflow.svg";
 
-export default function HeaderDesktopSocial() {
+export default function HeaderSocial() {
   return (
-    <NavigationGroup>
+    <Stack direction="row">
       <Link href="/socials/github/">
         <Tooltip title="GitHub" arrow placement="bottom">
           <IconButton sx={{ color: "currentColor" }}>
@@ -42,6 +42,6 @@ export default function HeaderDesktopSocial() {
           </IconButton>
         </Tooltip>
       </Link>
-    </NavigationGroup>
+    </Stack>
   );
 }

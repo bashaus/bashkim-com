@@ -1,15 +1,11 @@
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import IconButton from "@mui/material/IconButton";
 import Tooltip from "@mui/material/Tooltip";
-import { ComponentPropsWithoutRef, useCallback, useState } from "react";
+import { useCallback, useState } from "react";
 
 import SiteSettings from "@/domains/site-settings/components/SiteSettings";
 
-import styles from "./styles.module.scss";
-
-export type MenuButtonSettingsProps = Readonly<ComponentPropsWithoutRef<"div">>;
-
-export default function MenuButtonSettings(props: MenuButtonSettingsProps) {
+export default function HeaderActionSiteSettings() {
   const [open, setOpen] = useState<boolean>(false);
 
   const handleSignifierClick = useCallback(() => {
@@ -21,14 +17,14 @@ export default function MenuButtonSettings(props: MenuButtonSettingsProps) {
   }, []);
 
   return (
-    <div {...props}>
+    <>
       <Tooltip title="Site settings" arrow>
         <IconButton color="inherit" onClick={handleSignifierClick}>
-          <SettingsOutlinedIcon className={styles["Icon"]} color="inherit" />
+          <SettingsOutlinedIcon color="inherit" />
         </IconButton>
       </Tooltip>
 
       <SiteSettings open={open} onClose={handleClose} />
-    </div>
+    </>
   );
 }

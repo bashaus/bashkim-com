@@ -22,7 +22,7 @@ export default function SocialDrawerView({
   return (
     <Drawer open={open} onClose={handleClose} onTransitionExited={handleExited}>
       <Box flex="1" overflow="scroll">
-        <Box sx={{ width: 350, maxWidth: "100%" }}>{children}</Box>
+        <Box sx={{ width: 350, maxWidth: "100vw" }}>{children}</Box>
       </Box>
 
       <Divider />

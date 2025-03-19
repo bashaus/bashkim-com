@@ -1,5 +1,3 @@
-$color-white: #ffffff;
-
 $color-greyscale-150: #222222;
 $color-greyscale-100: #444444;
 $color-greyscale-80: #696969;
@@ -8,21 +6,3 @@ $color-greyscale-40: #b4b4b4;
 $color-greyscale-20: #dadada;
 $color-greyscale-10: #ececec;
 $color-greyscale-5: #fefefe;
-
-/* CSS variables */
-
-$color-shade-foreground: var(--color-shade-foreground);
-
-$design-page-background-color: var(--design--page--background-color);
-$design-page-background-color-accent: var(
-  --design--page--background-color--accent
-);
-$design-page-foreground-color: var(--design--page--foreground-color);
-$design-page-foreground-color-accent: var(
-  --design--page--foreground-color--accent
-);
-
-$design-header-background-color: var(--design--header--background-color);
-$design-header-foreground-color: var(--design--header--foreground-color);
-$design-header-shadow: var(--design--header--shadow);
-$design-header-border-color: var(--design--header--border-color);

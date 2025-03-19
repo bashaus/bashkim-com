@@ -3,6 +3,7 @@
 import "@bashkim-com/style-guide/normalize.scss";
 
 import { LinkResolverContext } from "@bashkim-com/prismic-helpers";
+import CssBaseline from "@mui/material/CssBaseline";
 import ThemeProvider from "@mui/material/styles/ThemeProvider";
 import type { PropsWithChildren } from "react";
 
@@ -17,6 +18,7 @@ export default function SiteLayout({ children }: SiteLayoutProps) {
   return (
     <SiteSettingsProvider>
       <ThemeProvider theme={theme}>
+        <CssBaseline />
         <LinkResolverContext.Provider value={PrismicLinkResolver}>
           <NavigationProvider>{children}</NavigationProvider>
         </LinkResolverContext.Provider>

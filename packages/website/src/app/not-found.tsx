@@ -3,12 +3,12 @@
 import { PageHeaderPartial } from "@bashkim-com/design-system";
 import Typography from "@mui/material/Typography";
 
-import MenuButtonHome from "@/components/MenuButtonHome";
+import HeaderActionHome from "@/components/HeaderActionHome";
 import Page from "@/components/Page";
 
 const NotFoundPage = () => {
   return (
-    <Page backButton={<MenuButtonHome />}>
+    <Page backButton={<HeaderActionHome />}>
       <PageHeaderPartial>
         <Typography variant="h2" component="h1" gutterBottom>
           Page not found

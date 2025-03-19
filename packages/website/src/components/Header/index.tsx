@@ -1,31 +1,23 @@
+import Box from "@mui/material/Box";
 import { ReactNode } from "react";
 
-import Menu from "@/components/Menu";
-import MenuButtonSettings from "@/components/MenuButtonSettings";
-import Navigation from "@/components/Navigation";
-import { useNavigation } from "@/contexts/Navigation/context";
-
-import styles from "./styles.module.scss";
+import HeaderDesktop from "../HeaderDesktop";
+import HeaderMobile from "../HeaderMobile";
 
 export type HeaderProps = Readonly<{
   backButton?: ReactNode;
 }>;
 
 export default function Header({ backButton }: HeaderProps) {
-  const { navigationState } = useNavigation();
-
   return (
-    <header
-      className={styles["Header"]}
-      data-context-navigation-scroll-at-top={navigationState.scrollAtTop}
-    >
-      <div className={styles["Container"]}>
-        <Menu backButton={backButton} />
-        <Navigation />
-        <div className={styles["SettingsButton"]}>
-          <MenuButtonSettings />
-        </div>
-      </div>
-    </header>
+    <>
+      <Box display={{ xs: "block", md: "none" }}>
+        <HeaderMobile backButton={backButton} />
+      </Box>
+
+      <Box display={{ xs: "none", md: "block" }}>
+        <HeaderDesktop />
+      </Box>
+    </>
   );
 }

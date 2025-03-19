@@ -50,7 +50,7 @@
 
     &::before,
     &::after {
-      border-color: $color-white;
+      border-color: #ffffff;
     }
 
     @media #{$media-query-mobile} {

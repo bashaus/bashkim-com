@@ -1,4 +1,3 @@
-@import "../variables/color";
 @import "../variables/font-family";
 
 *,
@@ -17,6 +16,4 @@ html {
 body {
   line-height: inherit;
   font-family: $font-family-copy;
-  background-color: $design-page-background-color;
-  color: $design-page-foreground-color;
 }

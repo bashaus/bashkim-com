@@ -9,7 +9,7 @@ import {
 import { PortfolioPageModelFragment } from "@bashkim-com/prismic-dal";
 import Typography from "@mui/material/Typography";
 
-import MenuButtonHome from "@/components/MenuButtonHome";
+import HeaderActionHome from "@/components/HeaderActionHome";
 import Page from "@/components/Page";
 import backgroundImage from "@/domains/portfolio-page/assets/background-image.jpg";
 import PortfolioCategory from "@/domains/portfolio-page/components/PortfolioCategory";
@@ -30,7 +30,7 @@ export default function PortfolioPageLockup({
   } = portfolioPage;
 
   return (
-    <Page backButton={<MenuButtonHome />}>
+    <Page backButton={<HeaderActionHome />}>
       <PageHeaderPartial
         imageDesktop={backgroundImage.src}
         imageMobile={backgroundImage.src}

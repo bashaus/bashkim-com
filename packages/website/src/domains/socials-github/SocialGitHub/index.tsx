@@ -27,7 +27,7 @@ export default function SocialGitHub({
 
       <Divider />
       <ListSubheader>
-        Pinned items ({pinnedItems.length}/{repositoryCount})
+        Pinned items &mdash; {pinnedItems.length} of {repositoryCount}
       </ListSubheader>
 
       {pinnedItems.map((item) => (
@@ -66,6 +66,8 @@ export default function SocialGitHub({
           />
         </MenuItem>
       ))}
+
+      <Divider />
 
       <MenuItem
         component="a"
