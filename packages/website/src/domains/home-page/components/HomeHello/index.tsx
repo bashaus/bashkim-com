@@ -12,8 +12,7 @@ export default function HomeHello() {
       <S.Logo />
 
       <Typography variant="subtitle1">
-        I&apos;m a Digital Nomad Technologist based in Barcelona, specialising
-        in{" "}
+        Digital Nomad Technologist based in Barcelona, specialising in{" "}
         <Button
           variant="outlined"
           color="currentColor"
