@@ -4,7 +4,7 @@ import MuiBackdrop, {
 import { gsap } from "gsap";
 import { useEffect, useRef } from "react";
 
-import styles from "./styles.module.scss";
+import * as S from "./styles";
 
 export type BackdropProps = Readonly<MuiBackdropProps>;
 
@@ -68,18 +68,14 @@ export default function Backdrop({
 
   return (
     <MuiBackdrop open={open} {...props} sx={{ backgroundColor: "transparent" }}>
-      <svg
-        className={styles["SvgContainer"]}
-        viewBox="0 0 100 100"
-        preserveAspectRatio="none"
-      >
+      <S.SvgContainer viewBox="0 0 100 100" preserveAspectRatio="none">
         <path
           ref={svgRef}
           vectorEffect="non-scaling-stroke"
           d="M 0 100 V 100 Q 50 100 100 100 V 100 z"
           fill="rgba(0, 0, 0, .8)"
         />
-      </svg>
+      </S.SvgContainer>
 
       {children}
     </MuiBackdrop>
