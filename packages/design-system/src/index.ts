@@ -7,6 +7,7 @@ export { default as DeviceSmartphone } from "./components/DeviceSmartphone";
 export { default as Logo } from "./components/Logo";
 export { default as SiteLogo } from "./components/SiteLogo";
 export { default as Tile } from "./components/Tile";
+export { default as VideoBackground } from "./components/VideoBackground";
 export { default as VideoDialog } from "./components/VideoDialog";
 export { default as VideoPlayer } from "./components/VideoPlayer";
 
@@ -22,6 +23,7 @@ export { GroupDesign } from "./layout/Group/types";
 /* Partials */
 export { default as CaptionedPartial } from "./partials/CaptionedPartial";
 export { default as FullBannerPartial } from "./partials/FullBannerPartial";
+export { default as FullHeaderPartial } from "./partials/FullHeaderPartial";
 export { default as FullImagePartial } from "./partials/FullImagePartial";
 export { default as FullTextPartial } from "./partials/FullTextPartial";
 export { default as NewspaperPartial } from "./partials/NewspaperPartial";

@@ -1,18 +1,15 @@
-import { PageHeaderPartial } from "@bashkim-com/design-system";
+import { FullHeaderPartial, VideoBackground } from "@bashkim-com/design-system";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
-import BackgroundImage from "@/domains/home-page/assets/background-image.jpg";
+import * as S from "./styles";
 
 export default function HomeHello() {
   return (
-    <PageHeaderPartial
-      imageDesktop={BackgroundImage.src}
-      imageMobile={BackgroundImage.src}
+    <FullHeaderPartial
+      background={<VideoBackground url="https://vimeo.com/1067276219" />}
     >
-      <Typography variant="h2" component="h1" gutterBottom>
-        Hello, I&apos;m Bash
-      </Typography>
+      <S.Logo />
 
       <Typography variant="subtitle1">
         I&apos;m a Digital Nomad Technologist based in Barcelona, specialising
@@ -33,6 +30,6 @@ export default function HomeHello() {
           web&nbsp;development
         </Button>
       </Typography>
-    </PageHeaderPartial>
+    </FullHeaderPartial>
   );
 }
