@@ -5,6 +5,6 @@ export const Logo = styled(SiteLogo)(({ theme }) => ({
   minWidth: 120,
   maxWidth: 300,
   width: "50vw",
-  marginTop: theme.spacing(4),
-  marginBottom: theme.spacing(4),
+  marginTop: theme.spacing(2),
+  marginBottom: theme.spacing(2),
 }));

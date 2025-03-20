@@ -1,5 +1,6 @@
 import { FullHeaderPartial, VideoBackground } from "@bashkim-com/design-system";
 import Button from "@mui/material/Button";
+import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 
 import * as S from "./styles";
@@ -12,15 +13,18 @@ export default function HomeHello() {
       <S.Logo />
 
       <Typography variant="subtitle1">
-        Digital Nomad Technologist based in Barcelona, specialising in{" "}
+        Digital Nomad Technologist based in Barcelona, Spain.
+      </Typography>
+
+      <Stack direction="row" spacing={2} pt={4}>
         <Button
           variant="outlined"
           color="currentColor"
           href="/portfolio#tangible-media"
         >
           tangible&nbsp;media
-        </Button>{" "}
-        and{" "}
+        </Button>
+
         <Button
           variant="outlined"
           color="currentColor"
@@ -28,7 +32,7 @@ export default function HomeHello() {
         >
           web&nbsp;development
         </Button>
-      </Typography>
+      </Stack>
     </FullHeaderPartial>
   );
 }
