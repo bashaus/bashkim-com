@@ -8,4 +8,7 @@ export const Wrapper = styled(Box)(({ theme }) => ({
   width: "100%",
   height: "100%",
   overflow: "hidden",
+
+  userSelect: "none",
+  pointerEvents: "none",
 }));
