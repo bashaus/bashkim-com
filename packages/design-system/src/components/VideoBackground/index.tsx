@@ -13,6 +13,11 @@ export default function VideoBackground({ url }: VideoBackgroundProps) {
   return (
     <S.Wrapper>
       <ReactPlayer
+        config={{
+          vimeo: {
+            title: "",
+          },
+        }}
         url={url}
         controls={false}
         light={false}
