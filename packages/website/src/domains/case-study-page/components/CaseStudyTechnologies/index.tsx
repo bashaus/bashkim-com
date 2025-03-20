@@ -2,9 +2,10 @@ import type {
   CaseStudyPageModelFragment,
   Technology,
 } from "@bashkim-com/prismic-dal";
-import Image from "next/image";
+import Container from "@mui/material/Container";
+import Typography from "@mui/material/Typography";
 
-import styles from "./styles.module.scss";
+import * as S from "./styles";
 
 export type CaseStudyTechnologiesProps = Readonly<{
   caseStudy: CaseStudyPageModelFragment;
@@ -18,10 +19,12 @@ export default function CaseStudyTechnologies({
   }
 
   return (
-    <>
-      <h3 className={styles["Heading"]}>Key technologies</h3>
+    <Container>
+      <Typography variant="h4" component="h2" gutterBottom>
+        Key technologies
+      </Typography>
 
-      <ul className={styles["Technologies"]}>
+      <S.Technologies>
         {caseStudy.info_technologies.map((info_technology) => {
           if (!info_technology.info_technology) {
             return null;
@@ -32,19 +35,18 @@ export default function CaseStudyTechnologies({
           const icon = technology.technology_icon;
 
           return (
-            <li className={styles["Technology"]} key={name}>
-              <Image
-                className={styles["TechnologyIcon"]}
+            <S.Technology key={name}>
+              <S.TechnologyIcon
                 width={icon.dimensions.width}
                 height={icon.dimensions.height}
                 src={icon.url}
                 alt={name ?? ""}
               />
-              <span className={styles["TechnologyName"]}>{name}</span>
-            </li>
+              <S.TechnologyName>{name}</S.TechnologyName>
+            </S.Technology>
           );
         })}
-      </ul>
-    </>
+      </S.Technologies>
+    </Container>
   );
 }

@@ -1,11 +1,10 @@
-import {
-  LifespanFormatter,
-  RichTextFormatter,
-} from "@bashkim-com/design-system";
+import { LifespanFormatter } from "@bashkim-com/design-system";
 import type { CaseStudyPageModelFragment } from "@bashkim-com/prismic-dal";
 import { PrismicDate } from "@bashkim-com/prismic-helpers";
+import Container from "@mui/material/Container";
+import Typography from "@mui/material/Typography";
 
-import styles from "./styles.module.scss";
+import * as S from "./styles";
 
 export type CaseStudyDetailsProps = Readonly<{
   caseStudy: CaseStudyPageModelFragment;
@@ -26,127 +25,124 @@ export default function CaseStudyDetails({ caseStudy }: CaseStudyDetailsProps) {
     info_target_audiences: targetAudiences,
     info_launch_date: launchDate,
     info_decommission_date: decommissionDate,
-    info_outcomes: outcomes,
   } = caseStudy;
 
   return (
-    <div className={styles["CaseStudyDetails"]}>
-      {brief && (
-        <RichTextFormatter>
-          <h3>Brief</h3>
-          <p>{brief}</p>
-        </RichTextFormatter>
-      )}
+    <Container>
+      <Typography variant="h4" component="h2" gutterBottom>
+        Project details
+      </Typography>
 
-      {strategy && (
-        <RichTextFormatter>
-          <h3>Strategy</h3>
-          <p>{strategy}</p>
-        </RichTextFormatter>
-      )}
+      <S.Details>
+        {brief && (
+          <S.Detail>
+            <S.DetailTitle>Brief</S.DetailTitle>
+            <S.DetailText>{brief}</S.DetailText>
+          </S.Detail>
+        )}
 
-      {implementation && (
-        <RichTextFormatter>
-          <h3>Implementation</h3>
-          <p>{implementation}</p>
-        </RichTextFormatter>
-      )}
+        {strategy && (
+          <S.Detail>
+            <S.DetailTitle>Strategy</S.DetailTitle>
+            <S.DetailText>{strategy}</S.DetailText>
+          </S.Detail>
+        )}
 
-      {deliverables && (
-        <RichTextFormatter>
-          <h3>Deliverables</h3>
-          <ul>
-            {deliverables.map((deliverable) => (
-              <li key={deliverable.info_deliverable_name}>
-                {deliverable.info_deliverable_name}
-              </li>
-            ))}
-          </ul>
-        </RichTextFormatter>
-      )}
+        {implementation && (
+          <S.Detail>
+            <S.DetailTitle>Implementation</S.DetailTitle>
+            <S.DetailText>{implementation}</S.DetailText>
+          </S.Detail>
+        )}
 
-      {client && (
-        <RichTextFormatter>
-          <h3>Client</h3>
-          <p>{client}</p>
-        </RichTextFormatter>
-      )}
+        {deliverables && (
+          <S.Detail>
+            <S.DetailTitle>Deliverables</S.DetailTitle>
 
-      {agency && (
-        <RichTextFormatter>
-          <h3>Agency</h3>
-          <p>
-            {agency}
-            <br />
-            {role}
-          </p>
-        </RichTextFormatter>
-      )}
+            <ul>
+              {deliverables.map((deliverable) => (
+                <li key={deliverable.info_deliverable_name}>
+                  {deliverable.info_deliverable_name}
+                </li>
+              ))}
+            </ul>
+          </S.Detail>
+        )}
 
-      {institution && (
-        <RichTextFormatter>
-          <h3>Institution</h3>
-          <p>{institution}</p>
-        </RichTextFormatter>
-      )}
+        {client && (
+          <S.Detail>
+            <S.DetailTitle>Client</S.DetailTitle>
+            <S.DetailText>{client}</S.DetailText>
+          </S.Detail>
+        )}
 
-      {degree && (
-        <RichTextFormatter>
-          <h3>Degree</h3>
-          <p>
-            {degree}
-            <br />
-            {role}
-          </p>
-        </RichTextFormatter>
-      )}
+        {agency && (
+          <S.Detail>
+            <S.DetailTitle>Agency</S.DetailTitle>
+            <S.DetailText>
+              {agency}
+              <br />
+              {role}
+            </S.DetailText>
+          </S.Detail>
+        )}
 
-      {markets && (
-        <RichTextFormatter>
-          <h3>Markets</h3>
-          <ul>
-            {markets.map((market) => (
-              <li key={market.info_market}>{market.info_market}</li>
-            ))}
-          </ul>
-        </RichTextFormatter>
-      )}
+        {institution && (
+          <S.Detail>
+            <S.DetailTitle>Institution</S.DetailTitle>
+            <S.DetailText>{institution}</S.DetailText>
+          </S.Detail>
+        )}
 
-      {targetAudiences && (
-        <RichTextFormatter>
-          <h3>Audience</h3>
-          <ol>
-            {targetAudiences.map((audience) => (
-              <li key={audience.info_target_audience_name}>
-                {audience.info_target_audience_name}
-              </li>
-            ))}
-          </ol>
-        </RichTextFormatter>
-      )}
+        {degree && (
+          <S.Detail>
+            <S.DetailTitle>Degree</S.DetailTitle>
+            <S.DetailText>
+              {degree}
+              <br />
+              {role}
+            </S.DetailText>
+          </S.Detail>
+        )}
 
-      {launchDate && (
-        <RichTextFormatter>
-          <h3>Lifespan</h3>
-          <p>
-            <LifespanFormatter
-              startDate={PrismicDate(launchDate)}
-              endDate={PrismicDate(decommissionDate)}
-            />
-          </p>
-        </RichTextFormatter>
-      )}
+        {markets && (
+          <S.Detail>
+            <S.DetailTitle>Markets</S.DetailTitle>
 
-      {outcomes && outcomes.length > 0 && (
-        <RichTextFormatter>
-          <h3>Outcomes</h3>
-          <ul>
-            {outcomes.map((outcome) => (
-              <li key={outcome.info_outcome}>{outcome.info_outcome}</li>
-            ))}
-          </ul>
-        </RichTextFormatter>
-      )}
-    </div>
+            <ul>
+              {markets.map((market) => (
+                <li key={market.info_market}>{market.info_market}</li>
+              ))}
+            </ul>
+          </S.Detail>
+        )}
+
+        {targetAudiences && (
+          <S.Detail>
+            <S.DetailTitle>Audience</S.DetailTitle>
+
+            <ol>
+              {targetAudiences.map((audience) => (
+                <li key={audience.info_target_audience_name}>
+                  {audience.info_target_audience_name}
+                </li>
+              ))}
+            </ol>
+          </S.Detail>
+        )}
+
+        {launchDate && (
+          <S.Detail>
+            <S.DetailTitle>Lifespan</S.DetailTitle>
+            <S.DetailText>
+              <LifespanFormatter
+                startDate={PrismicDate(launchDate)}
+                endDate={PrismicDate(decommissionDate)}
+              />
+            </S.DetailText>
+          </S.Detail>
+        )}
+      </S.Details>
+    </Container>
   );
 }

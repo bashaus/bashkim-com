@@ -2,16 +2,16 @@ import {
   Group,
   GroupDesign,
   PageHeaderPartial,
-  SubtitlePartial,
   TitlePartial,
 } from "@bashkim-com/design-system";
 import type { CaseStudyPageModelFragment } from "@bashkim-com/prismic-dal";
+import Stack from "@mui/material/Stack";
 import Image from "next/image";
 
 import CaseStudyDetails from "@/domains/case-study-page/components/CaseStudyDetails";
 import CaseStudyTechnologies from "@/domains/case-study-page/components/CaseStudyTechnologies";
 
-import styles from "./styles.module.scss";
+import CaseStudyOutcomes from "../CaseStudyOutcomes";
 
 export type CaseStudyHeaderProps = Readonly<{
   caseStudy: CaseStudyPageModelFragment;
@@ -41,19 +41,11 @@ export default function CaseStudyHeader({ caseStudy }: CaseStudyHeaderProps) {
       </Group>
 
       <Group design={GroupDesign.Alternate}>
-        <SubtitlePartial>
-          <h2>Project details</h2>
-        </SubtitlePartial>
-
-        <div className={styles["CaseStudyHeader"]}>
-          <div className={styles["CaseStudyDetails"]}>
-            <CaseStudyDetails caseStudy={caseStudy} />
-          </div>
-
-          <div className={styles["CaseStudyTechnologies"]}>
-            <CaseStudyTechnologies caseStudy={caseStudy} />
-          </div>
-        </div>
+        <Stack spacing={10}>
+          <CaseStudyTechnologies caseStudy={caseStudy} />
+          <CaseStudyDetails caseStudy={caseStudy} />
+          <CaseStudyOutcomes caseStudy={caseStudy} />
+        </Stack>
       </Group>
     </>
   );
