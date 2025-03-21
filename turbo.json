@@ -24,8 +24,8 @@
       "persistent": true
     },
 
-    "lint:scripts": {
-      "dependsOn": ["codegen", "^lint:scripts"],
+    "lint": {
+      "dependsOn": ["codegen", "^lint"],
       "inputs": ["**/*.ts", "**/*.tsx", "**/*.mjs", "**/*.js"]
     },
 

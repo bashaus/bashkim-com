@@ -1,4 +1,4 @@
-yarn test
-yarn lint:scripts
 npx prettier --check .
+yarn lint
+yarn test
 npx sort-package-json

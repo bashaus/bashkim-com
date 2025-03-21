@@ -4,7 +4,7 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev",
-    "lint:scripts": "eslint .",
+    "lint": "eslint .",
     "start": "next start",
     "test": "jest --passWithNoTests"
   },

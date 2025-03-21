@@ -7,7 +7,7 @@
     "codegen": "graphql-codegen --config codegen.ts",
     "codegen:deps": "graphql-codegen --config codegen.deps.ts",
     "dev": "graphql-codegen --config codegen.ts --watch",
-    "lint:scripts": "eslint ."
+    "lint": "eslint ."
   },
   "devDependencies": {
     "@apollo/client": "^3.11.8",

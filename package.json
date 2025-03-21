@@ -15,7 +15,7 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
-    "lint:scripts": "eslint . && turbo run lint:scripts",
+    "lint": "eslint . && turbo run lint",
     "prepare": "husky",
     "storybook:build": "turbo run storybook:build",
     "test": "jest --passWithNoTests"

@@ -4,7 +4,7 @@
   "main": "./src/index.ts",
   "scripts": {
     "generate": "ts-node .",
-    "lint:scripts": "eslint .",
+    "lint": "eslint .",
     "test": "jest --passWithNoTests"
   },
   "dependencies": {},

@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "main": "./src/index.ts",
   "scripts": {
-    "lint:scripts": "eslint .",
+    "lint": "eslint .",
     "test": "jest --passWithNoTests"
   },
   "dependencies": {

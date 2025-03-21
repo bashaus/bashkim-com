@@ -4,7 +4,7 @@
   "type": "module",
   "main": "./src/index.mjs",
   "scripts": {
-    "lint:scripts": "eslint ."
+    "lint": "eslint ."
   },
   "devDependencies": {
     "@eslint/compat": "^1.2.6",
