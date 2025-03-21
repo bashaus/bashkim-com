@@ -1,4 +1,5 @@
 yarn test
 yarn lint:scripts
+yarn lint:vectors
 npx prettier --check .
 npx sort-package-json
