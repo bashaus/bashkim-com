@@ -12,8 +12,5 @@
     "./normalize.scss": "./src/entry/normalize.scss",
     "./utils.scss": "./src/entry/utils.scss"
   },
-  "main": "./src/index.scss",
-  "dependencies": {
-    "reset-css": "^5.0.2"
-  }
+  "main": "./src/index.scss"
 }

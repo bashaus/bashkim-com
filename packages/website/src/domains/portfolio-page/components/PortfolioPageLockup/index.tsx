@@ -4,9 +4,9 @@ import {
   Group,
   GroupDesign,
   PageHeaderPartial,
-  SubtitlePartial,
 } from "@bashkim-com/design-system";
 import { PortfolioPageModelFragment } from "@bashkim-com/prismic-dal";
+import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 
 import HeaderActionHome from "@/components/HeaderActionHome";
@@ -44,9 +44,11 @@ export default function PortfolioPageLockup({
 
       {featured && (
         <Group design={GroupDesign.Alternate}>
-          <SubtitlePartial>
-            <h2>Featured case studies</h2>
-          </SubtitlePartial>
+          <Container>
+            <Typography variant="h4" component="h2">
+              Featured case studies
+            </Typography>
+          </Container>
           <PortfolioFeaturedCaseStudies featured={featured} />
         </Group>
       )}

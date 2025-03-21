@@ -7,6 +7,7 @@ import { PrismicRichText } from "@bashkim-com/prismic-helpers";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid2";
 import Stack from "@mui/material/Stack";
+import Typography from "@mui/material/Typography";
 import Link from "next/link";
 
 export type PortfolioFeaturedCaseStudiesProps = Readonly<{
