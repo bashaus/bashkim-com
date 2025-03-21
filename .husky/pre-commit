@@ -1,2 +1,4 @@
-yarn lint-staged --concurrent false
 yarn test
+yarn lint:scripts
+npx prettier --check .
+npx sort-package-json
