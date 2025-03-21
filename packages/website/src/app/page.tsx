@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import { notFound } from "next/navigation";
 
 import HomePageLockup from "@/domains/home-page/components/HomePageLockup";
 import generateCanonical from "@/libraries/app/generateCanonical";
@@ -24,13 +23,7 @@ export const generateMetadata = async (): Promise<Metadata> => {
 };
 
 const HomePage = async () => {
-  const result = await getPrismicPage();
-  const homePage = result.data.homePage.edges?.[0]?.node;
-  if (!homePage) {
-    notFound();
-  }
-
-  return <HomePageLockup homePage={homePage} />;
+  return <HomePageLockup />;
 };
 
 export default HomePage;

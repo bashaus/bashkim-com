@@ -22,7 +22,6 @@ export { GroupDesign } from "./layout/Group/types";
 
 /* Partials */
 export { default as CaptionedPartial } from "./partials/CaptionedPartial";
-export { default as FullBannerPartial } from "./partials/FullBannerPartial";
 export { default as FullHeaderPartial } from "./partials/FullHeaderPartial";
 export { default as FullImagePartial } from "./partials/FullImagePartial";
 export { default as FullTextPartial } from "./partials/FullTextPartial";
