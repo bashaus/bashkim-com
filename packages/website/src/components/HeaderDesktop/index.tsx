@@ -5,30 +5,56 @@ import Stack from "@mui/material/Stack";
 import Toolbar from "@mui/material/Toolbar";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { ComponentType, PropsWithChildren } from "react";
 
-import HeaderActionSiteSettings from "../HeaderActionSiteSettings";
-import HeaderPrimary from "../HeaderPrimary";
-import HeaderSocial from "../HeaderSocial";
+import HeaderActionSiteSettings from "@/components/HeaderActionSiteSettings";
+import { type HeaderDesktopVariant } from "@/components/HeaderDesktop/interfaces";
+import HeaderPrimary from "@/components/HeaderPrimary";
+import HeaderSocial from "@/components/HeaderSocial";
+import { useNavigation } from "@/contexts/Navigation/context";
 
-export default function HeaderDesktop() {
+import * as S from "./styles";
+
+export type HeaderDesktopProps = {
+  variant: keyof HeaderDesktopVariant;
+};
+
+const variantComponent: Record<
+  keyof HeaderDesktopVariant,
+  ComponentType<
+    PropsWithChildren<{
+      "data-scroll-at-top": boolean;
+    }>
+  >
+> = {
+  base: S.BaseHeader,
+  glass: S.GlassHeader,
+};
+
+export default function HeaderDesktop({ variant }: HeaderDesktopProps) {
+  const { navigationState } = useNavigation();
   const pathname = usePathname();
   const isHome = pathname === "/";
 
-  return (
-    <Container>
-      <Toolbar disableGutters>
-        <Box flex={1}>
-          <Link href="/">
-            <Logo animated={isHome} />
-          </Link>
-        </Box>
+  const VariantComponent = variantComponent[variant];
 
-        <Stack direction="row">
-          <HeaderPrimary />
-          <HeaderSocial />
-          <HeaderActionSiteSettings />
-        </Stack>
-      </Toolbar>
-    </Container>
+  return (
+    <VariantComponent data-scroll-at-top={navigationState.scrollAtTop}>
+      <Container>
+        <Toolbar disableGutters>
+          <Box flex={1}>
+            <Link href="/">
+              <Logo animated={isHome} />
+            </Link>
+          </Box>
+
+          <Stack direction="row">
+            <HeaderPrimary />
+            <HeaderSocial />
+            <HeaderActionSiteSettings />
+          </Stack>
+        </Toolbar>
+      </Container>
+    </VariantComponent>
   );
 }

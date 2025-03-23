@@ -40,8 +40,12 @@ const MuiButtonTheme = createTheme({
               borderBottomWidth: 2,
               borderBottomColor: "transparent",
               borderBottomStyle: "solid",
-              paddingTop: 2,
               transition: "all 0.3s ease-in-out",
+
+              display: "inline-block",
+              lineHeight: "100%",
+              paddingTop: 2,
+              paddingBottom: 2,
             },
 
             "&[aria-current] [data-label]": {

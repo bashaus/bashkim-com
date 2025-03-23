@@ -1,20 +1,14 @@
-import { PropsWithChildren, ReactNode } from "react";
+import { PropsWithChildren } from "react";
 
 import Footer from "@/components/Footer";
-import Header from "@/components/Header";
 import MotionFadeIn from "@/components/MotionFadeIn";
 
-export type PageProps = Readonly<
-  PropsWithChildren<{
-    backButton?: ReactNode;
-  }>
->;
+export type PageProps = Readonly<PropsWithChildren>;
 
-export default function Page({ backButton, children }: PageProps) {
+export default function Page({ children }: PageProps) {
   return (
     <MotionFadeIn>
-      <Header backButton={backButton} />
-      <main id="content" tabIndex={-1}>
+      <main id="content" tabIndex={-1} style={{ position: "relative" }}>
         {children}
       </main>
       <Footer />

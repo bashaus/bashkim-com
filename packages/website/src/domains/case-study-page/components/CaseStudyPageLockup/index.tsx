@@ -6,6 +6,7 @@ import {
   CaseStudyPageModelFragment,
 } from "@bashkim-com/prismic-dal";
 
+import Header from "@/components/Header";
 import HeaderActionPortfolio from "@/components/HeaderActionPortfolio";
 import Page from "@/components/Page";
 import Slice from "@/components/Slice";
@@ -30,7 +31,8 @@ export default function CaseStudyPageLockup({
   } = caseStudyPage;
 
   return (
-    <Page backButton={<HeaderActionPortfolio />}>
+    <Page>
+      <Header backButton={<HeaderActionPortfolio />} />
       <article itemScope itemType="https://schema.org/CreativeWork">
         <CaseStudyHeader caseStudy={caseStudyPage} />
 

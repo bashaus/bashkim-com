@@ -3,6 +3,12 @@ import { styled } from "@mui/material/styles";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 
+export const Container = styled(Box)(({ theme }) => ({
+  [theme.breakpoints.up("md")]: {
+    display: "none",
+  },
+}));
+
 export const PrimaryToolbar = styled(Toolbar)(() => ({
   gap: 2,
 }));

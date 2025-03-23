@@ -8,6 +8,7 @@ import {
 } from "@bashkim-com/design-system";
 import Button from "@mui/material/Button";
 
+import Header from "@/components/Header";
 import HeaderActionHome from "@/components/HeaderActionHome";
 import Page from "@/components/Page";
 import AboutCertifications from "@/domains/about-page/components/AboutCertifications";
@@ -17,7 +18,8 @@ import AboutPrinciples from "@/domains/about-page/components/AboutPrinciples";
 
 export default function AboutPageLockup() {
   return (
-    <Page backButton={<HeaderActionHome />}>
+    <Page>
+      <Header backButton={<HeaderActionHome />} />
       <AboutPageHeader />
       <AboutPrinciples />
       <AboutEducation />

@@ -11,7 +11,7 @@ export type HeaderMobileProps = Readonly<{
 
 export default function HeaderMobile({ backButton }: HeaderMobileProps) {
   return (
-    <>
+    <S.Container>
       <S.PrimaryToolbar disableGutters>
         <S.PrimaryAction>{backButton}</S.PrimaryAction>
         <S.SiteTitle flex={1}>
@@ -29,6 +29,6 @@ export default function HeaderMobile({ backButton }: HeaderMobileProps) {
           <HeaderSocial />
         </S.SecondaryToolbar>
       </S.SecondaryToolbarBox>
-    </>
+    </S.Container>
   );
 }
