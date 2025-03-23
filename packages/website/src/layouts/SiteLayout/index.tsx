@@ -7,6 +7,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import ThemeProvider from "@mui/material/styles/ThemeProvider";
 import type { PropsWithChildren } from "react";
 
+import GridLines from "@/components/GridLines";
 import NavigationProvider from "@/contexts/Navigation/provider";
 import SiteSettingsProvider from "@/domains/site-settings/contexts/SiteSettings/provider";
 import theme from "@/libraries/material-ui/theme";
@@ -20,7 +21,10 @@ export default function SiteLayout({ children }: SiteLayoutProps) {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <LinkResolverContext.Provider value={PrismicLinkResolver}>
-          <NavigationProvider>{children}</NavigationProvider>
+          <NavigationProvider>
+            {children}
+            <GridLines />
+          </NavigationProvider>
         </LinkResolverContext.Provider>
       </ThemeProvider>
     </SiteSettingsProvider>
