@@ -1,4 +1,5 @@
-import { CollaboratorSlice, SubtitlePartial } from "@bashkim-com/design-system";
+import CollaboratorSlice from "@bashkim-com/design-system/CollaboratorSlice";
+import SubtitlePartial from "@bashkim-com/design-system/SubtitlePartial";
 import type { CollaboratorSliceTypeFragment } from "@bashkim-com/prismic-dal";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid2";

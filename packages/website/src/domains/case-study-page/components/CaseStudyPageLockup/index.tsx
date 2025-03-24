@@ -1,9 +1,12 @@
 "use client";
 
-import { Group, GroupDesign } from "@bashkim-com/design-system";
+import Group from "@bashkim-com/design-system/Group";
 import {
+  AccoladeSliceTypeFragment,
   CaseStudyBodyModelFragment,
   CaseStudyPageModelFragment,
+  CollaboratorSliceTypeFragment,
+  ExhibitionSliceTypeFragment,
 } from "@bashkim-com/prismic-dal";
 
 import Header from "@/components/Header";
@@ -42,23 +45,29 @@ export default function CaseStudyPageLockup({
           ))}
         </Group>
 
-        {exhibitionSlices?.length > 0 && (
-          <Group design={GroupDesign.Alternate}>
-            <CaseStudyExhibitions slices={exhibitionSlices} />
+        {(exhibitionSlices ?? []).length > 0 && (
+          <Group design="alternate">
+            <CaseStudyExhibitions
+              slices={exhibitionSlices as Array<ExhibitionSliceTypeFragment>}
+            />
           </Group>
         )}
 
-        {accoladeSlices?.length > 0 && (
-          <Group design={GroupDesign.Alternate}>
-            <CaseStudyAccolades slices={accoladeSlices} />
+        {(accoladeSlices ?? []).length > 0 && (
+          <Group design="alternate">
+            <CaseStudyAccolades
+              slices={accoladeSlices as Array<AccoladeSliceTypeFragment>}
+            />
           </Group>
         )}
 
-        {collaboratorSlices?.length > 0 && (
-          <Group design={GroupDesign.Alternate}>
+        {(collaboratorSlices ?? []).length > 0 && (
+          <Group design="alternate">
             <CaseStudyCollaborators
               myRole={caseStudyPage.info_role || undefined}
-              slices={collaboratorSlices}
+              slices={
+                collaboratorSlices as Array<CollaboratorSliceTypeFragment>
+              }
             />
           </Group>
         )}

@@ -1,4 +1,5 @@
-import { ExhibitionSlice, SubtitlePartial } from "@bashkim-com/design-system";
+import ExhibitionSlice from "@bashkim-com/design-system/ExhibitionSlice";
+import SubtitlePartial from "@bashkim-com/design-system/SubtitlePartial";
 import type { ExhibitionSliceTypeFragment } from "@bashkim-com/prismic-dal";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid2";

@@ -1,4 +1,4 @@
-import { SiteLogo } from "@bashkim-com/design-system";
+import SiteLogo from "@bashkim-com/design-system/SiteLogo";
 import Link from "@mui/material/Link";
 
 import * as S from "./styles";

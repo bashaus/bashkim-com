@@ -6,14 +6,21 @@ import generateCanonical from "@/libraries/app/generateCanonical";
 
 import { getPrismicBody, getPrismicPage, getPrismicSlugs } from "./queries";
 
+export type CaseStudyPageProps = Readonly<{
+  params: Promise<{ caseStudySlug: string }>;
+}>;
+
 export const generateStaticParams = async () => {
   const caseStudiesResult = await getPrismicSlugs();
-  return caseStudiesResult.data.caseStudies.edges?.map((caseStudy) => ({
-    caseStudySlug: caseStudy?.node._meta.uid,
+  const edges = caseStudiesResult.data.caseStudies.edges ?? [];
+  return edges.map((caseStudy) => ({
+    caseStudySlug: caseStudy?.node._meta.uid ?? "",
   }));
 };
 
-export const generateMetadata = async ({ params }): Promise<Metadata> => {
+export const generateMetadata = async ({
+  params,
+}: CaseStudyPageProps): Promise<Metadata> => {
   const { caseStudySlug } = await params;
 
   const result = await getPrismicPage(caseStudySlug);
@@ -32,7 +39,7 @@ export const generateMetadata = async ({ params }): Promise<Metadata> => {
   };
 };
 
-const CaseStudyPage = async ({ params }) => {
+const CaseStudyPage = async ({ params }: CaseStudyPageProps) => {
   const { caseStudySlug } = await params;
 
   const caseStudyPagePromise = getPrismicPage(caseStudySlug);

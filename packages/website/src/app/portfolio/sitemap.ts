@@ -12,7 +12,7 @@ export async function generateSitemaps() {
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const urlset = [];
+  const urlset: MetadataRoute.Sitemap = [];
 
   const caseStudiesResult =
     await prismicClient.query<GetSitemapCaseStudiesQuery>({
@@ -27,8 +27,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         lastModified: PrismicDate(
           caseStudy._meta.lastPublicationDate,
         ).toISOString(),
-        changeFrequency: caseStudy.sitemap_changefreq || "monthly",
-        priority: caseStudy.sitemap_priority || "0.5",
+        changeFrequency: (caseStudy.sitemap_changefreq ??
+          "monthly") as "monthly",
+        priority: Number(caseStudy.sitemap_priority ?? "0.5"),
       });
     }
   });

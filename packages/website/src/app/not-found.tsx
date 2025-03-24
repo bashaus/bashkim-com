@@ -1,6 +1,6 @@
 "use client";
 
-import { PageHeaderPartial } from "@bashkim-com/design-system";
+import PageHeaderPartial from "@bashkim-com/design-system/PageHeaderPartial";
 import Typography from "@mui/material/Typography";
 
 import Header from "@/components/Header";

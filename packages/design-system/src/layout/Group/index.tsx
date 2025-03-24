@@ -5,14 +5,11 @@ import { GroupDesign } from "./types";
 
 export type GroupProps = Readonly<
   PropsWithChildren<{
-    design?: GroupDesign;
+    design?: keyof GroupDesign;
   }>
 >;
 
-export default function Group({
-  design = GroupDesign.Default,
-  children,
-}: GroupProps) {
+export default function Group({ design = "default", children }: GroupProps) {
   const Component = S.groupDesignComponentMap[design];
   return (
     <Component component="section" spacing={4} py={8} alignItems="center">
@@ -20,3 +17,5 @@ export default function Group({
     </Component>
   );
 }
+
+export { type GroupDesign };

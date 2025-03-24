@@ -1,9 +1,6 @@
-import {
-  Group,
-  GroupDesign,
-  PageHeaderPartial,
-  TitlePartial,
-} from "@bashkim-com/design-system";
+import Group from "@bashkim-com/design-system/Group";
+import PageHeaderPartial from "@bashkim-com/design-system/PageHeaderPartial";
+import TitlePartial from "@bashkim-com/design-system/TitlePartial";
 import type { CaseStudyPageModelFragment } from "@bashkim-com/prismic-dal";
 import Stack from "@mui/material/Stack";
 import Image from "next/image";
@@ -40,7 +37,7 @@ export default function CaseStudyHeader({ caseStudy }: CaseStudyHeaderProps) {
         />
       </Group>
 
-      <Group design={GroupDesign.Alternate}>
+      <Group design="alternate">
         <Stack spacing={10}>
           <CaseStudyTechnologies caseStudy={caseStudy} />
           <CaseStudyDetails caseStudy={caseStudy} />

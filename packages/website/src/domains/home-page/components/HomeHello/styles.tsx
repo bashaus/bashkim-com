@@ -1,4 +1,4 @@
-import { SiteLogo } from "@bashkim-com/design-system";
+import SiteLogo from "@bashkim-com/design-system/SiteLogo";
 import { styled } from "@mui/material/styles";
 
 export const Logo = styled(SiteLogo)(({ theme }) => ({

@@ -1,4 +1,5 @@
-import { AccoladeSlice, SubtitlePartial } from "@bashkim-com/design-system";
+import AccoladeSlice from "@bashkim-com/design-system/AccoladeSlice";
+import SubtitlePartial from "@bashkim-com/design-system/SubtitlePartial";
 import type { AccoladeSliceTypeFragment } from "@bashkim-com/prismic-dal";
 
 export type CaseStudyAccoladesProps = Readonly<{

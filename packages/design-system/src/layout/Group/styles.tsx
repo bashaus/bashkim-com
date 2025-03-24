@@ -21,9 +21,9 @@ export const GroupAlternate = styled(Stack)(({ theme }) => [
 ]);
 
 export const groupDesignComponentMap: Record<
-  GroupDesign,
+  keyof GroupDesign,
   StyledComponent<StackProps>
 > = {
-  [GroupDesign.Default]: GroupDefault,
-  [GroupDesign.Alternate]: GroupAlternate,
+  default: GroupDefault,
+  alternate: GroupAlternate,
 };

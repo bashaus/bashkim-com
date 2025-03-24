@@ -1,10 +1,7 @@
 "use client";
 
-import {
-  Group,
-  GroupDesign,
-  PageHeaderPartial,
-} from "@bashkim-com/design-system";
+import Group from "@bashkim-com/design-system/Group";
+import PageHeaderPartial from "@bashkim-com/design-system/PageHeaderPartial";
 import { PortfolioPageModelFragment } from "@bashkim-com/prismic-dal";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
@@ -45,7 +42,7 @@ export default function PortfolioPageLockup({
       </PageHeaderPartial>
 
       {featured && (
-        <Group design={GroupDesign.Alternate}>
+        <Group design="alternate">
           <Container>
             <Typography variant="h4" component="h2">
               Featured case studies
@@ -56,7 +53,7 @@ export default function PortfolioPageLockup({
       )}
 
       {portfolioCategories?.map((portfolioCategory) => (
-        <Group key={portfolioCategory.primary.portfolio_category_slug}>
+        <Group key={portfolioCategory.primary?.portfolio_category_slug}>
           <PortfolioCategory portfolioCategory={portfolioCategory} />
         </Group>
       ))}

@@ -1,5 +1,3 @@
-import fetch from "node-fetch";
-
 import { StackOverflowUser } from "./types";
 
 const getStackOverflowUserData = async () => {

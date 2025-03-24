@@ -1,4 +1,4 @@
-import { PageHeaderPartial } from "@bashkim-com/design-system";
+import PageHeaderPartial from "@bashkim-com/design-system/PageHeaderPartial";
 import Typography from "@mui/material/Typography";
 import Image from "next/image";
 

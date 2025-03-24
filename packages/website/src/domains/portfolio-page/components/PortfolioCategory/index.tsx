@@ -1,4 +1,4 @@
-import { SubtitlePartial } from "@bashkim-com/design-system";
+import SubtitlePartial from "@bashkim-com/design-system/SubtitlePartial";
 import type {
   Case_Study,
   PortfolioCategorySliceTypeFragment,

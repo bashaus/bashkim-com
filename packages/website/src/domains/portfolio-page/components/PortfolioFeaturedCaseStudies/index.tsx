@@ -1,4 +1,5 @@
-import { RichTextFormatter, Tile } from "@bashkim-com/design-system";
+import RichTextFormatter from "@bashkim-com/design-system/RichTextFormatter";
+import Tile from "@bashkim-com/design-system/Tile";
 import type {
   Case_Study,
   PortfolioPageFeaturedModelFragment,

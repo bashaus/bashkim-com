@@ -1,4 +1,4 @@
-import { Group } from "@bashkim-com/design-system";
+import Group from "@bashkim-com/design-system/Group";
 import Button from "@mui/material/Button";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
@@ -75,7 +75,7 @@ export default function HomeFeatured() {
                   target="_blank"
                   rel="noreferrer noopener"
                 >
-                  Connect
+                  LinkedIn
                 </Button>
               </CardActions>
             </S.Card>

@@ -28,7 +28,7 @@ export default function CaseStudyOutcomes({
       </Typography>
 
       <S.Outcomes>
-        {outcomes.map((outcome) => (
+        {outcomes?.map((outcome) => (
           <S.Outcome key={outcome.info_outcome}>
             <ListItem alignItems="flex-start" disableGutters>
               <ListItemIcon>

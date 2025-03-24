@@ -1,7 +1,7 @@
 import GridOffIcon from "@mui/icons-material/GridOff";
 import GridOnIcon from "@mui/icons-material/GridOn";
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
-import { useCallback } from "react";
+import { MouseEvent, useCallback } from "react";
 
 import SiteSettingsToggleButton from "@/domains/site-settings/components/SiteSettingsToggleButton";
 import { SiteSettingsActionSetGridLines } from "@/domains/site-settings/contexts/SiteSettings/actions";
@@ -12,10 +12,10 @@ export default function SiteSettingsGridLines() {
   const { isGridLinesVisible } = siteSettingsState;
 
   const handleChange = useCallback(
-    (event) => {
+    (_event: MouseEvent<HTMLElement>, value: string) => {
       siteSettingsDispatch(
         SiteSettingsActionSetGridLines({
-          visible: event.currentTarget.value === "1",
+          visible: value === "1",
         }),
       );
     },
@@ -24,6 +24,7 @@ export default function SiteSettingsGridLines() {
 
   return (
     <ToggleButtonGroup
+      exclusive
       onChange={handleChange}
       value={isGridLinesVisible ? "1" : "0"}
     >

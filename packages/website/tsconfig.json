@@ -1,6 +1,7 @@
 {
-  "extends": "@bashkim-com/tsconfig/tsconfig.nextjs.json",
+  "extends": "@bashkim-com/tsconfig/tsconfig.base.json",
   "compilerOptions": {
+    "declaration": false,
     "plugins": [
       {
         "name": "next"

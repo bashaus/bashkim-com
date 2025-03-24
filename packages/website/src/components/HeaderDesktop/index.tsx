@@ -1,4 +1,4 @@
-import { Logo } from "@bashkim-com/design-system";
+import Logo from "@bashkim-com/design-system/Logo";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Stack from "@mui/material/Stack";

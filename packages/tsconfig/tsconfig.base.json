@@ -11,7 +11,6 @@
     "forceConsistentCasingInFileNames": true,
     "inlineSources": false,
     "isolatedModules": true,
-    "moduleResolution": "node",
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
@@ -20,7 +19,16 @@
     "noUnusedParameters": false,
     "preserveWatchOutput": true,
     "skipLibCheck": true,
-    "strict": true
+    "strict": true,
+
+    /* injected */
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "noEmit": true,
+    "incremental": true,
+    "target": "ES2017",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "jsx": "preserve"
   },
   "exclude": ["node_modules"]
 }

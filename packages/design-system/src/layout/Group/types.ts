@@ -1,4 +1,4 @@
-export enum GroupDesign {
-  Default = "Default",
-  Alternate = "Alternate",
+export interface GroupDesign {
+  default: true;
+  alternate: true;
 }

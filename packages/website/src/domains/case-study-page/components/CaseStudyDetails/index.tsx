@@ -1,4 +1,4 @@
-import { LifespanFormatter } from "@bashkim-com/design-system";
+import LifespanFormatter from "@bashkim-com/design-system/LifespanFormatter";
 import type { CaseStudyPageModelFragment } from "@bashkim-com/prismic-dal";
 import { PrismicDate } from "@bashkim-com/prismic-helpers";
 import Container from "@mui/material/Container";

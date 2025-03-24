@@ -1,11 +1,9 @@
 "use client";
 
-import {
-  Group,
-  SplitItemPartial,
-  SplitPartial,
-  SubtitlePartial,
-} from "@bashkim-com/design-system";
+import Group from "@bashkim-com/design-system/Group";
+import SplitItemPartial from "@bashkim-com/design-system/SplitItemPartial";
+import SplitPartial from "@bashkim-com/design-system/SplitPartial";
+import SubtitlePartial from "@bashkim-com/design-system/SubtitlePartial";
 import Button from "@mui/material/Button";
 
 import Header from "@/components/Header";

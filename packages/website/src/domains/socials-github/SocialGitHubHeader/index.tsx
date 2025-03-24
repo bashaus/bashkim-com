@@ -1,3 +1,5 @@
+"use client";
+
 import GitHubVector from "@/assets/vectors/social/github.svg";
 import SocialHeader from "@/domains/socials/SocialHeader";
 

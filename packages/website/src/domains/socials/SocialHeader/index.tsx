@@ -10,6 +10,7 @@ import Image from "next/image";
 import type { ReactNode } from "react";
 
 import photoImage from "@/assets/images/photo/photo@4x.jpg";
+import NextLinkComponent from "@/libraries/material-ui/link";
 
 export type SocialHeaderProps = Readonly<{
   avatarBadge: ReactNode;
@@ -36,7 +37,12 @@ export default function SocialHeader({
   textSecondary,
 }: SocialHeaderProps) {
   return (
-    <ListItemButton href={href} target="_blank">
+    <ListItemButton
+      component="a"
+      LinkComponent={NextLinkComponent}
+      href={href}
+      target="_blank"
+    >
       <ListItemAvatar>
         <Badge
           overlap="circular"

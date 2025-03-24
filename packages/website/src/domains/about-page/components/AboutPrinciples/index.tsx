@@ -1,4 +1,5 @@
-import { Group, SubtitlePartial } from "@bashkim-com/design-system";
+import Group from "@bashkim-com/design-system/Group";
+import SubtitlePartial from "@bashkim-com/design-system/SubtitlePartial";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid2";
 import Typography from "@mui/material/Typography";

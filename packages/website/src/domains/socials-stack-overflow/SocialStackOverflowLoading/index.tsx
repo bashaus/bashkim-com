@@ -1,3 +1,5 @@
+"use client";
+
 import CircularProgress from "@mui/material/CircularProgress";
 import DialogContent from "@mui/material/DialogContent";
 import Divider from "@mui/material/Divider";

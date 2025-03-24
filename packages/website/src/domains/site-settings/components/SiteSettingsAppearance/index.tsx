@@ -4,22 +4,22 @@ import SettingsBrightnessIcon from "@mui/icons-material/SettingsBrightness";
 import { useColorScheme } from "@mui/material/styles";
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 import { Mode } from "@mui/system/cssVars/useCurrentColorScheme";
-import { MouseEventHandler, useCallback } from "react";
+import { MouseEvent, useCallback } from "react";
 
 import SiteSettingsToggleButton from "@/domains/site-settings/components/SiteSettingsToggleButton";
 
 export default function SiteSettingsAppearance() {
   const { mode, setMode } = useColorScheme();
 
-  const handleClick = useCallback<MouseEventHandler<HTMLButtonElement>>(
-    (event) => {
-      setMode(event.currentTarget.value as Mode);
+  const handleClick = useCallback(
+    (_event: MouseEvent<HTMLElement>, value: Mode) => {
+      setMode(value);
     },
     [setMode],
   );
 
   return (
-    <ToggleButtonGroup value={mode} size="small" onChange={handleClick}>
+    <ToggleButtonGroup exclusive onChange={handleClick} value={mode}>
       <SiteSettingsToggleButton
         startIcon={<SettingsBrightnessIcon />}
         value="system"

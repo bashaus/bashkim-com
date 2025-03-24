@@ -1,8 +1,6 @@
-import {
-  FullTextPartial,
-  Group,
-  PageHeaderPartial,
-} from "@bashkim-com/design-system";
+import FullTextPartial from "@bashkim-com/design-system/FullTextPartial";
+import Group from "@bashkim-com/design-system/Group";
+import PageHeaderPartial from "@bashkim-com/design-system/PageHeaderPartial";
 
 import HeaderDesktopImage from "@/domains/cookies-page/assets/header-desktop.jpg";
 import HeaderMobileImage from "@/domains/cookies-page/assets/header-mobile.jpg";

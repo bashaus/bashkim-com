@@ -37,17 +37,21 @@ export default function SocialStackOverflow({
           <Stack direction="row" spacing={2} component="span">
             <span>{user.reputation}</span>
 
-            <span className={styles["BadgesGold"]}>
-              ● {user.badgeCounts.gold}
-            </span>
+            {!!user.badgeCounts && (
+              <>
+                <span className={styles["BadgesGold"]}>
+                  ● {user.badgeCounts.gold}
+                </span>
 
-            <span className={styles["BadgesSilver"]}>
-              ● {user.badgeCounts.silver}
-            </span>
+                <span className={styles["BadgesSilver"]}>
+                  ● {user.badgeCounts.silver}
+                </span>
 
-            <span className={styles["BadgesBronze"]}>
-              ● {user.badgeCounts.bronze}
-            </span>
+                <span className={styles["BadgesBronze"]}>
+                  ● {user.badgeCounts.bronze}
+                </span>
+              </>
+            )}
           </Stack>
         }
       />

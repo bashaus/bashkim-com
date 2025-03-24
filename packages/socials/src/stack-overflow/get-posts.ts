@@ -1,5 +1,3 @@
-import fetch from "node-fetch";
-
 import { StackOverflowPost, StackOverflowPostType } from "./types";
 
 const getStackOverflowPostsData = async () => {
@@ -23,7 +21,8 @@ export async function getStackOverflowPosts(): Promise<
 > {
   const result = await getStackOverflowPostsData();
   return result.items.map(
-    (post) =>
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    (post: any) =>
       ({
         score: post.score,
         id: post.post_id,

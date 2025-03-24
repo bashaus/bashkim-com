@@ -29,9 +29,13 @@ export default async function RootLayout({
     APP_GOOGLE_ANALYTICS_MEASUREMENT_ID,
   } = process.env;
 
+  const isGoogleAnalyticsConfigured =
+    APP_GOOGLE_ANALYTICS_ENABLED !== "0" &&
+    !!APP_GOOGLE_ANALYTICS_MEASUREMENT_ID;
+
   return (
     <html lang="en" dir="ltr">
-      {APP_GOOGLE_ANALYTICS_ENABLED !== "0" && (
+      {isGoogleAnalyticsConfigured && (
         <GoogleAnalytics gaId={APP_GOOGLE_ANALYTICS_MEASUREMENT_ID} />
       )}
 

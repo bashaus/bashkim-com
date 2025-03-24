@@ -1,4 +1,4 @@
-import { siteMuiTheme } from "@bashkim-com/design-system";
+import { theme as siteMuiTheme } from "@bashkim-com/design-system/material-ui";
 import createTheme from "@mui/material/styles/createTheme";
 import deepmerge from "@mui/utils/deepmerge";
 
@@ -6,7 +6,7 @@ import MuiButtonBaseTheme from "@/libraries/material-ui/components/MuiButtonBase
 
 const nextMuiTheme = createTheme({
   components: {
-    MuiButtonBase: MuiButtonBaseTheme.components.MuiButtonBase,
+    MuiButtonBase: MuiButtonBaseTheme.components?.MuiButtonBase,
   },
 });
 

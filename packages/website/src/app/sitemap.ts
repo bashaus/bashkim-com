@@ -12,7 +12,7 @@ export async function generateSitemaps() {
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const urlset = [];
+  const urlset: MetadataRoute.Sitemap = [];
   const now = new Date().toISOString();
 
   const APP_BASE_HREF = "https://www.bashkim.com";
@@ -28,8 +28,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: PrismicDate(
         homePage._meta.lastPublicationDate,
       ).toISOString(),
-      changeFrequency: homePage.sitemap_changefreq ?? undefined,
-      priority: homePage.sitemap_priority ?? undefined,
+      changeFrequency: (homePage.sitemap_changefreq ?? undefined) as "monthly",
+      priority: homePage.sitemap_priority
+        ? Number(homePage.sitemap_priority)
+        : undefined,
     });
   }
 
@@ -40,22 +42,25 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: PrismicDate(
         portfolioPage._meta.lastPublicationDate,
       ).toISOString(),
-      changeFrequency: portfolioPage.sitemap_changefreq ?? undefined,
-      priority: portfolioPage.sitemap_priority ?? undefined,
+      changeFrequency: (portfolioPage.sitemap_changefreq ??
+        "monthly") as "monthly",
+      priority: portfolioPage.sitemap_priority
+        ? Number(portfolioPage.sitemap_priority)
+        : undefined,
     });
   }
 
   urlset.push({
     url: `${APP_BASE_HREF}/about/`,
     lastModified: now,
-    changeFrequency: "monthly",
+    changeFrequency: "monthly" as const,
     priority: 1.0,
   });
 
   urlset.push({
     url: `${APP_BASE_HREF}/cookies/`,
     lastModified: now,
-    changeFrequency: "monthly",
+    changeFrequency: "monthly" as const,
     priority: 0.1,
   });
 
