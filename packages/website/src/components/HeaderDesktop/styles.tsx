@@ -68,13 +68,35 @@ export const GlassHeader = styled(Box)(({ theme }) => [
   }),
 ]);
 
-export const BaseHeader = styled(Box)(({ theme }) => ({
-  position: "sticky",
-  top: 0,
-  backgroundColor: theme.palette.background.default,
-  zIndex: theme.zIndex.appBar,
+export const BaseHeader = styled(Box)(({ theme }) => [
+  {
+    position: "sticky",
+    top: 0,
+    backgroundColor: theme.palette.background.default,
+    zIndex: theme.zIndex.appBar,
 
-  [theme.breakpoints.down("md")]: {
-    display: "none",
+    transitionDuration: "0.3s",
+    transitionProperty: "box-shadow",
+    transitionTimingFunction: "ease-in-out",
+
+    [theme.breakpoints.down("md")]: {
+      display: "none",
+    },
   },
-}));
+
+  theme.applyStyles("light", {
+    boxShadow: "rgba(30, 30, 30, 0.75) 0px 10px 20px -15px",
+
+    '&[data-scroll-at-top="true"]': {
+      boxShadow: "none",
+    },
+  }),
+
+  theme.applyStyles("dark", {
+    boxShadow: "rgba(80, 80, 80, 0.75) 0px 10px 20px -15px",
+
+    '&[data-scroll-at-top="true"]': {
+      boxShadow: "none",
+    },
+  }),
+]);

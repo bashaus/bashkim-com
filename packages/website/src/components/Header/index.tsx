@@ -13,7 +13,7 @@ export type HeaderProps = Readonly<{
 export default function Header({ backButton, variant = "glass" }: HeaderProps) {
   return (
     <>
-      <HeaderIntersection />
+      <HeaderIntersection variant="fixed" />
       <HeaderMobile backButton={backButton} />
       <HeaderDesktop variant={variant} />
     </>

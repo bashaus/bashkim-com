@@ -1,6 +1,7 @@
 "use client";
 
 import HeaderDesktop from "@/components/HeaderDesktop";
+import HeaderIntersection from "@/components/HeaderIntersection";
 import HeaderMobile from "@/components/HeaderMobile";
 import Page from "@/components/Page";
 import HomeFeatured from "@/domains/home-page/components/HomeFeatured";
@@ -11,6 +12,7 @@ export default function HomePageLockup() {
     <Page>
       <HeaderMobile />
       <HomeHello />
+      <HeaderIntersection variant="sticky" />
       <HeaderDesktop variant="base" />
       <HomeFeatured />
     </Page>

@@ -3,9 +3,16 @@ import { useCallback, useEffect, useRef } from "react";
 import { NavigationActionSetScrollAtTop } from "@/contexts/Navigation/actions";
 import { useNavigation } from "@/contexts/Navigation/context";
 
-import styles from "./styles.module.scss";
+import { HeaderIntersectionVariant } from "./interfaces";
+import * as S from "./styles";
 
-export default function HeaderIntersection() {
+export type HeaderIntersectionProps = Readonly<{
+  variant: keyof HeaderIntersectionVariant;
+}>;
+
+export default function HeaderIntersection({
+  variant,
+}: HeaderIntersectionProps) {
   const { navigationDispatch } = useNavigation();
   const ref = useRef<HTMLDivElement>(null);
 
@@ -46,5 +53,7 @@ export default function HeaderIntersection() {
     };
   }, [processIntersectionEntries]);
 
-  return <div ref={ref} className={styles["HeaderIntersection"]} />;
+  const VariantComponent = S.variantCompanyMap[variant];
+
+  return <VariantComponent ref={ref} />;
 }
