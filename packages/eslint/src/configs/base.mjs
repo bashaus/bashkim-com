@@ -33,8 +33,6 @@ export default tseslint.config(
               importNames: ["default"],
               message: "Use named imports for react",
             },
-          ],
-          paths: [
             {
               name: "@mui/material",
               importNames: ["default"],
