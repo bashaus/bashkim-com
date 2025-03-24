@@ -5,10 +5,5 @@
   "compilerOptions": {
     "esModuleInterop": true,
     "resolveJsonModule": true
-  },
-  "references": [
-    {
-      "path": "./tsconfig.spec.json"
-    }
-  ]
+  }
 }

@@ -1,13 +1,5 @@
 {
   "extends": "@bashkim-com/tsconfig/tsconfig.react.json",
   "files": [],
-  "include": [],
-  "references": [
-    {
-      "path": "./tsconfig.spec.json"
-    },
-    {
-      "path": "./.storybook/tsconfig.json"
-    }
-  ]
+  "include": []
 }
