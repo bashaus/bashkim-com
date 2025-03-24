@@ -13,6 +13,14 @@ const config = [
   {
     ignores: [".next/*"],
   },
+
+  {
+    rules: {
+      "react/prefer-read-only-props": "error",
+      "react/react-in-jsx-scope": "off",
+      "react/jsx-uses-react": "off",
+    },
+  },
 ];
 
 export default config;

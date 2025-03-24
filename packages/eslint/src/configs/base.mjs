@@ -21,9 +21,7 @@ export default tseslint.config(
   /* eslint-plugin-promise */
   promisePlugin.configs["flat/recommended"],
 
-  /* eslint-plugin-react */
-  // reactPlugin.configs.flat.recommended,
-  // reactPlugin.configs.flat["jsx-runtime"],
+  /* eslint */
   {
     rules: {
       "no-restricted-imports": [
@@ -33,7 +31,14 @@ export default tseslint.config(
             {
               name: "react",
               importNames: ["default"],
-              message: "Use named imports for React",
+              message: "Use named imports for react",
+            },
+          ],
+          paths: [
+            {
+              name: "@mui/material",
+              importNames: ["default"],
+              message: "Use named imports for @mui/material",
             },
           ],
         },

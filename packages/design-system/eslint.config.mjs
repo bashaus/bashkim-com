@@ -1,11 +1,7 @@
 import eslintConfig from "@bashkim-com/eslint";
 
 const config = [
-  ...eslintConfig.configs.base,
-  {
-    files: ["*.ts", "*.tsx"],
-    rules: {},
-  },
+  ...eslintConfig.configs.react,
   {
     ignores: ["storybook-static/*"],
   },

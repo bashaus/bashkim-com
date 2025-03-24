@@ -15,9 +15,9 @@ import { useNavigation } from "@/contexts/Navigation/context";
 
 import * as S from "./styles";
 
-export type HeaderDesktopProps = {
+export type HeaderDesktopProps = Readonly<{
   variant: keyof HeaderDesktopVariant;
-};
+}>;
 
 const variantComponent: Record<
   keyof HeaderDesktopVariant,

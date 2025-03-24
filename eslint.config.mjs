@@ -1,7 +1,7 @@
 import eslintConfig from "@bashkim-com/eslint";
 
 const config = [
-  ...eslintConfig.configs.base,
+  ...eslintConfig.configs.react,
   {
     ignores: ["coverage/*", "packages/*"],
   },
