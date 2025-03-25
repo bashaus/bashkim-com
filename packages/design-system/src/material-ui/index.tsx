@@ -7,6 +7,7 @@ import MuiIconButtonTheme from "./components/MuiIconButton";
 import MuiLinkTheme from "./components/MuiLink";
 import MuiListItemTextTheme from "./components/MuiListItemText";
 import MuiListSubheaderTheme from "./components/MuiListSubheader";
+import MuiSliderTheme from "./components/MuiSlider";
 import MuiTypographyTheme from "./components/MuiTypography";
 
 export const theme = createTheme({
@@ -21,6 +22,7 @@ export const theme = createTheme({
     MuiLink: MuiLinkTheme.components?.MuiLink,
     MuiListItemText: MuiListItemTextTheme.components?.MuiListItemText,
     MuiListSubheader: MuiListSubheaderTheme.components?.MuiListSubheader,
+    MuiSlider: MuiSliderTheme.components?.MuiSlider,
     MuiTypography: MuiTypographyTheme.components?.MuiTypography,
   },
 });

@@ -1,12 +1,12 @@
 import type { CaptionedScreenshotsSliceTypeFragment } from "@bashkim-com/prismic-dal";
 import { PrismicRichText } from "@bashkim-com/prismic-helpers";
-import ComputerIcon from "@mui/icons-material/Computer";
-import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
-import { ChangeEvent, useCallback, useState } from "react";
+import Slider from "@mui/material/Slider";
+import Stack from "@mui/material/Stack";
+import { useCallback, useState } from "react";
 
 import RichTextFormatter from "../../formatters/RichTextFormatter";
 import CaptionedPartial from "../../partials/CaptionedPartial";
-import styles from "./styles.module.scss";
+import * as S from "./styles";
 
 export type CaptionedScreenshotsSliceProps = Readonly<{
   initialWidth?: number;
@@ -48,8 +48,8 @@ export default function CaptionedScreenshotsSlice({
     fields[selectedIndex].captioned_screenshots_slice_type_images;
 
   const handleSizeChange = useCallback(
-    (event: ChangeEvent<HTMLInputElement>): void => {
-      setSelectedIndex(+event.currentTarget.value);
+    (_event: Event, value: number | number[]): void => {
+      setSelectedIndex(Array.isArray(value) ? value[0] : value);
     },
     [],
   );
@@ -77,25 +77,20 @@ export default function CaptionedScreenshotsSlice({
         <PrismicRichText render={caption} />
       </RichTextFormatter>
 
-      <div className={styles["Slider"]}>
-        <span className={styles["IconMobile"]}>
-          <PhoneAndroidIcon width={16} height={16} aria-label="Mobile" />
-        </span>
+      <Stack direction="row" spacing={2}>
+        <S.MobileIcon aria-label="Mobile" />
+        <S.SliderLabel>Size to resize</S.SliderLabel>
+        <S.DesktopIcon aria-label="Desktop" />
+      </Stack>
 
-        <span className={styles["IconDesktop"]}>
-          <ComputerIcon width={16} height={16} aria-label="Desktop" />
-        </span>
-
-        <input
-          className={styles["Range"]}
-          type="range"
-          min={0}
-          step={1}
-          max={fields.length - 1}
-          value={selectedIndex}
-          onChange={handleSizeChange}
-        />
-      </div>
+      <Slider
+        marks
+        min={0}
+        step={1}
+        max={fields.length - 1}
+        value={selectedIndex}
+        onChange={handleSizeChange}
+      />
     </CaptionedPartial>
   );
 }
