@@ -8,26 +8,27 @@
   },
   "exports": {
     ".": "./src/index.ts",
-    "./accoladeSliceFactory": "./src/slice-types/AccoladeSliceFactory/factory.ts",
-    "./captionedImageSliceFactory": "./src/slice-types/CaptionedImageSliceFactory/factory.ts",
-    "./captionedMagazineSliceFactory": "./src/slice-types/CaptionedMagazineSliceFactory/factory.ts",
-    "./captionedScreenshotsSliceFactory": "./src/slice-types/CaptionedScreenshotsSliceFactory/factory.ts",
-    "./captionedVideoSliceFactory": "./src/slice-types/CaptionedVideoSliceFactory/factory.ts",
-    "./carouselImagesSliceFactory": "./src/slice-types/CarouselImagesSliceFactory/factory.ts",
-    "./carouselPhonesSliceFactory": "./src/slice-types/CarouselPhonesSliceFactory/factory.ts",
-    "./collaboratorSliceFactory": "./src/slice-types/CollaboratorSliceFactory/factory.ts",
-    "./exhibitionSliceFactory": "./src/slice-types/ExhibitionSliceFactory/factory.ts",
-    "./fullTextSliceFactory": "./src/slice-types/FullTextSliceFactory/factory.ts",
-    "./gridEmbedSliceFactory": "./src/slice-types/GridEmbedSliceFactory/factory.ts",
-    "./gridVideoSliceFactory": "./src/slice-types/GridVideoSliceFactory/factory.ts",
-    "./newspaperSliceFactory": "./src/slice-types/NewspaperSliceFactory/factory.ts",
-    "./portfolioCategorySliceFactory": "./src/slice-types/PortfolioCategorySliceFactory/factory.ts",
-    "./subtitleSliceFactory": "./src/slice-types/SubtitleSliceFactory/factory.ts"
+    "./accoladeSliceFactory": "./src/slice-types/AccoladeSliceType/accoladeSliceFactory.ts",
+    "./captionedImageSliceFactory": "./src/slice-types/CaptionedImageSliceType/captionedImageSliceFactory.ts",
+    "./captionedMagazineSliceFactory": "./src/slice-types/CaptionedMagazineSliceType/captionedMagazineSliceFactory.ts",
+    "./captionedScreenshotsSliceFactory": "./src/slice-types/CaptionedScreenshotsSliceType/captionedScreenshotsSliceFactory.ts",
+    "./captionedVideoSliceFactory": "./src/slice-types/CaptionedVideoSliceType/captionedVideoSliceFactory.ts",
+    "./carouselImagesSliceFactory": "./src/slice-types/CarouselImagesSliceType/carouselImagesSliceFactory.ts",
+    "./carouselPhonesSliceFactory": "./src/slice-types/CarouselPhonesSliceType/carouselPhonesSliceFactory.ts",
+    "./collaboratorSliceFactory": "./src/slice-types/CollaboratorSliceType/collaboratorSliceFactory.ts",
+    "./exhibitionSliceFactory": "./src/slice-types/ExhibitionSliceType/exhibitionSliceFactory.ts",
+    "./fullTextSliceFactory": "./src/slice-types/FullTextSliceType/fullTextSliceFactory.ts",
+    "./gridEmbedSliceFactory": "./src/slice-types/GridEmbedSliceType/gridEmbedSliceFactory.ts",
+    "./gridVideoSliceFactory": "./src/slice-types/GridVideoSliceType/gridVideoSliceFactory.ts",
+    "./newspaperSliceFactory": "./src/slice-types/NewspaperSliceType/newspaperSliceFactory.ts",
+    "./portfolioCategorySliceFactory": "./src/slice-types/PortfolioCategorySliceType/portfolioCategorySliceFactory.ts",
+    "./subtitleSliceFactory": "./src/slice-types/SubtitleSliceType/subtitleSliceFactory.ts"
   },
   "dependencies": {
     "@bashkim-com/prismic-dal": "*",
     "@faker-js/faker": "^9.6.0",
-    "fishery": "^2.2.2"
+    "fishery": "^2.2.2",
+    "placeholder-image-data-url-svg": "^0.0.1"
   },
   "devDependencies": {
     "@bashkim-com/eslint": "*",
