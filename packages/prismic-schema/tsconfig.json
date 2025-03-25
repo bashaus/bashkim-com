@@ -1,10 +1,10 @@
 {
   "extends": "@bashkim-com/tsconfig/tsconfig.base.json",
-  "files": [],
-  "include": [],
   "compilerOptions": {
     "module": "commonjs",
     "resolveJsonModule": true,
     "esModuleInterop": true
-  }
+  },
+  "files": [],
+  "include": ["**/*.ts", "**/*.tsx"]
 }

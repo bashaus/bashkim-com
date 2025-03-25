@@ -1,7 +1,6 @@
 {
   "name": "@bashkim-com/eslint",
   "version": "0.0.0",
-  "type": "module",
   "main": "./src/index.mjs",
   "scripts": {
     "lint": "eslint ."
