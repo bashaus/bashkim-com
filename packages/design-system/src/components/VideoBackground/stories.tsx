@@ -6,7 +6,7 @@ export default {
   component: VideoBackgroundComponent,
   title: "Components/Video Background",
   args: {
-    url: "https://youtu.be/aqz-KE-bpKQ",
+    url: "https://vimeo.com/1067276219",
   },
   parameters: {
     layout: "padded",
