@@ -1,4 +1,4 @@
-import { GridEmbedSliceFixture } from "@bashkim-com/prismic-fixtures";
+import gridEmbedSliceFactory from "@bashkim-com/prismic-factories/gridEmbedSliceFactory";
 import type { Meta } from "@storybook/react";
 
 import GridEmbedSliceComponent from ".";
@@ -7,7 +7,7 @@ export default {
   component: GridEmbedSliceComponent,
   title: "Prismic slices/Grid Embed Slice",
   args: {
-    slice: GridEmbedSliceFixture,
+    slice: gridEmbedSliceFactory.build(),
   },
   argTypes: {
     slice: {

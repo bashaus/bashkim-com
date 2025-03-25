@@ -1,0 +1,72 @@
+import type { CaptionedMagazineSliceTypeFragment } from "@bashkim-com/prismic-dal";
+import { Factory } from "fishery";
+
+const captionedMagazineSliceFactory =
+  Factory.define<CaptionedMagazineSliceTypeFragment>(() => {
+    return {
+      type: "CaptionedMagazineSliceType",
+      label: null,
+      primary: {
+        captioned_magazine_slice_type_caption: [
+          {
+            type: "heading3",
+            text: "Captioned magazine",
+            spans: [],
+          },
+          {
+            type: "paragraph",
+            text: "Example of the CaptionedMagazineSliceType.",
+            spans: [],
+          },
+        ],
+      },
+      fields: [
+        {
+          captioned_magazine_slice_type_images: {
+            dimensions: {
+              width: 720,
+              height: 1016,
+            },
+            alt: null,
+            copyright: null,
+            url: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MC44NjYxNDE3MzIyODM0NyAxMDAiIHdpZHRoPSI3MjAiIGhlaWdodD0iMTAxNiI+PHN0eWxlPip7Zm9udDo0MDAgMTZweCBzYW5zLXNlcmlmO308L3N0eWxlPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNDQ0MiIC8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiNhM2EzYTMiPjcyMHgxMDE2PC90ZXh0Pjwvc3ZnPg==",
+          },
+        },
+        {
+          captioned_magazine_slice_type_images: {
+            dimensions: {
+              width: 720,
+              height: 1016,
+            },
+            alt: null,
+            copyright: null,
+            url: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MC44NjYxNDE3MzIyODM0NyAxMDAiIHdpZHRoPSI3MjAiIGhlaWdodD0iMTAxNiI+PHN0eWxlPip7Zm9udDo0MDAgMTZweCBzYW5zLXNlcmlmO308L3N0eWxlPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNDQ0MiIC8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiNhM2EzYTMiPjcyMHgxMDE2PC90ZXh0Pjwvc3ZnPg==",
+          },
+        },
+        {
+          captioned_magazine_slice_type_images: {
+            dimensions: {
+              width: 720,
+              height: 1016,
+            },
+            alt: null,
+            copyright: null,
+            url: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MC44NjYxNDE3MzIyODM0NyAxMDAiIHdpZHRoPSI3MjAiIGhlaWdodD0iMTAxNiI+PHN0eWxlPip7Zm9udDo0MDAgMTZweCBzYW5zLXNlcmlmO308L3N0eWxlPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNDQ0MiIC8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiNhM2EzYTMiPjcyMHgxMDE2PC90ZXh0Pjwvc3ZnPg==",
+          },
+        },
+        {
+          captioned_magazine_slice_type_images: {
+            dimensions: {
+              width: 720,
+              height: 1016,
+            },
+            alt: null,
+            copyright: null,
+            url: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MC44NjYxNDE3MzIyODM0NyAxMDAiIHdpZHRoPSI3MjAiIGhlaWdodD0iMTAxNiI+PHN0eWxlPip7Zm9udDo0MDAgMTZweCBzYW5zLXNlcmlmO308L3N0eWxlPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNDQ0MiIC8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiNhM2EzYTMiPjcyMHgxMDE2PC90ZXh0Pjwvc3ZnPg==",
+          },
+        },
+      ],
+    };
+  });
+
+export default captionedMagazineSliceFactory;

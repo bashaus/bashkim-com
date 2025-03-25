@@ -1,0 +1,41 @@
+{
+  "name": "@bashkim-com/prismic-factories",
+  "version": "0.0.0",
+  "main": "./src/index",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "jest --passWithNoTests"
+  },
+  "exports": {
+    ".": "./src/index.ts",
+    "./accoladeSliceFactory": "./src/slice-types/AccoladeSliceFactory/factory.ts",
+    "./captionedImageSliceFactory": "./src/slice-types/CaptionedImageSliceFactory/factory.ts",
+    "./captionedMagazineSliceFactory": "./src/slice-types/CaptionedMagazineSliceFactory/factory.ts",
+    "./captionedScreenshotsSliceFactory": "./src/slice-types/CaptionedScreenshotsSliceFactory/factory.ts",
+    "./captionedVideoSliceFactory": "./src/slice-types/CaptionedVideoSliceFactory/factory.ts",
+    "./carouselImagesSliceFactory": "./src/slice-types/CarouselImagesSliceFactory/factory.ts",
+    "./carouselPhonesSliceFactory": "./src/slice-types/CarouselPhonesSliceFactory/factory.ts",
+    "./collaboratorSliceFactory": "./src/slice-types/CollaboratorSliceFactory/factory.ts",
+    "./exhibitionSliceFactory": "./src/slice-types/ExhibitionSliceFactory/factory.ts",
+    "./fullTextSliceFactory": "./src/slice-types/FullTextSliceFactory/factory.ts",
+    "./gridEmbedSliceFactory": "./src/slice-types/GridEmbedSliceFactory/factory.ts",
+    "./gridVideoSliceFactory": "./src/slice-types/GridVideoSliceFactory/factory.ts",
+    "./newspaperSliceFactory": "./src/slice-types/NewspaperSliceFactory/factory.ts",
+    "./portfolioCategorySliceFactory": "./src/slice-types/PortfolioCategorySliceFactory/factory.ts",
+    "./subtitleSliceFactory": "./src/slice-types/SubtitleSliceFactory/factory.ts"
+  },
+  "dependencies": {
+    "@bashkim-com/prismic-dal": "*",
+    "@faker-js/faker": "^9.6.0",
+    "fishery": "^2.2.2"
+  },
+  "devDependencies": {
+    "@bashkim-com/eslint": "*",
+    "@bashkim-com/tsconfig": "*",
+    "@swc/jest": "^0.2.36",
+    "@types/jest": "29.5.13",
+    "jest": "29.7.0",
+    "jest-environment-jsdom": "29.7.0",
+    "jest-junit": "^16.0.0"
+  }
+}

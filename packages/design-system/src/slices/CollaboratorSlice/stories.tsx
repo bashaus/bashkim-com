@@ -1,4 +1,4 @@
-import { CollaboratorSliceFixture } from "@bashkim-com/prismic-fixtures";
+import collaboratorSliceFactory from "@bashkim-com/prismic-factories/collaboratorSliceFactory";
 import type { Meta } from "@storybook/react";
 
 import CollaboratorSliceComponent from ".";
@@ -7,7 +7,7 @@ export default {
   component: CollaboratorSliceComponent,
   title: "Prismic slices/Collaborator Slice",
   args: {
-    slice: CollaboratorSliceFixture,
+    slice: collaboratorSliceFactory.build(),
   },
   argTypes: {
     slice: {

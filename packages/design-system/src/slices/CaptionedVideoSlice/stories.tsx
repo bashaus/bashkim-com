@@ -1,4 +1,4 @@
-import { CaptionedVideoSliceFixture } from "@bashkim-com/prismic-fixtures";
+import captionedVideoSliceFactory from "@bashkim-com/prismic-factories/captionedVideoSliceFactory";
 import type { Meta } from "@storybook/react";
 
 import CaptionedVideoSliceComponent from ".";
@@ -7,7 +7,7 @@ export default {
   component: CaptionedVideoSliceComponent,
   title: "Prismic slices/Captioned Video Slice",
   args: {
-    slice: CaptionedVideoSliceFixture,
+    slice: captionedVideoSliceFactory.build(),
   },
   argTypes: {
     slice: {

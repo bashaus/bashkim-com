@@ -1,4 +1,4 @@
-import { ExhibitionSliceFixture } from "@bashkim-com/prismic-fixtures";
+import exhibitionSliceFactory from "@bashkim-com/prismic-factories/exhibitionSliceFactory";
 import type { Meta } from "@storybook/react";
 
 import ExhibitionSliceComponent from ".";
@@ -7,7 +7,7 @@ export default {
   component: ExhibitionSliceComponent,
   title: "Prismic slices/Exhibition Slice",
   args: {
-    slice: ExhibitionSliceFixture,
+    slice: exhibitionSliceFactory.build(),
   },
   argTypes: {
     slice: {

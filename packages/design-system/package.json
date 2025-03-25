@@ -56,7 +56,7 @@
   },
   "dependencies": {
     "@bashkim-com/prismic-dal": "*",
-    "@bashkim-com/prismic-fixtures": "*",
+    "@bashkim-com/prismic-factories": "*",
     "@bashkim-com/prismic-helpers": "*",
     "@bashkim-com/style-guide": "*",
     "@emotion/react": "^11.14.0",

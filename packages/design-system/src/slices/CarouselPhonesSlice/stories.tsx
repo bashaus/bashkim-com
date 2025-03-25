@@ -1,4 +1,4 @@
-import { CarouselPhonesSliceFixture } from "@bashkim-com/prismic-fixtures";
+import carouselPhonesSliceFactory from "@bashkim-com/prismic-factories/carouselPhonesSliceFactory";
 import type { Meta } from "@storybook/react";
 
 import CarouselPhonesSliceComponent from ".";
@@ -7,7 +7,7 @@ export default {
   component: CarouselPhonesSliceComponent,
   title: "Prismic slices/Carousel Phones Slice",
   args: {
-    slice: CarouselPhonesSliceFixture,
+    slice: carouselPhonesSliceFactory.build(),
   },
   argTypes: {
     slice: {
