@@ -1,9 +1,17 @@
 fragment CaptionedScreenshotsSliceType on Case_studyBodyCaptionedscreenshotsslicetype {
   type
   primary {
-    captioned_screenshots_slice_type_caption
+    ...CaptionedScreenshotsSliceTypePrimary
   }
   fields {
-    captioned_screenshots_slice_type_images
+    ...CaptionedScreenshotsSliceTypeField
   }
+}
+
+fragment CaptionedScreenshotsSliceTypePrimary on Case_studyBodyCaptionedscreenshotsslicetypePrimary {
+  captioned_screenshots_slice_type_caption
+}
+
+fragment CaptionedScreenshotsSliceTypeField on Case_studyBodyCaptionedscreenshotsslicetypeFields {
+  captioned_screenshots_slice_type_images
 }

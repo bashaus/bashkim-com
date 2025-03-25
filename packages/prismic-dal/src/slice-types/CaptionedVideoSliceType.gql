@@ -1,7 +1,11 @@
 fragment CaptionedVideoSliceType on Case_studyBodyCaptionedvideoslicetype {
   type
   primary {
-    captioned_video_slice_type_caption
-    captioned_video_slice_type_video
+    ...CaptionedVideoSliceTypePrimary
   }
+}
+
+fragment CaptionedVideoSliceTypePrimary on Case_studyBodyCaptionedvideoslicetypePrimary {
+  captioned_video_slice_type_caption
+  captioned_video_slice_type_video
 }

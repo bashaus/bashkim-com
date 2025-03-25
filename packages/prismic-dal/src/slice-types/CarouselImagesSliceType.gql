@@ -1,7 +1,11 @@
 fragment CarouselImagesSliceType on Case_studyBodyCarouselimagesslicetype {
   type
   fields {
-    carousel_images_slice_type_image
-    carousel_images_slice_type_caption
+    ...CarouselImagesSliceTypeField
   }
+}
+
+fragment CarouselImagesSliceTypeField on Case_studyBodyCarouselimagesslicetypeFields {
+  carousel_images_slice_type_image
+  carousel_images_slice_type_caption
 }

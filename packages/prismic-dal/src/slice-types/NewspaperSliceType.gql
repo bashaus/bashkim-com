@@ -1,6 +1,10 @@
 fragment NewspaperSliceType on Case_studyBodyNewspaperslicetype {
   type
   fields {
-    newspaper_slice_type_group
+    ...NewspaperSliceTypeField
   }
+}
+
+fragment NewspaperSliceTypeField on Case_studyBodyNewspaperslicetypeFields {
+  newspaper_slice_type_group
 }

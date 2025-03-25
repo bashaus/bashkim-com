@@ -1,9 +1,17 @@
 fragment CaptionedMagazineSliceType on Case_studyBodyCaptionedmagazineslicetype {
   type
   primary {
-    captioned_magazine_slice_type_caption
+    ...CaptionedMagazineSliceTypePrimary
   }
   fields {
-    captioned_magazine_slice_type_images
+    ...CaptionedMagazineSliceTypeField
   }
+}
+
+fragment CaptionedMagazineSliceTypePrimary on Case_studyBodyCaptionedmagazineslicetypePrimary {
+  captioned_magazine_slice_type_caption
+}
+
+fragment CaptionedMagazineSliceTypeField on Case_studyBodyCaptionedmagazineslicetypeFields {
+  captioned_magazine_slice_type_images
 }

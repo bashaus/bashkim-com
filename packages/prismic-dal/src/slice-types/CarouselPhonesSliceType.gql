@@ -1,8 +1,12 @@
 fragment CarouselPhonesSliceType on Case_studyBodyCarouselphonesslicetype {
   type
   fields {
-    carousel_phones_slice_type_device_type
-    carousel_phones_slice_type_image
-    carousel_phones_slice_type_caption
+    ...CarouselPhonesSliceTypeField
   }
+}
+
+fragment CarouselPhonesSliceTypeField on Case_studyBodyCarouselphonesslicetypeFields {
+  carousel_phones_slice_type_device_type
+  carousel_phones_slice_type_image
+  carousel_phones_slice_type_caption
 }
