@@ -1,11 +1,5 @@
 "use client";
 
-import Group from "@bashkim-com/design-system/Group";
-import SplitItemPartial from "@bashkim-com/design-system/SplitItemPartial";
-import SplitPartial from "@bashkim-com/design-system/SplitPartial";
-import SubtitlePartial from "@bashkim-com/design-system/SubtitlePartial";
-import Button from "@mui/material/Button";
-
 import Header from "@/components/Header";
 import HeaderActionHome from "@/components/HeaderActionHome";
 import Page from "@/components/Page";
@@ -22,42 +16,6 @@ export default function AboutPageLockup() {
       <AboutPrinciples />
       <AboutEducation />
       <AboutCertifications />
-
-      <Group>
-        <SubtitlePartial>
-          <h2>Looking for more?</h2>
-        </SubtitlePartial>
-
-        <SplitPartial>
-          <SplitItemPartial>
-            <div>
-              <p>Looking for recommendations from industry professionals?</p>
-              <Button
-                variant="outlined"
-                href="https://www.linkedin.com/in/bashaus/"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                Visit my LinkedIn profile
-              </Button>
-            </div>
-          </SplitItemPartial>
-
-          <SplitItemPartial>
-            <div>
-              <p>Looking to see some examples of code?</p>
-              <Button
-                variant="outlined"
-                href="https://github.com/bashaus?tab=repositories"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                Visit my GitHub profile
-              </Button>
-            </div>
-          </SplitItemPartial>
-        </SplitPartial>
-      </Group>
     </Page>
   );
 }
