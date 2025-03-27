@@ -1,9 +1,9 @@
 import { SVGProps } from "react";
 
-import SiteLogoVector from "../../assets/logo/site.svg";
+import InlineLogoVector from "../../assets/logo/inline.svg";
 
 export type SiteLogoProps = Readonly<SVGProps<SVGElement>>;
 
 export default function SiteLogo(props: SiteLogoProps) {
-  return <SiteLogoVector {...props} />;
+  return <InlineLogoVector {...props} />;
 }
