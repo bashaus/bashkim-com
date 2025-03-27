@@ -37,7 +37,7 @@
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.1.0",
     "@turbo/gen": "^2.4.4",
-    "@types/node": "^22.7.4",
+    "@types/node": "^22.13.14",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "encoding": "^0.1.13",
