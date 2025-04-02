@@ -14,7 +14,9 @@ export function useCookiesToast() {
       }
 
       toast(CookiesToast, {
-        onClose: setCookiesAccepted,
+        onClose: () => {
+          setCookiesAccepted();
+        },
         autoClose: false,
       });
     })();
