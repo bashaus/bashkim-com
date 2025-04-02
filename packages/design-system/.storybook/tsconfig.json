@@ -1,5 +1,10 @@
 {
   "extends": "@bashkim-com/tsconfig/tsconfig.storybook.json",
   "exclude": ["../**/*.spec.ts", "../**/*.spec.tsx"],
-  "include": ["../src/**/stories.ts", "../src/**/stories.tsx", "*.ts"]
+  "include": [
+    "../src/**/stories.ts",
+    "../src/**/stories.tsx",
+    "*.ts",
+    "../src/content/Introduction/Welcome.mdx"
+  ]
 }

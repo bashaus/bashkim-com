@@ -1,5 +1,5 @@
 {
   "extends": "@bashkim-com/tsconfig/tsconfig.react.json",
   "files": [],
-  "include": ["**/*.ts", "**/*.tsx"]
+  "include": ["**/*.ts", "**/*.tsx", "src/content/Introduction/Welcome.mdx"]
 }

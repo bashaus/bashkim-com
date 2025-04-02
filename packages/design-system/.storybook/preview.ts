@@ -14,5 +14,10 @@ export const parameters = {
       boolean: /^(is|has)/,
     },
   },
-  layout: "fullscreen",
+
+  options: {
+    storySort: {
+      order: ["Introduction", "*"],
+    },
+  },
 };
