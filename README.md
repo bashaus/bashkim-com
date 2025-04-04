@@ -1,4 +1,6 @@
-# bashkim-com
+<img src="packages/design-system/src/assets/logo/inline.svg" width="250" />
+
+&nbsp;
 
 This is the source code for the website of [bashkim.com](https://www.bashkim.com).
 
@@ -7,13 +9,12 @@ This is the source code for the website of [bashkim.com](https://www.bashkim.com
 
 &nbsp;
 
-## Dependencies
+## Installation
 
 You can install the application on your local system:
 
 ```bash
 git checkout git@github.com:bashaus/bashkim-com.git
-cp .env.example .env # edit this file
 yarn
 ```
 
