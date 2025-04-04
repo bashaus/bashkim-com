@@ -9,7 +9,7 @@ import Typography from "@mui/material/Typography";
 import Header from "@/components/Header";
 import HeaderActionHome from "@/components/HeaderActionHome";
 import Page from "@/components/Page";
-import backgroundImage from "@/domains/portfolio-page/assets/background-image.jpg";
+import HeaderDesktopImage from "@/domains/portfolio-page/assets/header-desktop.jpg";
 import PortfolioCategory from "@/domains/portfolio-page/components/PortfolioCategory";
 import PortfolioFeaturedCaseStudies from "@/domains/portfolio-page/components/PortfolioFeaturedCaseStudies";
 
@@ -31,8 +31,8 @@ export default function PortfolioPageLockup({
     <Page>
       <Header backButton={<HeaderActionHome />} />
       <PageHeaderPartial
-        imageDesktop={backgroundImage.src}
-        imageMobile={backgroundImage.src}
+        imageDesktop={HeaderDesktopImage.src}
+        imageMobile={HeaderDesktopImage.src}
       >
         <Typography variant="h2" component="h1" gutterBottom>
           {metaTitle}
