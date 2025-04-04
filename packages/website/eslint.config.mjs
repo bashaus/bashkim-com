@@ -6,7 +6,7 @@ import pluginNext from "@next/eslint-plugin-next";
  *
  * @type {import("eslint").Linter.Config[]}
  * */
-export const nextJsConfig = [
+const config = [
   ...eslintConfig.configs.react,
   {
     plugins: {
@@ -18,6 +18,8 @@ export const nextJsConfig = [
     },
   },
   {
-    ignores: ["./coverage"],
+    ignores: ["coverage", ".next"],
   },
 ];
+
+export default config;
