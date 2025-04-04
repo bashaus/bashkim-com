@@ -1,7 +1,7 @@
 import { fixupConfigRules } from "@eslint/compat";
 import { FlatCompat } from "@eslint/eslintrc";
+import js from "@eslint/js";
 import jestPlugin from "eslint-plugin-jest";
-import muiPathImportsPlugin from "eslint-plugin-mui-path-imports";
 import prettierPlugin from "eslint-plugin-prettier/recommended";
 import promisePlugin from "eslint-plugin-promise";
 import simpleImportSortPlugin from "eslint-plugin-simple-import-sort";
@@ -11,6 +11,8 @@ import tseslint from "typescript-eslint";
 const flatCompat = new FlatCompat();
 
 export default tseslint.config(
+  js.configs.recommended,
+
   {
     ignores: ["dist/*", ".turbo/*"],
   },
@@ -21,29 +23,6 @@ export default tseslint.config(
   /* eslint-plugin-promise */
   promisePlugin.configs["flat/recommended"],
 
-  /* eslint */
-  {
-    rules: {
-      "no-restricted-imports": [
-        "error",
-        {
-          paths: [
-            {
-              name: "react",
-              importNames: ["default"],
-              message: "Use named imports for react",
-            },
-            {
-              name: "@mui/material",
-              importNames: ["default"],
-              message: "Use named imports for @mui/material",
-            },
-          ],
-        },
-      ],
-    },
-  },
-
   /* eslint-plugin-simple-import-sort */
   {
     plugins: {
@@ -52,17 +31,6 @@ export default tseslint.config(
     rules: {
       "simple-import-sort/imports": "error",
       "simple-import-sort/exports": "error",
-    },
-  },
-
-  /* */
-
-  {
-    plugins: {
-      "mui-path-imports": muiPathImportsPlugin,
-    },
-    rules: {
-      "mui-path-imports/mui-path-imports": "error",
     },
   },
 

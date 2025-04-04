@@ -1,26 +1,23 @@
 import eslintConfig from "@bashkim-com/eslint";
-import { fixupConfigRules } from "@eslint/compat";
-import { FlatCompat } from "@eslint/eslintrc";
+import pluginNext from "@next/eslint-plugin-next";
 
-const flatCompat = new FlatCompat();
-
-const config = [
-  ...eslintConfig.configs.base,
-  ...fixupConfigRules(
-    flatCompat.extends("next"),
-    flatCompat.extends("next/core-web-vitals"),
-  ),
+/**
+ * A custom ESLint configuration for libraries that use Next.js.
+ *
+ * @type {import("eslint").Linter.Config[]}
+ * */
+export const nextJsConfig = [
+  ...eslintConfig.configs.react,
   {
-    ignores: [".next/*"],
-  },
-
-  {
+    plugins: {
+      "@next/next": pluginNext,
+    },
     rules: {
-      "react/prefer-read-only-props": "error",
-      "react/react-in-jsx-scope": "off",
-      "react/jsx-uses-react": "off",
+      ...pluginNext.configs.recommended.rules,
+      ...pluginNext.configs["core-web-vitals"].rules,
     },
   },
+  {
+    ignores: ["./coverage"],
+  },
 ];
-
-export default config;

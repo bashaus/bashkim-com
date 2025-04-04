@@ -2,11 +2,8 @@
   "extends": "@bashkim-com/tsconfig/tsconfig.base.json",
   "compilerOptions": {
     "declaration": false,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
+    "declarationMap": false,
+    "plugins": [{ "name": "next" }],
     "paths": {
       "@/*": ["./src/*"]
     }

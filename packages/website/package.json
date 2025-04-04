@@ -37,7 +37,7 @@
     "sharp": "^0.33.4"
   },
   "devDependencies": {
-    "@next/eslint-plugin-next": "^15.2.3",
+    "@next/eslint-plugin-next": "^15.2.4",
     "@swc/jest": "^0.2.36",
     "@types/jest": "29.5.14",
     "@types/node": "^22.14.0",
