@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "@bashkim-com/eslint": "*",
-    "@graphql-codegen/cli": "^5.0.2",
+    "@graphql-codegen/cli": "^5.0.5",
     "@graphql-codegen/schema-ast": "^4.0.2",
     "@graphql-codegen/typescript": "^4.1.0",
     "@graphql-codegen/typescript-operations": "^4.2.3",
