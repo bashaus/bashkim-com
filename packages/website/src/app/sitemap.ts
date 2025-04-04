@@ -38,7 +38,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const portfolioPage = pagesResult.data.portfolioPage.edges?.[0]?.node;
   if (portfolioPage) {
     urlset.push({
-      url: `${APP_BASE_HREF}/portfolio/`,
+      url: `${APP_BASE_HREF}/portfolio`,
       lastModified: PrismicDate(
         portfolioPage._meta.lastPublicationDate,
       ).toISOString(),
@@ -51,14 +51,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }
 
   urlset.push({
-    url: `${APP_BASE_HREF}/about/`,
+    url: `${APP_BASE_HREF}/about`,
     lastModified: now,
     changeFrequency: "monthly" as const,
     priority: 1.0,
   });
 
   urlset.push({
-    url: `${APP_BASE_HREF}/cookies/`,
+    url: `${APP_BASE_HREF}/cookies`,
     lastModified: now,
     changeFrequency: "monthly" as const,
     priority: 0.1,

@@ -33,7 +33,7 @@ export const generateMetadata = async ({
     title: caseStudyPage.meta_title,
     description: caseStudyPage.meta_description,
     alternates: {
-      canonical: generateCanonical(`/portfolio/${caseStudySlug}/`),
+      canonical: generateCanonical(`/portfolio/${caseStudySlug}`),
     },
   };
 };

@@ -6,7 +6,7 @@ export async function generateMetadata() {
     title: "Cookie policy",
     description: "How your personal information is used on this website",
     alternates: {
-      canonical: generateCanonical("/cookies/"),
+      canonical: generateCanonical("/cookies"),
     },
   };
 }
