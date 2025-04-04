@@ -12,7 +12,7 @@
     "@bashkim-com/eslint": "*",
     "@bashkim-com/tsconfig": "*",
     "@swc/jest": "^0.2.36",
-    "@types/jest": "29.5.13",
+    "@types/jest": "29.5.14",
     "jest": "29.7.0",
     "jest-environment-jsdom": "29.7.0",
     "jest-junit": "^16.0.0"
