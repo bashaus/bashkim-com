@@ -14,7 +14,7 @@
     "@graphql-codegen/cli": "^5.0.2",
     "@graphql-codegen/schema-ast": "^4.0.2",
     "@graphql-codegen/typescript": "^4.1.0",
-    "@graphql-codegen/typescript-operations": "^4.2.3",
+    "@graphql-codegen/typescript-operations": "^4.5.1",
     "@graphql-codegen/typescript-react-apollo": "^4.3.2",
     "codegen-prismic-fetch": "^1.0.5"
   }
