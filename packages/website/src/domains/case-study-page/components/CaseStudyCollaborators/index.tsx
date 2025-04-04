@@ -2,7 +2,7 @@ import CollaboratorSlice from "@bashkim-com/design-system/CollaboratorSlice";
 import SubtitlePartial from "@bashkim-com/design-system/SubtitlePartial";
 import type { CollaboratorSliceTypeFragment } from "@bashkim-com/prismic-dal";
 import Container from "@mui/material/Container";
-import Grid from "@mui/material/Grid2";
+import Grid from "@mui/material/Grid";
 import Link from "@mui/material/Link";
 import ListItemText from "@mui/material/ListItemText";
 

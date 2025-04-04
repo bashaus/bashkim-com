@@ -1,6 +1,7 @@
 import { createTheme } from "@mui/material/styles";
 
 import MuiButtonTheme from "./components/MuiButton";
+import MuiCssBaselineTheme from "./components/MuiCssBaseline";
 import MuiDialogTheme from "./components/MuiDialog";
 import MuiDrawerTheme from "./components/MuiDrawer";
 import MuiIconButtonTheme from "./components/MuiIconButton";
@@ -16,6 +17,7 @@ export const theme = createTheme({
   },
   components: {
     MuiButton: MuiButtonTheme.components?.MuiButton,
+    MuiCssBaseline: MuiCssBaselineTheme.components?.MuiCssBaseline,
     MuiDialog: MuiDialogTheme.components?.MuiDialog,
     MuiDrawer: MuiDrawerTheme.components?.MuiDrawer,
     MuiIconButton: MuiIconButtonTheme.components?.MuiIconButton,

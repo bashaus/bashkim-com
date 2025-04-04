@@ -2,10 +2,10 @@ import type { Meta, StoryFn } from "@storybook/react";
 import { placeholderImage } from "placeholder-image-data-url-svg";
 
 import SplitItemPartial from "../SplitItemPartial";
-import SplitPartialComponent, { SplitPartialProps } from ".";
+import SplitPartial, { SplitPartialProps } from ".";
 
 export default {
-  component: SplitPartialComponent,
+  component: SplitPartial,
   title: "Partials/Split Partial",
   args: {
     backgroundImage: [
@@ -32,22 +32,22 @@ const Template: StoryFn<SplitPartialStoryProps> = ({
   ...args
 }: SplitPartialStoryProps) => (
   <>
-    <SplitPartialComponent index={index} {...args}>
+    <SplitPartial index={index} {...args}>
       <SplitItemPartial>
         <div>SplitPartial</div>
       </SplitItemPartial>
       <SplitItemPartial backgroundImage={backgroundImage[0]} />
-    </SplitPartialComponent>
+    </SplitPartial>
 
-    <SplitPartialComponent index={index + 1} {...args}>
+    <SplitPartial index={index + 1} {...args}>
       <SplitItemPartial>
         <div>SplitPartial (alternate)</div>
       </SplitItemPartial>
       <SplitItemPartial backgroundImage={backgroundImage[0]} />
-    </SplitPartialComponent>
+    </SplitPartial>
   </>
 );
 
-export const SplitPartial = {
+export const Fixture = {
   render: Template,
 };

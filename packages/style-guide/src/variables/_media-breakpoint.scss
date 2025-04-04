@@ -8,12 +8,3 @@ $media-breakpoints: (
   desktop-narrow,
   desktop-wide
 );
-
-$media-breakpoint-query: (
-  mobile-portrait: $media-query-mobile-portrait,
-  mobile-landscape: $media-query-mobile-landscape,
-  tablet-portrait: $media-query-tablet-portrait,
-  tablet-landscape: $media-query-tablet-landscape,
-  desktop-narrow: $media-query-desktop-narrow,
-  desktop-wide: $media-query-desktop-wide,
-);

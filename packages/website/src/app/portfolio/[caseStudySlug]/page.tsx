@@ -31,7 +31,6 @@ export const generateMetadata = async ({
 
   return {
     title: caseStudyPage.meta_title,
-    keywords: caseStudyPage.meta_keywords,
     description: caseStudyPage.meta_description,
     alternates: {
       canonical: generateCanonical(`/portfolio/${caseStudySlug}/`),

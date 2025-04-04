@@ -2,10 +2,10 @@ import Typography from "@mui/material/Typography";
 import type { Meta, StoryFn } from "@storybook/react";
 import { placeholderImage } from "placeholder-image-data-url-svg";
 
-import PageHeaderPartialComponent, { PageHeaderPartialProps } from ".";
+import PageHeaderPartial, { PageHeaderPartialProps } from ".";
 
 export default {
-  component: PageHeaderPartialComponent,
+  component: PageHeaderPartial,
   title: "Partials/Page Header Partial",
   args: {
     imageDesktop: [
@@ -33,14 +33,14 @@ const Template: StoryFn<PageHeaderPartialStoryProps> = ({
   imageMobile,
   ...args
 }: PageHeaderPartialStoryProps) => (
-  <PageHeaderPartialComponent
+  <PageHeaderPartial
     imageDesktop={imageDesktop[0]}
     imageMobile={imageMobile[0]}
     {...args}
   />
 );
 
-export const PageHeaderPartial = {
+export const Fixture = {
   args: {
     children: (
       <>

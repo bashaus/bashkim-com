@@ -14,7 +14,6 @@ export const generateMetadata = async (): Promise<Metadata> => {
 
   return {
     title: homePage.meta_title,
-    keywords: homePage.meta_keywords,
     description: homePage.meta_description,
     alternates: {
       canonical: generateCanonical("/"),

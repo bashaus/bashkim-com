@@ -1,5 +1,5 @@
 import { theme as siteMuiTheme } from "@bashkim-com/design-system/material-ui";
-import createTheme from "@mui/material/styles/createTheme";
+import { createTheme } from "@mui/material/styles";
 import deepmerge from "@mui/utils/deepmerge";
 
 import MuiButtonBaseTheme from "@/libraries/material-ui/components/MuiButtonBase";

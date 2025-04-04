@@ -5,7 +5,6 @@ export async function generateMetadata() {
   return {
     title: "About",
     description: "Information on the work history of Bashkim Isai",
-    keywords: ["bashkim isai", "creative technologist", "digital nomad"],
     alternates: {
       canonical: generateCanonical("/about/"),
     },

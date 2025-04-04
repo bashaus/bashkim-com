@@ -1,4 +1,4 @@
-import { StackOverflowPost, StackOverflowPostType } from "./types";
+import { StackOverflowPost } from "./types";
 
 const getStackOverflowPostsData = async () => {
   const userId = 600240;
@@ -22,16 +22,12 @@ export async function getStackOverflowPosts(): Promise<
   const result = await getStackOverflowPostsData();
   return result.items.map(
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    (post: any) =>
-      ({
-        score: post.score,
-        id: post.post_id,
-        link: post.link,
-        title: post.title,
-        type:
-          post.post_type === "question"
-            ? StackOverflowPostType.Question
-            : StackOverflowPostType.Answer,
-      }) as StackOverflowPost,
+    (post: any): StackOverflowPost => ({
+      score: post.score,
+      id: post.post_id,
+      link: post.link,
+      title: post.title,
+      type: post.post_type,
+    }),
   );
 }

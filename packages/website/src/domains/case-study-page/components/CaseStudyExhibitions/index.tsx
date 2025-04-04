@@ -2,7 +2,7 @@ import ExhibitionSlice from "@bashkim-com/design-system/ExhibitionSlice";
 import SubtitlePartial from "@bashkim-com/design-system/SubtitlePartial";
 import type { ExhibitionSliceTypeFragment } from "@bashkim-com/prismic-dal";
 import Container from "@mui/material/Container";
-import Grid from "@mui/material/Grid2";
+import Grid from "@mui/material/Grid";
 
 export type CaseStudyExhibitionsProps = Readonly<{
   slices: Array<ExhibitionSliceTypeFragment>;

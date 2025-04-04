@@ -1,4 +1,3 @@
-@import "~@bashkim-com/style-guide/colors.scss";
 @import "~@bashkim-com/style-guide/grid.scss";
 @import "~@bashkim-com/style-guide/media.scss";
 
@@ -44,7 +43,7 @@
   }
 
   &.hasBackground {
-    background-color: $color-greyscale-10;
+    background-color: #ececec;
     background-size: cover;
     background-position: center center;
 

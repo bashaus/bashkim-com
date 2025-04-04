@@ -1,9 +1,9 @@
 import type { Meta, StoryFn } from "@storybook/react";
 
-import RichTextFormatterComponent, { RichTextFormatterProps } from ".";
+import RichTextFormatter, { RichTextFormatterProps } from ".";
 
 export default {
-  component: RichTextFormatterComponent,
+  component: RichTextFormatter,
   title: "Formatters/Rich Text Formatter",
   args: {},
   parameters: {
@@ -14,7 +14,7 @@ export default {
 const Template: StoryFn<RichTextFormatterProps> = (
   args: RichTextFormatterProps,
 ) => (
-  <RichTextFormatterComponent {...args}>
+  <RichTextFormatter {...args}>
     <h1>&lt;RichTextFormatter /&gt;</h1>
     <p>
       The RichTextFormatter component is designed to take semantical HTML and
@@ -45,9 +45,9 @@ const Template: StoryFn<RichTextFormatterProps> = (
       <li>Proin quis tortor orci. Pellentesque.</li>
       <li>Proin eget lacus euismod, pulvinar.</li>
     </ol>
-  </RichTextFormatterComponent>
+  </RichTextFormatter>
 );
 
-export const RichTextFormatter = {
+export const Fixture = {
   render: Template,
 };

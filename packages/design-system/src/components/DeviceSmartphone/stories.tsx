@@ -5,7 +5,7 @@ import DeviceSmartphone, { DeviceSmartphoneProps } from ".";
 
 export default {
   component: DeviceSmartphone,
-  title: "Components/Device/Smartphone",
+  title: "Components/Device Smartphone",
   args: {
     figure: [placeholderImage({ width: 640, height: 1130, text: "figure" })],
     children: "Class aptent taciti sociosqu ad litora torquent per.",
@@ -35,6 +35,6 @@ const Template: StoryFn<DeviceSmartphoneStoryProps> = ({
   </DeviceSmartphone>
 );
 
-export const Smartphone = {
+export const Fixture = {
   render: Template,
 };

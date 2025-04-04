@@ -1,10 +1,10 @@
 import type { Meta, StoryFn } from "@storybook/react";
 import { placeholderImage } from "placeholder-image-data-url-svg";
 
-import TileComponent, { TileProps } from ".";
+import Tile, { TileProps } from ".";
 
 export default {
-  component: TileComponent,
+  component: Tile,
   title: "Components/Tile",
   args: {
     title: "Tile",
@@ -33,7 +33,7 @@ const Template: StoryFn<TileStoryProps> = ({
   poster,
   ...args
 }: TileStoryProps) => (
-  <TileComponent
+  <Tile
     {...args}
     icon={{
       alt: "",
@@ -45,6 +45,6 @@ const Template: StoryFn<TileStoryProps> = ({
   />
 );
 
-export const Tile = {
+export const Fixture = {
   render: Template,
 };

@@ -1,9 +1,9 @@
 import type { Meta } from "@storybook/react";
 
-import VideoBackgroundComponent from ".";
+import VideoBackground from ".";
 
 export default {
-  component: VideoBackgroundComponent,
+  component: VideoBackground,
   title: "Components/Video Background",
   args: {
     url: "https://vimeo.com/1067276219",
@@ -13,4 +13,4 @@ export default {
   },
 } as Meta;
 
-export const VideoBackground = {};
+export const Fixture = {};

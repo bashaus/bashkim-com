@@ -1,6 +1,7 @@
 import FullTextPartial from "@bashkim-com/design-system/FullTextPartial";
 import Group from "@bashkim-com/design-system/Group";
 import PageHeaderPartial from "@bashkim-com/design-system/PageHeaderPartial";
+import Divider from "@mui/material/Divider";
 
 import HeaderDesktopImage from "@/domains/cookies-page/assets/header-desktop.jpg";
 import HeaderMobileImage from "@/domains/cookies-page/assets/header-mobile.jpg";
@@ -126,7 +127,8 @@ export default function CookiesDetails() {
             This website utilises the embedded player from YouTube to present
             videos of work and associated artefacts.
           </p>
-          <hr />
+
+          <Divider />
 
           <p>
             <small>Last updated 18 July 2022</small>

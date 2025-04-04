@@ -1,10 +1,10 @@
 import gridVideoSliceFactory from "@bashkim-com/prismic-factories/gridVideoSliceFactory";
 import type { Meta } from "@storybook/react";
 
-import GridVideoSliceComponent from ".";
+import GridVideoSlice from ".";
 
 export default {
-  component: GridVideoSliceComponent,
+  component: GridVideoSlice,
   title: "Prismic slices/Grid Video Slice",
   args: {
     slice: gridVideoSliceFactory.build(),
@@ -20,4 +20,4 @@ export default {
   },
 } as Meta;
 
-export const GridVideoSlice = {};
+export const Fixture = {};

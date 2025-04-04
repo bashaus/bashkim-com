@@ -4,8 +4,10 @@ import {
   PrismicRichText,
   useLinkResolver,
 } from "@bashkim-com/prismic-helpers";
+import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
-import Grid from "@mui/material/Grid2";
+import Grid from "@mui/material/Grid";
+import ListItemButton from "@mui/material/ListItemButton";
 import Typography from "@mui/material/Typography";
 import { Link } from "prismic-reactjs";
 
@@ -75,19 +77,26 @@ export default function AccoladeSlice({ slice }: AccoladeSliceProps) {
                 key={JSON.stringify(field)}
                 data-prop-place={awardPlace}
               >
-                <S.Link href={awardHref} target="_blank" rel="noreferrer">
-                  <S.Trophy place={awardPlace} />
+                <ListItemButton
+                  component="a"
+                  href={awardHref}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Box>
+                    <S.Trophy place={awardPlace} />
 
-                  {awardPlace && (
-                    <Typography variant="h6" component="h4">
-                      {AwardPlaceName[awardPlace]}
-                    </Typography>
-                  )}
+                    {awardPlace && (
+                      <Typography variant="h6" component="h4">
+                        {AwardPlaceName[awardPlace]}
+                      </Typography>
+                    )}
 
-                  <RichTextFormatter>
-                    <PrismicRichText render={awardCategory} />
-                  </RichTextFormatter>
-                </S.Link>
+                    <RichTextFormatter>
+                      <PrismicRichText render={awardCategory} />
+                    </RichTextFormatter>
+                  </Box>
+                </ListItemButton>
               </Grid>
             );
           })}

@@ -9,13 +9,6 @@ const nextConfig = {
   },
   trailingSlash: true,
   reactStrictMode: true,
-  transpilePackages: [
-    "@bashkim-com/design-system",
-    "@bashkim-com/prismic-dal",
-    "@bashkim-com/prismic-helpers",
-    "@bashkim-com/socials",
-    "@bashkim-com/style-guide",
-  ],
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,

@@ -1,7 +1,7 @@
 import Group from "@bashkim-com/design-system/Group";
 import SubtitlePartial from "@bashkim-com/design-system/SubtitlePartial";
 import Container from "@mui/material/Container";
-import Grid from "@mui/material/Grid2";
+import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 
 import EthicallyVector from "@/domains/about-page/assets/principles/ethically.svg";

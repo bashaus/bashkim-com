@@ -3,13 +3,11 @@
   "version": "0.0.0",
   "exports": {
     ".": "./src/index.scss",
-    "./colors.scss": "./src/entry/colors.scss",
     "./fonts.scss": "./src/entry/fonts.scss",
     "./grid.scss": "./src/entry/grid.scss",
     "./headings.scss": "./src/entry/headings.scss",
     "./list.scss": "./src/entry/list.scss",
     "./media.scss": "./src/entry/media.scss",
-    "./normalize.scss": "./src/entry/normalize.scss",
     "./utils.scss": "./src/entry/utils.scss"
   },
   "main": "./src/index.scss"

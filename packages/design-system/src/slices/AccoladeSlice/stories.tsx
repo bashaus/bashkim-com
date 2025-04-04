@@ -1,10 +1,10 @@
 import accoladeSliceFactory from "@bashkim-com/prismic-factories/accoladeSliceFactory";
 import type { Meta } from "@storybook/react";
 
-import AccoladeSliceComponent from ".";
+import AccoladeSlice from ".";
 
 export default {
-  component: AccoladeSliceComponent,
+  component: AccoladeSlice,
   title: "Prismic slices/Accolade Slice",
   args: {
     slice: accoladeSliceFactory.build(),
@@ -20,4 +20,4 @@ export default {
   },
 } as Meta;
 
-export const AccoladeSlice = {};
+export const Fixture = {};

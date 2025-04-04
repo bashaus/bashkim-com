@@ -1,4 +1,5 @@
 import { styled } from "@mui/material/styles";
+import Typography, { TypographyProps } from "@mui/material/Typography";
 
 import TrophyVector from "../../assets/vectors/trophy.svg";
 
@@ -7,16 +8,11 @@ const trophyColors: Record<string, string> = {
   silver: "#a7a7ad",
   bronze: "#824a02",
   honour: "#cc0000",
-  default: "#000000",
 };
 
 type TrophyProps = {
   place: string;
 };
-
-export const Link = styled("a")(() => ({
-  display: "block",
-}));
 
 export const Trophy = styled(TrophyVector)<TrophyProps>(({ theme, place }) => ({
   display: "block",
@@ -27,3 +23,7 @@ export const Trophy = styled(TrophyVector)<TrophyProps>(({ theme, place }) => ({
   fill:
     place in trophyColors ? trophyColors[place] : theme.palette.text.primary,
 }));
+
+export function Place(props: TypographyProps) {
+  return <Typography variant="h6" component="h4" gutterBottom {...props} />;
+}

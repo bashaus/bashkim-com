@@ -1,5 +1,5 @@
-import { styled } from "@mui/material";
 import Box from "@mui/material/Box";
+import { styled } from "@mui/material/styles";
 
 export const Icon = styled(Box)(() => ({
   borderRadius: "50%",

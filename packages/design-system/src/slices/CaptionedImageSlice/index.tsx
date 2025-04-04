@@ -18,7 +18,6 @@ export default function CaptionedImageSlice({
   const {
     captioned_image_slice_type_caption: caption,
     captioned_image_slice_type_image: image,
-    // captioned_image_slice_type_image_blurhash: blurHash,
   } = slice.primary;
 
   return (

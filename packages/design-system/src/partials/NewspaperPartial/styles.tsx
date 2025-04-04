@@ -17,4 +17,8 @@ export const NewspaperContainer = styled(Container)(({ theme }) => ({
   [theme.breakpoints.only("lg")]: {
     columnCount: 4,
   },
+
+  "> *": {
+    display: "inline-block",
+  },
 }));

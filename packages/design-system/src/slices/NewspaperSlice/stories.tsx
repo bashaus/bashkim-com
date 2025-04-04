@@ -1,10 +1,10 @@
 import newspaperSliceFactory from "@bashkim-com/prismic-factories/newspaperSliceFactory";
 import type { Meta } from "@storybook/react";
 
-import NewspaperSliceComponent from ".";
+import NewspaperSlice from ".";
 
 export default {
-  component: NewspaperSliceComponent,
+  component: NewspaperSlice,
   title: "Prismic slices/Newspaper Slice",
   args: {
     slice: newspaperSliceFactory.build(),
@@ -20,4 +20,4 @@ export default {
   },
 } as Meta;
 
-export const NewspaperSlice = {};
+export const Fixture = {};

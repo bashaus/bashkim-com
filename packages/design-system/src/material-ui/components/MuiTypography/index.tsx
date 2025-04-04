@@ -7,6 +7,12 @@ declare module "@mui/material/Typography" {
   }
 }
 
+const headingStyle = {
+  fontFamily: ['"Space Grotesk"', "Helvetica", "Arial", "sans-serif"].join(
+    ", ",
+  ),
+};
+
 const MuiTypographyTheme = createTheme({
   components: {
     MuiTypography: {
@@ -14,7 +20,38 @@ const MuiTypographyTheme = createTheme({
         {
           props: { variant: "h1" },
           style: {
-            fontSize: 10,
+            ...headingStyle,
+          },
+        },
+        {
+          props: { variant: "h2" },
+          style: {
+            ...headingStyle,
+          },
+        },
+        {
+          props: { variant: "h3" },
+          style: {
+            ...headingStyle,
+          },
+        },
+        {
+          props: { variant: "h4" },
+          style: {
+            ...headingStyle,
+          },
+        },
+        {
+          props: { variant: "h5" },
+          style: {
+            ...headingStyle,
+            letterSpacing: -1,
+          },
+        },
+        {
+          props: { variant: "h6" },
+          style: {
+            ...headingStyle,
           },
         },
         {

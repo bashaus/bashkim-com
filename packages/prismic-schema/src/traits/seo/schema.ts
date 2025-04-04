@@ -12,12 +12,6 @@ export default {
       label: "Meta Description",
     },
   },
-  meta_keywords: {
-    type: "Text",
-    config: {
-      label: "Meta Keywords",
-    },
-  },
   sitemap_changefreq: {
     type: "Select",
     config: {

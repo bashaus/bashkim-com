@@ -1,10 +1,10 @@
 import captionedMagazineSliceFactory from "@bashkim-com/prismic-factories/captionedMagazineSliceFactory";
 import type { Meta } from "@storybook/react";
 
-import CaptionedMagazineSliceComponent from ".";
+import CaptionedMagazineSlice from ".";
 
 export default {
-  component: CaptionedMagazineSliceComponent,
+  component: CaptionedMagazineSlice,
   title: "Prismic slices/Captioned Magazine Slice",
   args: {
     slice: captionedMagazineSliceFactory.build(),
@@ -20,4 +20,4 @@ export default {
   },
 } as Meta;
 
-export const CaptionedMagazineSlice = {};
+export const Fixture = {};

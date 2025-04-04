@@ -1,6 +1,6 @@
 import ComputerIcon from "@mui/icons-material/Computer";
 import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
-import { styled } from "@mui/material";
+import { styled } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
 
 export const MobileIcon = styled(PhoneAndroidIcon)(() => ({

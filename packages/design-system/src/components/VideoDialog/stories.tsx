@@ -1,9 +1,9 @@
 import type { Meta } from "@storybook/react";
 
-import VideoDialogComponent from ".";
+import VideoDialog from ".";
 
 export default {
-  component: VideoDialogComponent,
+  component: VideoDialog,
   title: "Components/Video Dialog",
   args: {
     open: true,
@@ -14,4 +14,4 @@ export default {
   },
 } as Meta;
 
-export const VideoDialog = {};
+export const Fixture = {};

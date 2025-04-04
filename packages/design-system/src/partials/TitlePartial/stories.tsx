@@ -2,10 +2,10 @@ import Typography from "@mui/material/Typography";
 import type { Meta, StoryFn } from "@storybook/react";
 import { placeholderImage } from "placeholder-image-data-url-svg";
 
-import TitlePartialComponent, { TitlePartialProps } from ".";
+import TitlePartial, { TitlePartialProps } from ".";
 
 export default {
-  component: TitlePartialComponent,
+  component: TitlePartial,
   title: "Partials/Title Partial",
   args: {
     image: [placeholderImage({ width: 300, height: 300, text: "image" })],
@@ -39,15 +39,15 @@ const Template: StoryFn<TitlePartialStoryProps> = ({
   subtitle,
   ...args
 }: TitlePartialStoryProps) => (
-  <TitlePartialComponent image={image[0]} {...args}>
+  <TitlePartial image={image[0]} {...args}>
     <Typography variant="h2" component="h1" gutterBottom>
       {title}
     </Typography>
 
     <Typography>{subtitle}</Typography>
-  </TitlePartialComponent>
+  </TitlePartial>
 );
 
-export const TitlePartial = {
+export const Fixture = {
   render: Template,
 };

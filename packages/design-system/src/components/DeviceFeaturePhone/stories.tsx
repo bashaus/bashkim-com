@@ -5,7 +5,7 @@ import DeviceFeaturePhone, { DeviceFeaturePhoneProps } from ".";
 
 export default {
   component: DeviceFeaturePhone,
-  title: "Components/Device/Feature Phone",
+  title: "Components/Device Feature Phone",
   args: {
     children: "Aenean malesuada ante id facilisis sollicitudin. Sed cursus.",
     figure: [placeholderImage({ width: 496, height: 390, text: "figure" })],
@@ -35,6 +35,6 @@ const Template: StoryFn<DeviceFeaturePhoneStoryProps> = ({
   </DeviceFeaturePhone>
 );
 
-export const FeaturePhone = {
+export const Fixture = {
   render: Template,
 };

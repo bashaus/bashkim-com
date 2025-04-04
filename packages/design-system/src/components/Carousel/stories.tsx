@@ -1,10 +1,10 @@
 import type { Meta, StoryFn } from "@storybook/react";
 
 import RichTextFormatter from "../../formatters/RichTextFormatter";
-import CarouselComponent, { CarouselProps } from ".";
+import Carousel, { CarouselProps } from ".";
 
 export default {
-  component: CarouselComponent,
+  component: Carousel,
   title: "Components/Carousel",
   args: {
     slides: 3,
@@ -37,7 +37,7 @@ const Template: StoryFn<CarouselStoryProps> = ({
       maxWidth: 600,
     }}
   >
-    <CarouselComponent {...args}>
+    <Carousel {...args}>
       {Array(slides)
         .fill("")
         .map((_value, i) => i + 1)
@@ -66,10 +66,10 @@ const Template: StoryFn<CarouselStoryProps> = ({
             </RichTextFormatter>
           </div>
         ))}
-    </CarouselComponent>
+    </Carousel>
   </div>
 );
 
-export const Carousel = {
+export const Fixture = {
   render: Template,
 };

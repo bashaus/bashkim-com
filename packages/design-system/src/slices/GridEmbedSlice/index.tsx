@@ -1,6 +1,6 @@
 import type { GridEmbedSliceTypeFragment } from "@bashkim-com/prismic-dal";
 import Container from "@mui/material/Container";
-import Grid from "@mui/material/Grid2";
+import Grid from "@mui/material/Grid";
 
 import styles from "./styles.module.scss";
 

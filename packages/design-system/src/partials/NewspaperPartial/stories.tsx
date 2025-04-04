@@ -1,9 +1,9 @@
 import type { Meta, StoryFn } from "@storybook/react";
 
-import NewspaperPartialComponent, { NewspaperPartialProps } from ".";
+import NewspaperPartial, { NewspaperPartialProps } from ".";
 
 export default {
-  component: NewspaperPartialComponent,
+  component: NewspaperPartial,
   title: "Partials/Newspaper Partial",
   args: {
     paragraphs: 10,
@@ -28,7 +28,7 @@ const Template: StoryFn<NewspaperPartialStoryProps> = ({
   paragraphs,
   ...args
 }: NewspaperPartialStoryProps) => (
-  <NewspaperPartialComponent {...args}>
+  <NewspaperPartial {...args}>
     {Array(paragraphs)
       .fill("")
       .map((_value, i) => i + 1)
@@ -40,9 +40,9 @@ const Template: StoryFn<NewspaperPartialStoryProps> = ({
           ac lacinia.
         </div>
       ))}
-  </NewspaperPartialComponent>
+  </NewspaperPartial>
 );
 
-export const NewspaperPartial = {
+export const Fixture = {
   render: Template,
 };

@@ -1,5 +1,3 @@
-@import "../variables/font-family";
-
 *,
 *::before,
 *::after {
@@ -15,5 +13,4 @@ html {
 
 body {
   line-height: inherit;
-  font-family: $font-family-copy;
 }

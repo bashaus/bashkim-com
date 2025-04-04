@@ -1,7 +1,7 @@
 fragment PortfolioPageModel on Portfolio_page {
   meta_title
   meta_description
-  meta_keywords
+
   featured {
     ...PortfolioPageFeaturedModel
   }

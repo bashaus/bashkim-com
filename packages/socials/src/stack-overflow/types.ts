@@ -1,14 +1,9 @@
-export enum StackOverflowPostType {
-  Answer = "Answer",
-  Question = "Question",
-}
-
 export type StackOverflowPost = {
   score: number;
   id: string;
   title: string;
   link: string;
-  type: StackOverflowPostType;
+  type: "question" | "answer";
 };
 
 export type StackOverflowUserBadgeCounts = {

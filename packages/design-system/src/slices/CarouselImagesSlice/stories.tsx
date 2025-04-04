@@ -1,10 +1,10 @@
 import carouselImagesSliceFactory from "@bashkim-com/prismic-factories/carouselImagesSliceFactory";
 import type { Meta } from "@storybook/react";
 
-import CarouselImagesSliceComponent from ".";
+import CarouselImagesSlice from ".";
 
 export default {
-  component: CarouselImagesSliceComponent,
+  component: CarouselImagesSlice,
   title: "Prismic slices/Carousel Images Slice",
   args: {
     slice: carouselImagesSliceFactory.build(),
@@ -20,4 +20,4 @@ export default {
   },
 } as Meta;
 
-export const CarouselImagesSlice = {};
+export const Fixture = {};

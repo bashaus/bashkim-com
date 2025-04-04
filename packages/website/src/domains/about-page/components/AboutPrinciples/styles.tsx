@@ -1,5 +1,5 @@
-import Grid, { Grid2Props as GridProps } from "@mui/material/Grid2";
-import { styled } from "@mui/system";
+import Grid, { GridProps as GridProps } from "@mui/material/Grid";
+import { styled } from "@mui/material/styles";
 
 type GridCellProps = Readonly<Omit<GridProps, "size">>;
 

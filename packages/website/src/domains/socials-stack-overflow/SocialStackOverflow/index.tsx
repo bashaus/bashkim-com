@@ -1,10 +1,6 @@
 "use client";
 
-import {
-  StackOverflowPost,
-  StackOverflowPostType,
-  StackOverflowUser,
-} from "@bashkim-com/socials";
+import { StackOverflowPost, StackOverflowUser } from "@bashkim-com/socials";
 import Divider from "@mui/material/Divider";
 import ListItemAvatar from "@mui/material/ListItemAvatar";
 import ListItemText from "@mui/material/ListItemText";
@@ -74,9 +70,9 @@ export default function SocialStackOverflow({
           <ListItemText
             primary={post.title}
             secondary={
-              post.type === StackOverflowPostType.Answer
-                ? "Answered by @bashaus"
-                : "Question by @bashaus"
+              post.type === "question"
+                ? "Question by @bashaus"
+                : "Answered by @bashaus"
             }
           />
         </MenuItem>

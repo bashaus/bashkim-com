@@ -7,5 +7,5 @@ export default function generateCanonical(pathname: string) {
     throw new Error(`pathname ${pathname} must end with a slash (/)`);
   }
 
-  return `https://www.bashkim.com/${pathname}/`;
+  return `https://www.bashkim.com${pathname}`;
 }

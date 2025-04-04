@@ -1,9 +1,9 @@
 import type { Meta } from "@storybook/react";
 
-import VideoPlayerComponent from ".";
+import VideoPlayer from ".";
 
 export default {
-  component: VideoPlayerComponent,
+  component: VideoPlayer,
   title: "Components/Video Player",
   args: {
     url: "https://youtu.be/aqz-KE-bpKQ",
@@ -13,4 +13,4 @@ export default {
   },
 } as Meta;
 
-export const VideoPlayer = {};
+export const Fixture = {};

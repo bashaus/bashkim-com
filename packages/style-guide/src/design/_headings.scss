@@ -1,9 +1,8 @@
-@import "../variables/font-family";
 @import "../variables/font-size";
 @import "../variables/media-query";
 
 %heading {
-  font-family: $font-family-heading;
+  font-family: "Space Grotesk", Helvetica, Arial, sans-serif;
   font-weight: bold;
 }
 

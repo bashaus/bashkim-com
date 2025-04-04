@@ -1,10 +1,10 @@
 import fullTextSliceFactory from "@bashkim-com/prismic-factories/fullTextSliceFactory";
 import type { Meta } from "@storybook/react";
 
-import FullTextSliceComponent from ".";
+import FullTextSlice from ".";
 
 export default {
-  component: FullTextSliceComponent,
+  component: FullTextSlice,
   title: "Prismic slices/Full Text Slice",
   args: {
     slice: fullTextSliceFactory.build(),
@@ -20,4 +20,4 @@ export default {
   },
 } as Meta;
 
-export const FullTextSlice = {};
+export const Fixture = {};

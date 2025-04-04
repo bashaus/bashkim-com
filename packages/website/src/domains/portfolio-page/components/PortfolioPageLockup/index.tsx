@@ -53,7 +53,10 @@ export default function PortfolioPageLockup({
       )}
 
       {portfolioCategories?.map((portfolioCategory) => (
-        <Group key={portfolioCategory.primary?.portfolio_category_slug}>
+        <Group
+          id={portfolioCategory.primary?.portfolio_category_slug ?? undefined}
+          key={portfolioCategory.primary?.portfolio_category_slug}
+        >
           <PortfolioCategory portfolioCategory={portfolioCategory} />
         </Group>
       ))}

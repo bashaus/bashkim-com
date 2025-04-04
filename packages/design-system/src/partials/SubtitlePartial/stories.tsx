@@ -1,9 +1,9 @@
 import type { Meta, StoryFn } from "@storybook/react";
 
-import SubtitlePartialComponent, { SubtitlePartialProps } from ".";
+import SubtitlePartial, { SubtitlePartialProps } from ".";
 
 export default {
-  components: SubtitlePartialComponent,
+  components: SubtitlePartial,
   title: "Partials/Subtitle Partial",
   args: {
     title: "SubtitlePartial",
@@ -33,12 +33,12 @@ const Template: StoryFn<SubtitlePartialStoryProps> = ({
   subtitle,
   ...args
 }: SubtitlePartialStoryProps) => (
-  <SubtitlePartialComponent {...args}>
+  <SubtitlePartial {...args}>
     <h2>{title}</h2>
     <p>{subtitle}</p>
-  </SubtitlePartialComponent>
+  </SubtitlePartial>
 );
 
-export const SubtitlePartial = {
+export const Fixture = {
   render: Template,
 };

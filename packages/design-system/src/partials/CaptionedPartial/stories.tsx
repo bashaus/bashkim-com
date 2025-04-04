@@ -2,10 +2,10 @@ import type { Meta, StoryFn } from "@storybook/react";
 import { placeholderImage } from "placeholder-image-data-url-svg";
 
 import RichTextFormatter from "../../formatters/RichTextFormatter";
-import CaptionedPartialComponent, { CaptionedPartialProps } from ".";
+import CaptionedPartial, { CaptionedPartialProps } from ".";
 
 export default {
-  component: CaptionedPartialComponent,
+  component: CaptionedPartial,
   title: "Partials/Captioned Partial",
   args: {
     figure: [placeholderImage({ width: 1200, height: 630, text: "figure" })],
@@ -42,14 +42,14 @@ const Template: StoryFn<CaptionedPartialStoryProps> = ({
   figure,
   ...args
 }: CaptionedPartialStoryProps) => (
-  <CaptionedPartialComponent figure={<img src={figure[0]} alt="" />} {...args}>
+  <CaptionedPartial figure={<img src={figure[0]} alt="" />} {...args}>
     <RichTextFormatter>
       <h3>{title}</h3>
       <p>{subtitle}</p>
     </RichTextFormatter>
-  </CaptionedPartialComponent>
+  </CaptionedPartial>
 );
 
-export const CaptionedPartial = {
+export const Fixture = {
   render: Template,
 };

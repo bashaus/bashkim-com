@@ -10,7 +10,7 @@ import Image from "next/image";
 import type { ReactNode } from "react";
 
 import photoImage from "@/assets/images/photo/photo@4x.jpg";
-import NextLinkComponent from "@/libraries/material-ui/link";
+import MuiNextLink from "@/libraries/material-ui/link";
 
 export type SocialHeaderProps = Readonly<{
   avatarBadge: ReactNode;
@@ -39,7 +39,7 @@ export default function SocialHeader({
   return (
     <ListItemButton
       component="a"
-      LinkComponent={NextLinkComponent}
+      LinkComponent={MuiNextLink}
       href={href}
       target="_blank"
     >

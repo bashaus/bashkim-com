@@ -1,26 +1,27 @@
+import { faker } from "@faker-js/faker";
 import type { Meta } from "@storybook/react";
 
-import GroupComponent from ".";
+import Group from ".";
 
 export default {
-  component: GroupComponent,
+  component: Group,
   title: "Layout/Group",
   args: {
     design: "default",
-    children: <p>Nulla facilisi. Vivamus ac fringilla urna. Praesent in.</p>,
+    children: faker.lorem.paragraph(),
   },
   parameters: {
     layout: "fullscreen",
   },
 } as Meta;
 
-export const Default = {
+export const DefaultDesign = {
   args: {
     design: "default",
   },
 };
 
-export const Alternate = {
+export const AlternateDesign = {
   args: {
     design: "alternate",
   },

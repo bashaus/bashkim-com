@@ -1,10 +1,10 @@
 import subtitleSliceFactory from "@bashkim-com/prismic-factories/subtitleSliceFactory";
 import type { Meta } from "@storybook/react";
 
-import SubtitleSliceComponent from ".";
+import SubtitleSlice from ".";
 
 export default {
-  component: SubtitleSliceComponent,
+  component: SubtitleSlice,
   title: "Prismic slices/Subtitle Slice",
   args: {
     slice: subtitleSliceFactory.build(),
@@ -20,4 +20,4 @@ export default {
   },
 } as Meta;
 
-export const SubtitleSlice = {};
+export const Fixture = {};

@@ -1,9 +1,9 @@
 import type { Meta, StoryFn } from "@storybook/react";
 
-import FullTextPartialComponent, { FullTextPartialProps } from ".";
+import FullTextPartial, { FullTextPartialProps } from ".";
 
 export default {
-  component: FullTextPartialComponent,
+  component: FullTextPartial,
   title: "Partials/Full Text Partial",
   args: {
     title: "FullTextPartial",
@@ -26,7 +26,7 @@ const Template: StoryFn<FullTextPartialStoryProps> = ({
   title,
   ...args
 }: FullTextPartialStoryProps) => (
-  <FullTextPartialComponent {...args}>
+  <FullTextPartial {...args}>
     <h3>{title}</h3>
     {Array(6)
       .fill("")
@@ -38,9 +38,9 @@ const Template: StoryFn<FullTextPartialStoryProps> = ({
           risus, non varius mi luctus vel. Etiam laoreet eget.
         </p>
       ))}
-  </FullTextPartialComponent>
+  </FullTextPartial>
 );
 
-export const FullTextPartial = {
+export const Fixture = {
   render: Template,
 };

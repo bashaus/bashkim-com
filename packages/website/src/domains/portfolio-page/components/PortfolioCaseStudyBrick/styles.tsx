@@ -1,7 +1,7 @@
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import styled from "@mui/material/styles/styled";
+import { styled } from "@mui/material/styles";
 
 export const Container = styled(ListItemButton)(() => ({}));
 

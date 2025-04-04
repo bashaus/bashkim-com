@@ -5,7 +5,7 @@ import type {
 } from "@bashkim-com/prismic-dal";
 import { PrismicRichText } from "@bashkim-com/prismic-helpers";
 import Container from "@mui/material/Container";
-import Grid from "@mui/material/Grid2";
+import Grid from "@mui/material/Grid";
 
 import PortfolioCaseStudyBrick from "@/domains/portfolio-page/components/PortfolioCaseStudyBrick";
 
@@ -18,14 +18,13 @@ export default function PortfolioCategory({
 }: PortfolioCategoryProps) {
   const { fields } = portfolioCategory;
   const {
-    portfolio_category_slug: slug,
     portfolio_category_title: title,
     portfolio_category_description: description,
   } = portfolioCategory.primary ?? {};
 
   return (
     <>
-      <SubtitlePartial id={slug ?? ""}>
+      <SubtitlePartial>
         <PrismicRichText render={title} />
         <PrismicRichText render={description} />
       </SubtitlePartial>

@@ -6,13 +6,25 @@ import { GroupDesign } from "./types";
 export type GroupProps = Readonly<
   PropsWithChildren<{
     design?: keyof GroupDesign;
+    id?: string;
   }>
 >;
 
-export default function Group({ design = "default", children }: GroupProps) {
+export default function Group({
+  children,
+  design = "default",
+  id,
+}: GroupProps) {
   const Component = S.groupDesignComponentMap[design];
+
   return (
-    <Component component="section" spacing={4} py={8} alignItems="center">
+    <Component
+      component="section"
+      alignItems="center"
+      id={id}
+      py={8}
+      spacing={4}
+    >
       {children}
     </Component>
   );

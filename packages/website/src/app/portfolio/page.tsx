@@ -15,7 +15,6 @@ export async function generateMetadata(): Promise<Metadata> {
 
   return {
     title: portfolioPage.meta_title,
-    keywords: portfolioPage.meta_keywords,
     description: portfolioPage.meta_description,
     alternates: {
       canonical: generateCanonical("/portfolio/"),

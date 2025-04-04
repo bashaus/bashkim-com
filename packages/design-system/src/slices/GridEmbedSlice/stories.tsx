@@ -1,10 +1,10 @@
 import gridEmbedSliceFactory from "@bashkim-com/prismic-factories/gridEmbedSliceFactory";
 import type { Meta } from "@storybook/react";
 
-import GridEmbedSliceComponent from ".";
+import GridEmbedSlice from ".";
 
 export default {
-  component: GridEmbedSliceComponent,
+  component: GridEmbedSlice,
   title: "Prismic slices/Grid Embed Slice",
   args: {
     slice: gridEmbedSliceFactory.build(),
@@ -20,4 +20,4 @@ export default {
   },
 } as Meta;
 
-export const GridEmbedSlice = {};
+export const Fixture = {};

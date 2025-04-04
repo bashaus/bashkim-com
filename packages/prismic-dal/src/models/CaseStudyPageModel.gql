@@ -2,9 +2,10 @@ fragment CaseStudyPageModel on Case_study {
   _meta {
     uid
   }
+
   meta_title
-  meta_keywords
   meta_description
+
   image_icon
   image_header_desktop
   image_header_mobile
