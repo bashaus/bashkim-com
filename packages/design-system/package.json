@@ -86,7 +86,7 @@
     "@storybook/nextjs": "^8.6.11",
     "@storybook/types": "^8.6.11",
     "@swc/jest": "^0.2.36",
-    "@types/jest": "29.5.13",
+    "@types/jest": "29.5.14",
     "@types/react-slick": "^0.23.13",
     "identity-obj-proxy": "^3.0.0",
     "jest": "29.7.0",
