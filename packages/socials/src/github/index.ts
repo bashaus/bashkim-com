@@ -13,7 +13,7 @@ const getGitHubData = async () => {
 
 export async function getGitHubSocials(): Promise<GetGitHubSocialsResponse> {
   const result = await getGitHubData();
-  const nodes = result.user?.pinnedItems.nodes || [];
+  const nodes = result.user?.pinnedItems.nodes ?? [];
 
   const pinnedItems = nodes
     .filter(<TValue>(value: TValue | null | undefined): value is TValue => {

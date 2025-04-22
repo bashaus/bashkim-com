@@ -64,7 +64,7 @@ export default function CaseStudyPageLockup({
         {(collaboratorSlices ?? []).length > 0 && (
           <Group design="alternate">
             <CaseStudyCollaborators
-              myRole={caseStudyPage.info_role || undefined}
+              myRole={caseStudyPage.info_role ?? undefined}
               slices={
                 collaboratorSlices as Array<CollaboratorSliceTypeFragment>
               }
