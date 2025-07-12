@@ -1,9 +1,5 @@
 import { styled } from "@mui/material/styles";
 
-export const Embla = styled("section")(() => ({
-  "--slide-spacing": "2rem",
-}));
-
 export const Viewport = styled("div")(() => ({
   overflow: "hidden",
 }));

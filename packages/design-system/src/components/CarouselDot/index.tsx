@@ -1,3 +1,9 @@
+import { PropsOf } from "@emotion/react";
+
 import * as S from "./styles";
 
-export default S.CarouselDot;
+export type CarouselDotProps = Readonly<PropsOf<typeof S.CarouselDot>>;
+
+export default function CarouselDot(props: CarouselDotProps) {
+  return <S.CarouselDot {...props} />;
+}

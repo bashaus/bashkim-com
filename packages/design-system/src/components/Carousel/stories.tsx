@@ -1,4 +1,5 @@
 import { faker } from "@faker-js/faker";
+import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import type { Meta, StoryFn } from "@storybook/nextjs";
 
@@ -9,6 +10,7 @@ export default {
   title: "Components/Carousel",
   args: {
     slides: 3,
+    slidesVisible: 1,
   },
   argTypes: {
     slides: {
@@ -32,12 +34,7 @@ const Template: StoryFn<CarouselStoryProps> = ({
   slides,
   ...args
 }: CarouselStoryProps) => (
-  <div
-    style={{
-      width: "100vw",
-      maxWidth: 600,
-    }}
-  >
+  <Container maxWidth="md">
     <Carousel {...args}>
       {Array(slides)
         .fill("")
@@ -54,7 +51,7 @@ const Template: StoryFn<CarouselStoryProps> = ({
           </div>
         ))}
     </Carousel>
-  </div>
+  </Container>
 );
 
 export const Fixture = {

@@ -1,10 +1,8 @@
-import { styled } from "@mui/material";
+import ButtonBase from "@mui/material/ButtonBase";
+import { styled } from "@mui/material/styles";
 
-export const CarouselDot = styled("button")(({ theme }) => ({
-  appearance: "none",
+export const CarouselDot = styled(ButtonBase)(({ theme }) => ({
   touchAction: "manipulation",
-  textDecoration: "none",
-  cursor: "pointer",
   border: 0,
   padding: 0,
   margin: 0,
@@ -13,6 +11,7 @@ export const CarouselDot = styled("button")(({ theme }) => ({
   borderRadius: theme.spacing(1),
   backgroundColor: theme.palette.grey[300],
   textIndent: -9999,
+  overflow: "hidden",
   transition: "all .3s",
 
   '&[aria-selected="true"]': {
