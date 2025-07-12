@@ -11,7 +11,7 @@ import Stack from "@mui/material/Stack";
 import StackOverflowFilledVector from "@/assets/vectors/social/stack-overflow-filled.svg";
 import SocialHeader from "@/domains/socials/SocialHeader";
 
-import styles from "./styles.module.scss";
+import * as S from "./styles";
 
 export type SocialStackOverflowProps = Readonly<{
   user: StackOverflowUser;
@@ -35,17 +35,9 @@ export default function SocialStackOverflow({
 
             {!!user.badgeCounts && (
               <>
-                <span className={styles["BadgesGold"]}>
-                  ● {user.badgeCounts.gold}
-                </span>
-
-                <span className={styles["BadgesSilver"]}>
-                  ● {user.badgeCounts.silver}
-                </span>
-
-                <span className={styles["BadgesBronze"]}>
-                  ● {user.badgeCounts.bronze}
-                </span>
+                <S.BadgesGold>● {user.badgeCounts.gold}</S.BadgesGold>
+                <S.BadgesSilver>● {user.badgeCounts.silver}</S.BadgesSilver>
+                <S.BadgesBronze>● {user.badgeCounts.bronze}</S.BadgesBronze>
               </>
             )}
           </Stack>
@@ -64,7 +56,7 @@ export default function SocialStackOverflow({
           style={{ alignItems: "flex-start" }}
         >
           <ListItemAvatar>
-            <div className={styles["Score"]}>{post.score}</div>
+            <S.Score>{post.score}</S.Score>
           </ListItemAvatar>
 
           <ListItemText
