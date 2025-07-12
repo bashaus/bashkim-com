@@ -1,3 +1,4 @@
+import { faker } from "@faker-js/faker";
 import type { Meta, StoryFn } from "@storybook/nextjs";
 import { placeholderImage } from "placeholder-image-data-url-svg";
 
@@ -8,7 +9,7 @@ export default {
   title: "Components/Device Smartphone",
   args: {
     figure: [placeholderImage({ width: 640, height: 1130, text: "figure" })],
-    children: "Class aptent taciti sociosqu ad litora torquent per.",
+    children: faker.lorem.sentence(8),
   },
   argTypes: {
     figure: { control: "file" },

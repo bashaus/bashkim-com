@@ -1,8 +1,7 @@
 import { PropsWithChildren, ReactNode } from "react";
 
-import DeviceVector from "../../assets/vectors/devices/feature-phone.svg";
 import RichTextFormatter from "../../formatters/RichTextFormatter";
-import styles from "./styles.module.scss";
+import * as S from "./styles";
 
 export type DeviceFeaturePhoneProps = Readonly<
   PropsWithChildren<{
@@ -18,17 +17,17 @@ export default function DeviceFeaturePhone({
   figure,
 }: DeviceFeaturePhoneProps) {
   return (
-    <figure className={styles["DeviceFeaturePhone"]}>
-      <div className={styles["Wrapper"]}>
-        <DeviceVector className={styles["Device"]} />
-        <div className={styles["Figure"]}>{figure}</div>
-      </div>
+    <S.Container>
+      <S.Wrapper>
+        <S.Device />
+        <S.Figure>{figure}</S.Figure>
+      </S.Wrapper>
 
       {children && (
-        <figcaption className={styles["Caption"]}>
+        <S.Caption>
           <RichTextFormatter>{children}</RichTextFormatter>
-        </figcaption>
+        </S.Caption>
       )}
-    </figure>
+    </S.Container>
   );
 }
