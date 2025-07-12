@@ -1,6 +1,7 @@
+import { faker } from "@faker-js/faker";
+import Typography from "@mui/material/Typography";
 import type { Meta, StoryFn } from "@storybook/nextjs";
 
-import RichTextFormatter from "../../formatters/RichTextFormatter";
 import Carousel, { CarouselProps } from ".";
 
 export default {
@@ -43,27 +44,13 @@ const Template: StoryFn<CarouselStoryProps> = ({
         .map((_value, i) => i + 1)
         .map((value) => (
           <div key={value}>
-            <RichTextFormatter>
-              <h3>Slide {value}</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                ultrices ex ut diam suscipit rhoncus. Cras a ligula porta,
-                dictum turpis et, euismod neque. Phasellus pulvinar est cursus,
-                lobortis odio.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-                mattis urna id ipsum semper dictum. Donec porttitor tempus arcu,
-                eu egestas lectus commodo eget. Ut venenatis, tellus vitae
-                aliquet vestibulum.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus viverra neque et nulla luctus feugiat. Suspendisse
-                potenti. Sed euismod consectetur purus eu mattis. Sed eleifend
-                erat vehicula magna convallis, quis.
-              </p>
-            </RichTextFormatter>
+            <Typography variant="h6" gutterBottom>
+              Slide {value}
+            </Typography>
+
+            <Typography gutterBottom>{faker.lorem.paragraph()}</Typography>
+            <Typography gutterBottom>{faker.lorem.paragraph()}</Typography>
+            <Typography gutterBottom>{faker.lorem.paragraph()}</Typography>
           </div>
         ))}
     </Carousel>

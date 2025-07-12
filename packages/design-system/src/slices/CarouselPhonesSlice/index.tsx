@@ -1,27 +1,14 @@
 import type { CarouselPhonesSliceTypeFragment } from "@bashkim-com/prismic-dal";
 import { PrismicRichText } from "@bashkim-com/prismic-helpers";
+import { useMediaQuery, useTheme } from "@mui/material";
 import Image from "next/image";
+import { useMemo } from "react";
 
 import Carousel from "../../components/Carousel";
 import CarouselImage from "../../components/CarouselImage";
 import DeviceFeaturePhone from "../../components/DeviceFeaturePhone";
 import DeviceSmartphone from "../../components/DeviceSmartphone";
 import FullImagePartial from "../../partials/FullImagePartial";
-
-const CAROUSEL_RESPONSIVE = [
-  {
-    breakpoint: 767,
-    settings: {
-      slidesToShow: 1,
-    },
-  },
-  {
-    breakpoint: 1023,
-    settings: {
-      slidesToShow: 2,
-    },
-  },
-];
 
 const DeviceTypeComponents: Record<
   string,
@@ -38,9 +25,27 @@ export type CarouselPhonesSliceProps = Readonly<{
 export default function CarouselPhonesSlice({
   slice,
 }: CarouselPhonesSliceProps) {
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
+  const isMediumScreen = useMediaQuery(theme.breakpoints.between("md", "lg"));
+
+  const slidesVisible = useMemo(() => {
+    switch (true) {
+      case isSmallScreen: {
+        return 1;
+      }
+      case isMediumScreen: {
+        return 2;
+      }
+      default: {
+        return 3;
+      }
+    }
+  }, [isMediumScreen, isSmallScreen]);
+
   return (
     <FullImagePartial>
-      <Carousel slidesToShow={3} responsive={CAROUSEL_RESPONSIVE}>
+      <Carousel slidesVisible={slidesVisible}>
         {slice.fields?.map((field) => {
           const {
             carousel_phones_slice_type_device_type: deviceType,
