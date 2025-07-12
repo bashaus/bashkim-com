@@ -1,7 +1,7 @@
 import { PropsWithChildren, ReactNode } from "react";
 
 import RichTextFormatter from "../../formatters/RichTextFormatter";
-import styles from "./styles.module.scss";
+import * as S from "./styles";
 
 export type CarouselImageProps = Readonly<
   PropsWithChildren<{
@@ -14,14 +14,14 @@ export default function CarouselImage({
   figure,
 }: CarouselImageProps) {
   return (
-    <figure className={styles["CarouselImage"]}>
-      <div className={styles["Figure"]}>{figure}</div>
+    <S.CarouselImage>
+      <S.Figure>{figure}</S.Figure>
 
       {children && (
         <figcaption>
           <RichTextFormatter>{children}</RichTextFormatter>
         </figcaption>
       )}
-    </figure>
+    </S.CarouselImage>
   );
 }
