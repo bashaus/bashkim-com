@@ -1,5 +1,5 @@
 import collaboratorSliceFactory from "@bashkim-com/prismic-factories/collaboratorSliceFactory";
-import type { Meta } from "@storybook/react";
+import type { Meta } from "@storybook/nextjs";
 
 import CollaboratorSlice from ".";
 

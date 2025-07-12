@@ -1,4 +1,4 @@
-import type { Meta, StoryFn } from "@storybook/react";
+import type { Meta, StoryFn } from "@storybook/nextjs";
 
 import RichTextFormatter from "../../formatters/RichTextFormatter";
 import Carousel, { CarouselProps } from ".";

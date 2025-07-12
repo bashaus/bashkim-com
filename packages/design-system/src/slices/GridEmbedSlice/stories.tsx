@@ -1,5 +1,5 @@
 import gridEmbedSliceFactory from "@bashkim-com/prismic-factories/gridEmbedSliceFactory";
-import type { Meta } from "@storybook/react";
+import type { Meta } from "@storybook/nextjs";
 
 import GridEmbedSlice from ".";
 

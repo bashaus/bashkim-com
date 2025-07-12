@@ -1,5 +1,5 @@
 import captionedMagazineSliceFactory from "@bashkim-com/prismic-factories/captionedMagazineSliceFactory";
-import type { Meta } from "@storybook/react";
+import type { Meta } from "@storybook/nextjs";
 
 import CaptionedMagazineSlice from ".";
 

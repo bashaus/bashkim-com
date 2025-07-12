@@ -1,5 +1,5 @@
 import Typography from "@mui/material/Typography";
-import type { Meta, StoryFn } from "@storybook/react";
+import type { Meta, StoryFn } from "@storybook/nextjs";
 import { placeholderImage } from "placeholder-image-data-url-svg";
 
 import PageHeaderPartial, { PageHeaderPartialProps } from ".";

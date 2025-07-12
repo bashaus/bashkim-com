@@ -1,5 +1,5 @@
 import gridVideoSliceFactory from "@bashkim-com/prismic-factories/gridVideoSliceFactory";
-import type { Meta } from "@storybook/react";
+import type { Meta } from "@storybook/nextjs";
 
 import GridVideoSlice from ".";
 

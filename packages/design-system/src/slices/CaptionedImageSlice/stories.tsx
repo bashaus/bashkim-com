@@ -1,5 +1,5 @@
 import captionedImageSliceFactory from "@bashkim-com/prismic-factories/captionedImageSliceFactory";
-import type { Meta } from "@storybook/react";
+import type { Meta } from "@storybook/nextjs";
 
 import CaptionedImageSlice from ".";
 

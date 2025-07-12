@@ -1,5 +1,5 @@
 import carouselImagesSliceFactory from "@bashkim-com/prismic-factories/carouselImagesSliceFactory";
-import type { Meta } from "@storybook/react";
+import type { Meta } from "@storybook/nextjs";
 
 import CarouselImagesSlice from ".";
 

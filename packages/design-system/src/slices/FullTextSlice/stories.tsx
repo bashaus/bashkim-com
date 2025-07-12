@@ -1,5 +1,5 @@
 import fullTextSliceFactory from "@bashkim-com/prismic-factories/fullTextSliceFactory";
-import type { Meta } from "@storybook/react";
+import type { Meta } from "@storybook/nextjs";
 
 import FullTextSlice from ".";
 

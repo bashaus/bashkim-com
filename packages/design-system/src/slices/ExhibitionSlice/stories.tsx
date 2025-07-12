@@ -1,5 +1,5 @@
 import exhibitionSliceFactory from "@bashkim-com/prismic-factories/exhibitionSliceFactory";
-import type { Meta } from "@storybook/react";
+import type { Meta } from "@storybook/nextjs";
 
 import ExhibitionSlice from ".";
 
