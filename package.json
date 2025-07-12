@@ -17,7 +17,7 @@
     "codegen": "turbo run codegen",
     "dev": "turbo run dev",
     "lint": "eslint . && turbo run lint",
-    "prepare": "husky",
+    "prepare": "husky || true",
     "storybook:build": "turbo run storybook:build",
     "test": "jest --passWithNoTests"
   },
