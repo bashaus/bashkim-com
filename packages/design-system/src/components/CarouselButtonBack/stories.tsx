@@ -5,7 +5,7 @@ import CarouselButtonBack from ".";
 
 export default {
   component: CarouselButtonBack,
-  title: "Components/CarouselButtonBack",
+  title: "Components/Carousel Button Back",
   args: {
     onClick: fn(),
   },

@@ -8,7 +8,7 @@ import CarouselViewport, { CarouselViewportProps } from ".";
 
 export default {
   component: CarouselViewport,
-  title: "Components/CarouselViewport",
+  title: "Components/Carousel Viewport",
   args: {
     slides: 3,
     slidesVisible: 1,

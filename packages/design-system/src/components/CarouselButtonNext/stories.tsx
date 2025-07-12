@@ -5,7 +5,7 @@ import CarouselButtonNext from ".";
 
 export default {
   component: CarouselButtonNext,
-  title: "Components/CarouselButtonNext",
+  title: "Components/Carousel Button Next",
   args: {
     onClick: fn(),
   },

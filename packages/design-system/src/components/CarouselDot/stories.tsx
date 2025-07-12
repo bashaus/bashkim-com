@@ -5,7 +5,7 @@ import CarouselDot from ".";
 
 export default {
   component: CarouselDot,
-  title: "Components/CarouselDot",
+  title: "Components/Carousel Dot",
   args: {
     onClick: fn(),
   },

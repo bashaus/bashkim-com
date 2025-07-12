@@ -7,7 +7,7 @@ import CarouselDots from ".";
 
 export default {
   component: CarouselDots,
-  title: "Components/CarouselDots",
+  title: "Components/Carousel Dots",
   parameters: {
     layout: "centered",
   },
