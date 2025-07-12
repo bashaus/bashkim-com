@@ -1,11 +1,10 @@
 import PageHeaderPartial from "@bashkim-com/design-system/PageHeaderPartial";
 import Typography from "@mui/material/Typography";
-import Image from "next/image";
 
 import PhotoImage from "@/assets/images/photo/photo@4x.jpg";
 import HeaderDesktopImage from "@/domains/about-page/assets/header-desktop.jpg";
 
-import styles from "./styles.module.scss";
+import * as S from "./styles";
 
 export default function AboutPageHeader() {
   return (
@@ -13,19 +12,12 @@ export default function AboutPageHeader() {
       imageDesktop={HeaderDesktopImage.src}
       imageMobile={HeaderDesktopImage.src}
     >
-      <div className={styles["AboutPageHeader"]}>
-        <Image
-          className={styles["HeaderImage"]}
-          src={PhotoImage.src}
-          alt="Photo of Bashkim Isai"
-          width={PhotoImage.width}
-          height={PhotoImage.height}
-        />
-
+      <S.AboutPageHeader>
+        <S.HeaderImage {...PhotoImage} alt="Photo of Bashkim Isai" />
         <Typography variant="h2" component="h1">
           Bash
         </Typography>
-      </div>
+      </S.AboutPageHeader>
     </PageHeaderPartial>
   );
 }

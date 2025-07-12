@@ -2,18 +2,17 @@ import Group from "@bashkim-com/design-system/Group";
 import SplitItemPartial from "@bashkim-com/design-system/SplitItemPartial";
 import SplitPartial from "@bashkim-com/design-system/SplitPartial";
 import SubtitlePartial from "@bashkim-com/design-system/SubtitlePartial";
-import Image from "next/image";
 
 import QutGardensPointImage from "@/domains/about-page/assets/education/qut/gardens-point.jpg";
 import QutLogoImage from "@/domains/about-page/assets/education/qut/logo.jpg";
 import UqBackgroundImage from "@/domains/about-page/assets/education/uq/background.jpg";
 import UqLogoImage from "@/domains/about-page/assets/education/uq/logo.png";
 
-import styles from "./styles.module.scss";
+import * as S from "./styles";
 
 export default function AboutEducation() {
   return (
-    <Group data-testid="AboutEducation">
+    <Group>
       <SubtitlePartial>
         <h2>Education</h2>
       </SubtitlePartial>
@@ -36,8 +35,7 @@ export default function AboutEducation() {
 
         <SplitItemPartial backgroundImage={UqBackgroundImage.src}>
           <div>
-            <Image
-              className={styles["Logo"]}
+            <S.Logo
               alt="University of Queensland"
               src={UqLogoImage.src}
               width={UqLogoImage.width}
@@ -92,8 +90,7 @@ export default function AboutEducation() {
 
         <SplitItemPartial backgroundImage={QutGardensPointImage.src}>
           <div>
-            <Image
-              className={styles["Logo"]}
+            <S.Logo
               alt="Queensland University of Technology"
               src={QutLogoImage.src}
               width={QutLogoImage.width}

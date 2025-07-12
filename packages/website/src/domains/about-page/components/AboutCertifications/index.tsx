@@ -9,7 +9,7 @@ import JavaOcaImage from "@/domains/about-page/assets/certifications/java/oca.pn
 import PhpLogoImage from "@/domains/about-page/assets/certifications/php/logo.png";
 import PhpZceImage from "@/domains/about-page/assets/certifications/php/zce.jpg";
 
-import styles from "./styles.module.scss";
+import * as S from "./styles";
 
 export default function AboutCertifications() {
   return (
@@ -42,8 +42,7 @@ export default function AboutCertifications() {
           </div>
         </SplitItemPartial>
         <SplitItemPartial>
-          <Image
-            className={styles["Logo"]}
+          <S.Logo
             alt="Duke - The Java Mascot"
             src={JavaLogoImage.src}
             width={JavaLogoImage.width}
@@ -77,8 +76,7 @@ export default function AboutCertifications() {
         </SplitItemPartial>
 
         <SplitItemPartial>
-          <Image
-            className={styles["Logo"]}
+          <S.Logo
             alt="ElePHPant"
             src={PhpLogoImage.src}
             width={PhpLogoImage.width}
