@@ -1,6 +1,6 @@
-import FullTextPartial from "@bashkim-com/design-system/FullTextPartial";
 import Group from "@bashkim-com/design-system/Group";
 import PageHeaderPartial from "@bashkim-com/design-system/PageHeaderPartial";
+import Container from "@mui/material/Container";
 import Divider from "@mui/material/Divider";
 import Link from "@mui/material/Link";
 import Table from "@mui/material/Table";
@@ -23,8 +23,8 @@ export default function CookiesDetails() {
       />
 
       <Group>
-        <FullTextPartial>
-          <Typography variant="h5" component="h1" gutterBottom>
+        <Container maxWidth="md">
+          <Typography variant="h4" component="h1" gutterBottom>
             Cookies on this site
           </Typography>
 
@@ -84,11 +84,20 @@ export default function CookiesDetails() {
           </Typography>
 
           <Typography gutterBottom>
-            Google Analytics sets the following cookies:
+            If you prefer, you can{" "}
+            <Link
+              href="https://tools.google.com/dlpage/gaoptout"
+              target="_blank"
+              rel="noreferrer"
+            >
+              opt-out of Google Analytics
+            </Link>{" "}
+            by following the instructions provided by Google.
           </Typography>
 
           <TableContainer>
             <Table>
+              <caption>Google Analytics sets the following cookies</caption>
               <TableHead>
                 <TableRow>
                   <TableCell>Name</TableCell>
@@ -127,18 +136,6 @@ export default function CookiesDetails() {
             </Table>
           </TableContainer>
 
-          <Typography gutterBottom>
-            If you prefer, you can{" "}
-            <Link
-              href="https://tools.google.com/dlpage/gaoptout"
-              target="_blank"
-              rel="noreferrer"
-            >
-              opt-out of Google Analytics
-            </Link>{" "}
-            by following the instructions provided by Google.
-          </Typography>
-
           <Typography variant="h6" component="h3" gutterBottom>
             YouTube
           </Typography>
@@ -153,7 +150,7 @@ export default function CookiesDetails() {
           <Typography gutterBottom fontSize="small">
             Last updated 30 March 2025
           </Typography>
-        </FullTextPartial>
+        </Container>
       </Group>
     </>
   );
