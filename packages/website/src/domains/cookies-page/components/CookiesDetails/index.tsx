@@ -11,15 +11,15 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Typography from "@mui/material/Typography";
 
-import HeaderDesktopImage from "@/domains/cookies-page/assets/header-desktop.jpg";
-import HeaderMobileImage from "@/domains/cookies-page/assets/header-mobile.jpg";
+import headerDesktopImage from "@/domains/cookies-page/assets/header-desktop.jpg";
+import headerMobileImage from "@/domains/cookies-page/assets/header-mobile.jpg";
 
 export default function CookiesDetails() {
   return (
     <>
       <PageHeaderPartial
-        imageDesktop={HeaderDesktopImage.src}
-        imageMobile={HeaderMobileImage.src}
+        imageDesktop={headerDesktopImage.src}
+        imageMobile={headerMobileImage.src}
       />
 
       <Group>

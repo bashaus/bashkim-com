@@ -9,7 +9,7 @@ import ListItemText from "@mui/material/ListItemText";
 import Image from "next/image";
 import type { ReactNode } from "react";
 
-import PhotoImage from "@/assets/images/photo/photo@4x.jpg";
+import photoImage from "@/assets/images/photo/photo@4x.jpg";
 import MuiNextLink from "@/libraries/material-ui/link";
 
 export type SocialHeaderProps = Readonly<{
@@ -26,10 +26,10 @@ export default function SocialHeader({
   avatarBadgeBackground,
   avatarImage = (
     <Image
-      src={PhotoImage.src}
+      src={photoImage.src}
       alt="Bashkim Isai"
-      width={PhotoImage.width}
-      height={PhotoImage.height}
+      width={photoImage.width}
+      height={photoImage.height}
     />
   ),
   href,

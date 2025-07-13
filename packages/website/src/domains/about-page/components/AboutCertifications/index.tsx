@@ -4,10 +4,10 @@ import SplitPartial from "@bashkim-com/design-system/SplitPartial";
 import SubtitlePartial from "@bashkim-com/design-system/SubtitlePartial";
 import Image from "next/image";
 
-import JavaLogoImage from "@/domains/about-page/assets/certifications/java/logo.jpg";
-import JavaOcaImage from "@/domains/about-page/assets/certifications/java/oca.png";
-import PhpLogoImage from "@/domains/about-page/assets/certifications/php/logo.png";
-import PhpZceImage from "@/domains/about-page/assets/certifications/php/zce.jpg";
+import javaLogoImage from "@/domains/about-page/assets/certifications/java/logo.jpg";
+import javaOcaImage from "@/domains/about-page/assets/certifications/java/oca.png";
+import phpLogoImage from "@/domains/about-page/assets/certifications/php/logo.png";
+import phpZceImage from "@/domains/about-page/assets/certifications/php/zce.jpg";
 
 import * as S from "./styles";
 
@@ -30,12 +30,12 @@ export default function AboutCertifications() {
             <p>
               <Image
                 alt="Oracle Certified Associate"
-                src={JavaOcaImage.src}
-                width={JavaOcaImage.width}
-                height={JavaOcaImage.height}
+                src={javaOcaImage.src}
+                width={javaOcaImage.width}
+                height={javaOcaImage.height}
                 style={{
-                  width: JavaOcaImage.width,
-                  height: JavaOcaImage.height,
+                  width: javaOcaImage.width,
+                  height: javaOcaImage.height,
                 }}
               />
             </p>
@@ -44,9 +44,9 @@ export default function AboutCertifications() {
         <SplitItemPartial>
           <S.Logo
             alt="Duke - The Java Mascot"
-            src={JavaLogoImage.src}
-            width={JavaLogoImage.width}
-            height={JavaLogoImage.height}
+            src={javaLogoImage.src}
+            width={javaLogoImage.width}
+            height={javaLogoImage.height}
           />
         </SplitItemPartial>
       </SplitPartial>
@@ -63,12 +63,12 @@ export default function AboutCertifications() {
             <p>
               <Image
                 alt="Zend Certified Engineer"
-                src={PhpZceImage.src}
-                width={PhpZceImage.width}
-                height={PhpZceImage.height}
+                src={phpZceImage.src}
+                width={phpZceImage.width}
+                height={phpZceImage.height}
                 style={{
-                  width: PhpZceImage.width,
-                  height: PhpZceImage.height,
+                  width: phpZceImage.width,
+                  height: phpZceImage.height,
                 }}
               />
             </p>
@@ -78,9 +78,9 @@ export default function AboutCertifications() {
         <SplitItemPartial>
           <S.Logo
             alt="ElePHPant"
-            src={PhpLogoImage.src}
-            width={PhpLogoImage.width}
-            height={PhpLogoImage.height}
+            src={phpLogoImage.src}
+            width={phpLogoImage.width}
+            height={phpLogoImage.height}
           />
         </SplitItemPartial>
       </SplitPartial>

@@ -3,10 +3,10 @@ import SplitItemPartial from "@bashkim-com/design-system/SplitItemPartial";
 import SplitPartial from "@bashkim-com/design-system/SplitPartial";
 import SubtitlePartial from "@bashkim-com/design-system/SubtitlePartial";
 
-import QutGardensPointImage from "@/domains/about-page/assets/education/qut/gardens-point.jpg";
-import QutLogoImage from "@/domains/about-page/assets/education/qut/logo.jpg";
-import UqBackgroundImage from "@/domains/about-page/assets/education/uq/background.jpg";
-import UqLogoImage from "@/domains/about-page/assets/education/uq/logo.png";
+import qutGardensPointImage from "@/domains/about-page/assets/education/qut/gardens-point.jpg";
+import qutLogoImage from "@/domains/about-page/assets/education/qut/logo.jpg";
+import uqBackgroundImage from "@/domains/about-page/assets/education/uq/background.jpg";
+import uqLogoImage from "@/domains/about-page/assets/education/uq/logo.png";
 
 import * as S from "./styles";
 
@@ -33,13 +33,13 @@ export default function AboutEducation() {
           </div>
         </SplitItemPartial>
 
-        <SplitItemPartial backgroundImage={UqBackgroundImage.src}>
+        <SplitItemPartial backgroundImage={uqBackgroundImage.src}>
           <div>
             <S.Logo
               alt="University of Queensland"
-              src={UqLogoImage.src}
-              width={UqLogoImage.width}
-              height={UqLogoImage.height}
+              src={uqLogoImage.src}
+              width={uqLogoImage.width}
+              height={uqLogoImage.height}
             />
           </div>
         </SplitItemPartial>
@@ -88,13 +88,13 @@ export default function AboutEducation() {
           </div>
         </SplitItemPartial>
 
-        <SplitItemPartial backgroundImage={QutGardensPointImage.src}>
+        <SplitItemPartial backgroundImage={qutGardensPointImage.src}>
           <div>
             <S.Logo
               alt="Queensland University of Technology"
-              src={QutLogoImage.src}
-              width={QutLogoImage.width}
-              height={QutLogoImage.height}
+              src={qutLogoImage.src}
+              width={qutLogoImage.width}
+              height={qutLogoImage.height}
             />
           </div>
         </SplitItemPartial>
