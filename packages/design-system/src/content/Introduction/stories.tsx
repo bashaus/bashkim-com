@@ -18,7 +18,7 @@ export default {
 export const Welcome: StoryObj = {
   render: () => (
     <Container maxWidth="md">
-      <Box mt={5} mb={3}>
+      <Box mt={12} mb={3}>
         <SiteLogo width={250} />
       </Box>
 
