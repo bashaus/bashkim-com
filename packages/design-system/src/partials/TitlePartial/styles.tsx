@@ -6,5 +6,4 @@ export const Icon = styled(Box)(() => ({
   width: 128,
   height: 128,
   overflow: "hidden",
-  display: "block",
 }));

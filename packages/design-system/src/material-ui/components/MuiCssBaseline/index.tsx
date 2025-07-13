@@ -18,6 +18,11 @@ const MuiCssBaselineTheme = createTheme({
         figure: {
           margin: 0,
         },
+
+        img: {
+          maxWidth: "100%",
+          height: "auto",
+        },
       }),
     },
   },
