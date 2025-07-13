@@ -9,7 +9,7 @@ export default {
     url: "https://vimeo.com/1067276219",
   },
   parameters: {
-    layout: "padded",
+    layout: "fullscreen",
   },
 } as Meta;
 
