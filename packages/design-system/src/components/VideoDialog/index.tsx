@@ -4,6 +4,7 @@ import StopIcon from "@mui/icons-material/Stop";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Dialog, { DialogProps } from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
 import Stack from "@mui/material/Stack";
 import { MouseEventHandler, useCallback, useRef, useState } from "react";
 import ReactPlayer, { ReactPlayerProps } from "react-player/lazy";
@@ -51,7 +52,7 @@ export default function VideoDialog({ open, onClose, url }: VideoDialogProps) {
   }, [playing]);
 
   return (
-    <Dialog open={open} onClose={onClose} fullWidth>
+    <Dialog open={open} onClose={onClose} fullWidth maxWidth="xl">
       <Box sx={{ aspectRatio: "16 / 9" }}>
         <ReactPlayer
           config={{
@@ -80,19 +81,30 @@ export default function VideoDialog({ open, onClose, url }: VideoDialogProps) {
         />
       </Box>
 
-      <Stack direction="row" justifyContent="center" spacing={2}>
-        <Button onClick={handlePlayPauseClick}>
-          {playing ? (
-            <StopIcon aria-label="Stop video" />
-          ) : (
-            <PlayArrowIcon aria-label="Play video" />
-          )}
-        </Button>
+      <DialogActions>
+        <Stack width="100%" direction="row" justifyContent="space-between">
+          <Button
+            color="primary"
+            onClick={handlePlayPauseClick}
+            startIcon={
+              playing ? (
+                <StopIcon aria-label="Stop video" />
+              ) : (
+                <PlayArrowIcon aria-label="Play video" />
+              )
+            }
+          >
+            {playing ? "Pause" : "Play"}
+          </Button>
 
-        <Button onClick={handleClose}>
-          <CloseIcon aria-label="Stop and close video" />
-        </Button>
-      </Stack>
+          <Button
+            onClick={handleClose}
+            endIcon={<CloseIcon aria-label="Stop and close video" />}
+          >
+            Close
+          </Button>
+        </Stack>
+      </DialogActions>
 
       {/* onBuffer?: () => void */}
       {/* onBufferEnd?: () => void */}
