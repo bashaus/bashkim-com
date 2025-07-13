@@ -1,8 +1,8 @@
 import Group from "@bashkim-com/design-system/Group";
 import Button from "@mui/material/Button";
+import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
-import CardHeader from "@mui/material/CardHeader";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 
@@ -14,9 +14,12 @@ export default function HomeFeatured() {
       <Container>
         <S.Links>
           <S.Link>
-            <S.Card>
-              <CardHeader title="Portfolio" />
+            <Card>
               <CardContent>
+                <Typography variant="h5" component="h2" gutterBottom>
+                  Portfolio
+                </Typography>
+
                 <Typography>
                   Explore my case studies, from design to development. See the
                   projects that showcase my skills and creativity.
@@ -26,13 +29,16 @@ export default function HomeFeatured() {
               <CardActions>
                 <Button href="/portfolio">Case studies</Button>
               </CardActions>
-            </S.Card>
+            </Card>
           </S.Link>
 
           <S.Link>
-            <S.Card>
-              <CardHeader title="Open source" />
+            <Card>
               <CardContent>
+                <Typography variant="h5" component="h2" gutterBottom>
+                  Open source
+                </Typography>
+
                 <Typography>
                   Check out my GitHub contributions and Medium articles. I
                   build, collaborate, and share code with the developer
@@ -56,13 +62,16 @@ export default function HomeFeatured() {
                   Medium
                 </Button>
               </CardActions>
-            </S.Card>
+            </Card>
           </S.Link>
 
           <S.Link>
-            <S.Card>
-              <CardHeader title="Let's connect" />
+            <Card>
               <CardContent>
+                <Typography variant="h5" component="h2" gutterBottom>
+                  Let&apos;s connect
+                </Typography>
+
                 <Typography>
                   Reach out on LinkedIn to chat about opportunities,
                   collaborations, or just to say hello.
@@ -75,10 +84,10 @@ export default function HomeFeatured() {
                   target="_blank"
                   rel="noreferrer noopener"
                 >
-                  LinkedIn
+                  Linked In
                 </Button>
               </CardActions>
-            </S.Card>
+            </Card>
           </S.Link>
         </S.Links>
       </Container>
