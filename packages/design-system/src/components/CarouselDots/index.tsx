@@ -8,9 +8,9 @@ export default function CarouselDots() {
 
   return (
     <Stack direction="row" spacing={1}>
-      {scrollSnaps.map((_, index) => (
+      {scrollSnaps.map((key, index) => (
         <CarouselDot
-          key={index}
+          key={key}
           onClick={() => onDotClick(index)}
           aria-selected={index === selectedIndex ? "true" : "false"}
         />
