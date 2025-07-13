@@ -99,7 +99,7 @@ export default function VideoDialog({ open, onClose, url }: VideoDialogProps) {
 
           <Button
             onClick={handleClose}
-            endIcon={<CloseIcon aria-label="Stop and close video" />}
+            startIcon={<CloseIcon aria-label="Stop and close video" />}
           >
             Close
           </Button>
