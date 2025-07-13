@@ -2,8 +2,6 @@
   "name": "@bashkim-com/style-guide",
   "version": "0.0.0",
   "exports": {
-    ".": "./src/index.scss",
-    "./fonts.scss": "./src/entry/fonts.scss",
     "./grid.scss": "./src/entry/grid.scss",
     "./headings.scss": "./src/entry/headings.scss",
     "./list.scss": "./src/entry/list.scss",

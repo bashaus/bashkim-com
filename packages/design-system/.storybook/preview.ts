@@ -1,7 +1,6 @@
 import MuiDecorator from "./decorators/MuiDecorator";
-import NormalizeDecorator from "./decorators/NormalizeDecorator";
 
-export const decorators = [NormalizeDecorator, MuiDecorator];
+export const decorators = [MuiDecorator];
 
 export const parameters = {
   controls: {
