@@ -25,7 +25,6 @@ export default function SplitItemPartial({
       className={classNames(
         className,
         styles["SplitItemPartial"],
-        !!backgroundImage && "SplitPartial_chevron",
         !!backgroundImage && styles["hasBackground"],
         !backgroundImage && styles["hasNoBackground"],
       )}

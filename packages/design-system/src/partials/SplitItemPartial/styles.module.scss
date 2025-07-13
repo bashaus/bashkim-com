@@ -58,7 +58,7 @@
     }
 
     @media #{$media-query-not-mobile} {
-      width: calc(50% + 20px);
+      width: 50%;
     }
   }
 
