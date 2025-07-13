@@ -1,6 +1,6 @@
 import { addons, type State } from "storybook/manager-api";
 
-const docStories = ["introduction-welcome--welcome"];
+const docStories = ["home--home"];
 
 addons.setConfig({
   layoutCustomisations: {

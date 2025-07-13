@@ -7,7 +7,7 @@ import type { Meta, StoryObj } from "@storybook/nextjs";
 import SiteLogo from "../../components/SiteLogo";
 
 export default {
-  title: "Introduction/Welcome",
+  title: "Home",
   parameters: {
     controls: { disable: true },
     actions: { disable: true },
@@ -15,7 +15,7 @@ export default {
   },
 } as Meta;
 
-export const Welcome: StoryObj = {
+export const Home: StoryObj = {
   render: () => (
     <Container maxWidth="md">
       <Box mt={12} mb={3}>
@@ -36,7 +36,7 @@ export const Welcome: StoryObj = {
           storybook
         </Link>{" "}
         implementation showcases a collection of reusable UI components
-        implemented on{" "}
+        implemented for{" "}
         <Link
           href="https://www.bashkim.com"
           target="_blank"

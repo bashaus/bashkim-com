@@ -8,15 +8,15 @@ export const parameters = {
     sort: "requiredFirst",
     exclude: /^(className|[a-zA-Z]+ClassName)$/,
     matchers: {
-      color: /(^color$|Color$)/i,
-      date: /(^date$|Date$)/,
-      boolean: /^(is|has)/,
+      color: /(^color$|Color$)/,
+      date: /(^date$|Date$|On$)/,
+      boolean: /^(is|has).+/,
     },
   },
 
   options: {
     storySort: {
-      order: ["Introduction", "*"],
+      order: ["Home", "*"],
     },
   },
 };
