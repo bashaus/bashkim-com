@@ -1,50 +1,54 @@
-import type { Meta, StoryFn } from "@storybook/nextjs";
+import { faker } from "@faker-js/faker";
+import type { Meta, StoryObj } from "@storybook/nextjs";
 import { placeholderImage } from "placeholder-image-data-url-svg";
 
 import Tile, { TileProps } from ".";
 
-export default {
+type TileRendererProps = Omit<
+  Readonly<
+    TileProps & {
+      _icon: Array<string>;
+      _poster: Array<string>;
+    }
+  >,
+  "icon" | "poster"
+>;
+
+const TileRenderer = ({ _icon, _poster, ...props }: TileRendererProps) => (
+  <Tile
+    {...props}
+    icon={{
+      alt: "",
+      src: _icon[0],
+      width: 300,
+      height: 300,
+    }}
+    poster={_poster[0]}
+  />
+);
+
+const meta = {
   component: Tile,
   title: "Components/Tile",
-  args: {
-    title: "Tile",
-    description: "Cras sit amet purus commodo, semper dui non.",
-    icon: [placeholderImage({ width: 300, height: 300, text: "icon" })],
-    poster: [placeholderImage({ width: 640, height: 360, text: "poster" })],
-  },
   argTypes: {
-    icon: { control: "file" },
-    poster: { control: "file" },
+    _icon: { control: "file", name: "icon" },
+    _poster: { control: "file", name: "poster" },
   },
   parameters: {
     layout: "centered",
   },
-} as Meta;
+  render: TileRenderer,
+} satisfies Meta<TileRendererProps>;
 
-export type TileStoryProps = Readonly<
-  Omit<TileProps, "icon" | "poster"> & {
-    icon: Array<string>;
-    poster: Array<string>;
-  }
->;
-
-const Template: StoryFn<TileStoryProps> = ({
-  icon,
-  poster,
-  ...args
-}: TileStoryProps) => (
-  <Tile
-    {...args}
-    icon={{
-      alt: "",
-      src: icon[0],
-      width: 300,
-      height: 300,
-    }}
-    poster={poster[0]}
-  />
-);
+type Story = StoryObj<typeof meta>;
 
 export const Fixture = {
-  render: Template,
-};
+  args: {
+    title: faker.lorem.words(2),
+    description: faker.lorem.sentence(6),
+    _icon: [placeholderImage({ width: 300, height: 300, text: "icon" })],
+    _poster: [placeholderImage({ width: 640, height: 360, text: "poster" })],
+  },
+} satisfies Story;
+
+export default meta;

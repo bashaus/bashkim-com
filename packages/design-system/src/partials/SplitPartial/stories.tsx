@@ -1,36 +1,20 @@
-import type { Meta, StoryFn } from "@storybook/nextjs";
+import type { Meta, StoryObj } from "@storybook/nextjs";
 import { placeholderImage } from "placeholder-image-data-url-svg";
 
 import SplitItemPartial from "../SplitItemPartial";
 import SplitPartial, { SplitPartialProps } from ".";
 
-export default {
-  component: SplitPartial,
-  title: "Partials/Split Partial",
-  args: {
-    backgroundImage: [
-      placeholderImage({ width: 992, height: 558, text: "backgroundImage" }),
-    ],
-  },
-  argTypes: {
-    backgroundImage: {
-      control: "file",
-      table: { category: "Story helpers" },
-    },
-  },
-} as Meta;
-
-type SplitPartialStoryProps = Readonly<
+type SplitPartialRendererProps = Readonly<
   Omit<SplitPartialProps, "backgroundImage"> & {
     backgroundImage: Array<string>;
   }
 >;
 
-const Template: StoryFn<SplitPartialStoryProps> = ({
+const SplitPartialRenderer = ({
   backgroundImage,
   index = 0,
   ...args
-}: SplitPartialStoryProps) => (
+}: SplitPartialRendererProps) => (
   <>
     <SplitPartial index={index} {...args}>
       <SplitItemPartial>
@@ -48,6 +32,23 @@ const Template: StoryFn<SplitPartialStoryProps> = ({
   </>
 );
 
+const meta = {
+  component: SplitPartial,
+  title: "Partials/Split Partial",
+  argTypes: {
+    backgroundImage: { control: "file" },
+  },
+  render: SplitPartialRenderer,
+} satisfies Meta<SplitPartialRendererProps>;
+
+type Story = StoryObj<typeof meta>;
+
 export const Fixture = {
-  render: Template,
-};
+  args: {
+    backgroundImage: [
+      placeholderImage({ width: 992, height: 558, text: "backgroundImage" }),
+    ],
+  },
+} satisfies Story;
+
+export default meta;

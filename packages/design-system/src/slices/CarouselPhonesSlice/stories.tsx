@@ -1,14 +1,11 @@
 import carouselPhonesSliceFactory from "@bashkim-com/prismic-factories/carouselPhonesSliceFactory";
-import type { Meta } from "@storybook/nextjs";
+import type { Meta, StoryObj } from "@storybook/nextjs";
 
 import CarouselPhonesSlice from ".";
 
-export default {
+const meta = {
   component: CarouselPhonesSlice,
   title: "Prismic slices/Carousel Phones Slice",
-  args: {
-    slice: carouselPhonesSliceFactory.build(),
-  },
   argTypes: {
     slice: {
       control: "object",
@@ -18,6 +15,14 @@ export default {
   parameters: {
     controls: { expanded: false },
   },
-} as Meta;
+} satisfies Meta<typeof CarouselPhonesSlice>;
 
-export const Fixture = {};
+type Story = StoryObj<typeof meta>;
+
+export const Fixture = {
+  args: {
+    slice: carouselPhonesSliceFactory.build(),
+  },
+} satisfies Story;
+
+export default meta;

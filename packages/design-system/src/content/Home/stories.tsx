@@ -6,16 +6,18 @@ import type { Meta, StoryObj } from "@storybook/nextjs";
 
 import SiteLogo from "../../components/SiteLogo";
 
-export default {
+const meta = {
   title: "Home",
   parameters: {
     controls: { disable: true },
     actions: { disable: true },
     a11y: { disable: true },
   },
-} as Meta;
+} satisfies Meta;
 
-export const Home: StoryObj = {
+type Story = StoryObj<typeof meta>;
+
+export const Home = {
   render: () => (
     <Container maxWidth="md">
       <Box mt={12} mb={3}>
@@ -51,4 +53,6 @@ export const Home: StoryObj = {
       </Typography>
     </Container>
   ),
-};
+} satisfies Story;
+
+export default meta;

@@ -1,34 +1,38 @@
-import type { Meta, StoryFn } from "@storybook/nextjs";
+import type { Meta, StoryObj } from "@storybook/nextjs";
 import { placeholderImage } from "placeholder-image-data-url-svg";
 
 import FullImagePartial, { FullImagePartialProps } from ".";
 
-export default {
-  component: FullImagePartial,
-  title: "Partials/Full Image Partial",
-  args: {
-    figure: [placeholderImage({ width: 1200, height: 630, text: "figure" })],
-  },
-  argTypes: {
-    figure: { control: "file" },
-  },
-} as Meta;
-
-type FullImagePartialStoryProps = Readonly<
+type FullImagePartialRendererProps = Readonly<
   Omit<FullImagePartialProps, "figure"> & {
     figure: Array<string>;
   }
 >;
 
-const Template: StoryFn<FullImagePartialStoryProps> = ({
+const FullImagePartialRenderer = ({
   figure,
   ...args
-}: FullImagePartialStoryProps) => (
+}: FullImagePartialRendererProps) => (
   <FullImagePartial {...args}>
     <img alt="" src={figure[0]} />
   </FullImagePartial>
 );
 
+const meta = {
+  component: FullImagePartial,
+  title: "Partials/Full Image Partial",
+  argTypes: {
+    figure: { control: "file" },
+  },
+  render: FullImagePartialRenderer,
+} satisfies Meta<FullImagePartialRendererProps>;
+
+type Story = StoryObj<typeof meta>;
+
 export const Fixture = {
-  render: Template,
-};
+  args: {
+    figure: [placeholderImage({ width: 1200, height: 630, text: "figure" })],
+  },
+} satisfies Story;
+
+export default meta;

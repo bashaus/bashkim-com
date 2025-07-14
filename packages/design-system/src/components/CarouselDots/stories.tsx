@@ -1,19 +1,11 @@
 import Container from "@mui/material/Container";
-import type { Meta, StoryFn } from "@storybook/nextjs";
+import type { Meta, StoryObj } from "@storybook/nextjs";
 
 import CarouselProvider from "../CarouselProvider";
 import CarouselViewport from "../CarouselViewport";
 import CarouselDots from ".";
 
-export default {
-  component: CarouselDots,
-  title: "Components/Carousel Dots",
-  parameters: {
-    layout: "centered",
-  },
-} as Meta;
-
-const Template: StoryFn = () => (
+const CarouselDotsRenderer = () => (
   <Container maxWidth="md">
     <CarouselProvider>
       <CarouselViewport>
@@ -27,6 +19,17 @@ const Template: StoryFn = () => (
   </Container>
 );
 
-export const Fixture = {
-  render: Template,
-};
+const meta = {
+  component: CarouselDots,
+  title: "Components/Carousel Dots",
+  parameters: {
+    layout: "centered",
+  },
+  render: CarouselDotsRenderer,
+} satisfies Meta<typeof CarouselDots>;
+
+type Story = StoryObj<typeof meta>;
+
+export const Fixture = {} satisfies Story;
+
+export default meta;

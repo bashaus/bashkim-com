@@ -1,14 +1,11 @@
 import collaboratorSliceFactory from "@bashkim-com/prismic-factories/collaboratorSliceFactory";
-import type { Meta } from "@storybook/nextjs";
+import type { Meta, StoryObj } from "@storybook/nextjs";
 
 import CollaboratorSlice from ".";
 
-export default {
+const meta = {
   component: CollaboratorSlice,
   title: "Prismic slices/Collaborator Slice",
-  args: {
-    slice: collaboratorSliceFactory.build(),
-  },
   argTypes: {
     slice: {
       control: "object",
@@ -19,6 +16,14 @@ export default {
     layout: "centered",
     controls: { expanded: false },
   },
-} as Meta;
+} satisfies Meta<typeof CollaboratorSlice>;
 
-export const Fixture = {};
+type Story = StoryObj<typeof meta>;
+
+export const Fixture = {
+  args: {
+    slice: collaboratorSliceFactory.build(),
+  },
+} satisfies Story;
+
+export default meta;

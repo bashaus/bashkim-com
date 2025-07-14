@@ -1,17 +1,29 @@
 import { faker } from "@faker-js/faker";
 import Typography from "@mui/material/Typography";
-import type { Meta, StoryFn } from "@storybook/nextjs";
+import type { Meta, StoryObj } from "@storybook/nextjs";
 import { placeholderImage } from "placeholder-image-data-url-svg";
 
 import DeviceSmartphone, { DeviceSmartphoneProps } from ".";
 
-export default {
+type DeviceSmartphoneRendererProps = Readonly<
+  Omit<DeviceSmartphoneProps, "figure"> & {
+    figure: Array<string>;
+  }
+>;
+
+const DeviceSmartphoneRenderer = ({
+  children,
+  figure,
+  ...args
+}: DeviceSmartphoneRendererProps) => (
+  <DeviceSmartphone figure={<img src={figure[0]} alt="" />} {...args}>
+    <Typography>{children}</Typography>
+  </DeviceSmartphone>
+);
+
+const meta = {
   component: DeviceSmartphone,
   title: "Components/Device Smartphone",
-  args: {
-    figure: [placeholderImage({ width: 640, height: 1130, text: "figure" })],
-    children: faker.lorem.sentence(8),
-  },
   argTypes: {
     figure: { control: "file" },
     children: { control: "text" },
@@ -19,24 +31,16 @@ export default {
   parameters: {
     layout: "centered",
   },
-} as Meta;
+  render: DeviceSmartphoneRenderer,
+} satisfies Meta<DeviceSmartphoneRendererProps>;
 
-type DeviceSmartphoneStoryProps = Readonly<
-  Omit<DeviceSmartphoneProps, "figure"> & {
-    figure: Array<string>;
-  }
->;
-
-const Template: StoryFn<DeviceSmartphoneStoryProps> = ({
-  children,
-  figure,
-  ...args
-}: DeviceSmartphoneStoryProps) => (
-  <DeviceSmartphone figure={<img src={figure[0]} alt="" />} {...args}>
-    <Typography>{children}</Typography>
-  </DeviceSmartphone>
-);
+type Story = StoryObj<typeof meta>;
 
 export const Fixture = {
-  render: Template,
-};
+  args: {
+    figure: [placeholderImage({ width: 640, height: 1130, text: "figure" })],
+    children: faker.lorem.sentence(8),
+  },
+} satisfies Story;
+
+export default meta;

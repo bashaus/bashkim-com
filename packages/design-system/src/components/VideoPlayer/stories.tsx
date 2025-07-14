@@ -1,16 +1,22 @@
-import type { Meta } from "@storybook/nextjs";
+import type { Meta, StoryObj } from "@storybook/nextjs";
 
 import VideoPlayer from ".";
 
-export default {
+const meta = {
   component: VideoPlayer,
   title: "Components/Video Player",
-  args: {
-    url: "https://youtu.be/aqz-KE-bpKQ",
-  },
+  args: {},
   parameters: {
     layout: "padded",
   },
-} as Meta;
+} satisfies Meta<typeof VideoPlayer>;
 
-export const Fixture = {};
+type Story = StoryObj<typeof meta>;
+
+export const YouTube = {
+  args: {
+    url: "https://youtu.be/aqz-KE-bpKQ",
+  },
+} satisfies Story;
+
+export default meta;

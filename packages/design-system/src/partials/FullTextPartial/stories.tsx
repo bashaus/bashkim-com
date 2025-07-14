@@ -1,33 +1,19 @@
 import { faker } from "@faker-js/faker";
 import Typography from "@mui/material/Typography";
-import type { Meta, StoryFn } from "@storybook/nextjs";
+import type { Meta, StoryObj } from "@storybook/nextjs";
 
 import FullTextPartial, { FullTextPartialProps } from ".";
 
-export default {
-  component: FullTextPartial,
-  title: "Partials/Full Text Partial",
-  args: {
-    title: "FullTextPartial",
-  },
-  argTypes: {
-    title: {
-      control: "text",
-      table: { category: "Story helpers" },
-    },
-  },
-} as Meta;
-
-type FullTextPartialStoryProps = Readonly<
+type FullTextPartialRendererProps = Readonly<
   FullTextPartialProps & {
     title: string;
   }
 >;
 
-const Template: StoryFn<FullTextPartialStoryProps> = ({
+const FullTextPartialRenderer = ({
   title,
   ...args
-}: FullTextPartialStoryProps) => (
+}: FullTextPartialRendererProps) => (
   <FullTextPartial {...args}>
     <Typography variant="h6" component="h3" gutterBottom>
       {title}
@@ -42,6 +28,24 @@ const Template: StoryFn<FullTextPartialStoryProps> = ({
   </FullTextPartial>
 );
 
+const meta = {
+  component: FullTextPartial,
+  title: "Partials/Full Text Partial",
+  argTypes: {
+    title: {
+      control: "text",
+      table: { category: "Story helpers" },
+    },
+  },
+  render: FullTextPartialRenderer,
+} satisfies Meta<FullTextPartialRendererProps>;
+
+type Story = StoryObj<typeof meta>;
+
 export const Fixture = {
-  render: Template,
-};
+  args: {
+    title: "FullTextPartial",
+  },
+} satisfies Story;
+
+export default meta;

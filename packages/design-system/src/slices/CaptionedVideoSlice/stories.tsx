@@ -1,14 +1,11 @@
 import captionedVideoSliceFactory from "@bashkim-com/prismic-factories/captionedVideoSliceFactory";
-import type { Meta } from "@storybook/nextjs";
+import type { Meta, StoryObj } from "@storybook/nextjs";
 
 import CaptionedVideoSlice from ".";
 
-export default {
+const meta = {
   component: CaptionedVideoSlice,
   title: "Prismic slices/Captioned Video Slice",
-  args: {
-    slice: captionedVideoSliceFactory.build(),
-  },
   argTypes: {
     slice: {
       control: "object",
@@ -18,6 +15,14 @@ export default {
   parameters: {
     controls: { expanded: false },
   },
-} as Meta;
+} satisfies Meta<typeof CaptionedVideoSlice>;
 
-export const Fixture = {};
+type Story = StoryObj<typeof meta>;
+
+export const Fixture = {
+  args: {
+    slice: captionedVideoSliceFactory.build(),
+  },
+} satisfies Story;
+
+export default meta;

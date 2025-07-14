@@ -1,8 +1,12 @@
-import type { Meta, StoryFn } from "@storybook/nextjs";
+import type { Meta, StoryObj } from "@storybook/nextjs";
 
 import DateFormatter, { DateFormatterProps } from ".";
 
-export default {
+const DateFormatterRenderer = ({ date, ...args }: DateFormatterProps) => (
+  <DateFormatter date={new Date(date)} {...args} />
+);
+
+const meta = {
   component: DateFormatter,
   title: "Formatters/Date Formatter",
   args: {
@@ -16,13 +20,11 @@ export default {
   parameters: {
     layout: "centered",
   },
-} as Meta;
+  render: DateFormatterRenderer,
+} satisfies Meta<typeof DateFormatter>;
 
-const Template: StoryFn<DateFormatterProps> = ({
-  date,
-  ...args
-}: DateFormatterProps) => <DateFormatter date={new Date(date)} {...args} />;
+type Story = StoryObj<typeof meta>;
 
-export const Fixture = {
-  render: Template,
-};
+export const Fixture = {} satisfies Story;
+
+export default meta;

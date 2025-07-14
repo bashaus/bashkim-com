@@ -1,55 +1,58 @@
+import { faker } from "@faker-js/faker";
 import Typography from "@mui/material/Typography";
-import type { Meta, StoryFn } from "@storybook/nextjs";
+import type { Meta, StoryObj } from "@storybook/nextjs";
 import { placeholderImage } from "placeholder-image-data-url-svg";
 
 import PageHeaderPartial, { PageHeaderPartialProps } from ".";
 
-export default {
-  component: PageHeaderPartial,
-  title: "Partials/Page Header Partial",
-  args: {
-    imageDesktop: [
-      placeholderImage({ width: 1920, height: 400, text: "imageDesktop" }),
-    ],
-    imageMobile: [
-      placeholderImage({ width: 1000, height: 800, text: "imageMobile" }),
-    ],
-  },
-  argTypes: {
-    imageDesktop: { control: "file" },
-    imageMobile: { control: "file" },
-  },
-} as Meta;
-
-type PageHeaderPartialStoryProps = Readonly<
+type PageHeaderPartialRendererProps = Readonly<
   Omit<PageHeaderPartialProps, "imageDesktop" | "imageMobile"> & {
-    imageDesktop: Array<string>;
-    imageMobile: Array<string>;
+    _imageDesktop: Array<string>;
+    _imageMobile: Array<string>;
   }
 >;
 
-const Template: StoryFn<PageHeaderPartialStoryProps> = ({
-  imageDesktop,
-  imageMobile,
+const PageHeaderPartialRenderer = ({
+  _imageDesktop,
+  _imageMobile,
   ...args
-}: PageHeaderPartialStoryProps) => (
+}: PageHeaderPartialRendererProps) => (
   <PageHeaderPartial
-    imageDesktop={imageDesktop[0]}
-    imageMobile={imageMobile[0]}
+    imageDesktop={_imageDesktop[0]}
+    imageMobile={_imageMobile[0]}
     {...args}
   />
 );
 
+const meta = {
+  component: PageHeaderPartial,
+  title: "Partials/Page Header Partial",
+  argTypes: {
+    _imageDesktop: { control: "file", name: "imageDesktop" },
+    _imageMobile: { control: "file", name: "imageMobile" },
+  },
+  render: PageHeaderPartialRenderer,
+} satisfies Meta<PageHeaderPartialRendererProps>;
+
+type Story = StoryObj<typeof meta>;
+
 export const Fixture = {
   args: {
+    _imageDesktop: [
+      placeholderImage({ width: 1920, height: 400, text: "imageDesktop" }),
+    ],
+    _imageMobile: [
+      placeholderImage({ width: 1000, height: 800, text: "imageMobile" }),
+    ],
     children: (
       <>
         <Typography variant="h2" component="h1" gutterBottom>
-          Page header partial
+          {faker.lorem.words(3)}
         </Typography>
-        <Typography variant="subtitle1">Lorem ipsum dolar sit a met</Typography>
+        <Typography variant="subtitle1">{faker.lorem.words(6)}</Typography>
       </>
     ),
   },
-  render: Template,
-};
+} satisfies Story;
+
+export default meta;

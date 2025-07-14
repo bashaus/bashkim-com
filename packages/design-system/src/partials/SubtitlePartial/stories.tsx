@@ -1,47 +1,27 @@
+import { faker } from "@faker-js/faker";
 import Typography from "@mui/material/Typography";
-import type { Meta, StoryFn } from "@storybook/nextjs";
+import type { Meta, StoryObj } from "@storybook/nextjs";
 
-import SubtitlePartial, { SubtitlePartialProps } from ".";
+import SubtitlePartial from ".";
 
-export default {
-  components: SubtitlePartial,
+const meta = {
+  component: SubtitlePartial,
   title: "Partials/Subtitle Partial",
-  args: {
-    title: "SubtitlePartial",
-    subtitle: "Praesent vestibulum porta ex, ut lacinia quam. Vivamus.",
-  },
-  argTypes: {
-    title: {
-      control: "text",
-      table: { category: "Story helpers" },
-    },
-    subtitle: {
-      control: "text",
-      table: { category: "Story helpers" },
-    },
-  },
-} as Meta;
+} satisfies Meta<typeof SubtitlePartial>;
 
-type SubtitlePartialStoryProps = Readonly<
-  SubtitlePartialProps & {
-    title: string;
-    subtitle: string;
-  }
->;
-
-const Template: StoryFn<SubtitlePartialStoryProps> = ({
-  title,
-  subtitle,
-  ...args
-}: SubtitlePartialStoryProps) => (
-  <SubtitlePartial {...args}>
-    <Typography variant="h4" component="h2" gutterBottom>
-      {title}
-    </Typography>
-    <Typography>{subtitle}</Typography>
-  </SubtitlePartial>
-);
+type Story = StoryObj<typeof meta>;
 
 export const Fixture = {
-  render: Template,
-};
+  args: {
+    children: (
+      <>
+        <Typography variant="h4" component="h2" gutterBottom>
+          {faker.lorem.words(3)}
+        </Typography>
+        <Typography>{faker.lorem.words(9)}</Typography>
+      </>
+    ),
+  },
+} satisfies Story;
+
+export default meta;

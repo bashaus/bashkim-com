@@ -11,7 +11,7 @@ import * as S from "./styles";
 
 export type TileProps = Readonly<{
   description: ReactNode;
-  icon: ImageProps;
+  icon?: ImageProps;
   poster?: string;
   title?: ReactNode;
   subtitle?: ReactNode;
@@ -29,15 +29,17 @@ export default function Tile({
       <CardActionArea>
         <CardHeader
           avatar={
-            <S.Icon>
-              <Image
-                alt={icon.alt}
-                src={icon.src}
-                width={icon.width}
-                height={icon.height}
-                style={{ width: 32, height: 32 }}
-              />
-            </S.Icon>
+            !!icon && (
+              <S.Icon>
+                <Image
+                  alt={icon.alt}
+                  src={icon.src}
+                  width={icon.width}
+                  height={icon.height}
+                  style={{ width: 32, height: 32 }}
+                />
+              </S.Icon>
+            )
           }
           title={title}
           subheader={subtitle}

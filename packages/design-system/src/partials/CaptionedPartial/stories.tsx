@@ -1,18 +1,33 @@
+import { faker } from "@faker-js/faker";
 import Typography from "@mui/material/Typography";
-import type { Meta, StoryFn } from "@storybook/nextjs";
+import type { Meta, StoryObj } from "@storybook/nextjs";
 import { placeholderImage } from "placeholder-image-data-url-svg";
 
 import CaptionedPartial, { CaptionedPartialProps } from ".";
 
-export default {
+type CaptionedPartialRendererProps = Readonly<
+  Omit<CaptionedPartialProps, "figure"> & {
+    figure: Array<string>;
+    title: string;
+    subtitle: string;
+  }
+>;
+
+const CaptionedPartialRenderer = ({
+  title,
+  subtitle,
+  figure,
+  ...args
+}: CaptionedPartialRendererProps) => (
+  <CaptionedPartial figure={<img src={figure[0]} alt="" />} {...args}>
+    <Typography variant="h4">{title}</Typography>
+    <Typography>{subtitle}</Typography>
+  </CaptionedPartial>
+);
+
+const meta = {
   component: CaptionedPartial,
   title: "Partials/Captioned Partial",
-  args: {
-    figure: [placeholderImage({ width: 1200, height: 630, text: "figure" })],
-    title: "CaptionedPartial",
-    subtitle:
-      "Donec rutrum blandit dignissim. Cras a arcu interdum, rhoncus tellus a, semper nunc. Pellentesque ut quam ut risus condimentum tincidunt a nec dolor. Praesent fermentum ultrices purus eget semper. Nunc.",
-  },
   argTypes: {
     figure: { control: "file" },
     title: {
@@ -26,28 +41,17 @@ export default {
       table: { category: "Story helpers" },
     },
   },
-} as Meta;
+  render: CaptionedPartialRenderer,
+} satisfies Meta<CaptionedPartialRendererProps>;
 
-type CaptionedPartialStoryProps = Readonly<
-  Omit<CaptionedPartialProps, "figure"> & {
-    figure: Array<string>;
-    title: string;
-    subtitle: string;
-  }
->;
-
-const Template: StoryFn<CaptionedPartialStoryProps> = ({
-  title,
-  subtitle,
-  figure,
-  ...args
-}: CaptionedPartialStoryProps) => (
-  <CaptionedPartial figure={<img src={figure[0]} alt="" />} {...args}>
-    <Typography variant="h4">{title}</Typography>
-    <Typography>{subtitle}</Typography>
-  </CaptionedPartial>
-);
+type Story = StoryObj<typeof meta>;
 
 export const Fixture = {
-  render: Template,
-};
+  args: {
+    figure: [placeholderImage({ width: 1200, height: 630, text: "figure" })],
+    title: faker.lorem.words(3),
+    subtitle: faker.lorem.sentence(12),
+  },
+} satisfies Story;
+
+export default meta;

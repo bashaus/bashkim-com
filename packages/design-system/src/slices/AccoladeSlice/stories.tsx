@@ -1,14 +1,11 @@
 import accoladeSliceFactory from "@bashkim-com/prismic-factories/accoladeSliceFactory";
-import type { Meta } from "@storybook/nextjs";
+import type { Meta, StoryObj } from "@storybook/nextjs";
 
 import AccoladeSlice from ".";
 
-export default {
+const meta = {
   component: AccoladeSlice,
   title: "Prismic slices/Accolade Slice",
-  args: {
-    slice: accoladeSliceFactory.build(),
-  },
   argTypes: {
     slice: {
       control: "object",
@@ -18,6 +15,14 @@ export default {
   parameters: {
     controls: { expanded: false },
   },
-} as Meta;
+} satisfies Meta<typeof AccoladeSlice>;
 
-export const Fixture = {};
+type Story = StoryObj<typeof meta>;
+
+export const Fixture = {
+  args: {
+    slice: accoladeSliceFactory.build(),
+  },
+} satisfies Story;
+
+export default meta;

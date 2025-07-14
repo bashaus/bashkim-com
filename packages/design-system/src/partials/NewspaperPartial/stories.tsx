@@ -1,13 +1,33 @@
-import type { Meta, StoryFn } from "@storybook/nextjs";
+import { faker } from "@faker-js/faker";
+import type { Meta, StoryObj } from "@storybook/nextjs";
 
 import NewspaperPartial, { NewspaperPartialProps } from ".";
 
-export default {
+type NewspaperPartialRendererProps = Readonly<
+  NewspaperPartialProps & {
+    paragraphs: number;
+  }
+>;
+
+const NewspaperPartialRenderer = ({
+  paragraphs,
+  ...args
+}: NewspaperPartialRendererProps) => (
+  <NewspaperPartial {...args}>
+    {Array(paragraphs)
+      .fill("")
+      .map((_value, i) => i + 1)
+      .map((value) => (
+        <div key={value}>
+          Paragraph {value}: {faker.lorem.paragraph(2)}
+        </div>
+      ))}
+  </NewspaperPartial>
+);
+
+const meta = {
   component: NewspaperPartial,
   title: "Partials/Newspaper Partial",
-  args: {
-    paragraphs: 10,
-  },
   argTypes: {
     paragraphs: {
       control: "number",
@@ -16,33 +36,15 @@ export default {
       table: { category: "Story helpers" },
     },
   },
-} as Meta;
+  render: NewspaperPartialRenderer,
+} satisfies Meta<NewspaperPartialRendererProps>;
 
-type NewspaperPartialStoryProps = Readonly<
-  NewspaperPartialProps & {
-    paragraphs: number;
-  }
->;
-
-const Template: StoryFn<NewspaperPartialStoryProps> = ({
-  paragraphs,
-  ...args
-}: NewspaperPartialStoryProps) => (
-  <NewspaperPartial {...args}>
-    {Array(paragraphs)
-      .fill("")
-      .map((_value, i) => i + 1)
-      .map((value) => (
-        <div key={value}>
-          Paragraph {value}: Pellentesque sit amet luctus diam. Aenean lobortis
-          non arcu sit amet fringilla. Proin sodales vel orci a venenatis.
-          Mauris vulputate, dolor eu consectetur congue, mi leo eleifend lorem,
-          ac lacinia.
-        </div>
-      ))}
-  </NewspaperPartial>
-);
+type Story = StoryObj<typeof meta>;
 
 export const Fixture = {
-  render: Template,
-};
+  args: {
+    paragraphs: 10,
+  },
+} satisfies Story;
+
+export default meta;

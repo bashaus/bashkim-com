@@ -9,8 +9,7 @@ export const parameters = {
     exclude: /^(className|[a-zA-Z]+ClassName)$/,
     matchers: {
       color: /(^color$|Color$)/,
-      date: /(^date$|Date$|On$)/,
-      boolean: /^(is|has).+/,
+      date: /(^date$|Date$|At$)/,
     },
   },
 

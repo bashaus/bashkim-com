@@ -1,14 +1,11 @@
 import exhibitionSliceFactory from "@bashkim-com/prismic-factories/exhibitionSliceFactory";
-import type { Meta } from "@storybook/nextjs";
+import type { Meta, StoryObj } from "@storybook/nextjs";
 
 import ExhibitionSlice from ".";
 
-export default {
+const meta = {
   component: ExhibitionSlice,
   title: "Prismic slices/Exhibition Slice",
-  args: {
-    slice: exhibitionSliceFactory.build(),
-  },
   argTypes: {
     slice: {
       control: "object",
@@ -19,6 +16,14 @@ export default {
     layout: "centered",
     controls: { expanded: false },
   },
-} as Meta;
+} satisfies Meta<typeof ExhibitionSlice>;
 
-export const Fixture = {};
+type Story = StoryObj<typeof meta>;
+
+export const Fixture = {
+  args: {
+    slice: exhibitionSliceFactory.build(),
+  },
+} satisfies Story;
+
+export default meta;

@@ -1,28 +1,8 @@
-import type { Meta, StoryFn } from "@storybook/nextjs";
+import type { Meta, StoryObj } from "@storybook/nextjs";
 
 import LifespanFormatter, { LifespanFormatterProps } from ".";
 
-export default {
-  component: LifespanFormatter,
-  title: "Formatters/Lifespan Formatter",
-  args: {
-    startDate: new Date("2020-01-01").toDateString(),
-    endDate: new Date("2020-02-01").toDateString(),
-  },
-  argTypes: {
-    startDate: {
-      control: "date",
-    },
-    endDate: {
-      control: "date",
-    },
-  },
-  parameters: {
-    layout: "centered",
-  },
-} as Meta;
-
-const Template: StoryFn<LifespanFormatterProps> = ({
+const LifespanFormatterRenderer = ({
   startDate,
   endDate,
   ...args
@@ -34,6 +14,30 @@ const Template: StoryFn<LifespanFormatterProps> = ({
   />
 );
 
+const meta = {
+  component: LifespanFormatter,
+  title: "Formatters/Lifespan Formatter",
+  argTypes: {
+    startDate: {
+      control: "date",
+    },
+    endDate: {
+      control: "date",
+    },
+  },
+  parameters: {
+    layout: "centered",
+  },
+  render: LifespanFormatterRenderer,
+} satisfies Meta<typeof LifespanFormatter>;
+
+type Story = StoryObj<typeof meta>;
+
 export const Fixture = {
-  render: Template,
-};
+  args: {
+    startDate: new Date("2020-01-01"),
+    endDate: new Date("2020-02-01"),
+  },
+} satisfies Story;
+
+export default meta;

@@ -1,14 +1,11 @@
 import captionedScreenshotsSliceFactory from "@bashkim-com/prismic-factories/captionedScreenshotsSliceFactory";
-import type { Meta } from "@storybook/nextjs";
+import type { Meta, StoryObj } from "@storybook/nextjs";
 
 import CaptionedScreenshotsSlice from ".";
 
-export default {
+const meta = {
   component: CaptionedScreenshotsSlice,
   title: "Prismic slices/Captioned Screenshots Slice",
-  args: {
-    slice: captionedScreenshotsSliceFactory.build(),
-  },
   argTypes: {
     slice: {
       control: "object",
@@ -18,6 +15,14 @@ export default {
   parameters: {
     controls: { expanded: false },
   },
-} as Meta;
+} satisfies Meta<typeof CaptionedScreenshotsSlice>;
 
-export const Fixture = {};
+type Story = StoryObj<typeof meta>;
+
+export const Fixture = {
+  args: {
+    slice: captionedScreenshotsSliceFactory.build(),
+  },
+} satisfies Story;
+
+export default meta;

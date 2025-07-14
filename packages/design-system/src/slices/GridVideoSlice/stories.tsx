@@ -1,14 +1,11 @@
 import gridVideoSliceFactory from "@bashkim-com/prismic-factories/gridVideoSliceFactory";
-import type { Meta } from "@storybook/nextjs";
+import type { Meta, StoryObj } from "@storybook/nextjs";
 
 import GridVideoSlice from ".";
 
-export default {
+const meta = {
   component: GridVideoSlice,
   title: "Prismic slices/Grid Video Slice",
-  args: {
-    slice: gridVideoSliceFactory.build(),
-  },
   argTypes: {
     slice: {
       control: "object",
@@ -18,6 +15,14 @@ export default {
   parameters: {
     controls: { expanded: false },
   },
-} as Meta;
+} satisfies Meta<typeof GridVideoSlice>;
 
-export const Fixture = {};
+type Story = StoryObj<typeof meta>;
+
+export const Fixture = {
+  args: {
+    slice: gridVideoSliceFactory.build(),
+  },
+} satisfies Story;
+
+export default meta;

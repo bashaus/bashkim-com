@@ -1,14 +1,11 @@
 import subtitleSliceFactory from "@bashkim-com/prismic-factories/subtitleSliceFactory";
-import type { Meta } from "@storybook/nextjs";
+import type { Meta, StoryObj } from "@storybook/nextjs";
 
 import SubtitleSlice from ".";
 
-export default {
+const meta = {
   component: SubtitleSlice,
   title: "Prismic slices/Subtitle Slice",
-  args: {
-    slice: subtitleSliceFactory.build(),
-  },
   argTypes: {
     slice: {
       control: "object",
@@ -18,6 +15,14 @@ export default {
   parameters: {
     controls: { expanded: false },
   },
-} as Meta;
+} satisfies Meta<typeof SubtitleSlice>;
 
-export const Fixture = {};
+type Story = StoryObj<typeof meta>;
+
+export const Fixture = {
+  args: {
+    slice: subtitleSliceFactory.build(),
+  },
+} satisfies Story;
+
+export default meta;

@@ -1,14 +1,11 @@
 import gridEmbedSliceFactory from "@bashkim-com/prismic-factories/gridEmbedSliceFactory";
-import type { Meta } from "@storybook/nextjs";
+import type { Meta, StoryObj } from "@storybook/nextjs";
 
 import GridEmbedSlice from ".";
 
-export default {
+const meta = {
   component: GridEmbedSlice,
   title: "Prismic slices/Grid Embed Slice",
-  args: {
-    slice: gridEmbedSliceFactory.build(),
-  },
   argTypes: {
     slice: {
       control: "object",
@@ -18,6 +15,14 @@ export default {
   parameters: {
     controls: { expanded: false },
   },
-} as Meta;
+} satisfies Meta<typeof GridEmbedSlice>;
 
-export const Fixture = {};
+type Story = StoryObj<typeof meta>;
+
+export const Fixture = {
+  args: {
+    slice: gridEmbedSliceFactory.build(),
+  },
+} satisfies Story;
+
+export default meta;

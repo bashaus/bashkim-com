@@ -1,9 +1,9 @@
 import { faker } from "@faker-js/faker";
-import type { Meta } from "@storybook/nextjs";
+import type { Meta, StoryObj } from "@storybook/nextjs";
 
 import Group from ".";
 
-export default {
+const meta = {
   component: Group,
   title: "Layout/Group",
   args: {
@@ -13,16 +13,20 @@ export default {
   parameters: {
     layout: "fullscreen",
   },
-} as Meta;
+} satisfies Meta<typeof Group>;
+
+type Story = StoryObj<typeof meta>;
 
 export const DefaultDesign = {
   args: {
     design: "default",
   },
-};
+} satisfies Story;
 
 export const AlternateDesign = {
   args: {
     design: "alternate",
   },
-};
+} satisfies Story;
+
+export default meta;
