@@ -1,4 +1,3 @@
-import RichTextFormatter from "@bashkim-com/design-system/RichTextFormatter";
 import Tile from "@bashkim-com/design-system/Tile";
 import type {
   Case_Study,
@@ -31,9 +30,7 @@ export default function PortfolioFeaturedCaseStudies({
               key={caseStudy._meta.id}
             >
               <Stack display="flex" flexDirection="column" spacing={2}>
-                <RichTextFormatter>
-                  <PrismicRichText render={title} />
-                </RichTextFormatter>
+                <PrismicRichText render={title} />
 
                 <Link href={`/portfolio/${caseStudy._meta.uid}`}>
                   <Tile
@@ -49,9 +46,7 @@ export default function PortfolioFeaturedCaseStudies({
                   />
                 </Link>
 
-                <RichTextFormatter>
-                  <PrismicRichText render={description} />
-                </RichTextFormatter>
+                <PrismicRichText render={description} />
               </Stack>
             </Grid>
           );

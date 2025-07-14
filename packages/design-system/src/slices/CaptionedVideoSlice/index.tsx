@@ -2,7 +2,6 @@ import type { CaptionedVideoSliceTypeFragment } from "@bashkim-com/prismic-dal";
 import { PrismicRichText } from "@bashkim-com/prismic-helpers";
 
 import VideoPlayer from "../../components/VideoPlayer";
-import RichTextFormatter from "../../formatters/RichTextFormatter";
 import CaptionedPartial from "../../partials/CaptionedPartial";
 
 export type CaptionedVideoSliceProps = Readonly<{
@@ -29,9 +28,7 @@ export default function CaptionedVideoSlice({
     <CaptionedPartial
       figure={<VideoPlayer url={video.embed_url} title={video.title} />}
     >
-      <RichTextFormatter>
-        <PrismicRichText render={caption} />
-      </RichTextFormatter>
+      <PrismicRichText render={caption} />
     </CaptionedPartial>
   );
 }

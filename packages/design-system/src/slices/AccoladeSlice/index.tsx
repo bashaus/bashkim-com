@@ -12,7 +12,6 @@ import Typography from "@mui/material/Typography";
 import { Link } from "prismic-reactjs";
 
 import DateFormatter from "../../formatters/DateFormatter";
-import RichTextFormatter from "../../formatters/RichTextFormatter";
 import * as S from "./styles";
 
 export type AccoladeSliceProps = Readonly<{
@@ -44,17 +43,13 @@ export default function AccoladeSlice({ slice }: AccoladeSliceProps) {
     <Container>
       <Grid container spacing={2}>
         <Grid size={{ xs: 12, sm: 12, md: 3, lg: 3, xl: 3 }}>
-          <RichTextFormatter>
-            <PrismicRichText render={issuer} />
-            <PrismicRichText render={description} />
-            {date && (
-              <p>
-                <small>
-                  <DateFormatter date={PrismicDate(date)} />
-                </small>
-              </p>
-            )}
-          </RichTextFormatter>
+          <PrismicRichText render={issuer} />
+          <PrismicRichText render={description} />
+          {date && (
+            <Typography fontSize="small">
+              <DateFormatter date={PrismicDate(date)} />
+            </Typography>
+          )}
         </Grid>
 
         <Grid
@@ -92,9 +87,7 @@ export default function AccoladeSlice({ slice }: AccoladeSliceProps) {
                       </Typography>
                     )}
 
-                    <RichTextFormatter>
-                      <PrismicRichText render={awardCategory} />
-                    </RichTextFormatter>
+                    <PrismicRichText render={awardCategory} />
                   </Box>
                 </ListItemButton>
               </Grid>

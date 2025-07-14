@@ -5,6 +5,7 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Link from "@mui/material/Link";
 import ListItemText from "@mui/material/ListItemText";
+import Typography from "@mui/material/Typography";
 
 export type CaseStudyCollaboratorsProps = Readonly<{
   myRole?: string;
@@ -22,7 +23,9 @@ export default function CaseStudyCollaborators({
   return (
     <>
       <SubtitlePartial>
-        <h2>Collaborators</h2>
+        <Typography variant="h4" component="h2">
+          Collaborators
+        </Typography>
       </SubtitlePartial>
 
       <Container>

@@ -4,7 +4,6 @@ import Slider from "@mui/material/Slider";
 import Stack from "@mui/material/Stack";
 import { useCallback, useState } from "react";
 
-import RichTextFormatter from "../../formatters/RichTextFormatter";
 import CaptionedPartial from "../../partials/CaptionedPartial";
 import * as S from "./styles";
 
@@ -73,11 +72,9 @@ export default function CaptionedScreenshotsSlice({
         )
       }
     >
-      <RichTextFormatter>
-        <PrismicRichText render={caption} />
-      </RichTextFormatter>
+      <PrismicRichText render={caption} />
 
-      <Stack direction="row" spacing={2}>
+      <Stack direction="row" spacing={2} mt={4}>
         <S.MobileIcon aria-label="Mobile" />
         <S.SliderLabel>Size to resize</S.SliderLabel>
         <S.DesktopIcon aria-label="Desktop" />

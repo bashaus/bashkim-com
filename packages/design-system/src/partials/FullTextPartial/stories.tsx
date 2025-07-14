@@ -1,3 +1,5 @@
+import { faker } from "@faker-js/faker";
+import Typography from "@mui/material/Typography";
 import type { Meta, StoryFn } from "@storybook/nextjs";
 
 import FullTextPartial, { FullTextPartialProps } from ".";
@@ -27,16 +29,15 @@ const Template: StoryFn<FullTextPartialStoryProps> = ({
   ...args
 }: FullTextPartialStoryProps) => (
   <FullTextPartial {...args}>
-    <h3>{title}</h3>
+    <Typography variant="h6" component="h3" gutterBottom>
+      {title}
+    </Typography>
+
     {Array(6)
       .fill("")
       .map((_value, i) => i + 1)
       .map((value) => (
-        <p key={value}>
-          Aliquam eu dictum justo. Morbi purus orci, auctor ac maximus at,
-          lobortis at leo. Aenean a pulvinar nibh. Phasellus sagittis pulvinar
-          risus, non varius mi luctus vel. Etiam laoreet eget.
-        </p>
+        <Typography key={value}>{faker.lorem.paragraph()}</Typography>
       ))}
   </FullTextPartial>
 );

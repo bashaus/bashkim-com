@@ -1,4 +1,5 @@
 import { faker } from "@faker-js/faker";
+import Typography from "@mui/material/Typography";
 import type { Meta, StoryFn } from "@storybook/nextjs";
 import { placeholderImage } from "placeholder-image-data-url-svg";
 
@@ -32,7 +33,7 @@ const Template: StoryFn<DeviceSmartphoneStoryProps> = ({
   ...args
 }: DeviceSmartphoneStoryProps) => (
   <DeviceSmartphone figure={<img src={figure[0]} alt="" />} {...args}>
-    <p>{children}</p>
+    <Typography>{children}</Typography>
   </DeviceSmartphone>
 );
 

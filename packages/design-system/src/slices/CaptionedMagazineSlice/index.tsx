@@ -4,7 +4,6 @@ import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import HTMLFlipBook from "react-pageflip";
 
-import RichTextFormatter from "../../formatters/RichTextFormatter";
 import CaptionedPartial from "../../partials/CaptionedPartial";
 
 export type CaptionedMagazineSliceProps = Readonly<{
@@ -72,10 +71,7 @@ export default function CaptionedMagazineSlice({
       }
     >
       <Stack spacing={2}>
-        <RichTextFormatter>
-          <PrismicRichText render={caption} />
-        </RichTextFormatter>
-
+        <PrismicRichText render={caption} />
         <Typography>Total pages: {fields.length}</Typography>
       </Stack>
     </CaptionedPartial>

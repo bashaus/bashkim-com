@@ -2,6 +2,7 @@ import Group from "@bashkim-com/design-system/Group";
 import SplitItemPartial from "@bashkim-com/design-system/SplitItemPartial";
 import SplitPartial from "@bashkim-com/design-system/SplitPartial";
 import SubtitlePartial from "@bashkim-com/design-system/SubtitlePartial";
+import Typography from "@mui/material/Typography";
 
 import qutGardensPointImage from "@/domains/about-page/assets/education/qut/gardens-point.jpg";
 import qutLogoImage from "@/domains/about-page/assets/education/qut/logo.jpg";
@@ -14,22 +15,27 @@ export default function AboutEducation() {
   return (
     <Group>
       <SubtitlePartial>
-        <h2>Education</h2>
+        <Typography variant="h4" component="h2">
+          Education
+        </Typography>
       </SubtitlePartial>
 
       <SplitPartial index={0}>
         <SplitItemPartial>
           <div>
-            <h3>Postgraduate</h3>
-            <p>University of Queensland</p>
-            <p>
+            <Typography variant="h6" component="h3" gutterBottom>
+              Postgraduate
+            </Typography>
+
+            <Typography gutterBottom>University of Queensland</Typography>
+            <Typography gutterBottom>
               <time dateTime="2017">2017</time>
-            </p>
-            <p>
+            </Typography>
+            <Typography gutterBottom>
               Masters of
               <br />
               Interaction&nbsp;Design
-            </p>
+            </Typography>
           </div>
         </SplitItemPartial>
 
@@ -48,43 +54,59 @@ export default function AboutEducation() {
       <SplitPartial index={1}>
         <SplitItemPartial>
           <div>
-            <h3>Undergraduate</h3>
-            <p>Queensland University of Technology</p>
-            <p>
+            <Typography variant="h6" component="h3" gutterBottom>
+              Undergraduate
+            </Typography>
+
+            <Typography gutterBottom>
+              Queensland University of Technology
+            </Typography>
+
+            <Typography gutterBottom>
               <time dateTime="2005">2005</time>
               <span> to </span>
               <time dateTime="2009">2009</time>
-            </p>
-            <p>
+            </Typography>
+
+            <Typography gutterBottom>
               Bachelor of
               <br />
               Information&nbsp;Technology
-            </p>
-            <p>
+            </Typography>
+
+            <Typography gutterBottom>
               Majoring&nbsp;in
               <br />
               Web&nbsp;Services and&nbsp;Applications
-            </p>
+            </Typography>
           </div>
 
           <div>
-            <h3>Undergraduate</h3>
-            <p>Queensland University of Technology</p>
-            <p>
+            <Typography variant="h6" component="h3" gutterBottom>
+              Undergraduate
+            </Typography>
+
+            <Typography gutterBottom>
+              Queensland University of Technology
+            </Typography>
+
+            <Typography gutterBottom>
               <time dateTime="2005">2005</time>
               <span> to </span>
               <time dateTime="2009">2009</time>
-            </p>
-            <p>
+            </Typography>
+
+            <Typography gutterBottom>
               Bachelor of
               <br />
               Creative&nbsp;Industries
-            </p>
-            <p>
+            </Typography>
+
+            <Typography gutterBottom>
               Majoring&nbsp;in
               <br />
               Communication&nbsp;Design
-            </p>
+            </Typography>
           </div>
         </SplitItemPartial>
 

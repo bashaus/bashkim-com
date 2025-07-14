@@ -3,8 +3,6 @@
   "version": "0.0.0",
   "exports": {
     "./grid.scss": "./src/entry/grid.scss",
-    "./headings.scss": "./src/entry/headings.scss",
-    "./list.scss": "./src/entry/list.scss",
     "./media.scss": "./src/entry/media.scss"
   },
   "main": "./src/index.scss"

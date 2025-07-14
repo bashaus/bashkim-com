@@ -1,6 +1,5 @@
 import { PropsWithChildren, ReactNode } from "react";
 
-import RichTextFormatter from "../../formatters/RichTextFormatter";
 import * as S from "./styles";
 
 export type DeviceFeaturePhoneProps = Readonly<
@@ -23,11 +22,7 @@ export default function DeviceFeaturePhone({
         <S.Figure>{figure}</S.Figure>
       </S.Wrapper>
 
-      {children && (
-        <S.Caption>
-          <RichTextFormatter>{children}</RichTextFormatter>
-        </S.Caption>
-      )}
+      {children && <S.Caption>{children}</S.Caption>}
     </S.Container>
   );
 }

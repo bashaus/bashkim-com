@@ -1,7 +1,7 @@
+import Typography from "@mui/material/Typography";
 import type { Meta, StoryFn } from "@storybook/nextjs";
 import { placeholderImage } from "placeholder-image-data-url-svg";
 
-import RichTextFormatter from "../../formatters/RichTextFormatter";
 import CaptionedPartial, { CaptionedPartialProps } from ".";
 
 export default {
@@ -43,10 +43,8 @@ const Template: StoryFn<CaptionedPartialStoryProps> = ({
   ...args
 }: CaptionedPartialStoryProps) => (
   <CaptionedPartial figure={<img src={figure[0]} alt="" />} {...args}>
-    <RichTextFormatter>
-      <h3>{title}</h3>
-      <p>{subtitle}</p>
-    </RichTextFormatter>
+    <Typography variant="h4">{title}</Typography>
+    <Typography>{subtitle}</Typography>
   </CaptionedPartial>
 );
 

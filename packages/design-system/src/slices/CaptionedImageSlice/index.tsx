@@ -1,7 +1,6 @@
 import type { CaptionedImageSliceTypeFragment } from "@bashkim-com/prismic-dal";
 import { PrismicRichText } from "@bashkim-com/prismic-helpers";
 
-import RichTextFormatter from "../../formatters/RichTextFormatter";
 import CaptionedPartial from "../../partials/CaptionedPartial";
 
 export type CaptionedImageSliceProps = Readonly<{
@@ -33,9 +32,7 @@ export default function CaptionedImageSlice({
         )
       }
     >
-      <RichTextFormatter>
-        <PrismicRichText render={caption} />
-      </RichTextFormatter>
+      <PrismicRichText render={caption} />
     </CaptionedPartial>
   );
 }

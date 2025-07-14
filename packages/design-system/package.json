@@ -19,7 +19,6 @@
     "./VideoPlayerLink": "./src/components/VideoPlayerLink/index.tsx",
     "./DateFormatter": "./src/formatters/DateFormatter/index.tsx",
     "./LifespanFormatter": "./src/formatters/LifespanFormatter/index.tsx",
-    "./RichTextFormatter": "./src/formatters/RichTextFormatter/index.tsx",
     "./Group": "./src/layout/Group/index.tsx",
     "./material-ui": "./src/material-ui/index.tsx",
     "./CaptionedPartial": "./src/partials/CaptionedPartial/index.tsx",

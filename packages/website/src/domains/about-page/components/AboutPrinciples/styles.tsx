@@ -10,8 +10,9 @@ function GridCell(props: GridCellProps) {
 export const Principles = styled(Grid)();
 export const Principle = styled(GridCell)();
 
-export const Icon = styled("svg")(() => ({
+export const Icon = styled("svg")(({ theme }) => ({
   width: 50,
   height: 50,
   fill: "currentColor",
+  marginBottom: theme.spacing(2),
 }));

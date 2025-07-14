@@ -1,3 +1,4 @@
+import Typography from "@mui/material/Typography";
 import type { Meta, StoryFn } from "@storybook/nextjs";
 
 import SubtitlePartial, { SubtitlePartialProps } from ".";
@@ -34,8 +35,10 @@ const Template: StoryFn<SubtitlePartialStoryProps> = ({
   ...args
 }: SubtitlePartialStoryProps) => (
   <SubtitlePartial {...args}>
-    <h2>{title}</h2>
-    <p>{subtitle}</p>
+    <Typography variant="h4" component="h2" gutterBottom>
+      {title}
+    </Typography>
+    <Typography>{subtitle}</Typography>
   </SubtitlePartial>
 );
 

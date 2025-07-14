@@ -19,7 +19,9 @@ export default function AboutPrinciples() {
   return (
     <Group>
       <SubtitlePartial>
-        <h2>Core principles</h2>
+        <Typography variant="h4" component="h2" gutterBottom>
+          Core principles
+        </Typography>
       </SubtitlePartial>
 
       <Container>
