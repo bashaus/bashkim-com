@@ -1,8 +1,0 @@
-{
-  "name": "@bashkim-com/style-guide",
-  "version": "0.0.0",
-  "exports": {
-    "./media.scss": "./src/entry/media.scss"
-  },
-  "main": "./src/index.scss"
-}

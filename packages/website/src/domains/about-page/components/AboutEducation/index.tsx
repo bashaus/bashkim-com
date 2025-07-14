@@ -3,6 +3,7 @@ import SplitItemPartial from "@bashkim-com/design-system/SplitItemPartial";
 import SplitPartial from "@bashkim-com/design-system/SplitPartial";
 import SubtitlePartial from "@bashkim-com/design-system/SubtitlePartial";
 import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 
@@ -55,10 +56,10 @@ export default function AboutEducation() {
 
       <SplitPartial index={1}>
         <SplitItemPartial>
-          <Stack direction="row" spacing={2} alignItems="center">
-            <Box>
+          <Grid container spacing={2}>
+            <Grid size={12}>
               <Typography variant="h6" component="h3" gutterBottom>
-                Undergraduate
+                Dual Undergraduate
               </Typography>
 
               <Typography gutterBottom>
@@ -70,7 +71,9 @@ export default function AboutEducation() {
                 <span> to </span>
                 <time dateTime="2009">2009</time>
               </Typography>
+            </Grid>
 
+            <Grid size={{ xs: 12, md: 6 }}>
               <Typography gutterBottom>
                 Bachelor of
                 <br />
@@ -82,23 +85,9 @@ export default function AboutEducation() {
                 <br />
                 Web&nbsp;Services and&nbsp;Applications
               </Typography>
-            </Box>
+            </Grid>
 
-            <Box>
-              <Typography variant="h6" component="h3" gutterBottom>
-                Undergraduate
-              </Typography>
-
-              <Typography gutterBottom>
-                Queensland University of Technology
-              </Typography>
-
-              <Typography gutterBottom>
-                <time dateTime="2005">2005</time>
-                <span> to </span>
-                <time dateTime="2009">2009</time>
-              </Typography>
-
+            <Grid size={{ xs: 12, md: 6 }}>
               <Typography gutterBottom>
                 Bachelor of
                 <br />
@@ -110,8 +99,8 @@ export default function AboutEducation() {
                 <br />
                 Communication&nbsp;Design
               </Typography>
-            </Box>
-          </Stack>
+            </Grid>
+          </Grid>
         </SplitItemPartial>
 
         <SplitItemPartial backgroundImage={qutGardensPointImage.src}>

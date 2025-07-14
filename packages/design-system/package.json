@@ -55,7 +55,6 @@
     "@bashkim-com/prismic-dal": "*",
     "@bashkim-com/prismic-factories": "*",
     "@bashkim-com/prismic-helpers": "*",
-    "@bashkim-com/style-guide": "*",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
     "@fontsource/roboto": "^5.2.5",

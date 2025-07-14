@@ -14,7 +14,6 @@
     "@bashkim-com/prismic-dal": "*",
     "@bashkim-com/prismic-helpers": "*",
     "@bashkim-com/socials": "*",
-    "@bashkim-com/style-guide": "*",
     "@bashkim-com/tsconfig": "*",
     "@emotion/cache": "^11.13.1",
     "@emotion/react": "^11.14.0",

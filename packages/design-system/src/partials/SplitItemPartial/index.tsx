@@ -1,7 +1,6 @@
-import classNames from "classnames";
 import { ComponentPropsWithoutRef } from "react";
 
-import styles from "./styles.module.scss";
+import * as S from "./styles";
 
 export type SplitItemPartialProps = Readonly<
   ComponentPropsWithoutRef<"div"> & {
@@ -11,26 +10,20 @@ export type SplitItemPartialProps = Readonly<
 
 export default function SplitItemPartial({
   backgroundImage,
-  className,
   children,
   ...props
 }: SplitItemPartialProps) {
   return (
-    <div
+    <S.SplitItemPartial
       style={{
         backgroundImage: backgroundImage
           ? `url(${backgroundImage})`
           : undefined,
       }}
-      className={classNames(
-        className,
-        styles["SplitItemPartial"],
-        !!backgroundImage && styles["hasBackground"],
-        !backgroundImage && styles["hasNoBackground"],
-      )}
+      data-background-image={backgroundImage ? "true" : "false"}
       {...props}
     >
       {children}
-    </div>
+    </S.SplitItemPartial>
   );
 }
