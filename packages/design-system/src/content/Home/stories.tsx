@@ -21,7 +21,7 @@ export const Home = {
   render: () => (
     <Container maxWidth="md">
       <Box mt={12} mb={3}>
-        <InlineLogo width={250} />
+        <InlineLogo width={252} height={72} />
       </Box>
 
       <Typography variant="h5" component="h1" gutterBottom>
