@@ -10,6 +10,7 @@ export type CarouselProviderProps = Readonly<
     options?: EmblaOptionsType;
     plugins?: EmblaPluginType[];
     slidesVisible?: number;
+    slideSpacing?: string;
   }>
 >;
 
@@ -18,11 +19,17 @@ export default function CarouselProvider({
   options,
   plugins,
   slidesVisible = 1,
+  slideSpacing = "2rem",
 }: CarouselProviderProps) {
   const embla = useEmblaCarousel(options, plugins);
 
   return (
-    <Box sx={{ "--slide-size": `${100 / slidesVisible}%` }}>
+    <Box
+      sx={{
+        "--slide-size": `${100 / slidesVisible}%`,
+        "--slide-spacing": slideSpacing,
+      }}
+    >
       <CarouselContext.Provider value={embla}>
         {children}
       </CarouselContext.Provider>
