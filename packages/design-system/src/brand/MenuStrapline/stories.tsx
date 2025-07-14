@@ -1,14 +1,14 @@
 import type { Meta, StoryObj } from "@storybook/nextjs";
 
-import HeaderLogo from ".";
+import MenuStrapline from ".";
 
 const meta = {
-  component: HeaderLogo,
-  title: "Brand/Header Logo",
+  component: MenuStrapline,
+  title: "Brand/Menu Strapline",
   parameters: {
     layout: "padded",
   },
-} satisfies Meta<typeof HeaderLogo>;
+} satisfies Meta<typeof MenuStrapline>;
 
 type Story = StoryObj<typeof meta>;
 

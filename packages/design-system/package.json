@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "exports": {
     ".": "./src/index.ts",
-    "./HeaderLogo": "./src/brand/HeaderLogo/index.tsx",
     "./InlineLogo": "./src/brand/InlineLogo/index.tsx",
+    "./MenuStrapline": "./src/brand/MenuStrapline/index.tsx",
     "./Backdrop": "./src/components/Backdrop/index.tsx",
     "./Carousel": "./src/components/Carousel/index.tsx",
     "./CarouselImage": "./src/components/CarouselImage/index.tsx",
