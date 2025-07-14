@@ -5,7 +5,7 @@ import Typography, { TypographyProps } from "@mui/material/Typography";
 
 export const Container = styled(MuiContainer)();
 
-export const Slogan = styled("div")(({ theme }) => ({
+export const Slogan = styled(Typography)(({ theme }) => ({
   paddingTop: theme.spacing(1),
   paddingBottom: theme.spacing(1),
   textTransform: "uppercase",

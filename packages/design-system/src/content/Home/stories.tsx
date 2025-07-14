@@ -4,7 +4,7 @@ import Link from "@mui/material/Link";
 import Typography from "@mui/material/Typography";
 import type { Meta, StoryObj } from "@storybook/nextjs";
 
-import SiteLogo from "../../components/SiteLogo";
+import InlineLogo from "../../brand/InlineLogo";
 
 const meta = {
   title: "Home",
@@ -21,7 +21,7 @@ export const Home = {
   render: () => (
     <Container maxWidth="md">
       <Box mt={12} mb={3}>
-        <SiteLogo width={250} />
+        <InlineLogo width={250} />
       </Box>
 
       <Typography variant="h5" component="h1" gutterBottom>

@@ -1,4 +1,4 @@
-import SiteLogo from "@bashkim-com/design-system/SiteLogo";
+import InlineLogo from "@bashkim-com/design-system/InlineLogo";
 import Link from "@mui/material/Link";
 
 import * as S from "./styles";
@@ -6,7 +6,7 @@ import * as S from "./styles";
 export default function FooterNavigation() {
   return (
     <S.Container>
-      <SiteLogo aria-label="Bash" width="126" height="36" />
+      <InlineLogo aria-label="Bash" width={126} height={36} />
       <S.Slogan>Digital Nomad Technologist</S.Slogan>
 
       <S.FooterGrid>

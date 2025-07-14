@@ -17,9 +17,8 @@ export default function HomeHello() {
       background={<VideoBackground url="https://vimeo.com/1067276219" />}
     >
       <S.Logo />
-
-      <Typography variant="subtitle1">
-        Digital Nomad Technologist based in Barcelona,&nbsp;Spain.
+      <Typography variant="h6" component="div">
+        Digital Nomad Technologist based in Barcelona.
       </Typography>
 
       <Stack direction="row" spacing={2} pt={4}>

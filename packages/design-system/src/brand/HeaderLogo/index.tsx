@@ -1,12 +1,12 @@
 import styles from "./styles.module.scss";
 
-export type LogoProps = Readonly<{
+export type HeaderLogoProps = Readonly<{
   animated?: boolean;
 }>;
 
-export default function Logo({ animated = false }: LogoProps) {
+export default function HeaderLogo({ animated = false }: HeaderLogoProps) {
   return (
-    <div className={styles["Logo"]}>
+    <div className={styles["HeaderLogo"]}>
       <span className={styles["Command"]}>
         bash:<span className={styles["CommandPath"]}>~</span>$&nbsp;
       </span>

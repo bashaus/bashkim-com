@@ -1,26 +1,26 @@
 import type { Meta, StoryObj } from "@storybook/nextjs";
 
-import Logo from ".";
+import HeaderLogo from ".";
 
 const meta = {
-  component: Logo,
-  title: "Components/Logo",
+  component: HeaderLogo,
+  title: "Brand/Header Logo",
   parameters: {
     layout: "padded",
   },
-} satisfies Meta<typeof Logo>;
+} satisfies Meta<typeof HeaderLogo>;
 
 type Story = StoryObj<typeof meta>;
-
-export const Static = {
-  args: {
-    animated: false,
-  },
-} satisfies Story;
 
 export const Animated = {
   args: {
     animated: true,
+  },
+} satisfies Story;
+
+export const Static = {
+  args: {
+    animated: false,
   },
 } satisfies Story;
 

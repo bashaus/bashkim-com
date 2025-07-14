@@ -1,4 +1,4 @@
-import Logo from "@bashkim-com/design-system/Logo";
+import HeaderLogo from "@bashkim-com/design-system/HeaderLogo";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Stack from "@mui/material/Stack";
@@ -44,7 +44,7 @@ export default function HeaderDesktop({ variant }: HeaderDesktopProps) {
         <Toolbar disableGutters>
           <Box flex={1}>
             <Link href="/">
-              <Logo animated={isHome} />
+              <HeaderLogo animated={isHome} />
             </Link>
           </Box>
 
