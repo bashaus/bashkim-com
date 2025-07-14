@@ -1,45 +1,24 @@
-@import "~@bashkim-com/style-guide/grid.scss";
 @import "~@bashkim-com/style-guide/media.scss";
 
 .SplitItemPartial {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   text-align: center;
 
-  div {
-    @include grid-cell-padding($sides: left right);
-
-    max-width: 320px;
-    flex-grow: 1;
-    flex-shrink: 0;
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-
-  img {
-    display: block;
-    margin: 0 auto;
-  }
-
   @media #{$media-query-mobile} {
     width: 100%;
     order: 2;
-
-    div {
-      flex-basis: 100%;
-    }
   }
 
   @media #{$media-query-not-mobile} {
     width: 50%;
     min-height: calc(9 / 16 * 50vw);
+  }
 
-    div {
-      flex-basis: 40%;
-    }
+  img {
+    display: block;
+    margin: 0 auto;
   }
 
   &.hasBackground {

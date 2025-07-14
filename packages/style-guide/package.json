@@ -2,7 +2,6 @@
   "name": "@bashkim-com/style-guide",
   "version": "0.0.0",
   "exports": {
-    "./grid.scss": "./src/entry/grid.scss",
     "./media.scss": "./src/entry/media.scss"
   },
   "main": "./src/index.scss"
