@@ -14,7 +14,7 @@ const TitlePartialRenderer = ({
   image,
   ...args
 }: TitlePartialRendererProps) => (
-  <TitlePartial image={<img alt="image" src={image[0]} />} {...args} />
+  <TitlePartial image={<img alt="" src={image[0]} />} {...args} />
 );
 
 const meta = {
