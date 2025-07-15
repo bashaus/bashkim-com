@@ -1,6 +1,6 @@
-import { StyledComponent } from "@emotion/styled";
 import Stack, { StackProps } from "@mui/material/Stack";
 import { darken, lighten, styled } from "@mui/material/styles";
+import { ComponentType } from "react";
 
 import { GroupDesign } from "./types";
 
@@ -22,7 +22,7 @@ export const GroupAlternate = styled(Stack)(({ theme }) => [
 
 export const groupDesignComponentMap: Record<
   keyof GroupDesign,
-  StyledComponent<StackProps>
+  ComponentType<StackProps>
 > = {
   default: GroupDefault,
   alternate: GroupAlternate,

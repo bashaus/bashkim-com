@@ -1,4 +1,4 @@
-import { styled } from "@mui/material";
+import { styled } from "@mui/material/styles";
 
 import DeviceVector from "../../assets/vectors/devices/feature-phone.svg";
 

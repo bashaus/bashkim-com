@@ -56,8 +56,11 @@ export default [
             },
             {
               name: "@mui/material",
-              importNames: ["default"],
-              message: "Use named imports for @mui/material",
+              message: "Use @mui/material/Component",
+            },
+            {
+              name: "@emotion/styled",
+              message: "Import from @mui/material/styles instead",
             },
           ],
         },

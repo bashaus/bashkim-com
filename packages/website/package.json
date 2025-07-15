@@ -20,7 +20,7 @@
     "@emotion/styled": "^11.14.0",
     "@fontsource/roboto": "^5.1.1",
     "@mui/icons-material": "^7.0.0",
-    "@mui/material": "^7.0.0",
+    "@mui/material": "^7.2.0",
     "@mui/material-nextjs": "^7.0.0",
     "@next/third-parties": "^15.2.3",
     "@vercel/speed-insights": "^1.2.0",

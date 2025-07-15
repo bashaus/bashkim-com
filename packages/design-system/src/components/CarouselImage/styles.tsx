@@ -1,4 +1,4 @@
-import { styled } from "@mui/material";
+import { styled } from "@mui/material/styles";
 
 export const CarouselImage = styled("figure")(() => ({
   margin: 0,

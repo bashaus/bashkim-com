@@ -1,4 +1,4 @@
-import { styled } from "@mui/material";
+import { styled } from "@mui/material/styles";
 
 export const BadgesGold = styled("span")(() => ({
   color: "#f0b400",
