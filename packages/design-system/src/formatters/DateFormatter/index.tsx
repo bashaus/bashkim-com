@@ -1,3 +1,5 @@
+import { useMemo } from "react";
+
 const MONTH_NAMES = [
   "January",
   "February",
@@ -14,13 +16,15 @@ const MONTH_NAMES = [
 ];
 
 export type DateFormatterProps = Readonly<{
-  date: Date;
+  date: string;
 }>;
 
 export default function DateFormatter({ date }: DateFormatterProps) {
-  const d = `${date.getDate()}`.padStart(2, "0");
-  const m = MONTH_NAMES[date.getMonth()];
-  const y = date.getFullYear();
+  const dateObject = useMemo(() => new Date(date), [date]);
+
+  const d = `${dateObject.getDate()}`.padStart(2, "0");
+  const m = MONTH_NAMES[dateObject.getMonth()];
+  const y = dateObject.getFullYear();
 
   return <span>{`${d} ${m} ${y}`}</span>;
 }

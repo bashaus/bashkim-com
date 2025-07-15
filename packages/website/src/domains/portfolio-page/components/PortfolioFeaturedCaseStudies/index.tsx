@@ -7,6 +7,7 @@ import { PrismicRichText } from "@bashkim-com/prismic-helpers";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Stack from "@mui/material/Stack";
+import Image from "next/image";
 import Link from "next/link";
 
 export type PortfolioFeaturedCaseStudiesProps = Readonly<{
@@ -36,12 +37,14 @@ export default function PortfolioFeaturedCaseStudies({
                   <Tile
                     title={caseStudy.meta_title ?? ""}
                     description={caseStudy.meta_description ?? ""}
-                    icon={{
-                      src: caseStudy.image_icon.url,
-                      alt: caseStudy.image_icon.alt ?? "",
-                      width: caseStudy.image_icon.dimensions.width,
-                      height: caseStudy.image_icon.dimensions.height,
-                    }}
+                    icon={
+                      <Image
+                        src={caseStudy.image_icon.url}
+                        alt={caseStudy.image_icon.alt ?? ""}
+                        width={caseStudy.image_icon.dimensions.width}
+                        height={caseStudy.image_icon.dimensions.height}
+                      />
+                    }
                     poster={caseStudy.image_poster.url}
                   />
                 </Link>

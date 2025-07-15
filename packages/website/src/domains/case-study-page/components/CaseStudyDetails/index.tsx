@@ -136,8 +136,12 @@ export default function CaseStudyDetails({ caseStudy }: CaseStudyDetailsProps) {
             <S.DetailTitle>Lifespan</S.DetailTitle>
             <S.DetailText>
               <LifespanFormatter
-                startDate={PrismicDate(launchDate)}
-                endDate={PrismicDate(decommissionDate)}
+                startDate={PrismicDate(launchDate).toISOString()}
+                endDate={
+                  decommissionDate
+                    ? PrismicDate(decommissionDate).toISOString()
+                    : undefined
+                }
               />
             </S.DetailText>
           </S.Detail>

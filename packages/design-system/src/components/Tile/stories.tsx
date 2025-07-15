@@ -15,16 +15,7 @@ type TileRendererProps = Omit<
 >;
 
 const TileRenderer = ({ _icon, _poster, ...props }: TileRendererProps) => (
-  <Tile
-    {...props}
-    icon={{
-      alt: "",
-      src: _icon[0],
-      width: 300,
-      height: 300,
-    }}
-    poster={_poster[0]}
-  />
+  <Tile {...props} icon={<img alt="" src={_icon[0]} />} poster={_poster[0]} />
 );
 
 const meta = {

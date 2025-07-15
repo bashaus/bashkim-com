@@ -24,10 +24,14 @@ export default function ExhibitionSlice({ slice }: ExhibitionSliceProps) {
     <>
       <PrismicRichText render={name} />
       <PrismicRichText render={location} />
-      <LifespanFormatter
-        startDate={PrismicDate(openingDate ?? "")}
-        endDate={closingDate ? PrismicDate(closingDate) : undefined}
-      />
+      {!!openingDate && (
+        <LifespanFormatter
+          startDate={PrismicDate(openingDate).toISOString()}
+          endDate={
+            closingDate ? PrismicDate(closingDate).toISOString() : undefined
+          }
+        />
+      )}
     </>
   );
 }

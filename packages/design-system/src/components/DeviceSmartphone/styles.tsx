@@ -2,7 +2,7 @@ import { styled } from "@mui/material/styles";
 
 import DeviceVector from "../../assets/vectors/devices/smartphone.svg";
 
-export const DeviceSmartphone = styled("figure")(() => ({
+export const Container = styled("figure")(() => ({
   display: "block",
   width: 400,
   margin: "0 auto",
@@ -14,9 +14,8 @@ export const Wrapper = styled("div")(() => ({
   marginLeft: "auto",
   marginRight: "auto",
 
-  /* 315 x 641.2499999955 */
   width: "100%",
-  paddingBottom: "203.57142857%",
+  aspectRatio: "641.2499999955 / 315",
 }));
 
 export const Device = styled(DeviceVector)(() => ({
@@ -37,13 +36,13 @@ export const Figure = styled("div")(() => ({
   width: "79.8%",
   height: "69.5%",
 
-  "& > *": {
+  "> *": {
     display: "block",
   },
 }));
 
 export const Caption = styled("figcaption")(({ theme }) => ({
-  textAlign: "center",
   paddingTop: theme.spacing(1),
   paddingBottom: theme.spacing(1),
+  textAlign: "center",
 }));

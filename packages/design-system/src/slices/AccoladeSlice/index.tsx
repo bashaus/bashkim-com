@@ -47,7 +47,7 @@ export default function AccoladeSlice({ slice }: AccoladeSliceProps) {
           <PrismicRichText render={description} />
           {date && (
             <Typography fontSize="small">
-              <DateFormatter date={PrismicDate(date)} />
+              <DateFormatter date={PrismicDate(date).toISOString()} />
             </Typography>
           )}
         </Grid>

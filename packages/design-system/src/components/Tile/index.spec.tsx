@@ -12,12 +12,14 @@ describe("<Tile />", () => {
       <Tile
         title={title}
         description={description}
-        icon={{
-          alt: "",
-          src: placeholderImage({ width: 300, height: 300, text: "icon" }),
-          width: 300,
-          height: 300,
-        }}
+        icon={
+          <img
+            alt=""
+            src={placeholderImage({ width: 300, height: 300, text: "icon" })}
+            width={300}
+            height={300}
+          />
+        }
       />,
     );
 

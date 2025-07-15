@@ -1,8 +1,8 @@
 import DateFormatter from "../DateFormatter";
 
 export type LifespanFormatterProps = Readonly<{
-  startDate: Date;
-  endDate?: Date;
+  startDate: string;
+  endDate?: string;
 }>;
 
 export default function LifespanFormatter({
@@ -17,7 +17,7 @@ export default function LifespanFormatter({
   }
 
   // If launch/decommission date match, this was an event
-  if (startDate.toDateString() === endDate.toDateString()) {
+  if (startDate === endDate) {
     return formattedStartDate;
   }
 

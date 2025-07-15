@@ -16,13 +16,13 @@ export default function DeviceSmartphone({
   figure,
 }: DeviceSmartphoneProps) {
   return (
-    <S.DeviceSmartphone>
+    <S.Container>
       <S.Wrapper>
         <S.Device />
         <S.Figure>{figure}</S.Figure>
       </S.Wrapper>
 
-      {children && <S.Caption>{children}</S.Caption>}
-    </S.DeviceSmartphone>
+      <S.Caption>{children}</S.Caption>
+    </S.Container>
   );
 }
