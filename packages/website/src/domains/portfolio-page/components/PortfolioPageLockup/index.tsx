@@ -34,11 +34,11 @@ export default function PortfolioPageLockup({
         imageDesktop={headerDesktopImage.src}
         imageMobile={headerDesktopImage.src}
       >
-        <Typography variant="h2" component="h1" gutterBottom>
+        <Typography variant="h2" component="h1">
           {metaTitle}
         </Typography>
 
-        <Typography variant="subtitle1">{metaDescription}</Typography>
+        <Typography variant="h5">{metaDescription}</Typography>
       </PageHeaderPartial>
 
       {featured && (
