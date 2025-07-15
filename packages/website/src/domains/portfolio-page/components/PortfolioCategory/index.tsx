@@ -24,10 +24,10 @@ export default function PortfolioCategory({
 
   return (
     <>
-      <SubtitlePartial>
-        <PrismicRichText render={title} />
-        <PrismicRichText render={description} />
-      </SubtitlePartial>
+      <SubtitlePartial
+        title={<PrismicRichText render={title} />}
+        subtitle={<PrismicRichText render={description} />}
+      />
 
       {fields && (
         <Container>

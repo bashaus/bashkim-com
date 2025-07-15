@@ -18,7 +18,8 @@ export const NewspaperContainer = styled(Container)(({ theme }) => ({
     columnCount: 4,
   },
 
-  "> *": {
+  "> div": {
     display: "inline-block",
+    paddingBottom: theme.spacing(2),
   },
 }));

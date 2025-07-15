@@ -18,12 +18,7 @@ import * as S from "./styles";
 export default function AboutPrinciples() {
   return (
     <Group>
-      <SubtitlePartial>
-        <Typography variant="h4" component="h2" gutterBottom>
-          Core principles
-        </Typography>
-      </SubtitlePartial>
-
+      <SubtitlePartial title="Core principles" />
       <Container>
         <Grid container rowSpacing={4} columnSpacing={2}>
           <S.Principle>

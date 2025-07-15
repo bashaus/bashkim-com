@@ -18,9 +18,9 @@ export default function SubtitleSlice({ slice }: SubtitleSliceProps) {
   } = slice.primary;
 
   return (
-    <SubtitlePartial>
-      <PrismicRichText render={heading} />
-      <PrismicRichText render={description} />
-    </SubtitlePartial>
+    <SubtitlePartial
+      title={<PrismicRichText render={heading} />}
+      subtitle={<PrismicRichText render={description} />}
+    />
   );
 }

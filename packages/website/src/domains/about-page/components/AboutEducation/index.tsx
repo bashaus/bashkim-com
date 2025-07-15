@@ -17,12 +17,7 @@ import * as S from "./styles";
 export default function AboutEducation() {
   return (
     <Group>
-      <SubtitlePartial>
-        <Typography variant="h4" component="h2">
-          Education
-        </Typography>
-      </SubtitlePartial>
-
+      <SubtitlePartial title="Education" />
       <SplitPartial index={0}>
         <SplitItemPartial>
           <Stack direction="row" spacing={2} alignItems="center">

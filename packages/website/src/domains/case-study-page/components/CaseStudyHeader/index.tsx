@@ -25,7 +25,7 @@ export default function CaseStudyHeader({ caseStudy }: CaseStudyHeaderProps) {
       <Group>
         <TitlePartial
           title={caseStudy.meta_title}
-          description={caseStudy.meta_description}
+          subtitle={caseStudy.meta_description}
           image={
             <Image
               src={caseStudy.image_icon.url}

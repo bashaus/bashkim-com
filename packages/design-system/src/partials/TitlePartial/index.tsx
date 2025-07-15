@@ -7,13 +7,13 @@ import * as S from "./styles";
 
 export type TitlePartialProps = Readonly<{
   title: ReactNode;
-  description: ReactNode;
+  subtitle?: ReactNode;
   image?: ReactNode;
 }>;
 
 export default function TitlePartial({
   title,
-  description,
+  subtitle,
   image,
 }: TitlePartialProps) {
   return (
@@ -21,10 +21,10 @@ export default function TitlePartial({
       <Stack spacing={2} alignItems="center">
         {image && <S.Icon>{image}</S.Icon>}
 
-        <Typography variant="h4" component="h1">
+        <Typography variant="h4" component="h1" gutterBottom>
           {title}
         </Typography>
-        <Typography>{description}</Typography>
+        {subtitle && <Typography>{subtitle}</Typography>}
       </Stack>
     </Container>
   );

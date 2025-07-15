@@ -11,19 +11,19 @@ export type GroupProps = Readonly<
 >;
 
 export default function Group({
-  children,
   design = "default",
+  children,
   id,
 }: GroupProps) {
   const Component = S.groupDesignComponentMap[design];
 
   return (
     <Component
-      component="section"
-      alignItems="center"
       id={id}
-      py={8}
+      component="section"
       spacing={4}
+      py={8}
+      alignItems="center"
     >
       {children}
     </Component>

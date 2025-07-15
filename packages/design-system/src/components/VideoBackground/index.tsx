@@ -1,6 +1,8 @@
-import ReactPlayer from "react-player/lazy";
+import dynamic from "next/dynamic";
 
 import * as S from "./styles";
+
+const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
 export type VideoBackgroundProps = Readonly<{
   /**

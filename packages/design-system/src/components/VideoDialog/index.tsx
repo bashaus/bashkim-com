@@ -6,8 +6,11 @@ import Button from "@mui/material/Button";
 import Dialog, { DialogProps } from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import Stack from "@mui/material/Stack";
+import dynamic from "next/dynamic";
 import { MouseEventHandler, useCallback, useRef, useState } from "react";
-import ReactPlayer, { ReactPlayerProps } from "react-player/lazy";
+import type { ReactPlayerProps } from "react-player";
+
+const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
 export type VideoDialogProps = Readonly<{
   /**

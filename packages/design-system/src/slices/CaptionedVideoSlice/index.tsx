@@ -25,9 +25,7 @@ export default function CaptionedVideoSlice({
   }
 
   return (
-    <CaptionedPartial
-      figure={<VideoPlayer url={video.embed_url} title={video.title} />}
-    >
+    <CaptionedPartial figure={<VideoPlayer url={video.embed_url} />}>
       <PrismicRichText render={caption} />
     </CaptionedPartial>
   );

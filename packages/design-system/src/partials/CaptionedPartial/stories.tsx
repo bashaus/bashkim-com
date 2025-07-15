@@ -20,7 +20,9 @@ const CaptionedPartialRenderer = ({
   ...args
 }: CaptionedPartialRendererProps) => (
   <CaptionedPartial figure={<img src={figure[0]} alt="" />} {...args}>
-    <Typography variant="h4">{title}</Typography>
+    <Typography variant="h4" component="h3">
+      {title}
+    </Typography>
     <Typography>{subtitle}</Typography>
   </CaptionedPartial>
 );

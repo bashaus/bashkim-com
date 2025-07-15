@@ -49,7 +49,7 @@ export const Fixture = {
         <Typography variant="h2" component="h1" gutterBottom>
           {faker.lorem.words(3)}
         </Typography>
-        <Typography variant="subtitle1">{faker.lorem.words(6)}</Typography>
+        <Typography variant="subtitle1">{faker.lorem.sentence()}</Typography>
       </>
     ),
   },

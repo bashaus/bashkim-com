@@ -32,7 +32,7 @@ export const Fixture = {
   args: {
     image: [placeholderImage({ width: 300, height: 300, text: "image" })],
     title: faker.lorem.words(3),
-    description: faker.lorem.sentence(9),
+    subtitle: faker.lorem.sentence(9),
   },
 } satisfies Story;
 

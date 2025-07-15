@@ -5,7 +5,7 @@ import Group from ".";
 
 const meta = {
   component: Group,
-  title: "Layout/Group",
+  title: "Components/Group",
   args: {
     design: "default",
     children: faker.lorem.paragraph(),

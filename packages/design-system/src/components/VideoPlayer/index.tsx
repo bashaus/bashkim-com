@@ -1,14 +1,12 @@
+import dynamic from "next/dynamic";
 import { useCallback, useRef, useState } from "react";
-import ReactPlayer, { ReactPlayerProps } from "react-player/lazy";
+import type { ReactPlayerProps } from "react-player";
 
 import * as S from "./styles";
 
-export type VideoPlayerProps = Readonly<{
-  /**
-   * An accessible title of the video
-   */
-  title?: string;
+const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
+export type VideoPlayerProps = Readonly<{
   /**
    * The URL of the video to be played
    */

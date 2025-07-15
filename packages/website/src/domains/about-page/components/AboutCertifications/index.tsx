@@ -15,12 +15,7 @@ import * as S from "./styles";
 export default function AboutCertifications() {
   return (
     <Group>
-      <SubtitlePartial>
-        <Typography variant="h4" component="h2">
-          Certifications
-        </Typography>
-      </SubtitlePartial>
-
+      <SubtitlePartial title="Certifications" />
       <SplitPartial index={0}>
         <SplitItemPartial>
           <div>
