@@ -3,18 +3,18 @@ import { useCallback, useEffect, useState } from "react";
 
 import { useCarousel } from "../CarouselProvider/context";
 
-type UseCarouselDotsType = {
+type UseCarouselPaginationType = {
   selectedIndex: number;
   scrollSnaps: number[];
-  onDotClick: (index: number) => void;
+  onChange: (index: number) => void;
 };
 
-export const useCarouselDots = (): UseCarouselDotsType => {
+export const useCarouselPagination = (): UseCarouselPaginationType => {
   const [, emblaApi] = useCarousel();
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
 
-  const onDotClick = useCallback(
+  const onChange = useCallback(
     (index: number) => {
       if (!emblaApi) return;
       emblaApi.scrollTo(index);
@@ -41,6 +41,6 @@ export const useCarouselDots = (): UseCarouselDotsType => {
   return {
     selectedIndex,
     scrollSnaps,
-    onDotClick,
+    onChange,
   };
 };

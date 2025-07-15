@@ -15,6 +15,7 @@
     "./CarouselDots": "./src/components/CarouselDots/index.tsx",
     "./CarouselImage": "./src/components/CarouselImage/index.tsx",
     "./CarouselProvider": "./src/components/CarouselProvider/index.tsx",
+    "./CarouselSlider": "./src/components/CarouselSlider/index.tsx",
     "./CarouselViewport": "./src/components/CarouselViewport/index.tsx",
     "./DeviceFeaturePhone": "./src/components/DeviceFeaturePhone/index.tsx",
     "./DeviceSmartphone": "./src/components/DeviceSmartphone/index.tsx",

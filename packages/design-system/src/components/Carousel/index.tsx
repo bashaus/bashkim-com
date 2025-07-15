@@ -3,8 +3,8 @@ import { EmblaOptionsType } from "embla-carousel";
 import { PropsWithChildren } from "react";
 
 import CarouselButtons from "../CarouselButtons";
-import CarouselDots from "../CarouselDots";
 import CarouselProvider from "../CarouselProvider";
+import CarouselSlider from "../CarouselSlider";
 import CarouselViewport from "../CarouselViewport";
 
 export type CarouselProps = Readonly<
@@ -22,9 +22,14 @@ export default function Carousel({
     <CarouselProvider slidesVisible={slidesVisible}>
       <CarouselViewport>{children}</CarouselViewport>
 
-      <Stack direction="row" justifyContent="space-between" alignItems="center">
+      <Stack
+        direction="row"
+        spacing={2}
+        justifyContent="space-between"
+        alignItems="center"
+      >
         <CarouselButtons />
-        <CarouselDots />
+        <CarouselSlider />
       </Stack>
     </CarouselProvider>
   );
