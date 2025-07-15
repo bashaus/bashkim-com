@@ -1,4 +1,4 @@
-<img src="packages/design-system/src/assets/logo/inline.svg" width="250" />
+<img src="packages/design-system/src/brand/InlineLogo/inline-logo.svg" width="250" height="auto" />
 
 &nbsp;
 

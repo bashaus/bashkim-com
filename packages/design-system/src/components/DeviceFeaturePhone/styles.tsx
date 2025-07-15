@@ -1,6 +1,6 @@
 import { styled } from "@mui/material/styles";
 
-import DeviceVector from "../../assets/vectors/devices/feature-phone.svg";
+import DeviceVector from "./device.svg";
 
 export const Container = styled("figure")(() => ({
   display: "block",
@@ -14,9 +14,8 @@ export const Wrapper = styled("div")(() => ({
   marginLeft: "auto",
   marginRight: "auto",
 
-  /* 255 x 467.773 */
   width: "100%",
-  paddingBottom: "183.44039216%",
+  aspectRatio: "467.773 / 255",
 }));
 
 export const Device = styled(DeviceVector)(() => ({

@@ -1,6 +1,6 @@
 import { styled } from "@mui/material/styles";
 
-import DeviceVector from "../../assets/vectors/devices/smartphone.svg";
+import DeviceVector from "./device.svg";
 
 export const Container = styled("figure")(() => ({
   display: "block",

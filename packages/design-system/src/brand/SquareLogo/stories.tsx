@@ -1,18 +1,18 @@
 import type { Meta, StoryObj } from "@storybook/nextjs";
 
-import InlineLogo from ".";
+import SquareLogo from ".";
 
 const meta = {
-  component: InlineLogo,
-  title: "Brand/Inline Logo",
+  component: SquareLogo,
+  title: "Brand/Square Logo",
   parameters: {
     layout: "centered",
   },
-} satisfies Meta<typeof InlineLogo>;
+} satisfies Meta<typeof SquareLogo>;
 
 type Story = StoryObj<typeof meta>;
 
-const width = 126;
+const width = 72;
 
 export const Zoom1x = {
   name: "1x",
