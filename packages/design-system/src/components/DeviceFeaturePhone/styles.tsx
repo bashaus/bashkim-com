@@ -15,7 +15,7 @@ export const Wrapper = styled("div")(() => ({
   marginRight: "auto",
 
   width: "100%",
-  aspectRatio: "467.773 / 255",
+  aspectRatio: "255 / 467.773",
 }));
 
 export const Device = styled(DeviceVector)(() => ({
