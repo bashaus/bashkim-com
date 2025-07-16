@@ -10,5 +10,6 @@ const nextMuiTheme = createTheme({
   },
 });
 
-const theme = createTheme(deepmerge(siteMuiTheme, nextMuiTheme));
+const theme = createTheme(deepmerge(nextMuiTheme, siteMuiTheme));
+
 export default theme;
