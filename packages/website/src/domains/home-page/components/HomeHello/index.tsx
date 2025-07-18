@@ -18,7 +18,7 @@ export default function HomeHello() {
     >
       <S.Logo />
       <Typography variant="h5" component="p">
-        Digital Nomad Technologist based in Barcelona.
+        Digital Technologist based in Barcelona.
       </Typography>
 
       <Stack direction="row" spacing={2} pt={4}>

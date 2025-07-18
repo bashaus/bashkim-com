@@ -7,7 +7,7 @@ export default function FooterNavigation() {
   return (
     <S.Container>
       <InlineLogo aria-label="Bash" width={126} height={36} />
-      <S.Slogan>Digital Nomad Technologist</S.Slogan>
+      <S.Slogan>Digital Technologist</S.Slogan>
 
       <S.FooterGrid>
         <S.FooterColumn>

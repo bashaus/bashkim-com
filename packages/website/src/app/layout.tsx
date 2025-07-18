@@ -8,7 +8,7 @@ import SiteLayout from "@/layouts/SiteLayout";
 export async function generateMetadata() {
   return {
     title: {
-      default: "Bashkim Isai - Digital Nomad Technologist",
+      default: "Bashkim Isai - Digital Technologist",
       template: "%s | Bashkim Isai",
     },
   };
