@@ -16,7 +16,7 @@ const NotFoundPage = () => {
           Page not found
         </Typography>
 
-        <Typography variant="subtitle1">
+        <Typography variant="h5" component="p">
           The page you&apos;re looking for does not exist
         </Typography>
       </PageHeaderPartial>
