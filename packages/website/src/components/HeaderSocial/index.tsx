@@ -11,7 +11,7 @@ import StackOverflowVector from "@/assets/vectors/social/stack-overflow.svg";
 export default function HeaderSocial() {
   return (
     <Stack direction="row">
-      <Link href="/socials/github/">
+      <Link href="/socials/github">
         <Tooltip title="GitHub" arrow placement="bottom">
           <IconButton sx={{ color: "currentColor" }}>
             <GitHubVector width={30} height={30} />
@@ -19,7 +19,7 @@ export default function HeaderSocial() {
         </Tooltip>
       </Link>
 
-      <Link href="/socials/medium/">
+      <Link href="/socials/medium">
         <Tooltip title="Medium" arrow placement="bottom">
           <IconButton sx={{ color: "currentColor" }}>
             <MediumVector width={30} height={30} />
@@ -27,7 +27,7 @@ export default function HeaderSocial() {
         </Tooltip>
       </Link>
 
-      <Link href="/socials/linked-in/">
+      <Link href="/socials/linked-in">
         <Tooltip title="LinkedIn" arrow placement="bottom">
           <IconButton sx={{ color: "currentColor" }}>
             <LinkedInOutlinedVector width={30} height={30} />
@@ -35,7 +35,7 @@ export default function HeaderSocial() {
         </Tooltip>
       </Link>
 
-      <Link href="/socials/stack-overflow/">
+      <Link href="/socials/stack-overflow">
         <Tooltip title="Stack Overflow" arrow placement="bottom">
           <IconButton sx={{ color: "currentColor" }}>
             <StackOverflowVector width={30} height={30} />
