@@ -7,7 +7,11 @@ import { GetMediumSocialsResponse } from "./types";
 export async function getMediumSocials(): Promise<GetMediumSocialsResponse> {
   const parser = new XMLParser({ ignoreAttributes: false });
 
-  const rawFeed = await fetch("https://medium.com/feed/@bashaus");
+  const rawFeed = await fetch("https://medium.com/feed/@bashaus", {
+    next: {
+      revalidate: 3600,
+    },
+  });
   const txtFeed = await rawFeed.text();
 
   const feed: RootElement = parser.parse(txtFeed);

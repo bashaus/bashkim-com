@@ -1,0 +1,6 @@
+fragment GitHubGist on Gist {
+  name
+  description
+  url
+  stargazerCount
+}

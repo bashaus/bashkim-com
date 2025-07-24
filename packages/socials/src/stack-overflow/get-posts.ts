@@ -12,8 +12,12 @@ const getStackOverflowPostsData = async () => {
   url.searchParams.append("pageSize", "10");
   url.searchParams.append("filter", "!nNPvSNOTRz");
 
-  const response = await fetch(url.toString(), {});
-  return response.json();
+  const response = await fetch(url.toString(), {
+    next: {
+      revalidate: 3600,
+    },
+  });
+  return await response.json();
 };
 
 export async function getStackOverflowPosts(): Promise<

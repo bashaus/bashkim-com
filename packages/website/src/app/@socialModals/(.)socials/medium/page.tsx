@@ -6,5 +6,6 @@ export const dynamic = "force-dynamic";
 
 export default async function SocialModalsSlotMedium() {
   const { articles } = await getMediumSocials();
+
   return <SocialMedium articles={articles} />;
 }

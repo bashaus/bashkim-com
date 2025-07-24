@@ -1,10 +1,9 @@
-export type GitHubPinnedItem = {
-  name: string;
-  description?: string;
-  url: string;
-};
+import type {
+  GitHubGistFragment,
+  GitHubRepositoryFragment,
+} from "./graphql-types";
 
 export type GetGitHubSocialsResponse = {
+  pinnedItems: Array<GitHubGistFragment | GitHubRepositoryFragment>;
   repositoryCount: number;
-  pinnedItems: Array<GitHubPinnedItem>;
 };

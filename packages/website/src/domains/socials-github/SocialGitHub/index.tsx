@@ -1,20 +1,25 @@
 "use client";
 
-import { GitHubPinnedItem } from "@bashkim-com/socials";
+import type {
+  GitHubGistFragment,
+  GitHubRepositoryFragment,
+} from "@bashkim-com/socials";
 import ReadMoreIcon from "@mui/icons-material/ReadMore";
-import Chip from "@mui/material/Chip";
 import Divider from "@mui/material/Divider";
+import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import ListSubheader from "@mui/material/ListSubheader";
-import MenuItem from "@mui/material/MenuItem";
 
-import GitHubRepo from "@/assets/vectors/icons/github-repo.svg";
+import SocialContent from "@/domains/socials/components/SocialContent";
 import SocialGitHubHeader from "@/domains/socials-github/SocialGitHubHeader";
+import MuiNextLink from "@/libraries/material-ui/link";
+
+import SocialGitHubPinnedItemButton from "../SocialGitHubPinnedItemButton";
 
 export type SocialGitHubProps = Readonly<{
   repositoryCount: number;
-  pinnedItems: Array<GitHubPinnedItem>;
+  pinnedItems: Array<GitHubGistFragment | GitHubRepositoryFragment>;
 }>;
 
 export default function SocialGitHub({
@@ -24,68 +29,52 @@ export default function SocialGitHub({
   return (
     <>
       <SocialGitHubHeader />
-
       <Divider />
-      <ListSubheader>
-        Pinned items &mdash; {pinnedItems.length} of {repositoryCount}
-      </ListSubheader>
 
-      {pinnedItems.map((item) => (
-        <MenuItem
-          component="a"
-          href={item.url}
+      <SocialContent>
+        <ListSubheader>
+          Pinned items &mdash; {pinnedItems.length} of {repositoryCount}
+        </ListSubheader>
+
+        {pinnedItems.map((item) => (
+          <ListItemButton
+            component="a"
+            LinkComponent={MuiNextLink}
+            href={item.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            key={item.name}
+          >
+            <SocialGitHubPinnedItemButton
+              name={item.name}
+              description={item.description}
+              stargazerCount={item.stargazerCount}
+              forkCount={"forkCount" in item ? item.forkCount : undefined}
+            />
+          </ListItemButton>
+        ))}
+
+        <ListItemButton
+          href="https://github.com/bashaus?tab=repositories"
           target="_blank"
-          key={item.name}
-          style={{ alignItems: "flex-start" }}
+          rel="noopener noreferrer"
         >
-          <ListItemIcon sx={{ py: 0.5 }}>
-            <GitHubRepo aria-label="Repository" fill="currentColor" />
+          <ListItemIcon>
+            <ReadMoreIcon
+              aria-label="Repository"
+              fill="currentColor"
+              sx={{ width: 32, height: 32 }}
+            />
           </ListItemIcon>
 
           <ListItemText
             primary={
-              <>
-                <span>{item.name}</span>
-
-                {item.name === "bashkim-com" && (
-                  <Chip
-                    label="This site"
-                    color="primary"
-                    size="small"
-                    sx={{
-                      pointerEvents: "none",
-                      textTransform: "uppercase",
-                      fontSize: "60%",
-                      marginLeft: 1,
-                    }}
-                  />
-                )}
-              </>
+              <>{repositoryCount - pinnedItems.length} more repositories</>
             }
-            secondary={item.description}
+            secondary="Available on GitHub"
           />
-        </MenuItem>
-      ))}
-
-      <Divider />
-
-      <MenuItem
-        component="a"
-        href="https://github.com/bashaus?tab=repositories"
-        target="_blank"
-        style={{ alignItems: "flex-start" }}
-      >
-        <ListItemIcon sx={{ py: 0.5 }}>
-          <ReadMoreIcon aria-label="Repository" fill="currentColor" />
-        </ListItemIcon>
-
-        <ListItemText
-          primary={
-            <>{repositoryCount - pinnedItems.length} more repositories</>
-          }
-          secondary="View on GitHub"
-        />
-      </MenuItem>
+        </ListItemButton>
+      </SocialContent>
     </>
   );
 }

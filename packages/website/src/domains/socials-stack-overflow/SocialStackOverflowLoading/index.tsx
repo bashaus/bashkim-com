@@ -1,30 +1,23 @@
 "use client";
 
 import CircularProgress from "@mui/material/CircularProgress";
-import DialogContent from "@mui/material/DialogContent";
 import Divider from "@mui/material/Divider";
 import ListSubheader from "@mui/material/ListSubheader";
 
-import StackOverflowFilledVector from "@/assets/vectors/social/stack-overflow-filled.svg";
-import SocialHeader from "@/domains/socials/SocialHeader";
+import SocialContent from "@/domains/socials/components/SocialContent";
+
+import SocialStackOverflowHeaderDisconnected from "../SocialStackOverflowHeaderDisconnected";
 
 export default function SocialStackOverflowLoading() {
   return (
     <>
-      <SocialHeader
-        href="https://stackoverflow.com/users/600240/bashaus"
-        avatarBadgeBackground="#FFF"
-        avatarBadge={<StackOverflowFilledVector width={20} height={20} />}
-        textPrimary="Bashkim Isai"
-        textSecondary="View on Stack Overflow"
-      />
-
+      <SocialStackOverflowHeaderDisconnected />
       <Divider />
-      <ListSubheader>Loading profile</ListSubheader>
 
-      <DialogContent>
+      <SocialContent>
+        <ListSubheader>Synchronising</ListSubheader>
         <CircularProgress />
-      </DialogContent>
+      </SocialContent>
     </>
   );
 }

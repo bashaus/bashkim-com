@@ -1,7 +1,7 @@
 "use client";
 
 import GitHubVector from "@/assets/vectors/social/github.svg";
-import SocialHeader from "@/domains/socials/SocialHeader";
+import SocialHeader from "@/domains/socials/components/SocialHeader";
 
 export default function SocialGitHubHeader() {
   return (

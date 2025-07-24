@@ -11,15 +11,11 @@ query GetPinnedItems {
     pinnedItems(first: 6) {
       nodes {
         ... on Gist {
-          name
-          description
-          url
+          ...GitHubGist
         }
 
         ... on Repository {
-          name
-          description
-          url
+          ...GitHubRepository
         }
       }
     }

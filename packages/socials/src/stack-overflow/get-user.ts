@@ -7,8 +7,13 @@ const getStackOverflowUserData = async () => {
   url.pathname = `/2.3/users/${userId}`;
   url.searchParams.append("site", "stackoverflow");
 
-  const response = await fetch(url.toString(), {});
-  return response.json();
+  const response = await fetch(url.toString(), {
+    next: {
+      revalidate: 3600,
+    },
+  });
+
+  return await response.json();
 };
 
 export async function getStackOverflowUser(): Promise<StackOverflowUser> {

@@ -1,7 +1,7 @@
 "use client";
 
 import MediumVector from "@/assets/vectors/social/medium.svg";
-import SocialHeader from "@/domains/socials/SocialHeader";
+import SocialHeader from "@/domains/socials/components/SocialHeader";
 
 export default function SocialMediumHeader() {
   return (

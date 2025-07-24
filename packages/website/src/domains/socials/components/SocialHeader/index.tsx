@@ -37,40 +37,42 @@ export default function SocialHeader({
   textSecondary,
 }: SocialHeaderProps) {
   return (
-    <ListItemButton
-      component="a"
-      LinkComponent={MuiNextLink}
-      href={href}
-      target="_blank"
-    >
-      <ListItemAvatar>
-        <Badge
-          overlap="circular"
-          anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
-          badgeContent={
-            <Avatar
-              sx={{
-                width: 20,
-                height: 20,
-                borderStyle: "solid",
-                borderWidth: 2,
-                borderColor: "background.paper",
-                backgroundColor: avatarBadgeBackground,
-              }}
-            >
-              {avatarBadge}
-            </Avatar>
-          }
-        >
-          <Avatar>{avatarImage}</Avatar>
-        </Badge>
-      </ListItemAvatar>
+    <Box>
+      <ListItemButton
+        component="a"
+        LinkComponent={MuiNextLink}
+        href={href}
+        target="_blank"
+      >
+        <ListItemAvatar>
+          <Badge
+            overlap="circular"
+            anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
+            badgeContent={
+              <Avatar
+                sx={{
+                  width: 20,
+                  height: 20,
+                  borderStyle: "solid",
+                  borderWidth: 2,
+                  borderColor: "background.paper",
+                  backgroundColor: avatarBadgeBackground,
+                }}
+              >
+                {avatarBadge}
+              </Avatar>
+            }
+          >
+            <Avatar>{avatarImage}</Avatar>
+          </Badge>
+        </ListItemAvatar>
 
-      <ListItemText primary={textPrimary} secondary={textSecondary} />
+        <ListItemText primary={textPrimary} secondary={textSecondary} />
 
-      <Box px={2}>
-        <OpenInNewIcon sx={{ width: 18, height: 18 }} color="action" />
-      </Box>
-    </ListItemButton>
+        <Box px={2}>
+          <OpenInNewIcon sx={{ width: 18, height: 18 }} color="action" />
+        </Box>
+      </ListItemButton>
+    </Box>
   );
 }
