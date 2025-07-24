@@ -17,7 +17,7 @@ export default function SocialGitHubLoading() {
       <SocialContent>
         <ListSubheader>Synchronising</ListSubheader>
 
-        {[...new Array(3)].map((_, i) => (
+        {[...new Array(3)].keys().map((i) => (
           <ListItem key={i}>
             <SocialGitHubPinnedItemButton
               name={<Skeleton />}
