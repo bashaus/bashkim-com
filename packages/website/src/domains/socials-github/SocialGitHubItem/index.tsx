@@ -20,7 +20,14 @@ export type SocialGitHubItemProps = Readonly<{
 }>;
 
 export default function SocialGitHubItem({
-  icon,
+  icon = (
+    <GitHubRepo
+      aria-label="Repository"
+      fill="currentColor"
+      width={38}
+      height={38}
+    />
+  ),
   name,
   description,
   forkCount,
@@ -31,16 +38,7 @@ export default function SocialGitHubItem({
   return (
     <>
       <ListItemIcon sx={{ alignSelf: "flex-start", paddingTop: 1 }}>
-        {icon ? (
-          icon
-        ) : (
-          <GitHubRepo
-            aria-label="Repository"
-            fill="currentColor"
-            width={38}
-            height={38}
-          />
-        )}
+        {icon}
       </ListItemIcon>
 
       <ListItemText>

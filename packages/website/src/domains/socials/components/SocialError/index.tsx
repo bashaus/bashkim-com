@@ -11,14 +11,14 @@ export type SocialErrorProps = Readonly<
 >;
 
 export default function SocialError({
-  icon,
+  icon = <S.ErrorIcon />,
   title,
   message,
   children,
 }: SocialErrorProps) {
   return (
     <S.Container>
-      <S.Icon>{icon ? icon : <S.ErrorIcon />}</S.Icon>
+      <S.Icon>{icon}</S.Icon>
       <S.Title variant="h6" gutterBottom>
         {title}
       </S.Title>

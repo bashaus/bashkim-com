@@ -6,6 +6,7 @@ import { PortfolioPageModelFragment } from "@bashkim-com/prismic-dal";
 import Container from "@mui/material/Container";
 import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
+import { Fragment } from "react";
 
 import Header from "@/components/Header";
 import HeaderActionHome from "@/components/HeaderActionHome";
@@ -54,15 +55,14 @@ export default function PortfolioPageLockup({
       )}
 
       {portfolioCategories?.map((portfolioCategory) => (
-        <>
+        <Fragment key={portfolioCategory.primary?.portfolio_category_slug}>
           <Divider />
           <Group
             id={portfolioCategory.primary?.portfolio_category_slug ?? undefined}
-            key={portfolioCategory.primary?.portfolio_category_slug}
           >
             <PortfolioCategory portfolioCategory={portfolioCategory} />
           </Group>
-        </>
+        </Fragment>
       ))}
     </Page>
   );
