@@ -7,17 +7,17 @@ const animationVariant: Variants = {
     opacity: 1,
     x: 0,
     transition: {
-      delay: 0.2 + i * 0.1,
-      duration: 0.3,
+      delay: 0.1 + i * 0.1,
+      duration: 0.2,
       ease: "easeOut",
     },
   }),
   exit: (i: number) => ({
     opacity: 0,
-    x: 10,
+    x: -10,
     transition: {
       delay: i * 0.1,
-      duration: 0.3,
+      duration: 0.1,
       ease: "easeIn",
     },
   }),
