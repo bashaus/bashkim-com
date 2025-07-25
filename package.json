@@ -41,7 +41,7 @@
     "sass": "^1.85.0",
     "sort-package-json": "^3.0.0",
     "ts-node": "10.9.2",
-    "turbo": "^2.5.4",
+    "turbo": "^2.5.5",
     "typescript": "5.7.3",
     "webpack": "^5.98.0"
   },
