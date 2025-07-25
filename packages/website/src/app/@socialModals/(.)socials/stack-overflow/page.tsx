@@ -24,17 +24,15 @@ export default function SocialsStackOverflowPage() {
   }, []);
 
   return (
-    <>
-      <AnimatePresence mode="wait">
-        {isPending && <SocialStackOverflowLoading key="loading" />}
-        {!isPending && state !== null && (
-          <SocialStackOverflowContent
-            key="content"
-            posts={state.posts}
-            user={state.user}
-          />
-        )}
-      </AnimatePresence>
-    </>
+    <AnimatePresence mode="wait">
+      {isPending && <SocialStackOverflowLoading key="loading" />}
+      {!isPending && state !== null && (
+        <SocialStackOverflowContent
+          key="content"
+          posts={state.posts}
+          user={state.user}
+        />
+      )}
+    </AnimatePresence>
   );
 }
