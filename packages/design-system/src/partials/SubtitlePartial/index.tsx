@@ -18,7 +18,7 @@ export default function SubtitlePartial({
       {isValidElement(title) ? (
         <>{title}</>
       ) : (
-        <Typography variant="h3" component="h2" gutterBottom>
+        <Typography variant="h4" component="h2" gutterBottom>
           {title}
         </Typography>
       )}
