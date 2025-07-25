@@ -31,6 +31,9 @@ const meta = {
     _imageDesktop: { control: "file", name: "imageDesktop" },
     _imageMobile: { control: "file", name: "imageMobile" },
   },
+  parameters: {
+    layout: "fullscreen",
+  },
   render: PageHeaderPartialRenderer,
 } satisfies Meta<PageHeaderPartialRendererProps>;
 

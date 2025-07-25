@@ -22,11 +22,12 @@ export default function PageHeaderPartial({
         display: "flex",
         color: theme.palette.common.white,
 
-        backgroundColor: theme.palette.grey[900],
         minHeight: 400,
+        backgroundColor: theme.palette.grey[900],
+        backgroundPosition: "center center",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
-        backgroundPosition: "center center",
+        clipPath: `polygon(0 0, 100% 0, 100% calc(100% - 40px), 0% 100%)`,
 
         [theme.breakpoints.down("md")]: {
           backgroundImage: imageMobile ? `url("${imageMobile}")` : undefined,

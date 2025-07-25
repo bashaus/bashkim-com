@@ -27,6 +27,7 @@ const MuiTypographyTheme = createTheme({
           props: { variant: "h2" },
           style: {
             ...headingStyle,
+            letterSpacing: -3.5,
           },
         },
         {
@@ -39,19 +40,21 @@ const MuiTypographyTheme = createTheme({
           props: { variant: "h4" },
           style: {
             ...headingStyle,
+            letterSpacing: -1,
           },
         },
         {
           props: { variant: "h5" },
           style: {
             ...headingStyle,
-            letterSpacing: -1,
+            letterSpacing: -1.5,
           },
         },
         {
           props: { variant: "h6" },
           style: {
             ...headingStyle,
+            letterSpacing: -1,
           },
         },
         {

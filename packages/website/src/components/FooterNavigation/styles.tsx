@@ -1,9 +1,6 @@
-import MuiContainer from "@mui/material/Container";
 import Grid, { GridProps } from "@mui/material/Grid";
 import { styled } from "@mui/material/styles";
 import Typography, { TypographyProps } from "@mui/material/Typography";
-
-export const Container = styled(MuiContainer)();
 
 export const Slogan = styled(Typography)(({ theme }) => ({
   paddingTop: theme.spacing(1),

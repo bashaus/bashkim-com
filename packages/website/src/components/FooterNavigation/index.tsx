@@ -1,11 +1,12 @@
 import InlineLogo from "@bashkim-com/design-system/InlineLogo";
+import Container from "@mui/material/Container";
 import Link from "@mui/material/Link";
 
 import * as S from "./styles";
 
 export default function FooterNavigation() {
   return (
-    <S.Container>
+    <Container>
       <InlineLogo aria-label="Bash" width={126} height={36} />
       <S.Slogan>Digital Technologist</S.Slogan>
 
@@ -77,6 +78,6 @@ export default function FooterNavigation() {
           </Link>
         </S.FooterColumn>
       </S.FooterGrid>
-    </S.Container>
+    </Container>
   );
 }

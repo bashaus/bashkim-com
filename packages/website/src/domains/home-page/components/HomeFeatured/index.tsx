@@ -14,7 +14,7 @@ export default function HomeFeatured() {
       <Container>
         <S.Links>
           <S.Link>
-            <Card>
+            <Card variant="outlined">
               <CardContent>
                 <Typography variant="h5" component="h2" gutterBottom>
                   Portfolio
@@ -33,7 +33,7 @@ export default function HomeFeatured() {
           </S.Link>
 
           <S.Link>
-            <Card>
+            <Card variant="outlined">
               <CardContent>
                 <Typography variant="h5" component="h2" gutterBottom>
                   Open source
@@ -66,7 +66,7 @@ export default function HomeFeatured() {
           </S.Link>
 
           <S.Link>
-            <Card>
+            <Card variant="outlined">
               <CardContent>
                 <Typography variant="h5" component="h2" gutterBottom>
                   Let&apos;s connect
