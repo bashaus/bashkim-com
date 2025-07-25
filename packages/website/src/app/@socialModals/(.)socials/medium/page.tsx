@@ -1,11 +1,38 @@
-import { getMediumSocials } from "@bashkim-com/socials";
+"use client";
 
-import SocialMedium from "@/domains/socials-medium/SocialMedium";
+import Divider from "@mui/material/Divider";
+import { AnimatePresence } from "motion/react";
+import { useActionState, useEffect, useTransition } from "react";
 
-export const dynamic = "force-dynamic";
+import SocialMediumContent from "@/domains/socials-medium/SocialMediumContent";
+import SocialMediumHeader from "@/domains/socials-medium/SocialMediumHeader";
+import SocialMediumLoading from "@/domains/socials-medium/SocialMediumLoading";
 
-export default async function SocialModalsSlotMedium() {
-  const { articles } = await getMediumSocials();
+import { animateMediumSocials } from "./action";
 
-  return <SocialMedium articles={articles} />;
+const initialState = null;
+
+export default function SocialsMediumPage() {
+  const [state, runAction] = useActionState(animateMediumSocials, initialState);
+  const [isPending, startTransition] = useTransition();
+
+  useEffect(() => {
+    startTransition(() => {
+      runAction();
+    });
+  }, []);
+
+  return (
+    <>
+      <SocialMediumHeader />
+      <Divider />
+
+      <AnimatePresence mode="wait">
+        {isPending && <SocialMediumLoading key="loading" />}
+        {!isPending && state !== null && (
+          <SocialMediumContent key="content" articles={state?.articles} />
+        )}
+      </AnimatePresence>
+    </>
+  );
 }

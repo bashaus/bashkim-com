@@ -10,7 +10,7 @@ import { ReactNode } from "react";
 
 import GitHubRepo from "@/assets/vectors/icons/github-repo.svg";
 
-export type SocialGitHubPinnedItemButtonProps = Readonly<{
+export type SocialGitHubItemProps = Readonly<{
   name: ReactNode;
   description: ReactNode;
   forkCount?: number;
@@ -19,13 +19,13 @@ export type SocialGitHubPinnedItemButtonProps = Readonly<{
   icon?: ReactNode;
 }>;
 
-export default function SocialGitHubPinnedItemButton({
+export default function SocialGitHubItem({
   icon,
   name,
   description,
   forkCount,
   stargazerCount,
-}: SocialGitHubPinnedItemButtonProps) {
+}: SocialGitHubItemProps) {
   const hasChips = !!forkCount || !!stargazerCount;
 
   return (
@@ -37,14 +37,14 @@ export default function SocialGitHubPinnedItemButton({
           <GitHubRepo
             aria-label="Repository"
             fill="currentColor"
-            width={32}
-            height={32}
+            width={38}
+            height={38}
           />
         )}
       </ListItemIcon>
 
       <ListItemText>
-        <Typography variant="body1" gutterBottom>
+        <Typography variant="body1">
           {name}
           {name === "bashkim-com" && (
             <Chip
@@ -56,7 +56,9 @@ export default function SocialGitHubPinnedItemButton({
           )}
         </Typography>
 
-        <Typography variant="body2">{description}</Typography>
+        <Typography variant="body2" fontSize="small" color="textSecondary">
+          {description}
+        </Typography>
 
         {hasChips && (
           <Stack direction="row" spacing={1} mt={1}>

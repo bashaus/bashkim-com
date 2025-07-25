@@ -16,7 +16,7 @@ export default function SocialGitHubError() {
       <SocialContent>
         <SocialError
           title="Connection error"
-          message="An error occurred while trying to download data from GitHub."
+          message="An error occurred while synchronising data from GitHub."
         >
           <Button
             href="https://github.com/bashaus/"

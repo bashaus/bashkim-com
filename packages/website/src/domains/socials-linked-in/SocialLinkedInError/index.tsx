@@ -16,7 +16,7 @@ export default function SocialLinkedInError() {
       <SocialContent>
         <SocialError
           title="Connection error"
-          message="An error occurred while trying to download data from LinkedIn."
+          message="An error occurred while synchronising data from LinkedIn."
         >
           <Button
             href="https://www.linkedin.com/in/bashaus/"

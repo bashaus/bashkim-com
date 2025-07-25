@@ -7,9 +7,7 @@ const getGitHubData = async () => {
     query: GetPinnedItemsDocument,
     variables: {},
     context: {
-      next: {
-        revalidate: 3600,
-      },
+      next: { revalidate: 3600 },
     },
   });
 

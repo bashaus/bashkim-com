@@ -16,7 +16,7 @@ export default function SocialMediumError() {
       <SocialContent>
         <SocialError
           title="Connection error"
-          message="An error occurred while trying to download data from Medium."
+          message="An error occurred while synchronising data from Medium."
         >
           <Button
             href="https://medium.com/@bashaus"

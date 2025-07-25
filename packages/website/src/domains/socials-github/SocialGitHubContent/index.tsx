@@ -5,38 +5,36 @@ import type {
   GitHubRepositoryFragment,
 } from "@bashkim-com/socials";
 import ReadMoreIcon from "@mui/icons-material/ReadMore";
-import Divider from "@mui/material/Divider";
 import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
 import ListSubheader from "@mui/material/ListSubheader";
 
 import SocialContent from "@/domains/socials/components/SocialContent";
-import SocialGitHubHeader from "@/domains/socials-github/SocialGitHubHeader";
+import SocialMotion from "@/domains/socials/components/SocialMotion";
 import MuiNextLink from "@/libraries/material-ui/link";
 
-import SocialGitHubPinnedItemButton from "../SocialGitHubPinnedItemButton";
+import SocialGitHubItem from "../SocialGitHubItem";
 
-export type SocialGitHubProps = Readonly<{
+export type SocialGitHubContentProps = Readonly<{
   repositoryCount: number;
   pinnedItems: Array<GitHubGistFragment | GitHubRepositoryFragment>;
 }>;
 
-export default function SocialGitHub({
+export default function SocialGitHubContent({
   repositoryCount,
   pinnedItems,
-}: SocialGitHubProps) {
+}: SocialGitHubContentProps) {
+  let i = -1;
+
   return (
-    <>
-      <SocialGitHubHeader />
-      <Divider />
-
-      <SocialContent>
-        <ListSubheader>
+    <SocialContent>
+      <ListSubheader component="div">
+        <SocialMotion custom={++i}>
           Pinned items &mdash; {pinnedItems.length} of {repositoryCount}
-        </ListSubheader>
+        </SocialMotion>
+      </ListSubheader>
 
-        {pinnedItems.map((item) => (
+      {pinnedItems.map((item) => (
+        <SocialMotion key={++i} custom={i}>
           <ListItemButton
             component="a"
             LinkComponent={MuiNextLink}
@@ -45,36 +43,35 @@ export default function SocialGitHub({
             rel="noopener noreferrer"
             key={item.name}
           >
-            <SocialGitHubPinnedItemButton
+            <SocialGitHubItem
               name={item.name}
               description={item.description}
               stargazerCount={item.stargazerCount}
               forkCount={"forkCount" in item ? item.forkCount : undefined}
             />
           </ListItemButton>
-        ))}
+        </SocialMotion>
+      ))}
 
+      <SocialMotion custom={++i}>
         <ListItemButton
           href="https://github.com/bashaus?tab=repositories"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <ListItemIcon>
-            <ReadMoreIcon
-              aria-label="Repository"
-              fill="currentColor"
-              sx={{ width: 32, height: 32 }}
-            />
-          </ListItemIcon>
-
-          <ListItemText
-            primary={
-              <>{repositoryCount - pinnedItems.length} more repositories</>
+          <SocialGitHubItem
+            icon={
+              <ReadMoreIcon
+                aria-label="Repository"
+                fill="currentColor"
+                sx={{ width: 32, height: 32 }}
+              />
             }
-            secondary="Available on GitHub"
+            name={<>{repositoryCount - pinnedItems.length} more repositories</>}
+            description="Available on GitHub"
           />
         </ListItemButton>
-      </SocialContent>
-    </>
+      </SocialMotion>
+    </SocialContent>
   );
 }

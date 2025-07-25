@@ -16,7 +16,7 @@ export default function SocialStackOverflowError() {
       <SocialContent>
         <SocialError
           title="Connection error"
-          message="An error occurred while trying to download data from Stack Overflow."
+          message="An error occurred while synchronising data from Stack Overflow."
         >
           <Button
             href="https://stackoverflow.com/users/600240/bashaus"

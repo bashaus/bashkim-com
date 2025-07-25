@@ -68,9 +68,11 @@ export default function SocialHeader({
         </ListItemAvatar>
 
         <ListItemText primary={textPrimary} secondary={textSecondary} />
-
-        <Box px={2}>
-          <OpenInNewIcon sx={{ width: 18, height: 18 }} color="action" />
+        <Box px={1}>
+          <OpenInNewIcon
+            sx={{ width: 18, height: 18, display: "block" }}
+            color="action"
+          />
         </Box>
       </ListItemButton>
     </Box>

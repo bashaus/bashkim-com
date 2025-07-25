@@ -1,17 +1,40 @@
-import {
-  getStackOverflowPosts,
-  getStackOverflowUser,
-} from "@bashkim-com/socials";
+"use client";
 
-import SocialStackOverflow from "@/domains/socials-stack-overflow/SocialStackOverflow";
+import { AnimatePresence } from "motion/react";
+import { useActionState, useEffect, useTransition } from "react";
 
-export const dynamic = "force-dynamic";
+import SocialStackOverflowContent from "@/domains/socials-stack-overflow/SocialStackOverflowContent";
+import SocialStackOverflowLoading from "@/domains/socials-stack-overflow/SocialStackOverflowLoading";
 
-export default async function SocialModalsSlotStackOverflow() {
-  const [user, posts] = await Promise.all([
-    getStackOverflowUser(),
-    getStackOverflowPosts(),
-  ]);
+import { animateStackOverflowSocials } from "./action";
 
-  return <SocialStackOverflow user={user} posts={posts} />;
+const initialState = null;
+
+export default function SocialsStackOverflowPage() {
+  const [state, runAction] = useActionState(
+    animateStackOverflowSocials,
+    initialState,
+  );
+  const [isPending, startTransition] = useTransition();
+
+  useEffect(() => {
+    startTransition(() => {
+      runAction();
+    });
+  }, []);
+
+  return (
+    <>
+      <AnimatePresence mode="wait">
+        {isPending && <SocialStackOverflowLoading key="loading" />}
+        {!isPending && state !== null && (
+          <SocialStackOverflowContent
+            key="content"
+            posts={state.posts}
+            user={state.user}
+          />
+        )}
+      </AnimatePresence>
+    </>
+  );
 }

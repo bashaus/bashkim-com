@@ -1,32 +1,32 @@
-import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
 import ListSubheader from "@mui/material/ListSubheader";
 import Skeleton from "@mui/material/Skeleton";
 
 import SocialContent from "@/domains/socials/components/SocialContent";
-import SocialGitHubHeader from "@/domains/socials-github/SocialGitHubHeader";
+import SocialMotion from "@/domains/socials/components/SocialMotion";
 
-import SocialGitHubPinnedItemButton from "../SocialGitHubPinnedItemButton";
+import SocialGitHubItem from "../SocialGitHubItem";
 
 export default function SocialGitHubLoading() {
+  let i = 0;
+
   return (
-    <>
-      <SocialGitHubHeader />
-      <Divider />
+    <SocialContent>
+      <ListSubheader component="div">
+        <SocialMotion custom={++i}>Synchronising</SocialMotion>
+      </ListSubheader>
 
-      <SocialContent>
-        <ListSubheader>Synchronising</ListSubheader>
-
-        {[...new Array(3)].keys().map((i) => (
-          <ListItem key={i}>
-            <SocialGitHubPinnedItemButton
+      {[...new Array(5).keys()].map(() => (
+        <SocialMotion key={++i} custom={i}>
+          <ListItem>
+            <SocialGitHubItem
               name={<Skeleton />}
               description={<Skeleton />}
               icon={<Skeleton variant="rounded" width={32} height={32} />}
             />
           </ListItem>
-        ))}
-      </SocialContent>
-    </>
+        </SocialMotion>
+      ))}
+    </SocialContent>
   );
 }

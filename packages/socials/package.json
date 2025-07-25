@@ -19,6 +19,7 @@
     "@apollo-link-debug/handle-errors": "^0.0.5",
     "@apollo-link-debug/handle-request": "^0.0.5",
     "@apollo/client": "^3.11.8",
+    "cheerio": "^1.1.2",
     "fast-xml-parser": "^4.5.1"
   },
   "devDependencies": {
