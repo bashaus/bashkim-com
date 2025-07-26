@@ -30,7 +30,7 @@ export default function SocialsMediumPage() {
       <AnimatePresence mode="wait">
         {isPending && <SocialMediumLoading key="loading" />}
         {!isPending && state !== null && (
-          <SocialMediumContent key="content" articles={state?.articles} />
+          <SocialMediumContent key="content" series={state?.series} />
         )}
       </AnimatePresence>
     </>

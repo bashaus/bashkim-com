@@ -2,7 +2,8 @@ export type MediumArticle = {
   title: string;
   subtitle: string;
   url: string;
-  image: string;
+  imageSrc: string;
+  imageAlt: string;
   pubDate: Date;
   multipart?: {
     part: string;
@@ -11,5 +12,5 @@ export type MediumArticle = {
 };
 
 export type GetMediumSocialsResponse = {
-  articles: Array<MediumArticle>;
+  series: Record<string, Array<MediumArticle>>;
 };

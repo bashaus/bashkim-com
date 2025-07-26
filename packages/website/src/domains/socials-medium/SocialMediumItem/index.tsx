@@ -21,7 +21,12 @@ export default function SocialMediumItem({
     <Grid container spacing={2} width="100%">
       <Grid size={8}>
         <ListItemText>
-          <Typography variant="body2" fontSize="small" color="textSecondary">
+          <Typography
+            variant="body2"
+            fontSize="small"
+            color="textSecondary"
+            gutterBottom
+          >
             {pubDate}
           </Typography>
           <Typography variant="body1">{title}</Typography>
