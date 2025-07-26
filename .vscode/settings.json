@@ -6,7 +6,6 @@
   "editor.formatOnPaste": false,
   "editor.formatOnSave": true,
   "editor.rulers": [80],
-  "svg.preview.background": "white",
   "typescript.tsdk": "./node_modules/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "files.associations": {
@@ -16,9 +15,6 @@
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[mdx]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescript]": {
