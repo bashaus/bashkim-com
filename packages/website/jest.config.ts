@@ -26,10 +26,7 @@ const config: Config = {
     "\\.svg$": "<rootDir>/../../.jest/transform/svg.ts",
   },
   moduleFileExtensions: ["ts", "tsx", "js", "jsx"],
-  setupFilesAfterEnv: [
-    "<rootDir>/../../.jest/setup/testing-library.jsdom.ts",
-    "<rootDir>/../../.jest/setup/window.matchMedia.ts",
-  ],
+  setupFilesAfterEnv: ["<rootDir>/../../.jest/setup/testing-library.jsdom.ts"],
 
   /* Coverage */
   coveragePathIgnorePatterns: [".next/"],
