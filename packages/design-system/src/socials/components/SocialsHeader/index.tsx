@@ -5,10 +5,7 @@ import Box from "@mui/material/Box";
 import ListItemAvatar from "@mui/material/ListItemAvatar";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
-import Image from "next/image";
 import type { ReactNode } from "react";
-
-import profilePhoto from "../../../brand/ProfilePhoto/photo@4x.jpg";
 
 export type SocialsHeaderProps = Readonly<{
   avatarBadge: ReactNode;
@@ -22,14 +19,7 @@ export type SocialsHeaderProps = Readonly<{
 export default function SocialsHeader({
   avatarBadge,
   avatarBadgeBackground,
-  avatarImage = (
-    <Image
-      src={profilePhoto.src}
-      alt="Bashkim Isai"
-      width={profilePhoto.width}
-      height={profilePhoto.height}
-    />
-  ),
+  avatarImage,
   href,
   textPrimary,
   textSecondary,

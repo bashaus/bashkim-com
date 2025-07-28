@@ -1,6 +1,9 @@
 import { StackOverflowFilledVector } from "@bashkim-com/design-system/SocialsAssets";
 import SocialsHeader from "@bashkim-com/design-system/SocialsHeader";
 import Stack from "@mui/material/Stack";
+import Image from "next/image";
+
+import profilePhoto from "@/assets/photo@4x.jpg";
 
 import * as S from "./styles";
 
@@ -22,6 +25,7 @@ export default function SocialStackOverflowHeaderConnected({
       href="https://stackoverflow.com/users/600240/bashaus"
       avatarBadgeBackground="#FFF"
       avatarBadge={<StackOverflowFilledVector width={20} height={20} />}
+      avatarImage={<Image {...profilePhoto} alt="Photo of Bashkim Isai" />}
       textPrimary="Bashkim Isai"
       textSecondary={
         <Stack direction="row" spacing={2} component="span">

@@ -1,7 +1,7 @@
 import PageHeaderPartial from "@bashkim-com/design-system/PageHeaderPartial";
-import profilePhoto from "@bashkim-com/design-system/ProfilePhoto";
 import Typography from "@mui/material/Typography";
 
+import profilePhoto from "@/assets/photo@4x.jpg";
 import headerDesktopImage from "@/domains/about-page/assets/header-desktop.jpg";
 
 import * as S from "./styles";

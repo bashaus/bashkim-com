@@ -4,7 +4,6 @@
   "exports": {
     ".": "./src/index.ts",
     "./InlineLogo": "./src/brand/InlineLogo/index.tsx",
-    "./ProfilePhoto": "./src/brand/ProfilePhoto/photo@4x.jpg",
     "./MenuStrapline": "./src/brand/MenuStrapline/index.tsx",
     "./Backdrop": "./src/components/Backdrop/index.tsx",
     "./Carousel": "./src/components/Carousel/index.tsx",
