@@ -19,10 +19,14 @@ export const Fixture = {
   args: {
     href: "#",
     avatarBadge: (
-      <img src={placeholderImage({ width: 16, height: 16, text: "X" })} />
+      <img
+        alt=""
+        src={placeholderImage({ width: 16, height: 16, text: "X" })}
+      />
     ),
     avatarImage: (
       <img
+        alt=""
         src={placeholderImage({ width: 300, height: 300, text: "avatar" })}
       />
     ),
