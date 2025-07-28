@@ -1,9 +1,8 @@
+import SocialsContent from "@bashkim-com/design-system/SocialsContent";
+import SocialsError from "@bashkim-com/design-system/SocialsError";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import Button from "@mui/material/Button";
 import Divider from "@mui/material/Divider";
-
-import SocialContent from "@/domains/socials/components/SocialContent";
-import SocialError from "@/domains/socials/components/SocialError";
 
 import SocialGitHubHeader from "../SocialGitHubHeader";
 
@@ -13,8 +12,8 @@ export default function SocialGitHubError() {
       <SocialGitHubHeader />
       <Divider />
 
-      <SocialContent>
-        <SocialError
+      <SocialsContent>
+        <SocialsError
           title="Connection error"
           message="An error occurred while synchronising data from GitHub."
         >
@@ -25,8 +24,8 @@ export default function SocialGitHubError() {
           >
             Go to GitHub
           </Button>
-        </SocialError>
-      </SocialContent>
+        </SocialsError>
+      </SocialsContent>
     </>
   );
 }

@@ -4,6 +4,7 @@
   "exports": {
     ".": "./src/index.ts",
     "./InlineLogo": "./src/brand/InlineLogo/index.tsx",
+    "./ProfilePhoto": "./src/brand/ProfilePhoto/photo@4x.jpg",
     "./MenuStrapline": "./src/brand/MenuStrapline/index.tsx",
     "./Backdrop": "./src/components/Backdrop/index.tsx",
     "./Carousel": "./src/components/Carousel/index.tsx",
@@ -51,7 +52,12 @@
     "./GridEmbedSlice": "./src/slices/GridEmbedSlice/index.tsx",
     "./GridVideoSlice": "./src/slices/GridVideoSlice/index.tsx",
     "./NewspaperSlice": "./src/slices/NewspaperSlice/index.tsx",
-    "./SubtitleSlice": "./src/slices/SubtitleSlice/index.tsx"
+    "./SubtitleSlice": "./src/slices/SubtitleSlice/index.tsx",
+    "./SocialsAssets": "./src/socials/assets/index.tsx",
+    "./SocialsContent": "./src/socials/components/SocialsContent/index.tsx",
+    "./SocialsError": "./src/socials/components/SocialsError/index.tsx",
+    "./SocialsHeader": "./src/socials/components/SocialsHeader/index.tsx",
+    "./SocialsMotion": "./src/socials/components/SocialsMotion/index.tsx"
   },
   "main": "./src/index.ts",
   "scripts": {

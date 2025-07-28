@@ -1,6 +1,8 @@
 "use client";
 
 import DateFormatter from "@bashkim-com/design-system/DateFormatter";
+import SocialsContent from "@bashkim-com/design-system/SocialsContent";
+import SocialsMotion from "@bashkim-com/design-system/SocialsMotion";
 import { GetMediumSocialsResponse } from "@bashkim-com/socials";
 import ReadMoreIcon from "@mui/icons-material/ReadMore";
 import ListItemButton from "@mui/material/ListItemButton";
@@ -9,9 +11,6 @@ import ListItemText from "@mui/material/ListItemText";
 import ListSubheader from "@mui/material/ListSubheader";
 import Typography from "@mui/material/Typography";
 import { Fragment } from "react";
-
-import SocialContent from "@/domains/socials/components/SocialContent";
-import SocialMotion from "@/domains/socials/components/SocialMotion";
 
 import SocialMediumItem from "../SocialMediumItem";
 
@@ -27,17 +26,17 @@ export default function SocialMediumContent({
   const entries = Object.entries(series);
 
   return (
-    <SocialContent>
+    <SocialsContent>
       {entries.map(([group, articles]) => (
         <Fragment key={group}>
           {articles.length > 1 && (
             <ListSubheader component="div">
-              <SocialMotion custom={++i}>Multipart series</SocialMotion>
+              <SocialsMotion custom={++i}>Multipart series</SocialsMotion>
             </ListSubheader>
           )}
 
           {articles.map((article) => (
-            <SocialMotion key={article.title} custom={++i}>
+            <SocialsMotion key={article.title} custom={++i}>
               <ListItemButton
                 href={article.url}
                 target="_blank"
@@ -56,12 +55,12 @@ export default function SocialMediumContent({
                   pubDate={<DateFormatter date={article.pubDate} />}
                 />
               </ListItemButton>
-            </SocialMotion>
+            </SocialsMotion>
           ))}
         </Fragment>
       ))}
 
-      <SocialMotion custom={++i}>
+      <SocialsMotion custom={++i}>
         <ListItemButton
           href="https://github.com/bashaus?tab=repositories"
           target="_blank"
@@ -86,7 +85,7 @@ export default function SocialMediumContent({
             </Typography>
           </ListItemText>
         </ListItemButton>
-      </SocialMotion>
-    </SocialContent>
+      </SocialsMotion>
+    </SocialsContent>
   );
 }

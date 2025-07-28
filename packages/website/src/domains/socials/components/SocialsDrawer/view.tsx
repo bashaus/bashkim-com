@@ -5,18 +5,18 @@ import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
 import { PropsWithChildren } from "react";
 
-import { useSocialDrawerViewModel } from "./view-model";
+import { useSocialsDrawerViewModel } from "./view-model";
 
-export type SocialDrawerViewProps = Readonly<
+export type SocialsDrawerViewProps = Readonly<
   PropsWithChildren<{
-    viewModel: ReturnType<typeof useSocialDrawerViewModel>;
+    viewModel: ReturnType<typeof useSocialsDrawerViewModel>;
   }>
 >;
 
-export default function SocialDrawerView({
+export default function SocialsDrawerView({
   children,
   viewModel,
-}: SocialDrawerViewProps) {
+}: SocialsDrawerViewProps) {
   const { open, handleClose, handleExited } = viewModel;
   return (
     <Drawer

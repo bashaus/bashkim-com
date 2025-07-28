@@ -1,7 +1,7 @@
 import PageHeaderPartial from "@bashkim-com/design-system/PageHeaderPartial";
+import profilePhoto from "@bashkim-com/design-system/ProfilePhoto";
 import Typography from "@mui/material/Typography";
 
-import photoImage from "@/assets/images/photo/photo@4x.jpg";
 import headerDesktopImage from "@/domains/about-page/assets/header-desktop.jpg";
 
 import * as S from "./styles";
@@ -14,9 +14,9 @@ export default function AboutPageHeader() {
     >
       <S.AboutPageHeader>
         <S.HeaderImage
-          src={photoImage.src}
-          width={photoImage.width}
-          height={photoImage.height}
+          src={profilePhoto.src}
+          width={profilePhoto.width}
+          height={profilePhoto.height}
           alt="Photo of Bashkim Isai"
         />
         <Typography variant="h2" component="h1">

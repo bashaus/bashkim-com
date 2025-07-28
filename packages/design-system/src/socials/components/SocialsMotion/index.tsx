@@ -23,13 +23,16 @@ const animationVariant: Variants = {
   }),
 };
 
-export type SocialMotionProps = Readonly<
+export type SocialsMotionProps = Readonly<
   PropsWithChildren<{
     custom: number;
   }>
 >;
 
-export default function SocialMotion({ custom, children }: SocialMotionProps) {
+export default function SocialsMotion({
+  custom,
+  children,
+}: SocialsMotionProps) {
   return (
     <motion.div
       custom={custom}

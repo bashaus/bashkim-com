@@ -1,9 +1,9 @@
-import StackOverflowFilledVector from "@/assets/vectors/social/stack-overflow-filled.svg";
-import SocialHeader from "@/domains/socials/components/SocialHeader";
+import { StackOverflowFilledVector } from "@bashkim-com/design-system/SocialsAssets";
+import SocialsHeader from "@bashkim-com/design-system/SocialsHeader";
 
 export default function SocialStackOverflowHeaderDisconnected() {
   return (
-    <SocialHeader
+    <SocialsHeader
       href="https://stackoverflow.com/users/600240/bashaus"
       avatarBadgeBackground="#FFF"
       avatarBadge={<StackOverflowFilledVector width={20} height={20} />}

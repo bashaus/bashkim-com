@@ -1,9 +1,8 @@
+import SocialsContent from "@bashkim-com/design-system/SocialsContent";
+import SocialsMotion from "@bashkim-com/design-system/SocialsMotion";
 import ListItem from "@mui/material/ListItem";
 import ListSubheader from "@mui/material/ListSubheader";
 import Skeleton from "@mui/material/Skeleton";
-
-import SocialContent from "@/domains/socials/components/SocialContent";
-import SocialMotion from "@/domains/socials/components/SocialMotion";
 
 import SocialMediumItem from "../SocialMediumItem";
 
@@ -11,13 +10,13 @@ export default function SocialMediumLoading() {
   let i = -1;
 
   return (
-    <SocialContent>
+    <SocialsContent>
       <ListSubheader component="div">
-        <SocialMotion custom={++i}>Synchronising</SocialMotion>
+        <SocialsMotion custom={++i}>Synchronising</SocialsMotion>
       </ListSubheader>
 
       {[...new Array(5).keys()].map(() => (
-        <SocialMotion key={++i} custom={i}>
+        <SocialsMotion key={++i} custom={i}>
           <ListItem component="div">
             <SocialMediumItem
               title={
@@ -39,8 +38,8 @@ export default function SocialMediumLoading() {
               pubDate={<Skeleton sx={{ maxWidth: 100 }} />}
             />
           </ListItem>
-        </SocialMotion>
+        </SocialsMotion>
       ))}
-    </SocialContent>
+    </SocialsContent>
   );
 }

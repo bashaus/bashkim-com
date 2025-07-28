@@ -1,12 +1,11 @@
 "use client";
 
+import SocialsContent from "@bashkim-com/design-system/SocialsContent";
+import SocialsMotion from "@bashkim-com/design-system/SocialsMotion";
 import { StackOverflowPost, StackOverflowUser } from "@bashkim-com/socials";
 import Divider from "@mui/material/Divider";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListSubheader from "@mui/material/ListSubheader";
-
-import SocialContent from "@/domains/socials/components/SocialContent";
-import SocialMotion from "@/domains/socials/components/SocialMotion";
 
 import SocialStackOverflowHeaderConnected from "../SocialStackOverflowHeaderConnected";
 import SocialStackOverflowItem from "../SocialStackOverflowItem";
@@ -24,24 +23,24 @@ export default function SocialStackOverflowContent({
 
   return (
     <>
-      <SocialMotion custom={++i}>
+      <SocialsMotion custom={++i}>
         <SocialStackOverflowHeaderConnected
           reputation={user.reputation}
           goldBadgeCount={user.badgeCounts?.gold}
           silverBadgeCount={user.badgeCounts?.silver}
           bronzeBadgeCount={user.badgeCounts?.bronze}
         />
-      </SocialMotion>
+      </SocialsMotion>
 
       <Divider />
 
-      <SocialContent>
+      <SocialsContent>
         <ListSubheader component="div">
-          <SocialMotion custom={++i}>Top posts</SocialMotion>
+          <SocialsMotion custom={++i}>Top posts</SocialsMotion>
         </ListSubheader>
 
         {posts.map((post) => (
-          <SocialMotion custom={++i} key={post.id}>
+          <SocialsMotion custom={++i} key={post.id}>
             <ListItemButton
               component="a"
               href={post.link}
@@ -58,9 +57,9 @@ export default function SocialStackOverflowContent({
                 }
               />
             </ListItemButton>
-          </SocialMotion>
+          </SocialsMotion>
         ))}
-      </SocialContent>
+      </SocialsContent>
     </>
   );
 }

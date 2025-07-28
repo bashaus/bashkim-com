@@ -1,3 +1,4 @@
+import { GitHubRepoVector } from "@bashkim-com/design-system/SocialsAssets";
 import ForkRightIcon from "@mui/icons-material/ForkRight";
 import StarOutlineIcon from "@mui/icons-material/StarOutline";
 import Chip from "@mui/material/Chip";
@@ -7,8 +8,6 @@ import Stack from "@mui/material/Stack";
 import Tooltip from "@mui/material/Tooltip";
 import Typography from "@mui/material/Typography";
 import { ReactNode } from "react";
-
-import GitHubRepo from "@/assets/vectors/icons/github-repo.svg";
 
 export type SocialGitHubItemProps = Readonly<{
   name: ReactNode;
@@ -21,7 +20,7 @@ export type SocialGitHubItemProps = Readonly<{
 
 export default function SocialGitHubItem({
   icon = (
-    <GitHubRepo
+    <GitHubRepoVector
       aria-label="Repository"
       fill="currentColor"
       width={38}

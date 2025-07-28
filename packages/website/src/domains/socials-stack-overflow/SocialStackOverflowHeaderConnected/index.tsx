@@ -1,7 +1,6 @@
+import { StackOverflowFilledVector } from "@bashkim-com/design-system/SocialsAssets";
+import SocialsHeader from "@bashkim-com/design-system/SocialsHeader";
 import Stack from "@mui/material/Stack";
-
-import StackOverflowFilledVector from "@/assets/vectors/social/stack-overflow-filled.svg";
-import SocialHeader from "@/domains/socials/components/SocialHeader";
 
 import * as S from "./styles";
 
@@ -19,7 +18,7 @@ export default function SocialStackOverflowHeaderConnected({
   bronzeBadgeCount,
 }: SocialStackOverflowHeaderConnectedProps) {
   return (
-    <SocialHeader
+    <SocialsHeader
       href="https://stackoverflow.com/users/600240/bashaus"
       avatarBadgeBackground="#FFF"
       avatarBadge={<StackOverflowFilledVector width={20} height={20} />}

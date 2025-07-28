@@ -1,12 +1,11 @@
 "use client";
 
+import SocialsContent from "@bashkim-com/design-system/SocialsContent";
+import SocialsMotion from "@bashkim-com/design-system/SocialsMotion";
 import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
 import ListSubheader from "@mui/material/ListSubheader";
 import Skeleton from "@mui/material/Skeleton";
-
-import SocialContent from "@/domains/socials/components/SocialContent";
-import SocialMotion from "@/domains/socials/components/SocialMotion";
 
 import SocialStackOverflowHeaderDisconnected from "../SocialStackOverflowHeaderDisconnected";
 import SocialStackOverflowItem from "../SocialStackOverflowItem";
@@ -15,18 +14,18 @@ export default function SocialStackOverflowLoading() {
   let i = -1;
   return (
     <>
-      <SocialMotion custom={++i}>
+      <SocialsMotion custom={++i}>
         <SocialStackOverflowHeaderDisconnected />
-      </SocialMotion>
+      </SocialsMotion>
       <Divider />
 
-      <SocialContent>
+      <SocialsContent>
         <ListSubheader component="div">
-          <SocialMotion custom={++i}>Synchronising</SocialMotion>
+          <SocialsMotion custom={++i}>Synchronising</SocialsMotion>
         </ListSubheader>
 
         {[...new Array(5).keys()].map(() => (
-          <SocialMotion key={++i} custom={i}>
+          <SocialsMotion key={++i} custom={i}>
             <ListItem>
               <SocialStackOverflowItem
                 score={undefined}
@@ -39,9 +38,9 @@ export default function SocialStackOverflowLoading() {
                 type={<Skeleton sx={{ maxWidth: 100 }} />}
               />
             </ListItem>
-          </SocialMotion>
+          </SocialsMotion>
         ))}
-      </SocialContent>
+      </SocialsContent>
     </>
   );
 }

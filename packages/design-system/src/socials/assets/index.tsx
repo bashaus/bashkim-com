@@ -1,0 +1,9 @@
+export { default as GitHubVector } from "./github.svg";
+export { default as GitHubRepoVector } from "./github-repo.svg";
+export { default as LinkedInVector } from "./linked-in.svg";
+export { default as LinkedInOutlinedVector } from "./linked-in-outlined.svg";
+export { default as MediumVector } from "./medium.svg";
+export { default as MediumClapVector } from "./medium-clap.svg";
+export { default as PrismicVector } from "./prismic.svg";
+export { default as StackOverflowVector } from "./stack-overflow.svg";
+export { default as StackOverflowFilledVector } from "./stack-overflow-filled.svg";

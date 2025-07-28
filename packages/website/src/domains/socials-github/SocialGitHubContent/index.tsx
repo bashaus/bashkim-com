@@ -1,5 +1,7 @@
 "use client";
 
+import SocialsContent from "@bashkim-com/design-system/SocialsContent";
+import SocialsMotion from "@bashkim-com/design-system/SocialsMotion";
 import type {
   GitHubGistFragment,
   GitHubRepositoryFragment,
@@ -8,8 +10,6 @@ import ReadMoreIcon from "@mui/icons-material/ReadMore";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListSubheader from "@mui/material/ListSubheader";
 
-import SocialContent from "@/domains/socials/components/SocialContent";
-import SocialMotion from "@/domains/socials/components/SocialMotion";
 import MuiNextLink from "@/libraries/material-ui/link";
 
 import SocialGitHubItem from "../SocialGitHubItem";
@@ -26,15 +26,15 @@ export default function SocialGitHubContent({
   let i = -1;
 
   return (
-    <SocialContent>
+    <SocialsContent>
       <ListSubheader component="div">
-        <SocialMotion custom={++i}>
+        <SocialsMotion custom={++i}>
           Pinned items &mdash; {pinnedItems.length} of {repositoryCount}
-        </SocialMotion>
+        </SocialsMotion>
       </ListSubheader>
 
       {pinnedItems.map((item) => (
-        <SocialMotion key={++i} custom={i}>
+        <SocialsMotion key={++i} custom={i}>
           <ListItemButton
             component="a"
             LinkComponent={MuiNextLink}
@@ -50,10 +50,10 @@ export default function SocialGitHubContent({
               forkCount={"forkCount" in item ? item.forkCount : undefined}
             />
           </ListItemButton>
-        </SocialMotion>
+        </SocialsMotion>
       ))}
 
-      <SocialMotion custom={++i}>
+      <SocialsMotion custom={++i}>
         <ListItemButton
           href="https://github.com/bashaus?tab=repositories"
           target="_blank"
@@ -71,7 +71,7 @@ export default function SocialGitHubContent({
             description="Available on GitHub"
           />
         </ListItemButton>
-      </SocialMotion>
-    </SocialContent>
+      </SocialsMotion>
+    </SocialsContent>
   );
 }

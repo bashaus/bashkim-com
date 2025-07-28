@@ -2,7 +2,7 @@ import { PropsWithChildren, ReactNode } from "react";
 
 import * as S from "./styles";
 
-export type SocialErrorProps = Readonly<
+export type SocialsErrorProps = Readonly<
   PropsWithChildren<{
     title?: ReactNode;
     message?: ReactNode;
@@ -10,12 +10,12 @@ export type SocialErrorProps = Readonly<
   }>
 >;
 
-export default function SocialError({
+export default function SocialsError({
   icon = <S.ErrorIcon />,
   title,
   message,
   children,
-}: SocialErrorProps) {
+}: SocialsErrorProps) {
   return (
     <S.Container>
       <S.Icon>{icon}</S.Icon>

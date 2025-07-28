@@ -1,11 +1,11 @@
 "use client";
 
-import GitHubVector from "@/assets/vectors/social/github.svg";
-import SocialHeader from "@/domains/socials/components/SocialHeader";
+import { GitHubVector } from "@bashkim-com/design-system/SocialsAssets";
+import SocialsHeader from "@bashkim-com/design-system/SocialsHeader";
 
 export default function SocialGitHubHeader() {
   return (
-    <SocialHeader
+    <SocialsHeader
       href="https://github.com/bashaus/"
       avatarBadgeBackground="#333"
       avatarBadge={<GitHubVector width={15} height={15} color="#FFFFFF" />}

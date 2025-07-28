@@ -1,11 +1,11 @@
 "use client";
 
-import MediumVector from "@/assets/vectors/social/medium.svg";
-import SocialHeader from "@/domains/socials/components/SocialHeader";
+import { MediumVector } from "@bashkim-com/design-system/SocialsAssets";
+import SocialsHeader from "@bashkim-com/design-system/SocialsHeader";
 
 export default function SocialMediumHeader() {
   return (
-    <SocialHeader
+    <SocialsHeader
       href="https://medium.com/@bashaus"
       avatarBadgeBackground="#000"
       avatarBadge={<MediumVector width={10} height={10} color="#FFFFFF" />}

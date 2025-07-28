@@ -2,48 +2,41 @@ import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import Avatar from "@mui/material/Avatar";
 import Badge from "@mui/material/Badge";
 import Box from "@mui/material/Box";
-import type { LinkProps } from "@mui/material/Link";
 import ListItemAvatar from "@mui/material/ListItemAvatar";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import Image from "next/image";
 import type { ReactNode } from "react";
 
-import photoImage from "@/assets/images/photo/photo@4x.jpg";
-import MuiNextLink from "@/libraries/material-ui/link";
+import profilePhoto from "../../../brand/ProfilePhoto/photo@4x.jpg";
 
-export type SocialHeaderProps = Readonly<{
+export type SocialsHeaderProps = Readonly<{
   avatarBadge: ReactNode;
   avatarBadgeBackground: string;
   avatarImage?: ReactNode;
-  href: LinkProps["href"];
+  href: string;
   textPrimary: ReactNode;
   textSecondary: ReactNode;
 }>;
 
-export default function SocialHeader({
+export default function SocialsHeader({
   avatarBadge,
   avatarBadgeBackground,
   avatarImage = (
     <Image
-      src={photoImage.src}
+      src={profilePhoto.src}
       alt="Bashkim Isai"
-      width={photoImage.width}
-      height={photoImage.height}
+      width={profilePhoto.width}
+      height={profilePhoto.height}
     />
   ),
   href,
   textPrimary,
   textSecondary,
-}: SocialHeaderProps) {
+}: SocialsHeaderProps) {
   return (
     <Box>
-      <ListItemButton
-        component="a"
-        LinkComponent={MuiNextLink}
-        href={href}
-        target="_blank"
-      >
+      <ListItemButton href={href} target="_blank" rel="noopener noreferrer">
         <ListItemAvatar>
           <Badge
             overlap="circular"
@@ -68,7 +61,8 @@ export default function SocialHeader({
         </ListItemAvatar>
 
         <ListItemText primary={textPrimary} secondary={textSecondary} />
-        <Box px={1}>
+
+        <Box px={2}>
           <OpenInNewIcon
             sx={{ width: 18, height: 18, display: "block" }}
             color="action"

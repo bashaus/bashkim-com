@@ -1,9 +1,8 @@
+import SocialsContent from "@bashkim-com/design-system/SocialsContent";
+import SocialsError from "@bashkim-com/design-system/SocialsError";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import Button from "@mui/material/Button";
 import Divider from "@mui/material/Divider";
-
-import SocialContent from "@/domains/socials/components/SocialContent";
-import SocialError from "@/domains/socials/components/SocialError";
 
 import SocialLinkedInHeader from "../SocialLinkedInHeader";
 
@@ -13,8 +12,8 @@ export default function SocialLinkedInError() {
       <SocialLinkedInHeader />
       <Divider />
 
-      <SocialContent>
-        <SocialError
+      <SocialsContent>
+        <SocialsError
           title="Connection error"
           message="An error occurred while synchronising data from LinkedIn."
         >
@@ -25,8 +24,8 @@ export default function SocialLinkedInError() {
           >
             Go to Linked In
           </Button>
-        </SocialError>
-      </SocialContent>
+        </SocialsError>
+      </SocialsContent>
     </>
   );
 }

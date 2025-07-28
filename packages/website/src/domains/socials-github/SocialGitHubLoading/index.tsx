@@ -1,9 +1,8 @@
+import SocialsContent from "@bashkim-com/design-system/SocialsContent";
+import SocialsMotion from "@bashkim-com/design-system/SocialsMotion";
 import ListItem from "@mui/material/ListItem";
 import ListSubheader from "@mui/material/ListSubheader";
 import Skeleton from "@mui/material/Skeleton";
-
-import SocialContent from "@/domains/socials/components/SocialContent";
-import SocialMotion from "@/domains/socials/components/SocialMotion";
 
 import SocialGitHubItem from "../SocialGitHubItem";
 
@@ -11,13 +10,13 @@ export default function SocialGitHubLoading() {
   let i = 0;
 
   return (
-    <SocialContent>
+    <SocialsContent>
       <ListSubheader component="div">
-        <SocialMotion custom={++i}>Synchronising</SocialMotion>
+        <SocialsMotion custom={++i}>Synchronising</SocialsMotion>
       </ListSubheader>
 
       {[...new Array(5).keys()].map(() => (
-        <SocialMotion key={++i} custom={i}>
+        <SocialsMotion key={++i} custom={i}>
           <ListItem>
             <SocialGitHubItem
               name={<Skeleton />}
@@ -25,8 +24,8 @@ export default function SocialGitHubLoading() {
               icon={<Skeleton variant="rounded" width={32} height={32} />}
             />
           </ListItem>
-        </SocialMotion>
+        </SocialsMotion>
       ))}
-    </SocialContent>
+    </SocialsContent>
   );
 }
