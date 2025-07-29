@@ -1,4 +1,6 @@
-/* https://github.com/brandonmcconnell/typed.css/pull/22/files */
+/**
+ * @see https://github.com/brandonmcconnell/typed.css/pull/22/files
+ */
 
 @use "sass:meta";
 @use "sass:list";
@@ -81,13 +83,6 @@ $__typed-pauses-chars: (
   @return $all-keys;
 }
 @mixin __typed-write-to-content($string, $alt-text, $prefix: "") {
-  // @supports (content: "x" / "y") {
-  // 	content: $string / "#{$alt-text}";
-  // }
-  // @supports not (content: "x" / "y") {
-  // 	content: $string;
-  // 	alt: "#{$alt-text}";
-  // }
   content: "​#{__typed-sanitize-pause-chars($prefix)}#{__typed-sanitize-pause-chars($string)}";
   content: "​#{__typed-sanitize-pause-chars($prefix)}#{__typed-sanitize-pause-chars($string)}" /
     "#{__typed-sanitize-pause-chars($alt-text)}";
@@ -105,7 +100,6 @@ $__typed-pauses-chars: (
       }
       @if list.length($addtl-styles) > 0 {
         @each $style-group in $addtl-styles {
-          // @error "#{$style-group}";
           $styles: map.merge($styles, $style-group);
         }
       }
@@ -116,7 +110,7 @@ $__typed-pauses-chars: (
           map.get($styles, $prop)
         );
         #{$prop}: if(
-          meta.type-of($value) == list,
+          type-of($value) == list,
           list.append($value, null, auto),
           $value
         );
@@ -126,7 +120,7 @@ $__typed-pauses-chars: (
     @if list.length(map.keys($styles)) > 0 {
       @each $prop, $value in $styles {
         #{$prop}: if(
-          meta.type-of($value) == list,
+          type-of($value) == list,
           list.append($value, null, auto),
           $value
         );
@@ -458,7 +452,7 @@ $__typed-id: 0;
             @if $value !=
               infinite and
               (
-                meta.type-of($value) ==
+                type-of($value) ==
                   number and
                   ($value < 0 or $value != round($value))
               )
