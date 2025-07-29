@@ -1065,13 +1065,6 @@
   dependencies:
     regenerator-runtime "^0.14.0"
 
-"@babel/runtime@^7.26.10":
-  version "7.27.0"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.27.0.tgz#fbee7cf97c709518ecc1f590984481d5460d4762"
-  integrity sha512-VtPOkrdPHZsKc/clNqyi9WUA8TINkZ4cGk63UUE3u4pmB2k+ZMQRDuIOagv8UVd6j7k0T3+RRIb7beKTebNbcw==
-  dependencies:
-    regenerator-runtime "^0.14.0"
-
 "@babel/runtime@^7.27.6":
   version "7.27.6"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.27.6.tgz#ec4070a04d76bae8ddbb10770ba55714a417b7c6"
@@ -2566,13 +2559,6 @@
   resolved "https://registry.yarnpkg.com/@mui/core-downloads-tracker/-/core-downloads-tracker-7.2.0.tgz#af74715885a7686cbf50806ad36691e710b10dbc"
   integrity sha512-d49s7kEgI5iX40xb2YPazANvo7Bx0BLg/MNRwv+7BVpZUzXj1DaVCKlQTDex3gy/0jsCb4w7AY2uH4t4AJvSog==
 
-"@mui/icons-material@^7.0.0":
-  version "7.0.1"
-  resolved "https://registry.yarnpkg.com/@mui/icons-material/-/icons-material-7.0.1.tgz#4a25d74f8f1bfc5eac924819001efae9b39be2d9"
-  integrity sha512-x8Em7LISFQ6s/KeZj6ZKwJHq2WttRNe9KJLWFa72eQx7B53s/TzMKOEjGKB/YyhOx+bqqSv1pMvK373M4Xf07A==
-  dependencies:
-    "@babel/runtime" "^7.26.10"
-
 "@mui/icons-material@^7.2.0":
   version "7.2.0"
   resolved "https://registry.yarnpkg.com/@mui/icons-material/-/icons-material-7.2.0.tgz#e01de90ecf3cdccee7f8e88e7e033df5e3f050e1"
@@ -2580,12 +2566,12 @@
   dependencies:
     "@babel/runtime" "^7.27.6"
 
-"@mui/material-nextjs@^7.0.0":
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/@mui/material-nextjs/-/material-nextjs-7.0.0.tgz#5ae7450c8013d02fe7d0745e1702bccb9cd62541"
-  integrity sha512-C0rY/W6oln6Qy1CCCB8p+ORyS/DYThhVmD+yoBO08cnI8FaIq4mWdkpVXeafOX8Pzinn6NlbHQlquNrMcW4acw==
+"@mui/material-nextjs@^7.2.0":
+  version "7.2.0"
+  resolved "https://registry.yarnpkg.com/@mui/material-nextjs/-/material-nextjs-7.2.0.tgz#2260a3ae0a19a6a57726841353a1074f2ab9b839"
+  integrity sha512-/W2iKkjeOdaYBu5xNYi/w5HUX2C4HHefSMW7UgCvTKl90yy1puE7kmAgv/gxBghqhEE27cNWdevRrnvVhNRaUA==
   dependencies:
-    "@babel/runtime" "^7.26.10"
+    "@babel/runtime" "^7.27.6"
 
 "@mui/material@^7.2.0":
   version "7.2.0"
@@ -3516,20 +3502,15 @@
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.15.tgz#e6e5a86d602beaca71ce5163fadf5f95d70931c7"
   integrity sha512-F6bEyamV9jKGAFBEmlQnesRPGOQqS2+Uwi0Em15xenOxHaf2hv6L8YCVn3rPdPJOiJfPiCnLIRyvwVaqMY3MIw==
 
-"@types/react-dom@^19.1.0":
-  version "19.1.1"
-  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-19.1.1.tgz#a8d097b28247d1129cf56e74d1622c98978c04ed"
-  integrity sha512-jFf/woGTVTjUJsl2O7hcopJ1r0upqoq/vIOoCj0yLh3RIXxWcljlpuZ+vEBRXsymD1jhfeJrlyTy/S1UW+4y1w==
-
 "@types/react-transition-group@^4.4.12":
   version "4.4.12"
   resolved "https://registry.yarnpkg.com/@types/react-transition-group/-/react-transition-group-4.4.12.tgz#b5d76568485b02a307238270bfe96cb51ee2a044"
   integrity sha512-8TV6R3h2j7a91c+1DXdJi3Syo69zzIZbz7Lg5tORM5LEJG7X/E6a1V3drRyBRZq7/utz7A+c4OgYLiLcYGHG6w==
 
-"@types/react@^19.1.0":
-  version "19.1.0"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-19.1.0.tgz#73c43ad9bc43496ca8184332b111e2aef63fc9da"
-  integrity sha512-UaicktuQI+9UKyA4njtDOGBD/67t8YEBt2xdfqu8+gP9hqPUPsiXlNPcpS2gVdjmis5GKPG3fCxbQLVgxsQZ8w==
+"@types/react@19.1.8":
+  version "19.1.8"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-19.1.8.tgz#ff8395f2afb764597265ced15f8dddb0720ae1c3"
+  integrity sha512-AwAfQ2Wa5bCx9WP8nZL2uMZWod7J7/JSplxbTmBQ5ms6QpqNYm672H0Vu9ZVKVngQ+ii4R/byguVEUZQyeg44g==
   dependencies:
     csstype "^3.0.2"
 
@@ -9861,7 +9842,7 @@ react-docgen@^7.1.1:
     resolve "^1.22.1"
     strip-indent "^4.0.0"
 
-react-dom@^19.1.0:
+react-dom@19.1.0:
   version "19.1.0"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-19.1.0.tgz#133558deca37fa1d682708df8904b25186793623"
   integrity sha512-Xs1hdnE+DyKgeHJeJznQmYMIBG3TKIHJJT95Q58nHLSrElKlGQqDTR2HQ9fx5CN/Gk6Vh/kupBTDLU11/nDk/g==
@@ -9933,7 +9914,7 @@ react-transition-group@^4.4.5:
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
 
-react@^19.1.0:
+react@19.1.0:
   version "19.1.0"
   resolved "https://registry.yarnpkg.com/react/-/react-19.1.0.tgz#926864b6c48da7627f004795d6cce50e90793b75"
   integrity sha512-FS+XFBNvn3GTAWq26joslQgWNoFu08F4kl0J4CgdNKADkdSGXQyTCnKteIAJy96Br6YbpEU1LSzV5dYtjMkMDg==
