@@ -1,4 +1,4 @@
-@import "typed/typed.scss";
+@use "./typed.scss" as typed;
 
 .MenuStrapline {
   font-family: "Courier New", Courier, monospace;
@@ -14,7 +14,7 @@
 }
 
 .Typewriter {
-  @include typed(
+  @include typed.typed(
     "tangible media artist",
     "digital technologist",
     (
