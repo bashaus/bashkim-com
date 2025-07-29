@@ -110,7 +110,7 @@ $__typed-pauses-chars: (
           map.get($styles, $prop)
         );
         #{$prop}: if(
-          type-of($value) == list,
+          meta.type-of($value) == list,
           list.append($value, null, auto),
           $value
         );
@@ -120,7 +120,7 @@ $__typed-pauses-chars: (
     @if list.length(map.keys($styles)) > 0 {
       @each $prop, $value in $styles {
         #{$prop}: if(
-          type-of($value) == list,
+          meta.type-of($value) == list,
           list.append($value, null, auto),
           $value
         );
@@ -452,7 +452,7 @@ $__typed-id: 0;
             @if $value !=
               infinite and
               (
-                type-of($value) ==
+                meta.type-of($value) ==
                   number and
                   ($value < 0 or $value != round($value))
               )
