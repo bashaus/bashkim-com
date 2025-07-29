@@ -15,7 +15,7 @@ You can install the application on your local system:
 
 ```bash
 git checkout git@github.com:bashaus/bashkim-com.git
-yarn
+npm i
 ```
 
 &nbsp;
@@ -27,5 +27,5 @@ yarn
 Run the main website in development mode:
 
 ```bash
-yarn dev
+npm run dev
 ```

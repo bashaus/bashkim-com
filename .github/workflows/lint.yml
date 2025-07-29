@@ -1,5 +1,5 @@
 ---
-name: sonarcloud
+name: lint
 
 on:
   push:
@@ -12,7 +12,7 @@ on:
       - reopened
 
 jobs:
-  scan:
+  lint:
     runs-on: ubuntu-latest
     if: ${{ github.actor != 'dependabot[bot]' }}
     steps:
@@ -29,11 +29,8 @@ jobs:
       - name: npm
         run: npm ci
 
-      - name: test
-        run: npm test --ci --coverage
+      - name: prettier
+        run: npx prettier --check .
 
-      - name: SonarQube Scan
-        uses: SonarSource/sonarqube-scan-action@v5.2.0
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      - name: lint
+        run: npm run lint
