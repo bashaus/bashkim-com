@@ -23,12 +23,9 @@ jobs:
         run: npm install -g @lhci/cli
 
       - name: "lhci: run"
-        run: |
-          lhci autorun \
-            --collect.url="${{ github.event.deployment_status.environment_url }}" \
-            --collect.extraHeaders='{"Authorization": "Bearer ${{ secrets.VERCEL_TOKEN }}"}' \
-            --upload.target=filesystem \
-            --upload.outputDir=./lhci-results
+        run: lhci autorun --collect.url="${{ github.event.deployment_status.environment_url }}"
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
 
       - name: "lhci: store"
         uses: actions/upload-artifact@v4
