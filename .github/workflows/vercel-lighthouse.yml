@@ -1,0 +1,34 @@
+name: lighthouse
+
+on:
+  deployment_status:
+
+jobs:
+  lighthouse:
+    if: >
+      github.event.deployment_status.state == 'success' &&
+      github.event.deployment.environment == 'Preview – bashkim-com-website'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: "node: install"
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.15.0
+
+      - name: "lhci: install"
+        run: npm install -g @lhci/cli
+
+      - name: "lhci: run"
+        run: lhci autorun --collect.url="${{ github.event.deployment_status.environment_url }}"
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+
+      - name: "lhci: store"
+        uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse-report
+          path: ./lhci-results

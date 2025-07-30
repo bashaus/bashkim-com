@@ -1,9 +1,19 @@
 import eslintConfig from "@bashkim-com/eslint";
 
 const config = [
-  ...eslintConfig.configs.react,
+  ...eslintConfig.configs.base,
   {
     ignores: ["coverage/*", "packages/*"],
+  },
+  {
+    files: [".lighthouserc.js"],
+    languageOptions: {
+      ecmaVersion: "latest",
+      sourceType: "module",
+      globals: {
+        process: "readonly",
+      },
+    },
   },
 ];
 
