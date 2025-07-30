@@ -26,6 +26,7 @@ jobs:
         run: |
           lhci autorun \
             --collect.url="${{ github.event.deployment_status.environment_url }}" \
+            --collect.extraHeaders='{"Authorization": "Bearer ${{ secrets.VERCEL_TOKEN }}"}' \
             --upload.target=filesystem \
             --upload.outputDir=./lhci-results
 
