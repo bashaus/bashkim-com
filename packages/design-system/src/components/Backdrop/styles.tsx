@@ -7,4 +7,6 @@ export const SvgContainer = styled("svg")(() => ({
   width: "100vw",
   height: "100vh",
   pointerEvents: "none",
+
+  transition: "color .3s ease-in",
 }));

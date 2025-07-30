@@ -54,8 +54,20 @@ export default function VideoDialog({ open, onClose, url }: VideoDialogProps) {
     setPlaying(!playing);
   }, [playing]);
 
+  const backgroundColor = playing ? "rgba(0, 0, 0, .8)" : "rgba(0, 0, 0, .5)";
+
   return (
-    <Dialog open={open} onClose={onClose} fullWidth maxWidth="xl">
+    <Dialog
+      open={open}
+      onClose={onClose}
+      fullWidth
+      maxWidth="xl"
+      slotProps={{
+        backdrop: {
+          style: { backgroundColor },
+        },
+      }}
+    >
       <Box sx={{ aspectRatio: "16 / 9" }}>
         <ReactPlayer
           config={{

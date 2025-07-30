@@ -4,7 +4,7 @@ import { styled } from "@mui/material/styles";
 export const PortfolioButton = styled(Button)(({ theme }) => ({
   [theme.breakpoints.up("md")]: {
     ":hover": {
-      color: "#29e5d0",
+      color: "#5dcd72",
     },
   },
 }));
@@ -12,7 +12,15 @@ export const PortfolioButton = styled(Button)(({ theme }) => ({
 export const AboutButton = styled(Button)(({ theme }) => ({
   [theme.breakpoints.up("md")]: {
     ":hover": {
-      color: "#f2911c",
+      color: "#fec847",
+    },
+  },
+}));
+
+export const SourceButton = styled(Button)(({ theme }) => ({
+  [theme.breakpoints.up("md")]: {
+    ":hover": {
+      color: "#F7567C",
     },
   },
 }));

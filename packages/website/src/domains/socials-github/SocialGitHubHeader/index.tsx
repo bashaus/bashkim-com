@@ -12,7 +12,14 @@ export default function SocialGitHubHeader() {
       href="https://github.com/bashaus/"
       avatarBadgeBackground="#333"
       avatarBadge={<GitHubVector width={15} height={15} color="#FFFFFF" />}
-      avatarImage={<Image {...profilePhoto} alt="Photo of Bashkim Isai" />}
+      avatarImage={
+        <Image
+          src={profilePhoto.src}
+          width={profilePhoto.width}
+          height={profilePhoto.height}
+          alt="Photo of Bashkim Isai"
+        />
+      }
       textPrimary="@bashaus"
       textSecondary="View profile on GitHub"
     />

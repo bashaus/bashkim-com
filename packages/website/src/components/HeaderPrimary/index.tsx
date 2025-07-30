@@ -8,6 +8,7 @@ export default function HeaderPrimary() {
 
   const isPortfolio = pathname?.startsWith("/portfolio");
   const isAbout = pathname?.startsWith("/about");
+  const isSource = pathname?.startsWith("/source");
 
   return (
     <Stack direction="row" role="menu">
@@ -28,6 +29,15 @@ export default function HeaderPrimary() {
       >
         <span data-label>About</span>
       </S.AboutButton>
+
+      <S.SourceButton
+        variant="navigation"
+        href="/source"
+        aria-current={isSource ? "location" : undefined}
+        role="menuitem"
+      >
+        <span data-label>Source</span>
+      </S.SourceButton>
     </Stack>
   );
 }

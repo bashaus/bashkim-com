@@ -13,9 +13,11 @@ export default function Backdrop({
   open,
   onTransitionStart,
   onTransitionEnd,
+  style,
   ...props
 }: BackdropProps) {
   const svgRef = useRef<SVGPathElement>(null);
+  const { backgroundColor = "rgba(0, 0, 0, 0.5)", ...restStyle } = style ?? {};
 
   // wait until DOM has been rendered
   useEffect(() => {
@@ -67,15 +69,26 @@ export default function Backdrop({
   }, [open, onTransitionEnd, onTransitionStart]);
 
   return (
-    <MuiBackdrop open={open} {...props} sx={{ backgroundColor: "transparent" }}>
-      <S.SvgContainer viewBox="0 0 100 100" preserveAspectRatio="none">
+    <MuiBackdrop
+      open={open}
+      {...props}
+      style={{ backgroundColor: "transparent", ...restStyle }}
+    >
+      <S.SvgContainer
+        viewBox="0 0 100 100"
+        preserveAspectRatio="none"
+        sx={{
+          color: backgroundColor,
+        }}
+      >
         <path
           ref={svgRef}
           vectorEffect="non-scaling-stroke"
           d="M 0 100 V 100 Q 50 100 100 100 V 100 z"
-          fill="rgba(0, 0, 0, .8)"
+          fill="currentColor"
         />
       </S.SvgContainer>
+      {backgroundColor}
 
       {children}
     </MuiBackdrop>

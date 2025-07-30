@@ -4,6 +4,7 @@ const MuiDrawerTheme = createTheme({
   components: {
     MuiDrawer: {
       defaultProps: {
+        slotProps: { paper: { variant: "drawer" } },
         anchor: "right",
       },
     },

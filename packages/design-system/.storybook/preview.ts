@@ -8,7 +8,6 @@ export const parameters = {
     sort: "requiredFirst",
     exclude: /^(className|[a-zA-Z]+ClassName)$/,
     matchers: {
-      color: /(^color$|Color$)/,
       date: /(^date$|Date$|At$)/,
     },
   },

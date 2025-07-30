@@ -7,3 +7,4 @@ export { default as MediumClapVector } from "./medium-clap.svg";
 export { default as PrismicVector } from "./prismic.svg";
 export { default as StackOverflowVector } from "./stack-overflow.svg";
 export { default as StackOverflowFilledVector } from "./stack-overflow-filled.svg";
+export { default as StorybookVector } from "./storybook.svg";

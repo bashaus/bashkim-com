@@ -25,7 +25,14 @@ export default function SocialStackOverflowHeaderConnected({
       href="https://stackoverflow.com/users/600240/bashaus"
       avatarBadgeBackground="#FFF"
       avatarBadge={<StackOverflowFilledVector width={20} height={20} />}
-      avatarImage={<Image {...profilePhoto} alt="Photo of Bashkim Isai" />}
+      avatarImage={
+        <Image
+          src={profilePhoto.src}
+          width={profilePhoto.width}
+          height={profilePhoto.height}
+          alt="Photo of Bashkim Isai"
+        />
+      }
       textPrimary="Bashkim Isai"
       textSecondary={
         <Stack direction="row" spacing={2} component="span">

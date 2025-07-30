@@ -24,14 +24,6 @@ export default function SocialsDrawerView({
       open={open}
       onClose={handleClose}
       onTransitionExited={handleExited}
-      slotProps={{
-        paper: {
-          sx: {
-            width: 350,
-            maxWidth: "100vw",
-          },
-        },
-      }}
     >
       {children}
 
