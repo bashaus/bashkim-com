@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/nextjs";
 import { fn } from "storybook/test";
 
-import CarouselButtonBack, { CarouselButtonBackProps } from ".";
+import CarouselButtonBack from ".";
 
 const meta = {
   component: CarouselButtonBack,
@@ -9,7 +9,7 @@ const meta = {
   parameters: {
     layout: "centered",
   },
-} satisfies Meta<CarouselButtonBackProps>;
+} satisfies Meta<typeof CarouselButtonBack>;
 
 type Story = StoryObj<typeof meta>;
 

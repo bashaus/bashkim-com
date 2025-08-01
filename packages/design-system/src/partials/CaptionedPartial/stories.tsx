@@ -44,7 +44,7 @@ const meta = {
     },
   },
   render: CaptionedPartialRenderer,
-} satisfies Meta<CaptionedPartialRendererProps>;
+} satisfies Meta<typeof CaptionedPartialRenderer>;
 
 type Story = StoryObj<typeof meta>;
 

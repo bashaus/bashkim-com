@@ -38,7 +38,7 @@ const meta = {
     },
   },
   render: FullTextPartialRenderer,
-} satisfies Meta<FullTextPartialRendererProps>;
+} satisfies Meta<typeof FullTextPartialRenderer>;
 
 type Story = StoryObj<typeof meta>;
 

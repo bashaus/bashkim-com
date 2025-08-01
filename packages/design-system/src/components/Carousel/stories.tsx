@@ -46,7 +46,7 @@ const meta = {
     layout: "centered",
   },
   render: CarouselRenderer,
-} satisfies Meta<CarouselRendererProps>;
+} satisfies Meta<typeof CarouselRenderer>;
 
 type Story = StoryObj<typeof meta>;
 

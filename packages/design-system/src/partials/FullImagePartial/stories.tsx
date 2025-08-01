@@ -25,7 +25,7 @@ const meta = {
     figure: { control: "file" },
   },
   render: FullImagePartialRenderer,
-} satisfies Meta<FullImagePartialRendererProps>;
+} satisfies Meta<typeof FullImagePartialRenderer>;
 
 type Story = StoryObj<typeof meta>;
 

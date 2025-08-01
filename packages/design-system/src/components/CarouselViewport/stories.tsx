@@ -54,7 +54,7 @@ const meta = {
     layout: "centered",
   },
   render: CarouselViewportRenderer,
-} satisfies Meta<CarouselViewportRendererProps>;
+} satisfies Meta<typeof CarouselViewportRenderer>;
 
 type Story = StoryObj<typeof meta>;
 

@@ -37,7 +37,7 @@ const meta = {
     },
   },
   render: NewspaperPartialRenderer,
-} satisfies Meta<NewspaperPartialRendererProps>;
+} satisfies Meta<typeof NewspaperPartialRenderer>;
 
 type Story = StoryObj<typeof meta>;
 

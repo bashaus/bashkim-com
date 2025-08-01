@@ -24,7 +24,7 @@ const meta = {
     image: { control: "file" },
   },
   render: TitlePartialRenderer,
-} satisfies Meta<TitlePartialRendererProps>;
+} satisfies Meta<typeof TitlePartialRenderer>;
 
 type Story = StoryObj<typeof meta>;
 

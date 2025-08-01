@@ -39,7 +39,7 @@ const meta = {
     backgroundImage: { control: "file" },
   },
   render: SplitPartialRenderer,
-} satisfies Meta<SplitPartialRendererProps>;
+} satisfies Meta<typeof SplitPartialRenderer>;
 
 type Story = StoryObj<typeof meta>;
 

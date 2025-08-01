@@ -35,7 +35,7 @@ const meta = {
     layout: "fullscreen",
   },
   render: PageHeaderPartialRenderer,
-} satisfies Meta<PageHeaderPartialRendererProps>;
+} satisfies Meta<typeof PageHeaderPartialRenderer>;
 
 type Story = StoryObj<typeof meta>;
 

@@ -29,7 +29,7 @@ const meta = {
     layout: "centered",
   },
   render: TileRenderer,
-} satisfies Meta<TileRendererProps>;
+} satisfies Meta<typeof TileRenderer>;
 
 type Story = StoryObj<typeof meta>;
 

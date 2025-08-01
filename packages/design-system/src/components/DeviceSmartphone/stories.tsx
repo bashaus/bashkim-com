@@ -32,7 +32,7 @@ const meta = {
     layout: "centered",
   },
   render: DeviceSmartphoneRenderer,
-} satisfies Meta<DeviceSmartphoneRendererProps>;
+} satisfies Meta<typeof DeviceSmartphoneRenderer>;
 
 type Story = StoryObj<typeof meta>;
 
