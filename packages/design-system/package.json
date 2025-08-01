@@ -20,7 +20,6 @@
     "./DeviceFeaturePhone": "./src/components/DeviceFeaturePhone/index.tsx",
     "./DeviceSmartphone": "./src/components/DeviceSmartphone/index.tsx",
     "./Group": "./src/components/Group/index.tsx",
-    "./Tile": "./src/components/Tile/index.tsx",
     "./VideoBackground": "./src/components/VideoBackground/index.tsx",
     "./VideoDialog": "./src/components/VideoDialog/index.tsx",
     "./VideoPlayer": "./src/components/VideoPlayer/index.tsx",
