@@ -2,9 +2,13 @@ import dynamic from "next/dynamic";
 import { useCallback, useRef, useState } from "react";
 import type { ReactPlayerProps } from "react-player";
 
+import VideoLoading from "../VideoLoading";
 import * as S from "./styles";
 
-const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
+const ReactPlayer = dynamic(() => import("react-player"), {
+  ssr: false,
+  loading: VideoLoading,
+});
 
 export type VideoPlayerProps = Readonly<{
   /**
