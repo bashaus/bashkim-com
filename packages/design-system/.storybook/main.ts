@@ -1,6 +1,5 @@
 import type { StorybookConfig } from "@storybook/nextjs";
 import { dirname, join } from "path";
-import TsconfigPathsPlugin from "tsconfig-paths-webpack-plugin";
 import merge from "webpack-merge";
 
 function getAbsolutePath(value: string): string {
@@ -33,14 +32,6 @@ const config: StorybookConfig = {
     });
 
     return merge(config, {
-      resolve: {
-        plugins: [
-          new TsconfigPathsPlugin({
-            extensions: config?.resolve?.extensions,
-          }),
-        ],
-      },
-
       module: {
         rules: [
           {

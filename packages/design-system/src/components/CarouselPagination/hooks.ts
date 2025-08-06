@@ -5,14 +5,14 @@ import { useCarousel } from "../CarouselProvider/context";
 
 type UseCarouselPaginationType = {
   selectedIndex: number;
-  scrollSnaps: number[];
+  scrollSnaps: Array<number>;
   onChange: (index: number) => void;
 };
 
 export const useCarouselPagination = (): UseCarouselPaginationType => {
   const [, emblaApi] = useCarousel();
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
+  const [scrollSnaps, setScrollSnaps] = useState<Array<number>>([]);
 
   const onChange = useCallback(
     (index: number) => {

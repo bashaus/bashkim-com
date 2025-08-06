@@ -1,26 +1,41 @@
+import jsxA11y from "eslint-plugin-jsx-a11y";
 import muiPathImportsPlugin from "eslint-plugin-mui-path-imports";
 import pluginReact from "eslint-plugin-react";
 import pluginReactHooks from "eslint-plugin-react-hooks";
-import globals from "globals";
+import storybook from "eslint-plugin-storybook";
 
-import base from "./base.mjs";
+import env from "./base.mjs";
 
 export default [
-  ...base,
+  ...env,
+
+  /* eslint-plugin-jsx-a11y */
+  jsxA11y.flatConfigs.recommended,
 
   /* eslint-plugin-react */
   {
     ...pluginReact.configs.flat.recommended,
     languageOptions: {
       ...pluginReact.configs.flat.recommended.languageOptions,
-      globals: {
-        ...globals.serviceworker,
-      },
     },
+  },
+  {
     rules: {
+      "react/jsx-curly-brace-presence": "error",
+      "react/jsx-uses-react": "off",
       "react/prefer-read-only-props": "error",
       "react/react-in-jsx-scope": "off",
-      "react/jsx-uses-react": "off",
+      "react/no-unescaped-entities": [
+        "error",
+        {
+          forbid: [
+            { char: ">", alternatives: ["&gt;"] },
+            { char: "}", alternatives: ["&#125;"] },
+            { char: "’", alternatives: ["&apos;"] },
+            { char: '"', alternatives: ["&quot;"] },
+          ],
+        },
+      ],
     },
   },
 
@@ -67,4 +82,7 @@ export default [
       ],
     },
   },
+
+  /* eslint-plugin-storybook */
+  ...storybook.configs["flat/recommended"],
 ];

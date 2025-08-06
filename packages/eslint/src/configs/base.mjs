@@ -11,14 +11,33 @@ import tseslint from "typescript-eslint";
 const flatCompat = new FlatCompat();
 
 export default tseslint.config(
+  /* eslint */
   js.configs.recommended,
-
   {
-    ignores: ["dist/*", ".turbo/*"],
+    ignores: ["dist/*", ".turbo/*", "coverage/*", "test-reports/*"],
+  },
+  {
+    rules: {
+      curly: "error",
+    },
   },
 
   /* typescript-eslint */
   ...tseslint.configs.recommended,
+  {
+    rules: {
+      "@typescript-eslint/array-type": ["error", { default: "generic" }],
+      "@typescript-eslint/ban-ts-comment": [
+        "error",
+        { "ts-ignore": "allow-with-description" },
+      ],
+      "@typescript-eslint/no-non-null-assertion": "error",
+      "@typescript-eslint/no-unused-vars": [
+        "error",
+        { argsIgnorePattern: "^_", ignoreRestSiblings: true },
+      ],
+    },
+  },
 
   /* eslint-plugin-promise */
   promisePlugin.configs["flat/recommended"],
@@ -34,12 +53,6 @@ export default tseslint.config(
     },
   },
 
-  /* eslint-plugin-prettier */
-  prettierPlugin,
-
-  /* eslint-plugin-sonarjs */
-  sonarjsPlugin.configs.recommended,
-
   /* eslint-plugin-import */
   ...fixupConfigRules(flatCompat.plugins("import")),
   {
@@ -50,22 +63,20 @@ export default tseslint.config(
     },
   },
 
+  /* eslint-plugin-sonarjs */
+  sonarjsPlugin.configs.recommended,
   // {
-  //   plugins: {
-  //     "jsx-a11y",
+  //   rules: {
+  //     "sonarjs/redundant-type-aliases": "off",
   //   },
   // },
 
+  /* eslint-plugin-jest */
   {
     files: ["*.spec.{ts,tsx}"],
     ...jestPlugin.configs["flat/recommended"],
-    rules: {
-      ...jestPlugin.configs["flat/recommended"].rules,
-      /**
-       * The `describe` and `it` functions will commonly use the same values.
-       * Duplicated strings in this case are acceptable.
-       */
-      "sonarjs/no-duplicate-string": 0,
-    },
   },
+
+  /* eslint-plugin-prettier */
+  prettierPlugin,
 );

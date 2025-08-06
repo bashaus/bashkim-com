@@ -21,11 +21,6 @@
     "storybook:build": "turbo run storybook:build",
     "test": "jest --passWithNoTests"
   },
-  "dependencies": {
-    "core-js": "^3.41.0",
-    "graphql": "^16.8.1",
-    "graphql-tag": "^2.12.6"
-  },
   "devDependencies": {
     "@bashkim-com/eslint": "*",
     "@commitlint/cli": "^19.8.0",
@@ -34,10 +29,9 @@
     "@swc/core": "^1.11.16",
     "@turbo/gen": "^2.5.0",
     "@types/node": "^22.14.0",
-    "encoding": "^0.1.13",
     "eslint": "^9.23.0",
     "husky": "^9.1.7",
-    "prettier": "3.5.3",
+    "prettier": "3.6.2",
     "sass": "^1.85.0",
     "ts-node": "10.9.2",
     "turbo": "^2.5.5",

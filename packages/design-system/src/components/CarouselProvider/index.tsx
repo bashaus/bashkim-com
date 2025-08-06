@@ -8,7 +8,7 @@ import { CarouselContext } from "./context";
 export type CarouselProviderProps = Readonly<
   PropsWithChildren<{
     options?: EmblaOptionsType;
-    plugins?: EmblaPluginType[];
+    plugins?: Array<EmblaPluginType>;
     slidesVisible?: number;
     slideSpacing?: string;
   }>

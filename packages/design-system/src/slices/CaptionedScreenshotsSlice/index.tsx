@@ -47,7 +47,7 @@ export default function CaptionedScreenshotsSlice({
     fields[selectedIndex].captioned_screenshots_slice_type_images;
 
   const handleSizeChange = useCallback(
-    (_event: Event, value: number | number[]): void => {
+    (_event: Event, value: number | Array<number>): void => {
       setSelectedIndex(Array.isArray(value) ? value[0] : value);
     },
     [],
