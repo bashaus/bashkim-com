@@ -41,3 +41,7 @@ yarn-error.log*
 dist/
 storybook-static/
 generated/
+
+# lighthouse
+.lighthouseci/
+lhci-results/
