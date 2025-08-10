@@ -11,11 +11,11 @@
   "devDependencies": {
     "@apollo/client": "^3.11.8",
     "@bashkim-com/eslint": "*",
-    "@graphql-codegen/cli": "^5.0.2",
-    "@graphql-codegen/schema-ast": "^4.0.2",
+    "@graphql-codegen/cli": "^5.0.7",
+    "@graphql-codegen/schema-ast": "^4.1.0",
     "@graphql-codegen/typescript": "^4.1.6",
-    "@graphql-codegen/typescript-operations": "^4.2.3",
-    "@graphql-codegen/typescript-react-apollo": "^4.3.2",
+    "@graphql-codegen/typescript-operations": "^4.6.1",
+    "@graphql-codegen/typescript-react-apollo": "^4.3.3",
     "codegen-prismic-fetch": "^1.0.5"
   }
 }

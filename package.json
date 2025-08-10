@@ -27,7 +27,6 @@
     "@commitlint/config-conventional": "^19.8.0",
     "@svgr/webpack": "^8.1.0",
     "@swc/core": "^1.11.16",
-    "@turbo/gen": "^2.5.0",
     "@types/node": "^22.14.0",
     "eslint": "^9.23.0",
     "husky": "^9.1.7",
