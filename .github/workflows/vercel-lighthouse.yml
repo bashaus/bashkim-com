@@ -4,13 +4,11 @@ on:
   deployment_status:
 
 jobs:
-  lighthouse:
+  lhci:
     if: >
       github.event.deployment_status.state == 'success' &&
       contains(github.event.deployment.environment, 'bashkim-com-website')
     runs-on: ubuntu-latest
-    timeout-minutes: 10
-
     steps:
       - uses: actions/checkout@v4
         with:
