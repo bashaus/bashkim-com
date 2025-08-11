@@ -1,0 +1,48 @@
+name: e2e
+
+on:
+  deployment_status:
+
+jobs:
+  cypress:
+    if: >
+      github.event.deployment_status.state == 'success' &&
+      contains(github.event.deployment.environment, 'bashkim-com-website')
+    runs-on: ubuntu-latest
+    container:
+      image: cypress/browsers:22.15.0
+      options: --user 1001
+    strategy:
+      matrix:
+        browser:
+          - chrome
+          - firefox
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22.15.0"
+          cache: "npm"
+
+      - name: "npm: install"
+        run: npm install
+
+      - name: "cy: run ${{ matrix.browser }}"
+        working-directory: packages/website-e2e
+        run: >
+          npx cypress run \
+            --browser "${{ matrix.browser }}" \
+            --env VERCEL_AUTOMATION_BYPASS_SECRET="${VERCEL_AUTOMATION_BYPASS_SECRET}"
+        env:
+          CYPRESS_BASE_URL: "${{ github.event.deployment_status.environment_url }}"
+          VERCEL_AUTOMATION_BYPASS_SECRET: ${{ secrets.VERCEL_AUTOMATION_BYPASS_SECRET }}
+
+      - name: "cy: report ${{ matrix.browser }}"
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: "cypress-report-${{ matrix.browser }}"
+          path: packages/website-e2e/cypress/reports

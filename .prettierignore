@@ -8,3 +8,4 @@ out/
 storybook-static/
 
 packages/socials/src/github/graphql-types.ts
+packages/website-e2e/cypress/reports/
