@@ -88,8 +88,6 @@ export default function Backdrop({
           fill="currentColor"
         />
       </S.SvgContainer>
-      {backgroundColor}
-
       {children}
     </MuiBackdrop>
   );

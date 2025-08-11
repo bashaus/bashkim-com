@@ -23,7 +23,10 @@ const config: Config = {
     "\\.svg$": "<rootDir>/../../.jest/transform/svg.ts",
   },
   moduleFileExtensions: ["ts", "tsx", "js", "jsx"],
-  setupFilesAfterEnv: ["<rootDir>/../../.jest/setup/testing-library.jsdom.ts"],
+  setupFilesAfterEnv: [
+    "<rootDir>/../../.jest/setup/testing-library.jsdom.ts",
+    "<rootDir>/../../.jest/setup/next.ts",
+  ],
 };
 
 export default config;
