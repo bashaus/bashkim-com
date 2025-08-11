@@ -14,7 +14,7 @@ export const CarouselDot = styled(ButtonBase)(({ theme }) => ({
   overflow: "hidden",
   transition: "all .3s",
 
-  '&[aria-selected="true"]': {
+  '&[aria-current="true"]': {
     backgroundColor: theme.palette.primary.main,
   },
 }));

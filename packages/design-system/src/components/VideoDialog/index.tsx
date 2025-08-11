@@ -5,9 +5,16 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Dialog, { DialogProps } from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
+import DialogTitle from "@mui/material/DialogTitle";
 import Stack from "@mui/material/Stack";
 import dynamic from "next/dynamic";
-import { MouseEventHandler, useCallback, useRef, useState } from "react";
+import {
+  MouseEventHandler,
+  ReactNode,
+  useCallback,
+  useRef,
+  useState,
+} from "react";
 import type { ReactPlayerProps } from "react-player";
 
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
@@ -24,12 +31,22 @@ export type VideoDialogProps = Readonly<{
   onClose: DialogProps["onClose"];
 
   /**
+   * The title or description of the video
+   */
+  title: ReactNode;
+
+  /**
    * The URL of the video to be embedded
    */
   url: string;
 }>;
 
-export default function VideoDialog({ open, onClose, url }: VideoDialogProps) {
+export default function VideoDialog({
+  open,
+  onClose,
+  title,
+  url,
+}: VideoDialogProps) {
   const playerRef = useRef(null);
 
   const [playing, setPlaying] = useState<ReactPlayerProps["playing"]>(false);
@@ -68,6 +85,7 @@ export default function VideoDialog({ open, onClose, url }: VideoDialogProps) {
         },
       }}
     >
+      <DialogTitle display="none">{title}</DialogTitle>
       <Box sx={{ aspectRatio: "16 / 9" }}>
         <ReactPlayer
           config={{
@@ -120,12 +138,6 @@ export default function VideoDialog({ open, onClose, url }: VideoDialogProps) {
           </Button>
         </Stack>
       </DialogActions>
-
-      {/* onBuffer?: () => void */}
-      {/* onBufferEnd?: () => void */}
-      {/* onClickPreview?: (event: any) => void */}
-      {/* onError?: (error: any, data?: any, hlsInstance?: any, hlsGlobal?: any) => void */}
-      {/* onSeek?: (seconds: number) => void */}
     </Dialog>
   );
 }

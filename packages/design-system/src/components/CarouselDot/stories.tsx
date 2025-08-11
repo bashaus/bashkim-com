@@ -16,15 +16,15 @@ const meta = {
 
 type Story = StoryObj<typeof meta>;
 
-export const Unselected = {
+export const Default = {
   args: {
-    "aria-selected": false,
+    "aria-current": false,
   },
 } satisfies Story;
 
-export const Selected = {
+export const Current = {
   args: {
-    "aria-selected": true,
+    "aria-current": true,
   },
 } satisfies Story;
 

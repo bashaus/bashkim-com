@@ -3,6 +3,7 @@ import {
   cloneElement,
   isValidElement,
   PropsWithChildren,
+  ReactNode,
   useCallback,
   useState,
 } from "react";
@@ -15,12 +16,18 @@ export type VideoPlayerLinkProps = Readonly<
      * The URL of the video to display in a dialog
      */
     videoUrl: string;
+
+    /**
+     * The title or description of the video
+     */
+    title?: ReactNode;
   }>
 >;
 
 export default function VideoPlayerLink({
   children,
   videoUrl,
+  title,
 }: VideoPlayerLinkProps) {
   const [open, setOpen] = useState<boolean>(false);
 
@@ -40,7 +47,12 @@ export default function VideoPlayerLink({
   return (
     <>
       {signifier}
-      <VideoDialog open={open} onClose={handleDialogClose} url={videoUrl} />
+      <VideoDialog
+        open={open}
+        onClose={handleDialogClose}
+        url={videoUrl}
+        title={title}
+      />
     </>
   );
 }

@@ -2,6 +2,7 @@ import { faker } from "@faker-js/faker";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import type { Meta, StoryObj } from "@storybook/nextjs";
+import { expect } from "storybook/internal/test";
 
 import Carousel, { CarouselProps } from ".";
 
@@ -54,6 +55,22 @@ export const Fixture = {
   args: {
     slides: 3,
     slidesVisible: 1,
+  },
+} satisfies Story;
+
+export const Interaction = {
+  args: {
+    slides: 3,
+    slidesVisible: 1,
+  },
+  play: async ({ canvas, userEvent }) => {
+    const user = userEvent.setup({ delay: 300 });
+    const nextButton = canvas.getByRole("button", { name: "Next" });
+
+    expect(nextButton).toBeEnabled();
+    await user.click(nextButton);
+    await user.click(nextButton);
+    expect(nextButton).not.toBeEnabled();
   },
 } satisfies Story;
 

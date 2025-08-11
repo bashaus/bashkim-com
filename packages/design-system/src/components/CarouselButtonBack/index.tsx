@@ -8,8 +8,8 @@ export type CarouselButtonBackProps = Readonly<
 
 export default function CarouselButtonBack(props: CarouselButtonBackProps) {
   return (
-    <CarouselButton {...props}>
-      <ChevronLeftIcon aria-label="Back" />
+    <CarouselButton aria-label="Back" {...props}>
+      <ChevronLeftIcon />
     </CarouselButton>
   );
 }

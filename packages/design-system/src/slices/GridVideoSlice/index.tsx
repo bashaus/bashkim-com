@@ -35,7 +35,7 @@ export default function GridVideoSlice({ slice }: GridVideoSliceProps) {
               key={poster.url}
             >
               <Card variant="outlined">
-                <VideoPlayerLink videoUrl={video.embed_url}>
+                <VideoPlayerLink videoUrl={video.embed_url} title={description}>
                   <CardActionArea>
                     <CardMedia component="img" image={poster.url} />
                     <CardHeader

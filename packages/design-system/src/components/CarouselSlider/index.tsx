@@ -17,6 +17,7 @@ export default function CarouselSlider(props: CarouselSliderProps) {
       step={1}
       value={selectedIndex}
       onChange={(_event, value) => onChange(+value)}
+      aria-label="Slide selector"
     />
   );
 }

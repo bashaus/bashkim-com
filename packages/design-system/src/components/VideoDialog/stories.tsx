@@ -9,6 +9,7 @@ const meta = {
   args: {
     open: true,
     onClose: fn(),
+    title: "Example video",
   },
   parameters: {
     layout: "centered",

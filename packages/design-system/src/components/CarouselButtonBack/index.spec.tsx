@@ -1,6 +1,10 @@
+import { composeStories } from "@storybook/nextjs";
 import { fireEvent, render } from "@testing-library/react";
 
 import CarouselButtonBack from ".";
+import * as stories from "./stories";
+
+const SB = composeStories(stories);
 
 describe("<CarouselButtonBack />", () => {
   it("should handle click when enabled", () => {
@@ -23,5 +27,19 @@ describe("<CarouselButtonBack />", () => {
     fireEvent.click(button);
 
     expect(onClick).toHaveBeenCalledTimes(0);
+  });
+
+  describe("stories", () => {
+    it("#enabled", () => {
+      const { getByLabelText } = render(<SB.Enabled />);
+      const button = getByLabelText("Back");
+      expect(button).toBeInTheDocument();
+    });
+
+    it("#disabled", () => {
+      const { getByLabelText } = render(<SB.Disabled />);
+      const button = getByLabelText("Back");
+      expect(button).toBeInTheDocument();
+    });
   });
 });

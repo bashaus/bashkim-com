@@ -12,7 +12,8 @@ export default function CarouselDots() {
         <CarouselDot
           key={key}
           onClick={() => onChange(index)}
-          aria-selected={index === selectedIndex ? "true" : "false"}
+          aria-current={index === selectedIndex ? "true" : "false"}
+          aria-label={`Slide ${index + 1}`}
         />
       ))}
     </Stack>
