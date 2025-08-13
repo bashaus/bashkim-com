@@ -7,7 +7,7 @@ import {
   GetCaseStudyPageQuery,
 } from "@bashkim-com/prismic-dal";
 
-import prismicClient from "@/libraries/prismic/PrismicClient";
+import prismicClient from "@/libraries/prismic/client";
 
 export const getPrismicSlugs = async () => {
   return prismicClient.query<GetCaseStudiesQuery>({

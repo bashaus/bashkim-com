@@ -10,7 +10,7 @@ import ToastController from "@/components/ToastController";
 import NavigationProvider from "@/contexts/Navigation/provider";
 import SiteSettingsProvider from "@/domains/site-settings/contexts/SiteSettings/provider";
 import theme from "@/libraries/material-ui/theme";
-import PrismicLinkResolver from "@/libraries/prismic/PrismicLinkResolver";
+import PrismicLinkResolver from "@/libraries/prismic/link-resolver";
 
 export type SiteLayoutProps = Readonly<PropsWithChildren>;
 
