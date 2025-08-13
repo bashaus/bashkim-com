@@ -1,18 +1,41 @@
 import type { CaptionedMagazineSliceTypeFragment } from "@bashkim-com/prismic-dal";
 import { PrismicRichText } from "@bashkim-com/prismic-helpers";
+import GridViewIcon from "@mui/icons-material/GridView";
+import ImportContactsIcon from "@mui/icons-material/ImportContacts";
 import Stack from "@mui/material/Stack";
-import Typography from "@mui/material/Typography";
-import HTMLFlipBook from "react-pageflip";
+import ToggleButton from "@mui/material/ToggleButton";
+import ToggleButtonGroup, {
+  ToggleButtonGroupProps,
+} from "@mui/material/ToggleButtonGroup";
+import { AnimatePresence } from "motion/react";
+import { useCallback, useState } from "react";
 
+import MagazineFlipBook from "../../components/MagazineFlipBook";
+import MagazineLayout from "../../components/MagazineLayout";
 import CaptionedPartial from "../../partials/CaptionedPartial";
 
 export type CaptionedMagazineSliceProps = Readonly<{
   slice: CaptionedMagazineSliceTypeFragment;
 }>;
 
+export enum Display {
+  FlipBook = "FlipBook",
+  Layout = "Layout",
+}
+
 export default function CaptionedMagazineSlice({
   slice,
 }: CaptionedMagazineSliceProps) {
+  const [display, setDisplay] = useState<Display>(Display.FlipBook);
+
+  const handleDisplayChange = useCallback<
+    NonNullable<ToggleButtonGroupProps["onChange"]>
+  >((_, value) => {
+    if (value !== null) {
+      setDisplay(value);
+    }
+  }, []);
+
   if (!slice.fields || !slice.primary) {
     return null;
   }
@@ -20,60 +43,43 @@ export default function CaptionedMagazineSlice({
   const { fields } = slice;
   const { captioned_magazine_slice_type_caption: caption } = slice.primary;
 
-  const firstImage = fields[0].captioned_magazine_slice_type_images;
-
   return (
-    <CaptionedPartial
-      figure={
-        <HTMLFlipBook
-          width={firstImage.dimensions.width / 2}
-          height={firstImage.dimensions.height / 2}
-          className=""
-          style={{}}
-          startPage={0}
-          size="fixed"
-          minWidth={firstImage.dimensions.width / 2}
-          maxWidth={firstImage.dimensions.width / 2}
-          minHeight={firstImage.dimensions.height / 2}
-          maxHeight={firstImage.dimensions.height / 2}
-          drawShadow={true}
-          flippingTime={600}
-          usePortrait={true}
-          startZIndex={0}
-          autoSize={true}
-          maxShadowOpacity={0.3}
-          showCover={true}
-          mobileScrollSupport={false}
-          clickEventForward={true}
-          useMouseEvents={true}
-          swipeDistance={50}
-          showPageCorners={true}
-          disableFlipByClick={false}
-        >
-          {fields.map((field) => (
-            <div key={JSON.stringify(field)}>
-              <div
-                style={{
-                  width: firstImage.dimensions.width / 2,
-                  height: firstImage.dimensions.height / 2,
-                }}
-              >
-                <img
-                  src={field.captioned_magazine_slice_type_images.url}
-                  alt={field.captioned_magazine_slice_type_images.alt ?? ""}
-                  width={field.captioned_magazine_slice_type_images.width}
-                  height={field.captioned_magazine_slice_type_images.height}
-                />
-              </div>
-            </div>
-          ))}
-        </HTMLFlipBook>
-      }
-    >
-      <Stack spacing={2}>
-        <PrismicRichText render={caption} />
-        <Typography>Total pages: {fields.length}</Typography>
-      </Stack>
-    </CaptionedPartial>
+    <AnimatePresence mode="wait">
+      <CaptionedPartial
+        figure={
+          display === Display.FlipBook ? (
+            <MagazineFlipBook images={fields} />
+          ) : (
+            <MagazineLayout images={fields} />
+          )
+        }
+      >
+        <Stack spacing={2}>
+          <PrismicRichText render={caption} />
+
+          <ToggleButtonGroup
+            exclusive
+            value={display}
+            onChange={handleDisplayChange}
+            fullWidth
+            sx={{ maxWidth: 400 }}
+          >
+            <ToggleButton value={Display.FlipBook}>
+              <Stack direction="row" spacing={1}>
+                <ImportContactsIcon />
+                <div>Flip Book</div>
+              </Stack>
+            </ToggleButton>
+
+            <ToggleButton value={Display.Layout}>
+              <Stack direction="row" spacing={1}>
+                <GridViewIcon />
+                <div>Layout</div>
+              </Stack>
+            </ToggleButton>
+          </ToggleButtonGroup>
+        </Stack>
+      </CaptionedPartial>
+    </AnimatePresence>
   );
 }
