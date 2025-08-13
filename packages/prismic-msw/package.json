@@ -1,0 +1,12 @@
+{
+  "name": "@bashkim-com/prismic-msw",
+  "version": "0.0.0",
+  "main": "./src/index.ts",
+  "dependencies": {
+    "@bashkim-com/prismic-dal": "*",
+    "@bashkim-com/prismic-factories": "*",
+    "@prismicio/client": "^7.19.2",
+    "@faker-js/faker": "^9.9.0",
+    "msw": "^2.10.4"
+  }
+}
