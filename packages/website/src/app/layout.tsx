@@ -1,11 +1,12 @@
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v14-appRouter";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Metadata } from "next";
 import type { PropsWithChildren, ReactNode } from "react";
 
 import SiteLayout from "@/layouts/SiteLayout";
 
-export async function generateMetadata() {
+export async function generateMetadata(): Promise<Metadata> {
   return {
     title: {
       default: "Bashkim Isai - Digital Technologist",

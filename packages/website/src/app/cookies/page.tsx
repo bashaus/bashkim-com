@@ -1,7 +1,9 @@
-import CookiesPageLockup from "@/domains/cookies-page/components/CookiesPageLockup";
-import generateCanonical from "@/libraries/app/generateCanonical";
+import { Metadata } from "next";
 
-export async function generateMetadata() {
+import CookiesPageLockup from "@/domains/cookies-page/components/CookiesPageLockup";
+import generateCanonical from "@/libraries/app/generate-canonical";
+
+export async function generateMetadata(): Promise<Metadata> {
   return {
     title: "Cookie policy",
     description: "How your personal information is used on this website",

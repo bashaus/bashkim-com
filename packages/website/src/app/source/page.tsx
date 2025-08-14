@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 import SourcePageLockup from "@/domains/source-page/components/SourcePageLockup";
-import generateCanonical from "@/libraries/app/generateCanonical";
+import generateCanonical from "@/libraries/app/generate-canonical";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {

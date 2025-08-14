@@ -1,11 +1,11 @@
 import { Metadata } from "next";
 
 import HomePageLockup from "@/domains/home-page/components/HomePageLockup";
-import generateCanonical from "@/libraries/app/generateCanonical";
+import generateCanonical from "@/libraries/app/generate-canonical";
 
 import { getPrismicPage } from "./queries";
 
-export const generateMetadata = async (): Promise<Metadata> => {
+export async function generateMetadata(): Promise<Metadata> {
   const result = await getPrismicPage();
   const homePage = result.data.homePage.edges?.[0]?.node;
   if (!homePage) {
@@ -19,7 +19,7 @@ export const generateMetadata = async (): Promise<Metadata> => {
       canonical: generateCanonical("/"),
     },
   };
-};
+}
 
 const HomePage = async () => {
   return <HomePageLockup />;

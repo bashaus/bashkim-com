@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import CaseStudyPageLockup from "@/domains/case-study-page/components/CaseStudyPageLockup";
-import generateCanonical from "@/libraries/app/generateCanonical";
+import generateCanonical from "@/libraries/app/generate-canonical";
 
 import { getPrismicBody, getPrismicPage, getPrismicSlugs } from "./queries";
 
@@ -18,9 +18,9 @@ export const generateStaticParams = async () => {
   }));
 };
 
-export const generateMetadata = async ({
+export async function generateMetadata({
   params,
-}: CaseStudyPageProps): Promise<Metadata> => {
+}: CaseStudyPageProps): Promise<Metadata> {
   const { caseStudySlug } = await params;
 
   const result = await getPrismicPage(caseStudySlug);
@@ -36,7 +36,7 @@ export const generateMetadata = async ({
       canonical: generateCanonical(`/portfolio/${caseStudySlug}`),
     },
   };
-};
+}
 
 const CaseStudyPage = async ({ params }: CaseStudyPageProps) => {
   const { caseStudySlug } = await params;
