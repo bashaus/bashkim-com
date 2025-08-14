@@ -5,7 +5,7 @@ import type { Meta, StoryObj } from "@storybook/nextjs";
 
 const meta = {
   component: Dialog,
-  title: "Material UI/Dialog",
+  title: "Material UI/MUI Dialog",
   args: {
     open: true,
     maxWidth: "sm",

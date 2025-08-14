@@ -4,7 +4,7 @@ import VideoLoading from ".";
 
 const meta = {
   component: VideoLoading,
-  title: "Components/Video Loading",
+  title: "Video/Video Loading",
   parameters: {
     layout: "padded",
   },

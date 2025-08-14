@@ -2,8 +2,8 @@ import type { CaptionedVideoSliceTypeFragment } from "@bashkim-com/prismic-dal";
 import { PrismicRichText } from "@bashkim-com/prismic-helpers";
 import Card from "@mui/material/Card";
 
-import VideoPlayer from "../../components/VideoPlayer";
 import CaptionedPartial from "../../partials/CaptionedPartial";
+import VideoPlayer from "../../video/VideoPlayer";
 
 export type CaptionedVideoSliceProps = Readonly<{
   slice: CaptionedVideoSliceTypeFragment;

@@ -5,7 +5,7 @@ import SocialsError from ".";
 
 const meta = {
   component: SocialsError,
-  title: "Socials/Error",
+  title: "Socials/Socials Error",
   args: {},
   parameters: {
     layout: "centered",

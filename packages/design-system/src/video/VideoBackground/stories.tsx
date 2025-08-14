@@ -4,7 +4,7 @@ import VideoBackground from ".";
 
 const meta = {
   component: VideoBackground,
-  title: "Components/Video Background",
+  title: "Video/Video Background",
   parameters: {
     layout: "fullscreen",
   },

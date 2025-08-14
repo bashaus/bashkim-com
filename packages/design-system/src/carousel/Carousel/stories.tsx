@@ -35,7 +35,7 @@ const CarouselRenderer = ({ slides, ...args }: CarouselRendererProps) => (
 
 const meta = {
   component: Carousel,
-  title: "Components/Carousel",
+  title: "Carousel/Carousel",
   argTypes: {
     slides: {
       control: "number",

@@ -4,7 +4,7 @@ import type { Meta, StoryObj } from "@storybook/nextjs";
 
 const meta = {
   component: Link,
-  title: "Material UI/Link",
+  title: "Material UI/MUI Link",
   args: {
     children: faker.lorem.words(3),
   },

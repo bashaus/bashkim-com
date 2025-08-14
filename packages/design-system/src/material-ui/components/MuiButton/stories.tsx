@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/nextjs";
 
 const meta = {
   component: Button,
-  title: "Material UI/Button",
+  title: "Material UI/MUI Button",
   args: {
     children: "Button",
   },

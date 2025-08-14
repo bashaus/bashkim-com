@@ -21,7 +21,7 @@ const CarouselSliderRenderer = () => (
 
 const meta = {
   component: CarouselSlider,
-  title: "Components/Carousel Slider",
+  title: "Carousel/Carousel Slider",
   parameters: {
     layout: "centered",
   },

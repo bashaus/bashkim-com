@@ -23,7 +23,7 @@ const DeviceFeaturePhoneRenderer = ({
 
 const meta = {
   component: DeviceFeaturePhone,
-  title: "Components/Device Feature Phone",
+  title: "Devices/Device Feature Phone",
   argTypes: {
     figure: { control: "file" },
   },

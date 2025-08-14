@@ -21,7 +21,7 @@ const CarouselDotsRenderer = () => (
 
 const meta = {
   component: CarouselDots,
-  title: "Components/Carousel Dots",
+  title: "Carousel/Carousel Dots",
   parameters: {
     layout: "centered",
   },

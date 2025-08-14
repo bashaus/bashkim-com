@@ -5,7 +5,7 @@ import VideoPlayerLink from ".";
 
 const meta = {
   component: VideoPlayerLink,
-  title: "Components/Video Player Link",
+  title: "Video/Video Player Link",
   args: {
     videoUrl: "https://youtu.be/aqz-KE-bpKQ",
     children: <Link>Video player link</Link>,

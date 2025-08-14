@@ -4,7 +4,7 @@ import type { Meta, StoryObj } from "@storybook/nextjs";
 
 const meta = {
   component: Slider,
-  title: "Material UI/Slider",
+  title: "Material UI/MUI Slider",
   render: (args: SliderProps) => (
     <Box minWidth={200}>
       <Slider {...args} />

@@ -6,7 +6,7 @@ import SocialsHeader from ".";
 
 const meta = {
   component: SocialsHeader,
-  title: "Socials/Header",
+  title: "Socials/Socials Header",
   args: {},
   parameters: {
     layout: "centered",

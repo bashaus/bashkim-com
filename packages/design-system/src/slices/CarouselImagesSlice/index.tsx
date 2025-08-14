@@ -2,8 +2,8 @@ import type { CarouselImagesSliceTypeFragment } from "@bashkim-com/prismic-dal";
 import { PrismicRichText } from "@bashkim-com/prismic-helpers";
 import Image from "next/image";
 
-import Carousel from "../../components/Carousel";
-import CarouselImage from "../../components/CarouselImage";
+import Carousel from "../../carousel/Carousel";
+import CarouselImage from "../../carousel/CarouselImage";
 import FullImagePartial from "../../partials/FullImagePartial";
 
 export type CarouselImagesSliceProps = Readonly<{

@@ -5,10 +5,10 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import Image from "next/image";
 import { useMemo } from "react";
 
-import Carousel from "../../components/Carousel";
-import CarouselImage from "../../components/CarouselImage";
-import DeviceFeaturePhone from "../../components/DeviceFeaturePhone";
-import DeviceSmartphone from "../../components/DeviceSmartphone";
+import Carousel from "../../carousel/Carousel";
+import CarouselImage from "../../carousel/CarouselImage";
+import DeviceFeaturePhone from "../../devices/DeviceFeaturePhone";
+import DeviceSmartphone from "../../devices/DeviceSmartphone";
 import FullImagePartial from "../../partials/FullImagePartial";
 
 const DeviceTypeComponents: Record<

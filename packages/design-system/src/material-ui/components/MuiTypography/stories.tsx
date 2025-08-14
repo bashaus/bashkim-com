@@ -5,7 +5,7 @@ import type { Meta, StoryObj } from "@storybook/nextjs";
 
 const meta = {
   component: Typography,
-  title: "Material UI/Typography",
+  title: "Material UI/MUI Typography",
   render: (args: TypographyProps) => (
     <Box minWidth={200}>
       <Typography {...args} />

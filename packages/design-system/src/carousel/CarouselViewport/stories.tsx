@@ -42,7 +42,7 @@ const CarouselViewportRenderer = ({
 
 const meta = {
   component: CarouselViewport,
-  title: "Components/Carousel Viewport",
+  title: "Carousel/Carousel Viewport",
   argTypes: {
     slides: {
       control: "number",

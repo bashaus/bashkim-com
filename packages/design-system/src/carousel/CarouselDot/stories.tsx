@@ -1,30 +1,30 @@
 import type { Meta, StoryObj } from "@storybook/nextjs";
 import { fn } from "storybook/test";
 
-import CarouselButtonNext from ".";
+import CarouselDot from ".";
 
 const meta = {
-  component: CarouselButtonNext,
-  title: "Components/Carousel Button Next",
+  component: CarouselDot,
+  title: "Carousel/Carousel Dot",
   args: {
     onClick: fn(),
   },
   parameters: {
     layout: "centered",
   },
-} satisfies Meta<typeof CarouselButtonNext>;
+} satisfies Meta<typeof CarouselDot>;
 
 type Story = StoryObj<typeof meta>;
 
-export const Enabled = {
+export const Default = {
   args: {
-    disabled: false,
+    "aria-current": false,
   },
 } satisfies Story;
 
-export const Disabled = {
+export const Current = {
   args: {
-    disabled: true,
+    "aria-current": true,
   },
 } satisfies Story;
 

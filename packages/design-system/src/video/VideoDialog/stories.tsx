@@ -5,7 +5,7 @@ import VideoDialog from ".";
 
 const meta = {
   component: VideoDialog,
-  title: "Components/Video Dialog",
+  title: "Video/Video Dialog",
   args: {
     open: true,
     onClose: fn(),

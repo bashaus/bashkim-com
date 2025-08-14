@@ -23,7 +23,7 @@ const DeviceSmartphoneRenderer = ({
 
 const meta = {
   component: DeviceSmartphone,
-  title: "Components/Device Smartphone",
+  title: "Devices/Device Smartphone",
   argTypes: {
     figure: { control: "file" },
     children: { control: "text" },

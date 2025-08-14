@@ -8,7 +8,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 
-import VideoPlayerLink from "../../components/VideoPlayerLink";
+import VideoPlayerLink from "../../video/VideoPlayerLink";
 
 export type GridVideoSliceProps = Readonly<{
   slice: GridVideoSliceTypeFragment;

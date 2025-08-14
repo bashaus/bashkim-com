@@ -4,7 +4,7 @@ import VideoPlayer from ".";
 
 const meta = {
   component: VideoPlayer,
-  title: "Components/Video Player",
+  title: "Video/Video Player",
   parameters: {
     layout: "padded",
   },

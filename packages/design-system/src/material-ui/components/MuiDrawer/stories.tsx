@@ -7,7 +7,7 @@ import type { Meta, StoryObj } from "@storybook/nextjs";
 
 const meta = {
   component: Drawer,
-  title: "Material UI/Drawer",
+  title: "Material UI/MUI Drawer",
   args: {
     open: true,
     children: (
