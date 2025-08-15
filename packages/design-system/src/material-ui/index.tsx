@@ -1,16 +1,16 @@
 import { createTheme } from "@mui/material/styles";
 
-import MuiButtonTheme from "./components/MuiButton";
-import MuiCssBaselineTheme from "./components/MuiCssBaseline";
-import MuiDialogTheme from "./components/MuiDialog";
-import MuiDrawerTheme from "./components/MuiDrawer";
-import MuiIconButtonTheme from "./components/MuiIconButton";
-import MuiLinkTheme from "./components/MuiLink";
-import MuiListItemTextTheme from "./components/MuiListItemText";
-import MuiListSubheaderTheme from "./components/MuiListSubheader";
-import MuiPaperTheme from "./components/MuiPaper";
-import MuiSliderTheme from "./components/MuiSlider";
-import MuiTypographyTheme from "./components/MuiTypography";
+import MuiButtonTheme from "./components/MuiButton/theme";
+import MuiCssBaselineTheme from "./components/MuiCssBaseline/theme";
+import MuiDialogTheme from "./components/MuiDialog/theme";
+import MuiDrawerTheme from "./components/MuiDrawer/theme";
+import MuiIconButtonTheme from "./components/MuiIconButton/theme";
+import MuiLinkTheme from "./components/MuiLink/theme";
+import MuiListItemTextTheme from "./components/MuiListItemText/theme";
+import MuiListSubheaderTheme from "./components/MuiListSubheader/theme";
+import MuiPaperTheme from "./components/MuiPaper/theme";
+import MuiSliderTheme from "./components/MuiSlider/theme";
+import MuiTypographyTheme from "./components/MuiTypography/theme";
 
 export const theme = createTheme({
   colorSchemes: {

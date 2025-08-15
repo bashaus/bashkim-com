@@ -1,6 +1,6 @@
 import { createTheme } from "@mui/material/styles";
 
-import Backdrop from "../../../components/Backdrop";
+import Backdrop from "../MuiBackdrop";
 
 const MuiDialogTheme = createTheme({
   components: {
