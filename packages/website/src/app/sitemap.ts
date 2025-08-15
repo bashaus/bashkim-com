@@ -15,7 +15,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const urlset: MetadataRoute.Sitemap = [];
   const now = new Date().toISOString();
 
-  const APP_BASE_HREF = "https://www.bashkim.com";
+  const { BASHKIM_COM_BASE_HREF = "https://www.bashkim.com" } = process.env;
 
   const pagesResult = await prismicClient.query<GetSitemapPagesQuery>({
     query: GetSitemapPagesDocument,
@@ -24,7 +24,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const homePage = pagesResult.data.homePage.edges?.[0]?.node;
   if (homePage) {
     urlset.push({
-      url: `${APP_BASE_HREF}/`,
+      url: `${BASHKIM_COM_BASE_HREF}/`,
       lastModified: PrismicDate(
         homePage._meta.lastPublicationDate,
       ).toISOString(),
@@ -38,7 +38,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const portfolioPage = pagesResult.data.portfolioPage.edges?.[0]?.node;
   if (portfolioPage) {
     urlset.push({
-      url: `${APP_BASE_HREF}/portfolio`,
+      url: `${BASHKIM_COM_BASE_HREF}/portfolio`,
       lastModified: PrismicDate(
         portfolioPage._meta.lastPublicationDate,
       ).toISOString(),
@@ -51,14 +51,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }
 
   urlset.push({
-    url: `${APP_BASE_HREF}/about`,
+    url: `${BASHKIM_COM_BASE_HREF}/about`,
     lastModified: now,
     changeFrequency: "monthly" as const,
     priority: 1.0,
   });
 
   urlset.push({
-    url: `${APP_BASE_HREF}/cookies`,
+    url: `${BASHKIM_COM_BASE_HREF}/cookies`,
     lastModified: now,
     changeFrequency: "monthly" as const,
     priority: 0.1,

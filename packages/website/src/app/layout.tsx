@@ -26,18 +26,18 @@ export default async function RootLayout({
   socialModals,
 }: RootLayoutProps) {
   const {
-    APP_GOOGLE_ANALYTICS_ENABLED = "0",
-    APP_GOOGLE_ANALYTICS_MEASUREMENT_ID,
+    BASHKIM_COM_GOOGLE_ANALYTICS_ENABLED = "0",
+    BASHKIM_COM_GOOGLE_ANALYTICS_MEASUREMENT_ID,
   } = process.env;
 
   const isGoogleAnalyticsConfigured =
-    APP_GOOGLE_ANALYTICS_ENABLED !== "0" &&
-    !!APP_GOOGLE_ANALYTICS_MEASUREMENT_ID;
+    BASHKIM_COM_GOOGLE_ANALYTICS_ENABLED !== "0" &&
+    !!BASHKIM_COM_GOOGLE_ANALYTICS_MEASUREMENT_ID;
 
   return (
     <html lang="en" dir="ltr">
       {isGoogleAnalyticsConfigured && (
-        <GoogleAnalytics gaId={APP_GOOGLE_ANALYTICS_MEASUREMENT_ID} />
+        <GoogleAnalytics gaId={BASHKIM_COM_GOOGLE_ANALYTICS_MEASUREMENT_ID} />
       )}
 
       <body>

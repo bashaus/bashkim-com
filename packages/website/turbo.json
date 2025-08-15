@@ -1,0 +1,14 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "extends": ["//"],
+  "tasks": {
+    "build": {
+      "outputs": [".next/**", "!.next/cache/**"],
+      "env": [
+        "BASHKIM_COM_BASE_HREF",
+        "BASHKIM_COM_GOOGLE_ANALYTICS_ENABLED",
+        "BASHKIM_COM_GOOGLE_ANALYTICS_MEASUREMENT_ID"
+      ]
+    }
+  }
+}

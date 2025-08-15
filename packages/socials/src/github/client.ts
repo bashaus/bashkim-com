@@ -7,7 +7,7 @@ import {
 import { createErrorsLink } from "@apollo-link-debug/handle-errors";
 import { createRequestLink } from "@apollo-link-debug/handle-request";
 
-const token = process.env["APP_SOCIALS_GITHUB_TOKEN"];
+const token = process.env["BASHKIM_COM_GITHUB_TOKEN"];
 
 const client = new ApolloClient({
   link: ApolloLink.from([

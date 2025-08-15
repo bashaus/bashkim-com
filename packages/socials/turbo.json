@@ -2,6 +2,9 @@
   "$schema": "https://turbo.build/schema.json",
   "extends": ["//"],
   "tasks": {
+    "build": {
+      "env": ["BASHKIM_COM_GITHUB_TOKEN"]
+    },
     "codegen:deps": {
       "cache": false,
       "outputs": ["generated/github/schema.gql"]
