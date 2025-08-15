@@ -10,6 +10,7 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import ListSubheader from "@mui/material/ListSubheader";
 import Typography from "@mui/material/Typography";
+import Image from "next/image";
 import { Fragment } from "react";
 
 import SocialMediumItem from "../SocialMediumItem";
@@ -44,9 +45,11 @@ export default function SocialMediumContent({
               >
                 <SocialMediumItem
                   image={
-                    <img
+                    <Image
                       alt={article.imageAlt}
                       src={article.imageSrc}
+                      width={1024}
+                      height={576}
                       style={{ aspectRatio: "16 / 9" }}
                     />
                   }
