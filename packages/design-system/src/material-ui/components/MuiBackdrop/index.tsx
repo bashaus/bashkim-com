@@ -11,22 +11,17 @@ export type BackdropProps = Readonly<MuiBackdropProps>;
 export default function Backdrop({
   children,
   open,
-  onTransitionStart,
-  onTransitionEnd,
   style,
   ...props
 }: BackdropProps) {
   const svgRef = useRef<SVGPathElement>(null);
   const { backgroundColor = "rgba(0, 0, 0, 0.5)", ...restStyle } = style ?? {};
 
-  // wait until DOM has been rendered
   useEffect(() => {
+    const timeline = gsap.timeline();
+
     if (open) {
-      gsap
-        .timeline({
-          onStart: onTransitionStart,
-          onComplete: onTransitionEnd,
-        })
+      timeline
         .set(svgRef.current, {
           attr: { d: "M 0 100 V 100 Q 50 100 100 100 V 100 z" },
         })
@@ -47,11 +42,7 @@ export default function Backdrop({
     }
 
     if (!open) {
-      gsap
-        .timeline({
-          onStart: onTransitionStart,
-          onComplete: onTransitionEnd,
-        })
+      timeline
         .set(svgRef.current, {
           attr: { d: "M 0 100 V 0 Q 50 0 100 0 V 100 z" },
         })
@@ -66,7 +57,11 @@ export default function Backdrop({
           attr: { d: "M 0 100 V 100 Q 50 100 100 100 V 100 z" },
         });
     }
-  }, [open, onTransitionEnd, onTransitionStart]);
+
+    return () => {
+      timeline.kill();
+    };
+  }, [open]);
 
   return (
     <MuiBackdrop

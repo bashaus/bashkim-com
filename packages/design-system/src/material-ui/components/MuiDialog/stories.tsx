@@ -8,6 +8,7 @@ const meta = {
   title: "Material UI/MUI Dialog",
   args: {
     open: true,
+    fullWidth: false,
     maxWidth: "sm",
     children: (
       <>
@@ -18,6 +19,10 @@ const meta = {
         </DialogContent>
       </>
     ),
+  },
+  argTypes: {
+    maxWidth: { control: "select", options: ["xs", "sm", "md", "lg", "xl"] },
+    children: { table: { disable: true } },
   },
 } satisfies Meta<typeof Dialog>;
 

@@ -19,6 +19,9 @@ const meta = {
       </>
     ),
   },
+  argTypes: {
+    children: { table: { disable: true } },
+  },
 } satisfies Meta<typeof Drawer>;
 
 type Story = StoryObj<typeof meta>;
