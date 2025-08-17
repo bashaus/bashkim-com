@@ -4,15 +4,15 @@ export const Footer = styled("footer")(({ theme }) => [
   {
     paddingTop: theme.spacing(10),
     paddingBottom: theme.spacing(8),
-    backgroundColor: theme.palette.action.hover,
-    clipPath: `polygon(0 40px, 100% 0, 100% 100%, 0% 100%)`,
+    backgroundColor: "var(--mui-palette-action-hover)",
+    clipPath: "polygon(0 40px, 100% 0, 100% 100%, 0% 100%)",
   },
   theme.applyStyles("light", {
-    borderTopColor: theme.palette.grey[300],
-    color: theme.palette.grey[800],
+    borderTopColor: "var(--mui-palette-grey-300)",
+    color: "var(--mui-palette-grey-800)",
   }),
   theme.applyStyles("dark", {
-    borderTopColor: theme.palette.grey[800],
-    color: theme.palette.grey[300],
+    borderTopColor: "var(--mui-palette-grey-800)",
+    color: "var(--mui-palette-grey-300)",
   }),
 ]);

@@ -17,10 +17,10 @@ export default function VideoBackground({ url }: VideoBackgroundProps) {
       <ReactPlayer
         config={{
           vimeo: {
-            title: "",
+            background: true,
           },
         }}
-        url={url}
+        src={url}
         controls={false}
         light={false}
         loop

@@ -9,12 +9,12 @@ export const CarouselDot = styled(ButtonBase)(({ theme }) => ({
   width: theme.spacing(2),
   height: theme.spacing(2),
   borderRadius: theme.spacing(1),
-  backgroundColor: theme.palette.grey[300],
+  backgroundColor: "var(--mui-palette-grey-300)",
   textIndent: -9999,
   overflow: "hidden",
   transition: "all .3s",
 
   '&[aria-current="true"]': {
-    backgroundColor: theme.palette.primary.main,
+    backgroundColor: "var(--mui-palette-primary-main)",
   },
 }));

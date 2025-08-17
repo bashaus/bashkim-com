@@ -27,7 +27,6 @@ export type VideoPlayerLinkProps = Readonly<
 export default function VideoPlayerLink({
   children,
   videoUrl,
-  title,
 }: VideoPlayerLinkProps) {
   const [open, setOpen] = useState<boolean>(false);
 
@@ -47,12 +46,7 @@ export default function VideoPlayerLink({
   return (
     <>
       {signifier}
-      <VideoDialog
-        open={open}
-        onClose={handleDialogClose}
-        url={videoUrl}
-        title={title}
-      />
+      <VideoDialog open={open} onClose={handleDialogClose} url={videoUrl} />
     </>
   );
 }

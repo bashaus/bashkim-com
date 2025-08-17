@@ -72,7 +72,7 @@ export const BaseHeader = styled(Box)(({ theme }) => [
   {
     position: "sticky",
     top: 0,
-    backgroundColor: theme.palette.background.default,
+    backgroundColor: "var(--mui-palette-background-default)",
     zIndex: theme.zIndex.appBar,
 
     transitionDuration: "0.3s",

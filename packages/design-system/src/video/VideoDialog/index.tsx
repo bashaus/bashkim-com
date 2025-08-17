@@ -5,17 +5,9 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Dialog, { DialogProps } from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
-import DialogTitle from "@mui/material/DialogTitle";
 import Stack from "@mui/material/Stack";
 import dynamic from "next/dynamic";
-import {
-  MouseEventHandler,
-  ReactNode,
-  useCallback,
-  useRef,
-  useState,
-} from "react";
-import type { ReactPlayerProps } from "react-player";
+import { MouseEventHandler, useCallback, useRef, useState } from "react";
 
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
@@ -31,11 +23,6 @@ export type VideoDialogProps = Readonly<{
   onClose: DialogProps["onClose"];
 
   /**
-   * The title or description of the video
-   */
-  title: ReactNode;
-
-  /**
    * The URL of the video to be embedded
    */
   url: string;
@@ -44,12 +31,12 @@ export type VideoDialogProps = Readonly<{
 export default function VideoDialog({
   open,
   onClose,
-  title,
+
   url,
 }: VideoDialogProps) {
   const playerRef = useRef(null);
 
-  const [playing, setPlaying] = useState<ReactPlayerProps["playing"]>(false);
+  const [playing, setPlaying] = useState<boolean>(false);
 
   const handleClose: MouseEventHandler<HTMLButtonElement> = useCallback(
     (event) => {
@@ -78,29 +65,24 @@ export default function VideoDialog({
       open={open}
       onClose={onClose}
       fullWidth
-      maxWidth="xl"
+      maxWidth="md"
       slotProps={{
         backdrop: {
           style: { backgroundColor },
         },
       }}
     >
-      <DialogTitle display="none">{title}</DialogTitle>
       <Box sx={{ aspectRatio: "16 / 9" }}>
         <ReactPlayer
           config={{
             youtube: {
-              playerVars: {
-                rel: "0",
-                iv_load_policy: "3",
-                modestbranding: "1",
-                enablejsapi: "1",
-                playsinline: "0",
-              },
+              rel: 0,
+              enablejsapi: 1,
+              iv_load_policy: 3,
             },
           }}
           ref={playerRef}
-          url={url}
+          src={url}
           playing={playing}
           controls={false}
           volume={0.8}

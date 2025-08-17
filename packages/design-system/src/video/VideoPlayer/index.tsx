@@ -1,6 +1,5 @@
 import dynamic from "next/dynamic";
 import { useCallback, useRef, useState } from "react";
-import type { ReactPlayerProps } from "react-player";
 
 import VideoLoading from "../VideoLoading";
 import * as S from "./styles";
@@ -20,7 +19,7 @@ export type VideoPlayerProps = Readonly<{
 export default function VideoPlayer({ url }: VideoPlayerProps) {
   const playerRef = useRef(null);
 
-  const [playing, setPlaying] = useState<ReactPlayerProps["playing"]>(false);
+  const [playing, setPlaying] = useState<boolean>(false);
 
   const handlePlayerPlay = useCallback(() => {
     setPlaying(true);
@@ -35,17 +34,13 @@ export default function VideoPlayer({ url }: VideoPlayerProps) {
       <ReactPlayer
         config={{
           youtube: {
-            playerVars: {
-              rel: "0",
-              iv_load_policy: "3",
-              modestbranding: "1",
-              enablejsapi: "1",
-              playsinline: "0",
-            },
+            rel: 0,
+            iv_load_policy: 3,
+            enablejsapi: 1,
           },
         }}
         ref={playerRef}
-        url={url}
+        src={url}
         playing={playing}
         controls={false}
         volume={0.8}

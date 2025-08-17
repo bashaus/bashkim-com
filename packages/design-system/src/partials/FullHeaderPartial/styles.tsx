@@ -5,11 +5,11 @@ export const Wrapper = styled("header")(({ theme }) => ({
   position: "relative",
   display: "flex",
 
-  backgroundColor: theme.palette.common.black,
+  backgroundColor: "var(--mui-palette-common-black)",
   backgroundRepeat: "no-repeat",
   backgroundSize: "cover",
   backgroundPosition: "center center",
-  color: theme.palette.common.white,
+  color: "var(--mui-palette-common-white)",
 
   zIndex: 0,
 

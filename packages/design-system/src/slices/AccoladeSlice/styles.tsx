@@ -14,14 +14,13 @@ type TrophyProps = {
   place: string;
 };
 
-export const Trophy = styled(TrophyVector)<TrophyProps>(({ theme, place }) => ({
+export const Trophy = styled(TrophyVector)<TrophyProps>(({ place }) => ({
   display: "block",
   width: 50,
   height: 50,
   marginLeft: -10,
   marginBottom: 20,
-  fill:
-    place in trophyColors ? trophyColors[place] : theme.palette.text.primary,
+  fill: place in trophyColors ? trophyColors[place] : "currentColor",
 }));
 
 export function Place(props: TypographyProps) {

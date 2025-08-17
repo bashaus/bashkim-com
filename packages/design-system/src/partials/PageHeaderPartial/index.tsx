@@ -20,10 +20,10 @@ export default function PageHeaderPartial({
       component="header"
       sx={(theme) => ({
         display: "flex",
-        color: theme.palette.common.white,
+        color: "var(--mui-palette-common-white)",
 
         minHeight: 400,
-        backgroundColor: theme.palette.grey[900],
+        backgroundColor: "var(--mui-palette-grey-900)",
         backgroundPosition: "center center",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
@@ -32,6 +32,7 @@ export default function PageHeaderPartial({
         [theme.breakpoints.down("md")]: {
           backgroundImage: imageMobile ? `url("${imageMobile}")` : undefined,
         },
+
         [theme.breakpoints.up("md")]: {
           paddingTop: "61px",
           backgroundImage: imageDesktop ? `url("${imageDesktop}")` : undefined,

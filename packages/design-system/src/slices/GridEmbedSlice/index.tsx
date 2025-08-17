@@ -17,7 +17,10 @@ export default function GridEmbedSlice({ slice }: GridEmbedSliceProps) {
               size={{ xs: 12, sm: 6, md: 6, lg: 4, xl: 4 }}
               key={JSON.stringify(embed)}
             >
-              <div dangerouslySetInnerHTML={{ __html: embed?.html ?? "" }} />
+              <div
+                suppressHydrationWarning
+                dangerouslySetInnerHTML={{ __html: embed?.html ?? "" }}
+              />
             </Grid>
           );
         })}

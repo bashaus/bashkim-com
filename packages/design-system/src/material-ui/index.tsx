@@ -14,8 +14,15 @@ import MuiTypographyTheme from "./components/MuiTypography/theme";
 
 export const theme = createTheme({
   colorSchemes: {
+    light: true,
     dark: true,
   },
+
+  cssVariables: {
+    colorSchemeSelector: "data",
+    nativeColor: true,
+  },
+
   components: {
     MuiButton: MuiButtonTheme.components?.MuiButton,
     MuiCssBaseline: MuiCssBaselineTheme.components?.MuiCssBaseline,

@@ -9,7 +9,7 @@ const MuiLinkTheme = createTheme({
           style: ({ theme }) => ({
             display: "block",
 
-            color: theme.palette.grey[600],
+            color: "var(--mui-palette-grey-600)",
             lineHeight: "150%",
             textDecoration: "none",
 
@@ -19,7 +19,7 @@ const MuiLinkTheme = createTheme({
             transition: "color .3s",
 
             "&:hover": {
-              color: theme.palette.text.primary,
+              color: "var(--mui-palette-text-primary)",
             },
           }),
         },

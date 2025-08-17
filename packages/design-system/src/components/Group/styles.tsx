@@ -1,22 +1,22 @@
 import Stack, { StackProps } from "@mui/material/Stack";
-import { darken, lighten, styled } from "@mui/material/styles";
+import { styled } from "@mui/material/styles";
 import { ComponentType } from "react";
 
 import { GroupDesign } from "./types";
 
-export const GroupDefault = styled(Stack)(({ theme }) => ({
-  backgroundColor: theme.palette.background.default,
-  color: theme.palette.text.primary,
+export const GroupDefault = styled(Stack)(() => ({
+  backgroundColor: "var(--mui-palette-background-default)",
+  color: "var(--mui-palette-text-primary)",
   alignItems: "center",
 }));
 
 export const GroupAlternate = styled(Stack)(({ theme }) => [
   {
-    backgroundColor: darken(theme.palette.background.default, 0.03),
-    color: theme.palette.text.primary,
+    backgroundColor: "var(--mui-palette-action-hover)",
+    color: "var(--mui-palette-text-primary)",
   },
   theme.applyStyles("dark", {
-    backgroundColor: lighten(theme.palette.background.default, 0.02),
+    backgroundColor: "var(--mui-palette-action-hover)",
   }),
 ]);
 
