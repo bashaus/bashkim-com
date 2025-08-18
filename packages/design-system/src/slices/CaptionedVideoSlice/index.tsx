@@ -1,6 +1,7 @@
 import type { CaptionedVideoSliceTypeFragment } from "@bashkim-com/prismic-dal";
 import { PrismicRichText } from "@bashkim-com/prismic-helpers";
 import Card from "@mui/material/Card";
+import { MediaProvider } from "media-chrome/react/media-store";
 
 import CaptionedPartial from "../../partials/CaptionedPartial";
 import VideoPlayer from "../../video/VideoPlayer";
@@ -26,14 +27,16 @@ export default function CaptionedVideoSlice({
   }
 
   return (
-    <CaptionedPartial
-      figure={
-        <Card variant="outlined">
-          <VideoPlayer url={video.embed_url} />
-        </Card>
-      }
-    >
-      <PrismicRichText render={caption} />
-    </CaptionedPartial>
+    <MediaProvider>
+      <CaptionedPartial
+        figure={
+          <Card variant="outlined">
+            <VideoPlayer url={video.embed_url} />
+          </Card>
+        }
+      >
+        <PrismicRichText render={caption} />
+      </CaptionedPartial>
+    </MediaProvider>
   );
 }

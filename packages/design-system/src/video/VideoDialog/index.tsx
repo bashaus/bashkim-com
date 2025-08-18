@@ -1,64 +1,27 @@
-import CloseIcon from "@mui/icons-material/Close";
-import PlayArrowIcon from "@mui/icons-material/PlayArrow";
-import StopIcon from "@mui/icons-material/Stop";
-import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-import Dialog, { DialogProps } from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
+import Dialog from "@mui/material/Dialog";
 import Stack from "@mui/material/Stack";
-import dynamic from "next/dynamic";
-import { MouseEventHandler, useCallback, useRef, useState } from "react";
+import { useMediaSelector } from "media-chrome/react/media-store";
 
-const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
+import VideoCloseButton from "../VideoCloseButton";
+import VideoPlayButton from "../VideoPlayButton";
+import VideoSeekBar from "../VideoSeekBar";
+import VideoTimeDisplay from "../VideoTimeDisplay";
+import VideoViewport from "../VideoViewport";
 
 export type VideoDialogProps = Readonly<{
-  /**
-   * Whether or not to display the video dialog
-   */
   open: boolean;
-
-  /**
-   * Called when the dialog is requested to be closed
-   */
-  onClose: DialogProps["onClose"];
-
-  /**
-   * The URL of the video to be embedded
-   */
+  onClose: () => void;
   url: string;
 }>;
 
-export default function VideoDialog({
-  open,
-  onClose,
-
-  url,
-}: VideoDialogProps) {
-  const playerRef = useRef(null);
-
-  const [playing, setPlaying] = useState<boolean>(false);
-
-  const handleClose: MouseEventHandler<HTMLButtonElement> = useCallback(
-    (event) => {
-      onClose?.(event, "backdropClick");
-    },
-    [onClose],
+export default function VideoDialog({ open, onClose, url }: VideoDialogProps) {
+  const mediaPaused = useMediaSelector(
+    (state) => typeof state.mediaPaused !== "boolean" || state.mediaPaused,
   );
 
-  const handlePlayerPlay = useCallback(() => {
-    setPlaying(true);
-  }, []);
-
-  const handlePlayerPause = useCallback(() => {
-    setPlaying(false);
-  }, []);
-
-  /* */
-  const handlePlayPauseClick = useCallback(() => {
-    setPlaying(!playing);
-  }, [playing]);
-
-  const backgroundColor = playing ? "rgba(0, 0, 0, .8)" : "rgba(0, 0, 0, .5)";
+  const backgroundColor = mediaPaused
+    ? "rgba(0, 0, 0, .5)"
+    : "rgba(0, 0, 0, .8)";
 
   return (
     <Dialog
@@ -72,54 +35,19 @@ export default function VideoDialog({
         },
       }}
     >
-      <Box sx={{ aspectRatio: "16 / 9" }}>
-        <ReactPlayer
-          config={{
-            youtube: {
-              rel: 0,
-              enablejsapi: 1,
-              iv_load_policy: 3,
-            },
-          }}
-          ref={playerRef}
-          src={url}
-          playing={playing}
-          controls={false}
-          volume={0.8}
-          muted={false}
-          width="100%"
-          height="100%"
-          pip={false}
-          light={false}
-          onPlay={handlePlayerPlay}
-          onPause={handlePlayerPause}
-        />
-      </Box>
-
-      <DialogActions>
-        <Stack width="100%" direction="row" justifyContent="space-between">
-          <Button
-            color="primary"
-            onClick={handlePlayPauseClick}
-            startIcon={
-              playing ? (
-                <StopIcon aria-label="Stop video" />
-              ) : (
-                <PlayArrowIcon aria-label="Play video" />
-              )
-            }
-          >
-            {playing ? "Pause" : "Play"}
-          </Button>
-
-          <Button
-            onClick={handleClose}
-            startIcon={<CloseIcon aria-label="Stop and close video" />}
-          >
-            Close
-          </Button>
-        </Stack>
-      </DialogActions>
+      <VideoViewport url={url} />
+      <Stack
+        direction="row"
+        justifyContent="space-between"
+        alignItems="center"
+        spacing={2}
+        padding={0.5}
+      >
+        <VideoPlayButton />
+        <VideoSeekBar />
+        <VideoTimeDisplay />
+        <VideoCloseButton onClick={onClose} />
+      </Stack>
     </Dialog>
   );
 }

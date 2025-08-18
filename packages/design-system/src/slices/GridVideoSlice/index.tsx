@@ -1,12 +1,12 @@
 import type { GridVideoSliceTypeFragment } from "@bashkim-com/prismic-dal";
 import { PrismicRichText } from "@bashkim-com/prismic-helpers";
-import PlayCircleIcon from "@mui/icons-material/PlayCircle";
 import Card from "@mui/material/Card";
 import CardActionArea from "@mui/material/CardActionArea";
-import CardHeader from "@mui/material/CardHeader";
 import CardMedia from "@mui/material/CardMedia";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
+import ListItem from "@mui/material/ListItem";
+import ListItemText from "@mui/material/ListItemText";
 
 import VideoPlayerLink from "../../video/VideoPlayerLink";
 
@@ -38,10 +38,11 @@ export default function GridVideoSlice({ slice }: GridVideoSliceProps) {
                 <VideoPlayerLink videoUrl={video.embed_url} title={description}>
                   <CardActionArea>
                     <CardMedia component="img" image={poster.url} />
-                    <CardHeader
-                      avatar={<PlayCircleIcon />}
-                      title={<PrismicRichText render={description} />}
-                    />
+                    <ListItem>
+                      <ListItemText
+                        primary={<PrismicRichText render={description} />}
+                      />
+                    </ListItem>
                   </CardActionArea>
                 </VideoPlayerLink>
               </Card>

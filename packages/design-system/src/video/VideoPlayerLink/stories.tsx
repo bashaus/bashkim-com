@@ -7,7 +7,7 @@ const meta = {
   component: VideoPlayerLink,
   title: "Video/Video Player Link",
   args: {
-    videoUrl: "https://youtu.be/aqz-KE-bpKQ",
+    videoUrl: "https://vimeo.com/1084537",
     children: <Link>Video player link</Link>,
   },
   argTypes: {

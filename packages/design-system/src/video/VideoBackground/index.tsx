@@ -13,7 +13,7 @@ export type VideoBackgroundProps = Readonly<{
 
 export default function VideoBackground({ url }: VideoBackgroundProps) {
   return (
-    <S.Wrapper>
+    <S.Container>
       <ReactPlayer
         config={{
           vimeo: {
@@ -35,6 +35,6 @@ export default function VideoBackground({ url }: VideoBackgroundProps) {
         width="auto"
         height="100%"
       />
-    </S.Wrapper>
+    </S.Container>
   );
 }

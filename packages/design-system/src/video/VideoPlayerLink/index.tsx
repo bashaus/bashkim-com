@@ -1,3 +1,4 @@
+import { MediaProvider } from "media-chrome/react/media-store";
 import {
   Children,
   cloneElement,
@@ -8,7 +9,7 @@ import {
   useState,
 } from "react";
 
-import VideoDialog from "../VideoDialog";
+import VideoDialog from "../VideoDialog/load";
 
 export type VideoPlayerLinkProps = Readonly<
   PropsWithChildren<{
@@ -46,7 +47,9 @@ export default function VideoPlayerLink({
   return (
     <>
       {signifier}
-      <VideoDialog open={open} onClose={handleDialogClose} url={videoUrl} />
+      <MediaProvider>
+        <VideoDialog open={open} onClose={handleDialogClose} url={videoUrl} />
+      </MediaProvider>
     </>
   );
 }

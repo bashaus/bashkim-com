@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/nextjs";
+import { MediaProvider } from "media-chrome/dist/react/media-store.js";
 import { fn } from "storybook/test";
 
 import VideoDialog from ".";
@@ -13,13 +14,20 @@ const meta = {
   parameters: {
     layout: "centered",
   },
+  decorators: [
+    (Story) => (
+      <MediaProvider>
+        <Story />
+      </MediaProvider>
+    ),
+  ],
 } satisfies Meta<typeof VideoDialog>;
 
 type Story = StoryObj<typeof meta>;
 
 export const YouTube = {
   args: {
-    url: "https://youtu.be/aqz-KE-bpKQ",
+    url: "https://vimeo.com/1084537",
   },
 } satisfies Story;
 
