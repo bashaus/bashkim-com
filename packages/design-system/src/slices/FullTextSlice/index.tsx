@@ -1,5 +1,5 @@
+import RichTextFormatter from "@bashkim-com/design-system/RichTextFormatter";
 import type { FullTextSliceTypeFragment } from "@bashkim-com/prismic-dal";
-import { PrismicRichText } from "@bashkim-com/prismic-helpers";
 
 import FullTextPartial from "../../partials/FullTextPartial";
 
@@ -16,7 +16,7 @@ export default function FullTextSlice({ slice }: FullTextSliceProps) {
 
   return (
     <FullTextPartial>
-      <PrismicRichText render={body} />
+      <RichTextFormatter field={body} />
     </FullTextPartial>
   );
 }

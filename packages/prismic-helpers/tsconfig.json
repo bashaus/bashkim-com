@@ -1,5 +1,0 @@
-{
-  "extends": "@bashkim-com/tsconfig/tsconfig.react.json",
-  "files": [],
-  "include": ["**/*.ts", "**/*.tsx"]
-}

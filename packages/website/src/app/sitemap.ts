@@ -3,7 +3,6 @@ import {
   GetSitemapPagesQuery,
 } from "@bashkim-com/prismic-dal";
 import { MetadataRoute } from "next";
-import { Date as PrismicDate } from "prismic-reactjs";
 
 import prismicClient from "@/libraries/prismic/client";
 
@@ -25,9 +24,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   if (homePage) {
     urlset.push({
       url: `${BASHKIM_COM_BASE_HREF}/`,
-      lastModified: PrismicDate(
-        homePage._meta.lastPublicationDate,
-      ).toISOString(),
+      lastModified: homePage._meta.lastPublicationDate,
       changeFrequency: (homePage.sitemap_changefreq ?? undefined) as "monthly",
       priority: homePage.sitemap_priority
         ? Number(homePage.sitemap_priority)
@@ -39,9 +36,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   if (portfolioPage) {
     urlset.push({
       url: `${BASHKIM_COM_BASE_HREF}/portfolio`,
-      lastModified: PrismicDate(
-        portfolioPage._meta.lastPublicationDate,
-      ).toISOString(),
+      lastModified: portfolioPage._meta.lastPublicationDate,
       changeFrequency: (portfolioPage.sitemap_changefreq ??
         "monthly") as "monthly",
       priority: portfolioPage.sitemap_priority

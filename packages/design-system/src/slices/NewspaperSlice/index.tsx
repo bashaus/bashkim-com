@@ -1,5 +1,5 @@
+import RichTextFormatter from "@bashkim-com/design-system/RichTextFormatter";
 import type { NewspaperSliceTypeFragment } from "@bashkim-com/prismic-dal";
-import { PrismicRichText } from "@bashkim-com/prismic-helpers";
 
 import NewspaperPartial from "../../partials/NewspaperPartial";
 
@@ -12,7 +12,7 @@ export default function NewspaperSlice({ slice }: NewspaperSliceProps) {
     <NewspaperPartial>
       {slice.fields?.map((field) => {
         const { newspaper_slice_type_group: group } = field;
-        return <PrismicRichText render={group} key={JSON.stringify(group)} />;
+        return <RichTextFormatter field={group} key={JSON.stringify(group)} />;
       })}
     </NewspaperPartial>
   );

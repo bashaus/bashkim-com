@@ -1,5 +1,5 @@
+import RichTextFormatter from "@bashkim-com/design-system/RichTextFormatter";
 import type { ExhibitionSliceTypeFragment } from "@bashkim-com/prismic-dal";
-import { PrismicDate, PrismicRichText } from "@bashkim-com/prismic-helpers";
 
 import LifespanFormatter from "../../formatters/LifespanFormatter";
 
@@ -22,14 +22,12 @@ export default function ExhibitionSlice({ slice }: ExhibitionSliceProps) {
 
   return (
     <>
-      <PrismicRichText render={name} />
-      <PrismicRichText render={location} />
+      <RichTextFormatter field={name} />
+      <RichTextFormatter field={location} />
       {!!openingDate && (
         <LifespanFormatter
-          startDate={PrismicDate(openingDate).toISOString()}
-          endDate={
-            closingDate ? PrismicDate(closingDate).toISOString() : undefined
-          }
+          startDate={openingDate}
+          endDate={closingDate ?? undefined}
         />
       )}
     </>

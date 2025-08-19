@@ -1,8 +1,8 @@
+import RichTextFormatter from "@bashkim-com/design-system/RichTextFormatter";
 import type {
   Case_Study,
   PortfolioPageFeaturedModelFragment,
 } from "@bashkim-com/prismic-dal";
-import { PrismicRichText } from "@bashkim-com/prismic-helpers";
 import Card from "@mui/material/Card";
 import CardActionArea from "@mui/material/CardActionArea";
 import CardContent from "@mui/material/CardContent";
@@ -38,7 +38,7 @@ export default function PortfolioFeaturedCaseStudies({
               key={caseStudy._meta.id}
             >
               <Stack display="flex" flexDirection="column" spacing={2}>
-                <PrismicRichText render={title} />
+                <RichTextFormatter field={title} />
 
                 <Link href={`/portfolio/${caseStudy._meta.uid}`}>
                   <Card variant="outlined">
@@ -72,7 +72,7 @@ export default function PortfolioFeaturedCaseStudies({
                   </Card>
                 </Link>
 
-                <PrismicRichText render={description} />
+                <RichTextFormatter field={description} />
               </Stack>
             </Grid>
           );

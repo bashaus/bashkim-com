@@ -1,21 +1,40 @@
-import PrismicLinkResolver from "./link-resolver";
+import linkResolver from "./link-resolver";
 
-describe("Prismic/Helpers/Link", () => {
-  describe("#PrismicLinkResolver", () => {
-    it("should handle case_study", () => {
-      expect(
-        PrismicLinkResolver({ type: "case_study", uid: "item-slug" }),
-      ).toEqual("/portfolio/item-slug");
+describe("libraries/prismic#linkResolver", () => {
+  it("should handle case_study", () => {
+    expect(
+      linkResolver({
+        id: "",
+        lang: "en",
+        type: "case_study",
+        link_type: "Document",
+        uid: "item-slug",
+        tags: [],
+      }),
+    ).toEqual("/portfolio/item-slug");
 
-      expect(
-        PrismicLinkResolver({ type: "case_study", uid: "case-study-slug" }),
-      ).toEqual("/portfolio/case-study-slug");
-    });
+    expect(
+      linkResolver({
+        id: "",
+        lang: "en",
+        type: "case_study",
+        link_type: "Document",
+        uid: "case-study-slug",
+        tags: [],
+      }),
+    ).toEqual("/portfolio/case-study-slug");
+  });
 
-    it("should throw error on unknown", () => {
-      expect(() =>
-        PrismicLinkResolver({ type: "unknown", uid: "case-study-slug" }),
-      ).toThrow();
-    });
+  it("should return null on unknown", () => {
+    expect(
+      linkResolver({
+        id: "",
+        lang: "en",
+        type: "unknown",
+        link_type: "Document",
+        uid: "item-slug",
+        tags: [],
+      }),
+    ).toBeNull();
   });
 });

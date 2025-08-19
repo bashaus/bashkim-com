@@ -1,5 +1,5 @@
+import RichTextFormatter from "@bashkim-com/design-system/RichTextFormatter";
 import type { CarouselImagesSliceTypeFragment } from "@bashkim-com/prismic-dal";
-import { PrismicRichText } from "@bashkim-com/prismic-helpers";
 import Image from "next/image";
 
 import Carousel from "../../carousel/Carousel";
@@ -38,7 +38,7 @@ export default function CarouselImagesSlice({
                 />
               }
             >
-              <PrismicRichText render={caption} />
+              <RichTextFormatter field={caption} />
             </CarouselImage>
           );
         })}

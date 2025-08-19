@@ -3,7 +3,6 @@ import {
   GetSitemapCaseStudiesQuery,
 } from "@bashkim-com/prismic-dal";
 import { MetadataRoute } from "next";
-import { Date as PrismicDate } from "prismic-reactjs";
 
 import prismicClient from "@/libraries/prismic/client";
 
@@ -24,9 +23,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       const caseStudy = edge?.node;
       urlset.push({
         url: `https://www.bashkim.com/portfolio/${caseStudy._meta.uid}`,
-        lastModified: PrismicDate(
-          caseStudy._meta.lastPublicationDate,
-        ).toISOString(),
+        lastModified: caseStudy._meta.lastPublicationDate,
         changeFrequency: (caseStudy.sitemap_changefreq ??
           "monthly") as "monthly",
         priority: Number(caseStudy.sitemap_priority ?? "0.5"),

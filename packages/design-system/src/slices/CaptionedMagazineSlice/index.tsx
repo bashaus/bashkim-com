@@ -1,5 +1,5 @@
+import RichTextFormatter from "@bashkim-com/design-system/RichTextFormatter";
 import type { CaptionedMagazineSliceTypeFragment } from "@bashkim-com/prismic-dal";
-import { PrismicRichText } from "@bashkim-com/prismic-helpers";
 import GridViewIcon from "@mui/icons-material/GridView";
 import ImportContactsIcon from "@mui/icons-material/ImportContacts";
 import Stack from "@mui/material/Stack";
@@ -55,7 +55,7 @@ export default function CaptionedMagazineSlice({
         }
       >
         <Stack spacing={2}>
-          <PrismicRichText render={caption} />
+          <RichTextFormatter field={caption} />
 
           <ToggleButtonGroup
             exclusive

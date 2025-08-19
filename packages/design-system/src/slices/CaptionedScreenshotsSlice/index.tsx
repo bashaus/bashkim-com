@@ -1,5 +1,5 @@
+import RichTextFormatter from "@bashkim-com/design-system/RichTextFormatter";
 import type { CaptionedScreenshotsSliceTypeFragment } from "@bashkim-com/prismic-dal";
-import { PrismicRichText } from "@bashkim-com/prismic-helpers";
 import Slider from "@mui/material/Slider";
 import Stack from "@mui/material/Stack";
 import { useCallback, useState } from "react";
@@ -72,7 +72,7 @@ export default function CaptionedScreenshotsSlice({
         )
       }
     >
-      <PrismicRichText render={caption} />
+      <RichTextFormatter field={caption} />
 
       <Stack direction="row" spacing={2} mt={4}>
         <S.MobileIcon aria-label="Mobile" />

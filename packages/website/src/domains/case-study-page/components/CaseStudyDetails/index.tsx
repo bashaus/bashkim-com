@@ -1,6 +1,5 @@
 import LifespanFormatter from "@bashkim-com/design-system/LifespanFormatter";
 import type { CaseStudyPageModelFragment } from "@bashkim-com/prismic-dal";
-import { PrismicDate } from "@bashkim-com/prismic-helpers";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 
@@ -136,12 +135,8 @@ export default function CaseStudyDetails({ caseStudy }: CaseStudyDetailsProps) {
             <S.DetailTitle>Lifespan</S.DetailTitle>
             <S.DetailText>
               <LifespanFormatter
-                startDate={PrismicDate(launchDate).toISOString()}
-                endDate={
-                  decommissionDate
-                    ? PrismicDate(decommissionDate).toISOString()
-                    : undefined
-                }
+                startDate={launchDate}
+                endDate={decommissionDate ?? undefined}
               />
             </S.DetailText>
           </S.Detail>

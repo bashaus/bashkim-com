@@ -1,5 +1,5 @@
+import RichTextFormatter from "@bashkim-com/design-system/RichTextFormatter";
 import type { SubtitleSliceTypeFragment } from "@bashkim-com/prismic-dal";
-import { PrismicRichText } from "@bashkim-com/prismic-helpers";
 
 import SubtitlePartial from "../../partials/SubtitlePartial";
 
@@ -19,8 +19,8 @@ export default function SubtitleSlice({ slice }: SubtitleSliceProps) {
 
   return (
     <SubtitlePartial
-      title={<PrismicRichText render={heading} />}
-      subtitle={<PrismicRichText render={description} />}
+      title={<RichTextFormatter field={heading} />}
+      subtitle={<RichTextFormatter field={description} />}
     />
   );
 }

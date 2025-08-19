@@ -1,5 +1,5 @@
+import RichTextFormatter from "@bashkim-com/design-system/RichTextFormatter";
 import type { CarouselPhonesSliceTypeFragment } from "@bashkim-com/prismic-dal";
-import { PrismicRichText } from "@bashkim-com/prismic-helpers";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Image from "next/image";
@@ -74,7 +74,7 @@ export default function CarouselPhonesSlice({
                     />
                   }
                 >
-                  <PrismicRichText render={caption} />
+                  <RichTextFormatter field={caption} />
                 </DeviceComponent>
               }
             />

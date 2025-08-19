@@ -1,5 +1,5 @@
+import RichTextFormatter from "@bashkim-com/design-system/RichTextFormatter";
 import type { GridVideoSliceTypeFragment } from "@bashkim-com/prismic-dal";
-import { PrismicRichText } from "@bashkim-com/prismic-helpers";
 import Card from "@mui/material/Card";
 import CardActionArea from "@mui/material/CardActionArea";
 import CardMedia from "@mui/material/CardMedia";
@@ -40,7 +40,7 @@ export default function GridVideoSlice({ slice }: GridVideoSliceProps) {
                     <CardMedia component="img" image={poster.url} />
                     <ListItem>
                       <ListItemText
-                        primary={<PrismicRichText render={description} />}
+                        primary={<RichTextFormatter field={description} />}
                       />
                     </ListItem>
                   </CardActionArea>

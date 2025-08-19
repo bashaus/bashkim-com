@@ -1,11 +1,11 @@
-import type { LinkResolver } from "prismic-reactjs";
+import { LinkResolverFunction } from "@prismicio/client";
 
-const PrismicLinkResolver: LinkResolver = (doc) => {
+const linkResolver: LinkResolverFunction = (doc) => {
   if (doc.type === "case_study") {
     return `/portfolio/${doc.uid}`;
   }
 
-  throw new Error(`PrismicLinkResolver: Unknown doc.type: ${doc.type}`);
+  return null;
 };
 
-export default PrismicLinkResolver;
+export default linkResolver;

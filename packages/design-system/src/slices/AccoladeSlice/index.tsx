@@ -1,15 +1,12 @@
+import { useLinkResolver } from "@bashkim-com/design-system/LinkResolver";
+import RichTextFormatter from "@bashkim-com/design-system/RichTextFormatter";
 import type { AccoladeSliceTypeFragment } from "@bashkim-com/prismic-dal";
-import {
-  PrismicDate,
-  PrismicRichText,
-  useLinkResolver,
-} from "@bashkim-com/prismic-helpers";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import ListItemButton from "@mui/material/ListItemButton";
 import Typography from "@mui/material/Typography";
-import { Link } from "prismic-reactjs";
+import { asLink, LinkField } from "@prismicio/client";
 
 import DateFormatter from "../../formatters/DateFormatter";
 import * as S from "./styles";
@@ -27,7 +24,7 @@ const AwardPlaceName: Record<string, string> = {
 };
 
 export default function AccoladeSlice({ slice }: AccoladeSliceProps) {
-  const PrismicLinkResolver = useLinkResolver();
+  const linkResolver = useLinkResolver();
 
   if (!slice.primary) {
     return null;
@@ -43,11 +40,11 @@ export default function AccoladeSlice({ slice }: AccoladeSliceProps) {
     <Container>
       <Grid container spacing={2}>
         <Grid size={{ xs: 12, sm: 12, md: 3, lg: 3, xl: 3 }}>
-          <PrismicRichText render={issuer} />
-          <PrismicRichText render={description} />
+          <RichTextFormatter field={issuer} />
+          <RichTextFormatter field={description} />
           {date && (
             <Typography fontSize="small">
-              <DateFormatter date={PrismicDate(date).toISOString()} />
+              <DateFormatter date={date} />
             </Typography>
           )}
         </Grid>
@@ -64,7 +61,8 @@ export default function AccoladeSlice({ slice }: AccoladeSliceProps) {
               accolade_slice_type_award_category: awardCategory,
             } = field;
 
-            const awardHref = Link.url(awardLink, PrismicLinkResolver);
+            const awardHref =
+              asLink(awardLink as LinkField, { linkResolver }) ?? undefined;
 
             return (
               <Grid
@@ -87,7 +85,7 @@ export default function AccoladeSlice({ slice }: AccoladeSliceProps) {
                       </Typography>
                     )}
 
-                    <PrismicRichText render={awardCategory} />
+                    <RichTextFormatter field={awardCategory} />
                   </Box>
                 </ListItemButton>
               </Grid>

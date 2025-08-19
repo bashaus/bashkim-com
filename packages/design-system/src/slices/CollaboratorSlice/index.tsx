@@ -1,18 +1,18 @@
+import { useLinkResolver } from "@bashkim-com/design-system/LinkResolver";
 import type {
   CollaboratorSliceTypeFragment,
   Peer,
 } from "@bashkim-com/prismic-dal";
-import { useLinkResolver } from "@bashkim-com/prismic-helpers";
 import MuiLink from "@mui/material/Link";
 import ListItemText from "@mui/material/ListItemText";
-import { Link } from "prismic-reactjs";
+import { asLink, LinkField } from "@prismicio/client";
 
 export type CollaboratorSliceProps = Readonly<{
   slice: CollaboratorSliceTypeFragment;
 }>;
 
 export default function CollaboratorSlice({ slice }: CollaboratorSliceProps) {
-  const PrismicLinkResolver = useLinkResolver();
+  const linkResolver = useLinkResolver();
 
   if (!slice.primary) {
     return null;
@@ -28,7 +28,7 @@ export default function CollaboratorSlice({ slice }: CollaboratorSliceProps) {
 
   const { peer_name: name, peer_website: website } = peer;
 
-  const url = Link.url(website, PrismicLinkResolver);
+  const url = asLink(website as LinkField, { linkResolver }) ?? undefined;
 
   return (
     <ListItemText

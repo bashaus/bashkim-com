@@ -1,9 +1,9 @@
+import RichTextFormatter from "@bashkim-com/design-system/RichTextFormatter";
 import SubtitlePartial from "@bashkim-com/design-system/SubtitlePartial";
 import type {
   Case_Study,
   PortfolioCategorySliceTypeFragment,
 } from "@bashkim-com/prismic-dal";
-import { PrismicRichText } from "@bashkim-com/prismic-helpers";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 
@@ -25,8 +25,8 @@ export default function PortfolioCategory({
   return (
     <>
       <SubtitlePartial
-        title={<PrismicRichText render={title} />}
-        subtitle={<PrismicRichText render={description} />}
+        title={<RichTextFormatter field={title} />}
+        subtitle={<RichTextFormatter field={description} />}
       />
 
       {fields && (

@@ -1,5 +1,5 @@
+import RichTextFormatter from "@bashkim-com/design-system/RichTextFormatter";
 import type { CaptionedVideoSliceTypeFragment } from "@bashkim-com/prismic-dal";
-import { PrismicRichText } from "@bashkim-com/prismic-helpers";
 import Card from "@mui/material/Card";
 import { MediaProvider } from "media-chrome/react/media-store";
 
@@ -35,7 +35,7 @@ export default function CaptionedVideoSlice({
           </Card>
         }
       >
-        <PrismicRichText render={caption} />
+        <RichTextFormatter field={caption} />
       </CaptionedPartial>
     </MediaProvider>
   );

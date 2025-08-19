@@ -1,6 +1,6 @@
 "use client";
 
-import { LinkResolverContext } from "@bashkim-com/prismic-helpers";
+import LinkResolverContext from "@bashkim-com/design-system/LinkResolver";
 import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider } from "@mui/material/styles";
 import { type PropsWithChildren } from "react";
@@ -10,7 +10,7 @@ import ToastController from "@/components/ToastController";
 import NavigationProvider from "@/contexts/Navigation/provider";
 import SiteSettingsProvider from "@/domains/site-settings/contexts/SiteSettings/provider";
 import theme from "@/libraries/material-ui/theme";
-import PrismicLinkResolver from "@/libraries/prismic/link-resolver";
+import linkResolver from "@/libraries/prismic/link-resolver";
 
 export type SiteLayoutProps = Readonly<PropsWithChildren>;
 
@@ -19,7 +19,7 @@ export default function SiteLayout({ children }: SiteLayoutProps) {
     <SiteSettingsProvider>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <LinkResolverContext.Provider value={PrismicLinkResolver}>
+        <LinkResolverContext.Provider value={linkResolver}>
           <NavigationProvider>
             {children}
             <GridLines />
