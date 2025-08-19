@@ -11,10 +11,10 @@
   "devDependencies": {
     "@bashkim-com/eslint": "*",
     "@bashkim-com/tsconfig": "*",
-    "@swc/jest": "^0.2.36",
-    "@types/jest": "29.5.14",
-    "jest": "29.7.0",
-    "jest-environment-jsdom": "29.7.0",
+    "@swc/jest": "^0.2.39",
+    "@types/jest": "30.0.0",
+    "jest": "30.0.5",
+    "jest-environment-jsdom": "30.0.5",
     "jest-junit": "^16.0.0"
   }
 }
