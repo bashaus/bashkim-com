@@ -7,6 +7,8 @@ import Page from "@/components/Page";
 import HomeFeatured from "@/domains/home-page/components/HomeFeatured";
 import HomeHello from "@/domains/home-page/components/HomeHello";
 
+import HomeOpenSource from "../HomeOpenSource";
+
 export default function HomePageLockup() {
   return (
     <Page>
@@ -14,6 +16,7 @@ export default function HomePageLockup() {
       <HomeHello />
       <HeaderIntersection variant="sticky" />
       <HeaderDesktop variant="base" />
+      <HomeOpenSource />
       <HomeFeatured />
     </Page>
   );

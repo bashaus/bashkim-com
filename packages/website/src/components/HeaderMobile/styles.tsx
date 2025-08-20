@@ -60,8 +60,6 @@ export const SecondaryToolbarBox = styled(Box)(() => ({
 }));
 
 export const SecondaryToolbar = styled(Toolbar)(() => ({
-  /*
   overflow: "scroll",
   scrollbarWidth: "thin",
-  */
 }));

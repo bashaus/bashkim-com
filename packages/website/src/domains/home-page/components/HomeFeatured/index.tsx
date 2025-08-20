@@ -36,7 +36,7 @@ export default function HomeFeatured() {
             <Card variant="outlined">
               <CardContent>
                 <Typography variant="h5" component="h2" gutterBottom>
-                  Open source
+                  Resources
                 </Typography>
 
                 <Typography>
@@ -54,6 +54,7 @@ export default function HomeFeatured() {
                 >
                   Github
                 </Button>
+
                 <Button
                   href="https://medium.com/@bashaus"
                   target="_blank"
