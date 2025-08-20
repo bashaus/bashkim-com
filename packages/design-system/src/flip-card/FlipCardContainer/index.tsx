@@ -25,7 +25,7 @@ export default function FlipCardContainer({ children }: ScrollProviderProps) {
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start start", "end start"],
+    offset: ["start end", "end start"],
   });
 
   return (
