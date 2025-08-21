@@ -2,7 +2,7 @@ import { styled } from "@mui/material/styles";
 
 export const Container = styled("div")(() => ({
   position: "relative",
-  height: "400vh",
+  height: "220vh",
   width: "100%",
   display: "flex",
   flexDirection: "column",
