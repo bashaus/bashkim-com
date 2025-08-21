@@ -137,11 +137,11 @@ export default function CookiesDetails() {
           </TableContainer>
 
           <Typography variant="h6" component="h3" gutterBottom>
-            YouTube
+            Vimeo
           </Typography>
 
           <Typography gutterBottom>
-            This website utilises the embedded player from YouTube to present
+            This website utilises the embedded player from Vimeo to present
             videos of work and associated artefacts.
           </Typography>
 

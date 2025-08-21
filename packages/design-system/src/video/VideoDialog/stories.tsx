@@ -25,7 +25,7 @@ const meta = {
 
 type Story = StoryObj<typeof meta>;
 
-export const YouTube = {
+export const Vimeo = {
   args: {
     url: "https://vimeo.com/1084537",
   },
