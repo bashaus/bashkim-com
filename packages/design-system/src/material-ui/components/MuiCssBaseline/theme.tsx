@@ -1,15 +1,18 @@
-import "@fontsource/space-grotesk/700.css";
-import "@fontsource/roboto/300.css";
-import "@fontsource/roboto/400.css";
-import "@fontsource/roboto/500.css";
-import "@fontsource/roboto/700.css";
-
 import { createTheme } from "@mui/material/styles";
 
+import { roboto } from "../../fonts";
+
 const MuiCssBaselineTheme = createTheme({
+  typography: {
+    fontFamily: `${roboto.style.fontFamily}, sans-serif`,
+  },
   components: {
     MuiCssBaseline: {
-      styleOverrides: () => ({
+      styleOverrides: {
+        body: {
+          fontFamily: `${roboto.style.fontFamily}, sans-serif`,
+        },
+
         a: {
           color: "inherit",
           textDecoration: "none",
@@ -25,7 +28,7 @@ const MuiCssBaselineTheme = createTheme({
           maxWidth: "100%",
           height: "auto",
         },
-      }),
+      },
     },
   },
 });

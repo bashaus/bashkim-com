@@ -78,8 +78,6 @@
     "@bashkim-com/prismic-factories": "*",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
-    "@fontsource/roboto": "^5.2.6",
-    "@fontsource/space-grotesk": "^5.2.8",
     "@mui/icons-material": "^7.3.1",
     "@mui/material": "^7.3.1",
     "@prismicio/client": "^7.20.1",

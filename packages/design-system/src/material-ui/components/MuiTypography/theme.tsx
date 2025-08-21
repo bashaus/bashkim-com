@@ -1,5 +1,7 @@
 import { createTheme } from "@mui/material/styles";
 
+import { spaceGrotesk } from "../../fonts";
+
 declare module "@mui/material/Typography" {
   interface TypographyPropsVariantOverrides {
     "footer-header": true;
@@ -8,9 +10,12 @@ declare module "@mui/material/Typography" {
 }
 
 const headingStyle = {
-  fontFamily: ['"Space Grotesk"', "Helvetica", "Arial", "sans-serif"].join(
-    ", ",
-  ),
+  fontFamily: [
+    spaceGrotesk.style.fontFamily,
+    "Helvetica",
+    "Arial",
+    "sans-serif",
+  ].join(", "),
 };
 
 const MuiTypographyTheme = createTheme({
