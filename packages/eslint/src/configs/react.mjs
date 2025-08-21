@@ -21,6 +21,7 @@ export default [
   },
   {
     rules: {
+      "react/no-array-index-key": "error",
       "react/jsx-curly-brace-presence": "error",
       "react/jsx-uses-react": "off",
       "react/prefer-read-only-props": "error",
