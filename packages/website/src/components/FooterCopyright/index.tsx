@@ -26,9 +26,7 @@ export default function FooterCopyright() {
 
         <Box ml={2}>
           <Button
-            href="https://www.github.com/bashaus/bashkim-com/"
-            target="_blank"
-            rel="noreferrer noopener"
+            href="/source"
             size="small"
             startIcon={<CodeIcon />}
             color="currentColor"
