@@ -64,7 +64,8 @@
     "./SocialsHeader": "./src/socials/components/SocialsHeader/index.tsx",
     "./SocialsMotion": "./src/socials/components/SocialsMotion/index.tsx",
     "./RichTextFormatter": "./src/prismic/RichTextFormatter/index.tsx",
-    "./LinkResolver": "./src/prismic/LinkResolver/index.ts"
+    "./LinkResolver": "./src/prismic/LinkResolver/index.ts",
+    "./CodeHighlight": "./src/code/CodeHighlight/index.tsx"
   },
   "main": "./src/index.ts",
   "scripts": {
@@ -90,6 +91,7 @@
     "motion": "^12.23.12",
     "next": "15.4.7",
     "placeholder-image-data-url-svg": "^0.0.1",
+    "prism-react-renderer": "^2.4.1",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "react-pageflip": "^2.0.3",

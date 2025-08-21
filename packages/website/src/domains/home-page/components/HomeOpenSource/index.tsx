@@ -1,5 +1,6 @@
 import BrowserWindowContent from "@bashkim-com/design-system/BrowserWindowContent";
 import BrowserWindowTitleBar from "@bashkim-com/design-system/BrowserWindowTitleBar";
+import CodeHighlight from "@bashkim-com/design-system/CodeHighlight";
 import FlipCard from "@bashkim-com/design-system/FlipCard";
 import FlipCardContainer from "@bashkim-com/design-system/FlipCardContainer";
 import FlipCardFaceBack from "@bashkim-com/design-system/FlipCardFaceBack";
@@ -11,12 +12,9 @@ import Button from "@mui/material/Button";
 import CardContent from "@mui/material/CardContent";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-import { useColorScheme } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
-import { Highlight, themes } from "prism-react-renderer";
 
 import image from "./background.png";
-import * as S from "./styles";
 
 const codeBlock = `
 import Card from "@mui/material/Card";
@@ -32,8 +30,6 @@ export default function HomePage() {
 `;
 
 export default function HomeOpenSource() {
-  const theme = useColorScheme();
-
   return (
     <Group>
       <Container>
@@ -92,30 +88,7 @@ export default function HomeOpenSource() {
                       width: "100%",
                     }}
                   >
-                    <Highlight
-                      theme={
-                        theme.mode === "dark" ? themes.vsDark : themes.vsLight
-                      }
-                      code={codeBlock.trimStart()}
-                      language="tsx"
-                    >
-                      {({ style, tokens, getLineProps, getTokenProps }) => (
-                        <S.Preformatted style={style}>
-                          <code>
-                            {tokens.map((line, i) => (
-                              <div key={i} {...getLineProps({ line })}>
-                                {line.map((token, key) => (
-                                  <span
-                                    key={key}
-                                    {...getTokenProps({ token })}
-                                  />
-                                ))}
-                              </div>
-                            ))}
-                          </code>
-                        </S.Preformatted>
-                      )}
-                    </Highlight>
+                    <CodeHighlight code={codeBlock.trimStart()} />
                   </CardContent>
                 </FlipCardFaceBack>
               </FlipCard>

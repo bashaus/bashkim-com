@@ -1,5 +1,5 @@
 import { MotionValue, useScroll } from "motion/react";
-import { createContext, ReactNode, useContext, useRef } from "react";
+import { createContext, ReactNode, useContext, useMemo, useRef } from "react";
 
 import * as S from "./styles";
 
@@ -28,8 +28,10 @@ export default function FlipCardContainer({ children }: ScrollProviderProps) {
     offset: ["start end", "end start"],
   });
 
+  const value = useMemo(() => ({ scrollYProgress }), [scrollYProgress]);
+
   return (
-    <ScrollContext.Provider value={{ scrollYProgress }}>
+    <ScrollContext.Provider value={value}>
       <S.Container ref={containerRef}>
         <S.StickyWrapper>{children}</S.StickyWrapper>
       </S.Container>
