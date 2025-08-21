@@ -19,7 +19,7 @@ export default function FlipCard({
 }: FlipCardProps) {
   const { scrollYProgress } = useScrollProgress();
 
-  const inputRange = [0.2, 0.5, 0.7];
+  const inputRange = [0.33, 0.49, 0.66];
 
   const rotateY = useTransform(scrollYProgress, inputRange, [0, 90, 180]);
   const translateX = useTransform(scrollYProgress, inputRange, [0, -50, 0]);

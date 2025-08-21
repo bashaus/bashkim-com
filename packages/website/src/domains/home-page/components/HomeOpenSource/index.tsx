@@ -11,6 +11,7 @@ import Button from "@mui/material/Button";
 import CardContent from "@mui/material/CardContent";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
+import { useColorScheme } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
 import { Highlight, themes } from "prism-react-renderer";
 
@@ -31,6 +32,8 @@ export default function HomePage() {
 `;
 
 export default function HomeOpenSource() {
+  const theme = useColorScheme();
+
   return (
     <Group>
       <Container>
@@ -73,7 +76,7 @@ export default function HomeOpenSource() {
                       backgroundSize: "cover",
                     }}
                   >
-                    <SquareLogo width={192} height={192} />
+                    <SquareLogo color="#FFF" width={192} height={192} />
                   </BrowserWindowContent>
                 </FlipCardFaceFront>
 
@@ -90,7 +93,9 @@ export default function HomeOpenSource() {
                     }}
                   >
                     <Highlight
-                      theme={themes.vsDark}
+                      theme={
+                        theme.mode === "dark" ? themes.vsDark : themes.vsLight
+                      }
                       code={codeBlock.trimStart()}
                       language="tsx"
                     >
