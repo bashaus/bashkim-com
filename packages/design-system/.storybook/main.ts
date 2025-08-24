@@ -40,6 +40,10 @@ const config: StorybookConfig = {
           },
         ],
       },
+      optimization: {
+        splitChunks: { chunks: "all" },
+        runtimeChunk: true,
+      },
     });
   },
 };
