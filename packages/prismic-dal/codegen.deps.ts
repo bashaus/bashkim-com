@@ -1,13 +1,26 @@
+import "dotenv/config";
+
 import type { CodegenConfig } from "@graphql-codegen/cli";
-import { getGraphQLEndpoint } from "@prismicio/client";
+import * as prismic from "@prismicio/client";
+
+const { PRISMICIO_ACCESS_TOKEN: accessToken } = process.env;
 
 const repositoryName = "bashkim-com";
-const uri = getGraphQLEndpoint(repositoryName);
+const uri = prismic.getGraphQLEndpoint(repositoryName);
+
+const prismicClient = prismic.createClient(repositoryName, { accessToken });
 
 const codegenConfig: CodegenConfig = {
   overwrite: true,
-  schema: uri,
-  customFetch: "codegen-prismic-fetch",
+  schema: {
+    [uri]: {
+      method: "GET",
+      headers: {
+        Authorization: `Token ${accessToken}`,
+      },
+    },
+  },
+  customFetch: prismicClient.graphQLFetch,
   generates: {
     "./generated/prismic/schema.gql": {
       plugins: ["schema-ast"],

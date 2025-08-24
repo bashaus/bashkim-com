@@ -16,6 +16,7 @@
     "@graphql-codegen/typescript": "^4.1.6",
     "@graphql-codegen/typescript-operations": "^4.6.1",
     "@graphql-codegen/typescript-react-apollo": "^4.3.3",
-    "codegen-prismic-fetch": "^1.0.5"
+    "@prismicio/client": "^7.20.1",
+    "dotenv": "^17.2.1"
   }
 }

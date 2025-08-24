@@ -6,9 +6,11 @@ import {
 } from "@apollo/client";
 import * as prismic from "@prismicio/client";
 
-export const repositoryName = "bashkim-com";
+const { PRISMICIO_ACCESS_TOKEN: accessToken } = process.env;
+const repositoryName = "bashkim-com";
 
 export const prismicClient = prismic.createClient(repositoryName, {
+  accessToken,
   routes: [
     {
       type: "case_study",

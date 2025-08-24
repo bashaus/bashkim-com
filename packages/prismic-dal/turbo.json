@@ -4,6 +4,7 @@
   "tasks": {
     "codegen:deps": {
       "cache": false,
+      "env": ["PRISMICIO_ACCESS_TOKEN"],
       "outputs": ["generated/prismic/schema.gql"]
     },
 
