@@ -7,16 +7,16 @@ import {
   GetCaseStudyPageQuery,
 } from "@bashkim-com/prismic-dal";
 
-import prismicClient from "@/libraries/prismic/client";
+import { apolloClient } from "@/libraries/prismic/client";
 
 export const getPrismicSlugs = async () => {
-  return prismicClient.query<GetCaseStudiesQuery>({
+  return apolloClient.query<GetCaseStudiesQuery>({
     query: GetCaseStudiesDocument,
   });
 };
 
 export const getPrismicPage = async (caseStudySlug: string) => {
-  return prismicClient.query<GetCaseStudyPageQuery>({
+  return apolloClient.query<GetCaseStudyPageQuery>({
     query: GetCaseStudyPageDocument,
     variables: {
       caseStudySlug,
@@ -25,7 +25,7 @@ export const getPrismicPage = async (caseStudySlug: string) => {
 };
 
 export const getPrismicBody = async (caseStudySlug: string) => {
-  return prismicClient.query<GetCaseStudyBodyQuery>({
+  return apolloClient.query<GetCaseStudyBodyQuery>({
     query: GetCaseStudyBodyDocument,
     variables: {
       caseStudySlug,

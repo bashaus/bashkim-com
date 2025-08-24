@@ -1,5 +1,7 @@
 import { getGraphQLEndpoint } from "@prismicio/client";
 import { graphql } from "msw";
 
-const uri = getGraphQLEndpoint("bashkim-com");
+const repositoryName = "bashkim-com";
+const uri = getGraphQLEndpoint(repositoryName);
+
 export const prismicLink = graphql.link(uri);

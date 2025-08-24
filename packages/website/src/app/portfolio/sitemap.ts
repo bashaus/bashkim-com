@@ -4,7 +4,7 @@ import {
 } from "@bashkim-com/prismic-dal";
 import { MetadataRoute } from "next";
 
-import prismicClient from "@/libraries/prismic/client";
+import { apolloClient } from "@/libraries/prismic/client";
 
 export async function generateSitemaps() {
   return [{ id: "case-studies" }];
@@ -14,7 +14,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const urlset: MetadataRoute.Sitemap = [];
 
   const caseStudiesResult =
-    await prismicClient.query<GetSitemapCaseStudiesQuery>({
+    await apolloClient.query<GetSitemapCaseStudiesQuery>({
       query: GetSitemapCaseStudiesDocument,
     });
 

@@ -3,10 +3,10 @@ import {
   GetHomePageQuery,
 } from "@bashkim-com/prismic-dal";
 
-import prismicClient from "@/libraries/prismic/client";
+import { apolloClient } from "@/libraries/prismic/client";
 
 export async function getPrismicPage() {
-  return prismicClient.query<GetHomePageQuery>({
+  return apolloClient.query<GetHomePageQuery>({
     query: GetHomePageDocument,
   });
 }

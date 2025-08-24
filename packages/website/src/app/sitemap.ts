@@ -4,7 +4,7 @@ import {
 } from "@bashkim-com/prismic-dal";
 import { MetadataRoute } from "next";
 
-import prismicClient from "@/libraries/prismic/client";
+import { apolloClient } from "@/libraries/prismic/client";
 
 export async function generateSitemaps() {
   return [{ id: "pages" }];
@@ -16,7 +16,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const { BASHKIM_COM_BASE_HREF = "https://www.bashkim.com" } = process.env;
 
-  const pagesResult = await prismicClient.query<GetSitemapPagesQuery>({
+  const pagesResult = await apolloClient.query<GetSitemapPagesQuery>({
     query: GetSitemapPagesDocument,
   });
 

@@ -3,10 +3,10 @@ import {
   GetPortfolioPageQuery,
 } from "@bashkim-com/prismic-dal";
 
-import prismicClient from "@/libraries/prismic/client";
+import { apolloClient } from "@/libraries/prismic/client";
 
 export async function getPrismicPage() {
-  return prismicClient.query<GetPortfolioPageQuery>({
+  return apolloClient.query<GetPortfolioPageQuery>({
     query: GetPortfolioPageDocument,
   });
 }
