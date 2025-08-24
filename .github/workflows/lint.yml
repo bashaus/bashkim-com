@@ -33,3 +33,5 @@ jobs:
 
       - name: lint
         run: npm run lint
+        env:
+          PRISMICIO_ACCESS_TOKEN: ${{ secrets.PRISMICIO_ACCESS_TOKEN }}
