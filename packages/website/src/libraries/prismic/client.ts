@@ -5,6 +5,7 @@ import {
   InMemoryCache,
 } from "@apollo/client";
 import * as prismic from "@prismicio/client";
+import { enableAutoPreviews } from "@prismicio/next";
 
 const { PRISMICIO_ACCESS_TOKEN: accessToken } = process.env;
 const repositoryName = "bashkim-com";
@@ -19,6 +20,8 @@ export const prismicClient = prismic.createClient(repositoryName, {
   ],
 });
 
+enableAutoPreviews({ client: prismicClient });
+
 export const apolloClient = new ApolloClient({
   link: ApolloLink.from([
     createHttpLink({
@@ -26,6 +29,11 @@ export const apolloClient = new ApolloClient({
       useGETForQueries: true,
       fetch: (input: RequestInfo | URL, init?: RequestInit) =>
         prismicClient.graphQLFetch(input as RequestInfo, init),
+      fetchOptions: {
+        next: {
+          tags: ["prismic"],
+        },
+      },
     }),
   ]),
   cache: new InMemoryCache(),
