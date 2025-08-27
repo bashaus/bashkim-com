@@ -4,6 +4,7 @@ import {
 } from "@bashkim-com/prismic-dal";
 import { MetadataRoute } from "next";
 
+import pathAsUrl from "@/libraries/app/path-as-url";
 import { apolloClient } from "@/libraries/prismic/client";
 
 export async function generateSitemaps() {
@@ -14,8 +15,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const urlset: MetadataRoute.Sitemap = [];
   const now = new Date().toISOString();
 
-  const { BASHKIM_COM_BASE_HREF = "https://www.bashkim.com" } = process.env;
-
   const pagesResult = await apolloClient.query<GetSitemapPagesQuery>({
     query: GetSitemapPagesDocument,
   });
@@ -23,7 +22,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const homePage = pagesResult.data.homePage.edges?.[0]?.node;
   if (homePage) {
     urlset.push({
-      url: `${BASHKIM_COM_BASE_HREF}/`,
+      url: pathAsUrl("/"),
       lastModified: homePage._meta.lastPublicationDate,
       changeFrequency: (homePage.sitemap_changefreq ?? undefined) as "monthly",
       priority: homePage.sitemap_priority
@@ -35,7 +34,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const portfolioPage = pagesResult.data.portfolioPage.edges?.[0]?.node;
   if (portfolioPage) {
     urlset.push({
-      url: `${BASHKIM_COM_BASE_HREF}/portfolio`,
+      url: pathAsUrl(`/portfolio`),
       lastModified: portfolioPage._meta.lastPublicationDate,
       changeFrequency: (portfolioPage.sitemap_changefreq ??
         "monthly") as "monthly",
@@ -46,14 +45,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }
 
   urlset.push({
-    url: `${BASHKIM_COM_BASE_HREF}/about`,
+    url: pathAsUrl("/about"),
     lastModified: now,
     changeFrequency: "monthly" as const,
     priority: 1.0,
   });
 
   urlset.push({
-    url: `${BASHKIM_COM_BASE_HREF}/cookies`,
+    url: pathAsUrl("/cookies"),
     lastModified: now,
     changeFrequency: "monthly" as const,
     priority: 0.1,

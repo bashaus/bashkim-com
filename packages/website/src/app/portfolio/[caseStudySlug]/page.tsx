@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import CaseStudyPageLockup from "@/domains/case-study-page/components/CaseStudyPageLockup";
-import generateCanonical from "@/libraries/app/generate-canonical";
+import pathAsUrl from "@/libraries/app/path-as-url";
 
 import { getPrismicBody, getPrismicPage, getPrismicSlugs } from "./queries";
 
@@ -33,7 +33,7 @@ export async function generateMetadata({
     title: caseStudyPage.meta_title,
     description: caseStudyPage.meta_description,
     alternates: {
-      canonical: generateCanonical(`/portfolio/${caseStudySlug}`),
+      canonical: pathAsUrl(`/portfolio/${caseStudySlug}`),
     },
   };
 }

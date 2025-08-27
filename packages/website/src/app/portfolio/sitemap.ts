@@ -4,6 +4,7 @@ import {
 } from "@bashkim-com/prismic-dal";
 import { MetadataRoute } from "next";
 
+import pathAsUrl from "@/libraries/app/path-as-url";
 import { apolloClient } from "@/libraries/prismic/client";
 
 export async function generateSitemaps() {
@@ -22,7 +23,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     if (edge?.node) {
       const caseStudy = edge?.node;
       urlset.push({
-        url: `https://www.bashkim.com/portfolio/${caseStudy._meta.uid}`,
+        url: pathAsUrl(`/portfolio/${caseStudy._meta.uid}`),
         lastModified: caseStudy._meta.lastPublicationDate,
         changeFrequency: (caseStudy.sitemap_changefreq ??
           "monthly") as "monthly",

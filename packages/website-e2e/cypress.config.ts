@@ -2,6 +2,9 @@ import { resolve } from "node:path";
 
 import { defineConfig } from "cypress";
 
+const { BASHKIM_COM_BASE_HREF: baseUrl = "https://www.bashkim.com" } =
+  process.env;
+
 export default defineConfig({
   reporter: resolve(
     __dirname,
@@ -21,7 +24,7 @@ export default defineConfig({
     /**
      * @override process.env.CYPRESS_BASE_URL
      */
-    baseUrl: "https://www.bashkim.com",
+    baseUrl,
     async setupNodeEvents(on, config) {
       // eslint-disable-next-line @typescript-eslint/no-require-imports
       require("cypress-mochawesome-reporter/plugin")(on);

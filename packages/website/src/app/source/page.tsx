@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 
 import SourcePageLockup from "@/domains/source-page/components/SourcePageLockup";
-import generateCanonical from "@/libraries/app/generate-canonical";
+import pathAsUrl from "@/libraries/app/path-as-url";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: "Source",
     description: "See how this website has been put together",
     alternates: {
-      canonical: generateCanonical("/source"),
+      canonical: pathAsUrl("/source"),
     },
   };
 }

@@ -1,14 +1,14 @@
 import { Metadata } from "next";
 
 import AboutPageLockup from "@/domains/about-page/components/AboutPageLockup";
-import generateCanonical from "@/libraries/app/generate-canonical";
+import pathAsUrl from "@/libraries/app/path-as-url";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: "About",
     description: "Information on the work history of Bashkim Isai",
     alternates: {
-      canonical: generateCanonical("/about"),
+      canonical: pathAsUrl("/about"),
     },
   };
 }

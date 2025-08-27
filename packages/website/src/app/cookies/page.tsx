@@ -1,14 +1,14 @@
 import { Metadata } from "next";
 
 import CookiesPageLockup from "@/domains/cookies-page/components/CookiesPageLockup";
-import generateCanonical from "@/libraries/app/generate-canonical";
+import pathAsUrl from "@/libraries/app/path-as-url";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: "Cookie policy",
     description: "How your personal information is used on this website",
     alternates: {
-      canonical: generateCanonical("/cookies"),
+      canonical: pathAsUrl("/cookies"),
     },
   };
 }
