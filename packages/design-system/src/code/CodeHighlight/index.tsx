@@ -16,7 +16,7 @@ export default function CodeHighlight({
 
   return (
     <Highlight
-      theme={theme.mode === "dark" ? themes.vsDark : themes.vsLight}
+      theme={theme.colorScheme === "dark" ? themes.vsDark : themes.vsLight}
       code={code}
       language={language}
     >
