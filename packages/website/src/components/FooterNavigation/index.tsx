@@ -2,6 +2,8 @@ import InlineLogo from "@bashkim-com/design-system/InlineLogo";
 import Container from "@mui/material/Container";
 import Link from "@mui/material/Link";
 
+import { getCookiesPath, getPortfolioPath } from "@/libraries/app/navigation";
+
 import * as S from "./styles";
 
 export default function FooterNavigation() {
@@ -36,7 +38,7 @@ export default function FooterNavigation() {
         <S.FooterColumn>
           <S.FooterHeader>Portfolio</S.FooterHeader>
 
-          <Link variant="footer-link" href="/portfolio">
+          <Link variant="footer-link" href={getPortfolioPath()}>
             Case studies
           </Link>
 
@@ -73,7 +75,7 @@ export default function FooterNavigation() {
 
         <S.FooterColumn>
           <S.FooterHeader>Legal</S.FooterHeader>
-          <Link variant="footer-link" href="/cookies">
+          <Link variant="footer-link" href={getCookiesPath()}>
             Cookies
           </Link>
         </S.FooterColumn>

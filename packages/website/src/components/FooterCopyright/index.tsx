@@ -6,6 +6,8 @@ import Stack from "@mui/material/Stack";
 import Tooltip from "@mui/material/Tooltip";
 import Typography from "@mui/material/Typography";
 
+import { getSourcePath } from "@/libraries/app/navigation";
+
 export default function FooterCopyright() {
   return (
     <Container aria-label="Copyright, Two-Thousand-and-Eight to Two-Thousand-and-Twenty-Five, Bashkim Isai. All rights reserved.">
@@ -26,7 +28,7 @@ export default function FooterCopyright() {
 
         <Box ml={2}>
           <Button
-            href="/source"
+            href={getSourcePath()}
             size="small"
             startIcon={<CodeIcon />}
             color="currentColor"

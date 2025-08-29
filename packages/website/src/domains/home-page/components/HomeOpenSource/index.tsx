@@ -14,6 +14,8 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 
+import { getSourcePath } from "@/libraries/app/navigation";
+
 import image from "./background.png";
 
 const codeBlock = `
@@ -54,7 +56,7 @@ export default function HomeOpenSource() {
               </Typography>
 
               <Box pt={3}>
-                <Button variant="outlined" href="/source">
+                <Button variant="outlined" href={getSourcePath()}>
                   Learn more
                 </Button>
               </Box>

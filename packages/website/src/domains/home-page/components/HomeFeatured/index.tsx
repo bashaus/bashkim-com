@@ -6,6 +6,8 @@ import CardContent from "@mui/material/CardContent";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 
+import { getPortfolioPath } from "@/libraries/app/navigation";
+
 import * as S from "./styles";
 
 export default function HomeFeatured() {
@@ -27,7 +29,7 @@ export default function HomeFeatured() {
               </CardContent>
 
               <CardActions>
-                <Button href="/portfolio">Case studies</Button>
+                <Button href={getPortfolioPath()}>Case studies</Button>
               </CardActions>
             </Card>
           </S.Link>

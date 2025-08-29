@@ -9,10 +9,17 @@ import Stack from "@mui/material/Stack";
 import Tooltip from "@mui/material/Tooltip";
 import Link from "next/link";
 
+import {
+  getSocialsGitHubPath,
+  getSocialsLinkedInPath,
+  getSocialsMediumPath,
+  getSocialsStackOverflowPath,
+} from "@/libraries/app/navigation";
+
 export default function HeaderSocial() {
   return (
     <Stack direction="row">
-      <Link href="/socials/github">
+      <Link href={getSocialsGitHubPath()}>
         <Tooltip title="GitHub" arrow placement="bottom">
           <IconButton sx={{ color: "currentColor" }}>
             <GitHubVector width={30} height={30} />
@@ -20,7 +27,7 @@ export default function HeaderSocial() {
         </Tooltip>
       </Link>
 
-      <Link href="/socials/medium">
+      <Link href={getSocialsMediumPath()}>
         <Tooltip title="Medium" arrow placement="bottom">
           <IconButton sx={{ color: "currentColor" }}>
             <MediumVector width={30} height={30} />
@@ -28,7 +35,7 @@ export default function HeaderSocial() {
         </Tooltip>
       </Link>
 
-      <Link href="/socials/linked-in">
+      <Link href={getSocialsLinkedInPath()}>
         <Tooltip title="LinkedIn" arrow placement="bottom">
           <IconButton sx={{ color: "currentColor" }}>
             <LinkedInOutlinedVector width={30} height={30} />
@@ -36,7 +43,7 @@ export default function HeaderSocial() {
         </Tooltip>
       </Link>
 
-      <Link href="/socials/stack-overflow">
+      <Link href={getSocialsStackOverflowPath()}>
         <Tooltip title="Stack Overflow" arrow placement="bottom">
           <IconButton sx={{ color: "currentColor" }}>
             <StackOverflowVector width={30} height={30} />

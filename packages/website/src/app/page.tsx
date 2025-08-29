@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 
 import HomePageLockup from "@/domains/home-page/components/HomePageLockup";
-import pathAsUrl from "@/libraries/app/path-as-url";
 
 import { getPrismicPage } from "./queries";
 
@@ -15,9 +14,6 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: homePage.meta_title,
     description: homePage.meta_description,
-    alternates: {
-      canonical: pathAsUrl("/"),
-    },
   };
 }
 

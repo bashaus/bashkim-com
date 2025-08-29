@@ -6,6 +6,8 @@ import Grid from "@mui/material/Grid";
 import Link from "@mui/material/Link";
 import ListItemText from "@mui/material/ListItemText";
 
+import { getHomePath } from "@/libraries/app/navigation";
+
 export type CaseStudyCollaboratorsProps = Readonly<{
   myRole?: string;
   slices: Array<CollaboratorSliceTypeFragment>;
@@ -26,7 +28,7 @@ export default function CaseStudyCollaborators({
         <Grid container rowSpacing={1} columnSpacing={2}>
           <Grid size={{ xs: 12, sm: 6, md: 4, lg: 3, xl: 3 }}>
             <ListItemText
-              primary={<Link href="/">Bashkim Isai</Link>}
+              primary={<Link href={getHomePath()}>Bashkim Isai</Link>}
               secondary={myRole}
             />
           </Grid>

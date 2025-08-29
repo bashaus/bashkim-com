@@ -1,4 +1,4 @@
-export default function pathAsUrl(pathname: string) {
+export function pathAsUrl(pathname: string) {
   const { BASHKIM_COM_BASE_HREF: baseHref = "https://www.bashkim.com" } =
     process.env;
 

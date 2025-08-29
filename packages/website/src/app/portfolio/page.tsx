@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import PortfolioPageLockup from "@/domains/portfolio-page/components/PortfolioPageLockup";
-import pathAsUrl from "@/libraries/app/path-as-url";
 
 import { getPrismicPage } from "./queries";
 
@@ -16,9 +15,6 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: portfolioPage.meta_title,
     description: portfolioPage.meta_description,
-    alternates: {
-      canonical: pathAsUrl("/portfolio"),
-    },
   };
 }
 

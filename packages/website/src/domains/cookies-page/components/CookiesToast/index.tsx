@@ -7,6 +7,7 @@ import Link from "@mui/material/Link";
 import { ToastContentProps } from "react-toastify";
 
 import CookiesVector from "@/domains/cookies-page/assets/cookies.svg";
+import { getCookiesPath } from "@/libraries/app/navigation";
 
 export type CookiesToastProps = Readonly<ToastContentProps>;
 
@@ -37,7 +38,7 @@ export default function CookiesToast({ closeToast }: CookiesToastProps) {
         subheader={
           <>
             To provide core functionality and the best possible experience.{" "}
-            <Link href="/cookies" onClick={closeToast}>
+            <Link href={getCookiesPath()} onClick={closeToast}>
               Cookie&nbsp;policy
             </Link>
             .

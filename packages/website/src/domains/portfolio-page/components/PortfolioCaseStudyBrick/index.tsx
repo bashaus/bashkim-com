@@ -2,6 +2,8 @@ import type { Case_Study } from "@bashkim-com/prismic-dal";
 import Image from "next/image";
 import Link from "next/link";
 
+import { getCaseStudyPath } from "@/libraries/app/navigation";
+
 import * as S from "./styles";
 
 export type PortfolioCaseStudyBrickProps = Readonly<{
@@ -12,7 +14,7 @@ export default function PortfolioCaseStudyBrick({
   caseStudy,
 }: PortfolioCaseStudyBrickProps) {
   return (
-    <Link href={`/portfolio/${caseStudy._meta.uid}`}>
+    <Link href={getCaseStudyPath({ caseStudySlug: caseStudy._meta.uid ?? "" })}>
       <S.Container>
         <S.Icon>
           <Image

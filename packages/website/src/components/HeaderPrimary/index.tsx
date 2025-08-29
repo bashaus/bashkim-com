@@ -1,21 +1,32 @@
 import Stack from "@mui/material/Stack";
 import { usePathname } from "next/navigation";
 
+import {
+  getAboutPath,
+  getPortfolioPath,
+  getSourcePath,
+} from "@/libraries/app/navigation";
+
 import * as S from "./styles";
 
 export default function HeaderPrimary() {
   const pathname = usePathname();
 
-  const isPortfolio = pathname?.startsWith("/portfolio");
-  const isAbout = pathname?.startsWith("/about");
-  const isSource = pathname?.startsWith("/source");
+  const portfolioPath = getPortfolioPath();
+  const isPortfolioPath = pathname.startsWith(portfolioPath);
+
+  const aboutPath = getAboutPath();
+  const isAboutPath = pathname.startsWith(aboutPath);
+
+  const sourcePath = getSourcePath();
+  const isSourcePath = pathname.startsWith(sourcePath);
 
   return (
     <Stack direction="row" role="menu">
       <S.PortfolioButton
         variant="navigation"
-        href="/portfolio"
-        aria-current={isPortfolio ? "location" : undefined}
+        href={portfolioPath}
+        aria-current={isPortfolioPath ? "location" : undefined}
         role="menuitem"
       >
         <span data-label>Portfolio</span>
@@ -23,8 +34,8 @@ export default function HeaderPrimary() {
 
       <S.AboutButton
         variant="navigation"
-        href="/about"
-        aria-current={isAbout ? "location" : undefined}
+        href={aboutPath}
+        aria-current={isAboutPath ? "location" : undefined}
         role="menuitem"
       >
         <span data-label>About</span>
@@ -32,8 +43,8 @@ export default function HeaderPrimary() {
 
       <S.SourceButton
         variant="navigation"
-        href="/source"
-        aria-current={isSource ? "location" : undefined}
+        href={sourcePath}
+        aria-current={isSourcePath ? "location" : undefined}
         role="menuitem"
       >
         <span data-label>Source</span>

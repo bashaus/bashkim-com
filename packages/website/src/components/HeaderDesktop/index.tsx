@@ -12,6 +12,7 @@ import { type HeaderDesktopVariant } from "@/components/HeaderDesktop/interfaces
 import HeaderPrimary from "@/components/HeaderPrimary";
 import HeaderSocial from "@/components/HeaderSocial";
 import { useNavigation } from "@/contexts/Navigation/context";
+import { getHomePath } from "@/libraries/app/navigation";
 
 import * as S from "./styles";
 
@@ -34,7 +35,7 @@ const variantComponent: Record<
 export default function HeaderDesktop({ variant }: HeaderDesktopProps) {
   const { navigationState } = useNavigation();
   const pathname = usePathname();
-  const isHome = pathname === "/";
+  const isHome = pathname === getHomePath();
 
   const VariantComponent = variantComponent[variant];
 
@@ -43,7 +44,7 @@ export default function HeaderDesktop({ variant }: HeaderDesktopProps) {
       <Container>
         <Toolbar disableGutters>
           <Box flex={1}>
-            <Link href="/">
+            <Link href={getHomePath()}>
               <MenuStrapline animated={isHome} />
             </Link>
           </Box>

@@ -4,7 +4,7 @@ import {
 } from "@bashkim-com/prismic-dal";
 import { MetadataRoute } from "next";
 
-import pathAsUrl from "@/libraries/app/path-as-url";
+import { pathAsUrl } from "@/libraries/app/path-as-url";
 import { apolloClient } from "@/libraries/prismic/client";
 
 export async function generateSitemaps() {

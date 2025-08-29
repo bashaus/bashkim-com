@@ -24,6 +24,8 @@ const config: Config = {
     "\\.(jpg|png)$": "identity-obj-proxy",
     "\\.s?css$": "identity-obj-proxy",
     "\\.svg$": "<rootDir>/../../.jest/transform/svg.ts",
+
+    "^@/(.*)$": "<rootDir>/src/$1",
   },
   moduleFileExtensions: ["ts", "tsx", "js", "jsx"],
   setupFilesAfterEnv: ["<rootDir>/../../.jest/setup/testing-library.jsdom.ts"],

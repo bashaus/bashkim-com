@@ -15,6 +15,8 @@ import Typography from "@mui/material/Typography";
 import Image from "next/image";
 import Link from "next/link";
 
+import { getCaseStudyPath } from "@/libraries/app/navigation";
+
 import * as S from "./styles";
 
 export type PortfolioFeaturedCaseStudiesProps = Readonly<{
@@ -40,7 +42,11 @@ export default function PortfolioFeaturedCaseStudies({
               <Stack display="flex" flexDirection="column" spacing={2}>
                 <RichTextFormatter field={title} />
 
-                <Link href={`/portfolio/${caseStudy._meta.uid}`}>
+                <Link
+                  href={getCaseStudyPath({
+                    caseStudySlug: caseStudy._meta.uid ?? "",
+                  })}
+                >
                   <Card variant="outlined">
                     <CardActionArea>
                       <CardHeader
