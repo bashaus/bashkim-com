@@ -1,6 +1,7 @@
 //@ts-check
 
 import { redirects } from "./next.redirects.mjs";
+import { rewrites } from "./next.rewrites.mjs";
 
 /**
  * @type {import('next').NextConfig}
@@ -8,6 +9,7 @@ import { redirects } from "./next.redirects.mjs";
 const nextConfig = {
   reactStrictMode: true,
   redirects,
+  rewrites,
 
   images: {
     unoptimized: true,

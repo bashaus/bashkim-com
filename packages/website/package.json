@@ -36,7 +36,9 @@
     "react-dom": "19.1.0",
     "react-toastify": "^11.0.5",
     "server-only": "^0.0.1",
-    "sharp": "^0.33.4"
+    "sharp": "^0.33.4",
+    "xmlbuilder": "^15.1.1",
+    "zod": "^4.1.5"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "15.4.7",
