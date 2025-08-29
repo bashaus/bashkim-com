@@ -15,7 +15,7 @@ You can install the application on your local system:
 
 ```bash
 git checkout git@github.com:bashaus/bashkim-com.git
-npm i
+npm install
 ```
 
 &nbsp;
