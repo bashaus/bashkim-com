@@ -2,15 +2,16 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import CaseStudyPageLockup from "@/domains/case-study-page/components/CaseStudyPageLockup";
-
-import { getPrismicBody, getPrismicPage, getPrismicSlugs } from "./queries";
+import { getCaseStudyBody } from "@/domains/case-study-page/queries/get-case-study-body";
+import { getCaseStudyPage } from "@/domains/case-study-page/queries/get-case-study-page";
+import { getCaseStudySlugs } from "@/domains/case-study-page/queries/get-case-study-slugs";
 
 export type CaseStudyPageProps = Readonly<{
   params: Promise<{ caseStudySlug: string }>;
 }>;
 
 export const generateStaticParams = async () => {
-  const caseStudiesResult = await getPrismicSlugs();
+  const caseStudiesResult = await getCaseStudySlugs();
   const edges = caseStudiesResult.data.caseStudies.edges ?? [];
   return edges.map((caseStudy) => ({
     caseStudySlug: caseStudy?.node._meta.uid ?? "",
@@ -22,7 +23,7 @@ export async function generateMetadata({
 }: CaseStudyPageProps): Promise<Metadata> {
   const { caseStudySlug } = await params;
 
-  const result = await getPrismicPage(caseStudySlug);
+  const result = await getCaseStudyPage(caseStudySlug);
   const caseStudyPage = result.data.caseStudyPage.edges?.[0]?.node;
   if (!caseStudyPage) {
     notFound();
@@ -37,8 +38,8 @@ export async function generateMetadata({
 const CaseStudyPage = async ({ params }: CaseStudyPageProps) => {
   const { caseStudySlug } = await params;
 
-  const caseStudyPagePromise = getPrismicPage(caseStudySlug);
-  const caseStudyBodyPromise = getPrismicBody(caseStudySlug);
+  const caseStudyPagePromise = getCaseStudyPage(caseStudySlug);
+  const caseStudyBodyPromise = getCaseStudyBody(caseStudySlug);
 
   const [caseStudyPageResult, caseStudyBodyResult] = await Promise.all([
     caseStudyPagePromise,

@@ -1,11 +1,10 @@
 import { Metadata } from "next";
 
 import HomePageLockup from "@/domains/home-page/components/HomePageLockup";
-
-import { getPrismicPage } from "./queries";
+import { getHomePage } from "@/domains/home-page/queries/get-home-page";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const result = await getPrismicPage();
+  const result = await getHomePage();
   const homePage = result.data.homePage.edges?.[0]?.node;
   if (!homePage) {
     throw new Error("Edge not found");

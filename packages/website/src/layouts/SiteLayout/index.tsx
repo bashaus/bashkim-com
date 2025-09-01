@@ -7,7 +7,7 @@ import { type PropsWithChildren } from "react";
 
 import GridLines from "@/components/GridLines";
 import ToastController from "@/components/ToastController";
-import NavigationProvider from "@/contexts/Navigation/provider";
+import NavigationProvider from "@/domains/navigation/provider";
 import SiteSettingsProvider from "@/domains/site-settings/contexts/SiteSettings/provider";
 import theme from "@/libraries/material-ui/theme";
 import linkResolver from "@/libraries/prismic/link-resolver";

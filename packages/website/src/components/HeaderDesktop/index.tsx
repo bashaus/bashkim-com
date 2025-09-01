@@ -11,7 +11,7 @@ import HeaderActionSiteSettings from "@/components/HeaderActionSiteSettings";
 import { type HeaderDesktopVariant } from "@/components/HeaderDesktop/interfaces";
 import HeaderPrimary from "@/components/HeaderPrimary";
 import HeaderSocial from "@/components/HeaderSocial";
-import { useNavigation } from "@/contexts/Navigation/context";
+import { useNavigation } from "@/domains/navigation/context";
 import { getHomePath } from "@/libraries/app/navigation";
 
 import * as S from "./styles";
