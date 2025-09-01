@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 
-import CookiesPageLockup from "@/domains/cookies-page/components/CookiesPageLockup";
+import CookiesPageLockup from "@/domains/cookies-page/lockups/CookiesPageLockup";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {

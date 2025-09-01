@@ -3,8 +3,8 @@
 import { AnimatePresence } from "motion/react";
 import { useActionState, useEffect, useTransition } from "react";
 
-import SocialStackOverflowContent from "@/domains/socials-stack-overflow/SocialStackOverflowContent";
-import SocialStackOverflowLoading from "@/domains/socials-stack-overflow/SocialStackOverflowLoading";
+import SocialStackOverflowContent from "@/domains/socials-stack-overflow/components/SocialStackOverflowContent";
+import SocialStackOverflowLoading from "@/domains/socials-stack-overflow/components/SocialStackOverflowLoading";
 
 import { animateStackOverflowSocials } from "./action";
 

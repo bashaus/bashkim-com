@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef } from "react";
 
-import { NavigationActionSetScrollAtTop } from "@/domains/navigation/actions";
-import { useNavigation } from "@/domains/navigation/context";
+import { NavigationActionSetScrollAtTop } from "@/domains/navigation/components/Navigation/actions";
+import { useNavigation } from "@/domains/navigation/components/Navigation/context";
 
 import { HeaderIntersectionVariant } from "./interfaces";
 import * as S from "./styles";

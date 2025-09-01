@@ -4,9 +4,9 @@ import Divider from "@mui/material/Divider";
 import { AnimatePresence } from "motion/react";
 import { useActionState, useEffect, useTransition } from "react";
 
-import SocialMediumContent from "@/domains/socials-medium/SocialMediumContent";
-import SocialMediumHeader from "@/domains/socials-medium/SocialMediumHeader";
-import SocialMediumLoading from "@/domains/socials-medium/SocialMediumLoading";
+import SocialMediumContent from "@/domains/socials-medium/components/SocialMediumContent";
+import SocialMediumHeader from "@/domains/socials-medium/components/SocialMediumHeader";
+import SocialMediumLoading from "@/domains/socials-medium/components/SocialMediumLoading";
 
 import { animateMediumSocials } from "./action";
 

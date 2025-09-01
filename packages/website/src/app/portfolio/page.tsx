@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-import PortfolioPageLockup from "@/domains/portfolio-page/components/PortfolioPageLockup";
+import PortfolioPageLockup from "@/domains/portfolio-page/lockups/PortfolioPageLockup";
 import { getPortfolioPage } from "@/domains/portfolio-page/queries/get-portfolio-page";
 
 export async function generateMetadata(): Promise<Metadata> {

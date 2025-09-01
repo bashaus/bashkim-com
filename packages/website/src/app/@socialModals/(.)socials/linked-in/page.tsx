@@ -1,4 +1,4 @@
-import SocialLinkedInContent from "@/domains/socials-linked-in/SocialLinkedInContent";
+import SocialLinkedInContent from "@/domains/socials-linked-in/components/SocialLinkedInContent";
 
 export const dynamic = "force-dynamic";
 

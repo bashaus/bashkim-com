@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 import { z } from "zod";
 
-import { pathAsUrl } from "../app/path-as-url";
+import { pathAsUrl } from "@/libraries/app/path-as-url";
 
 const defaultLocale = "en";
 

@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 
-import AboutPageLockup from "@/domains/about-page/components/AboutPageLockup";
+import AboutPageLockup from "@/domains/about-page/lockups/AboutPageLockup";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {

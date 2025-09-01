@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 
-import HomePageLockup from "@/domains/home-page/components/HomePageLockup";
+import HomePageLockup from "@/domains/home-page/lockups/HomePageLockup";
 import { getHomePage } from "@/domains/home-page/queries/get-home-page";
 
 export async function generateMetadata(): Promise<Metadata> {

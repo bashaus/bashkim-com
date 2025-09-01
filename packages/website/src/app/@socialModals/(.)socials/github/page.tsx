@@ -4,9 +4,9 @@ import Divider from "@mui/material/Divider";
 import { AnimatePresence } from "motion/react";
 import { useActionState, useEffect, useTransition } from "react";
 
-import SocialGitHubContent from "@/domains/socials-github/SocialGitHubContent";
-import SocialGitHubHeader from "@/domains/socials-github/SocialGitHubHeader";
-import SocialGitHubLoading from "@/domains/socials-github/SocialGitHubLoading";
+import SocialGitHubContent from "@/domains/socials-github/components/SocialGitHubContent";
+import SocialGitHubHeader from "@/domains/socials-github/components/SocialGitHubHeader";
+import SocialGitHubLoading from "@/domains/socials-github/components/SocialGitHubLoading";
 
 import { animateGitHubSocials } from "./action";
 

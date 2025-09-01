@@ -1,8 +1,9 @@
 import { ReactNode } from "react";
 
-import HeaderActionSiteSettings from "../HeaderActionSiteSettings";
-import HeaderPrimary from "../HeaderPrimary";
-import HeaderSocial from "../HeaderSocial";
+import HeaderActionSiteSettings from "@/components/HeaderActionSiteSettings";
+import HeaderPrimary from "@/components/HeaderPrimary";
+import HeaderSocial from "@/components/HeaderSocial";
+
 import * as S from "./styles";
 
 export type HeaderMobileProps = Readonly<{

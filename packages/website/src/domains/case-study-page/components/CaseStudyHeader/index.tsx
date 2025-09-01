@@ -6,9 +6,8 @@ import Stack from "@mui/material/Stack";
 import Image from "next/image";
 
 import CaseStudyDetails from "@/domains/case-study-page/components/CaseStudyDetails";
+import CaseStudyOutcomes from "@/domains/case-study-page/components/CaseStudyOutcomes";
 import CaseStudyTechnologies from "@/domains/case-study-page/components/CaseStudyTechnologies";
-
-import CaseStudyOutcomes from "../CaseStudyOutcomes";
 
 export type CaseStudyHeaderProps = Readonly<{
   caseStudy: CaseStudyPageModelFragment;

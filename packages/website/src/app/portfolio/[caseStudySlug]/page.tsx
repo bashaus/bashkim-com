@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-import CaseStudyPageLockup from "@/domains/case-study-page/components/CaseStudyPageLockup";
+import CaseStudyPageLockup from "@/domains/case-study-page/lockups/CaseStudyPageLockup";
 import { getCaseStudyBody } from "@/domains/case-study-page/queries/get-case-study-body";
 import { getCaseStudyPage } from "@/domains/case-study-page/queries/get-case-study-page";
 import { getCaseStudySlugs } from "@/domains/case-study-page/queries/get-case-study-slugs";
