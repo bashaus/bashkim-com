@@ -24,7 +24,6 @@
     "@next/third-parties": "15.4.7",
     "@prismicio/client": "^7.20.1",
     "@prismicio/next": "^2.0.1",
-    "@vercel/functions": "^2.2.12",
     "@vercel/speed-insights": "^1.2.0",
     "apollo-link-prismic": "^1.1.2",
     "client-only": "^0.0.1",
