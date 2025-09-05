@@ -68,7 +68,6 @@ export default function AccoladeSlice({ slice }: AccoladeSliceProps) {
               <Grid
                 size={{ xs: 12, sm: 6, md: 4, lg: 3, xl: 3 }}
                 key={JSON.stringify(field)}
-                data-prop-place={awardPlace}
               >
                 <ListItemButton
                   component="a"

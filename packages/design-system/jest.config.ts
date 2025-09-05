@@ -17,6 +17,7 @@ const config: Config = {
       },
     ],
   },
+  transformIgnorePatterns: ["node_modules/(?!(?:@prismicio|esm-env)/)"],
   moduleNameMapper: {
     "\\.(jpg|png)$": "identity-obj-proxy",
     "\\.s?css$": "identity-obj-proxy",

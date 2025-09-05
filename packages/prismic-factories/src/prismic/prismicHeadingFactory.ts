@@ -13,12 +13,10 @@ type PrismicHeading = {
   spans: [];
 };
 
-const prismicHeadingFactory = Factory.define<PrismicHeading>((opts) => {
-  const { type = "heading3", text = faker.lorem.words(3) } = opts.params;
-
+const prismicHeadingFactory = Factory.define<PrismicHeading>(() => {
   return {
-    type,
-    text,
+    type: "heading3",
+    text: faker.lorem.words(3),
     spans: [],
   };
 });
