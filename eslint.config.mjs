@@ -1,10 +1,8 @@
+// @ts-check
+
 import eslintConfig from "@bashkim-com/eslint";
+import { defineConfig } from "eslint/config";
 
-const config = [
-  ...eslintConfig.configs.base,
-  {
-    ignores: ["coverage/*", "packages/*", ".lighthouserc.cjs"],
-  },
-];
-
-export default config;
+export default defineConfig(eslintConfig.configs.base, {
+  ignores: ["coverage/*", "packages/*", ".lighthouserc.cjs"],
+});

@@ -1,16 +1,15 @@
-import jsxA11y from "eslint-plugin-jsx-a11y";
+// @ts-check
+
+import { defineConfig } from "eslint/config";
 import muiPathImportsPlugin from "eslint-plugin-mui-path-imports";
 import pluginReact from "eslint-plugin-react";
 import pluginReactHooks from "eslint-plugin-react-hooks";
 import storybook from "eslint-plugin-storybook";
 
-import env from "./base.mjs";
+import base from "./base.mjs";
 
-export default [
-  ...env,
-
-  /* eslint-plugin-jsx-a11y */
-  jsxA11y.flatConfigs.recommended,
+export default defineConfig(
+  base,
 
   /* eslint-plugin-react */
   {
@@ -86,4 +85,4 @@ export default [
 
   /* eslint-plugin-storybook */
   ...storybook.configs["flat/recommended"],
-];
+);

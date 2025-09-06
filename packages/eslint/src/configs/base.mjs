@@ -1,6 +1,7 @@
 import { fixupConfigRules } from "@eslint/compat";
 import { FlatCompat } from "@eslint/eslintrc";
 import js from "@eslint/js";
+import { defineConfig } from "eslint/config";
 import jestPlugin from "eslint-plugin-jest";
 import prettierPlugin from "eslint-plugin-prettier/recommended";
 import promisePlugin from "eslint-plugin-promise";
@@ -10,7 +11,7 @@ import tseslint from "typescript-eslint";
 
 const flatCompat = new FlatCompat();
 
-export default tseslint.config(
+export default defineConfig(
   /* eslint */
   js.configs.recommended,
   {
@@ -65,11 +66,6 @@ export default tseslint.config(
 
   /* eslint-plugin-sonarjs */
   sonarjsPlugin.configs.recommended,
-  // {
-  //   rules: {
-  //     "sonarjs/redundant-type-aliases": "off",
-  //   },
-  // },
 
   /* eslint-plugin-jest */
   {

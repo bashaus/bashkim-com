@@ -1,3 +1,7 @@
-import env from "./base.mjs";
+// @ts-check
 
-export default [...env];
+import { defineConfig } from "eslint/config";
+
+import base from "./base.mjs";
+
+export default defineConfig(base);

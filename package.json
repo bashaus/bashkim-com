@@ -27,17 +27,17 @@
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
     "@svgr/webpack": "^8.1.0",
-    "@swc/core": "^1.11.16",
+    "@swc/core": "^1.13.5",
     "@types/node": "^22.14.0",
-    "eslint": "^9.33.0",
+    "eslint": "^9.35.0",
     "husky": "^9.1.7",
-    "npm-check-updates": "^18.0.2",
+    "npm-check-updates": "^18.0.3",
     "prettier": "3.6.2",
-    "sass": "^1.90.0",
+    "sass": "^1.92.1",
     "ts-node": "10.9.2",
     "turbo": "^2.5.6",
     "typescript": "5.9.2",
-    "webpack": "^5.98.0"
+    "webpack": "^5.101.3"
   },
   "packageManager": "npm@11.4.2"
 }
