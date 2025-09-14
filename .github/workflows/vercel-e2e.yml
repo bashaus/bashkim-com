@@ -10,7 +10,7 @@ jobs:
       contains(github.event.deployment.environment, 'bashkim-com-website')
     runs-on: ubuntu-latest
     container:
-      image: cypress/browsers:24.8.0
+      image: cypress/browsers:22.19.0
       options: --user 1001
     strategy:
       matrix:
