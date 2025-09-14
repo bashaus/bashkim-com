@@ -10,7 +10,7 @@ jobs:
       contains(github.event.deployment.environment, 'bashkim-com-website')
     runs-on: ubuntu-latest
     container:
-      image: cypress/browsers:22.15.0
+      image: cypress/browsers:24.8.0
       options: --user 1001
     strategy:
       matrix:
@@ -24,7 +24,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: "22.15.0"
+          node-version: "24.8.0"
           cache: "npm"
 
       - name: "npm: install"

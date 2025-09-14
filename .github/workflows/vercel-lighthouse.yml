@@ -16,7 +16,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: "22.15.0"
+          node-version: "24.8.0"
 
       - name: "lhci: install"
         run: npm install -g @lhci/cli
