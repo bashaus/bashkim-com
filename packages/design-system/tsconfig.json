@@ -1,8 +1,5 @@
 {
   "extends": "@bashkim-com/tsconfig/tsconfig.react.json",
-  "compilerOptions": {
-    "types": ["jest", "@testing-library/jest-dom"]
-  },
   "files": [],
   "include": ["**/*.ts", "**/*.tsx"]
 }
