@@ -18,7 +18,7 @@ const config = [
     },
   },
   {
-    ignores: ["coverage", ".next"],
+    ignores: ["coverage", ".next", "next-env.d.ts"],
   },
 ];
 
