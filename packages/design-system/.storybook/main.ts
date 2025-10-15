@@ -1,5 +1,6 @@
+import { dirname, join } from "node:path";
+
 import type { StorybookConfig } from "@storybook/nextjs";
-import { dirname, join } from "path";
 import merge from "webpack-merge";
 
 function getAbsolutePath(value: string): string {
