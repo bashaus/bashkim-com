@@ -1,7 +1,7 @@
 import { PropsWithChildren } from "react";
 
 import * as S from "./styles";
-import { GroupDesign } from "./types";
+import type { GroupDesign } from "./types";
 
 export type GroupProps = Readonly<
   PropsWithChildren<{
@@ -30,4 +30,4 @@ export default function Group({
   );
 }
 
-export { type GroupDesign };
+export type { GroupDesign } from "./types";
