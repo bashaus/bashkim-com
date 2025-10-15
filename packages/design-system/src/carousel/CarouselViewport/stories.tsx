@@ -21,7 +21,7 @@ const CarouselViewportRenderer = ({
   <Container maxWidth="md">
     <CarouselProvider slidesVisible={slidesVisible}>
       <CarouselViewport {...args}>
-        {Array(slides)
+        {new Array(slides)
           .fill("")
           .map((_value, i) => i + 1)
           .map((value) => (

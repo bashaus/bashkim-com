@@ -13,7 +13,7 @@ export default function GridLines() {
   return (
     <S.GridLines>
       <S.GridContainer container spacing={2}>
-        {Array(12)
+        {new Array(12)
           .fill("")
           .map((_value, i) => i + 1)
           .map((value) => (

@@ -14,7 +14,7 @@ const NewspaperPartialRenderer = ({
   ...args
 }: NewspaperPartialRendererProps) => (
   <NewspaperPartial {...args}>
-    {Array(paragraphs)
+    {new Array(paragraphs)
       .fill("")
       .map((_value, i) => i + 1)
       .map((value) => (

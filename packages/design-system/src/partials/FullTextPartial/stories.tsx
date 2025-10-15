@@ -19,7 +19,7 @@ const FullTextPartialRenderer = ({
       {title}
     </Typography>
 
-    {Array(6)
+    {new Array(6)
       .fill("")
       .map((_value, i) => i + 1)
       .map((value) => (
