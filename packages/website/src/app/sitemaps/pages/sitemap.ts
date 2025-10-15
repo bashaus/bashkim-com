@@ -47,7 +47,7 @@ export default async function PagesSitemap(): Promise<MetadataRoute.Sitemap> {
   urlset.push(
     await sitemapFileSchema.parseAsync({
       paths: [["en", getAboutPath({})]],
-      priority: 1.0,
+      priority: 1,
     }),
   );
 
