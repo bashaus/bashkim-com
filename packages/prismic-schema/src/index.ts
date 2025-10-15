@@ -1,6 +1,5 @@
+import fs from "node:fs/promises";
 import path from "node:path";
-
-import fs from "fs/promises";
 
 import CaseStudyContentTypeSchema from "./content-types/case_study/schema";
 import HomePageContentTypeSchema from "./content-types/home_page/schema";
