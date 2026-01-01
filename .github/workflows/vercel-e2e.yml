@@ -42,7 +42,7 @@ jobs:
 
       - name: "cy: report ${{ matrix.browser }}"
         if: always()
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: "cypress-report-${{ matrix.browser }}"
           path: packages/website-e2e/cypress/reports
