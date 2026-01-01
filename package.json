@@ -24,20 +24,20 @@
   },
   "devDependencies": {
     "@bashkim-com/eslint": "*",
-    "@commitlint/cli": "^20.1.0",
-    "@commitlint/config-conventional": "^20.0.0",
+    "@commitlint/cli": "^20.3.0",
+    "@commitlint/config-conventional": "^20.3.0",
     "@svgr/webpack": "^8.1.0",
-    "@swc/core": "^1.13.5",
-    "@types/node": "^24.9.1",
-    "eslint": "^9.38.0",
+    "@swc/core": "^1.15.8",
+    "@types/node": "^25.0.3",
+    "eslint": "^9.39.2",
     "husky": "^9.1.7",
-    "npm-check-updates": "^19.1.1",
-    "prettier": "3.6.2",
-    "sass": "^1.93.2",
+    "npm-check-updates": "^19.2.0",
+    "prettier": "3.7.4",
+    "sass": "^1.97.1",
     "ts-node": "10.9.2",
     "turbo": "^2.7.2",
     "typescript": "5.9.3",
-    "webpack": "^5.102.1"
+    "webpack": "^5.104.1"
   },
-  "packageManager": "npm@11.4.2"
+  "packageManager": "npm@11.7.0"
 }
