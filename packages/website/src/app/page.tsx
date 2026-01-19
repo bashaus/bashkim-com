@@ -2,6 +2,8 @@ import { Metadata } from "next";
 
 import HomePageLockup from "@/domains/home-page/lockups/HomePageLockup";
 import { getHomePage } from "@/domains/home-page/queries/get-home-page";
+import { getHomePath } from "@/libraries/app/navigation";
+import { pathAsUrl } from "@/libraries/app/path-as-url";
 
 export async function generateMetadata(): Promise<Metadata> {
   const result = await getHomePage();
@@ -13,6 +15,9 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: homePage.meta_title,
     description: homePage.meta_description,
+    alternates: {
+      canonical: pathAsUrl(getHomePath()),
+    },
   };
 }
 

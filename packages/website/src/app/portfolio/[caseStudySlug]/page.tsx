@@ -5,6 +5,8 @@ import CaseStudyPageLockup from "@/domains/case-study-page/lockups/CaseStudyPage
 import { getCaseStudyBody } from "@/domains/case-study-page/queries/get-case-study-body";
 import { getCaseStudyPage } from "@/domains/case-study-page/queries/get-case-study-page";
 import { getCaseStudySlugs } from "@/domains/case-study-page/queries/get-case-study-slugs";
+import { getCaseStudyPath } from "@/libraries/app/navigation";
+import { pathAsUrl } from "@/libraries/app/path-as-url";
 
 export type CaseStudyPageProps = Readonly<{
   params: Promise<{ caseStudySlug: string }>;
@@ -32,6 +34,9 @@ export async function generateMetadata({
   return {
     title: caseStudyPage.meta_title,
     description: caseStudyPage.meta_description,
+    alternates: {
+      canonical: pathAsUrl(getCaseStudyPath({ caseStudySlug })),
+    },
   };
 }
 

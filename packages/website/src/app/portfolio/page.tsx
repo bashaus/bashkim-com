@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 
 import PortfolioPageLockup from "@/domains/portfolio-page/lockups/PortfolioPageLockup";
 import { getPortfolioPage } from "@/domains/portfolio-page/queries/get-portfolio-page";
+import { getPortfolioPath } from "@/libraries/app/navigation";
+import { pathAsUrl } from "@/libraries/app/path-as-url";
 
 export async function generateMetadata(): Promise<Metadata> {
   const result = await getPortfolioPage();
@@ -14,6 +16,9 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: portfolioPage.meta_title,
     description: portfolioPage.meta_description,
+    alternates: {
+      canonical: pathAsUrl(getPortfolioPath()),
+    },
   };
 }
 
