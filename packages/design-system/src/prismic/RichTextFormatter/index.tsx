@@ -1,5 +1,5 @@
 import { RichTextField } from "@prismicio/client";
-import { JSXMapSerializer, PrismicRichText } from "@prismicio/react";
+import { PrismicRichText, RichTextComponents } from "@prismicio/react";
 
 import { useLinkResolver } from "../LinkResolver";
 import RTEm from "./components/RTEm";
@@ -14,7 +14,7 @@ import RTParagraph from "./components/RTParagraph";
 import RTPreformatted from "./components/RTPreformatted";
 import RTStrong from "./components/RTStrong";
 
-const components: JSXMapSerializer = {
+const components: RichTextComponents = {
   heading1: RTHeading1,
   heading2: RTHeading2,
   heading3: RTHeading3,

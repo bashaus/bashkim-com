@@ -2,6 +2,18 @@ import type { Config } from "jest";
 
 const config: Config = {
   displayName: "design-system",
+  reporters: [
+    "default",
+    [
+      "jest-junit",
+      {
+        outputDirectory: "test-results/jest",
+        ancestorSeparator: " › ",
+        usePathForSuiteName: "true",
+      },
+    ],
+  ],
+  collectCoverageFrom: ["src/**/*.{ts,tsx}", "!**/*.d.ts", "!**/stories.tsx"],
   testEnvironment: "jsdom",
   transform: {
     "^.+\\.[tj]sx?$": [

@@ -15,7 +15,13 @@ export default defineConfig(
   /* eslint */
   js.configs.recommended,
   {
-    ignores: ["dist/*", ".turbo/*", "coverage/*", "test-reports/*"],
+    ignores: [
+      "coverage/*",
+      "dist/*",
+      ".turbo/*",
+      "coverage/*",
+      "test-reports/*",
+    ],
   },
   {
     rules: {

@@ -72,7 +72,7 @@
     "dev": "storybook dev -p 6006",
     "lint": "eslint .",
     "storybook:build": "storybook build",
-    "test": "jest --passWithNoTests"
+    "test": "jest --passWithNoTests --coverage"
   },
   "dependencies": {
     "@bashkim-com/prismic-dal": "*",

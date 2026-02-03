@@ -30,6 +30,11 @@
     "storybook:build": {
       "dependsOn": ["codegen"],
       "outputs": ["storybook-static/"]
+    },
+
+    "test": {
+      "dependsOn": ["build"],
+      "inputs": ["$TURBO_DEFAULT$", ".env*"]
     }
   }
 }

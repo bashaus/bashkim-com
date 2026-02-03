@@ -20,7 +20,7 @@
     "lint": "eslint . && turbo run lint",
     "prepare": "husky || true",
     "storybook:build": "turbo run storybook:build",
-    "test": "jest --passWithNoTests"
+    "test": "turbo run test"
   },
   "devDependencies": {
     "@bashkim-com/eslint": "*",

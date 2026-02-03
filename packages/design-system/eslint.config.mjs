@@ -5,7 +5,7 @@ const config = [
   ...eslintConfig.configs.react,
   ...storybook.configs["flat/recommended"],
   {
-    ignores: ["storybook-static/*"],
+    ignores: ["coverage/*", "storybook-static/*"],
   },
 ];
 

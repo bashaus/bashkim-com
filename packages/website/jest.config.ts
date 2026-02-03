@@ -5,6 +5,18 @@ const createJestConfig = nextJest({});
 
 const config: Config = {
   displayName: "website",
+  reporters: [
+    "default",
+    [
+      "jest-junit",
+      {
+        outputDirectory: "test-results/jest",
+        ancestorSeparator: " › ",
+        usePathForSuiteName: "true",
+      },
+    ],
+  ],
+  collectCoverageFrom: ["src/**/*.{ts,tsx}", "!**/*.d.ts", "!**/stories.tsx"],
   testEnvironment: "jsdom",
   transform: {
     "^.+\\.[tj]sx?$": [

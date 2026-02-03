@@ -3,7 +3,7 @@ import eslintConfig from "@bashkim-com/eslint";
 const config = [
   ...eslintConfig.configs.base,
   {
-    ignores: ["src/github/graphql-types.ts"],
+    ignores: ["coverage/*", "src/github/graphql-types.ts"],
   },
 ];
 

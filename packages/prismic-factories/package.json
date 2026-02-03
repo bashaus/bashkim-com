@@ -4,7 +4,7 @@
   "main": "./src/index",
   "scripts": {
     "lint": "eslint .",
-    "test": "jest --passWithNoTests"
+    "test": "jest --passWithNoTests --coverage"
   },
   "exports": {
     ".": "./src/index.ts",

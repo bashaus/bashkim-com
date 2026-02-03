@@ -13,7 +13,7 @@
     "codegen:deps": "graphql-codegen --config codegen.deps.ts",
     "dev": "graphql-codegen --config codegen.ts --watch",
     "lint": "eslint .",
-    "test": "jest --passWithNoTests"
+    "test": "jest --passWithNoTests --coverage"
   },
   "dependencies": {
     "@apollo-link-debug/handle-errors": "^0.1.0",

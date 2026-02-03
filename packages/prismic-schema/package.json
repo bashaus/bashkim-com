@@ -5,7 +5,7 @@
   "scripts": {
     "generate": "ts-node .",
     "lint": "eslint .",
-    "test": "jest --passWithNoTests"
+    "test": "jest --passWithNoTests --coverage"
   },
   "dependencies": {},
   "devDependencies": {
