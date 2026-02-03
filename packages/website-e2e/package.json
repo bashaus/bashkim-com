@@ -9,7 +9,7 @@
     "lint": "eslint ."
   },
   "devDependencies": {
-    "cypress": "^14.5.4",
+    "cypress": "^15.9.0",
     "cypress-mochawesome-reporter": "^4.0.2",
     "mochawesome": "^1.5.5",
     "mochawesome-merge": "^5.0.0",
