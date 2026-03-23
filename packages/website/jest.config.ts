@@ -16,6 +16,7 @@ const config: Config = {
       },
     ],
   ],
+  collectCoverage: true,
   collectCoverageFrom: ["src/**/*.{ts,tsx}", "!**/*.d.ts", "!**/stories.tsx"],
   testEnvironment: "jsdom",
   transform: {
