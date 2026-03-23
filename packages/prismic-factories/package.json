@@ -3,8 +3,7 @@
   "version": "0.0.0",
   "main": "./src/index",
   "scripts": {
-    "lint": "eslint .",
-    "test": "jest --passWithNoTests --coverage"
+    "lint": "eslint ."
   },
   "exports": {
     ".": "./src/index.ts",
@@ -69,11 +68,6 @@
   },
   "devDependencies": {
     "@bashkim-com/eslint": "*",
-    "@bashkim-com/tsconfig": "*",
-    "@swc/jest": "^0.2.39",
-    "@types/jest": "30.0.0",
-    "jest": "30.1.3",
-    "jest-environment-jsdom": "30.1.2",
-    "jest-junit": "^16.0.0"
+    "@bashkim-com/tsconfig": "*"
   }
 }
