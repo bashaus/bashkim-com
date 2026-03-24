@@ -81,7 +81,7 @@
     "@emotion/styled": "^11.14.1",
     "@mui/icons-material": "^7.3.9",
     "@mui/material": "^7.3.9",
-    "@prismicio/client": "^7.20.1",
+    "@prismicio/client": "^7.21.6",
     "@prismicio/react": "^3.2.1",
     "classnames": "^2.5.1",
     "embla-carousel": "^8.6.0",
