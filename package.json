@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "@bashkim-com/eslint": "*",
-    "@swc/core": "^1.15.8",
+    "@swc/core": "^1.15.21",
     "@types/node": "^25.5.0",
     "eslint": "^9.39.2",
     "npm-check-updates": "^19.2.0",
