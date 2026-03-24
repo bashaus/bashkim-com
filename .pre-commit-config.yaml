@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=https://json.schemastore.org/pre-commit-config.json
+
+fail_fast: true
+default_stages:
+  - pre-commit
+default_install_hook_types:
+  - pre-commit
+  - commit-msg
+
+repos:
+  - repo: https://github.com/jorisroovers/gitlint
+    rev: v0.19.1
+    hooks:
+      - id: gitlint
+
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.24.2
+    hooks:
+      - id: gitleaks
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: check-yaml
+      - id: check-json
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: mixed-line-ending
+        args:
+          - "--fix=lf"
+
+  - repo: local
+    hooks:
+      - id: prettier
+        name: prettier
+        language: node
+        additional_dependencies:
+          - prettier@3.8.1
+          - prettier-plugin-packagejson@3.0.2
+        entry: npx prettier --write --ignore-unknown --log-level=silent
+        pass_filenames: true
