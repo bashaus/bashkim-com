@@ -62,7 +62,7 @@
   },
   "dependencies": {
     "@bashkim-com/prismic-dal": "*",
-    "@faker-js/faker": "^9.9.0",
+    "@faker-js/faker": "^10.4.0",
     "fishery": "^2.3.1",
     "placeholder-image-data-url-svg": "^0.0.1"
   },

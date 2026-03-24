@@ -100,7 +100,7 @@
   "devDependencies": {
     "@bashkim-com/eslint": "*",
     "@bashkim-com/tsconfig": "*",
-    "@faker-js/faker": "^9.9.0",
+    "@faker-js/faker": "^10.4.0",
     "@storybook/addon-a11y": "10.3.3",
     "@storybook/nextjs": "10.3.3",
     "@swc/jest": "^0.2.39",
