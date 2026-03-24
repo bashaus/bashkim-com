@@ -12,7 +12,7 @@
     "cypress": "^15.9.0",
     "cypress-mochawesome-reporter": "^4.0.2",
     "mochawesome": "^7.1.4",
-    "mochawesome-merge": "^5.1.0",
+    "mochawesome-merge": "^5.1.1",
     "mochawesome-report-generator": "^6.3.2",
     "typescript": "5.9.3"
   }
