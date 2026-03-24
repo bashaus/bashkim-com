@@ -12,7 +12,7 @@
     "@types/react": "19.2.14"
   },
   "dependencies": {
-    "@apollo/client": "^3.13.9",
+    "@apollo/client": "^4.1.6",
     "@bashkim-com/design-system": "*",
     "@bashkim-com/prismic-dal": "*",
     "@bashkim-com/prismic-msw": "*",
