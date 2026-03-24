@@ -1,7 +1,9 @@
+import { createRequire } from "node:module";
 import { dirname, join } from "node:path";
 
 import type { StorybookConfig } from "@storybook/nextjs";
-import merge from "webpack-merge";
+
+const require = createRequire(import.meta.url);
 
 function getAbsolutePath(value: string): string {
   return dirname(require.resolve(join(value, "package.json")));
@@ -13,7 +15,11 @@ const config: StorybookConfig = {
 
   framework: {
     name: getAbsolutePath("@storybook/nextjs"),
-    options: {},
+    options: {
+      image: {
+        exclude: ["**/*.svg"],
+      },
+    },
   },
 
   core: {
@@ -21,31 +27,35 @@ const config: StorybookConfig = {
   },
 
   async webpackFinal(config) {
-    config.module?.rules?.forEach((rule) => {
+    config.module ??= {};
+    config.module.rules ??= [];
+
+    config.module.rules.forEach((rule) => {
       if (
         rule &&
-        typeof rule === "object" &&
-        rule?.test instanceof RegExp &&
+        rule !== "..." &&
+        rule.test instanceof RegExp &&
         rule.test.test(".svg")
       ) {
-        rule.exclude = /\.svg$/;
+        rule.exclude = /\.svg$/i;
       }
     });
 
-    return merge(config, {
-      module: {
-        rules: [
-          {
-            test: /\.svg$/,
-            use: ["@svgr/webpack"],
+    config.module.rules.push({
+      test: /\.svg$/i,
+      issuer: /\.[jt]sx?$/,
+      use: [
+        {
+          loader: "@svgr/webpack",
+          options: {
+            typescript: true,
+            ext: "tsx",
           },
-        ],
-      },
-      optimization: {
-        splitChunks: { chunks: "all" },
-        runtimeChunk: true,
-      },
+        },
+      ],
     });
+
+    return config;
   },
 };
 

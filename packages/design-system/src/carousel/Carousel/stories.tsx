@@ -2,7 +2,7 @@ import { faker } from "@faker-js/faker";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import type { Meta, StoryObj } from "@storybook/nextjs";
-import { expect } from "storybook/internal/test";
+import { expect } from "storybook/test";
 
 import Carousel, { CarouselProps } from ".";
 

@@ -44,6 +44,7 @@
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "16.2.1",
+    "@svgr/webpack": "^8.1.0",
     "@swc/jest": "^0.2.39",
     "@types/jest": "30.0.0",
     "@types/negotiator": "^0.6.4",
