@@ -8,7 +8,7 @@ const SB = composeStories(stories);
 
 describe("<CarouselButtonBack />", () => {
   it("should handle click when enabled", () => {
-    const onClick = jest.fn();
+    const onClick = vi.fn();
 
     const { getByLabelText } = render(<CarouselButtonBack onClick={onClick} />);
     const button = getByLabelText("Back");
@@ -18,7 +18,7 @@ describe("<CarouselButtonBack />", () => {
   });
 
   it("should not handle click when disabled", () => {
-    const onClick = jest.fn();
+    const onClick = vi.fn();
 
     const { getByLabelText } = render(
       <CarouselButtonBack disabled onClick={onClick} />,
