@@ -1,6 +1,7 @@
 {
   "name": "@bashkim-com/design-system",
   "version": "0.0.0",
+  "type": "module",
   "exports": {
     ".": "./src/index.ts",
     "./InlineLogo": "./src/brand/InlineLogo/index.tsx",
@@ -71,7 +72,8 @@
   "scripts": {
     "dev": "storybook dev -p 6006",
     "lint": "eslint .",
-    "storybook:build": "storybook build"
+    "storybook:build": "storybook build",
+    "test": "vitest run"
   },
   "dependencies": {
     "@bashkim-com/prismic-dal": "*",
@@ -104,8 +106,14 @@
     "@storybook/nextjs": "10.3.3",
     "@swc/core": "^1.15.21",
     "@testing-library/dom": "^10.4.1",
+    "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.0",
+    "@vitejs/plugin-react": "^6.0.1",
+    "@vitest/coverage-v8": "^4.1.2",
+    "jsdom": "^29.0.1",
     "storybook": "10.3.3",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "vite-plugin-svgr": "^5.0.0",
+    "vitest": "^4.1.2"
   }
 }
