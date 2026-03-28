@@ -1,6 +1,6 @@
 import { matchMultipartTitle } from "./helpers";
 
-describe("helpers", () => {
+describe("medium helpers", () => {
   it("should match [1/2]", () => {
     const parts = matchMultipartTitle("[1/2] Part one of two");
     expect(parts.multipart).not.toBeUndefined();
