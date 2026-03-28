@@ -1,0 +1,5 @@
+{
+  "extends": "@bashkim-com/tsconfig/tsconfig.base.json",
+  "files": [],
+  "include": ["**/*.ts", "**/*.tsx"]
+}
