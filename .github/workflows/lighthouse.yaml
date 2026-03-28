@@ -15,7 +15,14 @@ on:
 
 jobs:
   lhci:
+    name: ${{ matrix.preset }}
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        preset:
+          - desktop
+          # - mobile
     steps:
       - name: git checkout
         uses: actions/checkout@v6
@@ -31,18 +38,10 @@ jobs:
       - name: lhci install
         run: npm install -g @lhci/cli
 
-      # - name: lhci autorun mobile
-      #   run: >
-      #     lhci autorun
-      #       --collect.url="$LHCI_COLLECT_URL"
-      #   env:
-      #     LHCI_COLLECT_URL: ${{ inputs.base-url }}
-      #     VERCEL_AUTOMATION_BYPASS_SECRET: ${{ secrets.VERCEL_AUTOMATION_BYPASS_SECRET }}
-
-      - name: lhci autorun desktop
+      - name: lhci autorun
         run: >
           lhci autorun \
-            --collect.settings.preset="desktop" \
+            --collect.settings.preset="${{ matrix.preset }}" \
             --collect.url="${LHCI_COLLECT_URL}"
         env:
           LHCI_COLLECT_URL: ${{ inputs.base-url }}
