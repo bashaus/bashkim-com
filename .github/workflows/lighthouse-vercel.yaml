@@ -1,0 +1,16 @@
+name: lighthouse vercel
+
+on:
+  deployment_status:
+
+jobs:
+  lhci:
+    if: >
+      github.event.deployment_status.state == 'success' &&
+      contains(github.event.deployment.environment, 'bashkim-com-website')
+
+    uses: ./.github/workflows/lighthouse.yaml
+    with:
+      base-url: ${{ github.event.deployment_status.environment_url }}
+    secrets:
+      VERCEL_AUTOMATION_BYPASS_SECRET: ${{ secrets.VERCEL_AUTOMATION_BYPASS_SECRET }}

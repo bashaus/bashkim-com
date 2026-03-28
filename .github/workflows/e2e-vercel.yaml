@@ -1,0 +1,16 @@
+name: e2e vercel
+
+on:
+  deployment_status:
+
+jobs:
+  e2e:
+    if: >
+      github.event.deployment_status.state == 'success' &&
+      contains(github.event.deployment.environment, 'bashkim-com-website')
+
+    uses: ./.github/workflows/e2e.yaml
+    with:
+      base-url: ${{ github.event.deployment_status.environment_url }}
+    secrets:
+      VERCEL_AUTOMATION_BYPASS_SECRET: ${{ secrets.VERCEL_AUTOMATION_BYPASS_SECRET }}

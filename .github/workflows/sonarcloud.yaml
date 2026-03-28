@@ -1,4 +1,3 @@
----
 name: sonarcloud
 
 on:
@@ -11,22 +10,24 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ github.actor != 'dependabot[bot]' }}
     steps:
-      - uses: actions/checkout@v6
+      - name: git checkout
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
 
-      - uses: actions/setup-node@v6
+      - name: node install
+        uses: actions/setup-node@v6
         with:
-          node-version-file: ".nvmrc"
-          cache: "npm"
+          node-version-file: .nvmrc
+          cache: npm
 
-      - name: npm
+      - name: npm ci
         run: npm ci
 
-      - name: test
+      - name: npm test
         run: npm test
 
-      - name: SonarQube Scan
+      - name: sonarqube scan
         uses: SonarSource/sonarqube-scan-action@v7.0.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
