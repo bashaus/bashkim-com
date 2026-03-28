@@ -1,0 +1,61 @@
+name: e2e
+
+on:
+  workflow_call:
+    inputs:
+      base-url:
+        type: string
+        default: https://www.bashkim.com
+        description: The base URL to test via Cypress
+        required: false
+    secrets:
+      VERCEL_AUTOMATION_BYPASS_SECRET:
+        description: Secret for accessing vercel environments
+        required: false
+
+jobs:
+  e2e:
+    name: ${{ matrix.browser }}
+    runs-on: ubuntu-latest
+    container:
+      image: cypress/browsers:22.19.0
+      options: --user 1001
+
+    strategy:
+      fail-fast: false
+      matrix:
+        browser:
+          - chrome
+          - firefox
+
+    steps:
+      - name: git checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: node install
+        uses: actions/setup-node@v6
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: npm ci
+        run: npm ci
+
+      - name: cypress ${{ matrix.browser }}
+        working-directory: packages/website-e2e
+        run: >
+          npx cypress run \
+            --browser "${{ matrix.browser }}" \
+            --env VERCEL_AUTOMATION_BYPASS_SECRET="${VERCEL_AUTOMATION_BYPASS_SECRET}"
+        env:
+          CYPRESS_BASE_URL: "${{ inputs.base-url }}"
+          VERCEL_AUTOMATION_BYPASS_SECRET: ${{ secrets.VERCEL_AUTOMATION_BYPASS_SECRET }}
+
+      - name: cypress artifact
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: cypress-report-${{ matrix.browser }}
+          path: packages/website-e2e/cypress/reports
