@@ -12,8 +12,7 @@
     "codegen": "graphql-codegen --config codegen.ts",
     "codegen:deps": "graphql-codegen --config codegen.deps.ts",
     "dev": "graphql-codegen --config codegen.ts --watch",
-    "lint": "eslint .",
-    "test": "jest"
+    "lint": "eslint ."
   },
   "dependencies": {
     "@apollo-link-debug/handle-errors": "^0.1.0",
@@ -30,11 +29,6 @@
     "@graphql-codegen/typescript": "^5.0.9",
     "@graphql-codegen/typescript-operations": "^5.0.9",
     "@graphql-codegen/typescript-react-apollo": "^4.4.1",
-    "@swc/jest": "^0.2.39",
-    "@types/jest": "30.0.0",
-    "@types/lodash.groupby": "^4.6.9",
-    "jest": "30.1.3",
-    "jest-environment-jsdom": "30.3.0",
-    "jest-junit": "^16.0.0"
+    "@types/lodash.groupby": "^4.6.9"
   }
 }

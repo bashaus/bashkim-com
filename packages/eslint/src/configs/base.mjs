@@ -2,7 +2,6 @@ import { fixupConfigRules } from "@eslint/compat";
 import { FlatCompat } from "@eslint/eslintrc";
 import js from "@eslint/js";
 import { defineConfig } from "eslint/config";
-import jestPlugin from "eslint-plugin-jest";
 import prettierPlugin from "eslint-plugin-prettier/recommended";
 import promisePlugin from "eslint-plugin-promise";
 import simpleImportSortPlugin from "eslint-plugin-simple-import-sort";
@@ -72,12 +71,6 @@ export default defineConfig(
 
   /* eslint-plugin-sonarjs */
   sonarjsPlugin.configs.recommended,
-
-  /* eslint-plugin-jest */
-  {
-    files: ["*.spec.{ts,tsx}"],
-    ...jestPlugin.configs["flat/recommended"],
-  },
 
   /* eslint-plugin-prettier */
   prettierPlugin,

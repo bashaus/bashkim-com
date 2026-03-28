@@ -1,7 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
-    "types": ["jest", "@testing-library/jest-dom"],
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "composite": false,
