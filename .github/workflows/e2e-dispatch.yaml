@@ -1,0 +1,10 @@
+name: e2e schedule
+
+on:
+  workflow_dispatch:
+
+jobs:
+  e2e:
+    uses: ./.github/workflows/e2e.yaml
+    with:
+      base-url: https://www.bashkim.com
