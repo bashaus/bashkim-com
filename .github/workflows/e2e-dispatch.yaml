@@ -1,4 +1,4 @@
-name: e2e schedule
+name: e2e dispatch
 
 on:
   workflow_dispatch:
