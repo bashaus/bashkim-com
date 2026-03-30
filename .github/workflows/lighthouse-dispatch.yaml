@@ -1,0 +1,10 @@
+name: lighthouse dispatch
+
+on:
+  workflow_dispatch:
+
+jobs:
+  lighthouse:
+    uses: ./.github/workflows/lighthouse.yaml
+    with:
+      base-url: https://www.bashkim.com

@@ -1,0 +1,12 @@
+name: lighthouse schedule
+
+on:
+  schedule:
+    - cron: 0 8 * * *
+      timezone: Europe/Madrid
+
+jobs:
+  lighthouse:
+    uses: ./.github/workflows/lighthouse.yaml
+    with:
+      base-url: https://www.bashkim.com
