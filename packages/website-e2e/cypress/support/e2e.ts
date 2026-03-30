@@ -1,3 +1,5 @@
+/* eslint-disable promise/always-return */
+
 // ***********************************************************
 // This example support/e2e.ts is processed and
 // loaded automatically before your test files.
@@ -17,19 +19,23 @@
 import "./commands";
 
 beforeEach(() => {
-  const secret = Cypress.env("VERCEL_AUTOMATION_BYPASS_SECRET");
-  if (!secret) {
-    Cypress.log({ name: "vercel-bypass", message: "Secret not set, skipping" });
-    return;
-  }
+  cy.env(["vercelSecret"]).then(({ vercelSecret }) => {
+    if (!vercelSecret) {
+      Cypress.log({
+        name: "vercel-bypass",
+        message: "Secret not set, skipping",
+      });
+      return;
+    }
 
-  Cypress.log({ name: "vercel-bypass", message: "Setting bypass cookie" });
+    Cypress.log({ name: "vercel-bypass", message: "Setting bypass cookie" });
 
-  cy.request({
-    url: "/",
-    headers: {
-      "x-vercel-set-bypass-cookie": "true",
-      "x-vercel-protection-bypass": secret,
-    },
+    cy.request({
+      url: "/",
+      headers: {
+        "x-vercel-set-bypass-cookie": "true",
+        "x-vercel-protection-bypass": vercelSecret,
+      },
+    });
   });
 });
