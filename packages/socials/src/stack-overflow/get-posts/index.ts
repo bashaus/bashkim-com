@@ -36,3 +36,7 @@ export async function getStackOverflowPosts() {
     type: post.post_type,
   }));
 }
+
+export type StackOverflowPost = Awaited<
+  ReturnType<typeof getStackOverflowPosts>
+>[number];

@@ -34,3 +34,7 @@ export async function getStackOverflowUser() {
     reputation: user.reputation,
   };
 }
+
+export type StackOverflowUser = Awaited<
+  ReturnType<typeof getStackOverflowUser>
+>;
