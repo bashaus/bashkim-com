@@ -5,6 +5,7 @@ export default defineConfig({
     globals: true,
 
     coverage: {
+      enabled: true,
       include: ["src/**/*.{ts,tsx}"],
     },
   },

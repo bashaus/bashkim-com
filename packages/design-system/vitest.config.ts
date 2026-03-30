@@ -10,6 +10,7 @@ export default defineConfig({
     environment: "jsdom",
 
     coverage: {
+      enabled: true,
       include: ["src/**/*.{ts,tsx}"],
     },
 
