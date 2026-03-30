@@ -19,8 +19,8 @@ export default function FooterCopyright() {
               <time dateTime="2008">MMVIII</time>
             </Tooltip>
             -
-            <Tooltip title="2025" arrow>
-              <time dateTime="2025">MMXXV</time>
+            <Tooltip title="2026" arrow>
+              <time dateTime="2026">MMXXVI</time>
             </Tooltip>
             , Bashkim&nbsp;Isai.
           </Typography>
