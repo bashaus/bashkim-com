@@ -5,5 +5,7 @@ export type {
 } from "./github/graphql-types";
 export { getMediumSocials } from "./medium";
 export * from "./medium/types";
-export { getStackOverflowPosts, getStackOverflowUser } from "./stack-overflow";
-export * from "./stack-overflow/types";
+export { getStackOverflowPosts } from "./stack-overflow/get-posts";
+export type * from "./stack-overflow/get-posts/schema";
+export { getStackOverflowUser } from "./stack-overflow/get-user";
+export type * from "./stack-overflow/get-user/schema";

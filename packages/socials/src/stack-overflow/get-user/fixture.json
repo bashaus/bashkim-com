@@ -1,0 +1,33 @@
+{
+  "items": [
+    {
+      "badge_counts": {
+        "bronze": 35,
+        "silver": 18,
+        "gold": 2
+      },
+      "account_id": 295700,
+      "is_employee": false,
+      "last_modified_date": 1766197500,
+      "last_access_date": 1759413496,
+      "reputation_change_year": 0,
+      "reputation_change_quarter": 0,
+      "reputation_change_month": 0,
+      "reputation_change_week": 0,
+      "reputation_change_day": 0,
+      "reputation": 1723,
+      "creation_date": 1296661509,
+      "user_type": "registered",
+      "user_id": 600240,
+      "accept_rate": 92,
+      "location": "London, United Kingdom",
+      "website_url": "https://www.bashkim.com/",
+      "link": "https://stackoverflow.com/users/600240/bashaus",
+      "profile_image": "https://www.gravatar.com/avatar/a0de29fed6cb278c6650cf0698253586?s=256&d=identicon&r=PG",
+      "display_name": "bashaus"
+    }
+  ],
+  "has_more": false,
+  "quota_max": 300,
+  "quota_remaining": 295
+}
