@@ -1,12 +1,14 @@
-import { resolve } from "node:path";
+import path from "node:path";
 
 import { defineConfig } from "cypress";
 
-const { BASHKIM_COM_BASE_HREF: baseUrl = "https://www.bashkim.com" } =
-  process.env;
+const {
+  BASHKIM_COM_BASE_HREF: baseUrl = "https://www.bashkim.com",
+  VERCEL_AUTOMATION_BYPASS_SECRET,
+} = process.env;
 
 export default defineConfig({
-  reporter: resolve(
+  reporter: path.resolve(
     __dirname,
     "..",
     "..",
@@ -18,6 +20,11 @@ export default defineConfig({
     overwrite: true,
     html: true,
     json: true,
+  },
+
+  allowCypressEnv: false,
+  env: {
+    vercelSecret: VERCEL_AUTOMATION_BYPASS_SECRET,
   },
 
   e2e: {

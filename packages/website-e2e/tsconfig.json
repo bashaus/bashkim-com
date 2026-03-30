@@ -1,7 +1,8 @@
 {
   "extends": "@bashkim-com/tsconfig/tsconfig.base.json",
   "compilerOptions": {
-    "baseUrl": "./cypress"
+    "baseUrl": "./cypress",
+    "types": ["node"]
   },
   "include": ["**/*.ts"],
   "exclude": ["node_modules"]
