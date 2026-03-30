@@ -18,6 +18,8 @@ export default defineConfig({
 
     coverage: {
       enabled: true,
+      clean: true,
+      reporter: ["lcov"],
       include: ["src/**/*.{ts,tsx}"],
     },
 
