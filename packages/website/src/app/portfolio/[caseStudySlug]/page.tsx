@@ -13,8 +13,8 @@ export type CaseStudyPageProps = Readonly<{
 }>;
 
 export const generateStaticParams = async () => {
-  const caseStudiesResult = await getCaseStudySlugs();
-  const edges = caseStudiesResult.data.caseStudies.edges ?? [];
+  const getCaseStudySlugsResult = await getCaseStudySlugs();
+  const edges = getCaseStudySlugsResult.data?.caseStudies.edges ?? [];
   return edges.map((caseStudy) => ({
     caseStudySlug: caseStudy?.node._meta.uid ?? "",
   }));
@@ -25,8 +25,10 @@ export async function generateMetadata({
 }: CaseStudyPageProps): Promise<Metadata> {
   const { caseStudySlug } = await params;
 
-  const result = await getCaseStudyPage(caseStudySlug);
-  const caseStudyPage = result.data.caseStudyPage.edges?.[0]?.node;
+  const getCaseStudyPageResult = await getCaseStudyPage(caseStudySlug);
+  const caseStudyPage =
+    getCaseStudyPageResult.data?.caseStudyPage.edges?.[0]?.node;
+
   if (!caseStudyPage) {
     notFound();
   }
@@ -51,12 +53,15 @@ const CaseStudyPage = async ({ params }: CaseStudyPageProps) => {
     caseStudyBodyPromise,
   ]);
 
-  if (!caseStudyPageResult.data.caseStudyPage) {
+  if (!caseStudyPageResult.data?.caseStudyPage) {
     notFound();
   }
 
-  const caseStudyPage = caseStudyPageResult.data.caseStudyPage.edges?.[0]?.node;
-  const caseStudyBody = caseStudyBodyResult.data.caseStudyBody.edges?.[0]?.node;
+  const caseStudyPage =
+    caseStudyPageResult.data?.caseStudyPage.edges?.[0]?.node;
+
+  const caseStudyBody =
+    caseStudyBodyResult.data?.caseStudyBody.edges?.[0]?.node;
 
   if (!caseStudyPage || !caseStudyBody) {
     notFound();

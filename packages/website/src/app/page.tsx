@@ -7,7 +7,7 @@ import { pathAsUrl } from "@/libraries/app/path-as-url";
 
 export async function generateMetadata(): Promise<Metadata> {
   const result = await getHomePage();
-  const homePage = result.data.homePage.edges?.[0]?.node;
+  const homePage = result.data?.homePage.edges?.[0]?.node;
   if (!homePage) {
     throw new Error("Edge not found");
   }

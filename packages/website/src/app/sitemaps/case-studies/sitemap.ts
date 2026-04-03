@@ -1,7 +1,4 @@
-import {
-  GetSitemapCaseStudiesDocument,
-  GetSitemapCaseStudiesQuery,
-} from "@bashkim-com/prismic-dal";
+import { GetSitemapCaseStudies } from "@bashkim-com/prismic-dal";
 import { MetadataRoute } from "next";
 
 import { getCaseStudyPath } from "@/libraries/app/navigation";
@@ -11,12 +8,12 @@ import { apolloClient } from "@/libraries/prismic/client";
 export default async function CaseStudiesSitemapProps(): Promise<MetadataRoute.Sitemap> {
   const urlset: MetadataRoute.Sitemap = [];
 
-  const caseStudiesResult =
-    await apolloClient.query<GetSitemapCaseStudiesQuery>({
-      query: GetSitemapCaseStudiesDocument,
-    });
+  const getSitemapCaseStudiesResult = await apolloClient.query({
+    query: GetSitemapCaseStudies,
+  });
 
-  for (const edge of caseStudiesResult.data.caseStudies.edges ?? []) {
+  const edges = getSitemapCaseStudiesResult.data?.caseStudies.edges ?? [];
+  for (const edge of edges) {
     const caseStudy = edge?.node;
     if (!caseStudy) {
       continue;

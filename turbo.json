@@ -8,13 +8,7 @@
       "inputs": ["$TURBO_DEFAULT$", ".env*"]
     },
 
-    "codegen:deps": {
-      "cache": false
-    },
-
-    "codegen": {
-      "dependsOn": ["codegen:deps"]
-    },
+    "codegen": {},
 
     "dev": {
       "cache": false,

@@ -1,5 +1,5 @@
 import RichTextFormatter from "@bashkim-com/design-system/RichTextFormatter";
-import type { CaptionedMagazineSliceTypeFragment } from "@bashkim-com/prismic-dal";
+import { CaptionedMagazineSliceTypeFragment } from "@bashkim-com/prismic-dal";
 import GridViewIcon from "@mui/icons-material/GridView";
 import ImportContactsIcon from "@mui/icons-material/ImportContacts";
 import Stack from "@mui/material/Stack";
@@ -26,6 +26,8 @@ export enum Display {
 export default function CaptionedMagazineSlice({
   slice,
 }: CaptionedMagazineSliceProps) {
+  const { primary, fields } = slice;
+
   const [display, setDisplay] = useState<Display>(Display.FlipBook);
 
   const handleDisplayChange = useCallback<
@@ -36,12 +38,11 @@ export default function CaptionedMagazineSlice({
     }
   }, []);
 
-  if (!slice.fields || !slice.primary) {
+  if (!fields || !primary) {
     return null;
   }
 
-  const { fields } = slice;
-  const { captioned_magazine_slice_type_caption: caption } = slice.primary;
+  const { captioned_magazine_slice_type_caption: caption } = primary;
 
   return (
     <AnimatePresence mode="wait">

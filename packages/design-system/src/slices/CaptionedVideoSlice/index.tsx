@@ -1,5 +1,5 @@
 import RichTextFormatter from "@bashkim-com/design-system/RichTextFormatter";
-import type { CaptionedVideoSliceTypeFragment } from "@bashkim-com/prismic-dal";
+import { CaptionedVideoSliceTypeFragment } from "@bashkim-com/prismic-dal";
 import Card from "@mui/material/Card";
 import { MediaProvider } from "media-chrome/react/media-store";
 
@@ -13,14 +13,15 @@ export type CaptionedVideoSliceProps = Readonly<{
 export default function CaptionedVideoSlice({
   slice,
 }: CaptionedVideoSliceProps) {
-  if (!slice.primary) {
+  const { primary } = slice;
+  if (!primary) {
     return null;
   }
 
   const {
     captioned_video_slice_type_caption: caption,
     captioned_video_slice_type_video: video,
-  } = slice.primary;
+  } = primary;
 
   if (!video?.embed_url) {
     return null;

@@ -1,23 +1,39 @@
-import type { CodegenConfig } from "@graphql-codegen/cli";
+import "dotenv/config";
 
-const codegenConfig: CodegenConfig = {
-  overwrite: true,
+import process from "node:process";
+
+import type { CodegenConfig } from "@graphql-codegen/cli";
+import * as prismic from "@prismicio/client";
+
+const { PRISMICIO_ACCESS_TOKEN: accessToken } = process.env;
+
+const repositoryName = "bashkim-com";
+const uri = prismic.getGraphQLEndpoint(repositoryName);
+
+const prismicClient = prismic.createClient(repositoryName, { accessToken });
+
+const config: CodegenConfig = {
+  customFetch: prismicClient.graphQLFetch,
+  schema: [
+    {
+      [uri]: {
+        method: "GET",
+        headers: {
+          Authorization: `Token ${accessToken}`,
+        },
+      },
+    },
+  ],
+
+  documents: ["src/**/*.ts"],
   generates: {
-    "./dist/index.ts": {
-      schema: "./generated/prismic/schema.gql",
-      documents: "src/**/*.gql",
-      plugins: [
-        "typescript",
-        "typescript-operations",
-        "typescript-react-apollo",
-      ],
-      config: {
-        withHooks: true,
-        withComponent: false,
-        withHOC: false,
+    "./src/gql/": {
+      preset: "client",
+      presetConfig: {
+        fragmentMasking: false,
       },
     },
   },
 };
 
-export default codegenConfig;
+export default config;

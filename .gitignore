@@ -40,7 +40,7 @@ yarn-error.log*
 .cache/
 dist/
 storybook-static/
-generated/
+gql/
 
 # lighthouse
 .lighthouseci/

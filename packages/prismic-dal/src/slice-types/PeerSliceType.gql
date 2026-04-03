@@ -1,6 +1,0 @@
-fragment Peer on Peer {
-  peer_name
-  peer_website {
-    ...ExternalLinkFragment
-  }
-}

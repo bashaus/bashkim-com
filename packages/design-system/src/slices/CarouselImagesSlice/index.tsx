@@ -1,5 +1,5 @@
 import RichTextFormatter from "@bashkim-com/design-system/RichTextFormatter";
-import type { CarouselImagesSliceTypeFragment } from "@bashkim-com/prismic-dal";
+import { CarouselImagesSliceTypeFragment } from "@bashkim-com/prismic-dal";
 import Image from "next/image";
 
 import Carousel from "../../carousel/Carousel";
@@ -13,10 +13,15 @@ export type CarouselImagesSliceProps = Readonly<{
 export default function CarouselImagesSlice({
   slice,
 }: CarouselImagesSliceProps) {
+  const { fields } = slice;
+  if (!fields) {
+    return null;
+  }
+
   return (
     <FullImagePartial>
       <Carousel>
-        {slice.fields?.map((field) => {
+        {fields.map((field) => {
           const {
             carousel_images_slice_type_caption: caption,
             carousel_images_slice_type_image: image,

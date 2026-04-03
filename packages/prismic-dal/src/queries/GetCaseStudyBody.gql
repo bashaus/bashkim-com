@@ -1,9 +1,0 @@
-query GetCaseStudyBody($caseStudySlug: String) {
-  caseStudyBody: allCase_studys(uid: $caseStudySlug) {
-    edges {
-      node {
-        ...CaseStudyBodyModel
-      }
-    }
-  }
-}

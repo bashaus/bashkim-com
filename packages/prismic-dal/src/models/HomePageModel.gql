@@ -1,4 +1,0 @@
-fragment HomePageModel on Home_page {
-  meta_title
-  meta_description
-}

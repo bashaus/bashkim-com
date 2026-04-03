@@ -8,7 +8,7 @@ import { usePathname } from "next/navigation";
 import { ComponentType, PropsWithChildren } from "react";
 
 import HeaderActionSiteSettings from "@/components/HeaderActionSiteSettings";
-import { type HeaderDesktopVariant } from "@/components/HeaderDesktop/interfaces";
+import { HeaderDesktopVariant } from "@/components/HeaderDesktop/interfaces";
 import HeaderPrimary from "@/components/HeaderPrimary";
 import HeaderSocial from "@/components/HeaderSocial";
 import { useNavigation } from "@/domains/navigation/components/Navigation/context";

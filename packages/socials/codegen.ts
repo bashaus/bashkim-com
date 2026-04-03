@@ -1,23 +1,30 @@
+import "dotenv/config";
+
 import type { CodegenConfig } from "@graphql-codegen/cli";
 
-const codegenConfig: CodegenConfig = {
-  overwrite: true,
+const { GITHUB_TOKEN: token } = process.env;
+
+const config: CodegenConfig = {
+  schema: [
+    {
+      "https://api.github.com/graphql": {
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "User-Agent": "graphql-codegen",
+        },
+      },
+    },
+  ],
+
+  documents: ["src/github/**/*.ts"],
   generates: {
-    "./src/github/graphql-types.ts": {
-      schema: "./generated/github/schema.gql",
-      documents: ["./graphql/github/**/*.gql"],
-      plugins: [
-        "typescript",
-        "typescript-operations",
-        "typescript-react-apollo",
-      ],
-      config: {
-        withHooks: false,
-        withComponent: false,
-        withHOC: false,
+    "./src/github/gql/": {
+      preset: "client",
+      presetConfig: {
+        fragmentMasking: false,
       },
     },
   },
 };
 
-export default codegenConfig;
+export default config;

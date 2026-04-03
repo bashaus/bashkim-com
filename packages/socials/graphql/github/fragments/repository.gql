@@ -1,7 +1,0 @@
-fragment GitHubRepository on Repository {
-  name
-  description
-  url
-  forkCount
-  stargazerCount
-}

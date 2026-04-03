@@ -1,5 +1,5 @@
 import RichTextFormatter from "@bashkim-com/design-system/RichTextFormatter";
-import type { ExhibitionSliceTypeFragment } from "@bashkim-com/prismic-dal";
+import { ExhibitionSliceTypeFragment } from "@bashkim-com/prismic-dal";
 
 import LifespanFormatter from "../../formatters/LifespanFormatter";
 
@@ -8,7 +8,8 @@ export type ExhibitionSliceProps = Readonly<{
 }>;
 
 export default function ExhibitionSlice({ slice }: ExhibitionSliceProps) {
-  if (!slice.primary) {
+  const { primary } = slice;
+  if (!primary) {
     return null;
   }
 
@@ -18,7 +19,7 @@ export default function ExhibitionSlice({ slice }: ExhibitionSliceProps) {
     exhibition_slice_type_opening_date: openingDate,
     exhibition_slice_type_closing_date: closingDate,
     exhibition_slice_type_location: location,
-  } = slice.primary;
+  } = primary;
 
   return (
     <>

@@ -8,7 +8,6 @@
     "declarationMap": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "incremental": true,
     "inlineSources": false,
     "isolatedModules": true,
     "jsx": "preserve",
@@ -27,7 +26,7 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "ES2017",
-    "types": ["vitest/globals"]
+    "types": ["vitest/globals", "node"]
   },
   "exclude": ["node_modules"]
 }

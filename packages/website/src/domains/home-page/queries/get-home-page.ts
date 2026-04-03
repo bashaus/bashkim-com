@@ -1,12 +1,9 @@
-import {
-  GetHomePageDocument,
-  GetHomePageQuery,
-} from "@bashkim-com/prismic-dal";
+import { GetHomePage } from "@bashkim-com/prismic-dal";
 
 import apolloClient from "@/libraries/prismic/client";
 
 export async function getHomePage() {
-  return apolloClient.query<GetHomePageQuery>({
-    query: GetHomePageDocument,
+  return await apolloClient.query({
+    query: GetHomePage,
   });
 }

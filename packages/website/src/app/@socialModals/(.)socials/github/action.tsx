@@ -1,10 +1,10 @@
 "use server";
 
-import { getGitHubSocials } from "@bashkim-com/socials";
+import { getGitHubProfile } from "@bashkim-com/socials";
 
 export async function animateGitHubSocials() {
   const [result] = await Promise.all([
-    getGitHubSocials(),
+    getGitHubProfile(),
     new Promise((resolve) => setTimeout(() => resolve(true), 500)),
   ]);
 

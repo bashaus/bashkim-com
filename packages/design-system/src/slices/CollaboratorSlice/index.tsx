@@ -1,7 +1,7 @@
 import { useLinkResolver } from "@bashkim-com/design-system/LinkResolver";
-import type {
+import {
   CollaboratorSliceTypeFragment,
-  Peer,
+  isPeer,
 } from "@bashkim-com/prismic-dal";
 import MuiLink from "@mui/material/Link";
 import ListItemText from "@mui/material/ListItemText";
@@ -14,20 +14,22 @@ export type CollaboratorSliceProps = Readonly<{
 export default function CollaboratorSlice({ slice }: CollaboratorSliceProps) {
   const linkResolver = useLinkResolver();
 
-  if (!slice.primary) {
+  const { primary } = slice;
+  if (!primary) {
     return null;
   }
 
-  const company = slice.primary.collaborator_slice_type_company;
-  const role = slice.primary.collaborator_slice_type_role;
-  const peer = slice.primary.collaborator_slice_type_peer as Peer;
+  const {
+    collaborator_slice_type_company: company,
+    collaborator_slice_type_role: role,
+    collaborator_slice_type_peer: peer,
+  } = primary;
 
-  if (!peer) {
+  if (!isPeer(peer)) {
     return null;
   }
 
   const { peer_name: name, peer_website: website } = peer;
-
   const url = asLink(website as LinkField, { linkResolver }) ?? undefined;
 
   return (
