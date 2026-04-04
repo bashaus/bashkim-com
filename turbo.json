@@ -8,11 +8,19 @@
       "inputs": ["$TURBO_DEFAULT$", ".env*"]
     },
 
-    "codegen": {},
+    "codegen": {
+      "env": ["GITHUB_TOKEN", "TS_NODE_TRANSPILE_ONLY"],
+      "inputs": ["src/**/*.ts", "!**/gql/**/*.ts"],
+      "outputs": ["**/gql/**/*.ts"]
+    },
+
+    "codegen:dev": {
+      "cache": false,
+      "persistent": true
+    },
 
     "dev": {
       "cache": false,
-      "dependsOn": ["codegen"],
       "persistent": true
     },
 

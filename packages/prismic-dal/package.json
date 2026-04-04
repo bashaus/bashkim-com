@@ -6,10 +6,10 @@
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "tsc",
-    "codegen": "graphql-codegen --config codegen.ts",
+    "build": "tsc --project tsconfig.build.json",
+    "codegen": "TS_NODE_TRANSPILE_ONLY=true graphql-codegen --config codegen.ts",
     "codegen:dev": "npm run codegen -- --watch",
-    "dev": "tsc --watch",
+    "dev": "npm run build -- --watch",
     "lint": "eslint ."
   },
   "devDependencies": {

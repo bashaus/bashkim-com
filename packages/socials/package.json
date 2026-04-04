@@ -1,6 +1,6 @@
 {
   "name": "@bashkim-com/socials",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "exports": {
     ".": "./src/index.ts",
     "./github": "./src/github/index.ts",
@@ -9,8 +9,10 @@
   },
   "main": "./src/index.ts",
   "scripts": {
-    "codegen": "graphql-codegen --config codegen.ts",
-    "dev": "graphql-codegen --config codegen.ts --watch",
+    "build": "tsc --project tsconfig.build.json",
+    "codegen": "TS_NODE_TRANSPILE_ONLY=true graphql-codegen --config codegen.ts",
+    "codegen:dev": "npm run codegen -- --watch",
+    "dev": "npm run build -- --watch",
     "lint": "eslint .",
     "test": "vitest run"
   },

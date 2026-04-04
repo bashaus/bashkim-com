@@ -17,6 +17,8 @@ const config: CodegenConfig = {
   ],
 
   documents: ["src/github/**/*.ts"],
+  ignoreNoDocuments: true,
+
   generates: {
     "./src/github/gql/": {
       preset: "client",

@@ -1,9 +1,9 @@
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
   "extends": "@bashkim-com/tsconfig/tsconfig.base.json",
   "compilerOptions": {
     "baseUrl": "./cypress",
     "types": ["node"]
   },
-  "include": ["**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": ["**/*.ts"]
 }

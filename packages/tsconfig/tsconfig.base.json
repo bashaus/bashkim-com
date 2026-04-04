@@ -1,32 +1,38 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
-    "allowJs": true,
-    "allowSyntheticDefaultImports": true,
-    "composite": false,
-    "declaration": true,
-    "declarationMap": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "inlineSources": false,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "target": "es2024",
     "module": "esnext",
     "moduleResolution": "bundler",
+    "isolatedModules": true,
+
+    "allowImportingTsExtensions": true,
+    "rewriteRelativeImportExtensions": true,
+    "resolveJsonModule": true,
+
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "skipLibCheck": true,
+
     "noEmit": true,
-    "noFallthroughCasesInSwitch": true,
+    "declaration": false,
+    "declarationMap": false,
+
+    "sourceMap": true,
+    "removeComments": true,
+    "inlineSources": false,
+
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "noImplicitOverride": true,
     "noImplicitReturns": true,
     "noPropertyAccessFromIndexSignature": true,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "preserveWatchOutput": true,
-    "resolveJsonModule": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "target": "ES2017",
-    "types": ["vitest/globals", "node"]
+    "noFallthroughCasesInSwitch": true,
+
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+
+    "types": ["vitest/globals", "node", "next"]
   },
-  "exclude": ["node_modules"]
+  "include": ["src/**/*.ts"]
 }

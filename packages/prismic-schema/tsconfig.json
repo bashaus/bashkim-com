@@ -1,10 +1,10 @@
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
   "extends": "@bashkim-com/tsconfig/tsconfig.base.json",
   "compilerOptions": {
     "module": "commonjs",
     "resolveJsonModule": true,
     "esModuleInterop": true
   },
-  "files": [],
   "include": ["**/*.ts", "**/*.tsx"]
 }

@@ -1,5 +1,5 @@
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
   "extends": "@bashkim-com/tsconfig/tsconfig.react.json",
-  "files": [],
   "include": ["**/*.ts", "**/*.tsx"]
 }

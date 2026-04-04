@@ -6,13 +6,6 @@
       "dependsOn": ["^codegen", "^build"],
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
       "env": ["PRISMICIO_ACCESS_TOKEN"]
-    },
-
-    "codegen": {},
-
-    "dev": {
-      "cache": false,
-      "persistent": true
     }
   }
 }

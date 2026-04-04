@@ -1,5 +1,5 @@
 {
-  "extends": "@bashkim-com/tsconfig/tsconfig.react.json",
-  "files": [],
-  "include": ["**/*.ts", "**/*.tsx"]
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "@bashkim-com/tsconfig/tsconfig.lib.json",
+  "include": ["**/*.ts"]
 }
