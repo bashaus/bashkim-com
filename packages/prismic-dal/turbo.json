@@ -3,8 +3,7 @@
   "extends": ["//"],
   "tasks": {
     "build": {
-      "dependsOn": ["^codegen", "^build"],
-      "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      "dependsOn": ["codegen"],
       "env": ["PRISMICIO_ACCESS_TOKEN"]
     },
 

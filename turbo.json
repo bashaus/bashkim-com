@@ -4,7 +4,6 @@
   "globalDependencies": ["**/.env", "package.json", "package-lock.json"],
   "tasks": {
     "build": {
-      "dependsOn": ["^codegen", "^build"],
       "inputs": ["$TURBO_DEFAULT$", ".env*"]
     },
 
@@ -25,7 +24,7 @@
     },
 
     "lint": {
-      "dependsOn": ["codegen", "^lint"],
+      "dependsOn": ["codegen"],
       "inputs": ["**/*.ts", "**/*.tsx", "**/*.mjs", "**/*.js"]
     },
 
@@ -35,7 +34,6 @@
     },
 
     "test": {
-      "dependsOn": ["build"],
       "inputs": ["$TURBO_DEFAULT$", ".env*"]
     }
   }

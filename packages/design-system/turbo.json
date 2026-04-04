@@ -2,8 +2,6 @@
   "$schema": "https://turbo.build/schema.json",
   "extends": ["//"],
   "tasks": {
-    "storybook:build": {
-      "dependsOn": ["build"]
-    }
+    "storybook:build": {}
   }
 }
