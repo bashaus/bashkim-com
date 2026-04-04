@@ -1,6 +1,8 @@
-import captionedImageSliceFactory from "@bashkim-com/prismic-factories/captionedImageSliceFactory";
-import prismicHeadingFactory from "@bashkim-com/prismic-factories/prismicHeadingFactory";
-import prismicImageFactory from "@bashkim-com/prismic-factories/prismicImageFactory";
+import {
+  captionedImageSliceFactory,
+  prismicHeadingFactory,
+  prismicImageFactory,
+} from "@bashkim-com/prismic-dal/factories";
 import { faker } from "@faker-js/faker";
 import { render } from "@testing-library/react";
 

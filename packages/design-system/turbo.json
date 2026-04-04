@@ -5,6 +5,10 @@
     "storybook:build": {
       "dependsOn": ["^compile"],
       "outputs": ["storybook-static/"]
+    },
+
+    "test": {
+      "dependsOn": ["codegen"]
     }
   }
 }

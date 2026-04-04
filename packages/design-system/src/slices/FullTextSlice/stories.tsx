@@ -1,4 +1,4 @@
-import fullTextSliceFactory from "@bashkim-com/prismic-factories/fullTextSliceFactory";
+import { fullTextSliceFactory } from "@bashkim-com/prismic-dal/factories";
 import type { Meta, StoryObj } from "@storybook/nextjs";
 
 import FullTextSlice from ".";

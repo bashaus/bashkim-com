@@ -1,4 +1,4 @@
-import subtitleSliceFactory from "@bashkim-com/prismic-factories/subtitleSliceFactory";
+import { subtitleSliceFactory } from "@bashkim-com/prismic-dal/factories";
 import type { Meta, StoryObj } from "@storybook/nextjs";
 
 import SubtitleSlice from ".";

@@ -1,4 +1,4 @@
-import collaboratorSliceFactory from "@bashkim-com/prismic-factories/collaboratorSliceFactory";
+import { collaboratorSliceFactory } from "@bashkim-com/prismic-dal/factories";
 import type { Meta, StoryObj } from "@storybook/nextjs";
 
 import CollaboratorSlice from ".";

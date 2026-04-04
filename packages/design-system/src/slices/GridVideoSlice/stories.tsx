@@ -1,4 +1,4 @@
-import gridVideoSliceFactory from "@bashkim-com/prismic-factories/gridVideoSliceFactory";
+import { gridVideoSliceFactory } from "@bashkim-com/prismic-dal/factories";
 import type { Meta, StoryObj } from "@storybook/nextjs";
 
 import GridVideoSlice from ".";

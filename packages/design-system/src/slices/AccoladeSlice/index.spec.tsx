@@ -1,7 +1,9 @@
-import accoladeSliceFactory from "@bashkim-com/prismic-factories/accoladeSliceFactory";
-import accoladeSliceFieldFactory from "@bashkim-com/prismic-factories/accoladeSliceFieldFactory";
-import prismicDateTimeFactory from "@bashkim-com/prismic-factories/prismicDateTimeFactory";
-import prismicHeadingFactory from "@bashkim-com/prismic-factories/prismicHeadingFactory";
+import {
+  accoladeSliceFactory,
+  accoladeSliceFieldFactory,
+  prismicDateTimeFactory,
+  prismicHeadingFactory,
+} from "@bashkim-com/prismic-dal/factories";
 import { faker } from "@faker-js/faker";
 import { render } from "@testing-library/react";
 

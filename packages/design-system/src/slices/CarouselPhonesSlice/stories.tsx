@@ -1,4 +1,4 @@
-import carouselPhonesSliceFactory from "@bashkim-com/prismic-factories/carouselPhonesSliceFactory";
+import { carouselPhonesSliceFactory } from "@bashkim-com/prismic-dal/factories";
 import type { Meta, StoryObj } from "@storybook/nextjs";
 
 import CarouselPhonesSlice from ".";
