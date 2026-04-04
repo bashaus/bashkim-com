@@ -8,7 +8,7 @@
     },
 
     "test": {
-      "dependsOn": ["codegen"]
+      "dependsOn": ["^compile"]
     }
   }
 }

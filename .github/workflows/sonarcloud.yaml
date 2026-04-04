@@ -26,6 +26,9 @@ jobs:
 
       - name: npm test
         run: npm test
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PRISMICIO_ACCESS_TOKEN: ${{ secrets.PRISMICIO_ACCESS_TOKEN }}
 
       - name: sonarqube scan
         uses: SonarSource/sonarqube-scan-action@v7.0.0
