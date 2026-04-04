@@ -1,17 +1,21 @@
 import { faker } from "@faker-js/faker";
 import { Factory } from "fishery";
+import { z } from "zod";
 
-type PrismicDateTimeTransientParams = {
-  days: number;
-};
+export const prismicDateTimeTransientParamsSchema = z.object({
+  days: z.int().default(5),
+});
 
-const defaultPrismicDateTimeTransientParams: PrismicDateTimeTransientParams = {
-  days: 5,
-};
+export type PrismicDateTimeTransientParams = z.infer<
+  typeof prismicDateTimeTransientParamsSchema
+>;
 
 export const prismicDateTimeFactory = Factory.define<
   string,
   PrismicDateTimeTransientParams
->(({ transientParams = defaultPrismicDateTimeTransientParams }) => {
-  return faker.date.recent({ days: transientParams.days }).toISOString();
+>(({ transientParams }) => {
+  const $transientParams =
+    prismicDateTimeTransientParamsSchema.parse(transientParams);
+
+  return faker.date.recent({ days: $transientParams.days }).toISOString();
 });
