@@ -1,5 +1,0 @@
-{
-  "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": "@bashkim-com/tsconfig/tsconfig.react.json",
-  "include": ["**/*.ts", "**/*.tsx"]
-}

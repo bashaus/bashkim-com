@@ -1,4 +1,4 @@
-import captionedVideoSliceFactory from "@bashkim-com/prismic-factories/captionedVideoSliceFactory";
+import { captionedVideoSliceFactory } from "@bashkim-com/prismic-dal/factories";
 import type { Meta, StoryObj } from "@storybook/nextjs";
 
 import CaptionedVideoSlice from ".";

@@ -1,4 +1,4 @@
-import newspaperSliceFactory from "@bashkim-com/prismic-factories/newspaperSliceFactory";
+import { newspaperSliceFactory } from "@bashkim-com/prismic-dal/factories";
 import type { Meta, StoryObj } from "@storybook/nextjs";
 
 import NewspaperSlice from ".";

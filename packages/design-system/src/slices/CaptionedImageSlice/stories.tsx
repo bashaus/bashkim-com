@@ -1,4 +1,4 @@
-import captionedImageSliceFactory from "@bashkim-com/prismic-factories/captionedImageSliceFactory";
+import { captionedImageSliceFactory } from "@bashkim-com/prismic-dal/factories";
 import type { Meta, StoryObj } from "@storybook/nextjs";
 
 import CaptionedImageSlice from ".";

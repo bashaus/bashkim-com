@@ -12,6 +12,10 @@
         "BASHKIM_COM_GOOGLE_ANALYTICS_MEASUREMENT_ID",
         "PRISMICIO_ACCESS_TOKEN"
       ]
+    },
+
+    "test": {
+      "dependsOn": ["^compile"]
     }
   }
 }

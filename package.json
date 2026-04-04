@@ -16,6 +16,7 @@
     "build": "turbo run build",
     "check-updates": "npm-check-updates",
     "codegen": "turbo run codegen",
+    "compile": "turbo run compile",
     "dev": "turbo run dev codegen:dev",
     "lint": "eslint . && turbo run lint",
     "prepare": "pre-commit install || true",

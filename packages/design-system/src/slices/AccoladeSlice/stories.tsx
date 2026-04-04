@@ -1,4 +1,4 @@
-import accoladeSliceFactory from "@bashkim-com/prismic-factories/accoladeSliceFactory";
+import { accoladeSliceFactory } from "@bashkim-com/prismic-dal/factories";
 import type { Meta, StoryObj } from "@storybook/nextjs";
 
 import AccoladeSlice from ".";
