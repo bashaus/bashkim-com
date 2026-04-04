@@ -2,6 +2,7 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "extends": ["@bashkim-com/tsconfig/tsconfig.base.json"],
   "compilerOptions": {
+    "jsx": "react-jsx",
     "plugins": [{ "name": "next" }],
     "paths": {
       "@/*": ["./src/*"]
