@@ -9,9 +9,9 @@
   },
   "main": "./src/index.ts",
   "scripts": {
-    "build": "tsc --project tsconfig.build.json",
     "codegen": "TS_NODE_TRANSPILE_ONLY=true graphql-codegen --config codegen.ts",
     "codegen:dev": "npm run codegen -- --watch",
+    "compile": "tsc --project tsconfig.build.json",
     "dev": "npm run build -- --watch",
     "lint": "eslint .",
     "test": "vitest run"

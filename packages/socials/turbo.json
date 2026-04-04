@@ -2,13 +2,17 @@
   "$schema": "https://turbo.build/schema.json",
   "extends": ["//"],
   "tasks": {
-    "build": {
+    "codegen": {
+      "env": ["GITHUB_TOKEN"]
+    },
+
+    "compile": {
       "dependsOn": ["codegen"],
       "env": ["GITHUB_TOKEN"]
     },
 
-    "codegen": {
-      "env": ["GITHUB_TOKEN"]
+    "lint": {
+      "dependsOn": ["codegen"]
     }
   }
 }

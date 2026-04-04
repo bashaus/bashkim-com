@@ -2,13 +2,17 @@
   "$schema": "https://turbo.build/schema.json",
   "extends": ["//"],
   "tasks": {
-    "build": {
+    "codegen": {
+      "env": ["PRISMICIO_ACCESS_TOKEN"]
+    },
+
+    "compile": {
       "dependsOn": ["codegen"],
       "env": ["PRISMICIO_ACCESS_TOKEN"]
     },
 
-    "codegen": {
-      "env": ["PRISMICIO_ACCESS_TOKEN"]
+    "lint": {
+      "dependsOn": ["codegen"]
     }
   }
 }
