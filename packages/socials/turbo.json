@@ -6,6 +6,10 @@
       "dependsOn": ["^codegen", "^build"],
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
       "env": ["GITHUB_TOKEN"]
+    },
+
+    "codegen": {
+      "env": ["GITHUB_TOKEN"]
     }
   }
 }

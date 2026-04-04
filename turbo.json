@@ -9,7 +9,7 @@
     },
 
     "codegen": {
-      "env": ["GITHUB_TOKEN", "TS_NODE_TRANSPILE_ONLY"],
+      "env": ["TS_NODE_TRANSPILE_ONLY"],
       "inputs": ["src/**/*.ts", "!**/gql/**/*.ts"],
       "outputs": ["**/gql/**/*.ts"]
     },
