@@ -1,9 +1,0 @@
-query GetPortfolioPage {
-  portfolioPage: allPortfolio_pages(first: 1) {
-    edges {
-      node {
-        ...PortfolioPageModel
-      }
-    }
-  }
-}

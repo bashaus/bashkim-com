@@ -8,11 +8,6 @@ import InlineLogo from "../../brand/InlineLogo";
 
 const meta = {
   title: "Home",
-  parameters: {
-    controls: { disable: true },
-    actions: { disable: true },
-    a11y: { disable: true },
-  },
 } satisfies Meta;
 
 type Story = StoryObj<typeof meta>;

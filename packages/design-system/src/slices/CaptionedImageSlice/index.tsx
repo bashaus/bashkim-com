@@ -1,5 +1,5 @@
 import RichTextFormatter from "@bashkim-com/design-system/RichTextFormatter";
-import type { CaptionedImageSliceTypeFragment } from "@bashkim-com/prismic-dal";
+import { CaptionedImageSliceTypeFragment } from "@bashkim-com/prismic-dal";
 
 import CaptionedPartial from "../../partials/CaptionedPartial";
 
@@ -10,14 +10,15 @@ export type CaptionedImageSliceProps = Readonly<{
 export default function CaptionedImageSlice({
   slice,
 }: CaptionedImageSliceProps) {
-  if (!slice.primary) {
+  const { primary } = slice;
+  if (!primary) {
     return null;
   }
 
   const {
     captioned_image_slice_type_caption: caption,
     captioned_image_slice_type_image: image,
-  } = slice.primary;
+  } = primary;
 
   return (
     <CaptionedPartial

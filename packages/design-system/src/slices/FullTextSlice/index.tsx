@@ -1,5 +1,5 @@
 import RichTextFormatter from "@bashkim-com/design-system/RichTextFormatter";
-import type { FullTextSliceTypeFragment } from "@bashkim-com/prismic-dal";
+import { FullTextSliceTypeFragment } from "@bashkim-com/prismic-dal";
 
 import FullTextPartial from "../../partials/FullTextPartial";
 
@@ -8,11 +8,12 @@ export type FullTextSliceProps = Readonly<{
 }>;
 
 export default function FullTextSlice({ slice }: FullTextSliceProps) {
-  if (!slice.primary) {
+  const { primary } = slice;
+  if (!primary) {
     return null;
   }
 
-  const { full_text_slice_type_body: body } = slice.primary;
+  const { full_text_slice_type_body: body } = primary;
 
   return (
     <FullTextPartial>

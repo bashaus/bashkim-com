@@ -1,22 +1,17 @@
-import apolloGitHubClient from "./client";
-import { GetPinnedItemsDocument, GetPinnedItemsQuery } from "./graphql-types";
-import type { GetGitHubSocialsResponse } from "./types";
+import apolloClient from "./client";
+import { GitHubProfileQuery } from "./queries/github-profile";
+import type { GetGitHubProfileResponse } from "./types";
 
-const getGitHubData = async () => {
-  const result = await apolloGitHubClient.query<GetPinnedItemsQuery>({
-    query: GetPinnedItemsDocument,
+export async function getGitHubProfile(): Promise<GetGitHubProfileResponse> {
+  const gitHubProfileResult = await apolloClient.query({
+    query: GitHubProfileQuery,
     variables: {},
     context: {
       next: { revalidate: 3600 },
     },
   });
 
-  return result.data;
-};
-
-export async function getGitHubSocials(): Promise<GetGitHubSocialsResponse> {
-  const result = await getGitHubData();
-  const nodes = result.user?.pinnedItems.nodes ?? [];
+  const nodes = gitHubProfileResult.data?.user?.pinnedItems.nodes ?? [];
 
   const pinnedItems = nodes.filter(
     <TValue>(value: TValue | null | undefined): value is TValue => {
@@ -24,7 +19,8 @@ export async function getGitHubSocials(): Promise<GetGitHubSocialsResponse> {
     },
   );
 
-  const repositoryCount = result.user?.repositories.totalCount ?? 0;
+  const repositoryCount =
+    gitHubProfileResult.data?.user?.repositories.totalCount ?? 0;
 
   return { pinnedItems, repositoryCount };
 }

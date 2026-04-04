@@ -7,8 +7,10 @@ import { getPortfolioPath } from "@/libraries/app/navigation";
 import { pathAsUrl } from "@/libraries/app/path-as-url";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const result = await getPortfolioPage();
-  const portfolioPage = result.data.portfolioPage.edges?.[0]?.node;
+  const getPortfolioPageResult = await getPortfolioPage();
+  const portfolioPage =
+    getPortfolioPageResult.data?.portfolioPage.edges?.[0]?.node;
+
   if (!portfolioPage) {
     throw new Error("Edge not found");
   }
@@ -23,8 +25,10 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function PortfolioPage() {
-  const result = await getPortfolioPage();
-  const portfolioPage = result.data.portfolioPage.edges?.[0]?.node;
+  const getPortfolioPageResult = await getPortfolioPage();
+  const portfolioPage =
+    getPortfolioPageResult.data?.portfolioPage.edges?.[0]?.node;
+
   if (!portfolioPage) {
     notFound();
   }

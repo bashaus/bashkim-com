@@ -1,7 +1,4 @@
-import {
-  GetSitemapPagesDocument,
-  GetSitemapPagesQuery,
-} from "@bashkim-com/prismic-dal";
+import { GetSitemapPages } from "@bashkim-com/prismic-dal";
 import { MetadataRoute } from "next";
 
 import {
@@ -16,11 +13,11 @@ import { apolloClient } from "@/libraries/prismic/client";
 export default async function PagesSitemap(): Promise<MetadataRoute.Sitemap> {
   const urlset: MetadataRoute.Sitemap = [];
 
-  const pagesResult = await apolloClient.query<GetSitemapPagesQuery>({
-    query: GetSitemapPagesDocument,
+  const getSitemapPagesResult = await apolloClient.query({
+    query: GetSitemapPages,
   });
 
-  const homePage = pagesResult.data.homePage.edges?.[0]?.node;
+  const homePage = getSitemapPagesResult.data?.homePage.edges?.[0]?.node;
   if (homePage) {
     urlset.push(
       await sitemapFileSchema.parseAsync({
@@ -32,7 +29,9 @@ export default async function PagesSitemap(): Promise<MetadataRoute.Sitemap> {
     );
   }
 
-  const portfolioPage = pagesResult.data.portfolioPage.edges?.[0]?.node;
+  const portfolioPage =
+    getSitemapPagesResult.data?.portfolioPage.edges?.[0]?.node;
+
   if (portfolioPage) {
     urlset.push(
       await sitemapFileSchema.parseAsync({

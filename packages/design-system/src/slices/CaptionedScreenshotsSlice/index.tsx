@@ -1,5 +1,5 @@
 import RichTextFormatter from "@bashkim-com/design-system/RichTextFormatter";
-import type { CaptionedScreenshotsSliceTypeFragment } from "@bashkim-com/prismic-dal";
+import { CaptionedScreenshotsSliceTypeFragment } from "@bashkim-com/prismic-dal";
 import Slider from "@mui/material/Slider";
 import Stack from "@mui/material/Stack";
 import { useCallback, useState } from "react";
@@ -16,6 +16,7 @@ export default function CaptionedScreenshotsSlice({
   slice,
   initialWidth = 1024,
 }: CaptionedScreenshotsSliceProps) {
+  const { primary } = slice;
   const fields = [...(slice.fields ?? [])];
 
   // Sort the elements by the width of the image
@@ -53,11 +54,11 @@ export default function CaptionedScreenshotsSlice({
     [],
   );
 
-  if (!slice.primary) {
+  if (!primary) {
     return null;
   }
 
-  const { captioned_screenshots_slice_type_caption: caption } = slice.primary;
+  const { captioned_screenshots_slice_type_caption: caption } = primary;
 
   return (
     <CaptionedPartial

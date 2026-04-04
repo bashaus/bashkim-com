@@ -1,15 +1,12 @@
-import {
-  GetCaseStudyPageDocument,
-  GetCaseStudyPageQuery,
-} from "@bashkim-com/prismic-dal";
+import { GetCaseStudyPage } from "@bashkim-com/prismic-dal";
 
 import apolloClient from "@/libraries/prismic/client";
 
-export const getCaseStudyPage = async (caseStudySlug: string) => {
-  return apolloClient.query<GetCaseStudyPageQuery>({
-    query: GetCaseStudyPageDocument,
+export async function getCaseStudyPage(caseStudySlug: string) {
+  return await apolloClient.query({
+    query: GetCaseStudyPage,
     variables: {
       caseStudySlug,
     },
   });
-};
+}

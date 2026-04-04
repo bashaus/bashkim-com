@@ -1,0 +1,21 @@
+import { graphql } from "../gql";
+
+export const PortfolioPageFeaturedModel = graphql(`
+  fragment PortfolioPageFeaturedModel on Portfolio_pageFeatured {
+    featured_title
+    featured_description
+    featured_case_study {
+      ... on Case_study {
+        _meta {
+          id
+          uid
+        }
+
+        image_icon
+        image_poster
+        meta_title
+        meta_description
+      }
+    }
+  }
+`);

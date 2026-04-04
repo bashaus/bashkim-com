@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 
 import HeaderDesktop from "@/components/HeaderDesktop";
-import { type HeaderDesktopVariant } from "@/components/HeaderDesktop/interfaces";
+import { HeaderDesktopVariant } from "@/components/HeaderDesktop/interfaces";
 import HeaderIntersection from "@/components/HeaderIntersection";
 import HeaderMobile from "@/components/HeaderMobile";
 

@@ -1,6 +1,6 @@
 import { useLinkResolver } from "@bashkim-com/design-system/LinkResolver";
 import RichTextFormatter from "@bashkim-com/design-system/RichTextFormatter";
-import type { AccoladeSliceTypeFragment } from "@bashkim-com/prismic-dal";
+import { AccoladeSliceTypeFragment } from "@bashkim-com/prismic-dal";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
@@ -26,7 +26,8 @@ const AwardPlaceName: Record<string, string> = {
 export default function AccoladeSlice({ slice }: AccoladeSliceProps) {
   const linkResolver = useLinkResolver();
 
-  if (!slice.primary) {
+  const { primary, fields } = slice;
+  if (!primary) {
     return null;
   }
 
@@ -34,7 +35,7 @@ export default function AccoladeSlice({ slice }: AccoladeSliceProps) {
     accolade_slice_type_issuer: issuer,
     accolade_slice_type_description: description,
     accolade_slice_type_date: date,
-  } = slice.primary;
+  } = primary;
 
   return (
     <Container>
@@ -54,7 +55,7 @@ export default function AccoladeSlice({ slice }: AccoladeSliceProps) {
           size={{ xs: 12, sm: 12, md: 9, lg: 9, xl: 9 }}
           spacing={2}
         >
-          {slice.fields?.map((field) => {
+          {fields?.map((field) => {
             const {
               accolade_slice_type_award_place: awardPlace,
               accolade_slice_type_award_link: awardLink,

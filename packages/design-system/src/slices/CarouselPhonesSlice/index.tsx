@@ -1,5 +1,5 @@
 import RichTextFormatter from "@bashkim-com/design-system/RichTextFormatter";
-import type { CarouselPhonesSliceTypeFragment } from "@bashkim-com/prismic-dal";
+import { CarouselPhonesSliceTypeFragment } from "@bashkim-com/prismic-dal";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Image from "next/image";
@@ -26,6 +26,8 @@ export type CarouselPhonesSliceProps = Readonly<{
 export default function CarouselPhonesSlice({
   slice,
 }: CarouselPhonesSliceProps) {
+  const { fields } = slice;
+
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
   const isMediumScreen = useMediaQuery(theme.breakpoints.between("md", "lg"));
@@ -44,10 +46,14 @@ export default function CarouselPhonesSlice({
     }
   }, [isMediumScreen, isSmallScreen]);
 
+  if (!fields) {
+    return null;
+  }
+
   return (
     <FullImagePartial>
       <Carousel slidesVisible={slidesVisible}>
-        {slice.fields?.map((field) => {
+        {fields.map((field) => {
           const {
             carousel_phones_slice_type_device_type: deviceType,
             carousel_phones_slice_type_caption: caption,

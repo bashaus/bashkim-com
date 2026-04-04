@@ -3,7 +3,7 @@
 import LinkResolverContext from "@bashkim-com/design-system/LinkResolver";
 import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider } from "@mui/material/styles";
-import { type PropsWithChildren } from "react";
+import { PropsWithChildren } from "react";
 
 import GridLines from "@/components/GridLines";
 import ToastController from "@/components/ToastController";

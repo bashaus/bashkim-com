@@ -2,10 +2,9 @@
 .next/
 coverage/
 dist/
-generated/
+gql/
 node_modules/
 out/
 storybook-static/
 
-packages/socials/src/github/graphql-types.ts
 packages/website-e2e/cypress/reports/

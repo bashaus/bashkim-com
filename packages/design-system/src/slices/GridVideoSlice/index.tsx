@@ -1,5 +1,5 @@
 import RichTextFormatter from "@bashkim-com/design-system/RichTextFormatter";
-import type { GridVideoSliceTypeFragment } from "@bashkim-com/prismic-dal";
+import { GridVideoSliceTypeFragment } from "@bashkim-com/prismic-dal";
 import Card from "@mui/material/Card";
 import CardActionArea from "@mui/material/CardActionArea";
 import CardMedia from "@mui/material/CardMedia";
@@ -15,10 +15,15 @@ export type GridVideoSliceProps = Readonly<{
 }>;
 
 export default function GridVideoSlice({ slice }: GridVideoSliceProps) {
+  const { fields } = slice;
+  if (!fields) {
+    return null;
+  }
+
   return (
     <Container>
       <Grid container spacing={2}>
-        {slice.fields?.map((field) => {
+        {fields.map((field) => {
           const {
             grid_video_slice_type_description: description,
             grid_video_slice_type_poster: poster,

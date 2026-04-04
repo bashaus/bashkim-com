@@ -2,20 +2,17 @@
   "$schema": "https://turbo.build/schema.json",
   "extends": ["//"],
   "tasks": {
-    "codegen:deps": {
-      "cache": false,
-      "env": ["PRISMICIO_ACCESS_TOKEN"],
-      "outputs": ["generated/prismic/schema.gql"]
-    },
-
     "codegen": {
-      "dependsOn": ["codegen:deps"],
-      "inputs": ["codegen.ts", "generated/prismic/schema.gql", "src/**/*.gql"],
-      "outputs": ["./dist/index.ts"]
+      "env": ["PRISMICIO_ACCESS_TOKEN"]
     },
 
-    "dev": {
-      "inputs": ["codegen.ts", "generated/prismic/schema.gql", "src/**/*.gql"]
+    "compile": {
+      "dependsOn": ["codegen"],
+      "env": ["PRISMICIO_ACCESS_TOKEN"]
+    },
+
+    "lint": {
+      "dependsOn": ["codegen"]
     }
   }
 }

@@ -2,22 +2,17 @@
   "$schema": "https://turbo.build/schema.json",
   "extends": ["//"],
   "tasks": {
-    "build": {
-      "env": ["BASHKIM_COM_GITHUB_TOKEN"]
-    },
-    "codegen:deps": {
-      "cache": false,
-      "outputs": ["generated/github/schema.gql"]
+    "codegen": {
+      "env": ["GITHUB_TOKEN"]
     },
 
-    "codegen": {
-      "dependsOn": ["codegen:deps"],
-      "inputs": [
-        "codegen.ts",
-        "generated/github/schema.gql",
-        "graphql/github/**/*.gql"
-      ],
-      "outputs": ["src/github/graphql-types.ts"]
+    "compile": {
+      "dependsOn": ["codegen"],
+      "env": ["GITHUB_TOKEN"]
+    },
+
+    "lint": {
+      "dependsOn": ["codegen"]
     }
   }
 }

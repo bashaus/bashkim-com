@@ -1,4 +1,4 @@
-import type { GridEmbedSliceTypeFragment } from "@bashkim-com/prismic-dal";
+import { GridEmbedSliceTypeFragment } from "@bashkim-com/prismic-dal";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 
@@ -7,10 +7,15 @@ export type GridEmbedSliceProps = Readonly<{
 }>;
 
 export default function GridEmbedSlice({ slice }: GridEmbedSliceProps) {
+  const { fields } = slice;
+  if (!fields) {
+    return null;
+  }
+
   return (
     <Container>
       <Grid container rowSpacing={1} columnSpacing={2}>
-        {slice.fields?.map((field) => {
+        {fields.map((field) => {
           const { grid_embed_slice_type_embed: embed } = field;
           return (
             <Grid

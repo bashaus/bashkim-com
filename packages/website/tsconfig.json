@@ -1,13 +1,11 @@
 {
-  "extends": "@bashkim-com/tsconfig/tsconfig.base.json",
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": ["@bashkim-com/tsconfig/tsconfig.base.json"],
   "compilerOptions": {
-    "declaration": false,
-    "declarationMap": false,
     "plugins": [{ "name": "next" }],
     "paths": {
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"]
 }
