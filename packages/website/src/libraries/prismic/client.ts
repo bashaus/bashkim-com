@@ -1,7 +1,7 @@
 import {
   ApolloClient,
   ApolloLink,
-  createHttpLink,
+  HttpLink,
   InMemoryCache,
 } from "@apollo/client";
 import * as prismic from "@prismicio/client";
@@ -23,8 +23,9 @@ export const prismicClient = prismic.createClient(repositoryName, {
 enableAutoPreviews({ client: prismicClient });
 
 export const apolloClient = new ApolloClient({
+  cache: new InMemoryCache(),
   link: ApolloLink.from([
-    createHttpLink({
+    new HttpLink({
       uri: prismic.getGraphQLEndpoint(repositoryName),
       useGETForQueries: true,
       fetch: (input: RequestInfo | URL, init?: RequestInit) =>
@@ -36,7 +37,6 @@ export const apolloClient = new ApolloClient({
       },
     }),
   ]),
-  cache: new InMemoryCache(),
 });
 
 export default apolloClient;
