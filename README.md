@@ -44,6 +44,25 @@ Production deployments are automated through **Vercel**, ensuring that every cha
 
 To maintain a clean and maintainable codebase, **SonarQube Cloud** is integrated as an automated quality gate. It scans every pull request for code smells, complexity, and potential bugs, ensuring that technical debt is addressed early. By enforcing these high standards, the project remains scalable and follows industry best practices for security and performance.
 
+## Development
+
+After cloning this repository, you can begin developing by running the following:
+
+```bash
+# Install node
+nvm install
+
+# Install npm dependencies
+npm install
+
+# Initialize
+# Follow the prompts to generate the .env files
+npx turbo gen init
+
+# Begin development
+npm run dev
+```
+
 [![SonarCloud][img:sonarcloud]][url:sonarcloud]
 
 [img:storybook]: https://img.shields.io/badge/Storybook-FF4785?logo=storybook&logoColor=white
