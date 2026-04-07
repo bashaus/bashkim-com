@@ -21,12 +21,9 @@ export default async function CaseStudiesSitemapProps(): Promise<MetadataRoute.S
 
     urlset.push(
       await sitemapFileSchema.parseAsync({
-        paths: [
-          [
-            "en",
-            getCaseStudyPath({ caseStudySlug: caseStudy._meta.uid ?? "" }),
-          ],
-        ],
+        paths: {
+          en: getCaseStudyPath({ caseStudySlug: caseStudy._meta.uid ?? "" }),
+        },
         lastModified: caseStudy._meta.lastPublicationDate,
         changeFrequency: caseStudy.sitemap_changefreq,
         priority: caseStudy.sitemap_priority,

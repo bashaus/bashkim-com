@@ -1,7 +1,11 @@
-import { HomeParams } from "./home";
+export function getPortfolioPath() {
+  return `/portfolio`;
+}
 
-export type PortfolioParams = HomeParams & {};
+export type CaseStudyParams = {
+  caseStudySlug: string;
+};
 
-export const getPortfolioPath = (_params: PortfolioParams = {}) =>
-  // `${getHomePath(params)}/portfolio`
-  `/portfolio`;
+export function getCaseStudyPath({ caseStudySlug }: CaseStudyParams) {
+  return `${getPortfolioPath()}/${caseStudySlug}`;
+}

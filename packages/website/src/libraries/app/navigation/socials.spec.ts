@@ -6,34 +6,37 @@ import {
   getSocialsStackOverflowPath,
 } from "./socials";
 
-describe("libraries/app/navigation", () => {
-  describe("getSocialsPath()", () => {
-    it("should return path", () => {
-      expect(getSocialsPath()).toBe("/socials");
-    });
+describe("getSocialsPath()", () => {
+  it("should return path", () => {
+    const path = getSocialsPath();
+    expect(path).toBe("/socials");
   });
+});
 
-  describe("getSocialsGitHubPath()", () => {
-    it("should return path", () => {
-      expect(getSocialsGitHubPath()).toBe("/socials/github");
-    });
+describe("getSocialsGitHubPath()", () => {
+  it("should return path", () => {
+    const path = getSocialsGitHubPath();
+    expect(path).toBe("/socials/github");
   });
+});
 
-  describe("getSocialsMediumPath()", () => {
-    it("should return path", () => {
-      expect(getSocialsMediumPath()).toBe("/socials/medium");
-    });
+describe("getSocialsMediumPath()", () => {
+  it("should return path", () => {
+    const path = getSocialsMediumPath();
+    expect(path).toBe("/socials/medium");
   });
+});
 
-  describe("getSocialsLinkedInPath()", () => {
-    it("should return path", () => {
-      expect(getSocialsLinkedInPath()).toBe("/socials/linked-in");
-    });
+describe("getSocialsLinkedInPath()", () => {
+  it("should return path", () => {
+    const path = getSocialsLinkedInPath();
+    expect(path).toBe("/socials/linked-in");
   });
+});
 
-  describe("getSocialsStackOverflowPath()", () => {
-    it("should return path", () => {
-      expect(getSocialsStackOverflowPath()).toBe("/socials/stack-overflow");
-    });
+describe("getSocialsStackOverflowPath()", () => {
+  it("should return path", () => {
+    const path = getSocialsStackOverflowPath();
+    expect(path).toBe("/socials/stack-overflow");
   });
 });

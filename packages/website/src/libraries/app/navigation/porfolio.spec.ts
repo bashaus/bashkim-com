@@ -1,9 +1,15 @@
-import { getPortfolioPath } from "./portfolio";
+import { getCaseStudyPath, getPortfolioPath } from "./portfolio";
 
-describe("libraries/app/navigation", () => {
-  describe("getPortfolioPath()", () => {
-    it("should return path", () => {
-      expect(getPortfolioPath()).toBe("/portfolio");
-    });
+describe("getPortfolioPath()", () => {
+  it("should return path", () => {
+    const path = getPortfolioPath();
+    expect(path).toBe("/portfolio");
+  });
+});
+
+describe("getCaseStudyPath()", () => {
+  it("should return path", () => {
+    const path = getCaseStudyPath({ caseStudySlug: "lorem-ipsum" });
+    expect(path).toBe("/portfolio/lorem-ipsum");
   });
 });
