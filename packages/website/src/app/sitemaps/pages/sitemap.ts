@@ -21,7 +21,7 @@ export default async function PagesSitemap(): Promise<MetadataRoute.Sitemap> {
   if (homePage) {
     urlset.push(
       await sitemapFileSchema.parseAsync({
-        paths: [["en", getHomePath({})]],
+        paths: { en: getHomePath({}) },
         lastModified: homePage._meta.lastPublicationDate,
         changeFrequency: homePage.sitemap_changefreq,
         priority: homePage.sitemap_priority,
@@ -35,7 +35,7 @@ export default async function PagesSitemap(): Promise<MetadataRoute.Sitemap> {
   if (portfolioPage) {
     urlset.push(
       await sitemapFileSchema.parseAsync({
-        paths: [["en", getPortfolioPath({})]],
+        paths: { en: getPortfolioPath({}) },
         lastModified: portfolioPage._meta.lastPublicationDate,
         changeFrequency: portfolioPage.sitemap_changefreq,
         priority: portfolioPage.sitemap_priority,
@@ -45,12 +45,12 @@ export default async function PagesSitemap(): Promise<MetadataRoute.Sitemap> {
 
   urlset.push(
     await sitemapFileSchema.parseAsync({
-      paths: [["en", getAboutPath({})]],
+      paths: { en: getAboutPath({}) },
       priority: 1,
     }),
 
     await sitemapFileSchema.parseAsync({
-      paths: [["en", getCookiesPath({})]],
+      paths: { en: getCookiesPath({}) },
       priority: 0.1,
     }),
   );

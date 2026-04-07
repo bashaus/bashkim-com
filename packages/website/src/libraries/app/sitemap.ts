@@ -7,7 +7,7 @@ const defaultLocale = "en";
 
 export const sitemapFileSchema = z
   .object({
-    paths: z.array(z.tuple([z.string(), z.string()])),
+    paths: z.record(z.string(), z.string()),
     lastModified: z.coerce.date().default(new Date()),
     changeFrequency: z
       .enum([
@@ -23,18 +23,16 @@ export const sitemapFileSchema = z
     priority: z.coerce.number().min(0).max(1).multipleOf(0.1).default(0.5),
   })
   .transform<MetadataRoute.Sitemap[number]>((entry) => {
-    const [, defaultPath] = entry.paths.find(
-      ([locale]) => locale === defaultLocale,
-    ) ?? ["", ""];
+    const paths = Object.entries(entry.paths);
+    const defaultPath = paths.find(([locale]) => locale === defaultLocale);
+    const altPaths = paths.filter(([locale]) => locale !== defaultLocale);
 
     return {
-      url: pathAsUrl(defaultPath),
+      url: defaultPath ? pathAsUrl(defaultPath[1]) : "",
       alternates: {
         languages: {
           ...Object.fromEntries(
-            entry.paths
-              .filter(([locale]) => locale !== defaultLocale)
-              .map(([locale, path]) => [locale, pathAsUrl(path)]),
+            altPaths.map(([locale, path]) => [locale, pathAsUrl(path)]),
           ),
         },
       },
