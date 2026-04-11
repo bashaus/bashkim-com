@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "@types/node": "^25.5.0",
-    "cypress": "^15.13.0",
+    "cypress": "^15.13.1",
     "cypress-mochawesome-reporter": "^4.0.2",
     "mochawesome": "^7.1.4",
     "mochawesome-merge": "^5.1.1",
