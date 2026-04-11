@@ -1,4 +1,4 @@
-import { handlers } from "@bashkim-com/prismic-msw";
+import { handlers } from "@bashkim-com/prismic-dal/msw";
 import { setupServer } from "msw/node";
 
 const server = setupServer(...handlers);

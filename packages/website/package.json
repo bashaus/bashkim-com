@@ -15,7 +15,6 @@
     "@apollo/client": "^4.1.7",
     "@bashkim-com/design-system": "*",
     "@bashkim-com/prismic-dal": "*",
-    "@bashkim-com/prismic-msw": "*",
     "@bashkim-com/socials": "*",
     "@bashkim-com/tsconfig": "*",
     "@emotion/cache": "^11.14.0",

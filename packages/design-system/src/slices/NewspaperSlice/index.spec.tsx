@@ -1,6 +1,6 @@
 import {
   newspaperSliceFactory,
-  prismicHeadingFactory,
+  prismicHeading3Factory,
   prismicParagraphFactory,
 } from "@bashkim-com/prismic-dal/factories";
 import { faker } from "@faker-js/faker";
@@ -15,7 +15,7 @@ describe("<NewspaperSlice />", () => {
     const slice = newspaperSliceFactory.build({
       fields: [
         {
-          newspaper_slice_type_group: prismicHeadingFactory.buildList(1, {
+          newspaper_slice_type_group: prismicHeading3Factory.buildList(1, {
             text: textOne,
           }),
         },

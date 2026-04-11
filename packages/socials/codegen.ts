@@ -23,6 +23,7 @@ const config: CodegenConfig = {
     "./src/github/gql/": {
       preset: "client",
       presetConfig: {
+        documentMode: "documentNode",
         fragmentMasking: false,
       },
     },
