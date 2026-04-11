@@ -32,6 +32,7 @@ const config: CodegenConfig = {
     "./src/gql/": {
       preset: "client",
       presetConfig: {
+        documentMode: "documentNode",
         fragmentMasking: false,
       },
     },

@@ -1,5 +1,5 @@
 import {
-  prismicHeadingFactory,
+  prismicHeading3Factory,
   prismicParagraphFactory,
   subtitleSliceFactory,
 } from "@bashkim-com/prismic-dal/factories";
@@ -12,11 +12,13 @@ describe("<SubtitleSlice />", () => {
   it("should render", () => {
     const headingText = faker.lorem.sentence();
     const descriptionText = faker.lorem.sentence();
+
     const slice = subtitleSliceFactory.build({
       primary: {
-        subtitle_slice_type_heading: prismicHeadingFactory.buildList(1, {
+        subtitle_slice_type_heading: prismicHeading3Factory.buildList(1, {
           text: headingText,
         }),
+
         subtitle_slice_type_description: prismicParagraphFactory.buildList(1, {
           text: descriptionText,
         }),

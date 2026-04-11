@@ -1,6 +1,6 @@
 import {
   captionedImageSliceFactory,
-  prismicHeadingFactory,
+  prismicHeading3Factory,
   prismicImageFactory,
 } from "@bashkim-com/prismic-dal/factories";
 import { faker } from "@faker-js/faker";
@@ -11,11 +11,13 @@ import CaptionedImageSlice from ".";
 describe("<CaptionedImageSlice />", () => {
   it("should render", () => {
     const text = faker.lorem.sentence();
+
     const slice = captionedImageSliceFactory.build({
       primary: {
-        captioned_image_slice_type_caption: prismicHeadingFactory.buildList(1, {
-          text,
-        }),
+        captioned_image_slice_type_caption: prismicHeading3Factory.buildList(
+          1,
+          { text },
+        ),
         captioned_image_slice_type_image: prismicImageFactory.build(),
       },
     });
