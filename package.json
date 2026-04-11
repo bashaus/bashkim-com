@@ -36,7 +36,7 @@
     "sass": "^1.98.0",
     "ts-node": "10.9.2",
     "turbo": "^2.9.5",
-    "typescript": "5.9.3"
+    "typescript": "^6.0.2"
   },
   "packageManager": "npm@11.7.0"
 }
