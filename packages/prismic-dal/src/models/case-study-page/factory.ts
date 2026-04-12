@@ -71,6 +71,6 @@ export const caseStudyPageModelFactory =
         associations.collaborators ?? collaboratorSliceFactory.buildList(7),
 
       exhibitions:
-        associations.exhibitions ?? exhibitionSliceFactory.buildList(1),
+        associations.exhibitions ?? exhibitionSliceFactory.buildList(4),
     };
   });

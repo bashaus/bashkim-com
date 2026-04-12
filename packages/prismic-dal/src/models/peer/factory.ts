@@ -1,11 +1,11 @@
 import { faker } from "@faker-js/faker";
 import { Factory } from "fishery";
 
-import { Peer } from "../../gql/graphql";
+import { PeerModelFragment } from "../../gql/graphql";
 import { prismicExternalLinkFactory } from "../../prismic/external-link/factory";
 import { prismicMetaFactory } from "../../prismic/meta/factory";
 
-export const peerModelFactory = Factory.define<Peer>(
+export const peerModelFactory = Factory.define<PeerModelFragment>(
   ({ associations, sequence }) => {
     return {
       __typename: "Peer",

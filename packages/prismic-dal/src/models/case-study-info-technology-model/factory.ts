@@ -1,6 +1,6 @@
 import { Factory } from "fishery";
 
-import { technologyModelFactory } from "../../content-types/technology/factory";
+import { technologyModelFactory } from "../technology/factory";
 import { CaseStudyInfoTechnologyModelFragment } from "../../gql/graphql";
 
 export const caseStudyInfoTechnologyModelFactory =

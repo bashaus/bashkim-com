@@ -1,7 +1,7 @@
 import { faker } from "@faker-js/faker";
 import { Factory } from "fishery";
 
-import { peerModelFactory } from "../../content-types/peer/factory";
+import { peerModelFactory } from "../../models/peer/factory";
 import {
   CollaboratorSliceTypeFragment,
   CollaboratorSliceTypePrimaryFragment,

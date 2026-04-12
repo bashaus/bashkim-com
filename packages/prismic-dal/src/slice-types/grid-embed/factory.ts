@@ -19,7 +19,7 @@ export const gridEmbedSliceFactory = Factory.define<GridEmbedSliceTypeFragment>(
     return {
       __typename: "Case_studyBodyGridembedslicetype",
       type: "GridEmbedSliceType",
-      fields: gridEmbedSliceFieldFactory.buildList(4),
+      fields: gridEmbedSliceFieldFactory.buildList(3),
     };
   },
 );
