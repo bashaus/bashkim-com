@@ -1,6 +1,7 @@
 import MuiDecorator from "./decorators/MuiDecorator";
+import PrismicLinkResolverDecorator from "./decorators/PrismicLinkResolverDecorator";
 
-export const decorators = [MuiDecorator];
+export const decorators = [MuiDecorator, PrismicLinkResolverDecorator];
 
 export const parameters = {
   controls: {

@@ -4,7 +4,7 @@ export const ExhibitionSliceTypePrimary = graphql(`
   fragment ExhibitionSliceTypePrimary on Case_studyExhibitionsExhibitionslicetypePrimary {
     exhibition_slice_type_name
     exhibition_slice_type_link {
-      ...ExternalLink
+      ...PrismicExternalLink
     }
     exhibition_slice_type_opening_date
     exhibition_slice_type_closing_date

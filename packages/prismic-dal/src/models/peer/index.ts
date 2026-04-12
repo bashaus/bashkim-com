@@ -6,7 +6,7 @@ export const PeerModel = graphql(`
     __typename
     peer_name
     peer_website {
-      ...ExternalLink
+      ...PrismicExternalLink
     }
   }
 `);

@@ -1,7 +1,9 @@
 import { graphql } from "../../gql";
 
-export const ExternalLink = graphql(`
-  fragment ExternalLink on _ExternalLink {
+export const PrismicExternalLink = graphql(`
+  fragment PrismicExternalLink on _ExternalLink {
+    __typename
+    _linkType
     url
     target
   }

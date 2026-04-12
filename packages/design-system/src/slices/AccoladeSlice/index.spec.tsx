@@ -1,7 +1,7 @@
 import {
   accoladeSliceFactory,
   accoladeSliceFieldFactory,
-  prismicDateTimeFactory,
+  accoladeSlicePrimaryFactory,
   prismicHeading3Factory,
 } from "@bashkim-com/prismic-dal/factories";
 import { faker } from "@faker-js/faker";
@@ -14,17 +14,18 @@ describe("<AccoladeSlice />", () => {
   it("should render", () => {
     const text = faker.lorem.sentence();
 
-    const slice = accoladeSliceFactory.build({
-      primary: {
-        accolade_slice_type_date: prismicDateTimeFactory.build(),
-        accolade_slice_type_issuer: prismicHeading3Factory.buildList(1, {
-          text,
+    const slice = accoladeSliceFactory.build(undefined, {
+      associations: {
+        primary: accoladeSlicePrimaryFactory.build({
+          accolade_slice_type_issuer: prismicHeading3Factory.buildList(1, {
+            text,
+          }),
+        }),
+
+        fields: accoladeSliceFieldFactory.buildList(1, {
+          accolade_slice_type_award_place: "gold",
         }),
       },
-
-      fields: accoladeSliceFieldFactory.buildList(1, {
-        accolade_slice_type_award_place: "gold",
-      }),
     });
 
     const { getByText } = render(

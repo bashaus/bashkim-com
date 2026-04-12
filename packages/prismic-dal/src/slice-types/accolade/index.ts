@@ -4,7 +4,7 @@ export const AccoladeSliceTypeField = graphql(`
   fragment AccoladeSliceTypeField on Case_studyAccoladesAccoladeslicetypeFields {
     accolade_slice_type_award_place
     accolade_slice_type_award_link {
-      ...ExternalLink
+      ...PrismicExternalLink
     }
     accolade_slice_type_award_category
   }

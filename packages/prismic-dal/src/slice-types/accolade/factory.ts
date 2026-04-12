@@ -1,6 +1,7 @@
 import { faker } from "@faker-js/faker";
 import { Factory } from "fishery";
 
+import { prismicExternalLinkFactory } from "../../factories";
 import {
   AccoladeSliceTypeFieldFragment,
   AccoladeSliceTypeFragment,
@@ -10,27 +11,20 @@ import { prismicDateFactory } from "../../prismic/date/factory";
 import { prismicHeading3Factory } from "../../prismic/heading/factory";
 import { prismicParagraphFactory } from "../../prismic/paragraph/factory";
 
+const places = ["gold", "silver", "bronze", "honour", "shortlist"];
+
 export const accoladeSliceFieldFactory =
   Factory.define<AccoladeSliceTypeFieldFragment>(({ params }) => {
-    const place =
-      params.accolade_slice_type_award_place ??
-      faker.helpers.arrayElement([
-        "gold",
-        "silver",
-        "bronze",
-        "honour",
-        "shortlist",
-      ]);
+    const {
+      accolade_slice_type_award_place = faker.helpers.arrayElement(places),
+    } = params;
 
     return {
       __typename: "Case_studyAccoladesAccoladeslicetypeFields",
-      accolade_slice_type_award_place: place,
-      accolade_slice_type_award_link: {
-        url: faker.internet.url(),
-        target: null,
-      },
+      accolade_slice_type_award_place,
+      accolade_slice_type_award_link: prismicExternalLinkFactory.build(),
       accolade_slice_type_award_category: prismicParagraphFactory.buildList(1, {
-        text: `Award - ${place}`,
+        text: `Award - ${accolade_slice_type_award_place}`,
       }),
     };
   });
@@ -48,30 +42,18 @@ export const accoladeSlicePrimaryFactory =
   });
 
 export const accoladeSliceFactory = Factory.define<AccoladeSliceTypeFragment>(
-  ({ params }) => {
-    const { primary, fields } = params;
-
+  ({ associations }) => {
     return {
       __typename: "Case_studyAccoladesAccoladeslicetype",
       type: "AccoladeSliceType",
-      primary: accoladeSlicePrimaryFactory.build(primary ?? undefined),
-      fields: fields ?? [
-        accoladeSliceFieldFactory.build({
-          accolade_slice_type_award_place: "gold",
-        }),
-        accoladeSliceFieldFactory.build({
-          accolade_slice_type_award_place: "silver",
-        }),
-        accoladeSliceFieldFactory.build({
-          accolade_slice_type_award_place: "bronze",
-        }),
-        accoladeSliceFieldFactory.build({
-          accolade_slice_type_award_place: "honour",
-        }),
-        accoladeSliceFieldFactory.build({
-          accolade_slice_type_award_place: "shortlist",
-        }),
-      ],
+      primary: associations.primary ?? accoladeSlicePrimaryFactory.build(),
+      fields:
+        associations.fields ??
+        places.map((place) =>
+          accoladeSliceFieldFactory.build({
+            accolade_slice_type_award_place: place,
+          }),
+        ),
     };
   },
 );

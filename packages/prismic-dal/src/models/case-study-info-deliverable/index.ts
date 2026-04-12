@@ -5,7 +5,7 @@ export const CaseStudyInfoDeliverableModel = graphql(`
     __typename
     info_deliverable_name
     info_deliverable_link {
-      ...ExternalLink
+      ...PrismicExternalLink
     }
   }
 `);
