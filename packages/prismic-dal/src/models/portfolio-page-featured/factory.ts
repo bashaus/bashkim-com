@@ -11,7 +11,7 @@ import { PortfolioPageFeaturedModelFragment } from "../../gql/graphql";
 import { prismicMetaFactory } from "../../prismic/meta/factory";
 
 export const portfolioPageFeaturedModelFactory =
-  Factory.define<PortfolioPageFeaturedModelFragment>(() => {
+  Factory.define<PortfolioPageFeaturedModelFragment>(({ sequence }) => {
     return {
       __typename: "Portfolio_pageFeatured",
       featured_title: [prismicHeading3Factory.build()],
@@ -21,7 +21,7 @@ export const portfolioPageFeaturedModelFactory =
         __typename: "Case_study",
         _meta: prismicMetaFactory.build({
           type: "case_study",
-          uid: "case-study",
+          uid: `case-study-${sequence}`,
         }),
         meta_title: faker.lorem.words(3),
         meta_description: faker.lorem.sentences(2),
