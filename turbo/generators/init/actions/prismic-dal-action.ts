@@ -1,6 +1,6 @@
 import { PlopTypes } from "@turbo/gen";
 
-export function prismicDalAction(): PlopTypes.Actions {
+export function prismicDalAction(): Array<PlopTypes.ActionType> {
   return [
     {
       type: "add",

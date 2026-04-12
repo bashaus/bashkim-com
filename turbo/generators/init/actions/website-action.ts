@@ -1,6 +1,6 @@
 import { PlopTypes } from "@turbo/gen";
 
-export function websiteAction(): PlopTypes.Actions {
+export function websiteAction(): Array<PlopTypes.ActionType> {
   return [
     {
       type: "add",
