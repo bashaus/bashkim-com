@@ -46,7 +46,7 @@ export const captionedScreenshotsSliceFactory =
         associations.primary ?? captionedScreenshotsSlicePrimaryFactory.build(),
       fields:
         associations.fields ??
-        Object.entries(screenSizes).map(([alt, dimensions]) =>
+        Object.entries(breakpoints).map(([alt, dimensions]) =>
           captionedScreenshotsSliceFieldFactory.build({
             captioned_screenshots_slice_type_images: prismicImageFactory.build({
               alt,
@@ -57,7 +57,7 @@ export const captionedScreenshotsSliceFactory =
     };
   });
 
-const screenSizes = {
+const breakpoints = {
   "Mobile Portrait": { width: 320, height: 1362 },
   "Mobile Landscape": { width: 480, height: 1160 },
   "Tablet Portrait": { width: 768, height: 1135 },
