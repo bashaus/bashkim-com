@@ -11,9 +11,9 @@ import { prismicHeading3Factory } from "../../prismic/heading/factory";
 import { prismicParagraphFactory } from "../../prismic/paragraph/factory";
 
 export const accoladeSliceFieldFactory =
-  Factory.define<AccoladeSliceTypeFieldFragment>((opts) => {
+  Factory.define<AccoladeSliceTypeFieldFragment>(({ params }) => {
     const place =
-      opts.params.accolade_slice_type_award_place ??
+      params.accolade_slice_type_award_place ??
       faker.helpers.arrayElement([
         "gold",
         "silver",
@@ -48,8 +48,8 @@ export const accoladeSlicePrimaryFactory =
   });
 
 export const accoladeSliceFactory = Factory.define<AccoladeSliceTypeFragment>(
-  (opts) => {
-    const { primary, fields } = opts.params;
+  ({ params }) => {
+    const { primary, fields } = params;
 
     return {
       __typename: "Case_studyAccoladesAccoladeslicetype",

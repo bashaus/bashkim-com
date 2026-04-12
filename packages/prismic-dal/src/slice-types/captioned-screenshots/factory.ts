@@ -10,9 +10,9 @@ import { prismicHeading3Factory } from "../../prismic/heading/factory";
 import { prismicParagraphFactory } from "../../prismic/paragraph/factory";
 
 export const captionedScreenshotsSliceFieldFactory =
-  Factory.define<CaptionedScreenshotsSliceTypeFieldFragment>((opts) => {
+  Factory.define<CaptionedScreenshotsSliceTypeFieldFragment>(({ params }) => {
     const { width = 320, height = 1362 } =
-      opts.params.captioned_screenshots_slice_type_images?.dimensions ?? {};
+      params.captioned_screenshots_slice_type_images?.dimensions ?? {};
 
     return {
       __typename: "Case_studyBodyCaptionedscreenshotsslicetypeFields",

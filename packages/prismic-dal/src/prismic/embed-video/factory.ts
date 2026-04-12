@@ -4,8 +4,7 @@ import { Factory } from "fishery";
 import { placeholderImage } from "placeholder-image-data-url-svg";
 
 const prismicEmbedVideoFactory = Factory.define<VideoOEmbed & OEmbedExtra>(
-  (opts) => {
-    const { params } = opts;
+  ({ params }) => {
     const thumbnailWidth = params.thumbnail_width ?? 295;
     const thumbnailHeight = params.thumbnail_height ?? 166;
     const width = params.width ?? 459;

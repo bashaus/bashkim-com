@@ -9,31 +9,33 @@ import { prismicHeading3Factory } from "../../prismic/heading/factory";
 import { prismicParagraphFactory } from "../../prismic/paragraph/factory";
 
 export const carouselImagesSliceFieldFactory =
-  Factory.define<CarouselImagesSliceTypeFieldFragment>((opts) => {
-    const { width = 600, height = 400 } =
-      opts.params.carousel_images_slice_type_image?.dimensions ?? {};
+  Factory.define<CarouselImagesSliceTypeFieldFragment>(
+    ({ params, sequence }) => {
+      const { width = 600, height = 400 } =
+        params.carousel_images_slice_type_image?.dimensions ?? {};
 
-    return {
-      __typename: "Case_studyBodyCarouselimagesslicetypeFields",
-      carousel_images_slice_type_caption: [
-        prismicHeading3Factory.build(),
-        prismicParagraphFactory.build(),
-      ],
-      carousel_images_slice_type_image: {
-        dimensions: {
-          width,
-          height,
+      return {
+        __typename: "Case_studyBodyCarouselimagesslicetypeFields",
+        carousel_images_slice_type_caption: [
+          prismicHeading3Factory.build(),
+          prismicParagraphFactory.build(),
+        ],
+        carousel_images_slice_type_image: {
+          dimensions: {
+            width,
+            height,
+          },
+          alt: null,
+          copyright: null,
+          url: placeholderImage({
+            width,
+            height,
+            text: `Image ${sequence}`,
+          }),
         },
-        alt: null,
-        copyright: null,
-        url: placeholderImage({
-          width,
-          height,
-          text: `Image ${opts.sequence}`,
-        }),
-      },
-    };
-  });
+      };
+    },
+  );
 
 export const carouselImagesSliceFactory =
   Factory.define<CarouselImagesSliceTypeFragment>(() => {

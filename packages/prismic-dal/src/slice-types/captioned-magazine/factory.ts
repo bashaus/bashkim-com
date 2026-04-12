@@ -10,12 +10,12 @@ import { prismicImageFactory } from "../../prismic/image/factory";
 import { prismicParagraphFactory } from "../../prismic/paragraph/factory";
 
 export const captionedMagazineSliceFieldFactory =
-  Factory.define<CaptionedMagazineSliceTypeFieldFragment>((opts) => {
+  Factory.define<CaptionedMagazineSliceTypeFieldFragment>(({ sequence }) => {
     return {
       __typename: "Case_studyBodyCaptionedmagazineslicetypeFields",
       captioned_magazine_slice_type_images: prismicImageFactory.build({
         dimensions: { width: 720, height: 1016 },
-        alt: `Page ${opts.sequence}`,
+        alt: `Page ${sequence}`,
       }),
     };
   });
