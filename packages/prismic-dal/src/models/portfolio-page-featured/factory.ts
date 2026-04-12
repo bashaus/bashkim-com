@@ -1,0 +1,32 @@
+import { faker } from "@faker-js/faker";
+import { Factory } from "fishery";
+
+import {
+  prismicHeading3Factory,
+  prismicImageIconFactory,
+  prismicImagePosterFactory,
+  prismicParagraphFactory,
+} from "../../factories";
+import { PortfolioPageFeaturedModelFragment } from "../../gql/graphql";
+import { prismicMetaFactory } from "../../prismic/meta/factory";
+
+export const portfolioPageFeaturedModelFactory =
+  Factory.define<PortfolioPageFeaturedModelFragment>(() => {
+    return {
+      __typename: "Portfolio_pageFeatured",
+      featured_title: [prismicHeading3Factory.build()],
+      featured_description: [prismicParagraphFactory.build()],
+
+      featured_case_study: {
+        __typename: "Case_study",
+        _meta: prismicMetaFactory.build({
+          type: "case_study",
+          uid: "case-study",
+        }),
+        meta_title: faker.lorem.words(3),
+        meta_description: faker.lorem.sentences(2),
+        image_icon: prismicImageIconFactory.build(),
+        image_poster: prismicImagePosterFactory.build(),
+      },
+    };
+  });
