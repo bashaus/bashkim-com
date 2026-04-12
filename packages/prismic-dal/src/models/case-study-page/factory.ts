@@ -16,7 +16,7 @@ import { caseStudyInfoDeliverableModelFactory } from "../case-study-info-deliver
 import { caseStudyInfoMarketModelFactory } from "../case-study-info-market/factory";
 import { caseStudyInfoOutcomeModelFactory } from "../case-study-info-outcome/factory";
 import { caseStudyInfoTargetAudienceModelFactory } from "../case-study-info-target-audience/factory";
-import { caseStudyInfoTechnologyModelFactory } from "../case-study-info-technology-model/factory";
+import { caseStudyInfoTechnologyModelFactory } from "../case-study-info-technology/factory";
 
 export const caseStudyPageModelFactory =
   Factory.define<CaseStudyPageModelFragment>(({ associations, sequence }) => {

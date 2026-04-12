@@ -4,13 +4,28 @@ export * from "./prismic/date/factory";
 export * from "./prismic/date-time/factory";
 export * from "./prismic/embed-rich/factory";
 export * from "./prismic/embed-video/factory";
+export * from "./prismic/external-link/factory";
 export * from "./prismic/heading/factory";
 export * from "./prismic/image/factory";
+export * from "./prismic/meta/factory";
 export * from "./prismic/paragraph/factory";
 
 /* model */
 
+export * from "./models/case-study-body/factory";
+export * from "./models/case-study-info-deliverable/factory";
+export * from "./models/case-study-info-market/factory";
+export * from "./models/case-study-info-outcome/factory";
+export * from "./models/case-study-info-target-audience/factory";
+export * from "./models/case-study-info-technology/factory";
+export * from "./models/case-study-page/factory";
 export * from "./models/home-page/factory";
+export * from "./models/peer/factory";
+export * from "./models/portfolio-page/factory";
+export * from "./models/portfolio-page-featured/factory";
+export * from "./models/sitemap-case-study/factory";
+export * from "./models/sitemap-home-page/factory";
+export * from "./models/sitemap-portfolio-page/factory";
 
 /* slice types */
 

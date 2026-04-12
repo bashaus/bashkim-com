@@ -1,7 +1,7 @@
 import { Factory } from "fishery";
 
-import { technologyModelFactory } from "../technology/factory";
 import { CaseStudyInfoTechnologyModelFragment } from "../../gql/graphql";
+import { technologyModelFactory } from "../technology/factory";
 
 export const caseStudyInfoTechnologyModelFactory =
   Factory.define<CaseStudyInfoTechnologyModelFragment>(({ associations }) => {
