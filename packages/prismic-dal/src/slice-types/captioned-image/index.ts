@@ -2,6 +2,7 @@ import { graphql } from "../../gql";
 
 export const CaptionedImageSliceTypePrimary = graphql(`
   fragment CaptionedImageSliceTypePrimary on Case_studyBodyCaptionedimageslicetypePrimary {
+    __typename
     captioned_image_slice_type_caption
     captioned_image_slice_type_image
     captioned_image_slice_type_image_blurhash
@@ -10,6 +11,7 @@ export const CaptionedImageSliceTypePrimary = graphql(`
 
 export const CaptionedImageSliceType = graphql(`
   fragment CaptionedImageSliceType on Case_studyBodyCaptionedimageslicetype {
+    __typename
     type
     primary {
       ...CaptionedImageSliceTypePrimary

@@ -2,6 +2,7 @@ import { graphql } from "../../gql";
 
 export const ExhibitionSliceTypePrimary = graphql(`
   fragment ExhibitionSliceTypePrimary on Case_studyExhibitionsExhibitionslicetypePrimary {
+    __typename
     exhibition_slice_type_name
     exhibition_slice_type_link {
       ...PrismicExternalLink
@@ -14,6 +15,7 @@ export const ExhibitionSliceTypePrimary = graphql(`
 
 export const ExhibitionSliceType = graphql(`
   fragment ExhibitionSliceType on Case_studyExhibitionsExhibitionslicetype {
+    __typename
     primary {
       ...ExhibitionSliceTypePrimary
     }

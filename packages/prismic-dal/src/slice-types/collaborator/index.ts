@@ -2,6 +2,7 @@ import { graphql } from "../../gql";
 
 export const CollaboratorSliceTypePrimary = graphql(`
   fragment CollaboratorSliceTypePrimary on Case_studyCollaboratorsCollaboratorslicetypePrimary {
+    __typename
     collaborator_slice_type_peer {
       ... on Peer {
         ...PeerModel
@@ -14,6 +15,7 @@ export const CollaboratorSliceTypePrimary = graphql(`
 
 export const CollaboratorSliceType = graphql(`
   fragment CollaboratorSliceType on Case_studyCollaboratorsCollaboratorslicetype {
+    __typename
     primary {
       ...CollaboratorSliceTypePrimary
     }

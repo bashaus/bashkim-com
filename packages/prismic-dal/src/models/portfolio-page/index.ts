@@ -2,6 +2,8 @@ import { graphql } from "../../gql";
 
 export const PortfolioPageModel = graphql(`
   fragment PortfolioPageModel on Portfolio_page {
+    __typename
+
     meta_title
     meta_description
 
