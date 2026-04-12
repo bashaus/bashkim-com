@@ -10,7 +10,7 @@ export const prismicMetaFactory = Factory.define<
   never,
   Meta,
   Required<DeepPartial<Meta>, "type">
->(({ params }) => {
+>(() => {
   return {
     __typename: "Meta",
     id: faker.string.alphanumeric(16),
@@ -18,7 +18,7 @@ export const prismicMetaFactory = Factory.define<
     alternateLanguages: [],
     uid: faker.lorem.slug(),
     tags: [],
-    type: params.type,
+    type: "unknown",
     firstPublicationDate: prismicDateTimeFactory.build(),
     lastPublicationDate: prismicDateTimeFactory.build(),
   };

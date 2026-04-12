@@ -7,21 +7,13 @@ export const prismicImageFactory = Factory.define<FilledImageFieldImage>(
   ({ params }) => {
     const { alt: _alt, dimensions = {} } = params;
 
-    const alt = _alt ?? faker.lorem.words(3);
     const { width = 1024, height = 768 } = dimensions;
+    const alt = _alt ?? `${width} x ${height}`;
 
     return {
       id: faker.string.alphanumeric(16),
-      dimensions: {
-        width,
-        height,
-      },
-      edit: {
-        x: 0,
-        y: 0,
-        zoom: 1,
-        background: "transparent",
-      },
+      dimensions: { width, height },
+      edit: { x: 0, y: 0, zoom: 1, background: "transparent" },
       alt,
       copyright: null,
       url: placeholderImage({ width, height, text: alt }),

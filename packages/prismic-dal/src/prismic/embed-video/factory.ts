@@ -5,15 +5,14 @@ import { placeholderImage } from "placeholder-image-data-url-svg";
 
 const prismicEmbedVideoFactory = Factory.define<VideoOEmbed & OEmbedExtra>(
   ({ params }) => {
+    const title = params.title ?? faker.lorem.words(3);
     const thumbnailWidth = params.thumbnail_width ?? 295;
     const thumbnailHeight = params.thumbnail_height ?? 166;
-    const width = params.width ?? 459;
-    const height = params.height ?? 344;
 
     return {
       type: "video",
       version: "1.0",
-      title: faker.lorem.words(3),
+      title,
       author_name: faker.person.fullName(),
       author_url: faker.internet.url(),
       thumbnail_width: thumbnailWidth,
@@ -21,11 +20,11 @@ const prismicEmbedVideoFactory = Factory.define<VideoOEmbed & OEmbedExtra>(
       thumbnail_url: placeholderImage({
         width: thumbnailWidth,
         height: thumbnailHeight,
-        text: "Thumbnail",
+        text: title,
       }),
       html: "",
-      width,
-      height,
+      width: 459,
+      height: 344,
     };
   },
 );

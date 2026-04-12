@@ -1,7 +1,7 @@
 import { faker } from "@faker-js/faker";
 import { Factory } from "fishery";
-import { placeholderImage } from "placeholder-image-data-url-svg";
 
+import { prismicImageFactory } from "../../factories";
 import {
   CarouselPhonesSliceTypeFieldFragment,
   CarouselPhonesSliceTypeFragment,
@@ -27,19 +27,10 @@ export const carouselPhonesSliceFieldFactory =
           prismicParagraphFactory.build(),
         ],
 
-        carousel_phones_slice_type_image: {
-          dimensions: {
-            width,
-            height,
-          },
-          alt: null,
-          copyright: null,
-          url: placeholderImage({
-            width,
-            height,
-            text: `Image ${sequence}`,
-          }),
-        },
+        carousel_phones_slice_type_image: prismicImageFactory.build({
+          alt: `#${sequence}`,
+          dimensions: { width, height },
+        }),
       };
     },
   );

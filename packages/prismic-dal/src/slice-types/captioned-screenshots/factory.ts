@@ -1,6 +1,6 @@
 import { Factory } from "fishery";
-import { placeholderImage } from "placeholder-image-data-url-svg";
 
+import { prismicImageFactory } from "../../factories";
 import {
   CaptionedScreenshotsSliceTypeFieldFragment,
   CaptionedScreenshotsSliceTypeFragment,
@@ -16,19 +16,9 @@ export const captionedScreenshotsSliceFieldFactory =
 
     return {
       __typename: "Case_studyBodyCaptionedscreenshotsslicetypeFields",
-      captioned_screenshots_slice_type_images: {
-        dimensions: {
-          width,
-          height,
-        },
-        alt: null,
-        copyright: null,
-        url: placeholderImage({
-          width: 320,
-          height: 1362,
-          text: `${width} x ${height}`,
-        }),
-      },
+      captioned_screenshots_slice_type_images: prismicImageFactory.build({
+        dimensions: { width, height },
+      }),
     };
   });
 

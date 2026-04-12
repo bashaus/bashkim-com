@@ -1,6 +1,6 @@
 import { Factory } from "fishery";
-import { placeholderImage } from "placeholder-image-data-url-svg";
 
+import { prismicImageFactory } from "../../factories";
 import {
   CarouselImagesSliceTypeFieldFragment,
   CarouselImagesSliceTypeFragment,
@@ -20,19 +20,10 @@ export const carouselImagesSliceFieldFactory =
           prismicHeading3Factory.build(),
           prismicParagraphFactory.build(),
         ],
-        carousel_images_slice_type_image: {
-          dimensions: {
-            width,
-            height,
-          },
-          alt: null,
-          copyright: null,
-          url: placeholderImage({
-            width,
-            height,
-            text: `Image ${sequence}`,
-          }),
-        },
+        carousel_images_slice_type_image: prismicImageFactory.build({
+          alt: `#${sequence}`,
+          dimensions: { width, height },
+        }),
       };
     },
   );
