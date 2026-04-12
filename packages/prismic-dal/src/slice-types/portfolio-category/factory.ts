@@ -48,6 +48,6 @@ export const portfolioCategorySliceFactory =
         "Portfolio_pagePortfolio_categoriesPortfoliocategoryslicetype",
       type: "PortfolioCategorySliceType",
       primary: portfolioCategorySlicePrimaryFactory.build(),
-      fields: portfolioCategorySliceFieldFactory.buildList(1),
+      fields: portfolioCategorySliceFieldFactory.buildList(6),
     };
   });
