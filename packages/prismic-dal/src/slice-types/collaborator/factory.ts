@@ -19,10 +19,10 @@ export const collaboratorSlicePrimaryFactory =
   });
 
 export const collaboratorSliceFactory =
-  Factory.define<CollaboratorSliceTypeFragment>(() => {
+  Factory.define<CollaboratorSliceTypeFragment>(({ associations }) => {
     return {
       __typename: "Case_studyCollaboratorsCollaboratorslicetype",
       type: "CollaboratorSliceType",
-      primary: collaboratorSlicePrimaryFactory.build(),
+      primary: associations.primary ?? collaboratorSlicePrimaryFactory.build(),
     };
   });

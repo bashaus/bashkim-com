@@ -36,10 +36,11 @@ export const carouselPhonesSliceFieldFactory =
   );
 
 export const carouselPhonesSliceFactory =
-  Factory.define<CarouselPhonesSliceTypeFragment>(() => {
+  Factory.define<CarouselPhonesSliceTypeFragment>(({ associations }) => {
     return {
       __typename: "Case_studyBodyCarouselphonesslicetype",
       type: "CarouselPhonesSliceType",
-      fields: carouselPhonesSliceFieldFactory.buildList(4),
+      fields:
+        associations.fields ?? carouselPhonesSliceFieldFactory.buildList(4),
     };
   });

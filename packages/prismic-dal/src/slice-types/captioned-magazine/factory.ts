@@ -14,8 +14,8 @@ export const captionedMagazineSliceFieldFactory =
     return {
       __typename: "Case_studyBodyCaptionedmagazineslicetypeFields",
       captioned_magazine_slice_type_images: prismicImageFactory.build({
+        alt: `#${sequence}`,
         dimensions: { width: 720, height: 1016 },
-        alt: `Page ${sequence}`,
       }),
     };
   });
@@ -32,11 +32,13 @@ export const captionedMagazineSlicePrimaryFactory =
   });
 
 export const captionedMagazineSliceFactory =
-  Factory.define<CaptionedMagazineSliceTypeFragment>(() => {
+  Factory.define<CaptionedMagazineSliceTypeFragment>(({ associations }) => {
     return {
       __typename: "Case_studyBodyCaptionedmagazineslicetype",
       type: "CaptionedMagazineSliceType",
-      primary: captionedMagazineSlicePrimaryFactory.build(),
-      fields: captionedMagazineSliceFieldFactory.buildList(4),
+      primary:
+        associations.primary ?? captionedMagazineSlicePrimaryFactory.build(),
+      fields:
+        associations.fields ?? captionedMagazineSliceFieldFactory.buildList(4),
     };
   });

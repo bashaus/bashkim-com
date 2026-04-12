@@ -23,9 +23,11 @@ export const accoladeSliceFieldFactory =
       __typename: "Case_studyAccoladesAccoladeslicetypeFields",
       accolade_slice_type_award_place,
       accolade_slice_type_award_link: prismicExternalLinkFactory.build(),
-      accolade_slice_type_award_category: prismicParagraphFactory.buildList(1, {
-        text: `Award - ${accolade_slice_type_award_place}`,
-      }),
+      accolade_slice_type_award_category: [
+        prismicParagraphFactory.build({
+          text: `Award - ${accolade_slice_type_award_place}`,
+        }),
+      ],
     };
   });
 
@@ -33,11 +35,11 @@ export const accoladeSlicePrimaryFactory =
   Factory.define<AccoladeSliceTypePrimaryFragment>(() => {
     return {
       __typename: "Case_studyAccoladesAccoladeslicetypePrimary",
-      accolade_slice_type_description: prismicParagraphFactory.buildList(1),
+      accolade_slice_type_description: [prismicParagraphFactory.build()],
       accolade_slice_type_date: prismicDateFactory.build(),
-      accolade_slice_type_issuer: prismicHeading3Factory.buildList(1, {
-        text: faker.company.name(),
-      }),
+      accolade_slice_type_issuer: [
+        prismicHeading3Factory.build({ text: faker.company.name() }),
+      ],
     };
   });
 

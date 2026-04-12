@@ -36,10 +36,11 @@ export const captionedVideoSlicePrimaryFactory =
   });
 
 export const captionedVideoSliceFactory =
-  Factory.define<CaptionedVideoSliceTypeFragment>(() => {
+  Factory.define<CaptionedVideoSliceTypeFragment>(({ associations }) => {
     return {
       __typename: "Case_studyBodyCaptionedvideoslicetype",
       type: "CaptionedVideoSliceType",
-      primary: captionedVideoSlicePrimaryFactory.build(),
+      primary:
+        associations.primary ?? captionedVideoSlicePrimaryFactory.build(),
     };
   });

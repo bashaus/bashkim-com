@@ -24,11 +24,12 @@ export const captionedImageSlicePrimaryFactory =
   });
 
 export const captionedImageSliceFactory =
-  Factory.define<CaptionedImageSliceTypeFragment>(() => {
+  Factory.define<CaptionedImageSliceTypeFragment>(({ associations }) => {
     return {
       __typename: "Case_studyBodyCaptionedimageslicetype",
       type: "CaptionedImageSliceType",
-      primary: captionedImageSlicePrimaryFactory.build(),
+      primary:
+        associations.primary ?? captionedImageSlicePrimaryFactory.build(),
     };
   });
 

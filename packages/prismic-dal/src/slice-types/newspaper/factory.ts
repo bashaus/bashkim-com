@@ -10,16 +10,16 @@ export const newspaperSliceFieldFactory =
   Factory.define<NewspaperSliceTypeFieldFragment>(() => {
     return {
       __typename: "Case_studyBodyNewspaperslicetypeFields",
-      newspaper_slice_type_group: prismicParagraphFactory.buildList(1),
+      newspaper_slice_type_group: [prismicParagraphFactory.build()],
     };
   });
 
 export const newspaperSliceFactory = Factory.define<NewspaperSliceTypeFragment>(
-  () => {
+  ({ associations }) => {
     return {
       __typename: "Case_studyBodyNewspaperslicetype",
       type: "NewspaperSliceType",
-      fields: newspaperSliceFieldFactory.buildList(10),
+      fields: associations.fields ?? newspaperSliceFieldFactory.buildList(10),
     };
   },
 );

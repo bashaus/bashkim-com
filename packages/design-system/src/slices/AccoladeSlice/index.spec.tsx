@@ -17,14 +17,14 @@ describe("<AccoladeSlice />", () => {
     const slice = accoladeSliceFactory.build(undefined, {
       associations: {
         primary: accoladeSlicePrimaryFactory.build({
-          accolade_slice_type_issuer: prismicHeading3Factory.buildList(1, {
-            text,
-          }),
+          accolade_slice_type_issuer: [prismicHeading3Factory.build({ text })],
         }),
 
-        fields: accoladeSliceFieldFactory.buildList(1, {
-          accolade_slice_type_award_place: "gold",
-        }),
+        fields: [
+          accoladeSliceFieldFactory.build({
+            accolade_slice_type_award_place: "gold",
+          }),
+        ],
       },
     });
 

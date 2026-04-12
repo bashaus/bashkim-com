@@ -1,6 +1,7 @@
 import { faker } from "@faker-js/faker";
 import { Factory } from "fishery";
 
+import { prismicExternalLinkFactory } from "../../factories";
 import {
   ExhibitionSliceTypeFragment,
   ExhibitionSliceTypePrimaryFragment,
@@ -13,11 +14,8 @@ export const exhibitionSlicePrimaryFactory =
   Factory.define<ExhibitionSliceTypePrimaryFragment>(() => {
     return {
       __typename: "Case_studyExhibitionsExhibitionslicetypePrimary",
-      exhibition_slice_type_name: prismicHeading3Factory.buildList(1),
-      exhibition_slice_type_link: {
-        url: faker.internet.url(),
-        target: null,
-      },
+      exhibition_slice_type_name: [prismicHeading3Factory.build()],
+      exhibition_slice_type_link: prismicExternalLinkFactory.build(),
       exhibition_slice_type_opening_date: prismicDateTimeFactory.build(
         undefined,
         { transient: { days: 5 } },
@@ -26,17 +24,19 @@ export const exhibitionSlicePrimaryFactory =
         undefined,
         { transient: { days: 10 } },
       ),
-      exhibition_slice_type_location: prismicParagraphFactory.buildList(1, {
-        text: `${faker.location.city()}, ${faker.location.country()}`,
-      }),
+      exhibition_slice_type_location: [
+        prismicParagraphFactory.build({
+          text: `${faker.location.city()}, ${faker.location.country()}`,
+        }),
+      ],
     };
   });
 
 export const exhibitionSliceFactory =
-  Factory.define<ExhibitionSliceTypeFragment>(() => {
+  Factory.define<ExhibitionSliceTypeFragment>(({ associations }) => {
     return {
       __typename: "Case_studyExhibitionsExhibitionslicetype",
       type: "ExhibitionSliceType",
-      primary: exhibitionSlicePrimaryFactory.build(),
+      primary: associations.primary ?? exhibitionSlicePrimaryFactory.build(),
     };
   });

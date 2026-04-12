@@ -9,35 +9,36 @@ import { prismicImageFactory } from "../../prismic/image/factory";
 import { prismicParagraphFactory } from "../../prismic/paragraph/factory";
 
 export const gridVideoSliceFieldFactory =
-  Factory.define<GridVideoSliceTypeFieldFragment>(({ params, sequence }) => {
-    const { width: posterWidth = 400, height: posterHeight = 300 } =
-      params.grid_video_slice_type_poster?.dimensions ?? {};
+  Factory.define<GridVideoSliceTypeFieldFragment>(
+    ({ associations, sequence }) => {
+      return {
+        __typename: "Case_studyBodyGridvideoslicetypeFields",
 
-    const {
-      thumbnail_height: thumbnailWidth = 480,
-      thumbnail_width: thumbnailHeight = 360,
-    } = params.grid_video_slice_type_video?.dimensions ?? {};
+        grid_video_slice_type_description:
+          associations.grid_video_slice_type_description ?? [
+            prismicParagraphFactory.build(),
+          ],
 
-    return {
-      __typename: "Case_studyBodyGridvideoslicetypeFields",
-      grid_video_slice_type_description: prismicParagraphFactory.buildList(1),
-      grid_video_slice_type_poster: prismicImageFactory.build({
-        dimensions: { width: posterWidth, height: posterHeight },
-        alt: `Video ${sequence}`,
-      }),
-      grid_video_slice_type_video: prismicEmbedYouTubeFactory.build({
-        thumbnail_width: thumbnailWidth,
-        thumbnail_height: thumbnailHeight,
-      }),
-    };
-  });
+        grid_video_slice_type_poster:
+          associations.grid_video_slice_type_poster ??
+          prismicImageFactory.build({
+            alt: `#${sequence}`,
+            dimensions: { width: 400, height: 300 },
+          }),
+
+        grid_video_slice_type_video:
+          associations.grid_video_slice_type_video ??
+          prismicEmbedYouTubeFactory.build(),
+      };
+    },
+  );
 
 export const gridVideoSliceFactory = Factory.define<GridVideoSliceTypeFragment>(
-  () => {
+  ({ associations }) => {
     return {
       __typename: "Case_studyBodyGridvideoslicetype",
       type: "GridVideoSliceType",
-      fields: gridVideoSliceFieldFactory.buildList(4),
+      fields: associations.fields ?? gridVideoSliceFieldFactory.buildList(4),
     };
   },
 );

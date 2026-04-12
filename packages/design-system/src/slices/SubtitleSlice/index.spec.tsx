@@ -2,6 +2,7 @@ import {
   prismicHeading3Factory,
   prismicParagraphFactory,
   subtitleSliceFactory,
+  subtitleSlicePrimaryFactory,
 } from "@bashkim-com/prismic-dal/factories";
 import { faker } from "@faker-js/faker";
 import { render } from "@testing-library/react";
@@ -13,14 +14,16 @@ describe("<SubtitleSlice />", () => {
     const headingText = faker.lorem.sentence();
     const descriptionText = faker.lorem.sentence();
 
-    const slice = subtitleSliceFactory.build({
-      primary: {
-        subtitle_slice_type_heading: prismicHeading3Factory.buildList(1, {
-          text: headingText,
-        }),
+    const slice = subtitleSliceFactory.build(undefined, {
+      associations: {
+        primary: subtitleSlicePrimaryFactory.build({
+          subtitle_slice_type_heading: [
+            prismicHeading3Factory.build({ text: headingText }),
+          ],
 
-        subtitle_slice_type_description: prismicParagraphFactory.buildList(1, {
-          text: descriptionText,
+          subtitle_slice_type_description: [
+            prismicParagraphFactory.build({ text: descriptionText }),
+          ],
         }),
       },
     });

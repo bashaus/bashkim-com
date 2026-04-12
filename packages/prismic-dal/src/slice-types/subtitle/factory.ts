@@ -11,17 +11,17 @@ export const subtitleSlicePrimaryFactory =
   Factory.define<SubtitleSliceTypePrimaryFragment>(() => {
     return {
       __typename: "Case_studyBodySubtitleslicetypePrimary",
-      subtitle_slice_type_heading: prismicHeading2Factory.buildList(1),
-      subtitle_slice_type_description: prismicParagraphFactory.buildList(1),
+      subtitle_slice_type_heading: [prismicHeading2Factory.build()],
+      subtitle_slice_type_description: [prismicParagraphFactory.build()],
     };
   });
 
 export const subtitleSliceFactory = Factory.define<SubtitleSliceTypeFragment>(
-  () => {
+  ({ associations }) => {
     return {
       __typename: "Case_studyBodySubtitleslicetype",
       type: "SubtitleSliceType",
-      primary: subtitleSlicePrimaryFactory.build(),
+      primary: associations.primary ?? subtitleSlicePrimaryFactory.build(),
     };
   },
 );

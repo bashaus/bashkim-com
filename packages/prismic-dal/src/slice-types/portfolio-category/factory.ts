@@ -36,18 +36,20 @@ export const portfolioCategorySlicePrimaryFactory =
       __typename:
         "Portfolio_pagePortfolio_categoriesPortfoliocategoryslicetypePrimary",
       portfolio_category_slug: faker.lorem.slug(3),
-      portfolio_category_title: prismicHeading2Factory.buildList(1),
-      portfolio_category_description: prismicParagraphFactory.buildList(1),
+      portfolio_category_title: [prismicHeading2Factory.build()],
+      portfolio_category_description: [prismicParagraphFactory.build()],
     };
   });
 
 export const portfolioCategorySliceFactory =
-  Factory.define<PortfolioCategorySliceTypeFragment>(() => {
+  Factory.define<PortfolioCategorySliceTypeFragment>(({ associations }) => {
     return {
       __typename:
         "Portfolio_pagePortfolio_categoriesPortfoliocategoryslicetype",
       type: "PortfolioCategorySliceType",
-      primary: portfolioCategorySlicePrimaryFactory.build(),
-      fields: portfolioCategorySliceFieldFactory.buildList(6),
+      primary:
+        associations.primary ?? portfolioCategorySlicePrimaryFactory.build(),
+      fields:
+        associations.fields ?? portfolioCategorySliceFieldFactory.buildList(6),
     };
   });

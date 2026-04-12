@@ -12,18 +12,18 @@ export const fullTextSlicePrimaryFactory =
     return {
       __typename: "Case_studyBodyFulltextslicetypePrimary",
       full_text_slice_type_body: [
-        ...prismicHeading3Factory.buildList(1),
+        prismicHeading3Factory.build(),
         ...prismicParagraphFactory.buildList(5),
       ],
     };
   });
 
 export const fullTextSliceFactory = Factory.define<FullTextSliceTypeFragment>(
-  () => {
+  ({ associations }) => {
     return {
       __typename: "Case_studyBodyFulltextslicetype",
       type: "FullTextSliceType",
-      primary: fullTextSlicePrimaryFactory.build(),
+      primary: associations.primary ?? fullTextSlicePrimaryFactory.build(),
     };
   },
 );

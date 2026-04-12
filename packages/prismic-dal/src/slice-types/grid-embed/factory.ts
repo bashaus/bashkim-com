@@ -15,11 +15,11 @@ export const gridEmbedSliceFieldFactory =
   });
 
 export const gridEmbedSliceFactory = Factory.define<GridEmbedSliceTypeFragment>(
-  () => {
+  ({ associations }) => {
     return {
       __typename: "Case_studyBodyGridembedslicetype",
       type: "GridEmbedSliceType",
-      fields: gridEmbedSliceFieldFactory.buildList(3),
+      fields: associations.fields ?? gridEmbedSliceFieldFactory.buildList(3),
     };
   },
 );

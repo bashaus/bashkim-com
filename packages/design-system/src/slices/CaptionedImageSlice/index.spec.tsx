@@ -12,13 +12,14 @@ describe("<CaptionedImageSlice />", () => {
   it("should render", () => {
     const text = faker.lorem.sentence();
 
-    const slice = captionedImageSliceFactory.build({
-      primary: {
-        captioned_image_slice_type_caption: prismicHeading3Factory.buildList(
-          1,
-          { text },
-        ),
-        captioned_image_slice_type_image: prismicImageFactory.build(),
+    const slice = captionedImageSliceFactory.build(undefined, {
+      associations: {
+        primary: {
+          captioned_image_slice_type_image: prismicImageFactory.build(),
+          captioned_image_slice_type_caption: [
+            prismicHeading3Factory.build({ text }),
+          ],
+        },
       },
     });
 

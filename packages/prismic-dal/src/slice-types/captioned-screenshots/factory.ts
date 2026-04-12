@@ -47,11 +47,11 @@ export const captionedScreenshotsSliceFactory =
       fields:
         associations.fields ??
         Object.entries(breakpoints).map(([alt, dimensions]) =>
-          captionedScreenshotsSliceFieldFactory.build({
-            captioned_screenshots_slice_type_images: prismicImageFactory.build({
-              alt,
-              dimensions,
-            }),
+          captionedScreenshotsSliceFieldFactory.build(undefined, {
+            associations: {
+              captioned_screenshots_slice_type_images:
+                prismicImageFactory.build({ alt, dimensions }),
+            },
           }),
         ),
     };

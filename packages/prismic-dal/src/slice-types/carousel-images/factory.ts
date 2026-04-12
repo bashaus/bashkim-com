@@ -29,10 +29,11 @@ export const carouselImagesSliceFieldFactory =
   );
 
 export const carouselImagesSliceFactory =
-  Factory.define<CarouselImagesSliceTypeFragment>(() => {
+  Factory.define<CarouselImagesSliceTypeFragment>(({ associations }) => {
     return {
       __typename: "Case_studyBodyCarouselimagesslicetype",
       type: "CarouselImagesSliceType",
-      fields: carouselImagesSliceFieldFactory.buildList(3),
+      fields:
+        associations.fields ?? carouselImagesSliceFieldFactory.buildList(3),
     };
   });
