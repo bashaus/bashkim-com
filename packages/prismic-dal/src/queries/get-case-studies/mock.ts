@@ -1,6 +1,6 @@
-import { GetCaseStudiesQuery } from "@bashkim-com/prismic-dal";
 import { HttpResponse } from "msw";
 
+import { GetCaseStudiesQuery } from "../../gql/graphql";
 import { prismicLink } from "../../mock/link";
 import { prismicMetaFactory } from "../../prismic/meta/factory";
 

@@ -5,16 +5,14 @@ import {
   CollaboratorSliceTypeFragment,
   CollaboratorSliceTypePrimaryFragment,
 } from "../../gql/graphql";
+import { peerModelFactory } from "../../models/peer/factory";
 
 export const collaboratorSlicePrimaryFactory =
-  Factory.define<CollaboratorSliceTypePrimaryFragment>(() => {
+  Factory.define<CollaboratorSliceTypePrimaryFragment>(({ associations }) => {
     return {
       __typename: "Case_studyCollaboratorsCollaboratorslicetypePrimary",
-      collaborator_slice_type_peer: {
-        __typename: "Peer",
-        peer_name: faker.person.fullName(),
-        peer_website: null,
-      },
+      collaborator_slice_type_peer:
+        associations.collaborator_slice_type_peer ?? peerModelFactory.build(),
       collaborator_slice_type_role: faker.person.jobTitle(),
       collaborator_slice_type_company: null,
     };

@@ -12,7 +12,7 @@ import { prismicMetaFactory } from "../../prismic/meta/factory";
 import { prismicParagraphFactory } from "../../prismic/paragraph/factory";
 
 export const portfolioCategorySliceFieldFactory =
-  Factory.define<PortfolioCategorySliceTypeFieldFragment>(() => {
+  Factory.define<PortfolioCategorySliceTypeFieldFragment>(({ sequence }) => {
     return {
       __typename:
         "Portfolio_pagePortfolio_categoriesPortfoliocategoryslicetypeFields",
@@ -20,7 +20,7 @@ export const portfolioCategorySliceFieldFactory =
         __typename: "Case_study",
         _meta: prismicMetaFactory.build({
           type: "case_study",
-          uid: "case-study",
+          uid: `case-study-${sequence}`,
         }),
 
         meta_title: faker.lorem.words(3),

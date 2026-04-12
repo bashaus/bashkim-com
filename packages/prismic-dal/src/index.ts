@@ -12,6 +12,7 @@ export * from "./models/portfolio-page-featured";
 export * from "./models/sitemap-case-study";
 export * from "./models/sitemap-home-page";
 export * from "./models/sitemap-portfolio-page";
+export * from "./models/technology";
 
 /* queries */
 
