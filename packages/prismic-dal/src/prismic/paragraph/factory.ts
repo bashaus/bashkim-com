@@ -5,7 +5,7 @@ import { Factory } from "fishery";
 export const prismicParagraphFactory = Factory.define<RTParagraphNode>(() => {
   return {
     type: "paragraph",
-    text: faker.lorem.sentence(),
+    text: faker.lorem.paragraph(),
     spans: [],
   };
 });

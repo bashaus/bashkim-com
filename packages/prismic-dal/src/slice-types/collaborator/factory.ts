@@ -1,11 +1,11 @@
 import { faker } from "@faker-js/faker";
 import { Factory } from "fishery";
 
+import { peerModelFactory } from "../../content-types/peer/factory";
 import {
   CollaboratorSliceTypeFragment,
   CollaboratorSliceTypePrimaryFragment,
 } from "../../gql/graphql";
-import { peerModelFactory } from "../../models/peer/factory";
 
 export const collaboratorSlicePrimaryFactory =
   Factory.define<CollaboratorSliceTypePrimaryFragment>(({ associations }) => {

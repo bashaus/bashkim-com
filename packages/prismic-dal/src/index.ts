@@ -1,12 +1,16 @@
 export * from "./gql";
 export type * from "./gql/graphql";
 
+/* content types */
+
+export * from "./content-types/peer";
+export * from "./content-types/technology";
+
 /* models */
 
 export * from "./models/case-study-body";
 export * from "./models/case-study-page";
 export * from "./models/home-page";
-export * from "./models/peer";
 export * from "./models/portfolio-page";
 export * from "./models/portfolio-page-featured";
 export * from "./models/sitemap-case-study";

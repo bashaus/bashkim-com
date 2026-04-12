@@ -1,14 +1,12 @@
 import { faker } from "@faker-js/faker";
 import { Factory } from "fishery";
 
-import { ExternalLinkFragment } from "../../gql/graphql";
+import { _ExternalLink } from "../../gql/graphql";
 
-export const prismicExternalLinkFactory = Factory.define<ExternalLinkFragment>(
-  () => {
-    return {
-      __typename: "_ExternalLink",
-      url: faker.internet.url(),
-      target: null,
-    };
-  },
-);
+export const prismicExternalLinkFactory = Factory.define<_ExternalLink>(() => {
+  return {
+    __typename: "_ExternalLink",
+    url: faker.internet.url(),
+    target: null,
+  };
+});
