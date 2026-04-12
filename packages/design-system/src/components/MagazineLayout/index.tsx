@@ -1,6 +1,6 @@
 import { CaptionedMagazineSliceTypeFieldFragment } from "@bashkim-com/prismic-dal";
 import Grid from "@mui/material/Grid";
-import { motion } from "motion/react";
+import { motion, Variants } from "motion/react";
 
 import { spring } from "../../motion/transition/spring";
 
@@ -10,17 +10,40 @@ export type MagazineLayoutProps = Readonly<{
 
 const MotionGrid = motion(Grid);
 
+const animationVariant: Variants = {
+  initial: { opacity: 0, scale: 0.95 },
+  animate: (i: number) => ({
+    opacity: 1,
+    scale: 1,
+    transition: {
+      ...spring,
+      delay: 0.1 + i * 0.1,
+    },
+  }),
+  exit: (i: number) => ({
+    opacity: 0,
+    scale: 0.95,
+    transition: {
+      ...spring,
+      delay: i * 0.1,
+    },
+  }),
+};
+
 export default function MagazineLayout({ images }: MagazineLayoutProps) {
+  let custom = 0;
+
   return (
     <Grid container spacing={2}>
       {images.map((image) => (
         <MotionGrid
           key={JSON.stringify(image)}
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 0.95 }}
           size={{ xs: 12, md: 6 }}
-          transition={spring}
+          custom={custom++}
+          variants={animationVariant}
+          initial="initial"
+          exit="exit"
+          animate="animate"
         >
           <img
             src={image.captioned_magazine_slice_type_images.url}
