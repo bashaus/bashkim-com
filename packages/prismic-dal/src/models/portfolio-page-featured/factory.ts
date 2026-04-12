@@ -1,14 +1,14 @@
 import { faker } from "@faker-js/faker";
 import { Factory } from "fishery";
 
+import { PortfolioPageFeaturedModelFragment } from "../../gql/graphql";
+import { prismicHeading3Factory } from "../../prismic/heading/factory";
 import {
-  prismicHeading3Factory,
   prismicImageIconFactory,
   prismicImagePosterFactory,
-  prismicParagraphFactory,
-} from "../../factories";
-import { PortfolioPageFeaturedModelFragment } from "../../gql/graphql";
+} from "../../prismic/image/factory";
 import { prismicMetaFactory } from "../../prismic/meta/factory";
+import { prismicParagraphFactory } from "../../prismic/paragraph/factory";
 
 export const portfolioPageFeaturedModelFactory =
   Factory.define<PortfolioPageFeaturedModelFragment>(({ sequence }) => {

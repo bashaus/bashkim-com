@@ -2,6 +2,7 @@ import { graphql } from "../../gql";
 
 export const CaseStudyPageModel = graphql(`
   fragment CaseStudyPageModel on Case_study {
+    __typename
     _meta {
       uid
     }
@@ -16,12 +17,7 @@ export const CaseStudyPageModel = graphql(`
     info_strategy
     info_implementation
     info_deliverables {
-      ... on Case_studyInfo_deliverables {
-        info_deliverable_name
-        info_deliverable_link {
-          ...ExternalLink
-        }
-      }
+      ...CaseStudyInfoDeliverableModel
     }
     info_client
     info_agency
@@ -29,23 +25,18 @@ export const CaseStudyPageModel = graphql(`
     info_institution
     info_degree
     info_markets {
-      info_market
+      ...CaseStudyInfoMarketModel
     }
     info_target_audiences {
-      info_target_audience_name
+      ...CaseStudyInfoTargetAudienceModel
     }
     info_launch_date
     info_decommission_date
     info_outcomes {
-      info_outcome
+      ...CaseStudyInfoOutcomeModel
     }
     info_technologies {
-      info_technology {
-        ... on Technology {
-          technology_name
-          technology_icon
-        }
-      }
+      ...CaseStudyInfoTechnologyModel
     }
     accolades {
       ...AccoladeSliceType

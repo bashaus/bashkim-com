@@ -1,6 +1,6 @@
-import { GetHomePageQuery } from "@bashkim-com/prismic-dal";
 import { HttpResponse } from "msw";
 
+import { GetHomePageQuery } from "../../gql/graphql";
 import { prismicLink } from "../../mock/link";
 import { homePageModelFactory } from "../../models/home-page/factory";
 
