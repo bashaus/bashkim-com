@@ -38,9 +38,25 @@ export const prismicImageIconFactory = prismicImageFactory.params({
 });
 
 export const prismicImagePosterFactory = prismicImageFactory.params({
-  alt: "icon",
+  alt: "poster",
   dimensions: {
     width: 640,
     height: 360,
+  },
+});
+
+export const prismicImageHeaderDesktopFactory = prismicImageFactory.params({
+  alt: "header desktop",
+  dimensions: {
+    width: 1980,
+    height: 400,
+  },
+});
+
+export const prismicImageHeaderMobileFactory = prismicImageFactory.params({
+  alt: "header mobile",
+  dimensions: {
+    width: 1000,
+    height: 800,
   },
 });
