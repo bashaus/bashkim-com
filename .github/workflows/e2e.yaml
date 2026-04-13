@@ -6,7 +6,7 @@ on:
       base-url:
         type: string
         default: https://www.bashkim.com
-        description: The base URL to test via Cypress
+        description: The base URL to test
         required: false
     secrets:
       VERCEL_AUTOMATION_BYPASS_SECRET:
@@ -17,9 +17,6 @@ jobs:
   e2e:
     name: ${{ matrix.browser }}
     runs-on: ubuntu-latest
-    container:
-      image: cypress/browsers:22.19.0
-      options: --user 1001
 
     strategy:
       fail-fast: false
@@ -43,19 +40,19 @@ jobs:
       - name: npm ci
         run: npm ci
 
-      - name: cypress ${{ matrix.browser }}
-        working-directory: packages/website-e2e
-        run: >
-          npx cypress run \
-            --browser "${{ matrix.browser }}" \
-            --env VERCEL_AUTOMATION_BYPASS_SECRET="${VERCEL_AUTOMATION_BYPASS_SECRET}"
+      - name: playwright install
+        run: npx playwright install --with-deps
+
+      - name: test:e2e
+        run: npm run test:e2e
         env:
-          CYPRESS_BASE_URL: "${{ inputs.base-url }}"
+          BASE_URL: ${{ inputs.base-url }}
           VERCEL_AUTOMATION_BYPASS_SECRET: ${{ secrets.VERCEL_AUTOMATION_BYPASS_SECRET }}
 
-      - name: cypress artifact
+      - name: upload report
         if: always()
         uses: actions/upload-artifact@v7
         with:
-          name: cypress-report-${{ matrix.browser }}
-          path: packages/website-e2e/cypress/reports
+          name: report-${{ matrix.browser }}
+          path: packages/website-e2e/test-results
+          retention-days: 7

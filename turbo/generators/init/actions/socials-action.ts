@@ -6,6 +6,7 @@ export function socialsAction(): Array<PlopTypes.ActionType> {
       type: "add",
       path: "{{ turbo.paths.root }}/packages/socials/.env",
       templateFile: "templates/packages/socials/.env.hbs",
+      force: true,
     },
   ];
 }

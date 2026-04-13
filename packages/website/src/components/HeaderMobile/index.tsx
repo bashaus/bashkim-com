@@ -12,7 +12,7 @@ export type HeaderMobileProps = Readonly<{
 
 export default function HeaderMobile({ backButton }: HeaderMobileProps) {
   return (
-    <S.Container>
+    <S.Container role="toolbar">
       <S.PrimaryToolbar disableGutters>
         <S.PrimaryAction>{backButton}</S.PrimaryAction>
         <S.SiteTitle flex={1}>

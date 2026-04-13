@@ -30,7 +30,7 @@ The site’s content is decoupled from the codebase using **Prismic** as a headl
 
 Every commit is validated through **GitHub Actions** to maintain strict quality and security standards. This pipeline includes automated code scanning via **CodeQL** and **SonarCloud** to proactively identify vulnerabilities and technical debt before they reach production.
 
-To ensure a performant and bug-free user experience, **Cypress** E2E tests and **Lighthouse** audits are integrated into the core workflow – triggered on a daily schedule, via manual dispatch, and automatically for every Vercel preview deployment. This validates the integrity of new features in real-time.
+To ensure a performant and bug-free user experience, **Playwright** E2E tests and **Lighthouse** audits are integrated into the core workflow – triggered on a daily schedule, via manual dispatch, and automatically for every Vercel preview deployment. This validates the integrity of new features in real-time.
 
 [![GitHub Actions][img:github-actions]][url:github-actions]
 
@@ -43,6 +43,8 @@ Production deployments are automated through **Vercel**, ensuring that every cha
 ### Static Analysis
 
 To maintain a clean and maintainable codebase, **SonarQube Cloud** is integrated as an automated quality gate. It scans every pull request for code smells, complexity, and potential bugs, ensuring that technical debt is addressed early. By enforcing these high standards, the project remains scalable and follows industry best practices for security and performance.
+
+[![SonarCloud][img:sonarcloud]][url:sonarcloud]
 
 ## Development
 
@@ -62,8 +64,6 @@ npx turbo gen init
 # Begin development
 npm run dev
 ```
-
-[![SonarCloud][img:sonarcloud]][url:sonarcloud]
 
 [img:storybook]: https://img.shields.io/badge/Storybook-FF4785?logo=storybook&logoColor=white
 [url:storybook]: https://ui.bashkim.com
