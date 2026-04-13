@@ -48,4 +48,4 @@ gql/
 lhci-results/
 
 # Cucumber
-test-reports/
+test-results/

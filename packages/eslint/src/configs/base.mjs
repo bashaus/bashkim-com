@@ -19,7 +19,7 @@ export default defineConfig(
       "dist/*",
       ".turbo/*",
       "coverage/*",
-      "test-reports/*",
+      "test-results/*",
     ],
   },
   {

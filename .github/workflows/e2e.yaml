@@ -15,16 +15,7 @@ on:
 
 jobs:
   e2e:
-    name: ${{ matrix.browser }}
     runs-on: ubuntu-latest
-
-    strategy:
-      fail-fast: false
-      matrix:
-        browser:
-          - chrome
-          - firefox
-
     steps:
       - name: git checkout
         uses: actions/checkout@v6
@@ -53,6 +44,6 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v7
         with:
-          name: report-${{ matrix.browser }}
+          name: e2e
           path: packages/website-e2e/test-results
           retention-days: 7

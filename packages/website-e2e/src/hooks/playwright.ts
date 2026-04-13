@@ -1,10 +1,4 @@
-import {
-  After,
-  AfterAll,
-  AfterStep,
-  Before,
-  BeforeAll,
-} from "@cucumber/cucumber";
+import { After, AfterAll, Before, BeforeAll } from "@cucumber/cucumber";
 import { Browser, chromium } from "@playwright/test";
 
 import { E2EWorld } from "../world";
