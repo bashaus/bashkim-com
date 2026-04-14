@@ -13,7 +13,7 @@ export default function VideoSeekBar() {
   return (
     <Slider
       aria-label="Seek"
-      value={mediaCurrentTime ?? 0}
+      value={mediaCurrentTime || 0}
       min={0}
       max={duration}
       step={0.01}

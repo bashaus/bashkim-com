@@ -14,7 +14,7 @@ on:
         required: false
 
 jobs:
-  lhci:
+  lighthouse:
     name: ${{ matrix.preset }}
     runs-on: ubuntu-latest
     strategy:

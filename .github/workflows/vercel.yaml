@@ -15,7 +15,7 @@ jobs:
     secrets:
       VERCEL_AUTOMATION_BYPASS_SECRET: ${{ secrets.VERCEL_AUTOMATION_BYPASS_SECRET }}
 
-  lhci:
+  lighthouse:
     if: >
       github.event.deployment_status.state == 'success' &&
       contains(github.event.deployment.environment, 'bashkim-com-website')

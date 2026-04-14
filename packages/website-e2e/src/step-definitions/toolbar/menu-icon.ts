@@ -8,6 +8,6 @@ When(
     await this.page
       .getByRole("toolbar")
       .getByRole("button", { name: label })
-      .click({ force: true });
+      .click();
   },
 );
