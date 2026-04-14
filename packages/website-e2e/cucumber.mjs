@@ -10,7 +10,10 @@ import process from "node:process";
 export default {
   requireModule: ["ts-node/register"],
   require: ["./src/**/*.ts"],
-  format: ["html:test-results/cucumber-report.html"],
+  format: [
+    "html:test-results/cucumber-report.html",
+    "json:test-results/cucumber-report.json",
+  ],
 
   /**
    * @type {import('./src/world/parameters').E2EParametersInput}
