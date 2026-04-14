@@ -5,10 +5,10 @@ import { E2EWorld } from "../../world";
 
 Then(
   "I should {visibility} the text {string} in the drawer",
-  async function (this: E2EWorld, isVisible: boolean, text: string) {
+  async function (this: E2EWorld, ensureVisible: boolean, text: string) {
     const label = await this.page.getByRole("dialog").getByText(text);
 
-    if (isVisible) {
+    if (ensureVisible) {
       await expect(label).toBeVisible();
     } else {
       await expect(label).not.toBeAttached();

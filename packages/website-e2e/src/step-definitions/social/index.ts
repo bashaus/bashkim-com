@@ -5,14 +5,14 @@ import { mockNextServerAction } from "../../helpers/next";
 import { E2EWorld } from "../../world";
 
 Then(
-  "I should {visibility} a connection error",
-  async function (this: E2EWorld, isVisible: boolean) {
+  "I should {visibility} a connection error in the drawer",
+  async function (this: E2EWorld, ensureVisible: boolean) {
     const errorAlert = this.page.getByRole("dialog").getByRole("alert");
 
-    if (isVisible) {
-      await expect(errorAlert).toBeAttached();
+    if (ensureVisible) {
+      await expect(errorAlert).toBeVisible();
     } else {
-      await expect(errorAlert).not.toBeVisible();
+      await expect(errorAlert).not.toBeAttached();
     }
   },
 );
