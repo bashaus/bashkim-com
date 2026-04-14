@@ -1,5 +1,4 @@
 import { After, AfterAll, Before, BeforeAll } from "@cucumber/cucumber";
-import { TestStepResultStatus } from "@cucumber/messages";
 import { Browser, chromium, firefox, LaunchOptions } from "@playwright/test";
 import { z } from "zod";
 
