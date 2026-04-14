@@ -31,7 +31,8 @@ jobs:
         run: |
           echo "shards=$(seq 1 "${SHARDS}" | jq -sc)" >> "${GITHUB_OUTPUT}"
 
-  e2e:
+  test:
+    name: ${{ matrix.browser }} [${{ matrix.shard }}/${{ inputs.shards }}]
     runs-on: ubuntu-latest
     needs:
       - prepare
@@ -62,7 +63,7 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: test:e2e
-        run: npm run test:e2e -- --shard="${SHARD}/${SHARDS}"
+        run: npm run test:e2e -- -- --shard="${SHARD}/${SHARDS}"
         env:
           PLAYWRIGHT_BASE_URL: ${{ inputs.base-url }}
           PLAYWRIGHT_BROWSER: ${{ matrix.browser }}
@@ -82,7 +83,7 @@ jobs:
   report:
     if: ${{ always() &&  !cancelled() }}
     needs:
-      - e2e
+      - test
     runs-on: ubuntu-latest
     steps:
       - name: artifacts download
