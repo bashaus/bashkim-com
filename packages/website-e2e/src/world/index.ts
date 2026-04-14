@@ -1,4 +1,9 @@
-import { IWorldOptions, setWorldConstructor, World } from "@cucumber/cucumber";
+import {
+  IWorldOptions,
+  setDefaultTimeout,
+  setWorldConstructor,
+  World,
+} from "@cucumber/cucumber";
 import { BrowserContext, Page } from "@playwright/test";
 
 import { E2EParameters, e2eParametersSchema } from "./parameters";
@@ -14,3 +19,4 @@ export class E2EWorld extends World<E2EParameters> {
 }
 
 setWorldConstructor(E2EWorld);
+setDefaultTimeout(30 * 1000);
