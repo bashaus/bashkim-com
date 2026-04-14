@@ -14,6 +14,5 @@ jobs:
     uses: ./.github/workflows/e2e.yaml
     with:
       base-url: ${{ inputs.base-url }}
-      shards: 1
     secrets:
       VERCEL_AUTOMATION_BYPASS_SECRET: ${{ secrets.VERCEL_AUTOMATION_BYPASS_SECRET }}
