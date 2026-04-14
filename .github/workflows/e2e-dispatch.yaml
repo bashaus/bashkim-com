@@ -2,9 +2,18 @@ name: e2e dispatch
 
 on:
   workflow_dispatch:
+    inputs:
+      base-url:
+        type: string
+        description: The base URL to test
+        required: true
+        default: https://www.bashkim.com
 
 jobs:
   e2e:
     uses: ./.github/workflows/e2e.yaml
     with:
-      base-url: https://www.bashkim.com
+      base-url: ${{ inputs.base-url }}
+      shards: 1
+    secrets:
+      VERCEL_AUTOMATION_BYPASS_SECRET: ${{ secrets.VERCEL_AUTOMATION_BYPASS_SECRET }}

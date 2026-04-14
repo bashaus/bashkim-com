@@ -10,3 +10,4 @@ jobs:
     uses: ./.github/workflows/e2e.yaml
     with:
       base-url: https://www.bashkim.com
+      shards: 1
