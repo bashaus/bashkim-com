@@ -50,5 +50,5 @@ jobs:
       - name: upload results
         uses: actions/upload-artifact@v7
         with:
-          name: lhci
+          name: lighthouse
           path: ./lhci-results

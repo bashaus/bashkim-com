@@ -10,7 +10,7 @@ on:
       shards:
         type: number
         required: false
-        default: 2
+        default: 1
         description: Number of shards to run the E2E tests
 
     secrets:
