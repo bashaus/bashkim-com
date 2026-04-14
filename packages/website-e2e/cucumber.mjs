@@ -22,7 +22,7 @@ export default {
     },
 
     vercel: {
-      secret: process.env["VERCEL_SECRET"],
+      secret: process.env["VERCEL_AUTOMATION_BYPASS_SECRET"],
     },
   },
 };

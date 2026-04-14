@@ -4,6 +4,7 @@ import { request } from "@playwright/test";
 import { E2EWorld } from "../world";
 
 Before(async function (this: E2EWorld) {
+  const { baseURL } = this.parameters.playwright;
   const { secret } = this.parameters.vercel;
 
   if (!secret) {
@@ -13,22 +14,14 @@ Before(async function (this: E2EWorld) {
 
   this.log("Setting Vercel bypass cookie...");
 
-  const apiContext = await request.newContext();
-  const response = await apiContext.get("/", {
+  const apiContext = await request.newContext({ baseURL });
+  await apiContext.get("/", {
     headers: {
       "x-vercel-set-bypass-cookie": "true",
       "x-vercel-protection-bypass": secret,
     },
   });
 
-  const cookies = await response.headersArray();
-  const setCookieHeader = cookies.find(
-    (h) => h.name.toLowerCase() === "set-cookie",
-  );
-
-  if (setCookieHeader) {
-    await this.context.addCookies([
-      { name: "x-vercel-protection-bypass", value: secret, path: "/" },
-    ]);
-  }
+  const cookies = await apiContext.storageState();
+  await this.context.addCookies(cookies.cookies);
 });
