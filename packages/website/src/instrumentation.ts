@@ -1,7 +1,15 @@
+import { z } from "zod";
+
 export async function register() {
-  if (process.env["NEXT_RUNTIME"] === "nodejs") {
-    if (process.env["MSW_ENABLED"] === "1") {
-      await import("@/libraries/msw/node");
-    }
+  if (process.env["NEXT_RUNTIME"] !== "nodejs") {
+    return;
+  }
+
+  const mswEnabled = await z
+    .stringbool()
+    .parseAsync(process.env["MSW_ENABLED"]);
+
+  if (mswEnabled) {
+    await import("@/libraries/msw/node");
   }
 }
