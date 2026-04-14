@@ -62,7 +62,7 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: test:e2e
-        run: npm run test:e2e --shard="${SHARD}/${SHARDS}"
+        run: npm run test:e2e -- --shard="${SHARD}/${SHARDS}"
         env:
           PLAYWRIGHT_BASE_URL: ${{ inputs.base-url }}
           PLAYWRIGHT_BROWSER: ${{ matrix.browser }}
