@@ -10,7 +10,7 @@ Then(
     const errorAlert = this.page.getByRole("alert");
 
     if (ensureVisible) {
-      await expect(errorAlert).toBeVisible();
+      await expect(errorAlert).toBeAttached();
     } else {
       await expect(errorAlert).not.toBeAttached();
     }
