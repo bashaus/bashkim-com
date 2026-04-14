@@ -22,7 +22,8 @@
     "lint": "eslint . && turbo run lint",
     "prepare": "pre-commit install || true",
     "storybook:build": "turbo run storybook:build",
-    "test": "turbo run test"
+    "test": "turbo run test",
+    "test:e2e": "turbo run test:e2e"
   },
   "devDependencies": {
     "@bashkim-com/eslint": "*",

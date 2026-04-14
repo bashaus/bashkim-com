@@ -1,5 +1,6 @@
 {
   "recommendations": [
+    "cucumberopen.cucumber-official",
     "dbaeumer.vscode-eslint",
     "editorconfig.editorconfig",
     "esbenp.prettier-vscode",

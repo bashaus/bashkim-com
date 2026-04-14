@@ -14,7 +14,7 @@ on:
         required: false
 
 jobs:
-  lhci:
+  lighthouse:
     name: ${{ matrix.preset }}
     runs-on: ubuntu-latest
     strategy:
@@ -47,8 +47,8 @@ jobs:
           LHCI_COLLECT_URL: ${{ inputs.base-url }}
           VERCEL_AUTOMATION_BYPASS_SECRET: ${{ secrets.VERCEL_AUTOMATION_BYPASS_SECRET }}
 
-      - name: lhci artifact
+      - name: upload results
         uses: actions/upload-artifact@v7
         with:
-          name: lighthouse-report
+          name: lighthouse
           path: ./lhci-results

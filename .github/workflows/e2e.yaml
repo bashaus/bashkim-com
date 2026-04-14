@@ -5,28 +5,44 @@ on:
     inputs:
       base-url:
         type: string
-        default: https://www.bashkim.com
-        description: The base URL to test via Cypress
+        description: The base URL to test
         required: false
+      shards:
+        type: number
+        required: false
+        default: 1
+        description: Number of shards to run the E2E tests
+
     secrets:
       VERCEL_AUTOMATION_BYPASS_SECRET:
         description: Secret for accessing vercel environments
         required: false
 
 jobs:
-  e2e:
-    name: ${{ matrix.browser }}
+  prepare:
     runs-on: ubuntu-latest
-    container:
-      image: cypress/browsers:22.19.0
-      options: --user 1001
+    outputs:
+      shards: ${{ steps.matrix.outputs.shards }}
+    steps:
+      - name: matrix
+        id: matrix
+        env:
+          SHARDS: ${{ inputs.shards }}
+        run: |
+          echo "shards=$(seq 1 "${SHARDS}" | jq -sc)" >> "${GITHUB_OUTPUT}"
 
+  test:
+    name: test ${{ matrix.browser }} <${{ matrix.shard }}/${{ inputs.shards }}>
+    runs-on: ubuntu-latest
+    needs:
+      - prepare
     strategy:
       fail-fast: false
       matrix:
         browser:
-          - chrome
+          - chromium
           - firefox
+        shard: ${{ fromJson(needs.prepare.outputs.shards) }}
 
     steps:
       - name: git checkout
@@ -43,19 +59,47 @@ jobs:
       - name: npm ci
         run: npm ci
 
-      - name: cypress ${{ matrix.browser }}
-        working-directory: packages/website-e2e
-        run: >
-          npx cypress run \
-            --browser "${{ matrix.browser }}" \
-            --env VERCEL_AUTOMATION_BYPASS_SECRET="${VERCEL_AUTOMATION_BYPASS_SECRET}"
-        env:
-          CYPRESS_BASE_URL: "${{ inputs.base-url }}"
-          VERCEL_AUTOMATION_BYPASS_SECRET: ${{ secrets.VERCEL_AUTOMATION_BYPASS_SECRET }}
+      - name: playwright install
+        run: npx playwright install --with-deps
 
-      - name: cypress artifact
+      - name: test:e2e
+        run: npm run test:e2e -- -- --shard="${SHARD}/${SHARDS}"
+        env:
+          PLAYWRIGHT_BASE_URL: ${{ inputs.base-url }}
+          PLAYWRIGHT_BROWSER: ${{ matrix.browser }}
+          PLAYWRIGHT_HEADLESS: true
+          VERCEL_AUTOMATION_BYPASS_SECRET: ${{ secrets.VERCEL_AUTOMATION_BYPASS_SECRET }}
+          SHARD: ${{ matrix.shard }}
+          SHARDS: ${{ inputs.shards }}
+
+      - name: upload report
         if: always()
         uses: actions/upload-artifact@v7
         with:
-          name: cypress-report-${{ matrix.browser }}
-          path: packages/website-e2e/cypress/reports
+          name: e2e-${{ matrix.browser }}--${{ matrix.shard }}-of-${{ inputs.shards }}
+          path: packages/website-e2e/test-results
+          retention-days: 7
+
+  report:
+    if: ${{ always() &&  !cancelled() }}
+    needs:
+      - test
+    runs-on: ubuntu-latest
+    steps:
+      - name: artifacts download
+        uses: actions/download-artifact@v8
+        with:
+          pattern: e2e-*
+          path: ./test-results
+
+      - name: merge reports
+        run: |
+          jq -s "add" ./test-results/**/cucumber-report.json \
+            > ./test-results/cucumber-merged.json
+
+      - name: upload report
+        uses: actions/upload-artifact@v7
+        with:
+          name: e2e
+          path: ./test-results/cucumber-merged.json
+          retention-days: 7

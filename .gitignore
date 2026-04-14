@@ -46,3 +46,6 @@ gql/
 # lighthouse
 .lighthouseci/
 lhci-results/
+
+# Cucumber
+test-results/

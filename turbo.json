@@ -30,6 +30,10 @@
 
     "test": {
       "inputs": ["$TURBO_DEFAULT$", ".env*"]
+    },
+
+    "test:e2e": {
+      "inputs": ["$TURBO_DEFAULT$", ".env*"]
     }
   }
 }

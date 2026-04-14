@@ -5,7 +5,7 @@ import { zodValidator } from "../../helpers/zod";
 
 const baseUrlSchema = z.url();
 
-export default async function baseHrefPrompt() {
+export async function baseHrefPrompt() {
   const value = await input({
     message: "What is the base URL?",
     default: "http://localhost:3000",

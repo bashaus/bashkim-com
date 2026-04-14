@@ -1,4 +1,9 @@
 {
+  "cucumber.features": ["packages/*/features/**/*.feature"],
+  "cucumber.glue": ["packages/*/src/step-definitions/**/*.ts"],
+  "cucumber.parameterTypes": [
+    { "name": "visibility", "regexp": "see|not see" }
+  ],
   "editor.bracketPairColorization.enabled": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"

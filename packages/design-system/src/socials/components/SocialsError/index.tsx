@@ -17,7 +17,7 @@ export default function SocialsError({
   children,
 }: SocialsErrorProps) {
   return (
-    <S.Container>
+    <S.Container role="alert">
       <S.Icon>{icon}</S.Icon>
       <S.Title variant="h6" gutterBottom>
         {title}

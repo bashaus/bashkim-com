@@ -42,7 +42,7 @@ export default function HeaderDesktop({ variant }: HeaderDesktopProps) {
   return (
     <VariantComponent data-scroll-at-top={navigationState.scrollAtTop}>
       <Container>
-        <Toolbar disableGutters>
+        <Toolbar disableGutters role="toolbar">
           <Box flex={1}>
             <Link href={getHomePath()}>
               <MenuStrapline animated={isHome} />

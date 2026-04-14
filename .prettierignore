@@ -1,11 +1,11 @@
 # Folder names
 .next/
 coverage/
+test-results/
 dist/
 gql/
 node_modules/
 out/
 storybook-static/
 
-packages/website-e2e/cypress/reports/
 *.hbs

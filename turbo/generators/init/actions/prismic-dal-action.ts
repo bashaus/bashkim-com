@@ -6,6 +6,7 @@ export function prismicDalAction(): Array<PlopTypes.ActionType> {
       type: "add",
       path: "{{ turbo.paths.root }}/packages/prismic-dal/.env",
       templateFile: "templates/packages/prismic-dal/.env.hbs",
+      force: true,
     },
   ];
 }
