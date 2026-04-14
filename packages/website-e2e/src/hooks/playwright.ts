@@ -48,10 +48,13 @@ Before(async function (this: E2EWorld) {
 });
 
 After(async function (this: E2EWorld, scenario) {
-  if (scenario.result?.status === TestStepResultStatus.FAILED) {
-    const screenshot = await this.page.screenshot({ type: "png" });
-    this.attach(screenshot, { fileName: "failed.png", mediaType: "image/png" });
-  }
+  const status = scenario.result?.status ?? "unknown";
+  const screenshot = await this.page.screenshot({ type: "png" });
+
+  this.attach(screenshot, {
+    fileName: `${status}.png`,
+    mediaType: "image/png",
+  });
 
   await this.context.close();
 });
