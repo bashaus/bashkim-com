@@ -1,4 +1,5 @@
 import { After, AfterAll, Before, BeforeAll } from "@cucumber/cucumber";
+import { TestStepResultStatus } from "@cucumber/messages";
 import { Browser, chromium, firefox, LaunchOptions } from "@playwright/test";
 import { z } from "zod";
 
@@ -46,7 +47,12 @@ Before(async function (this: E2EWorld) {
   this.page = await this.context.newPage();
 });
 
-After(async function (this: E2EWorld) {
+After(async function (this: E2EWorld, scenario) {
+  if (scenario.result?.status === TestStepResultStatus.FAILED) {
+    const screenshot = await this.page.screenshot({ type: "png" });
+    this.attach(screenshot, { fileName: "failed.png", mediaType: "image/png" });
+  }
+
   await this.context.close();
 });
 
