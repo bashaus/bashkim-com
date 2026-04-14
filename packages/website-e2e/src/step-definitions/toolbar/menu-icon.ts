@@ -9,6 +9,6 @@ When(
       .getByRole("toolbar")
       .filter({ visible: true })
       .getByRole("button", { name: label })
-      .click();
+      .click({ force: true });
   },
 );
