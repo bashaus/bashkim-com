@@ -1,5 +1,5 @@
 import { After, AfterAll, Before, BeforeAll } from "@cucumber/cucumber";
-import { Browser, chromium } from "@playwright/test";
+import { Browser, chromium, firefox, LaunchOptions } from "@playwright/test";
 import { z } from "zod";
 
 import { E2EWorld } from "../world";
@@ -12,14 +12,31 @@ BeforeAll(async () => {
    * Check the environment variable directly instead of via world parameters.
    */
 
+  const useBrowser = await z
+    .enum(["firefox", "chromium"])
+    .default("chromium")
+    .parseAsync(process.env["PLAYWRIGHT_BROWSER"]);
+
   const headless = await z
     .stringbool()
     .default(true)
     .parseAsync(process.env["PLAYWRIGHT_HEADLESS"]);
 
-  browser = await chromium.launch({
+  const launchOptions: LaunchOptions = {
     headless,
-  });
+  };
+
+  switch (useBrowser) {
+    case "chromium": {
+      browser = await chromium.launch(launchOptions);
+      return;
+    }
+
+    case "firefox": {
+      browser = await firefox.launch(launchOptions);
+      return;
+    }
+  }
 });
 
 Before(async function (this: E2EWorld) {
@@ -30,9 +47,9 @@ Before(async function (this: E2EWorld) {
 });
 
 After(async function (this: E2EWorld) {
-  this.context.close();
+  await this.context.close();
 });
 
 AfterAll(async () => {
-  browser.close();
+  await browser.close();
 });

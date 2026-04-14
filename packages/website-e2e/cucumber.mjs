@@ -18,6 +18,7 @@ export default {
   worldParameters: {
     playwright: {
       baseURL: process.env["PLAYWRIGHT_BASE_URL"],
+      browser: /** @type any */ (process.env["PLAYWRIGHT_BROWSER"]),
       headless: process.env["PLAYWRIGHT_HEADLESS"],
     },
 

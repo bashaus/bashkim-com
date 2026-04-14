@@ -5,7 +5,6 @@ on:
     inputs:
       base-url:
         type: string
-        default: https://www.bashkim.com
         description: The base URL to test
         required: false
     secrets:
@@ -16,6 +15,13 @@ on:
 jobs:
   e2e:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        browser:
+          - chromium
+          - firefox
+
     steps:
       - name: git checkout
         uses: actions/checkout@v6
@@ -38,6 +44,7 @@ jobs:
         run: npm run test:e2e
         env:
           PLAYWRIGHT_BASE_URL: ${{ inputs.base-url }}
+          PLAYWRIGHT_BROWSER: ${{ matrix.browser }}
           PLAYWRIGHT_HEADLESS: true
           VERCEL_AUTOMATION_BYPASS_SECRET: ${{ secrets.VERCEL_AUTOMATION_BYPASS_SECRET }}
 

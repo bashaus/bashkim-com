@@ -4,6 +4,7 @@ export const e2eParametersSchema = z.object({
   playwright: z
     .object({
       headless: z.stringbool().default(true),
+      browser: z.enum(["chromium", "firefox"]).default("chromium"),
       baseURL: z.url().default("https://www.bashkim.com"),
     })
     .prefault({}),
