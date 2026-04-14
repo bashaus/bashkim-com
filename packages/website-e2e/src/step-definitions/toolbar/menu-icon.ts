@@ -7,7 +7,6 @@ When(
   async function (this: E2EWorld, label: string) {
     await this.page
       .getByRole("toolbar")
-      .filter({ visible: true })
       .getByRole("button", { name: label })
       .click({ force: true });
   },
