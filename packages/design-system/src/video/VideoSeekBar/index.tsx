@@ -15,7 +15,7 @@ export default function VideoSeekBar() {
       aria-label="Seek"
       value={mediaCurrentTime || 0}
       min={0}
-      max={duration}
+      max={duration || 0}
       step={0.01}
       onChange={(_event, value) => {
         dispatch({
