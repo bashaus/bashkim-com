@@ -14,6 +14,7 @@ BeforeAll(async () => {
 
   const headless = await z
     .stringbool()
+    .default(true)
     .parseAsync(process.env["PLAYWRIGHT_HEADLESS"]);
 
   browser = await chromium.launch({
