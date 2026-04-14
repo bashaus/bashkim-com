@@ -1,9 +1,10 @@
 import { z } from "zod";
 
 export const e2eParametersSchema = z.object({
-  website: z
+  playwright: z
     .object({
-      baseUrl: z.url().default("https://www.bashkim.com"),
+      headless: z.stringbool().default(true),
+      baseURL: z.url().default("https://www.bashkim.com"),
     })
     .prefault({}),
 

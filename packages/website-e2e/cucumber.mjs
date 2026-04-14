@@ -16,8 +16,9 @@ export default {
    * @type {import('./src/world/parameters').E2EParametersInput}
    **/
   worldParameters: {
-    website: {
-      baseUrl: process.env["BASE_URL"],
+    playwright: {
+      baseURL: process.env["PLAYWRIGHT_BASE_URL"],
+      headless: process.env["PLAYWRIGHT_HEADLESS"],
     },
 
     vercel: {

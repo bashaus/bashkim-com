@@ -7,6 +7,7 @@ import { websiteE2EAction } from "./actions/website-e2e-action";
 import { baseHrefPrompt } from "./prompts/base-href";
 import { githubTokenPrompt } from "./prompts/github-token";
 import { mswEnabledPrompt } from "./prompts/msw-enabled";
+import { playwrightHeadlessPrompt } from "./prompts/playwright-headless";
 import { prismicioAccessTokenPrompt } from "./prompts/prismicio-access-token";
 
 export default function initGenerator(plop: PlopTypes.NodePlopAPI): void {
@@ -18,6 +19,7 @@ export default function initGenerator(plop: PlopTypes.NodePlopAPI): void {
       ...(await githubTokenPrompt()),
       ...(await prismicioAccessTokenPrompt()),
       ...(await mswEnabledPrompt()),
+      ...(await playwrightHeadlessPrompt()),
     }),
 
     actions: [
