@@ -1,8 +1,8 @@
-import { matchMultipartTitle } from "./helpers";
+import { parseRssTitle } from ".";
 
-describe("medium helpers", () => {
+describe("parseRssTitle", () => {
   it("should match [1/2]", () => {
-    const parts = matchMultipartTitle("[1/2] Part one of two");
+    const parts = parseRssTitle("[1/2] Part one of two");
     expect(parts.multipart).not.toBeUndefined();
     expect(parts.multipart?.part).toEqual("1");
     expect(parts.multipart?.parts).toEqual("2");
@@ -10,7 +10,7 @@ describe("medium helpers", () => {
   });
 
   it("should match [3/4]", () => {
-    const parts = matchMultipartTitle("[3/4] Part three of four");
+    const parts = parseRssTitle("[3/4] Part three of four");
     expect(parts.multipart).not.toBeUndefined();
     expect(parts.multipart?.part).toEqual("3");
     expect(parts.multipart?.parts).toEqual("4");
@@ -18,7 +18,7 @@ describe("medium helpers", () => {
   });
 
   it("should handle a single part", () => {
-    const parts = matchMultipartTitle("Single part");
+    const parts = parseRssTitle("Single part");
     expect(parts.multipart).toBeUndefined();
     expect(parts.title).toEqual("Single part");
   });

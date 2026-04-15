@@ -35,7 +35,7 @@ export default function SocialMediumLoading() {
                   }}
                 />
               }
-              pubDate={<Skeleton sx={{ maxWidth: 100 }} />}
+              publishedAt={<Skeleton sx={{ maxWidth: 100 }} />}
             />
           </ListItem>
         </SocialsMotion>

@@ -8,14 +8,14 @@ export type SocialMediumItemProps = Readonly<{
   image?: ReactNode;
   title: ReactNode;
   part?: ReactNode;
-  pubDate: ReactNode;
+  publishedAt: ReactNode;
 }>;
 
 export default function SocialMediumItem({
   image,
   title,
   part,
-  pubDate,
+  publishedAt,
 }: SocialMediumItemProps) {
   return (
     <Grid container spacing={2} width="100%">
@@ -27,7 +27,7 @@ export default function SocialMediumItem({
             color="textSecondary"
             gutterBottom
           >
-            {pubDate}
+            {publishedAt}
           </Typography>
           <Typography variant="body1">{title}</Typography>
         </ListItemText>
