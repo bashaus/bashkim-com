@@ -1,10 +1,10 @@
 "use server";
 
-import { getMediumSocials } from "@bashkim-com/socials";
+import { getMediumStories } from "@bashkim-com/socials";
 
 export async function animateMediumSocials() {
   const [result] = await Promise.all([
-    getMediumSocials(),
+    getMediumStories(),
     new Promise((resolve) => setTimeout(() => resolve(true), 500)),
   ]);
 

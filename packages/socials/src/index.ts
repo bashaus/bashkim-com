@@ -3,8 +3,8 @@ export type {
   GitHubGistFragment,
   GitHubRepositoryFragment,
 } from "./github/gql/graphql";
-export { getMediumSocials } from "./medium";
-export * from "./medium/types";
+export { getMediumStories } from "./medium/get-stories";
+export * from "./medium/get-stories/schema";
 export {
   getStackOverflowPosts,
   type StackOverflowPost,

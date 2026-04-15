@@ -42,9 +42,8 @@ export default function HomeFeatured() {
                 </Typography>
 
                 <Typography>
-                  Check out my GitHub contributions and Medium articles. I
-                  build, collaborate, and share code with the developer
-                  community.
+                  Check out my GitHub contributions and Medium stories. I build,
+                  collaborate, and share code with the developer community.
                 </Typography>
               </CardContent>
 

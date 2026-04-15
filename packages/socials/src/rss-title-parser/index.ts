@@ -1,4 +1,4 @@
-export function matchMultipartTitle(title: string) {
+export function parseRssTitle(title: string) {
   const part = /^(\[(\d+)\/(\d+)\] )?(.+)$/.exec(title);
 
   if (part?.[1]) {
