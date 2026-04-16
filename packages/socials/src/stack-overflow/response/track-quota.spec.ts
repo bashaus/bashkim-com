@@ -1,6 +1,6 @@
 import { track } from "@vercel/analytics/server";
 
-import { trackQuota } from ".";
+import { trackQuota } from "./track-quota";
 
 vi.mock("@vercel/analytics/server", () => ({
   track: vi.fn(),
@@ -13,7 +13,7 @@ afterEach(() => {
 
 const response = { items: [], has_more: false };
 
-describe("checkQuota", () => {
+describe("trackQuota", () => {
   it("should do nothing when under 80%", async () => {
     const trackSpy = vi.mocked(track);
     trackQuota({ ...response, quota_remaining: 61, quota_max: 300 });

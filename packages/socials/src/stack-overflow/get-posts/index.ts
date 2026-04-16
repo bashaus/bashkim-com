@@ -1,4 +1,4 @@
-import { trackQuota } from "../track-quota";
+import { trackQuota } from "../response/track-quota";
 import { getStackOverflowPostsResponseSchema } from "./schema";
 
 async function getStackOverflowPostsData() {
