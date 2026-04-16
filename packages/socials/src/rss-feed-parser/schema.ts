@@ -5,7 +5,6 @@ export const itemElementSchema = z.object({
   link: z.url(),
   guid: z.object({
     "#text": z.string(),
-    "@_isPermaLink": z.stringbool(),
   }),
   category: z.union([z.string(), z.array(z.string())]),
   "dc:creator": z.string(),

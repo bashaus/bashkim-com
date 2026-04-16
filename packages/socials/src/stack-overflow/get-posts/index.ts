@@ -1,7 +1,7 @@
-import { trackQuota } from "../track-quota";
-import { getStackOverflowPostsResponseSchema } from "./schema";
+import { trackQuota } from "../response/track-quota";
+import { getStackOverflowPostsSchema } from "./schema";
 
-async function getStackOverflowPostsData() {
+export async function getStackOverflowPosts() {
   const userId = 600240;
 
   const url = new URL("https://api.stackexchange.com/");
@@ -20,14 +20,9 @@ async function getStackOverflowPostsData() {
   });
 
   const rawData = await response.json();
-  const data = await getStackOverflowPostsResponseSchema.parseAsync(rawData);
+  const data = await getStackOverflowPostsSchema.parseAsync(rawData);
   await trackQuota(data);
 
-  return data;
-}
-
-export async function getStackOverflowPosts() {
-  const data = await getStackOverflowPostsData();
   return data.items.map((post) => ({
     score: post.score,
     id: post.post_id,

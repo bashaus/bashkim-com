@@ -4,11 +4,16 @@ export default defineConfig({
   test: {
     globals: true,
 
+    include: ["src/**/*.spec.{ts,tsx}"],
+
     coverage: {
       enabled: true,
       clean: true,
       reporter: ["lcov"],
       include: ["src/**/*.{ts,tsx}"],
+      exclude: ["src/github/dal"],
     },
+
+    setupFiles: ["./vitest.setup.ts"],
   },
 });

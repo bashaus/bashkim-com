@@ -3,7 +3,7 @@
 import DateFormatter from "@bashkim-com/design-system/DateFormatter";
 import SocialsContent from "@bashkim-com/design-system/SocialsContent";
 import SocialsMotion from "@bashkim-com/design-system/SocialsMotion";
-import { GetMediumStoriesResponse } from "@bashkim-com/socials";
+import { GetMediumStories } from "@bashkim-com/socials";
 import ReadMoreIcon from "@mui/icons-material/ReadMore";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
@@ -16,7 +16,7 @@ import { Fragment } from "react";
 import SocialMediumItem from "@/domains/socials-medium/components/SocialMediumItem";
 
 export type SocialMediumContentProps = Readonly<{
-  series: GetMediumStoriesResponse["series"];
+  series: GetMediumStories["series"];
 }>;
 
 export default function SocialMediumContent({

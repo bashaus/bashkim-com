@@ -16,11 +16,11 @@ const config: CodegenConfig = {
     },
   ],
 
-  documents: ["src/github/**/*.ts"],
+  documents: ["src/github/dal/**/*.ts"],
   ignoreNoDocuments: true,
 
   generates: {
-    "./src/github/gql/": {
+    "./src/github/dal/gql/": {
       preset: "client",
       presetConfig: {
         documentMode: "documentNode",

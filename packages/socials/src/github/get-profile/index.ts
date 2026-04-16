@@ -1,11 +1,9 @@
-import apolloClient from "./client";
-import { GitHubProfileQuery } from "./queries/github-profile";
-import type { GetGitHubProfileResponse } from "./types";
+import apolloClient from "../dal/client";
+import { GitHubProfileQuery } from "../dal/queries/github-profile";
 
-export async function getGitHubProfile(): Promise<GetGitHubProfileResponse> {
+export async function getGitHubProfile() {
   const gitHubProfileResult = await apolloClient.query({
     query: GitHubProfileQuery,
-    variables: {},
     context: {
       next: { revalidate: 3600 },
     },

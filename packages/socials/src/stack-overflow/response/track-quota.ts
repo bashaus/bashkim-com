@@ -1,7 +1,7 @@
 import { track } from "@vercel/analytics/server";
 import { z } from "zod";
 
-import { StackOverflowResponse } from "../response/schema";
+import { StackOverflowResponse } from "./schema";
 
 export async function trackQuota(
   response: StackOverflowResponse<z.ZodUnknown>,

@@ -34,6 +34,6 @@ export const stackOverflowUserSchema = z.object({
   display_name: z.string(),
 });
 
-export const getStackOverflowUserResponseSchema = stackOverflowResponseSchema(
+export const getStackOverflowUserSchema = stackOverflowResponseSchema(
   stackOverflowUserSchema,
 );
