@@ -31,10 +31,10 @@ const stackOverflowPostSchema = z.object({
   link: z.url(),
 });
 
-export const getStackOverflowPostsResponseSchema = stackOverflowResponseSchema(
+export const getStackOverflowPostsSchema = stackOverflowResponseSchema(
   stackOverflowPostSchema,
 );
 
 export type GetStackOverflowPostsResponse = z.infer<
-  typeof getStackOverflowPostsResponseSchema
+  typeof getStackOverflowPostsSchema
 >;

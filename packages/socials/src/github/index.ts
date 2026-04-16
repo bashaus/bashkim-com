@@ -1,8 +1,7 @@
 import apolloClient from "./client";
 import { GitHubProfileQuery } from "./queries/github-profile";
-import type { GetGitHubProfileResponse } from "./types";
 
-export async function getGitHubProfile(): Promise<GetGitHubProfileResponse> {
+export async function getGitHubProfile() {
   const gitHubProfileResult = await apolloClient.query({
     query: GitHubProfileQuery,
     variables: {},

@@ -9,6 +9,8 @@ export default defineConfig({
     globals: true,
     environment: "jsdom",
 
+    include: ["src/**/*.spec.{ts,tsx}"],
+
     coverage: {
       enabled: true,
       clean: true,

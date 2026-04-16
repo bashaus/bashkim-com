@@ -3,9 +3,7 @@
   "version": "0.0.0",
   "exports": {
     ".": "./src/index.ts",
-    "./github": "./src/github/index.ts",
-    "./medium": "./src/medium/index.ts",
-    "./stack-overflow": "./src/stack-overflow/index.ts"
+    "./mock": "./src/mock.ts"
   },
   "main": "./src/index.ts",
   "scripts": {

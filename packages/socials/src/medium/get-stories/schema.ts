@@ -1,16 +1,14 @@
 import groupBy from "lodash.groupby";
-import { z } from "zod";
 
 import {
   itemElementSchema,
-  rssElementSchema,
+  rootElementSchema,
 } from "../../rss-feed-parser/schema";
 import { extractRssImage } from "../../rss-image-extractor";
 import { parseRssTitle } from "../../rss-title-parser";
 
 export const mediumStorySchema = itemElementSchema.transform((item) => {
-  const { "content:encoded": html } = item;
-  const image = extractRssImage(html);
+  const image = extractRssImage(item["content:encoded"]);
   const title = parseRssTitle(item.title);
 
   return {
@@ -22,20 +20,14 @@ export const mediumStorySchema = itemElementSchema.transform((item) => {
   };
 });
 
-export const getMediumStoriesResponseSchema = rssElementSchema.transform(
-  (rss) => {
-    const stories = rss.channel.item.map((item) =>
-      mediumStorySchema.parse(item),
-    );
+export const getMediumStoriesSchema = rootElementSchema.transform((root) => {
+  const stories = root.rss.channel.item.map((item) =>
+    mediumStorySchema.parse(item),
+  );
 
-    return {
-      series: groupBy(stories, (story) =>
-        story.publishedAt.toISOString().substring(0, 10),
-      ),
-    };
-  },
-);
-
-export type GetMediumStoriesResponse = z.infer<
-  typeof getMediumStoriesResponseSchema
->;
+  return {
+    series: groupBy(stories, (story) =>
+      story.publishedAt.toISOString().substring(0, 10),
+    ),
+  };
+});
