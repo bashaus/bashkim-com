@@ -9,17 +9,23 @@ export const getGitHubProfileHandler = githubLink.query<GitHubProfileQuery>(
     HttpResponse.json({
       data: {
         viewer: {
+          __typename: "User",
           login: "bashaus",
         },
 
         user: {
+          __typename: "User",
+
           repositories: {
+            __typename: "RepositoryConnection",
             totalCount: 10,
           },
 
           pinnedItems: {
+            __typename: "PinnableItemConnection",
             nodes: [
               {
+                __typename: "Repository",
                 name: "bashkim-com",
                 description:
                   "Source code showcasing my online portfolio of works.",

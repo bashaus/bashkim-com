@@ -1,4 +1,8 @@
-import { server } from "./src/mock.ts";
+import { setupServer } from "msw/node";
+
+import { handlers } from "./src/mock.ts";
+
+export const server = setupServer(...handlers);
 
 beforeAll(() => server.listen());
 afterEach(() => server.resetHandlers());
