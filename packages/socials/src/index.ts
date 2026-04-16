@@ -1,8 +1,8 @@
-export { getGitHubProfile } from "./github";
 export type {
   GitHubGistFragment,
   GitHubRepositoryFragment,
-} from "./github/gql/graphql";
+} from "./github/dal/gql/graphql";
+export { getGitHubProfile } from "./github/get-profile";
 export { getMediumStories } from "./medium/get-stories";
 export * from "./medium/get-stories/schema";
 export {
