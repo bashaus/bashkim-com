@@ -1,4 +1,5 @@
 import groupBy from "lodash.groupby";
+import { z } from "zod";
 
 import {
   itemElementSchema,
@@ -31,3 +32,5 @@ export const getMediumStoriesSchema = rootElementSchema.transform((root) => {
     ),
   };
 });
+
+export type GetMediumStories = z.infer<typeof getMediumStoriesSchema>;
