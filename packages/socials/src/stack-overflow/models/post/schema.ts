@@ -1,8 +1,8 @@
 import { z } from "zod";
 
+import { stackOverflowDateSchema } from "../date/schema";
 import { stackOverflowOwnerSchema } from "../owner/schema";
 import { stackOverflowPostTypeSchema } from "../post-type/schema";
-import { stackOverflowDateSchema } from "../date/schema";
 
 export const stackOverflowPostSchema = z.object({
   owner: stackOverflowOwnerSchema,
