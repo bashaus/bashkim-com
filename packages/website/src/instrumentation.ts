@@ -7,6 +7,7 @@ export async function register() {
 
   const mswEnabled = await z
     .stringbool()
+    .default(false)
     .parseAsync(process.env["MSW_ENABLED"]);
 
   if (mswEnabled) {

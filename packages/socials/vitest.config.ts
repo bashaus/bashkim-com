@@ -11,7 +11,7 @@ export default defineConfig({
       clean: true,
       reporter: ["lcov"],
       include: ["src/**/*.{ts,tsx}"],
-      exclude: ["src/github/dal"],
+      exclude: ["src/github/gql"],
     },
 
     setupFiles: ["./vitest.setup.ts"],
