@@ -6,7 +6,7 @@ import CarouselViewport from "../CarouselViewport";
 import CarouselSlider from ".";
 
 const CarouselSliderRenderer = () => (
-  <Container maxWidth="md">
+  <Container sx={{ maxWidth: "md" }}>
     <CarouselProvider>
       <CarouselViewport>
         <div>One</div>

@@ -44,7 +44,7 @@ export default function AccoladeSlice({ slice }: AccoladeSliceProps) {
           <RichTextFormatter field={issuer} />
           <RichTextFormatter field={description} />
           {date && (
-            <Typography fontSize="small">
+            <Typography sx={{ fontSize: "small" }}>
               <DateFormatter date={date} />
             </Typography>
           )}

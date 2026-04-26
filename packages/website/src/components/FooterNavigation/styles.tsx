@@ -15,7 +15,11 @@ export function FooterGrid(props: GridProps) {
 
 export function FooterColumn(props: GridProps) {
   return (
-    <Grid size={{ xs: 6, sm: 4, md: 3, lg: 2, xl: 2 }} {...props} py={2} />
+    <Grid
+      size={{ xs: 6, sm: 4, md: 3, lg: 2, xl: 2 }}
+      {...props}
+      sx={{ paddingY: 2 }}
+    />
   );
 }
 

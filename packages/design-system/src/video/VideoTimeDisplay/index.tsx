@@ -14,8 +14,8 @@ export default function VideoTimeDisplay() {
   }
 
   return (
-    <Box p={1}>
-      <Typography color="primary" fontSize="small" noWrap>
+    <Box sx={{ padding: 1 }}>
+      <Typography sx={{ color: "primary", fontSize: "small" }} noWrap>
         {mediaCurrentTime && formatTime(mediaCurrentTime ?? 0, seekableEnd)}
       </Typography>
     </Box>

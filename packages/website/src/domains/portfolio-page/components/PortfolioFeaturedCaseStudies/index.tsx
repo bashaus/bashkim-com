@@ -39,7 +39,13 @@ export default function PortfolioFeaturedCaseStudies({
               size={{ xs: 12, sm: 6, md: 6, lg: 3, xl: 3 }}
               key={caseStudy._meta.id}
             >
-              <Stack display="flex" flexDirection="column" spacing={2}>
+              <Stack
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+                spacing={2}
+              >
                 <RichTextFormatter field={title} />
 
                 <Link

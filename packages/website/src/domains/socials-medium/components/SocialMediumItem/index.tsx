@@ -18,13 +18,15 @@ export default function SocialMediumItem({
   publishedAt,
 }: SocialMediumItemProps) {
   return (
-    <Grid container spacing={2} width="100%">
+    <Grid container sx={{ spacing: 2, width: "100%" }}>
       <Grid size={8}>
         <ListItemText>
           <Typography
             variant="body2"
-            fontSize="small"
-            color="textSecondary"
+            sx={{
+              color: "textSecondary",
+              fontSize: "small",
+            }}
             gutterBottom
           >
             {publishedAt}
@@ -33,12 +35,14 @@ export default function SocialMediumItem({
         </ListItemText>
       </Grid>
 
-      <Grid size={4} pt={1}>
+      <Grid size={4} sx={{ paddingTop: 1 }}>
         <Badge
           badgeContent={part}
-          color="primary"
           anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
-          sx={{ width: "100%" }}
+          sx={{
+            color: "primary",
+            width: "100%",
+          }}
         >
           {image}
         </Badge>

@@ -52,10 +52,14 @@ export default function SocialsHeader({
 
         <ListItemText primary={textPrimary} secondary={textSecondary} />
 
-        <Box px={2}>
+        <Box sx={{ paddingX: 2 }}>
           <OpenInNewIcon
-            sx={{ width: 18, height: 18, display: "block" }}
-            color="action"
+            sx={{
+              color: "action",
+              display: "block",
+              width: 18,
+              height: 18,
+            }}
           />
         </Box>
       </ListItemButton>

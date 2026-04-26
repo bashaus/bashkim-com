@@ -7,7 +7,7 @@ export type FullTextPartialProps = Readonly<PropsWithChildren>;
 export default function FullTextPartial({ children }: FullTextPartialProps) {
   return (
     <Container>
-      <Box maxWidth="md">{children}</Box>
+      <Box sx={{ maxWidth: "md" }}>{children}</Box>
     </Container>
   );
 }

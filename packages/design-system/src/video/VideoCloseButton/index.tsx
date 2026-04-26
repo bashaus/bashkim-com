@@ -10,7 +10,7 @@ export default function VideoCloseButton({ onClick }: VideoCloseButtonProps) {
   return (
     <Tooltip placement="top" title="Close">
       <IconButton onClick={onClick}>
-        <CloseIcon color="primary" />
+        <CloseIcon sx={{ color: "primary" }} />
       </IconButton>
     </Tooltip>
   );

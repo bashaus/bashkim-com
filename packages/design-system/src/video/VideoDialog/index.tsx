@@ -28,7 +28,6 @@ export default function VideoDialog({ open, onClose, url }: VideoDialogProps) {
       open={open}
       onClose={onClose}
       fullWidth
-      maxWidth="md"
       slotProps={{
         backdrop: {
           style: { backgroundColor },
@@ -38,10 +37,12 @@ export default function VideoDialog({ open, onClose, url }: VideoDialogProps) {
       <VideoViewport url={url} />
       <Stack
         direction="row"
-        justifyContent="space-between"
-        alignItems="center"
+        sx={{
+          alignItems: "center",
+          justifyContent: "space-between",
+          padding: 0.5,
+        }}
         spacing={2}
-        padding={0.5}
       >
         <VideoPlayButton />
         <VideoSeekBar />

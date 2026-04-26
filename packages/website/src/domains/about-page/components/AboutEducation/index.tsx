@@ -20,8 +20,8 @@ export default function AboutEducation() {
       <SubtitlePartial title="Education" />
       <SplitPartial index={0}>
         <SplitItemPartial>
-          <Stack direction="row" spacing={2} alignItems="center">
-            <Box flex={1}>
+          <Stack direction="row" spacing={2} sx={{ alignItems: "center" }}>
+            <Box sx={{ flex: 1 }}>
               <Typography variant="h6" component="h3" gutterBottom>
                 Postgraduate
               </Typography>

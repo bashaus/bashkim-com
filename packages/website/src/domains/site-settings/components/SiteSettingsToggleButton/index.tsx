@@ -19,7 +19,7 @@ export default function SiteSettingsToggleButton({
 }: SiteSettingsToggleButtonProps) {
   return (
     <S.Button {...restProps}>
-      <Stack spacing={0.5} alignItems="center">
+      <Stack spacing={0.5} sx={{ alignItems: "center" }}>
         {startIcon}
         {children}
         {endIcon}

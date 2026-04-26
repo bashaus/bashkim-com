@@ -18,7 +18,7 @@ export default function TitlePartial({
 }: TitlePartialProps) {
   return (
     <Container component="header">
-      <Stack spacing={2} alignItems="center">
+      <Stack spacing={2} sx={{ alignItems: "center" }}>
         {image && <S.Icon>{image}</S.Icon>}
 
         <Typography variant="h4" component="h1" gutterBottom>

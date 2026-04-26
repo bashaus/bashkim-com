@@ -82,9 +82,11 @@ export default function SocialMediumContent({
             <Typography variant="body1">More stories on Medium</Typography>
             <Typography
               variant="body2"
-              fontSize="small"
-              color="textSecondary"
               gutterBottom
+              sx={{
+                color: "textSecondary",
+                fontSize: "small",
+              }}
             >
               View stories by @bashaus
             </Typography>

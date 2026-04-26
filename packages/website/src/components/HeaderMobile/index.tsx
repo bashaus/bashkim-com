@@ -15,7 +15,7 @@ export default function HeaderMobile({ backButton }: HeaderMobileProps) {
     <S.Container role="toolbar">
       <S.PrimaryToolbar disableGutters>
         <S.PrimaryAction>{backButton}</S.PrimaryAction>
-        <S.SiteTitle flex={1}>
+        <S.SiteTitle sx={{ flex: 1 }}>
           <S.SiteName>Bashkim Isai</S.SiteName>
           <S.SiteDescription>Digital Technologist</S.SiteDescription>
         </S.SiteTitle>

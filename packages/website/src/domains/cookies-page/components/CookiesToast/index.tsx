@@ -17,15 +17,17 @@ export default function CookiesToast({ closeToast }: CookiesToastProps) {
       <CardHeader
         avatar={
           <Box
-            borderRadius="50%"
-            bgcolor="#29e5d0"
-            width={48}
-            height={48}
-            display="flex"
-            alignItems="center"
-            justifyContent="center"
+            sx={{
+              bgcolor: "#29e5d0",
+              display: "flex",
+              alignItems: "center",
+              borderRadius: "50%",
+              justifyContent: "center",
+              width: 48,
+              height: 48,
+            }}
           >
-            <CookiesVector width={28} height={28} color="#000" />
+            <CookiesVector sx={{ width: 28, height: 28, color: "#000" }} />
           </Box>
         }
         action={

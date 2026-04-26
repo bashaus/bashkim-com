@@ -8,7 +8,7 @@ export type MagazineLayoutProps = Readonly<{
   images: Array<CaptionedMagazineSliceTypeFieldFragment>;
 }>;
 
-const MotionGrid = motion(Grid);
+const MotionGrid = motion.create(Grid);
 
 const animationVariant: Variants = {
   initial: { opacity: 0, scale: 0.95 },

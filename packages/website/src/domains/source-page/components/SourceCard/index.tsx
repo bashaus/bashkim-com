@@ -27,7 +27,7 @@ export default function SourceCard({
       <CardActionArea href={href} target="_blank" rel="noopener noreferrer">
         {image && <CardMedia image={image} sx={{ aspectRatio: "16 / 9" }} />}
         <CardContent>
-          <Stack direction="row" spacing={1} mb={1}>
+          <Stack direction="row" spacing={1} sx={{ marginBottom: 1 }}>
             {icon}
             <Typography variant="h6" component="p">
               {title}

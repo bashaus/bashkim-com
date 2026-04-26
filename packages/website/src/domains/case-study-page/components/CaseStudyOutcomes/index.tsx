@@ -30,7 +30,7 @@ export default function CaseStudyOutcomes({
       <S.Outcomes>
         {outcomes?.map((outcome) => (
           <S.Outcome key={outcome.info_outcome}>
-            <ListItem alignItems="flex-start" disableGutters>
+            <ListItem sx={{ alignItems: "flex-start" }} disableGutters>
               <ListItemIcon>
                 <CheckCircle />
               </ListItemIcon>

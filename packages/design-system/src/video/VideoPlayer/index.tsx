@@ -18,10 +18,12 @@ export default function VideoPlayer({ url }: VideoPlayerProps) {
       <VideoViewport url={url} />
       <Stack
         direction="row"
-        justifyContent="space-between"
-        alignItems="center"
+        sx={{
+          alignItems: "center",
+          justifyContent: "space-between",
+          padding: 0.5,
+        }}
         spacing={2}
-        padding={0.5}
       >
         <VideoPlayButton />
         <VideoSeekBar />

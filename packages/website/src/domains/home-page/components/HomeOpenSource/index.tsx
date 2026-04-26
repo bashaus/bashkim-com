@@ -36,7 +36,7 @@ export default function HomeOpenSource() {
     <Group>
       <Container>
         <FlipCardContainer>
-          <Grid container width="100%" spacing={2}>
+          <Grid container sx={{ spacing: 2, width: "100%" }}>
             <Grid size={{ xs: 12, md: 6 }}>
               <Typography variant="h4" component="h3" gutterBottom>
                 Open source
@@ -55,7 +55,7 @@ export default function HomeOpenSource() {
                 laid&nbsp;out&nbsp;here.
               </Typography>
 
-              <Box pt={3}>
+              <Box sx={{ paddingTop: 3 }}>
                 <Button variant="outlined" href={getSourcePath()}>
                   Learn more
                 </Button>

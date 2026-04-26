@@ -16,7 +16,7 @@ export default function BrowserWindowTitleBar({
         <S.ButtonMax />
       </Box>
       <S.Title variant="body2">{children}</S.Title>
-      <Box width={48}></Box>
+      <Box sx={{ width: 48 }}></Box>
     </S.Container>
   );
 }
