@@ -27,7 +27,7 @@ export default function CookiesToast({ closeToast }: CookiesToastProps) {
               height: 48,
             }}
           >
-            <CookiesVector sx={{ width: 28, height: 28, color: "#000" }} />
+            <CookiesVector width={28} height={28} color="#000" />
           </Box>
         }
         action={
