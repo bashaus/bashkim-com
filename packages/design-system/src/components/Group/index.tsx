@@ -22,8 +22,10 @@ export default function Group({
       id={id}
       component="section"
       spacing={4}
-      py={8}
-      alignItems="center"
+      sx={{
+        alignItems: "center",
+        paddingY: 8,
+      }}
     >
       {children}
     </Component>

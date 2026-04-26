@@ -25,8 +25,10 @@ export default function Carousel({
       <Stack
         direction="row"
         spacing={2}
-        justifyContent="space-between"
-        alignItems="center"
+        sx={{
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
       >
         <CarouselButtons />
         <CarouselSlider />

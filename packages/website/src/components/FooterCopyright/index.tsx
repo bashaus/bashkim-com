@@ -11,9 +11,9 @@ import { getSourcePath } from "@/libraries/app/navigation";
 export default function FooterCopyright() {
   return (
     <Container aria-label="Copyright, Two-Thousand-and-Eight to Two-Thousand-and-Twenty-Five, Bashkim Isai. All rights reserved.">
-      <Stack direction="row" alignItems="center">
-        <Box flex={1}>
-          <Typography aria-hidden="true" fontSize="smaller">
+      <Stack direction="row" sx={{ alignItems: "center" }}>
+        <Box sx={{ flex: 1 }}>
+          <Typography aria-hidden="true" sx={{ fontSize: "smaller" }}>
             &copy;{" "}
             <Tooltip title="2008" arrow>
               <time dateTime="2008">MMVIII</time>
@@ -26,12 +26,12 @@ export default function FooterCopyright() {
           </Typography>
         </Box>
 
-        <Box ml={2}>
+        <Box sx={{ marginLeft: 2 }}>
           <Button
             href={getSourcePath()}
             size="small"
             startIcon={<CodeIcon />}
-            color="currentColor"
+            sx={{ color: "currentColor" }}
           >
             Site source
           </Button>

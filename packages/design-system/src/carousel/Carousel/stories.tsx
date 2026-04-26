@@ -13,7 +13,7 @@ type CarouselRendererProps = Readonly<
 >;
 
 const CarouselRenderer = ({ slides, ...args }: CarouselRendererProps) => (
-  <Container maxWidth="md">
+  <Container sx={{ maxWidth: "md" }}>
     <Carousel {...args}>
       {new Array(slides)
         .fill("")

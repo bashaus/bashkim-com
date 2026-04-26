@@ -18,7 +18,7 @@ const CarouselViewportRenderer = ({
   slidesVisible,
   ...args
 }: CarouselViewportRendererProps) => (
-  <Container maxWidth="md">
+  <Container sx={{ maxWidth: "md" }}>
     <CarouselProvider slidesVisible={slidesVisible}>
       <CarouselViewport {...args}>
         {new Array(slides)

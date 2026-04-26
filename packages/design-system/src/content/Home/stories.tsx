@@ -14,8 +14,8 @@ type Story = StoryObj<typeof meta>;
 
 export const Home = {
   render: () => (
-    <Container maxWidth="md">
-      <Box mt={12} mb={3}>
+    <Container sx={{ maxWidth: "md" }}>
+      <Box sx={{ marginTop: 12, marginBottom: 3 }}>
         <InlineLogo width={252} />
       </Box>
 

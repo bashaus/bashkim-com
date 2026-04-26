@@ -23,7 +23,7 @@ export default function CookiesDetails() {
       />
 
       <Group>
-        <Container maxWidth="md">
+        <Container sx={{ maxWidth: "md" }}>
           <Typography variant="h4" component="h1" gutterBottom>
             Cookies on this site
           </Typography>
@@ -147,7 +147,7 @@ export default function CookiesDetails() {
 
           <Divider />
 
-          <Typography gutterBottom fontSize="small">
+          <Typography gutterBottom sx={{ fontSize: "small" }}>
             Last updated 30 March 2025
           </Typography>
         </Container>

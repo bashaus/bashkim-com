@@ -26,7 +26,7 @@ export default function SocialStackOverflowItem({
         <Typography variant="body1" gutterBottom>
           {title}
         </Typography>
-        <Typography variant="body2" color="textSecondary">
+        <Typography variant="body2" sx={{ color: "textSecondary" }}>
           {type}
         </Typography>
       </ListItemText>

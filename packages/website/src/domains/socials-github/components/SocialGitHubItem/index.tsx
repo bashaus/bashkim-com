@@ -1,6 +1,6 @@
 import { GitHubRepoVector } from "@bashkim-com/design-system/SocialsAssets";
 import ForkRightIcon from "@mui/icons-material/ForkRight";
-import StarOutlineIcon from "@mui/icons-material/StarOutline";
+import StarOutlinedIcon from "@mui/icons-material/StarOutlined";
 import Chip from "@mui/material/Chip";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
@@ -53,16 +53,22 @@ export default function SocialGitHubItem({
           )}
         </Typography>
 
-        <Typography variant="body2" fontSize="small" color="textSecondary">
+        <Typography
+          variant="body2"
+          sx={{
+            color: "textSecondary",
+            fontSize: "small",
+          }}
+        >
           {description}
         </Typography>
 
         {hasChips && (
-          <Stack direction="row" spacing={1} mt={1}>
+          <Stack direction="row" spacing={1} sx={{ marginTop: 1 }}>
             {!!stargazerCount && (
               <Tooltip title="Stargazers" arrow>
                 <Chip
-                  icon={<StarOutlineIcon />}
+                  icon={<StarOutlinedIcon />}
                   label={stargazerCount}
                   aria-label={`Stargazers: ${forkCount}`}
                   component="span"

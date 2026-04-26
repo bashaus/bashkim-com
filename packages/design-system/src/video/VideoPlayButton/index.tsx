@@ -28,7 +28,11 @@ export default function VideoPlayButton() {
 
   return (
     <Tooltip title={label} placement="top">
-      <IconButton aria-label={label} color="primary" onClick={handleClick}>
+      <IconButton
+        aria-label={label}
+        sx={{ color: "primary" }}
+        onClick={handleClick}
+      >
         <IconComponent />
       </IconButton>
     </Tooltip>

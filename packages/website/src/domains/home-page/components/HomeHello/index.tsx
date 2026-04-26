@@ -21,7 +21,7 @@ export default function HomeHello() {
         Digital Technologist based in&nbsp;Barcelona.
       </Typography>
 
-      <Stack direction="row" spacing={2} pt={4}>
+      <Stack direction="row" spacing={2} sx={{ paddingTop: 4 }}>
         <Button
           variant="outlined"
           color="currentColor"

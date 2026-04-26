@@ -75,9 +75,9 @@ export default function CaptionedScreenshotsSlice({
     >
       <RichTextFormatter field={caption} />
 
-      <Stack direction="row" spacing={2} mt={4}>
+      <Stack direction="row" spacing={2} sx={{ marginTop: 4 }}>
         <S.MobileIcon aria-label="Mobile" />
-        <S.SliderLabel>Size to resize</S.SliderLabel>
+        <S.SliderLabel>Slide to resize</S.SliderLabel>
         <S.DesktopIcon aria-label="Desktop" />
       </Stack>
 

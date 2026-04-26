@@ -19,7 +19,7 @@ export type SiteSettingsProps = Readonly<{
 
 export default function SiteSettings({ open, onClose }: SiteSettingsProps) {
   return (
-    <Dialog open={open} onClose={onClose} maxWidth="xs" fullWidth>
+    <Dialog open={open} onClose={onClose} sx={{ maxWidth: "xs" }} fullWidth>
       <DialogTitle>Site settings</DialogTitle>
 
       <DialogContent>

@@ -19,8 +19,8 @@ export default function HeaderActionSiteSettings() {
   return (
     <>
       <Tooltip title="Site settings" arrow>
-        <IconButton color="inherit" onClick={handleSignifierClick}>
-          <SettingsOutlinedIcon color="inherit" />
+        <IconButton sx={{ color: "inherit" }} onClick={handleSignifierClick}>
+          <SettingsOutlinedIcon sx={{ color: "inherit" }} />
         </IconButton>
       </Tooltip>
 
