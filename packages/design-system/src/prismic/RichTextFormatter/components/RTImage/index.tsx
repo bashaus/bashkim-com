@@ -1,3 +1,4 @@
+import Link from "@mui/material/Link";
 import { asLink, RTImageNode } from "@prismicio/client";
 import { ReactNode } from "react";
 
@@ -12,16 +13,23 @@ export type RTImageProps = Readonly<{
 export default function RTImage({ node }: RTImageProps) {
   const linkResolver = useLinkResolver();
 
-  const linkUrl = node.linkTo ? asLink(node.linkTo, { linkResolver }) : null;
+  const img = (
+    <img src={node.url} alt={node.alt || ""} title={node.copyright || ""} />
+  );
 
-  const linkTarget =
-    node.linkTo?.link_type === "Web" ? `target="_blank" rel="noopener"` : "";
+  if (!node.linkTo) {
+    return <p>{img}</p>;
+  }
 
-  const img = `<img src="${node.url}" alt="${node.alt || ""}" copyright="${node.copyright || ""}">`;
+  const linkProps = {
+    href: asLink(node.linkTo, { linkResolver }) ?? undefined,
+    target: node.linkTo?.link_type === "Web" ? "_blank" : undefined,
+    rel: node.linkTo?.link_type === "Web" ? "noopener noreferrer" : undefined,
+  };
 
-  return `
+  return (
     <p>
-      ${linkUrl ? `<a ${linkTarget} href="${linkUrl}">${img}</a>` : img}
+      <Link {...linkProps}>{img}</Link>
     </p>
-  `;
+  );
 }
