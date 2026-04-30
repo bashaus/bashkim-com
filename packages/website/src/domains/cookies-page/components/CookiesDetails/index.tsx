@@ -45,7 +45,7 @@ export default function CookiesDetails() {
             <Link
               href="https://ico.org.uk/for-the-public/online/cookies/"
               target="_blank"
-              rel="noreferrer"
+              rel="noreferrer noopener"
             >
               how to manage cookies
             </Link>{" "}
@@ -88,7 +88,7 @@ export default function CookiesDetails() {
             <Link
               href="https://tools.google.com/dlpage/gaoptout"
               target="_blank"
-              rel="noreferrer"
+              rel="noreferrer noopener"
             >
               opt-out of Google Analytics
             </Link>{" "}

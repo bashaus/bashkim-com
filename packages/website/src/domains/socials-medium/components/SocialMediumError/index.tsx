@@ -5,6 +5,7 @@ import Button from "@mui/material/Button";
 import Divider from "@mui/material/Divider";
 
 import SocialMediumHeader from "@/domains/socials-medium/components/SocialMediumHeader";
+import { getExternalMediumUrl } from "@/libraries/app/navigation";
 
 export default function SocialMediumError() {
   return (
@@ -18,7 +19,7 @@ export default function SocialMediumError() {
           message="An error occurred while synchronising data from Medium."
         >
           <Button
-            href="https://medium.com/@bashaus"
+            href={getExternalMediumUrl()}
             target="_blank"
             endIcon={<OpenInNewIcon />}
           >

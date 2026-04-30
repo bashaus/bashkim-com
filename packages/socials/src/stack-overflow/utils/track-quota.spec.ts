@@ -12,7 +12,7 @@ describe("trackQuota", () => {
     [0, 300, 1],
   ])(
     "should report percentages",
-    async (quota_remaining, quota_max, quotaUsage) => {
+    async (quota_remaining: number, quota_max: number, quotaUsage: number) => {
       const trackSpy = vi.mocked(track);
       trackQuota({ ...response, quota_remaining, quota_max });
 

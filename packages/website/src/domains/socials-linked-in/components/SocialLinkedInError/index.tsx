@@ -5,6 +5,7 @@ import Button from "@mui/material/Button";
 import Divider from "@mui/material/Divider";
 
 import SocialLinkedInHeader from "@/domains/socials-linked-in/components/SocialLinkedInHeader";
+import { getExternalLinkedInUrl } from "@/libraries/app/navigation";
 
 export default function SocialLinkedInError() {
   return (
@@ -18,8 +19,9 @@ export default function SocialLinkedInError() {
           message="An error occurred while synchronising data from LinkedIn."
         >
           <Button
-            href="https://www.linkedin.com/in/bashaus/"
+            href={getExternalLinkedInUrl()}
             target="_blank"
+            rel="noreferrer noopener"
             endIcon={<OpenInNewIcon />}
           >
             Go to Linked In

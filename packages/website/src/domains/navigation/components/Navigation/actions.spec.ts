@@ -1,6 +1,6 @@
 import { NavigationAction, NavigationActionSetScrollAtTop } from "./actions";
 
-describe("Navigation#actions", () => {
+describe("NavigationAction", () => {
   it("should generate", () => {
     const action = NavigationActionSetScrollAtTop({
       scrollAtTop: true,

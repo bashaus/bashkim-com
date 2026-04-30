@@ -3,11 +3,12 @@ import SocialsHeader from "@bashkim-com/design-system/SocialsHeader";
 import Image from "next/image";
 
 import profilePhoto from "@/assets/photo@4x.jpg";
+import { getExternalStackOverflowUrl } from "@/libraries/app/navigation";
 
 export default function SocialStackOverflowHeaderDisconnected() {
   return (
     <SocialsHeader
-      href="https://stackoverflow.com/users/600240/bashaus"
+      href={getExternalStackOverflowUrl()}
       avatarBadgeBackground="#FFF"
       avatarBadge={<StackOverflowFilledVector width={20} height={20} />}
       avatarImage={

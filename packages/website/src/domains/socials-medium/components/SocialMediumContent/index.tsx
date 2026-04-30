@@ -14,6 +14,7 @@ import Image from "next/image";
 import { Fragment } from "react";
 
 import SocialMediumItem from "@/domains/socials-medium/components/SocialMediumItem";
+import { getExternalGitHubUrl } from "@/libraries/app/navigation";
 
 export type SocialMediumContentProps = Readonly<{
   series: GetMediumStories["series"];
@@ -67,7 +68,7 @@ export default function SocialMediumContent({
 
       <SocialsMotion custom={++i}>
         <ListItemButton
-          href="https://github.com/bashaus?tab=repositories"
+          href={getExternalGitHubUrl()}
           target="_blank"
           rel="noopener noreferrer"
         >

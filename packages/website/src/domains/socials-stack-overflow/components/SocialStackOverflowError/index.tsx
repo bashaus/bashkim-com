@@ -5,6 +5,7 @@ import Button from "@mui/material/Button";
 import Divider from "@mui/material/Divider";
 
 import SocialStackOverflowHeaderDisconnected from "@/domains/socials-stack-overflow/components/SocialStackOverflowHeaderDisconnected";
+import { getExternalStackOverflowUrl } from "@/libraries/app/navigation";
 
 export default function SocialStackOverflowError() {
   return (
@@ -18,8 +19,9 @@ export default function SocialStackOverflowError() {
           message="An error occurred while synchronising data from Stack Overflow."
         >
           <Button
-            href="https://stackoverflow.com/users/600240/bashaus"
+            href={getExternalStackOverflowUrl()}
             target="_blank"
+            rel="noreferrer noopener"
             endIcon={<OpenInNewIcon />}
           >
             Go to Stack Overflow

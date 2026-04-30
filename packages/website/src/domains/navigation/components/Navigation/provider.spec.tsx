@@ -3,7 +3,7 @@ import { render } from "@testing-library/react";
 
 import NavigationProvider from "./provider";
 
-describe("Navigation#provider", () => {
+describe("NavigationProvider", () => {
   it("should render", () => {
     const content = faker.lorem.paragraph();
     const { getByText } = render(

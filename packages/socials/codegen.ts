@@ -1,8 +1,10 @@
 import "dotenv/config";
 
 import type { CodegenConfig } from "@graphql-codegen/cli";
+import { z } from "zod";
 
-const { GITHUB_TOKEN: token } = process.env;
+const tokenSchema = z.string();
+const token = tokenSchema.parse(process.env["GITHUB_TOKEN"]);
 
 const config: CodegenConfig = {
   schema: [

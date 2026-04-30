@@ -74,7 +74,7 @@ export default function AccoladeSlice({ slice }: AccoladeSliceProps) {
                   component="a"
                   href={awardHref}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noreferrer noopener"
                 >
                   <Box>
                     <S.Trophy place={awardPlace} />

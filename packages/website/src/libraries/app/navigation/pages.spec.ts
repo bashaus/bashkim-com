@@ -5,28 +5,28 @@ import {
   getSourcePath,
 } from "./pages";
 
-describe("getHomePath()", () => {
+describe("getHomePath", () => {
   it("should return path", () => {
     const path = getHomePath();
     expect(path).toBe("/");
   });
 });
 
-describe("getAboutPath()", () => {
+describe("getAboutPath", () => {
   it("should return path", () => {
     const path = getAboutPath();
     expect(path).toBe("/about");
   });
 });
 
-describe("getCookiesPath()", () => {
+describe("getCookiesPath", () => {
   it("should return path", () => {
     const path = getCookiesPath();
     expect(path).toBe("/cookies");
   });
 });
 
-describe("getSourcePath()", () => {
+describe("getSourcePath", () => {
   it("should return path", () => {
     const path = getSourcePath();
     expect(path).toBe("/source");

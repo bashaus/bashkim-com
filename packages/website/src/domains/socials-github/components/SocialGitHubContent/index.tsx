@@ -11,6 +11,7 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListSubheader from "@mui/material/ListSubheader";
 
 import SocialGitHubItem from "@/domains/socials-github/components/SocialGitHubItem";
+import { getExternalGitHubUrl } from "@/libraries/app/navigation";
 import MuiNextLink from "@/libraries/material-ui/link";
 
 export type SocialGitHubContentProps = Readonly<{
@@ -54,7 +55,7 @@ export default function SocialGitHubContent({
 
       <SocialsMotion custom={++i}>
         <ListItemButton
-          href="https://github.com/bashaus?tab=repositories"
+          href={getExternalGitHubUrl()}
           target="_blank"
           rel="noopener noreferrer"
         >

@@ -5,6 +5,7 @@ import Button from "@mui/material/Button";
 import Divider from "@mui/material/Divider";
 
 import SocialGitHubHeader from "@/domains/socials-github/components/SocialGitHubHeader";
+import { getExternalGitHubUrl } from "@/libraries/app/navigation";
 
 export default function SocialGitHubError() {
   return (
@@ -18,8 +19,9 @@ export default function SocialGitHubError() {
           message="An error occurred while synchronising data from GitHub."
         >
           <Button
-            href="https://github.com/bashaus/"
+            href={getExternalGitHubUrl()}
             target="_blank"
+            rel="noreferrer noopener"
             endIcon={<OpenInNewIcon />}
           >
             Go to GitHub

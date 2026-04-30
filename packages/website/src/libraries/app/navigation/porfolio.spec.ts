@@ -1,13 +1,13 @@
 import { getCaseStudyPath, getPortfolioPath } from "./portfolio";
 
-describe("getPortfolioPath()", () => {
+describe("getPortfolioPath", () => {
   it("should return path", () => {
     const path = getPortfolioPath();
     expect(path).toBe("/portfolio");
   });
 });
 
-describe("getCaseStudyPath()", () => {
+describe("getCaseStudyPath", () => {
   it("should return path", () => {
     const path = getCaseStudyPath({ caseStudySlug: "lorem-ipsum" });
     expect(path).toBe("/portfolio/lorem-ipsum");

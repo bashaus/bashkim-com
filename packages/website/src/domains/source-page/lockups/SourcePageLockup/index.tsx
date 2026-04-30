@@ -18,6 +18,10 @@ import backgroundPhoto from "@/domains/source-page/assets/background.jpg";
 import githubCommitsPhoto from "@/domains/source-page/assets/github-commits.png";
 import storybookGridPhoto from "@/domains/source-page/assets/storybook-grid.png";
 import SourceCard from "@/domains/source-page/components/SourceCard";
+import {
+  getExternalGitHubRepositoryUrl,
+  getExternalStorybookUrl,
+} from "@/libraries/app/navigation";
 
 export default function SourcePageLockup() {
   return (
@@ -54,7 +58,7 @@ export default function SourcePageLockup() {
           <Grid container spacing={2}>
             <Grid size={{ xs: 12, md: 6 }}>
               <SourceCard
-                href="https://www.github.com/bashaus/bashkim-com"
+                href={getExternalGitHubRepositoryUrl()}
                 image={githubCommitsPhoto.src}
                 icon={<GitHubVector width={32} height={32} />}
                 title="Source code"
@@ -67,7 +71,7 @@ export default function SourcePageLockup() {
 
             <Grid size={{ xs: 12, md: 6 }}>
               <SourceCard
-                href="https://ui.bashkim.com"
+                href={getExternalStorybookUrl()}
                 image={storybookGridPhoto.src}
                 icon={<StorybookVector width={32} height={32} />}
                 title="Design system"
