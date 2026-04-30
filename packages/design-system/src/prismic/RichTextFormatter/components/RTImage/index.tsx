@@ -10,7 +10,7 @@ export type RTImageProps = Readonly<{
   key: string;
 }>;
 
-export default function RTImage({ node }: RTImageProps) {
+export default function RTImage({ node, key }: RTImageProps) {
   const linkResolver = useLinkResolver();
 
   const img = (
@@ -18,7 +18,7 @@ export default function RTImage({ node }: RTImageProps) {
   );
 
   if (!node.linkTo) {
-    return <p>{img}</p>;
+    return <p key={key}>{img}</p>;
   }
 
   const linkProps = {
@@ -28,7 +28,7 @@ export default function RTImage({ node }: RTImageProps) {
   };
 
   return (
-    <p>
+    <p key={key}>
       <Link {...linkProps}>{img}</Link>
     </p>
   );
