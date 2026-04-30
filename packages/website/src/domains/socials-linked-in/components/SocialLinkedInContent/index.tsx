@@ -8,6 +8,7 @@ import Button from "@mui/material/Button";
 import Divider from "@mui/material/Divider";
 
 import SocialLinkedInHeader from "@/domains/socials-linked-in/components/SocialLinkedInHeader";
+import { getExternalLinkedInUrl } from "@/libraries/app/navigation";
 
 export default function SocialLinkedInContent() {
   return (
@@ -22,7 +23,7 @@ export default function SocialLinkedInContent() {
           message="Unfortunately LinkedIn doesn't support an API to retrieve profile information."
         >
           <Button
-            href="https://www.linkedin.com/in/bashaus/"
+            href={getExternalLinkedInUrl()}
             target="_blank"
             rel="noreferrer noopener"
             endIcon={<OpenInNewIcon />}

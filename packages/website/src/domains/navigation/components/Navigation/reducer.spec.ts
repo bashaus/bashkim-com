@@ -2,7 +2,7 @@ import { NavigationActionSetScrollAtTop } from "./actions";
 import NavigationReducer from "./reducer";
 import { NavigationState } from "./state";
 
-describe("Navigation#reducer", () => {
+describe("NavigationReducer", () => {
   it("should keep the value", () => {
     const initState: NavigationState = {
       scrollAtTop: true,

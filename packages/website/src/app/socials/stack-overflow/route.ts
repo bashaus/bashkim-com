@@ -1,8 +1,7 @@
 import { NextResponse } from "next/server";
 
+import { getExternalStackOverflowUrl } from "@/libraries/app/navigation";
+
 export function GET() {
-  return NextResponse.redirect(
-    "https://stackoverflow.com/users/600240/bashaus",
-    { status: 303 },
-  );
+  return NextResponse.redirect(getExternalStackOverflowUrl(), { status: 303 });
 }

@@ -14,7 +14,7 @@ export const stackOverflowPostSchema = z.object({
   post_id: z.number(),
   content_license: z.string(),
   title: z.string(),
-  link: z.url(),
+  link: z.httpUrl(),
 });
 
 export type StackOverflowPost = z.infer<typeof stackOverflowPostSchema>;

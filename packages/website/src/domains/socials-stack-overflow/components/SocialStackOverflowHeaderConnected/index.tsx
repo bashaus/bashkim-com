@@ -4,6 +4,7 @@ import Stack from "@mui/material/Stack";
 import Image from "next/image";
 
 import profilePhoto from "@/assets/photo@4x.jpg";
+import { getExternalStackOverflowUrl } from "@/libraries/app/navigation";
 
 import * as S from "./styles";
 
@@ -22,7 +23,7 @@ export default function SocialStackOverflowHeaderConnected({
 }: SocialStackOverflowHeaderConnectedProps) {
   return (
     <SocialsHeader
-      href="https://stackoverflow.com/users/600240/bashaus"
+      href={getExternalStackOverflowUrl()}
       avatarBadgeBackground="#FFF"
       avatarBadge={<StackOverflowFilledVector width={20} height={20} />}
       avatarImage={

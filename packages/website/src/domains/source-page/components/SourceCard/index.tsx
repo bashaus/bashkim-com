@@ -24,7 +24,7 @@ export default function SourceCard({
 }: SourceCardProps) {
   return (
     <Card variant="outlined">
-      <CardActionArea href={href} target="_blank" rel="noopener noreferrer">
+      <CardActionArea href={href} target="_blank" rel="noreferrer noopener">
         {image && <CardMedia image={image} sx={{ aspectRatio: "16 / 9" }} />}
         <CardContent>
           <Stack direction="row" spacing={1} sx={{ marginBottom: 1 }}>

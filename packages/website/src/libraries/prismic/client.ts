@@ -6,16 +6,25 @@ import {
 } from "@apollo/client";
 import * as prismic from "@prismicio/client";
 import { enableAutoPreviews } from "@prismicio/next";
+import { z } from "zod";
 
-const { PRISMICIO_ACCESS_TOKEN: accessToken } = process.env;
-const repositoryName = "bashkim-com";
+import { getCaseStudyPath } from "../app/navigation";
+
+const prismicSchema = z.object({
+  accessToken: z.string(),
+  repositoryName: z.string().default("bashkim-com"),
+});
+
+const { repositoryName, accessToken } = prismicSchema.parse({
+  accessToken: process.env["PRISMICIO_ACCESS_TOKEN"],
+});
 
 export const prismicClient = prismic.createClient(repositoryName, {
   accessToken,
   routes: [
     {
       type: "case_study",
-      path: "/portfolio/:uid",
+      path: getCaseStudyPath({ caseStudySlug: ":uid" }),
     },
   ],
 });

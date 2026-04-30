@@ -6,7 +6,12 @@ import CardContent from "@mui/material/CardContent";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 
-import { getPortfolioPath } from "@/libraries/app/navigation";
+import {
+  getExternalGitHubUrl,
+  getExternalLinkedInUrl,
+  getExternalMediumUrl,
+  getPortfolioPath,
+} from "@/libraries/app/navigation";
 
 import * as S from "./styles";
 
@@ -49,7 +54,7 @@ export default function HomeFeatured() {
 
               <CardActions>
                 <Button
-                  href="https://github.com/bashaus/"
+                  href={getExternalGitHubUrl()}
                   target="_blank"
                   rel="noreferrer noopener"
                 >
@@ -57,7 +62,7 @@ export default function HomeFeatured() {
                 </Button>
 
                 <Button
-                  href="https://medium.com/@bashaus"
+                  href={getExternalMediumUrl()}
                   target="_blank"
                   rel="noreferrer noopener"
                 >
@@ -82,7 +87,7 @@ export default function HomeFeatured() {
 
               <CardActions>
                 <Button
-                  href="https://www.linkedin.com/in/bashaus/"
+                  href={getExternalLinkedInUrl()}
                   target="_blank"
                   rel="noreferrer noopener"
                 >

@@ -1,9 +1,9 @@
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v14-appRouter";
-import { GoogleAnalytics } from "@next/third-parties/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Metadata } from "next";
 import type { PropsWithChildren, ReactNode } from "react";
 
+import GoogleAnalyticsTag from "@/components/GoogleAnalyticsTag";
 import SiteLayout from "@/layouts/SiteLayout";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -25,21 +25,9 @@ export default async function RootLayout({
   children,
   socialModals,
 }: RootLayoutProps) {
-  const {
-    BASHKIM_COM_GOOGLE_ANALYTICS_ENABLED = "0",
-    BASHKIM_COM_GOOGLE_ANALYTICS_MEASUREMENT_ID,
-  } = process.env;
-
-  const isGoogleAnalyticsConfigured =
-    BASHKIM_COM_GOOGLE_ANALYTICS_ENABLED !== "0" &&
-    !!BASHKIM_COM_GOOGLE_ANALYTICS_MEASUREMENT_ID;
-
   return (
     <html lang="en" dir="ltr">
-      {isGoogleAnalyticsConfigured && (
-        <GoogleAnalytics gaId={BASHKIM_COM_GOOGLE_ANALYTICS_MEASUREMENT_ID} />
-      )}
-
+      <GoogleAnalyticsTag />
       <body>
         <AppRouterCacheProvider>
           <SiteLayout>

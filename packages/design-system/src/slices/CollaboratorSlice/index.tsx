@@ -38,7 +38,7 @@ export default function CollaboratorSlice({ slice }: CollaboratorSliceProps) {
         <>
           {!url && <>{name}</>}
           {!!url && (
-            <MuiLink href={url} target="_blank" rel="noreferrer">
+            <MuiLink href={url} target="_blank" rel="noreferrer noopener">
               {name}
             </MuiLink>
           )}

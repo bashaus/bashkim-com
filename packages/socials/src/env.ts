@@ -2,7 +2,7 @@ import { z } from "zod";
 
 export const envSchema = z.object({
   github: z.object({
-    endpoint: z.url().default("https://api.github.com/graphql"),
+    endpoint: z.httpUrl().default("https://api.github.com/graphql"),
     token: z.string(),
   }),
 });

@@ -25,9 +25,9 @@ export const stackOverflowUserSchema = z.object({
   user_id: z.int(),
   accept_rate: z.int(),
   location: z.string(),
-  website_url: z.url(),
-  link: z.url(),
-  profile_image: z.url(),
+  website_url: z.httpUrl(),
+  link: z.httpUrl(),
+  profile_image: z.httpUrl(),
   display_name: z.string(),
 });
 

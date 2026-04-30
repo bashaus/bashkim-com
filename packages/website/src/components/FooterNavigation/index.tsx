@@ -2,7 +2,15 @@ import InlineLogo from "@bashkim-com/design-system/InlineLogo";
 import Container from "@mui/material/Container";
 import Link from "@mui/material/Link";
 
-import { getCookiesPath, getPortfolioPath } from "@/libraries/app/navigation";
+import {
+  getCookiesPath,
+  getExternalGitHubUrl,
+  getExternalLinkedInUrl,
+  getExternalMediumUrl,
+  getExternalSitePointUrl,
+  getExternalStackOverflowUrl,
+  getPortfolioPath,
+} from "@/libraries/app/navigation";
 
 import * as S from "./styles";
 
@@ -18,7 +26,7 @@ export default function FooterNavigation() {
 
           <Link
             variant="footer-link"
-            href="https://medium.com/@bashaus"
+            href={getExternalMediumUrl()}
             target="_blank"
             rel="noreferrer noopener"
           >
@@ -27,7 +35,7 @@ export default function FooterNavigation() {
 
           <Link
             variant="footer-link"
-            href="https://www.sitepoint.com/author/bashaus/"
+            href={getExternalSitePointUrl()}
             target="_blank"
             rel="noreferrer noopener"
           >
@@ -44,7 +52,7 @@ export default function FooterNavigation() {
 
           <Link
             variant="footer-link"
-            href="https://github.com/bashaus?tab=repositories"
+            href={getExternalGitHubUrl()}
             target="_blank"
             rel="noreferrer noopener"
           >
@@ -56,7 +64,7 @@ export default function FooterNavigation() {
           <S.FooterHeader>Connect</S.FooterHeader>
           <Link
             variant="footer-link"
-            href="https://stackoverflow.com/users/600240/bashaus"
+            href={getExternalStackOverflowUrl()}
             target="_blank"
             rel="noreferrer noopener"
           >
@@ -65,7 +73,7 @@ export default function FooterNavigation() {
 
           <Link
             variant="footer-link"
-            href="https://www.linkedin.com/in/bashaus/"
+            href={getExternalLinkedInUrl()}
             target="_blank"
             rel="noreferrer noopener"
           >

@@ -1,7 +1,9 @@
 import { NextResponse } from "next/server";
 
+import { getExternalMediumUrl } from "@/libraries/app/navigation";
+
 export function GET() {
-  return NextResponse.redirect("https://medium.com/@bashaus", {
+  return NextResponse.redirect(getExternalMediumUrl(), {
     status: 303,
   });
 }

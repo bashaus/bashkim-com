@@ -7,9 +7,9 @@
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
       "outputs": [".next/**", "!.next/cache/**"],
       "env": [
-        "BASHKIM_COM_BASE_HREF",
-        "BASHKIM_COM_GOOGLE_ANALYTICS_ENABLED",
-        "BASHKIM_COM_GOOGLE_ANALYTICS_MEASUREMENT_ID",
+        "BASHKIM_BASE_HREF",
+        "GOOGLE_ANALYTICS_ENABLED",
+        "GOOGLE_ANALYTICS_MEASUREMENT_ID",
         "PRISMICIO_ACCESS_TOKEN"
       ]
     },

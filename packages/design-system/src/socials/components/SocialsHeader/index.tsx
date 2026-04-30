@@ -26,7 +26,7 @@ export default function SocialsHeader({
 }: SocialsHeaderProps) {
   return (
     <Box>
-      <ListItemButton href={href} target="_blank" rel="noopener noreferrer">
+      <ListItemButton href={href} target="_blank" rel="noreferrer noopener">
         <ListItemAvatar>
           <Badge
             overlap="circular"

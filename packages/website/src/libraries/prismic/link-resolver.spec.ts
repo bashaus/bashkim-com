@@ -1,6 +1,6 @@
 import linkResolver from "./link-resolver";
 
-describe("libraries/prismic#linkResolver", () => {
+describe("linkResolver", () => {
   it("should handle case_study", () => {
     expect(
       linkResolver({
