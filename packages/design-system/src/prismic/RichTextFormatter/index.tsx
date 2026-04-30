@@ -9,6 +9,7 @@ import RTHeading3 from "./components/RTHeading3";
 import RTHeading4 from "./components/RTHeading4";
 import RTHeading5 from "./components/RTHeading5";
 import RTHeading6 from "./components/RTHeading6";
+import RTImage from "./components/RTImage";
 import RTLink from "./components/RTLink";
 import RTParagraph from "./components/RTParagraph";
 import RTPreformatted from "./components/RTPreformatted";
@@ -26,7 +27,7 @@ const components: RichTextComponents = {
   preformatted: RTPreformatted,
   strong: RTStrong,
   em: RTEm,
-  // image: RTImage,
+  image: RTImage,
   // embed: RTEmbed,
 };
 
