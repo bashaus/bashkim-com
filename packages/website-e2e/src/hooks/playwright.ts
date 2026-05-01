@@ -6,21 +6,21 @@ import { E2EWorld } from "../world";
 
 let browser: Browser;
 
+const playwrightSchema = z.object({
+  useBrowser: z.enum(["firefox", "chromium"]).default("chromium"),
+  headless: z.stringbool().default(true),
+});
+
 BeforeAll(async () => {
   /**
    * `E2EWorld` is not available during `BeforeAll`.
    * Check the environment variable directly instead of via world parameters.
    */
 
-  const useBrowser = await z
-    .enum(["firefox", "chromium"])
-    .default("chromium")
-    .parseAsync(process.env["PLAYWRIGHT_BROWSER"]);
-
-  const headless = await z
-    .stringbool()
-    .default(true)
-    .parseAsync(process.env["PLAYWRIGHT_HEADLESS"]);
+  const { useBrowser, headless } = await playwrightSchema.parseAsync({
+    useBrowser: process.env["PLAYWRIGHT_BROWSER"],
+    headless: process.env["PLAYWRIGHT_HEADLESS"],
+  });
 
   const launchOptions: LaunchOptions = {
     headless,
