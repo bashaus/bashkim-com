@@ -15,10 +15,11 @@ const prismicSchema = z.object({
   repositoryName: z.string().default("bashkim-com"),
 });
 
-const { repositoryName, accessToken } = prismicSchema.parse({
+const { accessToken, repositoryName } = prismicSchema.parse({
   accessToken: process.env["PRISMICIO_ACCESS_TOKEN"],
 });
 
+const uri = prismic.getGraphQLEndpoint(repositoryName);
 export const prismicClient = prismic.createClient(repositoryName, {
   accessToken,
   routes: [
@@ -35,7 +36,7 @@ export const apolloClient = new ApolloClient({
   cache: new InMemoryCache(),
   link: ApolloLink.from([
     new HttpLink({
-      uri: prismic.getGraphQLEndpoint(repositoryName),
+      uri,
       useGETForQueries: true,
       fetch: (input: RequestInfo | URL, init?: RequestInit) =>
         prismicClient.graphQLFetch(input as RequestInfo, init),

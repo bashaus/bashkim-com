@@ -4,12 +4,18 @@ import process from "node:process";
 
 import type { CodegenConfig } from "@graphql-codegen/cli";
 import * as prismic from "@prismicio/client";
+import { z } from "zod";
 
-const { PRISMICIO_ACCESS_TOKEN: accessToken } = process.env;
+const prismicSchema = z.object({
+  accessToken: z.string(),
+  repositoryName: z.string().default("bashkim-com"),
+});
 
-const repositoryName = "bashkim-com";
+const { accessToken, repositoryName } = prismicSchema.parse({
+  accessToken: process.env["PRISMICIO_ACCESS_TOKEN"],
+});
+
 const uri = prismic.getGraphQLEndpoint(repositoryName);
-
 const prismicClient = prismic.createClient(repositoryName, { accessToken });
 
 const config: CodegenConfig = {

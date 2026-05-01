@@ -1,17 +1,15 @@
 import "dotenv/config";
 
 import type { CodegenConfig } from "@graphql-codegen/cli";
-import { z } from "zod";
 
-const tokenSchema = z.string();
-const token = tokenSchema.parse(process.env["GITHUB_TOKEN"]);
+import env from "./src/env";
 
 const config: CodegenConfig = {
   schema: [
     {
-      "https://api.github.com/graphql": {
+      [env.github.endpoint]: {
         headers: {
-          Authorization: `Bearer ${token}`,
+          Authorization: `Bearer ${env.github.token}`,
           "User-Agent": "graphql-codegen",
         },
       },
