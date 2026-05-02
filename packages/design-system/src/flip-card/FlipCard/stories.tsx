@@ -1,4 +1,5 @@
 import { faker } from "@faker-js/faker";
+import Box from "@mui/material/Box";
 import type { Meta, StoryObj } from "@storybook/nextjs";
 
 import ScrollLockContainer from "../../scroll-lock/ScrollLockContainer";
@@ -17,8 +18,10 @@ const meta = {
   },
   decorators: [
     (Story) => (
-      <ScrollLockContainer minHeight="100vh">
-        <Story />
+      <ScrollLockContainer>
+        <Box sx={{ width: "100%" }}>
+          <Story />
+        </Box>
       </ScrollLockContainer>
     ),
   ],
@@ -30,21 +33,11 @@ export const Example = {
   args: {
     children: (
       <>
-        <FlipCardFaceFront
-          style={{
-            background: "black",
-            color: "white",
-          }}
-        >
+        <FlipCardFaceFront style={{ background: "black", color: "white" }}>
           <p>Front</p>
         </FlipCardFaceFront>
 
-        <FlipCardFaceBack
-          style={{
-            background: "white",
-            color: "black",
-          }}
-        >
+        <FlipCardFaceBack style={{ background: "white", color: "black" }}>
           <p>Back</p>
         </FlipCardFaceBack>
       </>
