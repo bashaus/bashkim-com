@@ -3,6 +3,7 @@ import Typography from "@mui/material/Typography";
 import type { Meta, StoryObj } from "@storybook/nextjs";
 import { placeholderImage } from "placeholder-image-data-url-svg";
 
+import ScrollLockContainer from "../../scroll-lock/ScrollLockContainer";
 import DeviceSmartphone, { DeviceSmartphoneProps } from ".";
 
 type DeviceSmartphoneRendererProps = Readonly<
@@ -31,6 +32,13 @@ const meta = {
   parameters: {
     layout: "centered",
   },
+  decorators: [
+    (Story) => (
+      <ScrollLockContainer>
+        <Story />
+      </ScrollLockContainer>
+    ),
+  ],
   render: DeviceSmartphoneRenderer,
 } satisfies Meta<typeof DeviceSmartphoneRenderer>;
 
@@ -38,7 +46,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Fixture = {
   args: {
-    figure: [placeholderImage({ width: 640, height: 1130, text: "figure" })],
+    figure: [placeholderImage({ width: 640, height: 2260, text: "figure" })],
     children: faker.lorem.sentence(8),
   },
 } satisfies Story;

@@ -1,6 +1,6 @@
 import { HTMLMotionProps, useSpring, useTransform } from "motion/react";
 
-import { useScrollProgress } from "../FlipCardContainer";
+import { useScrollLock } from "../../scroll-lock/ScrollLockContainer/context";
 import * as S from "./styles";
 
 export type FlipCardProps = Readonly<
@@ -17,7 +17,7 @@ export default function FlipCard({
   style,
   ...restProps
 }: FlipCardProps) {
-  const { scrollYProgress } = useScrollProgress();
+  const { scrollYProgress } = useScrollLock();
 
   const springConfig = { stiffness: 120, damping: 20, mass: 0.5 };
 

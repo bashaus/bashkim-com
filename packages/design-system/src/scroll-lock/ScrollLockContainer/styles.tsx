@@ -16,5 +16,4 @@ export const StickyWrapper = styled("div")(() => ({
   alignItems: "center",
   perspective: 1500,
   perspectiveOrigin: "center",
-  height: "100vh",
 }));

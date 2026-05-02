@@ -1,5 +1,6 @@
 import { styled } from "@mui/material/styles";
 
+import DeviceViewport from "../DeviceViewport";
 import DeviceVector from "./device.svg";
 
 export const Container = styled("figure")(() => ({
@@ -27,18 +28,11 @@ export const Device = styled(DeviceVector)(() => ({
   fill: "currentColor",
 }));
 
-export const Figure = styled("div")(() => ({
-  display: "block",
-  position: "absolute",
-  overflowY: "scroll",
+export const Viewport = styled(DeviceViewport)(() => ({
   top: "18.6%",
   left: "8.4%",
   right: "9%",
   height: "35.4%",
-
-  "& > *": {
-    display: "block",
-  },
 }));
 
 export const Caption = styled("figcaption")(({ theme }) => ({

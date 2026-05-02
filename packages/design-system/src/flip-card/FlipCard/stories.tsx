@@ -1,8 +1,7 @@
 import { faker } from "@faker-js/faker";
-import Box from "@mui/material/Box";
 import type { Meta, StoryObj } from "@storybook/nextjs";
 
-import FlipCardContainer from "../FlipCardContainer";
+import ScrollLockContainer from "../../scroll-lock/ScrollLockContainer";
 import FlipCardFaceBack from "../FlipCardFaceBack";
 import FlipCardFaceFront from "../FlipCardFaceFront";
 import FlipCard from ".";
@@ -18,11 +17,9 @@ const meta = {
   },
   decorators: [
     (Story) => (
-      <FlipCardContainer>
-        <Box sx={{ width: "100%", height: "100vh" }}>
-          <Story />
-        </Box>
-      </FlipCardContainer>
+      <ScrollLockContainer minHeight="100vh">
+        <Story />
+      </ScrollLockContainer>
     ),
   ],
 } satisfies Meta<typeof FlipCard>;

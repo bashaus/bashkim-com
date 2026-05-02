@@ -19,7 +19,7 @@ export default function DeviceFeaturePhone({
     <S.Container>
       <S.Wrapper>
         <S.Device />
-        <S.Figure>{figure}</S.Figure>
+        <S.Viewport>{figure}</S.Viewport>
       </S.Wrapper>
 
       {children && <S.Caption>{children}</S.Caption>}
