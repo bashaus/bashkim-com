@@ -1,10 +1,8 @@
-import Stack from "@mui/material/Stack";
 import { EmblaOptionsType } from "embla-carousel";
 import { PropsWithChildren } from "react";
 
-import CarouselButtons from "../CarouselButtons";
+import CarouselPagination from "../CarouselPagination";
 import CarouselProvider from "../CarouselProvider";
-import CarouselSlider from "../CarouselSlider";
 import CarouselViewport from "../CarouselViewport";
 
 export type CarouselProps = Readonly<
@@ -21,18 +19,7 @@ export default function Carousel({
   return (
     <CarouselProvider slidesVisible={slidesVisible}>
       <CarouselViewport>{children}</CarouselViewport>
-
-      <Stack
-        direction="row"
-        spacing={2}
-        sx={{
-          justifyContent: "space-between",
-          alignItems: "center",
-        }}
-      >
-        <CarouselButtons />
-        <CarouselSlider />
-      </Stack>
+      <CarouselPagination />
     </CarouselProvider>
   );
 }

@@ -54,7 +54,7 @@
     "./NewspaperSlice": "./src/slices/NewspaperSlice/index.tsx",
     "./SubtitleSlice": "./src/slices/SubtitleSlice/index.tsx",
     "./FlipCard": "./src/flip-card/FlipCard/index.tsx",
-    "./FlipCardContainer": "./src/flip-card/FlipCardContainer/index.tsx",
+    "./ScrollLockContainer": "./src/scroll-lock/ScrollLockContainer/index.tsx",
     "./FlipCardFaceBack": "./src/flip-card/FlipCardFaceBack/index.tsx",
     "./FlipCardFaceFront": "./src/flip-card/FlipCardFaceFront/index.tsx",
     "./BrowserWindowTitleBar": "./src/browser-window/BrowserWindowTitleBar/index.tsx",

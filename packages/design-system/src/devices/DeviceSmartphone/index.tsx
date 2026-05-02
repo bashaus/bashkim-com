@@ -8,9 +8,6 @@ export type DeviceSmartphoneProps = Readonly<
   }>
 >;
 
-/**
- * A scrollable screenshot encapsulated by a smartphone design.
- */
 export default function DeviceSmartphone({
   children,
   figure,
@@ -19,7 +16,7 @@ export default function DeviceSmartphone({
     <S.Container>
       <S.Wrapper>
         <S.Device />
-        <S.Figure>{figure}</S.Figure>
+        <S.Viewport>{figure}</S.Viewport>
       </S.Wrapper>
 
       <S.Caption>{children}</S.Caption>

@@ -2,10 +2,10 @@ import BrowserWindowContent from "@bashkim-com/design-system/BrowserWindowConten
 import BrowserWindowTitleBar from "@bashkim-com/design-system/BrowserWindowTitleBar";
 import CodeHighlight from "@bashkim-com/design-system/CodeHighlight";
 import FlipCard from "@bashkim-com/design-system/FlipCard";
-import FlipCardContainer from "@bashkim-com/design-system/FlipCardContainer";
 import FlipCardFaceBack from "@bashkim-com/design-system/FlipCardFaceBack";
 import FlipCardFaceFront from "@bashkim-com/design-system/FlipCardFaceFront";
 import Group from "@bashkim-com/design-system/Group";
+import ScrollLockContainer from "@bashkim-com/design-system/ScrollLockContainer";
 import SquareLogo from "@bashkim-com/design-system/SquareLogo";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -35,7 +35,7 @@ export default function HomeOpenSource() {
   return (
     <Group>
       <Container>
-        <FlipCardContainer>
+        <ScrollLockContainer>
           <Grid container sx={{ spacing: 2, width: "100%" }}>
             <Grid size={{ xs: 12, md: 6 }}>
               <Typography variant="h4" component="h3" gutterBottom>
@@ -96,7 +96,7 @@ export default function HomeOpenSource() {
               </FlipCard>
             </Grid>
           </Grid>
-        </FlipCardContainer>
+        </ScrollLockContainer>
       </Container>
     </Group>
   );

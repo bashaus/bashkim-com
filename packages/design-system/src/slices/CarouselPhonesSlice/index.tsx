@@ -10,6 +10,7 @@ import CarouselImage from "../../carousel/CarouselImage";
 import DeviceFeaturePhone from "../../devices/DeviceFeaturePhone";
 import DeviceSmartphone from "../../devices/DeviceSmartphone";
 import FullImagePartial from "../../partials/FullImagePartial";
+import ScrollLockContainer from "../../scroll-lock/ScrollLockContainer";
 
 const DeviceTypeComponents: Record<
   string,
@@ -51,42 +52,44 @@ export default function CarouselPhonesSlice({
   }
 
   return (
-    <FullImagePartial>
-      <Carousel slidesVisible={slidesVisible}>
-        {fields.map((field) => {
-          const {
-            carousel_phones_slice_type_device_type: deviceType,
-            carousel_phones_slice_type_caption: caption,
-            carousel_phones_slice_type_image: image,
-          } = field;
+    <ScrollLockContainer>
+      <FullImagePartial>
+        <Carousel slidesVisible={slidesVisible}>
+          {fields.map((field) => {
+            const {
+              carousel_phones_slice_type_device_type: deviceType,
+              carousel_phones_slice_type_caption: caption,
+              carousel_phones_slice_type_image: image,
+            } = field;
 
-          if (!image || !deviceType) {
-            return null;
-          }
+            if (!image || !deviceType) {
+              return null;
+            }
 
-          const DeviceComponent = DeviceTypeComponents[deviceType];
+            const DeviceComponent = DeviceTypeComponents[deviceType];
 
-          return (
-            <CarouselImage
-              key={JSON.stringify(field)}
-              figure={
-                <DeviceComponent
-                  figure={
-                    <Image
-                      src={image.url}
-                      alt={image.alt ?? ""}
-                      width={image.dimensions.width}
-                      height={image.dimensions.height}
-                    />
-                  }
-                >
-                  <RichTextFormatter field={caption} />
-                </DeviceComponent>
-              }
-            />
-          );
-        })}
-      </Carousel>
-    </FullImagePartial>
+            return (
+              <CarouselImage
+                key={JSON.stringify(field)}
+                figure={
+                  <DeviceComponent
+                    figure={
+                      <Image
+                        src={image.url}
+                        alt={image.alt ?? ""}
+                        width={image.dimensions.width}
+                        height={image.dimensions.height}
+                      />
+                    }
+                  >
+                    <RichTextFormatter field={caption} />
+                  </DeviceComponent>
+                }
+              />
+            );
+          })}
+        </Carousel>
+      </FullImagePartial>
+    </ScrollLockContainer>
   );
 }
