@@ -23,7 +23,7 @@
     "@mui/icons-material": "^9.0.0",
     "@mui/material": "^9.0.0",
     "@mui/material-nextjs": "^9.0.0",
-    "@next/third-parties": "16.2.4",
+    "@next/third-parties": "16.2.6",
     "@prismicio/client": "^7.20.1",
     "@prismicio/next": "^2.0.1",
     "@vercel/speed-insights": "^2.0.0",
@@ -32,7 +32,7 @@
     "motion": "^12.38.0",
     "msw": "^2.13.6",
     "negotiator": "^1.0.0",
-    "next": "16.2.4",
+    "next": "16.2.6",
     "react": "19.2.5",
     "react-dom": "19.2.5",
     "react-toastify": "^11.0.5",
@@ -42,7 +42,7 @@
     "zod": "^4.3.6"
   },
   "devDependencies": {
-    "@next/eslint-plugin-next": "16.2.4",
+    "@next/eslint-plugin-next": "16.2.6",
     "@svgr/webpack": "^8.1.0",
     "@testing-library/jest-dom": "^6.9.1",
     "@types/negotiator": "^0.6.4",
