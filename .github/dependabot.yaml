@@ -12,12 +12,12 @@ updates:
     directories:
       - "/"
       - "/packages/*"
+
     schedule:
       interval: monthly
 
-    pull-request-cooldown:
-      amount: 7
-      unit: "days"
+    cooldown:
+      default-days: 7
 
     groups:
       same-dependency-across-packages:
