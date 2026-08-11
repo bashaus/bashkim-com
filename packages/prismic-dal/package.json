@@ -30,7 +30,7 @@
     "@graphql-codegen/client-preset": "^5.2.4",
     "@parcel/watcher": "^2.5.6",
     "@prismicio/client": "^7.21.7",
-    "@types/node": "^25.5.1",
+    "@types/node": "^26.1.2",
     "dotenv": "^17.4.0",
     "utility-types": "^3.11.0"
   }
