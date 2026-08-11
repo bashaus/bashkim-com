@@ -4,7 +4,6 @@ import { defineConfig } from "eslint/config";
 import muiPathImportsPlugin from "eslint-plugin-mui-path-imports";
 import pluginReact from "eslint-plugin-react";
 import pluginReactHooks from "eslint-plugin-react-hooks";
-import storybook from "eslint-plugin-storybook";
 
 import base from "./base.mjs";
 
@@ -82,7 +81,4 @@ export default defineConfig(
       ],
     },
   },
-
-  /* eslint-plugin-storybook */
-  ...storybook.configs["flat/recommended"],
 );
