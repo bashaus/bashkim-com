@@ -35,12 +35,12 @@ jobs:
           fetch-depth: 0
 
       - name: codeql init
-        uses: github/codeql-action/init@v4.37.6
+        uses: github/codeql-action/init@v4.37.9
         with:
           languages: ${{ matrix.language }}
           build-mode: ${{ matrix.build-mode }}
 
       - name: codeql analyze
-        uses: github/codeql-action/analyze@v4.37.6
+        uses: github/codeql-action/analyze@v4.37.9
         with:
           category: "/language:${{matrix.language}}"
