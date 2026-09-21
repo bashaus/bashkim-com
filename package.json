@@ -28,7 +28,7 @@
   "devDependencies": {
     "@bashkim-com/eslint": "*",
     "@swc/core": "^1.16.2",
-    "@turbo/gen": "^2.9.5",
+    "@turbo/gen": "^2.10.12",
     "@types/node": "^25.5.0",
     "eslint": "^9.39.2",
     "npm-check-updates": "^19.2.0",
