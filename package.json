@@ -29,7 +29,7 @@
     "@bashkim-com/eslint": "*",
     "@swc/core": "^1.16.2",
     "@turbo/gen": "^2.10.12",
-    "@types/node": "^25.5.0",
+    "@types/node": "^26.5.1",
     "eslint": "^9.39.2",
     "npm-check-updates": "^19.2.0",
     "prettier": "3.8.1",
