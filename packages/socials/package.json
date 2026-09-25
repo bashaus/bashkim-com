@@ -22,7 +22,7 @@
     "fast-xml-parser": "^5.7.1",
     "graphql": "^16.13.2",
     "lodash.groupby": "^4.6.0",
-    "zod": "^4.3.6"
+    "zod": "^4.6.5"
   },
   "devDependencies": {
     "@bashkim-com/eslint": "*",

@@ -112,7 +112,7 @@
     "jsdom": "^29.0.1",
     "storybook": "10.6.0",
     "typescript": "^6.0.2",
-    "vite-plugin-svgr": "^5.0.0",
+    "vite-plugin-svgr": "^5.2.0",
     "vitest": "^4.1.4"
   }
 }
