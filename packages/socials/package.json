@@ -32,6 +32,6 @@
     "@types/lodash.groupby": "^4.6.9",
     "@vitest/coverage-v8": "^4.1.4",
     "dotenv": "^17.4.0",
-    "vitest": "^4.1.4"
+    "vitest": "^4.1.11"
   }
 }
