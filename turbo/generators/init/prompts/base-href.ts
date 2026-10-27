@@ -3,7 +3,7 @@ import { z } from "zod";
 
 import { zodValidator } from "../../helpers/zod";
 
-const baseUrlSchema = z.httpUrl();
+const baseUrlSchema = z.url();
 
 export async function baseHrefPrompt() {
   const value = await input({
