@@ -83,6 +83,7 @@
     "@mui/material": "^9.0.1",
     "@prismicio/client": "^7.20.1",
     "@prismicio/react": "^3.2.1",
+    "@rollup/pluginutils": "^5.5.1",
     "classnames": "^2.5.1",
     "embla-carousel": "^8.6.0",
     "embla-carousel-react": "^8.6.0",
