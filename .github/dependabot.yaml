@@ -20,5 +20,30 @@ updates:
       default-days: 7
 
     groups:
+      eslint:
+        group-by: dependency-name
+        patterns:
+          - "@eslint/*"
+          - "eslint-*"
+          - "eslint"
+
+      prettier:
+        group-by: dependency-name
+        patterns:
+          - "prettier"
+          - "prettier-*"
+
+      storybook:
+        group-by: dependency-name
+        patterns:
+          - "@storybook/*"
+          - "storybook"
+
+      next:
+        group-by: dependency-name
+        patterns:
+          - "@next/*"
+          - "next"
+
       same-dependency-across-packages:
         group-by: dependency-name
