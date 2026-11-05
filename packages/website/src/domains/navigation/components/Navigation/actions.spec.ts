@@ -1,7 +1,7 @@
 import { NavigationAction, NavigationActionSetScrollAtTop } from "./actions";
 
 describe("NavigationAction", () => {
-  it("should generate", () => {
+  it("should generate when true", () => {
     const action = NavigationActionSetScrollAtTop({
       scrollAtTop: true,
     });
@@ -10,7 +10,7 @@ describe("NavigationAction", () => {
     expect(action.payload).toEqual({ scrollAtTop: true });
   });
 
-  it("should generate", () => {
+  it("should generate when false", () => {
     const action = NavigationActionSetScrollAtTop({
       scrollAtTop: false,
     });
