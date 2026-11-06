@@ -1,7 +1,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 
-import { http, HttpResponse } from "msw";
+import { http, HttpResponse } from "msw/http";
 
 export type GetMediumStoriesHandlerParams = Readonly<{
   username: string;

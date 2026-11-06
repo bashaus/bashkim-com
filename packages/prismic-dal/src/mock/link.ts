@@ -1,5 +1,5 @@
 import { getGraphQLEndpoint } from "@prismicio/client";
-import { graphql } from "msw";
+import { graphql } from "msw/graphql";
 
 const repositoryName = "bashkim-com";
 const uri = getGraphQLEndpoint(repositoryName);

@@ -2,7 +2,7 @@ import { z } from "zod";
 
 export const itemElementSchema = z.object({
   title: z.string(),
-  link: z.httpUrl(),
+  link: z.url(),
   guid: z.object({
     "#text": z.string(),
   }),
@@ -16,17 +16,17 @@ export const itemElementSchema = z.object({
 export const channelElementSchema = z.object({
   title: z.string(),
   description: z.string(),
-  link: z.httpUrl(),
+  link: z.url(),
   image: z.object({
-    url: z.httpUrl(),
+    url: z.url(),
     title: z.string(),
-    link: z.httpUrl(),
+    link: z.url(),
   }),
   generator: z.string(),
   lastBuildDate: z.coerce.date(),
   "atom:link": z.array(
     z.object({
-      "@href": z.httpUrl().optional(),
+      "@href": z.url().optional(),
       "@rel": z.string().optional(),
       "@type": z.string().optional(),
     }),

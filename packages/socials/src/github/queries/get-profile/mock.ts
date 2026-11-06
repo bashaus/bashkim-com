@@ -1,4 +1,4 @@
-import { HttpResponse } from "msw";
+import { HttpResponse } from "msw/http";
 
 import { githubLink } from "../../dal/mock";
 import { GitHubProfileQuery } from "../../gql/graphql";

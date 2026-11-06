@@ -43,5 +43,4 @@ export const SiteSettingsActionToggleGridLines = (
 /* */
 
 export type SiteSettingsActionType =
-  | SiteSettingsActionSetGridLinesType
-  | SiteSettingsActionToggleGridLinesType;
+  SiteSettingsActionSetGridLinesType | SiteSettingsActionToggleGridLinesType;

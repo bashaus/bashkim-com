@@ -1,4 +1,4 @@
-import { HttpResponse } from "msw";
+import { HttpResponse } from "msw/http";
 
 import { GetPortfolioPageQuery } from "../../gql/graphql";
 import { prismicLink } from "../../mock/link";

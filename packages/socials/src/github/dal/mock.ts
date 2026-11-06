@@ -1,4 +1,4 @@
-import { graphql } from "msw";
+import { graphql } from "msw/graphql";
 
 process.env["GITHUB_TOKEN"] = "";
 

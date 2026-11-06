@@ -25,17 +25,24 @@
     "test": "turbo run test",
     "test:e2e": "turbo run test:e2e"
   },
+  "allowScripts": {
+    "@parcel/watcher@2.6.0": true,
+    "@swc/core@1.16.22": true,
+    "core-js-pure@3.51.0": true,
+    "esbuild@0.28.2": true,
+    "fsevents@2.3.3": true
+  },
   "devDependencies": {
     "@bashkim-com/eslint": "*",
-    "@swc/core": "^1.16.2",
-    "@turbo/gen": "^2.10.12",
-    "@types/node": "^26.6.5",
+    "@swc/core": "^1.16.22",
+    "@turbo/gen": "^2.11.10",
+    "@types/node": "^26.6.6",
     "eslint": "^9.39.2",
-    "npm-check-updates": "^19.2.0",
-    "prettier": "3.8.1",
-    "prettier-plugin-packagejson": "3.0.2",
-    "sass": "^1.98.0",
-    "ts-node": "10.9.2",
+    "npm-check-updates": "^23.1.1",
+    "prettier": "3.9.10",
+    "prettier-plugin-packagejson": "3.1.0",
+    "sass": "^1.108.0",
+    "ts-node": "^10.9.2",
     "turbo": "^2.11.10",
     "typescript": "^6.0.2"
   },
