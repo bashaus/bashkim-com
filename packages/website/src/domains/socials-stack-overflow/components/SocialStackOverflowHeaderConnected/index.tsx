@@ -2,6 +2,7 @@ import { StackOverflowFilledVector } from "@bashkim-com/design-system/SocialsAss
 import SocialsHeader from "@bashkim-com/design-system/SocialsHeader";
 import Stack from "@mui/material/Stack";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 import profilePhoto from "@/assets/photo@4x.jpg";
 import { getExternalStackOverflowUrl } from "@/libraries/app/navigation";
@@ -21,6 +22,8 @@ export default function SocialStackOverflowHeaderConnected({
   silverBadgeCount,
   bronzeBadgeCount,
 }: SocialStackOverflowHeaderConnectedProps) {
+  const t = useTranslations("SocialStackOverflowHeaderConnected");
+
   return (
     <SocialsHeader
       href={getExternalStackOverflowUrl()}
@@ -31,20 +34,24 @@ export default function SocialStackOverflowHeaderConnected({
           src={profilePhoto.src}
           width={profilePhoto.width}
           height={profilePhoto.height}
-          alt="Photo of Bashkim Isai"
+          alt={t("profilePhotoAlt")}
         />
       }
-      textPrimary="Bashkim Isai"
+      textPrimary={t("title")}
       textSecondary={
         <Stack direction="row" spacing={2} component="span">
           <span>{reputation}</span>
 
-          {goldBadgeCount && <S.BadgesGold>● {goldBadgeCount}</S.BadgesGold>}
-          {silverBadgeCount && (
-            <S.BadgesSilver>● {silverBadgeCount}</S.BadgesSilver>
+          {goldBadgeCount && (
+            <S.GoldBadgeChip>&#9679; {goldBadgeCount}</S.GoldBadgeChip>
           )}
+
+          {silverBadgeCount && (
+            <S.SilverBadgeChip>&#9679; {silverBadgeCount}</S.SilverBadgeChip>
+          )}
+
           {bronzeBadgeCount && (
-            <S.BadgesBronze>● {bronzeBadgeCount}</S.BadgesBronze>
+            <S.BronzeBadgeChip>&#9679; {bronzeBadgeCount}</S.BronzeBadgeChip>
           )}
         </Stack>
       }

@@ -1,11 +1,19 @@
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v14-appRouter";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Metadata } from "next";
-import { headers } from "next/headers";
+import { NextIntlClientProvider } from "next-intl";
 import type { PropsWithChildren, ReactNode } from "react";
 
 import GoogleAnalyticsTag from "@/components/GoogleAnalyticsTag";
+import { defaultLocale } from "@/i18n/locale/locale";
+import { getLocaleFromPath } from "@/i18n/locale/source/path/get";
 import SiteLayout from "@/layouts/SiteLayout";
+
+export type RootLayoutProps = Readonly<
+  PropsWithChildren<{
+    socialModals: ReactNode;
+  }>
+>;
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -16,32 +24,24 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-export type RootLayoutProps = Readonly<
-  PropsWithChildren<{
-    socialModals: ReactNode;
-  }>
->;
-
 export default async function RootLayout({
   children,
   socialModals,
 }: RootLayoutProps) {
-  const headerList = await headers();
-  console.log("x-locale-cookie:", headerList.get("x-locale-cookie"));
-  console.log("x-locale-path:", headerList.get("x-locale-path"));
-  console.log("x-locale-accept:", headerList.get("x-locale-accept"));
-  console.log("x-locale-vercel:", headerList.get("x-locale-vercel"));
+  const locale = await getLocaleFromPath().catch(() => defaultLocale);
 
   return (
-    <html lang="en" dir="ltr">
+    <html lang={locale} dir="ltr">
       <GoogleAnalyticsTag />
       <body>
-        <AppRouterCacheProvider>
-          <SiteLayout>
-            {children}
-            {socialModals}
-          </SiteLayout>
-        </AppRouterCacheProvider>
+        <NextIntlClientProvider>
+          <AppRouterCacheProvider>
+            <SiteLayout>
+              {children}
+              {socialModals}
+            </SiteLayout>
+          </AppRouterCacheProvider>
+        </NextIntlClientProvider>
         <SpeedInsights />
       </body>
     </html>

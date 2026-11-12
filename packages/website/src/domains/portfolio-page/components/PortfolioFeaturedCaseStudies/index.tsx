@@ -14,6 +14,7 @@ import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import Image from "next/image";
 import Link from "next/link";
+import { useLocale } from "next-intl";
 
 import { getCaseStudyPath } from "@/libraries/app/navigation";
 
@@ -26,6 +27,8 @@ export type PortfolioFeaturedCaseStudiesProps = Readonly<{
 export default function PortfolioFeaturedCaseStudies({
   featured,
 }: PortfolioFeaturedCaseStudiesProps) {
+  const locale = useLocale();
+
   return (
     <Container>
       <Grid container spacing={2}>
@@ -50,6 +53,7 @@ export default function PortfolioFeaturedCaseStudies({
 
                 <Link
                   href={getCaseStudyPath({
+                    locale,
                     caseStudySlug: caseStudy._meta.uid ?? "",
                   })}
                 >

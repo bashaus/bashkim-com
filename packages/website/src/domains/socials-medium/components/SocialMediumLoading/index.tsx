@@ -3,16 +3,18 @@ import SocialsMotion from "@bashkim-com/design-system/SocialsMotion";
 import ListItem from "@mui/material/ListItem";
 import ListSubheader from "@mui/material/ListSubheader";
 import Skeleton from "@mui/material/Skeleton";
+import { useTranslations } from "next-intl";
 
 import SocialMediumItem from "@/domains/socials-medium/components/SocialMediumItem";
 
 export default function SocialMediumLoading() {
+  const t = useTranslations("SocialMediumLoading");
   let i = -1;
 
   return (
     <SocialsContent>
       <ListSubheader component="div">
-        <SocialsMotion custom={++i}>Synchronising</SocialsMotion>
+        <SocialsMotion custom={++i}>{t("title")}</SocialsMotion>
       </ListSubheader>
 
       {[...new Array(5).keys()].map(() => (

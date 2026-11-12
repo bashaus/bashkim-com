@@ -1,0 +1,191 @@
+HeaderActionHome:
+  iconAriaLabel: Volver a la página de inicio
+
+HeaderActionPortfolio:
+  iconAriaLabel: Volver al portafolio
+
+HeaderActionSiteSettings:
+  siteSettingsButtonLabel: Configuración del sitio
+
+HeaderMobile:
+  siteName: Bashkim Isai
+  siteDescription: Tecnólogo Digital
+
+HeaderPrimary:
+  portfolioButtonLabel: Portafolio
+  aboutButtonLabel: Sobre
+  sourceButtonLabel: Código
+
+HeaderSocial:
+  gitHubTooltipLabel: GitHub
+  mediumTooltipLabel: Medium
+  linkedInTooltipLabel: LinkedIn
+  stackOverflowTooltipLabel: Stack Overflow
+
+SiteSettings:
+  dialogTitle: Configuración del sitio
+  appearanceLabel: Apariencia
+  gridLinesLabel: Líneas de cuadrícula
+  closeButtonLabel: Cerrar
+
+SiteSettingsAppearance:
+  systemButtonLabel: Sistema
+  lightButtonLabel: Claro
+  darkButtonLabel: Oscuro
+
+SiteSettingsGridLines:
+  onButtonLabel: Activado
+  offButtonLabel: Desactivado
+
+SocialsDrawerView:
+  closeButtonLabel: Cerrar
+
+SocialGitHubContent:
+  pinnedItemsSummary: "Elementos fijados — {pinnedCount} de {totalCount}"
+  repositoryIconAriaLabel: Repositorio
+  moreRepositoriesTitle: "{repositoryCount} repositorios más"
+  moreRepositoriesDescription: Disponible en GitHub
+
+SocialGitHubError:
+  errorTitle: Error de conexión
+  errorMessage: Se produjo un error al sincronizar los datos desde GitHub.
+  gitHubButtonLabel: Ir a GitHub
+
+SocialGitHubHeader:
+  profilePhotoAlt: Foto de Bashkim Isai
+  title: "@bashaus"
+  subtitle: Ver perfil en GitHub
+
+SocialGitHubItem:
+  siteSourceChipLabel: Código fuente
+  stargazersAriaLabel: "Estrellas: {stargazerCount}"
+  stargazersTooltipLabel: Estrellas
+  forksAriaLabel: "Bifurcaciones: {forkCount}"
+  forksTooltipLabel: Bifurcaciones
+
+SocialGitHubLoading:
+  title: Sincronizando
+
+SocialLinkedInContent:
+  title: No hay API para LinkedIn
+  subtitle: Lamentablemente, LinkedIn no admite una API para recuperar información del perfil.
+  linkedInButtonLabel: Ver perfil en LinkedIn
+
+SocialLinkedInError:
+  errorTitle: Error de conexión
+  errorMessage: Se produjo un error al sincronizar los datos desde LinkedIn.
+  linkedInButtonLabel: Ir a LinkedIn
+
+SocialLinkedInHeader:
+  profilePhotoAlt: Foto de Bashkim Isai
+  title: Bashkim Isai
+  subtitle: Ver perfil de LinkedIn
+
+SocialMediumContent:
+  multipartTitleSubheader: Serie de varias partes
+  readMoreIconAriaLabel: Leer más
+  readMoreTitle: Más historias en Medium
+  readMoreDescription: Ver historias de @bashaus
+
+SocialMediumError:
+  errorTitle: Error de conexión
+  errorMessage: Se produjo un error al sincronizar los datos desde Medium.
+  mediumButtonLabel: Ir a Medium
+
+SocialMediumHeader:
+  profilePhotoAlt: Foto de Bashkim Isai
+  title: Bashkim Isai
+  subtitle: Ver perfil en Medium
+
+SocialMediumLoading:
+  title: Sincronizando
+
+SocialStackOverflowContent:
+  topPostsSubheader: Publicaciones destacadas
+  questionTypeLabel: Pregunta de @bashaus
+  answerTypeLabel: Respondido por @bashaus
+
+SocialStackOverflowError:
+  errorTitle: Error de conexión
+  errorMessage: Se produjo un error al sincronizar los datos desde Stack Overflow.
+  stackOverflowButtonLabel: Ir a Stack Overflow
+
+SocialStackOverflowHeaderConnected:
+  profilePhotoAlt: Foto de Bashkim Isai
+  title: Bashkim Isai
+
+SocialStackOverflowHeaderDisconnected:
+  profilePhotoAlt: Foto de Bashkim Isai
+  title: Bashkim Isai
+  subtitle: Ver en Stack Overflow
+
+SocialStackOverflowLoading:
+  title: Sincronizando
+
+SourcePageLockup:
+  pageTitle: Ver código fuente
+  pageSubtitle: Echa un vistazo a cómo se ha creado este sitio web
+
+  summaryHeading: Este sitio web es de código abierto
+  summaryParagraph1: |
+    ¿Tienes curiosidad por saber cómo está construido? Todo está a la vista: desde la arquitectura hasta la lógica de los componentes y los estilos. Es una excelente manera de entender cómo abordo la resolución de problemas, los sistemas de diseño y el desarrollo front-end.
+  summaryParagraph2: |
+    Ya sea que estés explorando en busca de inspiración, revisando la calidad del código o simplemente interesado en la pila tecnológica, échale un vistazo.
+
+  sourceCodeTitle: Código fuente
+  sourceCodeDescription: Explora el código fuente de este sitio web.
+
+  designSystemTitle: Sistema de diseño
+  designSystemDescription: Interactúa con cada componente de forma aislada a través de Storybook.
+
+HomeHello:
+  subtitle: Tecnólogo Digital radicado en Barcelona.
+  tangibleMediaButtonLabel: Medios tangibles
+  webDevelopmentButtonLabel: Desarrollo web
+
+HomeOpenSource:
+  title: Código abierto
+  paragraph1: |
+    ¿Te gusta lo que ves? He preparado un desglose de las herramientas y tecnologías que impulsan este sitio, para que puedas echar un vistazo detrás de escena de cómo se unió todo.
+  paragraph2: |
+    Ya sea que tengas curiosidad por las decisiones de diseño, los frameworks o simplemente quieras ver qué implica construir un sitio como este, encontrarás todos los detalles aquí.
+  learnMoreButtonLabel: Saber más
+  primaryBrowserTitle: bashkim.com
+  flippedBrowserTitle: view-source:bashkim.com
+
+HomeFeatured:
+  portfolioTitle: Portafolio
+  portfolioDescription: |
+    Explora mis casos de estudio, desde el diseño hasta el desarrollo. Mira los proyectos que muestran mis habilidades y creatividad.
+  portfolioButtonLabel: Casos de estudio
+
+  resourcesTitle: Recursos
+  resourcesDescription: |
+    Revisa mis contribuciones en GitHub e historias en Medium. Construyo, colaboro y comparto código con la comunidad de desarrolladores.
+  resourcesGitHubButtonLabel: GitHub
+  resourcesMediumButtonLabel: Medium
+
+  connectTitle: Conectemos
+  connectDescription: |
+    Contáctame en LinkedIn para charlar sobre oportunidades, colaboraciones o simplemente para saludar.
+  connectButtonLabel: LinkedIn
+
+FooterNavigation:
+  logoTagLine: Tecnólogo Digital
+
+  articlesTitle: Artículos
+  onMediumButtonLabel: En Medium
+  onSitePointButtonLabel: En SitePoint
+
+  portfolioTitle: Portafolio
+  caseStudiesButtonLabel: Casos de estudio
+  onGitHubButtonLabel: En GitHub
+
+  connectTitle: Conectar
+  onStackOverflowButtonLabel: Stack Overflow
+  onLinkedInButtonLabel: LinkedIn
+  legalTitle: Legal
+  cookiesButtonLabel: Cookies
+
+FooterCopyright:
+  siteSourceButtonLabel: Código fuente

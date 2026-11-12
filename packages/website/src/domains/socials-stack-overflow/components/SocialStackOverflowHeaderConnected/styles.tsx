@@ -1,13 +1,13 @@
 import { styled } from "@mui/material/styles";
 
-export const BadgesGold = styled("span")(() => ({
+export const GoldBadgeChip = styled("span")(() => ({
   color: "#f0b400",
 }));
 
-export const BadgesSilver = styled("span")(() => ({
+export const SilverBadgeChip = styled("span")(() => ({
   color: "#999c9f",
 }));
 
-export const BadgesBronze = styled("span")(() => ({
+export const BronzeBadgeChip = styled("span")(() => ({
   color: "#ab825f",
 }));

@@ -7,6 +7,7 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogTitle from "@mui/material/DialogTitle";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
+import { useTranslations } from "next-intl";
 import { ComponentPropsWithoutRef } from "react";
 
 import SiteSettingsAppearance from "@/domains/site-settings/components/SiteSettingsAppearance";
@@ -18,22 +19,24 @@ export type SiteSettingsProps = Readonly<{
 }>;
 
 export default function SiteSettings({ open, onClose }: SiteSettingsProps) {
+  const t = useTranslations("SiteSettings");
+
   return (
     <Dialog open={open} onClose={onClose} sx={{ maxWidth: "xs" }} fullWidth>
-      <DialogTitle>Site settings</DialogTitle>
+      <DialogTitle>{t("dialogTitle")}</DialogTitle>
 
       <DialogContent>
         <Stack spacing={2}>
           <Box>
             <Typography variant="subtitle1" gutterBottom>
-              Appearance
+              {t("appearanceLabel")}
             </Typography>
             <SiteSettingsAppearance />
           </Box>
 
           <Box>
             <Typography variant="subtitle1" gutterBottom>
-              Grid lines
+              {t("gridLinesLabel")}
             </Typography>
             <SiteSettingsGridLines />
           </Box>
@@ -45,7 +48,7 @@ export default function SiteSettings({ open, onClose }: SiteSettingsProps) {
           onClick={onClose}
           startIcon={<CloseIcon sx={{ width: 16, height: 16 }} />}
         >
-          Close
+          {t("closeButtonLabel")}
         </Button>
       </DialogActions>
     </Dialog>

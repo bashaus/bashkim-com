@@ -1,11 +1,11 @@
 Feature: Toolbar Navigation
 
   Background:
-    Given I am on the Homepage
+    Given the user is browsing in the en locale
 
   Scenario Outline: User can navigate to different sections via the toolbar
-    When I click the menu item labelled "<menuItemText>"
-    Then I should see the heading "<expectedHeading>"
+    When the user clicks the menu item labelled "<menuItemText>"
+    Then the user should see the heading "<expectedHeading>"
 
     Examples:
       | menuItemText | expectedHeading             |

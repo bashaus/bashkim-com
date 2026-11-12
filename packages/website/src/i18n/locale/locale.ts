@@ -1,15 +1,15 @@
+import { z } from "zod";
+
 export enum Locale {
-  CAT = "cat",
-  EN = "en",
-  ES = "es",
+  CA = "ca", // Catalan (Català)
+  EN = "en", // English
+  ES = "es", // Spanish (Español)
 }
+export const localeSchema = z.enum(Locale);
 
-export function isLocale(value?: string | null): value is Locale {
-  if (!value) {
-    return false;
-  }
-
-  return locales.some((locale) => locale === value);
+export function isLocale(value?: unknown): value is Locale {
+  const response = localeSchema.safeParse(value);
+  return response.success;
 }
 
 export const locales = Object.values(Locale);

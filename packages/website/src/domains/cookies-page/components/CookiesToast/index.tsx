@@ -4,6 +4,7 @@ import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
 import IconButton from "@mui/material/IconButton";
 import Link from "@mui/material/Link";
+import { useLocale } from "next-intl";
 import { ToastContentProps } from "react-toastify";
 
 import CookiesVector from "@/domains/cookies-page/assets/cookies.svg";
@@ -12,6 +13,8 @@ import { getCookiesPath } from "@/libraries/app/navigation";
 export type CookiesToastProps = Readonly<ToastContentProps>;
 
 export default function CookiesToast({ closeToast }: CookiesToastProps) {
+  const locale = useLocale();
+
   return (
     <Card elevation={0} sx={{ maxWidth: 500, width: "100%" }}>
       <CardHeader
@@ -40,7 +43,7 @@ export default function CookiesToast({ closeToast }: CookiesToastProps) {
         subheader={
           <>
             To provide core functionality and the best possible experience.{" "}
-            <Link href={getCookiesPath()} onClick={closeToast}>
+            <Link href={getCookiesPath({ locale })} onClick={closeToast}>
               Cookie&nbsp;policy
             </Link>
             .

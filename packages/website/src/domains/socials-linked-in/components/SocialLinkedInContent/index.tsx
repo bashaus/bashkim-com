@@ -6,11 +6,14 @@ import SocialsError from "@bashkim-com/design-system/SocialsError";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import Button from "@mui/material/Button";
 import Divider from "@mui/material/Divider";
+import { useTranslations } from "next-intl";
 
 import SocialLinkedInHeader from "@/domains/socials-linked-in/components/SocialLinkedInHeader";
 import { getExternalLinkedInUrl } from "@/libraries/app/navigation";
 
 export default function SocialLinkedInContent() {
+  const t = useTranslations("SocialLinkedInContent");
+
   return (
     <>
       <SocialLinkedInHeader />
@@ -19,8 +22,8 @@ export default function SocialLinkedInContent() {
       <SocialsContent>
         <SocialsError
           icon={<LinkedInOutlinedVector width={64} height={64} />}
-          title="No API for LinkedIn"
-          message="Unfortunately LinkedIn doesn't support an API to retrieve profile information."
+          title={t("title")}
+          message={t("subtitle")}
         >
           <Button
             href={getExternalLinkedInUrl()}
@@ -28,7 +31,7 @@ export default function SocialLinkedInContent() {
             rel="noreferrer noopener"
             endIcon={<OpenInNewIcon />}
           >
-            View profile on Linked In
+            {t("linkedInButtonLabel")}
           </Button>
         </SocialsError>
       </SocialsContent>

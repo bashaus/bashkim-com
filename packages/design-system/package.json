@@ -90,6 +90,7 @@
     "media-chrome": "^4.19.4",
     "motion": "^14.10.0",
     "next": "16.4.5",
+    "next-intl": "^4.15.1",
     "placeholder-image-data-url-svg": "^0.0.1",
     "prism-react-renderer": "^2.4.1",
     "react": "19.3.1",

@@ -1,0 +1,193 @@
+HeaderActionHome:
+  iconAriaLabel: Torna a la pàgina d'inici
+
+HeaderActionPortfolio:
+  iconAriaLabel: Torna al portafoli
+
+HeaderActionSiteSettings:
+  siteSettingsButtonLabel: Configuració del lloc
+
+HeaderMobile:
+  siteName: Bashkim Isai
+  siteDescription: Tecnòleg digital
+
+HeaderPrimary:
+  portfolioButtonLabel: Portafoli
+  aboutButtonLabel: Sobre
+  sourceButtonLabel: Codi
+
+HeaderSocial:
+  gitHubTooltipLabel: GitHub
+  mediumTooltipLabel: Medium
+  linkedInTooltipLabel: LinkedIn
+  stackOverflowTooltipLabel: Stack Overflow
+
+SiteSettings:
+  dialogTitle: Configuració del lloc
+  appearanceLabel: Aparença
+  gridLinesLabel: Línies de quadrícula
+  closeButtonLabel: Tanca
+
+SiteSettingsAppearance:
+  systemButtonLabel: Sistema
+  lightButtonLabel: Clar
+  darkButtonLabel: Fosc
+
+SiteSettingsGridLines:
+  onButtonLabel: Activat
+  offButtonLabel: Desactivat
+
+SocialsDrawerView:
+  closeButtonLabel: Tanca
+
+SocialGitHubContent:
+  pinnedItemsSummary: "Elements fixats — {pinnedCount} de {totalCount}"
+  repositoryIconAriaLabel: Repositori
+  moreRepositoriesTitle: "{repositoryCount} repositoris més"
+  moreRepositoriesDescription: Disponible a GitHub
+
+SocialGitHubError:
+  errorTitle: Error de connexió
+  errorMessage: S'ha produït un error en sincronitzar les dades de GitHub.
+  gitHubButtonLabel: Ves a GitHub
+
+SocialGitHubHeader:
+  profilePhotoAlt: Foto de Bashkim Isai
+  title: "@bashaus"
+  subtitle: Mostra el perfil a GitHub
+
+SocialGitHubItem:
+  siteSourceChipLabel: Codi font del lloc
+  stargazersAriaLabel: "Estrelles: {stargazerCount}"
+  stargazersTooltipLabel: Estrelles
+  forksAriaLabel: "Bifurcacions: {forkCount}"
+  forksTooltipLabel: Bifurcacions
+
+SocialGitHubLoading:
+  title: S'està sincronitzant
+
+SocialLinkedInContent:
+  title: Sense API per a LinkedIn
+  subtitle: Malauradament, LinkedIn no admet cap API per obtenir informació del perfil.
+  linkedInButtonLabel: Mostra el perfil a LinkedIn
+
+SocialLinkedInError:
+  errorTitle: Error de connexió
+  errorMessage: S'ha produït un error en sincronitzar les dades de LinkedIn.
+  linkedInButtonLabel: Ves a LinkedIn
+
+SocialLinkedInHeader:
+  profilePhotoAlt: Foto de Bashkim Isai
+  title: Bashkim Isai
+  subtitle: Mostra el perfil de LinkedIn
+
+SocialMediumContent:
+  multipartTitleSubheader: Sèrie en diverses parts
+  readMoreIconAriaLabel: Llegeix-ne més
+  readMoreTitle: Més històries a Medium
+  readMoreDescription: Mostra les històries de @bashaus
+
+SocialMediumError:
+  errorTitle: Error de connexió
+  errorMessage: S'ha produït un error en sincronitzar les dades de Medium.
+  mediumButtonLabel: Ves a Medium
+
+SocialMediumHeader:
+  profilePhotoAlt: Foto de Bashkim Isai
+  title: Bashkim Isai
+  subtitle: Mostra el perfil a Medium
+
+SocialMediumLoading:
+  title: S'està sincronitzant
+
+SocialStackOverflowContent:
+  topPostsSubheader: Publicacions destacades
+  questionTypeLabel: Pregunta de @bashaus
+  answerTypeLabel: Respost per @bashaus
+
+SocialStackOverflowError:
+  errorTitle: Error de connexió
+  errorMessage: S'ha produït un error en sincronitzar les dades de Stack Overflow.
+  stackOverflowButtonLabel: Ves a Stack Overflow
+
+SocialStackOverflowHeaderConnected:
+  profilePhotoAlt: Foto de Bashkim Isai
+  title: Bashkim Isai
+
+SocialStackOverflowHeaderDisconnected:
+  profilePhotoAlt: Foto de Bashkim Isai
+  title: Bashkim Isai
+  subtitle: Mostra a Stack Overflow
+
+SocialStackOverflowLoading:
+  title: S'està sincronitzant
+
+SourcePageLockup:
+  pageTitle: Mostra el codi font
+  pageSubtitle: Fes un cop d'ull a com s'ha creat aquest lloc web
+
+  summaryHeading: Aquest lloc web és de codi obert
+  summaryParagraph1: |
+    Tens curiositat per saber com està fet? Tot és a la vista: des de l'arquitectura fins a la lògica dels components i l'estil. És una manera excel·lent d'entendre com abordo la resolució de problemes, els sistemes de disseny i el desenvolupament front-end.
+  summaryParagraph2: |
+    Tant si busques inspiració, com si revises la qualitat del codi o simplement t'interessa la pila tecnològica — fes-hi una ullada.
+
+  sourceCodeTitle: Codi font
+  sourceCodeDescription: Navega pel codi font d'aquest lloc web.
+
+  designSystemTitle: Sistema de disseny
+  designSystemDescription: Interactua amb cada component de manera aïllada mitjançant Storybook.
+
+HomeHello:
+  subtitle: Tecnòleg digital establert a Barcelona.
+  tangibleMediaButtonLabel: Mitjans tangibles
+  webDevelopmentButtonLabel: Desenvolupament web
+
+HomeOpenSource:
+  title: Codi obert
+  paragraph1: |
+    T'agrada el que veus? He preparat un desglossament de les eines i la tecnologia que fan funcionar aquest lloc, perquè puguis veure entre bastidors com s'ha unit tot.
+  paragraph2: |
+    Tant si tens curiositat per les opcions de disseny, els marcs de treball o simplement vols veure què implica construir un lloc com aquest, aquí en trobaràs tots els detalls.
+  learnMoreButtonLabel: Més informació
+
+  primaryBrowserTitle: bashkim.com
+  flippedBrowserTitle: view-source:bashkim.com
+
+HomeFeatured:
+  portfolioTitle: Portafoli
+  portfolioDescription: |
+    Explora els meus casos d'estudi, des del disseny fins al desenvolupament. Mira els projectes que mostren les meves habilitats i creativitat.
+  portfolioButtonLabel: Casos d'estudi
+
+  resourcesTitle: Recursos
+  resourcesDescription: |
+    Fes un cop d'ull a les meves contribucions a GitHub i a les meves històries a Medium. Construeixo, col·laboro i comparteixo codi amb la comunitat de desenvolupadors.
+  resourcesGitHubButtonLabel: GitHub
+  resourcesMediumButtonLabel: Medium
+
+  connectTitle: Connectem
+  connectDescription: |
+    Contacta amb mi a LinkedIn per parlar d'oportunitats, col·laboracions o simplement per saludar.
+  connectButtonLabel: LinkedIn
+
+FooterNavigation:
+  logoTagLine: Tecnòleg digital
+
+  articlesTitle: Articles
+  onMediumButtonLabel: A Medium
+  onSitePointButtonLabel: A SitePoint
+
+  portfolioTitle: Portafoli
+  caseStudiesButtonLabel: Casos d'estudi
+  onGitHubButtonLabel: A GitHub
+
+  connectTitle: Connecta
+  onStackOverflowButtonLabel: Stack Overflow
+  onLinkedInButtonLabel: LinkedIn
+
+  legalTitle: Legal
+  cookiesButtonLabel: Galetes
+
+FooterCopyright:
+  siteSourceButtonLabel: Codi font del lloc

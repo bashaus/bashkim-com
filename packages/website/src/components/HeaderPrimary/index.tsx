@@ -1,5 +1,6 @@
 import Stack from "@mui/material/Stack";
 import { usePathname } from "next/navigation";
+import { useLocale, useTranslations } from "next-intl";
 
 import {
   getAboutPath,
@@ -10,15 +11,18 @@ import {
 import * as S from "./styles";
 
 export default function HeaderPrimary() {
+  const locale = useLocale();
+  const t = useTranslations("HeaderPrimary");
+
   const pathname = usePathname();
 
-  const portfolioPath = getPortfolioPath();
+  const portfolioPath = getPortfolioPath({ locale });
   const isPortfolioPath = pathname.startsWith(portfolioPath);
 
-  const aboutPath = getAboutPath();
+  const aboutPath = getAboutPath({ locale });
   const isAboutPath = pathname.startsWith(aboutPath);
 
-  const sourcePath = getSourcePath();
+  const sourcePath = getSourcePath({ locale });
   const isSourcePath = pathname.startsWith(sourcePath);
 
   return (
@@ -29,7 +33,7 @@ export default function HeaderPrimary() {
         aria-current={isPortfolioPath ? "location" : undefined}
         role="menuitem"
       >
-        <span data-label>Portfolio</span>
+        <span data-label>{t("portfolioButtonLabel")}</span>
       </S.PortfolioButton>
 
       <S.AboutButton
@@ -38,7 +42,7 @@ export default function HeaderPrimary() {
         aria-current={isAboutPath ? "location" : undefined}
         role="menuitem"
       >
-        <span data-label>About</span>
+        <span data-label>{t("aboutButtonLabel")}</span>
       </S.AboutButton>
 
       <S.SourceButton
@@ -47,7 +51,7 @@ export default function HeaderPrimary() {
         aria-current={isSourcePath ? "location" : undefined}
         role="menuitem"
       >
-        <span data-label>Source</span>
+        <span data-label>{t("sourceButtonLabel")}</span>
       </S.SourceButton>
     </Stack>
   );

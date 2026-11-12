@@ -9,6 +9,7 @@ import type {
 import ReadMoreIcon from "@mui/icons-material/ReadMore";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListSubheader from "@mui/material/ListSubheader";
+import { useTranslations } from "next-intl";
 
 import SocialGitHubItem from "@/domains/socials-github/components/SocialGitHubItem";
 import { getExternalGitHubUrl } from "@/libraries/app/navigation";
@@ -23,13 +24,17 @@ export default function SocialGitHubContent({
   repositoryCount,
   pinnedItems,
 }: SocialGitHubContentProps) {
+  const t = useTranslations("SocialGitHubContent");
   let i = -1;
 
   return (
     <SocialsContent>
       <ListSubheader component="div">
         <SocialsMotion custom={++i}>
-          Pinned items &mdash; {pinnedItems.length} of {repositoryCount}
+          {t("pinnedItemsSummary", {
+            pinnedCount: pinnedItems.length,
+            totalCount: repositoryCount,
+          })}
         </SocialsMotion>
       </ListSubheader>
 
@@ -62,13 +67,15 @@ export default function SocialGitHubContent({
           <SocialGitHubItem
             icon={
               <ReadMoreIcon
-                aria-label="Repository"
+                aria-label={t("repositoryIconAriaLabel")}
                 fill="currentColor"
                 sx={{ width: 32, height: 32 }}
               />
             }
-            name={<>{repositoryCount - pinnedItems.length} more repositories</>}
-            description="Available on GitHub"
+            name={t("moreRepositoriesTitle", {
+              repositoryCount: repositoryCount - pinnedItems.length,
+            })}
+            description={t("moreRepositoriesDescription")}
           />
         </ListItemButton>
       </SocialsMotion>

@@ -1,5 +1,7 @@
 //@ts-check
 
+import createNextIntlPlugin from "next-intl/plugin";
+
 import { headers } from "./next.headers.mjs";
 import { redirects } from "./next.redirects.mjs";
 import { rewrites } from "./next.rewrites.mjs";
@@ -14,6 +16,10 @@ const nextConfig = {
   rewrites,
   headers,
 
+  sassOptions: {
+    silenceDeprecations: ["if-function"],
+  },
+
   images: {
     unoptimized: true,
   },
@@ -24,8 +30,14 @@ const nextConfig = {
         loaders: ["@svgr/webpack"],
         as: "*.js",
       },
+
+      "*.yaml": {
+        loaders: ["yaml-loader"],
+        as: "*.js",
+      },
     },
   },
 };
 
-export default nextConfig;
+const withNextIntl = createNextIntlPlugin();
+export default withNextIntl(nextConfig);

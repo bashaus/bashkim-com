@@ -1,6 +1,7 @@
 import type { Case_Study } from "@bashkim-com/prismic-dal";
 import Image from "next/image";
 import Link from "next/link";
+import { useLocale } from "next-intl";
 
 import { getCaseStudyPath } from "@/libraries/app/navigation";
 
@@ -13,8 +14,15 @@ export type PortfolioCaseStudyBrickProps = Readonly<{
 export default function PortfolioCaseStudyBrick({
   caseStudy,
 }: PortfolioCaseStudyBrickProps) {
+  const locale = useLocale();
+
   return (
-    <Link href={getCaseStudyPath({ caseStudySlug: caseStudy._meta.uid ?? "" })}>
+    <Link
+      href={getCaseStudyPath({
+        locale,
+        caseStudySlug: caseStudy._meta.uid ?? "",
+      })}
+    >
       <S.Container>
         <S.Icon>
           <Image

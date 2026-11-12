@@ -11,7 +11,7 @@ describe("linkResolver", () => {
         uid: "item-slug",
         tags: [],
       }),
-    ).toEqual("/portfolio/item-slug");
+    ).toEqual("/en/portfolio/item-slug");
 
     expect(
       linkResolver({
@@ -22,7 +22,7 @@ describe("linkResolver", () => {
         uid: "case-study-slug",
         tags: [],
       }),
-    ).toEqual("/portfolio/case-study-slug");
+    ).toEqual("/en/portfolio/case-study-slug");
   });
 
   it("should return null on unknown", () => {

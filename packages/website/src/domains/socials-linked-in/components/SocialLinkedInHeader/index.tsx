@@ -3,11 +3,14 @@
 import { LinkedInVector } from "@bashkim-com/design-system/SocialsAssets";
 import SocialsHeader from "@bashkim-com/design-system/SocialsHeader";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 import profilePhoto from "@/assets/photo@4x.jpg";
 import { getExternalLinkedInUrl } from "@/libraries/app/navigation";
 
 export default function SocialLinkedInHeader() {
+  const t = useTranslations("SocialLinkedInHeader");
+
   return (
     <SocialsHeader
       href={getExternalLinkedInUrl()}
@@ -18,11 +21,11 @@ export default function SocialLinkedInHeader() {
           src={profilePhoto.src}
           width={profilePhoto.width}
           height={profilePhoto.height}
-          alt="Photo of Bashkim Isai"
+          alt={t("profilePhotoAlt")}
         />
       }
-      textPrimary="Bashkim Isai"
-      textSecondary="View LinkedIn profile"
+      textPrimary={t("title")}
+      textSecondary={t("subtitle")}
     />
   );
 }

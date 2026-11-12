@@ -1,6 +1,7 @@
 import { GetSitemapPages } from "@bashkim-com/prismic-dal";
 import { MetadataRoute } from "next";
 
+import { locales } from "@/i18n/locale/locale";
 import {
   getAboutPath,
   getCookiesPath,
@@ -21,10 +22,12 @@ export default async function PagesSitemap(): Promise<MetadataRoute.Sitemap> {
   if (homePage) {
     urlset.push(
       await sitemapFileSchema.parseAsync({
-        paths: { en: getHomePath() },
         lastModified: homePage._meta.lastPublicationDate,
         changeFrequency: homePage.sitemap_changefreq,
         priority: homePage.sitemap_priority,
+        paths: Object.fromEntries(
+          locales.map((locale) => [locale, getHomePath({ locale })]),
+        ),
       }),
     );
   }
@@ -35,23 +38,29 @@ export default async function PagesSitemap(): Promise<MetadataRoute.Sitemap> {
   if (portfolioPage) {
     urlset.push(
       await sitemapFileSchema.parseAsync({
-        paths: { en: getPortfolioPath() },
         lastModified: portfolioPage._meta.lastPublicationDate,
         changeFrequency: portfolioPage.sitemap_changefreq,
         priority: portfolioPage.sitemap_priority,
+        paths: Object.fromEntries(
+          locales.map((locale) => [locale, getPortfolioPath({ locale })]),
+        ),
       }),
     );
   }
 
   urlset.push(
     await sitemapFileSchema.parseAsync({
-      paths: { en: getAboutPath() },
       priority: 1,
+      paths: Object.fromEntries(
+        locales.map((locale) => [locale, getAboutPath({ locale })]),
+      ),
     }),
 
     await sitemapFileSchema.parseAsync({
-      paths: { en: getCookiesPath() },
       priority: 0.1,
+      paths: Object.fromEntries(
+        locales.map((locale) => [locale, getCookiesPath({ locale })]),
+      ),
     }),
   );
 

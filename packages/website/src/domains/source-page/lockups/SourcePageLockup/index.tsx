@@ -7,9 +7,9 @@ import {
   GitHubVector,
   StorybookVector,
 } from "@bashkim-com/design-system/SocialsAssets";
-import SubtitlePartial from "@bashkim-com/design-system/SubtitlePartial";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
+import { useTranslations } from "next-intl";
 
 import Header from "@/components/Header";
 import HeaderActionHome from "@/components/HeaderActionHome";
@@ -24,34 +24,28 @@ import {
 } from "@/libraries/app/navigation";
 
 export default function SourcePageLockup() {
+  const t = useTranslations("SourcePageLockup");
+
   return (
     <Page>
       <Header backButton={<HeaderActionHome />} />
       <PageHeaderPartial imageDesktop={backgroundPhoto.src}>
         <Typography variant="h2" component="h1">
-          View source
+          {t("pageTitle")}
         </Typography>
 
         <Typography variant="h6" component="p">
-          See how this website has been put together
+          {t("pageSubtitle")}
         </Typography>
       </PageHeaderPartial>
 
       <Group>
-        <SubtitlePartial title="This website is open source" />
-
         <FullTextPartial>
-          <Typography gutterBottom>
-            Curious how it&apos;s built? Everything is out in the open: from
-            architecture to component logic and styling. It&apos;s a great way
-            to understand how I approach problem-solving, design systems, and
-            front-end development.
+          <Typography variant="h4" gutterBottom>
+            {t("summaryHeading")}
           </Typography>
-
-          <Typography gutterBottom>
-            Whether you&apos;re exploring for inspiration, reviewing code
-            quality, or just interested in the tech stack — check it out.
-          </Typography>
+          <Typography gutterBottom>{t("summaryParagraph1")}</Typography>
+          <Typography>{t("summaryParagraph2")}</Typography>
         </FullTextPartial>
 
         <FullTextPartial>
@@ -61,11 +55,9 @@ export default function SourcePageLockup() {
                 href={getExternalGitHubRepositoryUrl()}
                 image={githubCommitsPhoto.src}
                 icon={<GitHubVector width={32} height={32} />}
-                title="Source code"
+                title={t("sourceCodeTitle")}
               >
-                <Typography>
-                  Browse the source code for this website.
-                </Typography>
+                <Typography>{t("sourceCodeDescription")}</Typography>
               </SourceCard>
             </Grid>
 
@@ -74,11 +66,9 @@ export default function SourcePageLockup() {
                 href={getExternalStorybookUrl()}
                 image={storybookGridPhoto.src}
                 icon={<StorybookVector width={32} height={32} />}
-                title="Design system"
+                title={t("designSystemTitle")}
               >
-                <Typography>
-                  Interact with each component in isolation via Storybook.
-                </Typography>
+                <Typography>{t("designSystemDescription")}</Typography>
               </SourceCard>
             </Grid>
           </Grid>

@@ -3,11 +3,14 @@
 import { GitHubVector } from "@bashkim-com/design-system/SocialsAssets";
 import SocialsHeader from "@bashkim-com/design-system/SocialsHeader";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 import profilePhoto from "@/assets/photo@4x.jpg";
 import { getExternalGitHubUrl } from "@/libraries/app/navigation";
 
 export default function SocialGitHubHeader() {
+  const t = useTranslations("SocialGitHubHeader");
+
   return (
     <SocialsHeader
       href={getExternalGitHubUrl()}
@@ -18,11 +21,11 @@ export default function SocialGitHubHeader() {
           src={profilePhoto.src}
           width={profilePhoto.width}
           height={profilePhoto.height}
-          alt="Photo of Bashkim Isai"
+          alt={t("profilePhotoAlt")}
         />
       }
-      textPrimary="@bashaus"
-      textSecondary="View profile on GitHub"
+      textPrimary={t("title")}
+      textSecondary={t("subtitle")}
     />
   );
 }

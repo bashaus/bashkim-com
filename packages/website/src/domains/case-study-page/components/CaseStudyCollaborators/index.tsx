@@ -5,6 +5,7 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Link from "@mui/material/Link";
 import ListItemText from "@mui/material/ListItemText";
+import { useLocale } from "next-intl";
 
 import { getHomePath } from "@/libraries/app/navigation";
 
@@ -17,6 +18,8 @@ export default function CaseStudyCollaborators({
   slices,
   myRole,
 }: CaseStudyCollaboratorsProps) {
+  const locale = useLocale();
+
   if (!slices.length) {
     return null;
   }
@@ -28,7 +31,7 @@ export default function CaseStudyCollaborators({
         <Grid container rowSpacing={1} columnSpacing={2}>
           <Grid size={{ xs: 12, sm: 6, md: 4, lg: 3, xl: 3 }}>
             <ListItemText
-              primary={<Link href={getHomePath()}>Bashkim Isai</Link>}
+              primary={<Link href={getHomePath({ locale })}>Bashkim Isai</Link>}
               secondary={myRole}
             />
           </Grid>

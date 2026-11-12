@@ -4,7 +4,7 @@ import { expect } from "@playwright/test";
 import { E2EWorld } from "../../world";
 
 Then(
-  "I should {visibility} the text {string} in the drawer",
+  "the user should {visibility} the text {string} in the drawer",
   async function (this: E2EWorld, ensureVisible: boolean, text: string) {
     const label = this.page.getByRole("dialog").getByText(text);
 

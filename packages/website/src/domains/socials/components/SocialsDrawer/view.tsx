@@ -3,6 +3,7 @@ import Button from "@mui/material/Button";
 import DialogActions from "@mui/material/DialogActions";
 import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
+import { useTranslations } from "next-intl";
 import { PropsWithChildren } from "react";
 
 import { useSocialsDrawerViewModel } from "./view-model";
@@ -18,6 +19,8 @@ export default function SocialsDrawerView({
   viewModel,
 }: SocialsDrawerViewProps) {
   const { open, handleClose, handleExited } = viewModel;
+  const t = useTranslations("SocialsDrawerView");
+
   return (
     <Drawer
       variant="temporary"
@@ -30,7 +33,7 @@ export default function SocialsDrawerView({
       <Divider />
       <DialogActions>
         <Button startIcon={<CloseIcon />} onClick={handleClose}>
-          Close
+          {t("closeButtonLabel")}
         </Button>
       </DialogActions>
     </Drawer>

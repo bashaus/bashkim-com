@@ -3,11 +3,14 @@
 import { MediumVector } from "@bashkim-com/design-system/SocialsAssets";
 import SocialsHeader from "@bashkim-com/design-system/SocialsHeader";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 import profilePhoto from "@/assets/photo@4x.jpg";
 import { getExternalMediumUrl } from "@/libraries/app/navigation";
 
 export default function SocialMediumHeader() {
+  const t = useTranslations("SocialMediumHeader");
+
   return (
     <SocialsHeader
       href={getExternalMediumUrl()}
@@ -18,11 +21,11 @@ export default function SocialMediumHeader() {
           src={profilePhoto.src}
           width={profilePhoto.width}
           height={profilePhoto.height}
-          alt="Photo of Bashkim Isai"
+          alt={t("profilePhotoAlt")}
         />
       }
-      textPrimary="Bashkim Isai"
-      textSecondary="View profile on Medium"
+      textPrimary={t("title")}
+      textSecondary={t("subtitle")}
     />
   );
 }

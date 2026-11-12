@@ -6,8 +6,11 @@ import { E2EWorld } from "../../world";
 Given(
   "Fetching socials returns a server error",
   async function (this: E2EWorld) {
+    const { match } = await import("path-to-regexp");
+    const matcher = match<{ locale: string }>("/:locale/socials{/*rest}");
+
     await this.page.route(
-      (url) => url.pathname.startsWith("/socials/"),
+      (url) => !!matcher(url.pathname),
       mockNextServerAction(async (route) => {
         await route.fulfill({
           status: 500,

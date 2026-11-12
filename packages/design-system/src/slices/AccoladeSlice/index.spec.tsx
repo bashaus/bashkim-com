@@ -6,6 +6,7 @@ import {
 } from "@bashkim-com/prismic-dal/factories";
 import { faker } from "@faker-js/faker";
 import { render } from "@testing-library/react";
+import { NextIntlClientProvider } from "next-intl";
 
 import LinkResolverContext from "../../prismic/LinkResolver";
 import AccoladeSlice from ".";
@@ -29,9 +30,11 @@ describe("<AccoladeSlice />", () => {
     });
 
     const { getByText } = render(
-      <LinkResolverContext.Provider value={() => "/"}>
-        <AccoladeSlice slice={slice} />,
-      </LinkResolverContext.Provider>,
+      <NextIntlClientProvider locale="en">
+        <LinkResolverContext.Provider value={() => "/"}>
+          <AccoladeSlice slice={slice} />,
+        </LinkResolverContext.Provider>
+      </NextIntlClientProvider>,
     );
 
     expect(getByText(/gold/)).toBeInTheDocument();

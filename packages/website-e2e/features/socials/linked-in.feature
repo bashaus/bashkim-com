@@ -1,8 +1,8 @@
 Feature: LinkedIn Social Integration
 
   Background:
-    Given I am on the Homepage
+    Given the user is browsing in the en locale
 
   Scenario: Display LinkedIn "no api" panel
-    When I click the menu icon labelled "LinkedIn"
-    Then I should see the text "No API for LinkedIn" in the drawer
+    When the user clicks the menu icon labelled "LinkedIn"
+    Then the user should see the text "No API for LinkedIn" in the drawer

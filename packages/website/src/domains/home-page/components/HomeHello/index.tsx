@@ -3,6 +3,7 @@ import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import dynamic from "next/dynamic";
+import { useTranslations } from "next-intl";
 
 import * as S from "./styles";
 
@@ -12,13 +13,15 @@ const VideoBackground = dynamic(
 );
 
 export default function HomeHello() {
+  const t = useTranslations("HomeHello");
+
   return (
     <FullHeaderPartial
       background={<VideoBackground url="https://vimeo.com/1067276219" />}
     >
       <S.Logo />
       <Typography variant="h5" component="p">
-        Digital Technologist based in&nbsp;Barcelona.
+        {t("subtitle")}
       </Typography>
 
       <Stack direction="row" spacing={2} sx={{ paddingTop: 4 }}>
@@ -27,7 +30,7 @@ export default function HomeHello() {
           color="currentColor"
           href="/portfolio#tangible-media"
         >
-          Tangible&nbsp;media
+          {t("tangibleMediaButtonLabel")}
         </Button>
 
         <Button
@@ -35,7 +38,7 @@ export default function HomeHello() {
           color="currentColor"
           href="/portfolio#web-development"
         >
-          Web&nbsp;development
+          {t("webDevelopmentButtonLabel")}
         </Button>
       </Stack>
     </FullHeaderPartial>

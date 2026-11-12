@@ -1,11 +1,13 @@
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import IconButton from "@mui/material/IconButton";
 import Tooltip from "@mui/material/Tooltip";
+import { useTranslations } from "next-intl";
 import { useCallback, useState } from "react";
 
 import SiteSettings from "@/domains/site-settings/components/SiteSettings";
 
 export default function HeaderActionSiteSettings() {
+  const t = useTranslations("HeaderActionSiteSettings");
   const [open, setOpen] = useState<boolean>(false);
 
   const handleSignifierClick = useCallback(() => {
@@ -18,7 +20,7 @@ export default function HeaderActionSiteSettings() {
 
   return (
     <>
-      <Tooltip title="Site settings" arrow>
+      <Tooltip title={t("siteSettingsButtonLabel")} arrow>
         <IconButton sx={{ color: "inherit" }} onClick={handleSignifierClick}>
           <SettingsOutlinedIcon sx={{ color: "inherit" }} />
         </IconButton>

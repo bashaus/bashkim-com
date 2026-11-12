@@ -1,6 +1,7 @@
 import InlineLogo from "@bashkim-com/design-system/InlineLogo";
 import Container from "@mui/material/Container";
 import Link from "@mui/material/Link";
+import { useLocale, useTranslations } from "next-intl";
 
 import {
   getCookiesPath,
@@ -15,14 +16,17 @@ import {
 import * as S from "./styles";
 
 export default function FooterNavigation() {
+  const locale = useLocale();
+  const t = useTranslations("FooterNavigation");
+
   return (
     <Container>
       <InlineLogo aria-label="Bash" width={126} height={36} />
-      <S.Slogan>Digital Technologist</S.Slogan>
+      <S.Slogan>{t("logoTagLine")}</S.Slogan>
 
       <S.FooterGrid>
         <S.FooterColumn>
-          <S.FooterHeader>Articles</S.FooterHeader>
+          <S.FooterHeader>{t("articlesTitle")}</S.FooterHeader>
 
           <Link
             variant="footer-link"
@@ -30,7 +34,7 @@ export default function FooterNavigation() {
             target="_blank"
             rel="noreferrer noopener"
           >
-            On Medium
+            {t("onMediumButtonLabel")}
           </Link>
 
           <Link
@@ -39,15 +43,15 @@ export default function FooterNavigation() {
             target="_blank"
             rel="noreferrer noopener"
           >
-            On Site Point
+            {t("onSitePointButtonLabel")}
           </Link>
         </S.FooterColumn>
 
         <S.FooterColumn>
-          <S.FooterHeader>Portfolio</S.FooterHeader>
+          <S.FooterHeader>{t("portfolioTitle")}</S.FooterHeader>
 
-          <Link variant="footer-link" href={getPortfolioPath()}>
-            Case studies
+          <Link variant="footer-link" href={getPortfolioPath({ locale })}>
+            {t("caseStudiesButtonLabel")}
           </Link>
 
           <Link
@@ -56,19 +60,19 @@ export default function FooterNavigation() {
             target="_blank"
             rel="noreferrer noopener"
           >
-            On GitHub
+            {t("onGitHubButtonLabel")}
           </Link>
         </S.FooterColumn>
 
         <S.FooterColumn>
-          <S.FooterHeader>Connect</S.FooterHeader>
+          <S.FooterHeader>{t("connectTitle")}</S.FooterHeader>
           <Link
             variant="footer-link"
             href={getExternalStackOverflowUrl()}
             target="_blank"
             rel="noreferrer noopener"
           >
-            Stack Overflow
+            {t("onStackOverflowButtonLabel")}
           </Link>
 
           <Link
@@ -77,14 +81,14 @@ export default function FooterNavigation() {
             target="_blank"
             rel="noreferrer noopener"
           >
-            LinkedIn
+            {t("onLinkedInButtonLabel")}
           </Link>
         </S.FooterColumn>
 
         <S.FooterColumn>
-          <S.FooterHeader>Legal</S.FooterHeader>
-          <Link variant="footer-link" href={getCookiesPath()}>
-            Cookies
+          <S.FooterHeader>{t("legalTitle")}</S.FooterHeader>
+          <Link variant="footer-link" href={getCookiesPath({ locale })}>
+            {t("cookiesButtonLabel")}
           </Link>
         </S.FooterColumn>
       </S.FooterGrid>

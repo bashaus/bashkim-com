@@ -1,0 +1,207 @@
+HeaderActionHome:
+  iconAriaLabel: Back to Homepage
+
+HeaderActionPortfolio:
+  iconAriaLabel: Back to Portfolio
+
+HeaderActionSiteSettings:
+  siteSettingsButtonLabel: Site settings
+
+HeaderMobile:
+  siteName: Bashkim Isai
+  siteDescription: Digital Technologist
+
+HeaderPrimary:
+  portfolioButtonLabel: Portfolio
+  aboutButtonLabel: About
+  sourceButtonLabel: Source
+
+HeaderSocial:
+  gitHubTooltipLabel: GitHub
+  mediumTooltipLabel: Medium
+  linkedInTooltipLabel: LinkedIn
+  stackOverflowTooltipLabel: Stack Overflow
+
+SiteSettings:
+  dialogTitle: Site settings
+  appearanceLabel: Appearance
+  gridLinesLabel: Grid lines
+  closeButtonLabel: Close
+
+SiteSettingsAppearance:
+  systemButtonLabel: System
+  lightButtonLabel: Light
+  darkButtonLabel: Dark
+
+SiteSettingsGridLines:
+  onButtonLabel: On
+  offButtonLabel: Off
+
+SocialsDrawerView:
+  closeButtonLabel: Close
+
+SocialGitHubContent:
+  pinnedItemsSummary: "Pinned items — {pinnedCount} of {totalCount}"
+  repositoryIconAriaLabel: Repository
+  moreRepositoriesTitle: "{repositoryCount} more repositories"
+  moreRepositoriesDescription: Available on GitHub
+
+SocialGitHubError:
+  errorTitle: Connection error
+  errorMessage: An error occurred while synchronising data from GitHub.
+  gitHubButtonLabel: Go to GitHub
+
+SocialGitHubHeader:
+  profilePhotoAlt: Photo of Bashkim Isai
+  title: "@bashaus"
+  subtitle: View profile on GitHub
+
+SocialGitHubItem:
+  siteSourceChipLabel: Site source
+  stargazersAriaLabel: "Stargazers: {stargazerCount}"
+  stargazersTooltipLabel: Stargazers
+  forksAriaLabel: "Forks: {forkCount}"
+  forksTooltipLabel: Forks
+
+SocialGitHubLoading:
+  title: Synchronising
+
+SocialLinkedInContent:
+  title: No API for LinkedIn
+  subtitle: Unfortunately LinkedIn doesn't support an API to retrieve profile information.
+  linkedInButtonLabel: View profile on Linked In
+
+SocialLinkedInError:
+  errorTitle: Connection error
+  errorMessage: An error occurred while synchronising data from LinkedIn.
+  linkedInButtonLabel: Go to Linked In
+
+SocialLinkedInHeader:
+  profilePhotoAlt: Photo of Bashkim Isai
+  title: Bashkim Isai
+  subtitle: View LinkedIn profile
+
+SocialMediumContent:
+  multipartTitleSubheader: Multipart series
+  readMoreIconAriaLabel: Read more
+  readMoreTitle: More stories on Medium
+  readMoreDescription: View stories by @bashaus
+
+SocialMediumError:
+  errorTitle: Connection error
+  errorMessage: An error occurred while synchronising data from Medium.
+  mediumButtonLabel: Go to Medium
+
+SocialMediumHeader:
+  profilePhotoAlt: Photo of Bashkim Isai
+  title: Bashkim Isai
+  subtitle: View profile on Medium
+
+SocialMediumLoading:
+  title: Synchronising
+
+SocialStackOverflowContent:
+  topPostsSubheader: Top posts
+  questionTypeLabel: Question by @bashaus
+  answerTypeLabel: Answered by @bashaus
+
+SocialStackOverflowError:
+  errorTitle: Connection error
+  errorMessage: An error occurred while synchronising data from Stack Overflow.
+  stackOverflowButtonLabel: Go to Stack Overflow
+
+SocialStackOverflowHeaderConnected:
+  profilePhotoAlt: Photo of Bashkim Isai
+  title: Bashkim Isai
+
+SocialStackOverflowHeaderDisconnected:
+  profilePhotoAlt: Photo of Bashkim Isai
+  title: Bashkim Isai
+  subtitle: View on Stack Overflow
+
+SocialStackOverflowLoading:
+  title: Synchronising
+
+SourcePageLockup:
+  pageTitle: View source
+  pageSubtitle: Take a peek at this website has been put together
+
+  summaryHeading: This website is open source
+  summaryParagraph1: |
+    Curious how it's built? Everything is out in the open: from
+    architecture to component logic and styling. It's a great way
+    to understand how I approach problem-solving, design systems, and
+    front-end development.
+  summaryParagraph2: |
+    Whether you're exploring for inspiration, reviewing code
+    quality, or just interested in the tech stack — check it out.
+
+  sourceCodeTitle: Source code
+  sourceCodeDescription: Browse the source code for this website.
+
+  designSystemTitle: Design system
+  designSystemDescription: Interact with each component in isolation via Storybook.
+
+HomeHello:
+  subtitle: Digital Technologist based in Barcelona.
+  tangibleMediaButtonLabel: Tangible media
+  webDevelopmentButtonLabel: Web development
+
+HomeOpenSource:
+  title: Open source
+  paragraph1: |
+    Like what you see? I've put together a breakdown of the
+    tools and tech that power this site, so you can get a
+    behind-the-scenes look at how everything came together.
+
+  paragraph2: |
+    Whether you're curious about the design choices, the
+    frameworks, or just want to see what goes into building a site
+    like this, you'll find all the details
+    laid out here.
+
+  learnMoreButtonLabel: Learn more
+
+  primaryBrowserTitle: bashkim.com
+  flippedBrowserTitle: view-source:bashkim.com
+
+HomeFeatured:
+  portfolioTitle: Portfolio
+  portfolioDescription: |
+    Explore my case studies, from design to development. See the projects that
+    showcase my skills and creativity.
+  portfolioButtonLabel: Case studies
+
+  resourcesTitle: Resources
+  resourcesDescription: |
+    Check out my GitHub contributions and Medium stories. I build, collaborate,
+    and share code with the developer community.
+  resourcesGitHubButtonLabel: GitHub
+  resourcesMediumButtonLabel: Medium
+
+  connectTitle: Let's connect
+  connectDescription: |
+    Reach out on LinkedIn to chat about opportunities, collaborations, or just
+    to say hello.
+  connectButtonLabel: Linked In
+
+FooterNavigation:
+  logoTagLine: Digital Technologist
+
+  articlesTitle: Articles
+  onMediumButtonLabel: On Medium
+  onSitePointButtonLabel: On Site Point
+
+  portfolioTitle: Portfolio
+  caseStudiesButtonLabel: Case studies
+  onGitHubButtonLabel: On GitHub
+
+  connectTitle: Connect
+  onStackOverflowButtonLabel: Stack Overflow
+  onLinkedInButtonLabel: Linked In
+
+  legalTitle: Legal
+  cookiesButtonLabel: Cookies
+
+FooterCopyright:
+  siteSourceButtonLabel: Site source

@@ -11,6 +11,7 @@ import ListItemText from "@mui/material/ListItemText";
 import ListSubheader from "@mui/material/ListSubheader";
 import Typography from "@mui/material/Typography";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { Fragment } from "react";
 
 import SocialMediumItem from "@/domains/socials-medium/components/SocialMediumItem";
@@ -23,6 +24,7 @@ export type SocialMediumContentProps = Readonly<{
 export default function SocialMediumContent({
   series,
 }: SocialMediumContentProps) {
+  const t = useTranslations("SocialMediumContent");
   let i = -1;
 
   const entries = Object.entries(series);
@@ -33,7 +35,9 @@ export default function SocialMediumContent({
         <Fragment key={group}>
           {stories.length > 1 && (
             <ListSubheader component="div">
-              <SocialsMotion custom={++i}>Multipart series</SocialsMotion>
+              <SocialsMotion custom={++i}>
+                {t("multipartTitleSubheader")}
+              </SocialsMotion>
             </ListSubheader>
           )}
 
@@ -74,13 +78,14 @@ export default function SocialMediumContent({
         >
           <ListItemIcon>
             <ReadMoreIcon
-              aria-label="Repository"
+              aria-label={t("readMoreIconAriaLabel")}
               fill="currentColor"
               sx={{ width: 32, height: 32 }}
             />
           </ListItemIcon>
+
           <ListItemText>
-            <Typography variant="body1">More stories on Medium</Typography>
+            <Typography variant="body1">{t("readMoreTitle")}</Typography>
             <Typography
               variant="body2"
               gutterBottom
@@ -89,7 +94,7 @@ export default function SocialMediumContent({
                 fontSize: "small",
               }}
             >
-              View stories by @bashaus
+              {t("readMoreDescription")}
             </Typography>
           </ListItemText>
         </ListItemButton>

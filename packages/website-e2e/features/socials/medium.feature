@@ -1,18 +1,18 @@
 Feature: Medium Social Integration
 
   Background:
-    Given I am on the Homepage
+    Given the user is browsing in the en locale
 
   Scenario: Display Medium social panel
-    When I click the menu icon labelled "Medium"
-    Then I should see the text "Synchronising" in the drawer
-    And I should not see the text "Connection error" in the drawer
-    And I should see the text "View profile on Medium" in the drawer
+    When the user clicks the menu icon labelled "Medium"
+    Then the user should see the text "Synchronising" in the drawer
+    And the user should not see the text "Connection error" in the drawer
+    And the user should see the text "View profile on Medium" in the drawer
 
   Scenario: Handle server action failures for Medium
     Given Fetching socials returns a server error
-    When I click the menu icon labelled "Medium"
-    Then I should see the text "Synchronising" in the drawer
-    And I should see the text "Connection error" in the drawer
-    And I should see the text "Go to Medium" in the drawer
-    And I should see the text "View profile on Medium" in the drawer
+    When the user clicks the menu icon labelled "Medium"
+    Then the user should see the text "Synchronising" in the drawer
+    And the user should see the text "Connection error" in the drawer
+    And the user should see the text "Go to Medium" in the drawer
+    And the user should see the text "View profile on Medium" in the drawer

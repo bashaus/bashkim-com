@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import { ReactNode } from "react";
 
 import HeaderActionSiteSettings from "@/components/HeaderActionSiteSettings";
@@ -11,13 +12,15 @@ export type HeaderMobileProps = Readonly<{
 }>;
 
 export default function HeaderMobile({ backButton }: HeaderMobileProps) {
+  const t = useTranslations("HeaderMobile");
+
   return (
     <S.Container role="toolbar">
       <S.PrimaryToolbar disableGutters>
         <S.PrimaryAction>{backButton}</S.PrimaryAction>
         <S.SiteTitle sx={{ flex: 1 }}>
-          <S.SiteName>Bashkim Isai</S.SiteName>
-          <S.SiteDescription>Digital Technologist</S.SiteDescription>
+          <S.SiteName>{t("siteName")}</S.SiteName>
+          <S.SiteDescription>{t("siteDescription")}</S.SiteDescription>
         </S.SiteTitle>
         <S.PrimaryAction>
           <HeaderActionSiteSettings />

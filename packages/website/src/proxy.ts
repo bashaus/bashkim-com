@@ -1,21 +1,25 @@
 import { NextRequest, NextResponse } from "next/server";
 
-import { getLocaleFromAcceptLanguage } from "./i18n/locale/detect/accept-language";
-import { getLocaleFromCookie } from "./i18n/locale/detect/cookie";
-import { getLocaleFromPath } from "./i18n/locale/detect/path";
-import { getLocaleFromVercel } from "./i18n/locale/detect/vercel";
+import { detectLocaleFromAcceptLanguage } from "./i18n/locale/source/accept-language/detect";
+import { localeAcceptLanguageHeaderName } from "./i18n/locale/source/accept-language/get";
+import { detectLocaleFromCookie } from "./i18n/locale/source/cookie/detect";
+import { localeCookieHeaderName } from "./i18n/locale/source/cookie/get";
+import { detectLocaleFromPath } from "./i18n/locale/source/path/detect";
+import { localePathHeaderName } from "./i18n/locale/source/path/get";
+import { detectLocaleFromVercel } from "./i18n/locale/source/vercel/detect";
+import { localeVercelHeaderName } from "./i18n/locale/source/vercel/get";
 
 export async function proxy(request: NextRequest) {
-  const cookieLocale = await getLocaleFromCookie();
-  const pathLocale = getLocaleFromPath(request);
-  const acceptLocale = getLocaleFromAcceptLanguage(request);
-  const vercelLocale = getLocaleFromVercel(request);
+  const cookieLocale = await detectLocaleFromCookie();
+  const pathLocale = detectLocaleFromPath(request);
+  const acceptLocale = detectLocaleFromAcceptLanguage(request);
+  const vercelLocale = detectLocaleFromVercel(request);
 
   const requestHeaders = new Headers(request.headers);
-  requestHeaders.set("x-locale-cookie", cookieLocale ?? "");
-  requestHeaders.set("x-locale-path", pathLocale ?? "");
-  requestHeaders.set("x-locale-accept", acceptLocale ?? "");
-  requestHeaders.set("x-locale-vercel", vercelLocale ?? "");
+  requestHeaders.set(localeCookieHeaderName, cookieLocale ?? "");
+  requestHeaders.set(localePathHeaderName, pathLocale ?? "");
+  requestHeaders.set(localeAcceptLanguageHeaderName, acceptLocale ?? "");
+  requestHeaders.set(localeVercelHeaderName, vercelLocale ?? "");
 
   return NextResponse.next({
     request: {
@@ -25,5 +29,16 @@ export async function proxy(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/((?!_next).*)"],
+  matcher: [
+    /*
+     * Match all request paths except for the ones starting with:
+     * - api (API routes)
+     * - _next/static (static files)
+     * - _next/image (image optimization files)
+     * - sitemap (sitemap routes and sitemap.xml)
+     * - robots.txt (robots file)
+     * - favicon.ico (favicon file)
+     */
+    "/((?!api|_next/static|_next/image|sitemap|robots\\.txt|favicon\\.ico).*)",
+  ],
 };

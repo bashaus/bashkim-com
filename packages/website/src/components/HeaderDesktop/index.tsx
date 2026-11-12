@@ -5,6 +5,7 @@ import Stack from "@mui/material/Stack";
 import Toolbar from "@mui/material/Toolbar";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useLocale } from "next-intl";
 import { ComponentType, PropsWithChildren } from "react";
 
 import HeaderActionSiteSettings from "@/components/HeaderActionSiteSettings";
@@ -33,9 +34,11 @@ const variantComponent: Record<
 };
 
 export default function HeaderDesktop({ variant }: HeaderDesktopProps) {
+  const locale = useLocale();
   const { navigationState } = useNavigation();
   const pathname = usePathname();
-  const isHome = pathname === getHomePath();
+  const homePath = getHomePath({ locale });
+  const isHomePath = pathname === homePath;
 
   const VariantComponent = variantComponent[variant];
 
@@ -44,8 +47,8 @@ export default function HeaderDesktop({ variant }: HeaderDesktopProps) {
       <Container>
         <Toolbar disableGutters role="toolbar">
           <Box sx={{ flex: 1 }}>
-            <Link href={getHomePath()}>
-              <MenuStrapline animated={isHome} />
+            <Link href={homePath}>
+              <MenuStrapline animated={isHomePath} />
             </Link>
           </Box>
 

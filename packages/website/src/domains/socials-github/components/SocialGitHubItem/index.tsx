@@ -7,6 +7,7 @@ import ListItemText from "@mui/material/ListItemText";
 import Stack from "@mui/material/Stack";
 import Tooltip from "@mui/material/Tooltip";
 import Typography from "@mui/material/Typography";
+import { useTranslations } from "next-intl";
 import { ReactNode } from "react";
 
 export type SocialGitHubItemProps = Readonly<{
@@ -32,6 +33,7 @@ export default function SocialGitHubItem({
   forkCount,
   stargazerCount,
 }: SocialGitHubItemProps) {
+  const t = useTranslations("SocialGitHubItem");
   const hasChips = !!forkCount || !!stargazerCount;
 
   return (
@@ -45,7 +47,7 @@ export default function SocialGitHubItem({
           {name}
           {name === "bashkim-com" && (
             <Chip
-              label="Site source"
+              label={t("siteSourceChipLabel")}
               size="small"
               sx={{ marginLeft: 1, fontSize: ".7rem" }}
               component="span"
@@ -66,11 +68,11 @@ export default function SocialGitHubItem({
         {hasChips && (
           <Stack direction="row" spacing={1} sx={{ marginTop: 1 }}>
             {!!stargazerCount && (
-              <Tooltip title="Stargazers" arrow>
+              <Tooltip title={t("stargazersTooltipLabel")} arrow>
                 <Chip
                   icon={<StarOutlinedIcon />}
                   label={stargazerCount}
-                  aria-label={`Stargazers: ${forkCount}`}
+                  aria-label={t("stargazersAriaLabel", { stargazerCount })}
                   component="span"
                   size="small"
                 />
@@ -78,11 +80,11 @@ export default function SocialGitHubItem({
             )}
 
             {!!forkCount && (
-              <Tooltip title="Forks" arrow>
+              <Tooltip title={t("forksTooltipLabel")} arrow>
                 <Chip
                   icon={<ForkRightIcon />}
                   label={forkCount}
-                  aria-label={`Forks: ${forkCount}`}
+                  aria-label={t("forksAriaLabel", { forkCount })}
                   component="span"
                   size="small"
                 />

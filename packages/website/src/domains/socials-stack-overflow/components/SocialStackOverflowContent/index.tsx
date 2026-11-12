@@ -6,6 +6,7 @@ import { StackOverflowPost, StackOverflowUser } from "@bashkim-com/socials";
 import Divider from "@mui/material/Divider";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListSubheader from "@mui/material/ListSubheader";
+import { useTranslations } from "next-intl";
 
 import SocialStackOverflowHeaderConnected from "@/domains/socials-stack-overflow/components/SocialStackOverflowHeaderConnected";
 import SocialStackOverflowItem from "@/domains/socials-stack-overflow/components/SocialStackOverflowItem";
@@ -19,6 +20,7 @@ export default function SocialStackOverflowContent({
   posts,
   user,
 }: SocialStackOverflowContentProps) {
+  const t = useTranslations("SocialStackOverflowContent");
   let i = -1;
 
   return (
@@ -36,7 +38,7 @@ export default function SocialStackOverflowContent({
 
       <SocialsContent>
         <ListSubheader component="div">
-          <SocialsMotion custom={++i}>Top posts</SocialsMotion>
+          <SocialsMotion custom={++i}>{t("topPostsSubheader")}</SocialsMotion>
         </ListSubheader>
 
         {posts.map((post) => (
@@ -52,8 +54,8 @@ export default function SocialStackOverflowContent({
                 score={post.score}
                 type={
                   post.type === "question"
-                    ? "Question by @bashaus"
-                    : "Answered by @bashaus"
+                    ? t("questionTypeLabel")
+                    : t("answerTypeLabel")
                 }
               />
             </ListItemButton>

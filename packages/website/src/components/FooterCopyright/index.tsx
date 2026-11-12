@@ -5,10 +5,14 @@ import Container from "@mui/material/Container";
 import Stack from "@mui/material/Stack";
 import Tooltip from "@mui/material/Tooltip";
 import Typography from "@mui/material/Typography";
+import { useLocale, useTranslations } from "next-intl";
 
 import { getSourcePath } from "@/libraries/app/navigation";
 
 export default function FooterCopyright() {
+  const locale = useLocale();
+  const t = useTranslations("FooterCopyright");
+
   return (
     <Container aria-label="Copyright, Two-Thousand-and-Eight to Two-Thousand-and-Twenty-Five, Bashkim Isai. All rights reserved.">
       <Stack direction="row" sx={{ alignItems: "center" }}>
@@ -28,12 +32,12 @@ export default function FooterCopyright() {
 
         <Box sx={{ marginLeft: 2 }}>
           <Button
-            href={getSourcePath()}
+            href={getSourcePath({ locale })}
             size="small"
             startIcon={<CodeIcon />}
             sx={{ color: "currentColor" }}
           >
-            Site source
+            {t("siteSourceButtonLabel")}
           </Button>
         </Box>
       </Stack>

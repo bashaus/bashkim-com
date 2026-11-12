@@ -1,6 +1,7 @@
 import { GetSitemapCaseStudies } from "@bashkim-com/prismic-dal";
 import { MetadataRoute } from "next";
 
+import { locales } from "@/i18n/locale/locale";
 import { getCaseStudyPath } from "@/libraries/app/navigation";
 import { sitemapFileSchema } from "@/libraries/app/sitemap";
 import { apolloClient } from "@/libraries/prismic/client";
@@ -21,9 +22,16 @@ export default async function CaseStudiesSitemapProps(): Promise<MetadataRoute.S
 
     urlset.push(
       await sitemapFileSchema.parseAsync({
-        paths: {
-          en: getCaseStudyPath({ caseStudySlug: caseStudy._meta.uid ?? "" }),
-        },
+        paths: Object.fromEntries(
+          locales.map((locale) => [
+            locale,
+            getCaseStudyPath({
+              locale,
+              caseStudySlug: caseStudy._meta.uid ?? "",
+            }),
+          ]),
+        ),
+
         lastModified: caseStudy._meta.lastPublicationDate,
         changeFrequency: caseStudy.sitemap_changefreq,
         priority: caseStudy.sitemap_priority,

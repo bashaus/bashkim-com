@@ -5,6 +5,7 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
+import { useLocale, useTranslations } from "next-intl";
 
 import {
   getExternalGitHubUrl,
@@ -16,6 +17,9 @@ import {
 import * as S from "./styles";
 
 export default function HomeFeatured() {
+  const locale = useLocale();
+  const t = useTranslations("HomeFeatured");
+
   return (
     <Group>
       <Container>
@@ -24,17 +28,16 @@ export default function HomeFeatured() {
             <Card variant="outlined">
               <CardContent>
                 <Typography variant="h5" component="h2" gutterBottom>
-                  Portfolio
+                  {t("portfolioTitle")}
                 </Typography>
 
-                <Typography>
-                  Explore my case studies, from design to development. See the
-                  projects that showcase my skills and creativity.
-                </Typography>
+                <Typography>{t("portfolioDescription")}</Typography>
               </CardContent>
 
               <CardActions>
-                <Button href={getPortfolioPath()}>Case studies</Button>
+                <Button href={getPortfolioPath({ locale })}>
+                  {t("portfolioButtonLabel")}
+                </Button>
               </CardActions>
             </Card>
           </S.Link>
@@ -43,13 +46,10 @@ export default function HomeFeatured() {
             <Card variant="outlined">
               <CardContent>
                 <Typography variant="h5" component="h2" gutterBottom>
-                  Resources
+                  {t("resourcesTitle")}
                 </Typography>
 
-                <Typography>
-                  Check out my GitHub contributions and Medium stories. I build,
-                  collaborate, and share code with the developer community.
-                </Typography>
+                <Typography>{t("resourcesDescription")}</Typography>
               </CardContent>
 
               <CardActions>
@@ -58,7 +58,7 @@ export default function HomeFeatured() {
                   target="_blank"
                   rel="noreferrer noopener"
                 >
-                  Github
+                  {t("resourcesGitHubButtonLabel")}
                 </Button>
 
                 <Button
@@ -66,7 +66,7 @@ export default function HomeFeatured() {
                   target="_blank"
                   rel="noreferrer noopener"
                 >
-                  Medium
+                  {t("resourcesMediumButtonLabel")}
                 </Button>
               </CardActions>
             </Card>
@@ -76,13 +76,10 @@ export default function HomeFeatured() {
             <Card variant="outlined">
               <CardContent>
                 <Typography variant="h5" component="h2" gutterBottom>
-                  Let&apos;s connect
+                  {t("connectTitle")}
                 </Typography>
 
-                <Typography>
-                  Reach out on LinkedIn to chat about opportunities,
-                  collaborations, or just to say hello.
-                </Typography>
+                <Typography>{t("connectDescription")}</Typography>
               </CardContent>
 
               <CardActions>
@@ -91,7 +88,7 @@ export default function HomeFeatured() {
                   target="_blank"
                   rel="noreferrer noopener"
                 >
-                  Linked In
+                  {t("connectButtonLabel")}
                 </Button>
               </CardActions>
             </Card>
