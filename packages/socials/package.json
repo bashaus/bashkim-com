@@ -19,7 +19,7 @@
     "@faker-js/faker": "^10.6.0",
     "@vercel/analytics": "^2.0.1",
     "cheerio": "^1.2.0",
-    "fast-xml-parser": "^5.7.1",
+    "fast-xml-parser": "^5.12.1",
     "graphql": "^16.13.2",
     "lodash.groupby": "^4.6.0",
     "zod": "^4.6.7"
